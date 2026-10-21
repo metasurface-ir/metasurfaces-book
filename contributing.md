@@ -31,6 +31,8 @@ git switch -c chapter-10-surrogate-models
 
 Copy `templates/chapter-section.md` for a text contribution or `templates/lab-outline.md` for an investigation. Put chapter text in `chapters/`, lab instructions in `labs/`, notebooks in `notebooks/`, and figures beside the relevant chapter or in `assets/`. Use descriptive file names without spaces.
 
+Download a starting file: {download}`templates/chapter-section.md` or {download}`templates/lab-outline.md`.
+
 Add the page to `project.toc` in `myst.yml`:
 
 ```yaml
