@@ -2,7 +2,7 @@
 
 **Metasurfaces: From Wave Physics to Design** — a graduate companion book for investigating how electromagnetic sheets transform waves.
 
-This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Explore the Chapter 10 pilot, AI and Metasurfaces, with worked exercises, two executed analytical notebooks, and four computational lab outlines. The remaining chapters will be developed with the instructor and student contributors.
+This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 4 develops periodicity and diffraction with a browser explorer, an executed analytical notebook, and worked examples. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
 
 ## Learn by investigating
 
@@ -13,6 +13,7 @@ The companion course website will provide conceptual lessons and course guidance
 ## Start here
 
 - Read the [ten-chapter syllabus](syllabus.md).
+- Begin [Chapter 4: Periodic Structures and Floquet Analysis](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
 - Begin [Chapter 10: AI and Metasurfaces](chapters/10-ai-metasurfaces.md).
 - Follow the [pilot learning path and worked exercises](chapters/10-pilot-guide.md).
 - Work through the [AI computational lab](labs/13-ai-metasurfaces.md), [starter notebook](notebooks/10-resonant-surrogate.ipynb), and [neural comparison](notebooks/10-neural-comparison.ipynb).
@@ -21,5 +22,5 @@ The companion course website will provide conceptual lessons and course guidance
 - Learn [how to contribute a chapter or notebook](contributing.md).
 
 :::{note} Development status
-The Chapter 10 introductory pilot is complete and available for instructor review. Both notebooks use an analytical, synthetic model. Full-wave lab stages are outlined; their implementation and Chapters 1-9 remain in development. The website displays saved results; download a notebook to run or modify it in Python.
+Chapters 4 and 10 are available for instructor review with executed analytical notebooks. Chapter 4 also has a browser explorer that runs on the page. Full-wave investigations are outlined; their implementation and Chapters 1-3 and 5-9 remain in development. The website displays saved notebook results; download a notebook to run or modify its Python calculations.
 :::

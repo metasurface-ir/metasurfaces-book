@@ -37,6 +37,12 @@ Both notebooks are downloadable from their book pages and can run independently.
 
 The comparison intentionally preserves optimizer warnings from unsuccessful validation candidates. Check the selected-model and repeat-run status separately from the trial table. An execution that finishes is not evidence that every optimizer met its convergence criterion.
 
+## Run the Chapter 4 notebook
+
+Use the same `requirements-labs.txt` environment and open `04-floquet-orders.ipynb`. Restart the kernel and run all cells. NumPy and Matplotlib produce the analytical reference outputs; ipywidgets supplies optional sliders when `ENABLE_WIDGETS=True`. Keep the flag `False` when saving a static reference for publication, so the page can display its results without a live widget session.
+
+The [Chapter 4 lab](labs/04-floquet-lab.md) also embeds a standalone HTML explorer. Its controls run in the browser with no Python kernel or network data service. The explorer can be opened in its own page or downloaded for offline use.
+
 ## Further computational labs
 
 The analytical starter needs no electromagnetic solver. Future full-wave labs will specify their own solver versions, licenses where applicable, data inputs, and execution environments.

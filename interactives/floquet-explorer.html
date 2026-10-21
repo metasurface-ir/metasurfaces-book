@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Floquet Channel Explorer | Metasurface.ir</title>
+<style>
+:root{color-scheme:light;--ink:#173044;--muted:#506373;--line:#d9e2e8;--teal:#087f83;--gold:#b36b10;--paper:#f7f9fb}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:22px}header small{color:var(--teal);font-weight:750;letter-spacing:.08em}h1{font-size:clamp(23px,4vw,34px);line-height:1.15;margin:9px 0 12px}p{margin:8px 0 16px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:18px;padding:7px 12px;color:var(--ink);background:white}button:hover,button:focus-visible{border-color:var(--teal);outline:2px solid #b9e3e3}button.active{background:#e2f1f1;border-color:var(--teal)}.presets{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.control{background:white;padding:12px;border:1px solid var(--line);border-radius:12px;min-width:0}.control label{display:block;font-weight:650;font-size:13px}.control input[type=number]{width:100%;border:1px solid var(--line);border-radius:5px;margin:7px 0;padding:5px 7px;color:var(--ink)}input[type=range]{accent-color:var(--teal);width:100%;margin:5px 0}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.stat{background:#eaf3f4;border-radius:10px;padding:12px}.stat strong{display:block;font-size:22px}.stat span{font-size:12px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;margin:12px 0;min-width:0}.panel h2{font-size:18px;margin:0 0 8px}.visuals{display:grid;grid-template-columns:1.05fr 1fr;gap:12px}.visuals .panel{margin:0}svg{display:block;width:100%;height:auto}svg text{font:14px system-ui,sans-serif;fill:var(--ink)}.note{font-size:13px;color:var(--muted)}.key{display:flex;flex-wrap:wrap;gap:15px;font-size:13px}.key b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.table-wrap{overflow-x:auto;max-width:100%;margin-top:10px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:8px 7px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#f1f5f8}td.number{font-variant-numeric:tabular-nums}.badge{font-size:12px;border-radius:15px;padding:2px 8px;background:#edf0f3}.open{background:#d8f0ea;color:#075e52}.grazing{background:#fff0d4;color:#865006}.closed{color:#5f6f7d}.table-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}select{padding:5px;border:1px solid var(--line);border-radius:5px}#error{color:#9c2c2c;font-weight:650;min-height:0}footer{font-size:12px;color:var(--muted);margin-top:20px}a{color:#087984}details{margin-top:12px}summary{cursor:pointer;font-weight:650}code{font-family:ui-monospace,monospace;font-size:.92em}
+@media(max-width:760px){.visuals{grid-template-columns:1fr}main{padding:14px}.stat{padding:9px}.stat strong{font-size:18px}.stats{gap:6px}.panel{padding:12px}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .15s,border-color .15s}}
+</style>
+</head>
+<body>
+<main>
+<header><small>METASURFACE.IR · CHAPTER 4</small><h1>Which orders can propagate?</h1><p>Predict an order set, change one parameter, and check the result. These are analytical channel directions; their amplitudes and efficiencies require a scattering solution.</p></header>
+<div class="presets" aria-label="Reference examples">
+<button type="button" data-preset="six" class="active">Six-element repeat</button>
+<button type="button" data-preset="primitive">Smaller period</button>
+<button type="button" data-preset="glass">Glass output</button>
+<button type="button" data-preset="cutoff">Exact cutoff</button>
+<button type="button" data-preset="oblique">Oblique incidence</button>
+</div>
+<form class="controls" id="controls" onsubmit="return false">
+<div class="control"><label for="period">Full period Λ (μm)</label><input type="number" id="period" min="0.4" max="5" step="0.01" value="3"><input type="range" data-for="period" aria-label="Period slider" min="0.4" max="5" step="0.01" value="3"></div>
+<div class="control"><label for="wavelength">Wavelength λ₀ (μm)</label><input type="number" id="wavelength" min="0.4" max="4" step="0.01" value="1.55"><input type="range" data-for="wavelength" aria-label="Wavelength slider" min="0.4" max="4" step="0.01" value="1.55"></div>
+<div class="control"><label for="theta">Incidence angle (°)</label><input type="number" id="theta" min="-75" max="75" step="0.5" value="0"><input type="range" data-for="theta" aria-label="Incidence angle slider" min="-75" max="75" step="0.5" value="0"></div>
+<div class="control"><label for="ni">Incident index nᵢ</label><input type="number" id="ni" min="1" max="2.5" step="0.05" value="1"><input type="range" data-for="ni" aria-label="Incident index slider" min="1" max="2.5" step="0.05" value="1"></div>
+<div class="control"><label for="no">Transmitted index nₜ</label><input type="number" id="no" min="1" max="2.5" step="0.05" value="1"><input type="range" data-for="no" aria-label="Transmitted index slider" min="1" max="2.5" step="0.05" value="1"></div>
+</form>
+<p id="error" role="alert"></p>
+<div class="stats" aria-live="polite">
+<div class="stat"><strong id="t-count">3 open</strong><span id="t-detail">Transmission</span></div>
+<div class="stat"><strong id="r-count">3 open</strong><span id="r-detail">Reflection</span></div>
+<div class="stat"><strong id="phase">0.0°</strong><span>Bloch phase along +x, modulo 360°</span></div>
+</div>
+<div class="visuals">
+<section class="panel"><h2>Outgoing directions</h2><svg id="rays" viewBox="0 0 600 370" role="img" aria-label="Allowed reflected and transmitted directions"></svg><p class="note">Equal-length arrows mark directions. They do not represent intensity. Grazing channels run along the interface; closed orders are listed in the table.</p></section>
+<section class="panel"><h2>Tangential wavevectors</h2><svg id="momentum" viewBox="0 0 600 370" role="img" aria-label="Floquet wavevectors inside and outside the two output light cones"></svg><div class="key"><span><b style="background:#087f83"></b>Open</span><span><b style="background:#b36b10"></b>Grazing</span><span><b style="background:#9ba7b5"></b>Closed</span></div><p class="note">The shaded interval is |kₓ/k₀| &lt; n for that side. A larger index widens it. Every dot shares the same Bloch multiplier.</p></section>
+</div>
+<section class="panel">
+<div class="table-head"><h2>Order-by-order result</h2><label for="side">Show <select id="side"><option value="transmission">Transmission</option><option value="reflection">Reflection</option></select></label></div>
+<div class="table-wrap" tabindex="0" aria-label="Scrollable channel results"><table><thead><tr><th scope="col">Order m</th><th scope="col">kₓ/k₀</th><th scope="col">State</th><th scope="col">Signed angle</th><th scope="col">Outward κ/k₀</th></tr></thead><tbody id="results"></tbody></table></div>
+<p class="note" id="order-summary"></p>
+<details><summary>Equations, signs, and limits</summary><p>Use exp(−iωt), spatial exp(ik·r), incidence from z &lt; 0, and periodicity along x. With qᵢ = nᵢ sin θᵢ, the tangential coordinate is qₘ = qᵢ + mλ₀/Λ. An order is open if |qₘ| &lt; n; equality is grazing, and larger magnitude is evanescent.</p><p>The displayed normal root is κ/k₀ = √(n² − qₘ²) in the outward coordinate. In laboratory coordinates k<sub>z</sub> = +κ for transmission and −κ for reflection. Closed outgoing fields decay in both half-spaces. The dimensionless cutoff tolerance is 10⁻¹⁰ on |qₘ/n| − 1. Closed channels have no real far-field angle.</p><p>All possibly open orders are enumerated automatically, with two closed neighbors beyond conservative bounds. Indices are positive and real; the model has kᵧ = 0. It does not classify lossy/anisotropic media or calculate a metasurface's amplitudes, absorption, or efficiency.</p></details>
+</section>
+<footer>Original teaching tool · Metasurface.ir · No external scripts, data, or network requests are required. Read Chapter 4 and run the companion notebook for derivations, power-normalization checks, and finite-array examples.</footer>
+</main>
+<script>
+'use strict';
+const TOL=1e-10, NS='http://www.w3.org/2000/svg';
+const presets={six:{period:3,wavelength:1.55,theta:0,ni:1,no:1},primitive:{period:.5,wavelength:1.55,theta:0,ni:1,no:1},glass:{period:3,wavelength:1.55,theta:0,ni:1,no:1.5},cutoff:{period:1.55,wavelength:1.55,theta:0,ni:1,no:1},oblique:{period:.8,wavelength:1.55,theta:45,ni:1,no:1.5}};
+const rad=x=>x*Math.PI/180, deg=x=>x*180/Math.PI;
+function compute(p,n){
+ if(![p.period,p.wavelength,p.theta,p.ni,n].every(Number.isFinite)||Math.min(p.period,p.wavelength,p.ni,n)<=0||Math.abs(p.theta)>=90)throw Error('Use positive finite lengths and indices, and incidence strictly between −90° and 90°.');
+ const qi=p.ni*Math.sin(rad(p.theta)),step=p.wavelength/p.period,pad=TOL*n/step;
+ const lo=Math.floor((-n-qi)/step-pad)-2,hi=Math.ceil((n-qi)/step+pad)+2;
+ if(hi-lo+1>10000)throw Error('This parameter range needs too many orders for the teaching explorer.');
+ const rows=[];
+ for(let m=lo;m<=hi;m++){
+  const q=qi+m*step,d=Math.abs(q/n)-1,state=d < -TOL?'open':d > TOL?'closed':'grazing';
+  const disc=n*n-q*q,angle=state==='open'?deg(Math.asin(q/n)):state==='grazing'?Math.sign(q)*90:null;
+  rows.push({m,q,state,angle,kzReal:Math.sqrt(Math.max(0,disc)),kzImag:Math.sqrt(Math.max(0,-disc))});
+ }
+ return rows;
+}
+function svgNode(parent,tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;parent.append(el);return el;}
+function line(svg,x1,y1,x2,y2,color,width=2,extra={}){return svgNode(svg,'line',{x1,y1,x2,y2,stroke:color,'stroke-width':width,...extra});}
+function drawRays(p,r,t){
+ const svg=document.getElementById('rays');svg.replaceChildren();
+ const defs=svgNode(svg,'defs');for(const [id,color]of [['t','#087f83'],['r','#65758c'],['i','#b36b10']]){const marker=svgNode(defs,'marker',{id:'arrow-'+id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:6,markerHeight:6,orient:'auto-start-reverse'});svgNode(marker,'path',{d:'M 0 0 L 10 5 L 0 10 z',fill:color});}
+ const cx=300,cy=185,L=140;svgNode(svg,'rect',{x:0,y:cy,width:600,height:185,fill:'#eef8f6'});line(svg,20,cy,580,cy,'#aebac5');line(svg,cx,20,cx,350,'#d6dce2',1,{'stroke-dasharray':'4 5'});
+ svgNode(svg,'text',{x:12,y:22},'Incident / reflected side, nᵢ='+p.ni);svgNode(svg,'text',{x:12,y:353},'Transmitted side, nₜ='+p.no);
+ line(svg,cx-L*Math.sin(rad(p.theta)),cy-L*Math.cos(rad(p.theta)),cx,cy,'#b36b10',2,{'stroke-dasharray':'6 5','marker-end':'url(#arrow-i)'});
+ function rays(rows,sign,id,color){const visible=rows.filter(x=>x.state!=='closed');for(const row of visible){const a=rad(row.angle),x=cx+L*Math.sin(a),y=cy+sign*L*Math.cos(a);line(svg,cx,cy,x,y,row.state==='grazing'?'#b36b10':color,2,{'marker-end':'url(#arrow-'+id+')'});if(visible.length<=11||row.m===0)svgNode(svg,'text',{x:x+6,y:y+sign*17,'text-anchor':row.angle>60?'end':'start','font-size':13},(id==='r'?'r':'t')+' m='+row.m);}}
+ rays(r,-1,'r','#65758c');rays(t,1,'t','#087f83');svgNode(svg,'circle',{cx,cy,r:4,fill:'#173044'});
+}
+function drawMomentum(p,r,t){
+ const svg=document.getElementById('momentum');svg.replaceChildren();
+ const maxQ=Math.max(2,...r.map(x=>Math.abs(x.q)),...t.map(x=>Math.abs(x.q)))*1.08;
+ const x=q=>45+(q+maxQ)/(2*maxQ)*510;
+ for(const [row,rows,n,label]of [[0,r,p.ni,'Reflection'],[1,t,p.no,'Transmission']]){
+  const y=105+row*145;
+  svgNode(svg,'text',{x:20,y:y-55},label+' light cone: n='+n);
+  svgNode(svg,'rect',{x:x(-n),y:y-16,width:x(n)-x(-n),height:32,fill:'#dff0ef',rx:3});
+  line(svg,30,y,570,y,'#ccd5dc',1);
+  for(const q of [-n,n])line(svg,x(q),y-23,x(q),y+23,'#173044',1);
+  for(const value of rows){const color={open:'#087f83',grazing:'#b36b10',closed:'#9ba7b5'}[value.state];svgNode(svg,'circle',{cx:x(value.q),cy:y,r:5,fill:color});if(rows.length<=17||value.m===0)svgNode(svg,'text',{x:x(value.q),y:y+43,'text-anchor':'middle','font-size':12},value.m);}
+ }
+ svgNode(svg,'text',{x:300,y:355,'text-anchor':'middle'},'Equally spaced kₓ/k₀ values; labels show order m');
+}
+function renderTable(){const rows=window.floquetState[document.getElementById('side').value],body=document.getElementById('results');body.replaceChildren();for(const row of rows){const tr=document.createElement('tr');const values=[row.m,row.q.toFixed(5),row.state,row.angle===null?'undefined':row.angle.toFixed(2)+'°',row.kzImag>0?'i '+row.kzImag.toFixed(5):row.kzReal.toFixed(5)];values.forEach((value,index)=>{const td=document.createElement('td');td.textContent=value;if(index===2){const badge=document.createElement('span');badge.className='badge '+row.state;badge.textContent=value;td.replaceChildren(badge);}else td.className='number';tr.append(td);});body.append(tr);}const set=rows.filter(x=>x.state==='open').map(x=>x.m);document.getElementById('order-summary').textContent='Open orders: '+(set.length?set.join(', '):'none')+'. '+rows.filter(x=>x.state==='grazing').length+' grazing. Closed neighbors are included for context. No channel power has been calculated.';}
+function update(){
+ try{
+  const p={};for(const id of ['period','wavelength','theta','ni','no']){const input=document.getElementById(id);if(!input.checkValidity()||input.value==='')throw Error('Results are not updated: enter valid parameters within the displayed control ranges.');p[id]=Number(input.value);}
+  const transmission=compute(p,p.no),reflection=compute(p,p.ni);window.floquetState={parameters:p,transmission,reflection};
+  for(const [id,rows,name]of [['t',transmission,'Transmission'],['r',reflection,'Reflection']]){document.getElementById(id+'-count').textContent=rows.filter(x=>x.state==='open').length+' open';document.getElementById(id+'-detail').textContent=name+' · '+rows.filter(x=>x.state==='grazing').length+' grazing';}
+  const phase=deg(2*Math.PI*p.period/p.wavelength*p.ni*Math.sin(rad(p.theta))),wrapped=((phase+180)%360+360)%360-180;
+  document.getElementById('phase').textContent=wrapped.toFixed(1)+'°';document.getElementById('error').textContent='';drawRays(p,reflection,transmission);drawMomentum(p,reflection,transmission);renderTable();
+ }catch(error){document.getElementById('error').textContent=error.message;}
+}
+for(const slider of document.querySelectorAll('input[type=range]'))slider.addEventListener('input',()=>{document.getElementById(slider.dataset.for).value=slider.value;document.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('active'));update();});
+for(const input of document.querySelectorAll('input[type=number]')){input.step='any';input.addEventListener('input',()=>{document.querySelector('input[data-for="'+input.id+'"]').value=input.value;document.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('active'));update();});}
+document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{for(const [id,value]of Object.entries(presets[button.dataset.preset])){document.getElementById(id).value=value;document.querySelector('input[data-for="'+id+'"]').value=value;}document.querySelectorAll('[data-preset]').forEach(b=>b.classList.toggle('active',b===button));update();}));
+document.getElementById('side').addEventListener('change',renderTable);
+window.floquetCompute=compute;
+update();
+</script>
+</body>
+</html>

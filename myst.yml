@@ -4,6 +4,8 @@ project:
   title: 'Metasurface.ir'
   description: Graduate computational investigations in electromagnetic metasurfaces.
   github: https://github.com/metasurface-ir/metasurfaces-book
+  static_files:
+    - interactives
   keywords:
     - electromagnetic metasurfaces
     - graduate course
@@ -19,6 +21,12 @@ project:
       children:
         - file: labs/index.md
         - file: labs/lab-template.md
+    - title: Chapter 4 - Periodicity and diffraction
+      children:
+        - file: chapters/04-periodic-floquet.md
+        - file: chapters/04-floquet-guide.md
+        - file: labs/04-floquet-lab.md
+        - file: notebooks/04-floquet-orders.ipynb
     - title: Chapter 10 - AI and Metasurfaces
       children:
         - file: chapters/10-ai-metasurfaces.md
@@ -30,3 +38,4 @@ site:
   template: book-theme
   options:
     logo_text: Metasurface.ir
+    style: ./styles/book.css
