@@ -1,4 +1,4 @@
-# Versions used for the Chapter 3-5 and Chapter 10 calculations.
+# Versions used for the Chapter 1, Chapter 3-5, and Chapter 10 calculations.
 numpy==2.4.6
 matplotlib==3.11.1
 scikit-learn==1.9.1

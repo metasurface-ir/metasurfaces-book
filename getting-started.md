@@ -22,6 +22,12 @@ The generated website is written to `_build/html/`. For a local development serv
 
 Open the local URL printed by the command. On macOS/Linux the executable is `.venv/bin/jupyter-book`.
 
+## Start with the Chapter 1 notebook
+
+For a first computational activity, use the [Chapter 1 lab](labs/01-first-investigation.md). Its browser explorer runs online or offline without Python. To edit calculations, install `requirements-labs.txt` in a Python 3.12 environment and extract the complete source ZIP, preserving `notebooks/`, `simulations/`, and `data/`. Open `01-first-metasurface-model.ipynb`, restart its kernel, and run all cells. It imports `simulations/intro_sheet.py` and generates response CSV/JSON files.
+
+The model needs NumPy and Matplotlib, with no electromagnetic solver, GPU, or network dataset. Run `python scripts/validate_chapter01.py` from the extracted folder or repository root for the analytical audit. After saving the notebook and audit, `python scripts/export_chapter01.py` updates its three figures, standalone browser explorer, and source ZIP. The explorer template is `templates/foundations-explorer.html`. The model is an ideal sheet, with no assigned physical geometry.
+
 ## Run the Chapter 10 notebooks
 
 From the repository root, install the optional notebook environment into the same virtual environment:

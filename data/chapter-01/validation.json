@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "model": "analytical equal-impedance specular sheet",
+  "source_sha256": "e4437a59b83edf1252a63dee0c822e5c3a794a6baf3c08b334d6f112cfd90449",
+  "parameter_cases": 36,
+  "frequencies_per_case": 521,
+  "max_power_balance_error": 7.771561172376096e-16,
+  "max_unitarity_error": 5.551115123125783e-16,
+  "max_two_sided_power_error": 6.661338147750939e-16,
+  "electric_shunt_complex_error": 1.249000902703301e-16,
+  "group_delay_checks": [
+    {
+      "strength": 0.08,
+      "steps_THz": [
+        0.2,
+        0.1,
+        0.05
+      ],
+      "errors_fs": [
+        0.008266337097950327,
+        0.00206716330552581,
+        0.000516827011900034
+      ]
+    },
+    {
+      "strength": 0.25,
+      "steps_THz": [
+        0.2,
+        0.1,
+        0.05
+      ],
+      "errors_fs": [
+        0.0002652484150793555,
+        6.631394693279447e-05,
+        1.6578595857907885e-05
+      ]
+    },
+    {
+      "strength": 0.5,
+      "steps_THz": [
+        0.2,
+        0.1,
+        0.05
+      ],
+      "errors_fs": [
+        3.076970380622157e-05,
+        7.692473821485635e-06,
+        1.923118408519997e-06
+      ]
+    }
+  ],
+  "input_rejections": 7,
+  "phase_at_zero_transmission": "undefined and serialized as null",
+  "limits": [
+    "No full-wave solver",
+    "No geometry/material calibration",
+    "No diffraction/polarization conversion",
+    "No absorption/experiment"
+  ]
+}
