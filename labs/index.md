@@ -1,6 +1,6 @@
 # Planned computational investigations
 
-The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. The AI lab now includes an executed analytical starter and detailed outlines for later stages. The other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. The AI pilot includes two executed analytical notebooks, worked exercises, and four detailed lab stages. The other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Proposed investigation | Related chapter(s) |
 | --- | --- | --- |

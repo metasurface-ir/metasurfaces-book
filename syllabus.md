@@ -29,7 +29,7 @@ Chapter 6 may be introduced earlier as a methods strand, so students establish v
 
 ## Chapter 10: AI and Metasurfaces
 
-The [first teaching edition](chapters/10-ai-metasurfaces.md) and [computational lab](labs/13-ai-metasurfaces.md) are now available for instructor review. They cover:
+The [Chapter 10 pilot](chapters/10-ai-metasurfaces.md), [worked exercises](chapters/10-pilot-guide.md), and [computational lab](labs/13-ai-metasurfaces.md) are available for instructor review. They cover:
 
 - **Problem formulation:** distinguish forward response prediction, inverse geometry design, and optimization using a learned surrogate. Define physical objectives and fabrication constraints before selecting a model.
 - **Dataset construction:** version geometry, material dispersion, polarization, incidence conditions, solver settings, and convergence evidence. Define training, validation, and held-out test sets that avoid leakage between closely related geometries or sweeps.
@@ -38,7 +38,7 @@ The [first teaching edition](chapters/10-ai-metasurfaces.md) and [computational 
 - **Physics and uncertainty:** test power accounting, reciprocity or symmetry where applicable, confidence away from training data, and sensitivity to fabrication variation.
 - **Independent verification:** run selected predictions through a converged electromagnetic solver and report response error, design success, total data-generation/training/verification cost, and model limitations.
 
-The proposed capstone is to build a surrogate from a validated unit-cell library, use it to propose a design, and test that design independently. The executed starter uses a small synthetic resonant-sheet dataset and kernel regression. The full-wave dataset, solver, and assessment for later lab stages remain to be selected.
+The proposed capstone is to build a surrogate from a validated unit-cell library, use it to propose a design, and test that design independently. The completed introductory pilot uses a synthetic resonant-sheet dataset: a kernel starter and an executed comparison of retrieval, interpolation, kernel regression, and a small neural network. Four lab stages specify the progression from analytical learning to full-wave data, constrained inverse design, and active learning. The full-wave dataset, solver, and assessment for later stages remain to be selected.
 
 ## Reusable module pattern
 

@@ -2,7 +2,7 @@
 
 ## Read the book
 
-The published book will be readable in a browser without installing Python. Saved notebook outputs can be displayed in the static site. Running or modifying calculations requires a local Jupyter environment or a separately configured hosted kernel.
+The published book is readable in a browser without installing Python. Saved notebook outputs are displayed in the static site. Running or modifying calculations requires a local Jupyter environment or a separately configured hosted kernel.
 
 ## Build this starter locally
 
@@ -22,7 +22,7 @@ The generated website is written to `_build/html/`. For a local development serv
 
 Open the local URL printed by the command. On macOS/Linux the executable is `.venv/bin/jupyter-book`.
 
-## Run the Chapter 10 notebook
+## Run the Chapter 10 notebooks
 
 From the repository root, install the optional notebook environment into the same virtual environment:
 
@@ -31,9 +31,11 @@ From the repository root, install the optional notebook environment into the sam
 .\.venv\Scripts\python.exe -m jupyterlab notebooks
 ```
 
-Open `10-resonant-surrogate.ipynb`, select the environment's Python kernel, and choose **Restart Kernel and Run All Cells**. The notebook records the Python, NumPy, and Matplotlib versions in its output. Parameters are in its first code cell; the data are generated locally.
+Open `10-resonant-surrogate.ipynb` first, then `10-neural-comparison.ipynb`. Select the environment's Python kernel and choose **Restart Kernel and Run All Cells**. Each notebook records its numerical package versions. Parameters are in its first code cell; the data are generated locally. The neural comparison also uses scikit-learn and runs several small CPU fits; a GPU is unnecessary.
 
-The notebook is also downloadable from its page in the book. If you download it alone, install NumPy, Matplotlib, and JupyterLab using the versions in the repository's `requirements-labs.txt`.
+Both notebooks are downloadable from their book pages and can run independently. If you download a notebook alone, install the packages in the repository's `requirements-labs.txt`. Saved outputs show the published reference run; edited parameters produce a new experiment and may change results or optimizer behavior.
+
+The comparison intentionally preserves optimizer warnings from unsuccessful validation candidates. Check the selected-model and repeat-run status separately from the trial table. An execution that finishes is not evidence that every optimizer met its convergence criterion.
 
 ## Further computational labs
 

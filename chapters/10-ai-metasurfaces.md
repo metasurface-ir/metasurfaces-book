@@ -12,8 +12,8 @@ Imagine building a library of unit cells. For every geometry, you solve Maxwell'
 
 This chapter develops that workflow, from the electromagnetic problem to a learned approximation and back to electromagnetic verification. Start with the physical question; choose a learning method after defining the observable, constraints, and evidence you need.
 
-:::{note} What is available now
-This is a first teaching edition for instructor review. The [companion lab](../labs/13-ai-metasurfaces.md) includes an executable, synthetic resonant-sheet example and outlines the steps toward a full-wave study. The example demonstrates a learning workflow; it does not validate a fabricated geometry or a full-wave metasurface design.
+:::{note} Chapter 10 pilot
+The pilot includes this chapter, a [learning path and worked exercises](10-pilot-guide.md), two executed notebooks, and four [computational lab stages](../labs/13-ai-metasurfaces.md). Stage A is runnable with analytical data; Stages B-D specify future full-wave investigations. The examples demonstrate a learning workflow; they do not validate a fabricated geometry or a full-wave metasurface design.
 :::
 
 ## 10.1 Learning goals and prerequisites
@@ -26,7 +26,7 @@ After this chapter, you should be able to:
 4. Explain why an accurate average prediction can still yield an unreliable optimized design.
 5. Validate a candidate against physical constraints and an independent electromagnetic calculation.
 
-You should be comfortable with complex amplitudes, S parameters, power balance, basic linear algebra, and numerical optimization. The notebook needs Python and NumPy; it begins with kernel regression so that the learning calculation remains visible.
+You should be comfortable with complex amplitudes, S parameters, power balance, basic linear algebra, and numerical optimization. Start with the NumPy kernel notebook, then use the scikit-learn comparison notebook. The [pilot guide](10-pilot-guide.md) gives a sequence and readiness checks. Chapter 10 is our first authoring pilot; the full course will introduce its electromagnetic prerequisites before it.
 
 ## 10.2 Three problems that should be kept distinct
 
@@ -133,6 +133,8 @@ Learning from an unconverged solver can faithfully reproduce numerical error. Ch
 
 Before training a large network, try nearest-neighbor retrieval, interpolation, or a simple regression model. These baselines show how much information is already available in the library. Compare methods on the same split, input information, target representation, and error metrics.
 
+### Kernel regression
+
 The starter notebook uses a Gaussian kernel to compare scalar design parameters:
 
 $$
@@ -150,7 +152,61 @@ Solve the linear system rather than explicitly calculating a matrix inverse. The
 
 A neural network replaces this kernel expansion with learned nonlinear transformations. A multilayer perceptron can accept a small parameter vector; a convolutional architecture may suit a pixelated geometry. Architecture alone does not determine performance. Training-data coverage, target choice, regularization, and the evaluation problem remain central.
 
+### A neural surrogate you can inspect
+
+For the scalar design coordinate in our example, standardize the input using the training mean and standard deviation:
+
+$$
+\widetilde g=(g-\mu_{\mathrm{train}})/\sigma_{\mathrm{train}}.
+$$
+
+One hidden layer and a linear output layer give
+
+$$
+\mathbf h=\tanh(W_1\widetilde g+\mathbf b_1),\qquad
+\widehat{\mathbf y}=W_2\mathbf h+\mathbf b_2.
+$$
+
+Here $\mathbf h$ is a learned feature vector, not an electromagnetic field. For $M$ frequencies, pack the output as $[\operatorname{Re}t_1,\ldots,\operatorname{Re}t_M,\operatorname{Im}t_1,\ldots,\operatorname{Im}t_M]$. With $H$ hidden units, the matrices have shapes $H\times1$ and $2M\times H$. Biases add $H+2M$ parameters. With $M=101$ and $H=32$, the network has $2H+(H+1)2M=6730$ trainable parameters. The 40 training geometries still provide only 40 independently sampled spectra; 101 frequencies do not turn them into 4040 independent geometries.
+
+```{mermaid}
+flowchart LR
+    G[Design coordinate g] --> S[Scale using training statistics]
+    S --> H[Learned tanh hidden units]
+    H --> Y[202 real output coordinates]
+    Y --> T[101 complex transmission amplitudes]
+    T --> V[Evaluate spectral and physical errors]
+```
+
+A useful conceptual training objective combines response error and weight regularization:
+
+$$
+L(\boldsymbol\theta)=\frac{1}{NM}\sum_{i=1}^{N}\sum_{j=1}^{M}
+|\widehat t_{ij}-t_{ij}|^2+\beta\sum_{\ell}\|W_{\ell}\|_F^2.
+$$
+
+Backpropagation applies the chain rule to compute derivatives of this loss with respect to weights and biases. The optimizer then updates them. During forward-model training, the design coordinates and reference spectra remain fixed. During an inverse search, the trained weights remain fixed and the candidate design changes. Keeping those two operations separate prevents a common conceptual error.
+
+Software loss conventions matter. Averaging squared error over $2M$ packed real coordinates gives half the mean squared complex error over $M$ frequencies. Libraries also normalize regularization differently. The conceptual $\beta$ above is therefore not a claim that two packages' `alpha` parameters are interchangeable. The notebook selects models using a separately calculated complex RMSE.
+
+Our MLP uses tanh hidden units, linear outputs, L2 regularization, and L-BFGS optimization. It standardizes inputs using training data and reports optimizer warnings. Feature scaling and initialization sensitivity are discussed in the [scikit-learn neural-network guide](https://scikit-learn.org/stable/modules/neural_networks_supervised.html); the [MLPRegressor API](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html) documents the optimizer controls. A maximum-iteration warning means the requested stopping criterion has not been established. It must remain part of the reported evidence.
+
+### Make the comparison fair and interpretable
+
+The [executed comparison](../notebooks/10-neural-comparison.ipynb) uses identical geometry IDs and spectra for nearest retrieval, complex linear interpolation, KRR, and an MLP. KRR has 12 validation candidates; the MLP has six. This is a comparison under declared small search budgets, not an equal-compute competition. Architecture and regularization are chosen on validation data using a fixed initialization. Two additional neural initializations are then evaluated without changing the configuration or selecting a lucky seed.
+
+Linear interpolation is a particularly useful baseline for one smooth design coordinate. It brackets a query between training coordinates and blends their complex spectra. Outside that bracketed region the implementation clips to the closest endpoint and reports how many test coordinates fall outside the training range. Neither interpolation nor a neural network provides evidence for an untested material or geometry family.
+
 Use several complementary metrics: complex-response RMSE, power-fraction error, maximum error over the band, and phase error above the amplitude threshold. Report results per geometry as well as an aggregate; a small average can conceal a failed narrow resonance.
+
+```{figure} ../assets/chapter-10/model-comparison.png
+:alt: Analytical transmission spectra and per-design errors for retrieval, linear interpolation, kernel ridge regression, and a neural network.
+:label: fig-ch10-comparison
+
+Saved output from the comparison notebook, using the declared 40/20/20 split. This is an analytical teaching experiment; its ranking does not establish a universal best model. The notebook contains the numerical tables, initialization results, and complete code.
+```
+
+In the published run, test complex RMSE is approximately $0.0414$ for retrieval, $0.00800$ for interpolation, $0.000353$ for KRR, and $0.0165$ for the primary MLP. The network improves on retrieval but does not beat the two smoother baselines on this task. Across its three initializations, MLP RMSE has mean $0.0232$ and sample standard deviation $0.00732$. This describes training variability on one fixed split, not a confidence interval for performance on other datasets. Three rejected validation configurations emit optimizer warnings; the selected configuration and its repeats finish without warnings. The notebook preserves all of that evidence.
 
 ## 10.6 Why inverse design is not simply the forward map reversed
 
@@ -229,9 +285,22 @@ $$
 
 This mapping is deliberately synthetic: $g$ is not a documented pillar radius or fabricated geometry. The notebook samples entire spectra at different $g$, fits a surrogate on one subset, chooses its settings on a validation subset, and evaluates held-out designs. It then searches for a target spectrum and checks the selected candidate against the exact formula.
 
+For a symmetric two-port matrix $S=\begin{pmatrix}r&t\\t&r\end{pmatrix}$, power balance for one incident port is only the diagonal part of $S^\dagger S=I$. The off-diagonal condition is $r^*t+t^*r=0$. Here $r^*t=i\gamma\Delta/(\gamma^2+\Delta^2)$ is purely imaginary, so that condition also holds. The comparison notebook checks both identities. They apply to this model and its specified port basis.
+
+Retrieving an exact training spectrum automatically preserves this model's power balance, even when its resonance is in the wrong place for the requested design. Conversely, a regression can have very small complex error and a nonzero power residual. Accuracy and physical consistency answer different questions; report both.
+
 That last step verifies the surrogate against its analytical data generator. It is not independent full-wave or experimental validation. The next lab stage replaces this generator with a converged unit-cell library while preserving the split, metrics, and reporting structure.
 
 **Continue with the [Chapter 10 computational lab](../labs/13-ai-metasurfaces.md).**
+
+For the inverse comparison, retrieval returns an actual library design. Continuous surrogates search 901 coordinates separated by $0.001$. A retrieval objective is flat between changes in the nearest neighbor, so attaching its winning spectrum to an arbitrary coordinate in that interval would be misleading. The notebook makes this distinction explicit and verifies every proposed coordinate with the analytical generator.
+
+```{figure} ../assets/chapter-10/inverse-comparison.png
+:alt: Verified transmission spectra of proposed designs and a separate comparison of the neural prediction with analytical verification.
+:label: fig-ch10-inverse
+
+Inverse proposals from the comparison notebook. The target lies on the candidate grid, so some verified curves coincide exactly with it. The numerical table in the notebook distinguishes a small predicted mismatch from the actual mismatch after analytical verification.
+```
 
 ## 10.9 Exercises and research discussion
 
@@ -243,6 +312,8 @@ That last step verifies the surrogate against its analytical data generator. It 
 6. Estimate the break-even number of repeated design tasks for a hypothetical library. Include data generation, failed simulations, retraining, and verification.
 7. Propose a fabrication-robust objective such as expected response error plus a variance penalty. Explain how you would sample perturbations and evaluate worst cases separately.
 8. Read one paper below and identify the design space, output representation, data generator, split, baseline, inverse objective, and independent verification. Which claims transfer to your proposed metasurface problem?
+
+The [pilot guide](10-pilot-guide.md) includes worked examples for conservation, phase wrapping, data leakage, inverse ambiguity, and computational cost. Use the remaining questions for discussion and independent reports.
 
 ## References and further reading
 
