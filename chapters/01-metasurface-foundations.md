@@ -87,7 +87,7 @@ The wrapped phase lies on a circle. $179^\circ$ and $-179^\circ$ differ by a cir
 
 An incident field drives charge, current, and polarization in a structure. An electric-dipole-like response is associated with oscillating electric charge separation. A magnetic-dipole-like response can arise from circulating currents or displacement-current patterns; it does not require a naturally magnetic material at the operating frequency.
 
-The resulting fields interfere with one another and with the incident wave. Suitable electric and magnetic contributions can cancel in one direction and reinforce in another. The [dielectric Huygens-surface work of Decker and colleagues](https://doi.org/10.1002/adom.201400584) develops this physical idea for specific dielectric structures. Reproducing a paper's device performance requires its geometry, materials, illumination, and numerical or experimental evidence.
+The resulting fields interfere with one another and with the incident wave. Suitable electric and magnetic contributions can cancel in one direction and reinforce in another. The [dielectric Huygens-surface work of Decker and colleagues](https://openresearch-repository.anu.edu.au/items/46257eed-cdcb-4814-93fb-868f9c087777) develops this physical idea for specific dielectric structures. Reproducing a paper's device performance requires its geometry, materials, illumination, and numerical or experimental evidence.
 
 Several design mechanisms are useful:
 

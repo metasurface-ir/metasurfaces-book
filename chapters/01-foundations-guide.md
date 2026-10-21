@@ -88,7 +88,7 @@ The derivative concerns this imposed balanced analytical channel. It does not es
 
 Choose a metasurface figure or abstract and record the illumination, structure/material model, target quantity, normalization, and evidence level. Distinguish analytical, simulated, and experimental results. Check whether “efficiency” refers to incident power, transmitted power, one polarization, or a finite collection region.
 
-For physical context, read [Decker et al. on dielectric Huygens surfaces](https://doi.org/10.1002/adom.201400584) or [Arbabi et al. on phase and polarization control](https://arxiv.org/abs/1411.1494). Their structures and measured/simulated results are external references, not outputs of this introductory model.
+For physical context, read [Decker et al. on dielectric Huygens surfaces](https://openresearch-repository.anu.edu.au/items/46257eed-cdcb-4814-93fb-868f9c087777) or [Arbabi et al. on phase and polarization control](https://arxiv.org/abs/1411.1494). Their structures and measured/simulated results are external references, not outputs of this introductory model.
 
 ## Report checklist
 
