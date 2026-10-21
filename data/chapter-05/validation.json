@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "source_sha256": {
+    "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+    "metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629"
+  },
+  "library_rows": 161,
+  "primitive_embedding_complex_error": 3.4898711157502463e-13,
+  "forbidden_supercell_amplitude": 6.525814660643332e-16,
+  "mirror_order_power_error": 1.150572692676377e-13,
+  "quantized_ramp": [
+    {
+      "levels": 2,
+      "coefficient_fraction": 0.40528473456935116,
+      "error": 0.0
+    },
+    {
+      "levels": 3,
+      "coefficient_fraction": 0.6839179895857799,
+      "error": 2.220446049250313e-16
+    },
+    {
+      "levels": 4,
+      "coefficient_fraction": 0.8105694691387023,
+      "error": 0.0
+    },
+    {
+      "levels": 6,
+      "coefficient_fraction": 0.91189065278104,
+      "error": 0.0
+    },
+    {
+      "levels": 8,
+      "coefficient_fraction": 0.9496412035517837,
+      "error": 0.0
+    },
+    {
+      "levels": 16,
+      "coefficient_fraction": 0.9872148307666581,
+      "error": 0.0
+    }
+  ],
+  "scalar_plane_wave_error": 1.918350056099024e-15,
+  "gaussian_fwhm_error": 1.1458096338401447e-07,
+  "jones_error": 4.002966042486721e-16,
+  "full_wave_refinement": {
+    "half_orders": [
+      144,
+      192
+    ],
+    "max_open_order_power_change": 2.319748602652716e-06,
+    "max_open_complex_t_change": 1.3659322512799215e-05
+  },
+  "model_limits": [
+    "1D lossless TE infinite periodic supercells",
+    "Scalar line focusing is not a full-wave lens",
+    "Jones polarization model is independent of the TE ridge",
+    "No fabricated-device or independent FEM/FDTD validation"
+  ],
+  "independent_implementation": {
+    "package": "grcwa",
+    "version": "0.1.2",
+    "half_order": 48,
+    "tolerance": 0.0001,
+    "cases": [
+      {
+        "case": "limited",
+        "refinements": [
+          {
+            "raster_pixels": 512,
+            "max_order_power_error": 5.975598625329592e-05,
+            "complex_t0_error": 0.00013520399035998703
+          },
+          {
+            "raster_pixels": 4096,
+            "max_order_power_error": 7.896556691866508e-07,
+            "complex_t0_error": 1.2205327900922812e-06
+          }
+        ]
+      },
+      {
+        "case": "expanded",
+        "refinements": [
+          {
+            "raster_pixels": 512,
+            "max_order_power_error": 0.0002299715872611241,
+            "complex_t0_error": 0.0001211646396428719
+          },
+          {
+            "raster_pixels": 4096,
+            "max_order_power_error": 2.3660448292828207e-06,
+            "complex_t0_error": 3.718146464908901e-06
+          }
+        ]
+      },
+      {
+        "case": "reversed",
+        "refinements": [
+          {
+            "raster_pixels": 512,
+            "max_order_power_error": 0.00022997158723658817,
+            "complex_t0_error": 0.00012116463964383414
+          },
+          {
+            "raster_pixels": 4096,
+            "max_order_power_error": 2.366044856150218e-06,
+            "complex_t0_error": 3.718146458631343e-06
+          }
+        ]
+      }
+    ],
+    "interpretation": "Separate RCWA implementation with raster refinement; same numerical method family."
+  }
+}

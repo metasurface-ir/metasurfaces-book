@@ -18,7 +18,7 @@ By completing the course, students should be able to formulate a metasurface sca
 | 2 | Electromagnetic waves and interaction with metasurfaces | Fresnel amplitudes and power, polarization, sheet response, S parameters, equivalent circuits |
 | 3 | [Unit-cell design and simulation](chapters/03-unit-cell-design.md) | Executed TE ridge solver, analytical/RCWA validation, complex-response library, field plots, and constrained phase selection |
 | 4 | [Periodic structures, Floquet analysis, and diffraction orders](chapters/04-periodic-floquet.md) | Executed channel maps, browser explorer, worked examples, and a periodic-port validation outline |
-| 5 | Metasurface synthesis | Beam steering, focusing, amplitude and polarization control, geometric phase, inverse design |
+| 5 | [Metasurface synthesis](chapters/05-metasurface-synthesis.md) | Executed full-wave beam steering, expanded library, scalar line focusing, Jones/geometric phase, and further design outlines |
 | 6 | Numerical modeling and simulation methods | Solver selection, mesh/domain convergence, benchmarks, power balance |
 | 7 | Active, tunable, and intelligent metasurfaces | Bias/state-dependent response models and tuning constraints |
 | 8 | Emerging applications in communications engineering | Beam control and system-level performance investigations |
@@ -33,13 +33,19 @@ The [chapter](chapters/03-unit-cell-design.md), [six worked examples](chapters/0
 
 Validation includes interface/uniform-film limits, width-wise harmonic refinements, six higher-order spot checks, multiorder symmetry/field checks, and eight comparisons with the separate grcwa implementation. The reference covers a lossless, constant-index ridge grating at one wavelength/incidence and has incomplete phase coverage. FEM/FDTD, additional height sweeps, and varying-neighbor supercells are detailed lab outlines.
 
-For the currently developed material, study Chapter 4's channel conventions before Chapter 3's amplitudes, then return to synthesis in Chapter 5 when available. Chapter 6's numerical-validation methods accompany the computational work.
+For the currently developed material, study Chapter 4's channel conventions before Chapter 3's amplitudes, then continue to [Chapter 5 synthesis](chapters/05-metasurface-synthesis.md). Chapter 6's numerical-validation methods accompany the computational work.
 
 ## Chapter 4: Periodicity and diffraction
 
 The [chapter](chapters/04-periodic-floquet.md), [worked examples](chapters/04-floquet-guide.md), [interactive lab](labs/04-floquet-lab.md), and [executed notebook](notebooks/04-floquet-orders.ipynb) develop Bloch phases, diffraction orders, cutoff, evanescent decay, medium-dependent channel sets, and power normalization. Finite-array factors connect discrete Floquet directions to angular lobes. A rectangular-lattice example introduces the two-dimensional condition.
 
 The browser explorer runs without a Python installation. The notebook includes analytical interface checks and optional Jupyter sliders. The full-wave lab progresses from a flat-interface benchmark to a dielectric grating, with an optional six-post beam deflector. Those solver stages are outlines awaiting implementation and convergence evidence.
+
+## Chapter 5: Metasurface synthesis
+
+The [chapter](chapters/05-metasurface-synthesis.md), [seven worked examples](chapters/05-synthesis-guide.md), [lab](labs/05-synthesis-lab.md), [beam-steering notebook](notebooks/05-beam-steering.ipynb), and [wavefront-model notebook](notebooks/05-wavefront-models.ipynb) connect target fields to geometry and verification. A new common-height 161-width library supports four complete six-ridge supercell calculations: limited, expanded, identical, and reversed. Harmonic refinements, primitive embedding, mirror tests, and a separate grcwa comparison accompany order-resolved powers. The explorer inspects these saved data.
+
+Focusing is an executed scalar cylindrical-line model with independent FFT window/grid checks. Polarization is an analytical Jones model with geometric-phase/conversion checks. Neither is a full-wave finite metalens or vector response of the TE ridges. Further independent-method, finite-device, material-dispersive, holography, and robust-design investigations remain outlines.
 
 ## Chapter 10: AI and Metasurfaces
 

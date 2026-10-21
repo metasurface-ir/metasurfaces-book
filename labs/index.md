@@ -1,6 +1,6 @@
 # Computational investigations
 
-The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook, a browser explorer, worked examples, and full-wave lab outlines. The AI pilot includes two executed analytical notebooks and four detailed lab stages. Other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook and a browser explorer. Chapter 5 verifies four full-wave supercells and adds separate scalar focusing/Jones notebooks. The AI pilot includes two executed analytical notebooks. Further lab stages state their individual execution status. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Investigation | Related chapter(s) |
 | --- | --- | --- |
@@ -8,15 +8,19 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-02-scattering | Parameterized resonance response and its limits | 1, 2 |
 | ms-03-sheet-response | Sheet-response retrieval and consistency | 2, 5 |
 | ms-04-floquet-orders | [Floquet channels: browser explorer, analytical notebook, and full-wave validation outline](04-floquet-lab.md) | 4 |
-| ms-05-beam-steering | Ideal versus sampled phase profiles | 5 |
-| ms-06-polarization | Jones matrices, rotated elements, geometric phase | 2, 5 |
+| ms-05-beam-steering | [Ideal/sampled/local/full-wave beam steering with four verified supercells](05-synthesis-lab.md) | 5 |
+| ms-06-polarization | [Executed analytical Jones matrices, rotated elements, geometric phase](05-synthesis-lab.md) | 2, 5 |
 | ms-07-unit-cell | [Validated TE ridge library: full-wave notebook, browser explorer, and extension outlines](03-unit-cell-lab.md) | 3, 6 |
-| ms-08-metalenses | Finite-aperture propagation and focal metrics | 5 |
+| ms-08-metalenses | [Executed scalar line-focus propagation and metrics; finite full-wave outline](05-synthesis-lab.md) | 5 |
 | ms-09-dispersion | Spectral sweeps and bandwidth metrics | 2, 5 |
 | ms-10-coupling | Independent-cell versus supercell predictions | 3, 6 |
 | ms-11-inverse-design | Bounded optimization with independent checks | 5, 6, 10 |
 | ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
 | ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
+
+## Available synthesis investigation
+
+The [Chapter 5 lab](05-synthesis-lab.md) connects unit-cell phase coverage with actual order-resolved powers from a repeated six-ridge TE geometry. It preserves local-mask predictions and lower-performing designs as comparisons. A second executed notebook develops scalar line focusing and ideal Jones-matrix polarization control, with explicit model boundaries. Further finite-device, independent-method, bandwidth, and robust-design stages are outlines.
 
 ## Available unit-cell investigation
 
