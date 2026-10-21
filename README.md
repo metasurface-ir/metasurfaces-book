@@ -1,6 +1,6 @@
-# Metasurfaces: From Wave Physics to Design
+# Metasurface.ir
 
-An English graduate course and computational book, published with Jupyter Book 2.
+**Metasurfaces: From Wave Physics to Design** is an English graduate course and computational book, published with Jupyter Book 2.
 
 **Read:** https://metasurface-ir.github.io/metasurfaces-book/
 

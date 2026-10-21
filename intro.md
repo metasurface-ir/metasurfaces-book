@@ -1,6 +1,6 @@
-# Metasurfaces: From Wave Physics to Design
+# Metasurface.ir
 
-A graduate companion book for investigating how electromagnetic sheets transform waves.
+**Metasurfaces: From Wave Physics to Design** — a graduate companion book for investigating how electromagnetic sheets transform waves.
 
 This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Explore the Chapter 10 pilot, AI and Metasurfaces, with worked exercises, two executed analytical notebooks, and four computational lab outlines. The remaining chapters will be developed with the instructor and student contributors.
 
