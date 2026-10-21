@@ -1,0 +1,25 @@
+version: 1
+project:
+  id: graduate-electromagnetic-metasurfaces
+  title: 'Metasurfaces: From Wave Physics to Design'
+  description: Graduate computational investigations in electromagnetic metasurfaces.
+  github: https://github.com/metasurface-ir/metasurfaces-book
+  keywords:
+    - electromagnetic metasurfaces
+    - graduate course
+    - computational electromagnetics
+  toc:
+    - file: intro.md
+    - title: Course orientation
+      children:
+        - file: syllabus.md
+        - file: getting-started.md
+        - file: contributing.md
+    - title: Computational investigations
+      children:
+        - file: labs/index.md
+        - file: labs/lab-template.md
+site:
+  template: book-theme
+  options:
+    logo_text: Graduate Metasurfaces
