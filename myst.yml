@@ -21,6 +21,12 @@ project:
       children:
         - file: labs/index.md
         - file: labs/lab-template.md
+    - title: Chapter 3 - Unit-cell design and simulation
+      children:
+        - file: chapters/03-unit-cell-design.md
+        - file: chapters/03-unit-cell-guide.md
+        - file: labs/03-unit-cell-lab.md
+        - file: notebooks/03-unit-cell-library.ipynb
     - title: Chapter 4 - Periodicity and diffraction
       children:
         - file: chapters/04-periodic-floquet.md

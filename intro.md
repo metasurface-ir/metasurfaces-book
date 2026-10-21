@@ -2,7 +2,7 @@
 
 **Metasurfaces: From Wave Physics to Design** — a graduate companion book for investigating how electromagnetic sheets transform waves.
 
-This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 4 develops periodicity and diffraction with a browser explorer, an executed analytical notebook, and worked examples. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
+This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 3 computes a validated dielectric unit-cell library with an open Python solver. Chapter 4 develops periodicity and diffraction with a browser explorer, an executed analytical notebook, and worked examples. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
 
 ## Learn by investigating
 
@@ -13,6 +13,7 @@ The companion course website will provide conceptual lessons and course guidance
 ## Start here
 
 - Read the [ten-chapter syllabus](syllabus.md).
+- Build a response library with [Chapter 3: Unit-cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
 - Begin [Chapter 4: Periodic Structures and Floquet Analysis](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
 - Begin [Chapter 10: AI and Metasurfaces](chapters/10-ai-metasurfaces.md).
 - Follow the [pilot learning path and worked exercises](chapters/10-pilot-guide.md).
@@ -22,5 +23,5 @@ The companion course website will provide conceptual lessons and course guidance
 - Learn [how to contribute a chapter or notebook](contributing.md).
 
 :::{note} Development status
-Chapters 4 and 10 are available for instructor review with executed analytical notebooks. Chapter 4 also has a browser explorer that runs on the page. Full-wave investigations are outlined; their implementation and Chapters 1-3 and 5-9 remain in development. The website displays saved notebook results; download a notebook to run or modify its Python calculations.
+Chapters 3, 4, and 10 are available for instructor review. Chapter 3 includes an executed full-wave TE ridge calculation, a 50-entry response library, analytical/convergence checks, and a separate RCWA implementation comparison. Chapters 3 and 4 have browser explorers. The Chapter 10 pilot uses analytical data. Further full-wave, supercell, and finite-device investigations are outlined; Chapters 1-2 and 5-9 remain in development. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
 :::

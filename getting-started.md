@@ -43,8 +43,23 @@ Use the same `requirements-labs.txt` environment and open `04-floquet-orders.ipy
 
 The [Chapter 4 lab](labs/04-floquet-lab.md) also embeds a standalone HTML explorer. Its controls run in the browser with no Python kernel or network data service. The explorer can be opened in its own page or downloaded for offline use.
 
+## Run the Chapter 3 full-wave notebook
+
+Use the same `requirements-labs.txt` environment. Clone the repository or extract the complete ZIP from the [Chapter 3 lab](labs/03-unit-cell-lab.md), then open `notebooks/03-unit-cell-library.ipynb`. The notebook imports `simulations/unit_cell_te.py`; preserve both folders. Restart the kernel and run all cells. It generates response-library CSV/JSON files in `data/chapter-03/` and displays field, response, spectral, and validation results. These are CPU calculations for a restricted one-dimensional dielectric TE model.
+
+To reproduce the additional audit, run from the extracted folder or repository root:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-validation.txt
+.\.venv\Scripts\python.exe scripts/validate_chapter03.py --grcwa
+```
+
+The optional grcwa dependency is required only for the separate implementation comparison. Both implementations use RCWA. Without `--grcwa`, the audit records that this optional comparison was not run. Editing physical or numerical parameters requires renewed validation and a new dataset version. The fixed reference audit describes the published experiment.
+
+Run `python scripts/export_chapter03.py` after saving the executed notebook and audit to update its chapter figures, offline data explorer, and source ZIP. The explorer displays saved data rather than running Python in the browser. Optional Jupyter controls also inspect the computed rows; set `ENABLE_WIDGETS=True` locally and keep it `False` for the saved static reference.
+
 ## Further computational labs
 
-The analytical starter needs no electromagnetic solver. Future full-wave labs will specify their own solver versions, licenses where applicable, data inputs, and execution environments.
+The analytical starters need no electromagnetic solver. Chapter 3 supplies its own restricted TE solver. Further full-wave labs will specify their own solver versions, licenses where applicable, data inputs, and execution environments.
 
 Full-wave solvers such as COMSOL, FDTD, or RCWA will have separate setup and validation instructions. Routine book publication will use saved results rather than rerunning expensive simulations.

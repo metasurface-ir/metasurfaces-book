@@ -10,3 +10,15 @@
   border: 1px solid #d9e2e8 !important;
   border-radius: 10px;
 }
+
+/* The Chapter 3 saved-data explorer needs room for its controls on phones. */
+.unit-cell-explorer-frame div:has(> iframe) {
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  height: 1080px;
+}
+
+.unit-cell-explorer-frame iframe {
+  border: 1px solid #d9e2e8 !important;
+  border-radius: 10px;
+}

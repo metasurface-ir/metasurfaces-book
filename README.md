@@ -29,6 +29,9 @@ The command prints a local preview URL. To export HTML, use `jupyter-book build 
 | `chapters/` | Chapter text and worked derivations |
 | `labs/` | Computational investigations and lab briefs |
 | `notebooks/` | Editable notebooks with saved results |
+| `simulations/` | Parameterized electromagnetic solver source |
+| `data/chapter-03/` | Unit-cell response library, metadata, and numerical audit |
+| `interactives/`, `downloads/` | Browser explorers and downloadable source bundles |
 | `templates/` | Copyable contribution templates |
 | `.github/workflows/pages.yml` | Build checks and automatic publication |
 
@@ -41,6 +44,8 @@ Pull requests run the book build. Merging into `main` rebuilds and deploys the s
 Heavy electromagnetic simulations run separately; the book publishes saved outputs and reproducible instructions. Label analytical, synthetic, simulated, and experimental results clearly.
 
 ## Editorial status
+
+Chapters 3, 4, and 10 have developed computational materials. Chapter 3 supplies an executed TE ridge RCWA solver, validated response library, field plots, browser data explorer, and source ZIP. Its numerical audit can be reproduced with `python scripts/validate_chapter03.py --grcwa` after installing the lab and optional validation requirements. Regenerate its figures/explorer/ZIP with `python scripts/export_chapter03.py` after saving the notebook and audit. Further FEM/FDTD, supercell, and finite-device investigations remain explicit outlines.
 
 Chapters 1-9 follow an instructor-supplied contents outline; Chapter 10, AI and Metasurfaces, was added by the instructor. Individual pages state their development status. This repository is the authoritative editing home for this book; the original local starter in the website workspace is an earlier snapshot.
 
