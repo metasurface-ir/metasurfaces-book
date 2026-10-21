@@ -170,7 +170,7 @@ $$
 Here $\mathbf h$ is a learned feature vector, not an electromagnetic field. For $M$ frequencies, pack the output as $[\operatorname{Re}t_1,\ldots,\operatorname{Re}t_M,\operatorname{Im}t_1,\ldots,\operatorname{Im}t_M]$. With $H$ hidden units, the matrices have shapes $H\times1$ and $2M\times H$. Biases add $H+2M$ parameters. With $M=101$ and $H=32$, the network has $2H+(H+1)2M=6730$ trainable parameters. The 40 training geometries still provide only 40 independently sampled spectra; 101 frequencies do not turn them into 4040 independent geometries.
 
 ```{mermaid}
-flowchart LR
+flowchart TD
     G[Design coordinate g] --> S[Scale using training statistics]
     S --> H[Learned tanh hidden units]
     H --> Y[202 real output coordinates]
