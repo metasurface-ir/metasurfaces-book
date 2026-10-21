@@ -23,13 +23,13 @@ By completing the course, students should be able to formulate a metasurface sca
 | 7 | Active, tunable, and intelligent metasurfaces | Bias/state-dependent response models and tuning constraints |
 | 8 | Emerging applications in communications engineering | Beam control and system-level performance investigations |
 | 9 | Materials, fabrication, and measurement methods | Tolerance analysis, measured-data processing, uncertainty |
-| 10 | AI and Metasurfaces | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
+| 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
 Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. Chapters 7-9 have only chapter-level headings in the supplied excerpt; their detailed coverage remains open.
 
 ## Chapter 10: AI and Metasurfaces
 
-The following scope is proposed for the instructor's review:
+The [first teaching edition](chapters/10-ai-metasurfaces.md) and [computational lab](labs/13-ai-metasurfaces.md) are now available for instructor review. They cover:
 
 - **Problem formulation:** distinguish forward response prediction, inverse geometry design, and optimization using a learned surrogate. Define physical objectives and fabrication constraints before selecting a model.
 - **Dataset construction:** version geometry, material dispersion, polarization, incidence conditions, solver settings, and convergence evidence. Define training, validation, and held-out test sets that avoid leakage between closely related geometries or sweeps.
@@ -38,7 +38,7 @@ The following scope is proposed for the instructor's review:
 - **Physics and uncertainty:** test power accounting, reciprocity or symmetry where applicable, confidence away from training data, and sensitivity to fabrication variation.
 - **Independent verification:** run selected predictions through a converged electromagnetic solver and report response error, design success, total data-generation/training/verification cost, and model limitations.
 
-The proposed capstone is to build a surrogate from a validated unit-cell library, use it to propose a design, and test that design independently. Begin with a small, reproducible dataset and modest hardware requirements. Final model families, dataset, software, and assessment remain undecided. No AI model or dataset is supplied in this scaffold.
+The proposed capstone is to build a surrogate from a validated unit-cell library, use it to propose a design, and test that design independently. The executed starter uses a small synthetic resonant-sheet dataset and kernel regression. The full-wave dataset, solver, and assessment for later lab stages remain to be selected.
 
 ## Reusable module pattern
 

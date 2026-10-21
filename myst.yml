@@ -19,6 +19,11 @@ project:
       children:
         - file: labs/index.md
         - file: labs/lab-template.md
+    - title: Chapter 10 - AI and Metasurfaces
+      children:
+        - file: chapters/10-ai-metasurfaces.md
+        - file: labs/13-ai-metasurfaces.md
+        - file: notebooks/10-resonant-surrogate.ipynb
 site:
   template: book-theme
   options:

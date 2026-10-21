@@ -1,6 +1,6 @@
 # Planned computational investigations
 
-The identifiers below preserve the existing local course handoff, with a new AI investigation for the instructor's Chapter 10. They are provisional lab proposals, not completed lessons. The ten-chapter syllabus and this list serve different purposes: chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. The AI lab now includes an executed analytical starter and detailed outlines for later stages. The other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Proposed investigation | Related chapter(s) |
 | --- | --- | --- |
@@ -16,9 +16,9 @@ The identifiers below preserve the existing local course handoff, with a new AI 
 | ms-10-coupling | Independent-cell versus supercell predictions | 3, 6 |
 | ms-11-inverse-design | Bounded optimization with independent checks | 5, 6, 10 |
 | ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
-| ms-13-ai-metasurfaces | Train a forward surrogate, propose a design, and verify it independently | 10 |
+| ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
 
-## Suggested first investigation
+## Next investigation after Chapter 10
 
 **Floquet orders: Which beams can leave a metasurface?** Begin with an analytical notebook that maps allowed orders versus period, wavelength, incidence angle, and refractive index. Follow it later with an independently validated full-wave comparison. An allowed order does not determine its power or efficiency.
 
