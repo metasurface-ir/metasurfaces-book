@@ -5,8 +5,10 @@ short_title: AI computational lab
 
 # Lab 10: Learn, design, and verify a metasurface response
 
-**Topic ID:** `ms-13-ai-metasurfaces`  
-**Companion:** [Chapter 10](../chapters/10-ai-metasurfaces.md)  
+**Topic ID:** `ms-13-ai-metasurfaces`
+
+**Companion:** [Chapter 10](../chapters/10-ai-metasurfaces.md)
+
 **Question:** can a surrogate predict unseen responses and propose a design that survives verification?
 
 The investigation has four stages. Stage A supplies a runnable analytical starter. Stages B-D are computational lab outlines for student contributions, with required inputs and validation defined in advance.
