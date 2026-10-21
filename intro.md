@@ -2,7 +2,7 @@
 
 **Metasurfaces: From Wave Physics to Design** — a graduate companion book for investigating how electromagnetic sheets transform waves.
 
-This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 3 computes a validated dielectric unit-cell library with an open Python solver. Chapter 4 develops periodicity and diffraction with a browser explorer, an executed analytical notebook, and worked examples. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
+This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 3 computes a validated dielectric unit-cell library with an open Python solver. Chapter 4 develops periodicity and diffraction. Chapter 5 connects target wavefronts to full-wave beam steering, scalar focusing, and polarization models. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
 
 ## Learn by investigating
 
@@ -15,6 +15,7 @@ The companion course website will provide conceptual lessons and course guidance
 - Read the [ten-chapter syllabus](syllabus.md).
 - Build a response library with [Chapter 3: Unit-cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
 - Begin [Chapter 4: Periodic Structures and Floquet Analysis](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
+- Design and verify with [Chapter 5: Metasurface Synthesis](chapters/05-metasurface-synthesis.md), its [worked examples](chapters/05-synthesis-guide.md), and [computational lab](labs/05-synthesis-lab.md).
 - Begin [Chapter 10: AI and Metasurfaces](chapters/10-ai-metasurfaces.md).
 - Follow the [pilot learning path and worked exercises](chapters/10-pilot-guide.md).
 - Work through the [AI computational lab](labs/13-ai-metasurfaces.md), [starter notebook](notebooks/10-resonant-surrogate.ipynb), and [neural comparison](notebooks/10-neural-comparison.ipynb).
@@ -23,5 +24,5 @@ The companion course website will provide conceptual lessons and course guidance
 - Learn [how to contribute a chapter or notebook](contributing.md).
 
 :::{note} Development status
-Chapters 3, 4, and 10 are available for instructor review. Chapter 3 includes an executed full-wave TE ridge calculation, a 50-entry response library, analytical/convergence checks, and a separate RCWA implementation comparison. Chapters 3 and 4 have browser explorers. The Chapter 10 pilot uses analytical data. Further full-wave, supercell, and finite-device investigations are outlined; Chapters 1-2 and 5-9 remain in development. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
+Chapters 3, 4, 5, and 10 are available for instructor review. Chapters 3 and 5 include executed full-wave TE ridge calculations and validated libraries; Chapter 5 also verifies four complete periodic supercells. Chapters 3-5 have browser explorers. Focusing and polarization use separately labeled scalar/Jones models, and the Chapter 10 pilot uses analytical data. Further FEM/FDTD, finite-device, broadband, and fabrication investigations remain outlines. Chapters 1-2 and 6-9 remain in development. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
 :::

@@ -93,4 +93,4 @@ The exported library covers one wavelength and incidence, ideal constant-index m
 
 Submit your prediction, model sketch, equations/conventions, parameter changes, analytic limits, convergence table, response plots, library files, audit, and one unmet target. State which solver stages actually ran. A FEM/FDTD cross-check or a varying-neighbor supercell needs its own execution evidence.
 
-Chapter 5 will use such libraries for synthesis. Chapter 10 can use a broadened, validated library as an electromagnetic learning dataset. A finite-device efficiency and AI generalization require further evidence beyond these 50 related width samples.
+[Chapter 5](05-metasurface-synthesis.md) now expands phase coverage and verifies four selected periodic supercells using these principles. Chapter 10 can use a broadened, validated library as an electromagnetic learning dataset. A finite-device efficiency and AI generalization require further evidence beyond these 50 related width samples.

@@ -88,7 +88,7 @@ The separate implementation uses the same RCWA method family. Its raster represe
 
 **Deliverables:** coverage and transmission maps, accepted/rejected entries, independent interpolation checks, and a versioned dataset. Explain any coverage gaps. A full phase circle is an outcome to assess rather than an assumed success condition.
 
-**Status:** outline; this two-parameter extension has not been run.
+**Status:** the [Chapter 5 lab](05-synthesis-lab.md) now executes a common-height screen and a new fixed-height, 161-width library. The broader two-parameter library investigation described here remains an extension outline.
 
 ## D. Compare numerical methods: FEM or FDTD outline
 
@@ -110,7 +110,7 @@ Choose several accepted geometries and arrange them in an explicitly repeated su
 
 **Deliverables:** geometry sequence, local prediction, full-supercell results, converged order-resolved powers, and an explanation of disagreement. Do not interpret the local mask's Fourier amplitudes directly as full-wave powers without its normalization/model assumptions.
 
-**Status:** outline; neither a varying-neighbor supercell nor a finite beam deflector has been simulated here. These investigations connect to Chapters 5 and 6.
+**Status:** [Chapter 5](05-synthesis-lab.md) now includes a full-wave comparison for selected six-ridge periodic sequences, including identical and reversed controls. The broader neighbor-gradient study described here and a finite-aperture beam deflector remain extension outlines.
 
 ## Contribution handoff
 

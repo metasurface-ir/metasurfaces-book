@@ -1,0 +1,61 @@
+{
+  "model": "1D scalar angular spectrum plus separate analytical Jones matrices",
+  "aperture_um": 31.200000000000003,
+  "focal_distance_um": 30.0,
+  "wavelength_um": 1.55,
+  "output_index": 1.5,
+  "dx_um": 0.1,
+  "fft_samples": 2048,
+  "window_um": 204.8,
+  "focus_window_half_um": 1.0,
+  "metrics": [
+    {
+      "model": "continuous",
+      "fwhm_um": 0.9705965619857666,
+      "relative_peak": 1.0,
+      "line_intensity_fraction": 0.8808993043581491
+    },
+    {
+      "model": "sampled",
+      "fwhm_um": 0.9824114619526049,
+      "relative_peak": 0.9135391393283687,
+      "line_intensity_fraction": 0.895183415037246
+    },
+    {
+      "model": "local_library",
+      "fwhm_um": 0.9849398338991406,
+      "relative_peak": 0.5502844541859004,
+      "line_intensity_fraction": 0.8952809692570377
+    }
+  ],
+  "refinements": [
+    {
+      "dx_um": 0.1,
+      "window_um": 102.4,
+      "fwhm_um": 0.972592406759125,
+      "roi_peak_normalized_difference": 0.0013129341956203621
+    },
+    {
+      "dx_um": 0.1,
+      "window_um": 409.6,
+      "fwhm_um": 0.9714129384351624,
+      "roi_peak_normalized_difference": 0.0005231186366735874
+    },
+    {
+      "dx_um": 0.05,
+      "window_um": 204.8,
+      "fwhm_um": 0.9698811115911047,
+      "roi_peak_normalized_difference": 0.00251916436968437
+    }
+  ],
+  "axial_peak_um": 29.75,
+  "max_jones_error": 6.395250856282128e-16,
+  "library_phase_rms_deg": 0.6872031881601142,
+  "source_sha256": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+  "limitations": [
+    "Cylindrical scalar focus, not a full-wave metalens",
+    "Library aperture uses local periodicity",
+    "Jones matrices are ideal analytical elements, not the TE ridge",
+    "No physical focusing efficiency is reported"
+  ]
+}

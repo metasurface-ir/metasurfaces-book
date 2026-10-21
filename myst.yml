@@ -33,6 +33,13 @@ project:
         - file: chapters/04-floquet-guide.md
         - file: labs/04-floquet-lab.md
         - file: notebooks/04-floquet-orders.ipynb
+    - title: Chapter 5 - Metasurface synthesis
+      children:
+        - file: chapters/05-metasurface-synthesis.md
+        - file: chapters/05-synthesis-guide.md
+        - file: labs/05-synthesis-lab.md
+        - file: notebooks/05-beam-steering.ipynb
+        - file: notebooks/05-wavefront-models.ipynb
     - title: Chapter 10 - AI and Metasurfaces
       children:
         - file: chapters/10-ai-metasurfaces.md

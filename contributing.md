@@ -71,6 +71,10 @@ For Chapter 4, use `python scripts/export_chapter04_figures.py` after running an
 
 For Chapter 3, keep the notebook and `simulations/unit_cell_te.py` together. After saving a fresh execution, run `python scripts/validate_chapter03.py --grcwa` with the optional validation environment, then `python scripts/export_chapter03.py`. This updates the data audit, three figures, embedded-data explorer, and source ZIP. If you skip the optional comparison, report that explicitly. The explorer's editable template is `templates/unit-cell-explorer.html`; its published file is generated from the JSON library. Preserve the source hash, domain, phase references, and acceptance thresholds when adding data. Use a new dataset version for another physical experiment.
 
+## Chapter 5 source and data workflow
+
+For Chapter 5, execute `05-beam-steering.ipynb` before `05-wavefront-models.ipynb`, then run `scripts/validate_chapter05.py --grcwa` and `scripts/export_chapter05.py`. The source ZIP includes both modules and the original Chapter 3 data dependency. The editable explorer template is `templates/synthesis-explorer.html`; its published HTML embeds the generated data. Preserve the distinction between full-wave supercells, local estimates, scalar focusing, and ideal Jones matrices. Update captions and validation when results change.
+
 ## Share a folder with the instructor
 
 Include the source page or notebook, its images/data, a requirements file if it needs additional packages, references, your name as you want it credited, and a note describing what has been executed or verified. The instructor can integrate that folder and add its table-of-contents entry. No special design software or HTML editing is required.
