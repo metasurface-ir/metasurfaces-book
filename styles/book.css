@@ -1,0 +1,12 @@
+/* Give the Chapter 4 controls a usable viewport without affecting other figures. */
+.floquet-explorer-frame div:has(> iframe) {
+  /* MyST supplies an inline aspect-ratio wrapper; replace it for this tool. */
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  height: 900px;
+}
+
+.floquet-explorer-frame iframe {
+  border: 1px solid #d9e2e8 !important;
+  border-radius: 10px;
+}

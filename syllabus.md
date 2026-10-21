@@ -17,7 +17,7 @@ By completing the course, students should be able to formulate a metasurface sca
 | 1 | Introduction to metasurfaces and basic concepts | Explore electric/magnetic responses and model assumptions |
 | 2 | Electromagnetic waves and interaction with metasurfaces | Fresnel amplitudes and power, polarization, sheet response, S parameters, equivalent circuits |
 | 3 | Unit-cell design and simulation | Parameter sweeps, response retrieval, phase libraries, array assembly |
-| 4 | Periodic structures, Floquet analysis, and diffraction orders | Open-channel maps, diffraction angles, cutoff, periodic-port validation |
+| 4 | [Periodic structures, Floquet analysis, and diffraction orders](chapters/04-periodic-floquet.md) | Executed channel maps, browser explorer, worked examples, and a periodic-port validation outline |
 | 5 | Metasurface synthesis | Beam steering, focusing, amplitude and polarization control, geometric phase, inverse design |
 | 6 | Numerical modeling and simulation methods | Solver selection, mesh/domain convergence, benchmarks, power balance |
 | 7 | Active, tunable, and intelligent metasurfaces | Bias/state-dependent response models and tuning constraints |
@@ -26,6 +26,12 @@ By completing the course, students should be able to formulate a metasurface sca
 | 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
 Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. Chapters 7-9 have only chapter-level headings in the supplied excerpt; their detailed coverage remains open.
+
+## Chapter 4: Periodicity and diffraction
+
+The [chapter](chapters/04-periodic-floquet.md), [worked examples](chapters/04-floquet-guide.md), [interactive lab](labs/04-floquet-lab.md), and [executed notebook](notebooks/04-floquet-orders.ipynb) develop Bloch phases, diffraction orders, cutoff, evanescent decay, medium-dependent channel sets, and power normalization. Finite-array factors connect discrete Floquet directions to angular lobes. A rectangular-lattice example introduces the two-dimensional condition.
+
+The browser explorer runs without a Python installation. The notebook includes analytical interface checks and optional Jupyter sliders. The full-wave lab progresses from a flat-interface benchmark to a dielectric grating, with an optional six-post beam deflector. Those solver stages are outlines awaiting implementation and convergence evidence.
 
 ## Chapter 10: AI and Metasurfaces
 

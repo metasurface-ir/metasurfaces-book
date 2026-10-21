@@ -125,4 +125,4 @@ A high-quality report can conclude that a neural network was unnecessary for thi
 
 The Chapter 10 **introductory pilot** comprises the chapter, these worked exercises, both executed analytical notebooks, and the four detailed lab outlines. Full-wave dataset generation, fabricated-device validation, tandem/generative implementations, and active-learning experiments are future work described in Labs B-D.
 
-The next authoring step is the foundational wave/Floquet and numerical-validation material that those labs need. The [syllabus](../syllabus.md) keeps the ten-chapter course map visible while the chapters are developed.
+[Chapter 4](04-periodic-floquet.md) provides the Floquet-channel foundation that those labs need, with a browser explorer and an analytical notebook. Further unit-cell and numerical-validation material will support the later full-wave stages. The [syllabus](../syllabus.md) keeps the ten-chapter course map visible while the chapters are developed.

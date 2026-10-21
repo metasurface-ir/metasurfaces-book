@@ -65,6 +65,8 @@ The publishing workflow displays saved notebook results. It does not execute all
 
 For the Chapter 10 comparison, two figures are also displayed in the chapter. After rerunning and saving `notebooks/10-neural-comparison.ipynb`, run `python scripts/export_chapter10_figures.py` to copy its tagged plot outputs into `assets/chapter-10/`. Check the accompanying interpretation when results change. The export command needs only Python's standard library.
 
+For Chapter 4, use `python scripts/export_chapter04_figures.py` after running and saving `notebooks/04-floquet-orders.ipynb`. Its independent browser explorer is in `interactives/floquet-explorer.html`; check its reference examples, narrow-screen layout, and control behavior when changing the equations. The `interactives/` folder is published through `project.static_files` in `myst.yml`. Numerical tables should use a supported rich-output format such as HTML, and their published rendering should be checked alongside notebook execution.
+
 ## Share a folder with the instructor
 
 Include the source page or notebook, its images/data, a requirements file if it needs additional packages, references, your name as you want it credited, and a note describing what has been executed or verified. The instructor can integrate that folder and add its table-of-contents entry. No special design software or HTML editing is required.
