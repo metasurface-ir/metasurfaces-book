@@ -11,6 +11,8 @@ short_title: Floquet computational lab
 
 **Question:** how do period, wavelength, incidence, and exterior refractive index determine the outgoing channels, and how should those channels be used in a full-wave calculation?
 
+**Executed amplitude calculation:** the [Chapter 3 lab](03-unit-cell-lab.md) now supplies a restricted TE ridge solver with flat-interface/film limits, multiorder checks, and a validated response library. The specific solver exercises outlined later on this page remain extension briefs.
+
 ## A. Explore in your browser
 
 Use the controls below to predict and reveal transmitted and reflected channel sets. The ray directions show allowed channels with equal visual emphasis; their lengths and colors do not encode power. Closed orders appear in the table rather than as outgoing rays.

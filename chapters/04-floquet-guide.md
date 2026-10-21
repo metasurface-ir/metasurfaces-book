@@ -118,4 +118,4 @@ For finite arrays, label the plotted quantity as a normalized scalar array facto
 
 ## Connection to the rest of the course
 
-Chapter 3 will use these channels to define unit-cell libraries. Chapter 5 will use them when designing phase gradients and wavefronts. Chapter 6 will develop numerical convergence in more detail. [Chapter 10](10-ai-metasurfaces.md) needs a consistent channel basis when a learned model predicts a scattering response; adding or removing channels at cutoff can change both data representation and validation requirements.
+[Chapter 3](03-unit-cell-design.md) uses these channels to compute and validate a dielectric TE unit-cell library. Chapter 5 will use them when designing phase gradients and wavefronts. Chapter 6 will develop numerical convergence in more detail. [Chapter 10](10-ai-metasurfaces.md) needs a consistent channel basis when a learned model predicts a scattering response; adding or removing channels at cutoff can change both data representation and validation requirements.

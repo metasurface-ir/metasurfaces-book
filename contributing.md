@@ -67,6 +67,10 @@ For the Chapter 10 comparison, two figures are also displayed in the chapter. Af
 
 For Chapter 4, use `python scripts/export_chapter04_figures.py` after running and saving `notebooks/04-floquet-orders.ipynb`. Its independent browser explorer is in `interactives/floquet-explorer.html`; check its reference examples, narrow-screen layout, and control behavior when changing the equations. The `interactives/` folder is published through `project.static_files` in `myst.yml`. Numerical tables should use a supported rich-output format such as HTML, and their published rendering should be checked alongside notebook execution.
 
+## Chapter 3 source and data workflow
+
+For Chapter 3, keep the notebook and `simulations/unit_cell_te.py` together. After saving a fresh execution, run `python scripts/validate_chapter03.py --grcwa` with the optional validation environment, then `python scripts/export_chapter03.py`. This updates the data audit, three figures, embedded-data explorer, and source ZIP. If you skip the optional comparison, report that explicitly. The explorer's editable template is `templates/unit-cell-explorer.html`; its published file is generated from the JSON library. Preserve the source hash, domain, phase references, and acceptance thresholds when adding data. Use a new dataset version for another physical experiment.
+
 ## Share a folder with the instructor
 
 Include the source page or notebook, its images/data, a requirements file if it needs additional packages, references, your name as you want it credited, and a note describing what has been executed or verified. The instructor can integrate that folder and add its table-of-contents entry. No special design software or HTML editing is required.

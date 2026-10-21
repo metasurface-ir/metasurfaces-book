@@ -1,6 +1,6 @@
 # Computational investigations
 
-The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 4 includes an executed analytical notebook, a browser explorer, worked examples, and full-wave lab outlines. The AI pilot includes two executed analytical notebooks and four detailed lab stages. Other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook, a browser explorer, worked examples, and full-wave lab outlines. The AI pilot includes two executed analytical notebooks and four detailed lab stages. Other investigations remain proposed. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Investigation | Related chapter(s) |
 | --- | --- | --- |
@@ -10,13 +10,17 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-04-floquet-orders | [Floquet channels: browser explorer, analytical notebook, and full-wave validation outline](04-floquet-lab.md) | 4 |
 | ms-05-beam-steering | Ideal versus sampled phase profiles | 5 |
 | ms-06-polarization | Jones matrices, rotated elements, geometric phase | 2, 5 |
-| ms-07-unit-cell | A converged unit-cell response library | 3, 6 |
+| ms-07-unit-cell | [Validated TE ridge library: full-wave notebook, browser explorer, and extension outlines](03-unit-cell-lab.md) | 3, 6 |
 | ms-08-metalenses | Finite-aperture propagation and focal metrics | 5 |
 | ms-09-dispersion | Spectral sweeps and bandwidth metrics | 2, 5 |
 | ms-10-coupling | Independent-cell versus supercell predictions | 3, 6 |
 | ms-11-inverse-design | Bounded optimization with independent checks | 5, 6, 10 |
 | ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
 | ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
+
+## Available unit-cell investigation
+
+The [Chapter 3 lab](03-unit-cell-lab.md) computes a 50-width dielectric ridge library using an original restricted TE RCWA solver. Analytical film limits, harmonic convergence, multiorder checks, and a separate grcwa implementation comparison accompany the data. Use the browser explorer to inspect the saved responses and reject unattainable phase targets. Download the complete source bundle to rerun or extend the notebook. Further height sweeps, FEM/FDTD comparisons, and supercell investigations remain outlines.
 
 ## Available Floquet investigation
 

@@ -1,0 +1,187 @@
+{
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1"
+  },
+  "solver_sha256": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+  "analytic_films": {
+    "cases": 18,
+    "max_complex_error": 8.865462800015876e-15
+  },
+  "artificial_supercell_flat_interface": "nonzero orders have zero amplitude",
+  "multiorder_mirror": {
+    "reflected_open": [
+      -1,
+      0
+    ],
+    "transmitted_open": [
+      -1,
+      0,
+      1
+    ],
+    "max_order_power_error": 1.9345636204093353e-14
+  },
+  "field_continuity": {
+    "offset_um": 1e-08,
+    "max_field_difference": 7.520767463378424e-08
+  },
+  "input_guards": {
+    "rejected_cases": 10
+  },
+  "library": {
+    "rows": 50,
+    "all_accepted": true,
+    "refinement": "49 vs 65 harmonics at every width",
+    "M48_spot_cases": 6,
+    "max_spot_complex_error": 8.4102489300164e-06,
+    "max_width_delta_t": 6.5843872823157e-06,
+    "phase_span_deg": 132.0415836681172
+  },
+  "independent_implementation": {
+    "package": "grcwa",
+    "version": "0.1.2",
+    "interpretation": "Separate RCWA implementation, with a separately refined raster representation. Not an FDTD/FEM or experimental comparison.",
+    "half_order": 16,
+    "tolerance": 0.0001,
+    "cases": [
+      {
+        "width_um": 0.15,
+        "period_um": 0.65,
+        "angle_deg": 0.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 1.3139893820790505e-06,
+            "complex_t0_error": 6.059938847419472e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 1.613552180756983e-08,
+            "complex_t0_error": 7.433806407739466e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.15,
+        "period_um": 0.65,
+        "angle_deg": 20.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 4.622117054306485e-07,
+            "complex_t0_error": 6.436026224591924e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 5.687596317527355e-09,
+            "complex_t0_error": 7.895225202749383e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.325,
+        "period_um": 0.65,
+        "angle_deg": 0.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 4.323158743768651e-06,
+            "complex_t0_error": 1.5067501106535464e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 6.753816961246883e-08,
+            "complex_t0_error": 2.3538502662587225e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.325,
+        "period_um": 0.65,
+        "angle_deg": 20.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 4.981327943520686e-06,
+            "complex_t0_error": 1.5740212674767366e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 7.7821744409734e-08,
+            "complex_t0_error": 2.4589648676050796e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.5,
+        "period_um": 0.65,
+        "angle_deg": 0.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 1.002470345845552e-06,
+            "complex_t0_error": 1.2697396343747165e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 1.2305486407626631e-08,
+            "complex_t0_error": 1.5605884559722313e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.5,
+        "period_um": 0.65,
+        "angle_deg": 20.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 3.2441934164628705e-05,
+            "complex_t0_error": 5.5441288353722003e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 3.9855713065972687e-07,
+            "complex_t0_error": 6.812542441510321e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.5,
+        "period_um": 1.4,
+        "angle_deg": 20.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 6.468030959377868e-05,
+            "complex_t0_error": 3.617791834624562e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 1.0167460539056705e-06,
+            "complex_t0_error": 5.564267981653914e-07
+          }
+        ]
+      },
+      {
+        "width_um": 0.5,
+        "period_um": 1.4,
+        "angle_deg": -20.0,
+        "comparisons": [
+          {
+            "raster_pixels": 256,
+            "max_order_power_error": 6.468030957779147e-05,
+            "complex_t0_error": 3.617791830343849e-05
+          },
+          {
+            "raster_pixels": 2048,
+            "max_order_power_error": 1.0167460505194903e-06,
+            "complex_t0_error": 5.564268074232682e-07
+          }
+        ]
+      }
+    ]
+  },
+  "status": "passed"
+}
