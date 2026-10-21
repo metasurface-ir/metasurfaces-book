@@ -22,8 +22,10 @@ project:
     - title: Chapter 10 - AI and Metasurfaces
       children:
         - file: chapters/10-ai-metasurfaces.md
+        - file: chapters/10-pilot-guide.md
         - file: labs/13-ai-metasurfaces.md
         - file: notebooks/10-resonant-surrogate.ipynb
+        - file: notebooks/10-neural-comparison.ipynb
 site:
   template: book-theme
   options:

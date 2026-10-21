@@ -63,6 +63,8 @@ Open a pull request from your branch to `metasurface-ir/metasurfaces-book:main`.
 
 The publishing workflow displays saved notebook results. It does not execute all student notebooks or run licensed solvers. Do not include private data, credentials, or unapproved answer keys in submitted files.
 
+For the Chapter 10 comparison, two figures are also displayed in the chapter. After rerunning and saving `notebooks/10-neural-comparison.ipynb`, run `python scripts/export_chapter10_figures.py` to copy its tagged plot outputs into `assets/chapter-10/`. Check the accompanying interpretation when results change. The export command needs only Python's standard library.
+
 ## Share a folder with the instructor
 
 Include the source page or notebook, its images/data, a requirements file if it needs additional packages, references, your name as you want it credited, and a note describing what has been executed or verified. The instructor can integrate that folder and add its table-of-contents entry. No special design software or HTML editing is required.
