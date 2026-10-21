@@ -16,7 +16,7 @@ By completing the course, students should be able to formulate a metasurface sca
 | --- | --- | --- |
 | 1 | Introduction to metasurfaces and basic concepts | Explore electric/magnetic responses and model assumptions |
 | 2 | Electromagnetic waves and interaction with metasurfaces | Fresnel amplitudes and power, polarization, sheet response, S parameters, equivalent circuits |
-| 3 | Unit-cell design and simulation | Parameter sweeps, response retrieval, phase libraries, array assembly |
+| 3 | [Unit-cell design and simulation](chapters/03-unit-cell-design.md) | Executed TE ridge solver, analytical/RCWA validation, complex-response library, field plots, and constrained phase selection |
 | 4 | [Periodic structures, Floquet analysis, and diffraction orders](chapters/04-periodic-floquet.md) | Executed channel maps, browser explorer, worked examples, and a periodic-port validation outline |
 | 5 | Metasurface synthesis | Beam steering, focusing, amplitude and polarization control, geometric phase, inverse design |
 | 6 | Numerical modeling and simulation methods | Solver selection, mesh/domain convergence, benchmarks, power balance |
@@ -26,6 +26,14 @@ By completing the course, students should be able to formulate a metasurface sca
 | 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
 Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. Chapters 7-9 have only chapter-level headings in the supplied excerpt; their detailed coverage remains open.
+
+## Chapter 3: Unit-cell design and simulation
+
+The [chapter](chapters/03-unit-cell-design.md), [six worked examples](chapters/03-unit-cell-guide.md), [computational lab](labs/03-unit-cell-lab.md), and [executed notebook](notebooks/03-unit-cell-library.ipynb) build an original one-dimensional TE RCWA solver and a 50-width dielectric response library. The browser explorer selects precomputed responses and reports feasible/unmet phase targets. The downloadable source bundle preserves the solver, environment, notebook, data, and audit.
+
+Validation includes interface/uniform-film limits, width-wise harmonic refinements, six higher-order spot checks, multiorder symmetry/field checks, and eight comparisons with the separate grcwa implementation. The reference covers a lossless, constant-index ridge grating at one wavelength/incidence and has incomplete phase coverage. FEM/FDTD, additional height sweeps, and varying-neighbor supercells are detailed lab outlines.
+
+For the currently developed material, study Chapter 4's channel conventions before Chapter 3's amplitudes, then return to synthesis in Chapter 5 when available. Chapter 6's numerical-validation methods accompany the computational work.
 
 ## Chapter 4: Periodicity and diffraction
 
