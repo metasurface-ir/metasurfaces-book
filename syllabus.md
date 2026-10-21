@@ -14,7 +14,7 @@ By completing the course, students should be able to formulate a metasurface sca
 
 | Chapter | Working title from the supplied contents | Proposed computational work |
 | --- | --- | --- |
-| 1 | Introduction to metasurfaces and basic concepts | Explore electric/magnetic responses and model assumptions |
+| 1 | [Introduction to metasurfaces and basic concepts](chapters/01-metasurface-foundations.md) | Executed analytical sheet model, phase/amplitude/power, electric-like/magnetic-like channels, conservation, and model limits |
 | 2 | Electromagnetic waves and interaction with metasurfaces | Fresnel amplitudes and power, polarization, sheet response, S parameters, equivalent circuits |
 | 3 | [Unit-cell design and simulation](chapters/03-unit-cell-design.md) | Executed TE ridge solver, analytical/RCWA validation, complex-response library, field plots, and constrained phase selection |
 | 4 | [Periodic structures, Floquet analysis, and diffraction orders](chapters/04-periodic-floquet.md) | Executed channel maps, browser explorer, worked examples, and a periodic-port validation outline |
@@ -26,6 +26,12 @@ By completing the course, students should be able to formulate a metasurface sca
 | 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
 Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. Chapters 7-9 have only chapter-level headings in the supplied excerpt; their detailed coverage remains open.
+
+## Chapter 1: Metasurface foundations
+
+The [chapter](chapters/01-metasurface-foundations.md), [six worked examples](chapters/01-foundations-guide.md), [lab](labs/01-first-investigation.md), and [executed notebook](notebooks/01-first-metasurface-model.ipynb) introduce structured interfaces, scales, complex coefficients, interference, electric/magnetic response, model hierarchy, and evidence. The browser explorer calculates a reciprocal lossless sheet response directly and works offline.
+
+The ideal two-port model assumes equal exterior impedances, normal incidence, one polarization, and specular ports only. Analytical limits, full matrix unitarity, two-sided power, an independent electric-only expression, derivative refinements, and input guards are checked. It has no geometry or full-wave/experimental validation. Comparisons link to existing full-wave Chapters 3 and 5. Chapter 2 will develop electromagnetic waves and boundary descriptions next; Chapter 6 follows the foundational chapters in the current development plan.
 
 ## Chapter 3: Unit-cell design and simulation
 
