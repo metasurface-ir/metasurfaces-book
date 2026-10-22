@@ -1,6 +1,6 @@
 # Metasurface.ir
 
-**Metasurfaces: From Wave Physics to Design** is an English graduate course and computational book, published with Jupyter Book 2.
+**Metasurfaces: From Wave Physics to Design** is a graduate course and computational book, published with Jupyter Book 2 in English and Persian. Both editions cover all six developed chapters (1, 2, 3, 4, 5, and 10), their teaching/lab pages, all eight notebook narratives, and the course navigation. Chapters 6–9 have syllabus outlines, not full chapters, in either language. Persian translations are prepared for instructor review.
 
 **Read:** https://metasurface-ir.github.io/metasurfaces-book/
 
@@ -18,7 +18,9 @@ python -m venv .venv
 # macOS/Linux: use .venv/bin/python and .venv/bin/jupyter-book instead.
 ```
 
-The command prints a local preview URL. To export HTML, use `jupyter-book build --html --strict` from the same environment. Jupyter Book downloads its web theme and dependencies on the first build.
+The command prints an English local preview URL. To export both editions and the language switcher, run `python scripts/build_bilingual.py` with the book environment's Python. Output is in `_build/html`; the Persian edition is in `_build/html/fa`. With no `BASE_URL`, serve this folder with `python -m http.server 8000 --directory _build/html`. Jupyter Book downloads its web theme and dependencies on the first build. The ordinary `jupyter-book build --html --strict` command still builds the English content alone.
+
+See [translation status and the student workflow](translations.md). Persian prose is in `translations/fa/`; `translations/languages.json` maps counterpart pages; `translations/source-lock.json` records reviewed English source hashes. CI checks those locks and the shared equations/code before building both editions. Numerical code, data, and saved notebook results have one authoritative source.
 
 ## Structure
 

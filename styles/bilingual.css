@@ -1,0 +1,25 @@
+#book-language-switcher{display:flex;align-items:center;gap:.55rem;white-space:nowrap;flex-shrink:0;padding:.35rem .6rem;margin-inline:.4rem;font-size:.88rem;border:1px solid #9eafb966;border-radius:.5rem;background:var(--myst-background-color,transparent)}
+#book-language-switcher a{cursor:pointer;text-decoration:none;padding:.1rem .12rem}
+#book-language-switcher a[aria-current=true]{font-weight:750;text-decoration:underline;text-underline-offset:.3rem}
+#book-language-switcher a:focus-visible{outline:3px solid #16818b;outline-offset:3px}
+html[lang=fa] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+html[lang=fa] article{line-height:1.95;text-align:start}
+html[lang=fa] h1,html[lang=fa] h2,html[lang=fa] h3{line-height:1.65;letter-spacing:normal}
+html[lang=fa] .myst-primary-sidebar,html[lang=fa] .myst-secondary-sidebar{line-height:1.85;text-align:start}
+html[lang=fa] pre,html[lang=fa] code,html[lang=fa] .katex,html[lang=fa] .katex-display,html[lang=fa] mjx-container,html[lang=fa] .myst-code-block{direction:ltr;unicode-bidi:isolate;text-align:left}
+html[lang=fa] .katex-display{overflow-x:auto;overflow-y:hidden;padding-block:.4rem}
+html[lang=fa] .katex-display>.katex{white-space:nowrap}
+html[lang=fa] code{display:inline-block;max-width:100%;vertical-align:baseline;overflow-wrap:anywhere}
+html[lang=fa] pre code{display:block;overflow-wrap:normal}
+html[lang=fa] th,html[lang=fa] td{text-align:start}
+html[lang=fa] .cell-output table,html[lang=fa] .output table,html[lang=fa] .dataframe{direction:ltr;text-align:left}
+html[lang=fa] .myst-admonition{border-inline-start-width:4px;border-inline-end-width:0}
+html[lang=fa] article iframe,html[lang=fa] article img{direction:ltr}
+@media(max-width:640px){#book-language-switcher{font-size:.8rem;gap:.35rem;padding:.25rem .35rem;margin-inline:.2rem}html[lang=fa] article{line-height:1.9}}
+@media(max-width:640px){
+  .myst-top-nav-bar>div:first-child{min-width:0;flex-shrink:1;margin-inline:0!important}
+  .myst-top-nav-bar>div:nth-child(2){flex-grow:0;flex-shrink:0}
+  .myst-home-link{min-width:0;flex-shrink:1;margin-inline:.2rem!important}
+  .myst-home-link span{display:block;max-width:104px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.9rem}
+}
+@media(max-width:420px){.myst-home-link span{max-width:90px;font-size:.84rem}#book-language-switcher{font-size:.74rem;gap:.25rem;padding:.25rem}}

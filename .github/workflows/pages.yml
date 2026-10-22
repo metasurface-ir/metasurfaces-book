@@ -39,7 +39,7 @@ jobs:
           else
             echo "BASE_URL=/$REPOSITORY_NAME" >> "$GITHUB_ENV"
           fi
-      - run: jupyter-book build --html --strict --ci
+      - run: python scripts/build_bilingual.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
