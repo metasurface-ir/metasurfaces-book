@@ -84,6 +84,8 @@ These are analytical-model consistency tests. They are not mesh/harmonic converg
 
 **Deliverables:** executed notebook, prediction table, three figures, custom parameters, response files, audit, and a statement of model limits.
 
+For a complete introductory assignment, use the [self-check answers and mini-project](../chapters/01-foundations-review.md), its suggested assessment rubric, and the editable report worksheet: {download}`../downloads/chapter-01-report-template.md`. The worksheet is also included in the source ZIP. The comparison in the worked guide uses saved Chapter 3 data; it does not add a full-wave solver run to this notebook.
+
 ## C. Connect to a physical computation
 
 **Status:** reading/comparison activity using the already executed [Chapter 3 unit-cell lab](03-unit-cell-lab.md) and [Chapter 5 synthesis lab](05-synthesis-lab.md). No new geometry is inferred from the introductory sheet parameters.

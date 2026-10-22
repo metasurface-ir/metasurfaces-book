@@ -25,6 +25,7 @@ project:
       children:
         - file: chapters/01-metasurface-foundations.md
         - file: chapters/01-foundations-guide.md
+        - file: chapters/01-foundations-review.md
         - file: labs/01-first-investigation.md
         - file: notebooks/01-first-metasurface-model.ipynb
     - title: Chapter 3 - Unit-cell design and simulation

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="780" viewBox="0 0 960 780" role="img" aria-labelledby="title desc">
+<title id="title">Physical scales and ideal sheet ports</title>
+<desc id="desc">A schematic six-site ridge sequence distinguishes element width, height, pitch, and supercell period. A separate ideal sheet has two incoming and two outgoing amplitudes at equal-impedance ports. The sheet is not a fitted representation of the illustrated geometry.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#245268"/></marker></defs>
+<rect width="960" height="780" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17394d" font-size="24">
+<rect x="18" y="18" width="924" height="358" rx="14" fill="#f2f7fa" stroke="#ccdce6"/>
+<text x="44" y="58" font-size="28" font-weight="bold">A. Name the physical scales</text>
+<text x="44" y="92" font-size="21">Schematic cross-section; not to scale or a new simulated design</text>
+<rect x="160" y="242" width="650" height="53" fill="#e5d8b6"/>
+<path d="M160 242H810" stroke="#245268" stroke-width="2"/>
+<g fill="#257b8b"><rect x="190" y="152" width="44" height="90"/><rect x="290" y="152" width="62" height="90"/><rect x="400" y="152" width="36" height="90"/><rect x="498" y="152" width="58" height="90"/><rect x="607" y="152" width="46" height="90"/><rect x="708" y="152" width="64" height="90"/></g>
+<g stroke="#245268" stroke-width="2" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)"><path d="M190 132H234"/><path d="M126 154V240"/><path d="M212 322H321"/><path d="M184 352H796"/></g>
+<text x="203" y="119" font-style="italic">w</text><text x="99" y="205" font-style="italic">h</text><text x="244" y="311">pitch p</text><text x="438" y="341">period Λ = 6p</text>
+<path d="M860 135V240" stroke="#245268" stroke-width="3" marker-end="url(#arrow)"/><text x="837" y="122">incident</text><text x="833" y="275">z ↓</text>
+<text x="44" y="409" font-size="22">A finite aperture contains a stated number of sites or periods.</text>
+<rect x="18" y="435" width="924" height="327" rx="14" fill="#f2f7fa" stroke="#ccdce6"/>
+<text x="44" y="477" font-size="28" font-weight="bold">B. Define the ideal two-port experiment</text>
+<path d="M480 510V676" stroke="#257b8b" stroke-width="9"/>
+<g stroke="#245268" stroke-width="4" fill="none" marker-end="url(#arrow)"><path d="M150 555H443"/><path d="M443 631H150"/><path d="M810 555H517"/><path d="M517 631H810"/></g>
+<text x="193" y="540">a₁ incoming</text><text x="193" y="669">b₁ outgoing</text><text x="623" y="540">a₂ incoming</text><text x="623" y="669">b₂ outgoing</text>
+<text x="179" y="599">port 1</text><text x="660" y="599">port 2</text><text x="394" y="711">sheet plane z = 0</text>
+<text x="44" y="744" font-size="21">Equal real impedances; one polarization; specular waves only</text>
+</g></svg>
