@@ -1,5 +1,7 @@
 #book-language-switcher{display:flex;align-items:center;gap:.55rem;white-space:nowrap;flex-shrink:0;padding:.35rem .6rem;margin-inline:.4rem;font-size:.88rem;border:1px solid #9eafb966;border-radius:.5rem;background:var(--myst-background-color,transparent)}
-#book-language-switcher a{cursor:pointer;text-decoration:none;padding:.1rem .12rem}
+#book-language-switcher{color:#132e40}
+.dark #book-language-switcher{color:#f1f5f9}
+#book-language-switcher a{color:inherit;cursor:pointer;text-decoration:none;padding:.1rem .12rem}
 #book-language-switcher a[aria-current=true]{font-weight:750;text-decoration:underline;text-underline-offset:.3rem}
 #book-language-switcher a:focus-visible{outline:3px solid #16818b;outline-offset:3px}
 html[lang=fa] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
