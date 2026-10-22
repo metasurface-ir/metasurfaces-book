@@ -1,3 +1,5 @@
+@import url("../bilingual.css");
+
 /* Give the Chapter 4 controls a usable viewport without affecting other figures. */
 .floquet-explorer-frame div:has(> iframe) {
   /* MyST supplies an inline aspect-ratio wrapper; replace it for this tool. */

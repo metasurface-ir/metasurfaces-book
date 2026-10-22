@@ -19,6 +19,8 @@ project:
         - file: syllabus.md
         - file: getting-started.md
         - file: contributing.md
+        - file: translations.md
+        - file: glossary.md
     - title: Computational investigations
       children:
         - file: labs/index.md

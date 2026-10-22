@@ -4,6 +4,8 @@ You can help write a section, improve an explanation, add a numerical investigat
 
 ## Choose a contribution route
 
+For Persian contributions, follow the [translation workflow and coverage record](translations.md). The Persian [contribution guide](https://metasurface-ir.github.io/metasurfaces-book/fa/contributing/) explains the same process for student translators. Keep numerical models shared across languages.
+
 | Route | Best for | What to submit |
 | --- | --- | --- |
 | GitHub in the browser | Corrections and short text additions | Edit a file, then propose the change in a pull request |

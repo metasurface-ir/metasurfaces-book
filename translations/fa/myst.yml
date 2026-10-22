@@ -1,0 +1,67 @@
+version: 1
+project:
+  id: graduate-electromagnetic-metasurfaces-fa
+  title: 'Metasurface.ir · فارسی'
+  description: کتاب محاسباتی فراسطوح الکترومغناطیسی در سطح تحصیلات تکمیلی؛ ویرایش فارسی.
+  bibliography:
+    - references.bib
+  static_files:
+    - interactives
+  toc:
+    - file: intro.md
+    - title: راهنمای دوره
+      children:
+        - file: syllabus.md
+        - file: getting-started.md
+        - file: contributing.md
+        - file: translations.md
+        - file: glossary.md
+    - title: آزمایشگاه‌های محاسباتی
+      children:
+        - file: labs/index.md
+        - file: labs/lab-template.md
+    - title: فصل ۱ — مبانی فراسطوح
+      children:
+        - file: chapters/01-metasurface-foundations.md
+        - file: chapters/01-foundations-guide.md
+        - file: chapters/01-foundations-review.md
+        - file: labs/01-first-investigation.md
+        - file: notebooks/01-first-metasurface-model.ipynb
+    - title: فصل ۲ — موج، مرز و ورقه
+      children:
+        - file: chapters/02-waves-and-interfaces.md
+        - file: chapters/02-waves-guide.md
+        - file: chapters/02-waves-review.md
+        - file: labs/02-waves-lab.md
+        - file: notebooks/02-waves-and-interfaces.ipynb
+    - title: فصل ۳ — طراحی و شبیه‌سازی سلول واحد
+      children:
+        - file: chapters/03-unit-cell-design.md
+        - file: chapters/03-unit-cell-guide.md
+        - file: labs/03-unit-cell-lab.md
+        - file: notebooks/03-unit-cell-library.ipynb
+    - title: فصل ۴ — تناوب و پراش
+      children:
+        - file: chapters/04-periodic-floquet.md
+        - file: chapters/04-floquet-guide.md
+        - file: labs/04-floquet-lab.md
+        - file: notebooks/04-floquet-orders.ipynb
+    - title: فصل ۵ — سنتز فراسطح
+      children:
+        - file: chapters/05-metasurface-synthesis.md
+        - file: chapters/05-synthesis-guide.md
+        - file: labs/05-synthesis-lab.md
+        - file: notebooks/05-beam-steering.ipynb
+        - file: notebooks/05-wavefront-models.ipynb
+    - title: فصل ۱۰ — هوش مصنوعی و فراسطوح
+      children:
+        - file: chapters/10-ai-metasurfaces.md
+        - file: chapters/10-pilot-guide.md
+        - file: labs/13-ai-metasurfaces.md
+        - file: notebooks/10-resonant-surrogate.ipynb
+        - file: notebooks/10-neural-comparison.ipynb
+site:
+  template: book-theme
+  options:
+    logo_text: 'Metasurface.ir · فارسی'
+    style: ./styles/book.css

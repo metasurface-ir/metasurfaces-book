@@ -1,0 +1,195 @@
+{
+  "default": "en",
+  "languages": {
+    "en": {
+      "label": "English",
+      "dir": "ltr"
+    },
+    "fa": {
+      "label": "فارسی",
+      "dir": "rtl"
+    }
+  },
+  "pages": [
+    {
+      "source": "intro.md",
+      "translation": "translations/fa/intro.md",
+      "route": ""
+    },
+    {
+      "source": "syllabus.md",
+      "translation": "translations/fa/syllabus.md",
+      "route": "syllabus"
+    },
+    {
+      "source": "getting-started.md",
+      "translation": "translations/fa/getting-started.md",
+      "route": "getting-started"
+    },
+    {
+      "source": "contributing.md",
+      "translation": "translations/fa/contributing.md",
+      "route": "contributing"
+    },
+    {
+      "source": "translations.md",
+      "translation": "translations/fa/translations.md",
+      "route": "translations"
+    },
+    {
+      "source": "glossary.md",
+      "translation": "translations/fa/glossary.md",
+      "route": "glossary"
+    },
+    {
+      "source": "labs/index.md",
+      "translation": "translations/fa/labs/index.md",
+      "route": "index-1"
+    },
+    {
+      "source": "labs/lab-template.md",
+      "translation": "translations/fa/labs/lab-template.md",
+      "route": "lab-template"
+    },
+    {
+      "source": "chapters/01-metasurface-foundations.md",
+      "translation": "translations/fa/chapters/01-metasurface-foundations.md",
+      "route": "metasurface-foundations"
+    },
+    {
+      "source": "chapters/01-foundations-guide.md",
+      "translation": "translations/fa/chapters/01-foundations-guide.md",
+      "route": "foundations-guide"
+    },
+    {
+      "source": "chapters/01-foundations-review.md",
+      "translation": "translations/fa/chapters/01-foundations-review.md",
+      "route": "foundations-review"
+    },
+    {
+      "source": "labs/01-first-investigation.md",
+      "translation": "translations/fa/labs/01-first-investigation.md",
+      "route": "first-investigation"
+    },
+    {
+      "source": "notebooks/01-first-metasurface-model.ipynb",
+      "translation": "translations/fa/notebooks/01-first-metasurface-model.ipynb",
+      "route": "first-metasurface-model"
+    },
+    {
+      "source": "chapters/02-waves-and-interfaces.md",
+      "translation": "translations/fa/chapters/02-waves-and-interfaces.md",
+      "route": "waves-and-interfaces"
+    },
+    {
+      "source": "chapters/02-waves-guide.md",
+      "translation": "translations/fa/chapters/02-waves-guide.md",
+      "route": "waves-guide"
+    },
+    {
+      "source": "chapters/02-waves-review.md",
+      "translation": "translations/fa/chapters/02-waves-review.md",
+      "route": "waves-review"
+    },
+    {
+      "source": "labs/02-waves-lab.md",
+      "translation": "translations/fa/labs/02-waves-lab.md",
+      "route": "waves-lab"
+    },
+    {
+      "source": "notebooks/02-waves-and-interfaces.ipynb",
+      "translation": "translations/fa/notebooks/02-waves-and-interfaces.ipynb",
+      "route": "waves-and-interfaces-1"
+    },
+    {
+      "source": "chapters/03-unit-cell-design.md",
+      "translation": "translations/fa/chapters/03-unit-cell-design.md",
+      "route": "unit-cell-design"
+    },
+    {
+      "source": "chapters/03-unit-cell-guide.md",
+      "translation": "translations/fa/chapters/03-unit-cell-guide.md",
+      "route": "unit-cell-guide"
+    },
+    {
+      "source": "labs/03-unit-cell-lab.md",
+      "translation": "translations/fa/labs/03-unit-cell-lab.md",
+      "route": "unit-cell-lab"
+    },
+    {
+      "source": "notebooks/03-unit-cell-library.ipynb",
+      "translation": "translations/fa/notebooks/03-unit-cell-library.ipynb",
+      "route": "unit-cell-library"
+    },
+    {
+      "source": "chapters/04-periodic-floquet.md",
+      "translation": "translations/fa/chapters/04-periodic-floquet.md",
+      "route": "periodic-floquet"
+    },
+    {
+      "source": "chapters/04-floquet-guide.md",
+      "translation": "translations/fa/chapters/04-floquet-guide.md",
+      "route": "floquet-guide"
+    },
+    {
+      "source": "labs/04-floquet-lab.md",
+      "translation": "translations/fa/labs/04-floquet-lab.md",
+      "route": "floquet-lab"
+    },
+    {
+      "source": "notebooks/04-floquet-orders.ipynb",
+      "translation": "translations/fa/notebooks/04-floquet-orders.ipynb",
+      "route": "floquet-orders"
+    },
+    {
+      "source": "chapters/05-metasurface-synthesis.md",
+      "translation": "translations/fa/chapters/05-metasurface-synthesis.md",
+      "route": "metasurface-synthesis"
+    },
+    {
+      "source": "chapters/05-synthesis-guide.md",
+      "translation": "translations/fa/chapters/05-synthesis-guide.md",
+      "route": "synthesis-guide"
+    },
+    {
+      "source": "labs/05-synthesis-lab.md",
+      "translation": "translations/fa/labs/05-synthesis-lab.md",
+      "route": "synthesis-lab"
+    },
+    {
+      "source": "notebooks/05-beam-steering.ipynb",
+      "translation": "translations/fa/notebooks/05-beam-steering.ipynb",
+      "route": "beam-steering"
+    },
+    {
+      "source": "notebooks/05-wavefront-models.ipynb",
+      "translation": "translations/fa/notebooks/05-wavefront-models.ipynb",
+      "route": "wavefront-models"
+    },
+    {
+      "source": "chapters/10-ai-metasurfaces.md",
+      "translation": "translations/fa/chapters/10-ai-metasurfaces.md",
+      "route": "ai-metasurfaces"
+    },
+    {
+      "source": "chapters/10-pilot-guide.md",
+      "translation": "translations/fa/chapters/10-pilot-guide.md",
+      "route": "pilot-guide"
+    },
+    {
+      "source": "labs/13-ai-metasurfaces.md",
+      "translation": "translations/fa/labs/13-ai-metasurfaces.md",
+      "route": "ai-metasurfaces-1"
+    },
+    {
+      "source": "notebooks/10-resonant-surrogate.ipynb",
+      "translation": "translations/fa/notebooks/10-resonant-surrogate.ipynb",
+      "route": "resonant-surrogate"
+    },
+    {
+      "source": "notebooks/10-neural-comparison.ipynb",
+      "translation": "translations/fa/notebooks/10-neural-comparison.ipynb",
+      "route": "neural-comparison"
+    }
+  ]
+}
