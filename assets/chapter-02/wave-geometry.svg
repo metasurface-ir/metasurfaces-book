@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="865" viewBox="0 0 840 865" role="img" aria-labelledby="title desc">
+  <title id="title">Interface geometry and a fixed tangential polarization basis</title>
+  <desc id="desc">A wave incident from medium 1 at z less than zero reflects and refracts at z equals zero. Positive z points into medium 2, downward; x is tangential to the interface; positive y points toward the viewer. Angles are measured from the relevant normal. A second panel identifies TE electric field along y and TM electric field in the x-z plane, with the same positive x reference for incident and reflected tangential electric coefficients.</desc>
+  <defs>
+    <marker id="navy-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#173e54"/></marker>
+    <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#16818b"/></marker>
+    <marker id="amber-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#bd7426"/></marker>
+  </defs>
+  <rect width="840" height="865" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#173e54">
+    <rect x="18" y="18" width="804" height="487" rx="15" fill="#f2f7fb" stroke="#c8dce6"/>
+    <path d="M19 290H821V489Q821 505 805 505H34Q19 505 19 489Z" fill="#e6f4f3"/>
+    <text x="43" y="58" font-size="28" font-weight="bold">A. One boundary, three wavevectors</text>
+    <text x="43" y="93" font-size="21">Schematic refraction geometry; ray angles are illustrative.</text>
+    <text x="58" y="154" font-size="26">medium 1: n₁</text>
+    <text x="58" y="381" font-size="26">medium 2: n₂</text>
+    <path d="M48 290H792" stroke="#173e54" stroke-width="3"/>
+    <text x="642" y="278" font-size="24">interface z = 0</text>
+    <path d="M420 119V453" stroke="#7b95a5" stroke-width="2" stroke-dasharray="8 7"/>
+    <text x="434" y="142" font-size="21">normal</text>
+    <path d="M210 135L420 290" stroke="#173e54" stroke-width="5" marker-end="url(#navy-arrow)"/>
+    <path d="M420 290L630 135" stroke="#bd7426" stroke-width="5" marker-end="url(#amber-arrow)"/>
+    <path d="M420 290L528 455" stroke="#16818b" stroke-width="5" marker-end="url(#teal-arrow)"/>
+    <text x="232" y="126" font-size="27" font-style="italic">kᵢ</text>
+    <text x="604" y="125" font-size="27" font-style="italic" fill="#ad651f">kᵣ</text>
+    <text x="541" y="445" font-size="27" font-style="italic" fill="#13747d">kₜ</text>
+    <g fill="none" stroke-width="2.5">
+      <path d="M420 224A66 66 0 0 0 367 251" stroke="#173e54"/>
+      <path d="M420 224A66 66 0 0 1 473 251" stroke="#bd7426"/>
+      <path d="M420 366A76 76 0 0 0 462 353" stroke="#16818b"/>
+    </g>
+    <text x="369" y="218" font-size="24">θᵢ</text>
+    <text x="463" y="218" font-size="24" fill="#ad651f">θᵣ</text>
+    <text x="434" y="393" font-size="24" fill="#13747d">θₜ</text>
+    <g stroke="#173e54" stroke-width="2.5" marker-end="url(#navy-arrow)"><path d="M703 359H778"/><path d="M703 359V434"/></g>
+    <text x="780" y="350" font-size="24">+x</text>
+    <text x="713" y="443" font-size="24">+z</text>
+    <circle cx="703" cy="359" r="9" fill="white" stroke="#173e54" stroke-width="2"/><circle cx="703" cy="359" r="3" fill="#173e54"/>
+    <text x="668" y="329" font-size="21">+y toward you</text>
+    <text x="52" y="481" font-size="24">Boundary phase matching: kₓ,ᵢ = kₓ,ᵣ = kₓ,ₜ</text>
+    <rect x="18" y="529" width="804" height="318" rx="15" fill="#f6f8fb" stroke="#c8dce6"/>
+    <text x="43" y="571" font-size="28" font-weight="bold">B. Fix the field basis before comparing phases</text>
+    <text x="48" y="614" font-size="25" font-weight="bold">TE / s</text>
+    <circle cx="93" cy="663" r="21" fill="white" stroke="#16818b" stroke-width="3"/><circle cx="93" cy="663" r="6" fill="#16818b"/>
+    <text x="134" y="658" font-size="24">E along y</text>
+    <text x="134" y="690" font-size="21">out of the x–z plane</text>
+    <path d="M383 600V721" stroke="#ccdae4" stroke-width="2"/>
+    <text x="420" y="614" font-size="25" font-weight="bold">TM / p</text>
+    <text x="420" y="648" font-size="22">E lies in the x–z plane</text>
+    <g stroke="#16818b" stroke-width="3.5" marker-end="url(#teal-arrow)"><path d="M426 680H554"/><path d="M615 680H743"/></g>
+    <text x="439" y="717" font-size="22">Eₓ,ᵢ uses +x</text>
+    <text x="626" y="717" font-size="22">Eₓ,ᵣ uses +x</text>
+    <rect x="43" y="748" width="754" height="77" rx="9" fill="#e7eff6"/>
+    <text x="58" y="779" font-size="22">This course compares the same tangential axis on every wave.</text>
+    <text x="58" y="809" font-size="22">A rotating reflected p basis can change the sign of r_TM.</text>
+  </g>
+</svg>

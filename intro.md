@@ -2,7 +2,7 @@
 
 **Metasurfaces: From Wave Physics to Design** — a graduate companion book for investigating how electromagnetic sheets transform waves.
 
-This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 1 introduces physical intuition, complex responses, model assumptions, and a first analytical sheet investigation. Chapter 3 computes a validated dielectric unit-cell library. Chapter 4 develops periodicity and diffraction. Chapter 5 connects target wavefronts to full-wave beam steering, scalar focusing, and polarization models. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
+This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 1 introduces physical intuition, complex responses, model assumptions, and a first analytical sheet investigation. Chapter 2 builds the electromagnetic prerequisite through waves, boundaries, polarization, films, and sheets. Chapter 3 computes a validated dielectric unit-cell library. Chapter 4 develops periodicity and diffraction. Chapter 5 connects target wavefronts to full-wave beam steering, scalar focusing, and polarization models. Chapter 10 connects electromagnetic models to AI-assisted design. The remaining chapters will be developed with the instructor and student contributors.
 
 ## Learn by investigating
 
@@ -14,6 +14,7 @@ The companion course website will provide conceptual lessons and course guidance
 
 - Read the [ten-chapter syllabus](syllabus.md).
 - Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), its [six worked examples](chapters/01-foundations-guide.md), and the [first computational investigation](labs/01-first-investigation.md).
+- Explore [Chapter 2: Waves, Interfaces, and Sheets](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).
 - Build a response library with [Chapter 3: Unit-cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
 - Begin [Chapter 4: Periodic Structures and Floquet Analysis](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
 - Design and verify with [Chapter 5: Metasurface Synthesis](chapters/05-metasurface-synthesis.md), its [worked examples](chapters/05-synthesis-guide.md), and [computational lab](labs/05-synthesis-lab.md).
@@ -25,5 +26,5 @@ The companion course website will provide conceptual lessons and course guidance
 - Learn [how to contribute a chapter or notebook](contributing.md).
 
 :::{note} Development status
-Chapters 1, 3, 4, 5, and 10 are available for instructor review. Chapter 1 is the entry point, with an executed analytical notebook and browser explorer. Chapters 3 and 5 include executed full-wave TE ridge calculations and validated libraries; Chapter 5 also verifies four complete periodic supercells. Chapters 3-5 have browser explorers. Focusing and polarization use separately labeled scalar/Jones models, and the Chapter 10 pilot uses analytical data. Further FEM/FDTD, finite-device, broadband, and fabrication investigations remain outlines. Chapters 2 and 6-9 remain in development. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
+Chapters 1, 2, 3, 4, 5, and 10 are available for instructor review. Chapter 1 is the entry point, with an executed analytical notebook and browser explorer. Chapters 3 and 5 include executed full-wave TE ridge calculations and validated libraries; Chapter 5 also verifies four complete periodic supercells. Chapters 3-5 have browser explorers. Focusing and polarization use separately labeled scalar/Jones models, and the Chapter 10 pilot uses analytical data. Further FEM/FDTD, finite-device, broadband, and fabrication investigations remain outlines. Chapters 6-9 remain in development. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
 :::

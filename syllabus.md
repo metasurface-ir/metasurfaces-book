@@ -15,7 +15,7 @@ By completing the course, students should be able to formulate a metasurface sca
 | Chapter | Working title from the supplied contents | Proposed computational work |
 | --- | --- | --- |
 | 1 | [Introduction to metasurfaces and basic concepts](chapters/01-metasurface-foundations.md) | Executed analytical sheet model, phase/amplitude/power, electric-like/magnetic-like channels, conservation, and model limits |
-| 2 | Electromagnetic waves and interaction with metasurfaces | Fresnel amplitudes and power, polarization, sheet response, S parameters, equivalent circuits |
+| 2 | [Electromagnetic waves and interaction with metasurfaces](chapters/02-waves-and-interfaces.md) | Executed Fresnel/field/film/Jones/sheet models, four-view browser explorer, coherent absorption, and checked shunt retrieval |
 | 3 | [Unit-cell design and simulation](chapters/03-unit-cell-design.md) | Executed TE ridge solver, analytical/RCWA validation, complex-response library, field plots, and constrained phase selection |
 | 4 | [Periodic structures, Floquet analysis, and diffraction orders](chapters/04-periodic-floquet.md) | Executed channel maps, browser explorer, worked examples, and a periodic-port validation outline |
 | 5 | [Metasurface synthesis](chapters/05-metasurface-synthesis.md) | Executed full-wave beam steering, expanded library, scalar line focusing, Jones/geometric phase, and further design outlines |
@@ -31,9 +31,15 @@ Chapter 6 may be introduced earlier as a methods strand, so students establish v
 
 The [chapter](chapters/01-metasurface-foundations.md), [six worked examples](chapters/01-foundations-guide.md), [lab](labs/01-first-investigation.md), and [executed notebook](notebooks/01-first-metasurface-model.ipynb) introduce structured interfaces, scales, complex coefficients, interference, electric/magnetic response, model hierarchy, and evidence. The browser explorer calculates a reciprocal lossless sheet response directly and works offline.
 
-The ideal two-port model assumes equal exterior impedances, normal incidence, one polarization, and specular ports only. Analytical limits, full matrix unitarity, two-sided power, an independent electric-only expression, derivative refinements, and input guards are checked. It has no geometry or full-wave/experimental validation. Comparisons link to existing full-wave Chapters 3 and 5. Chapter 2 will develop electromagnetic waves and boundary descriptions next; Chapter 6 follows the foundational chapters in the current development plan.
+The ideal two-port model assumes equal exterior impedances, normal incidence, one polarization, and specular ports only. Analytical limits, full matrix unitarity, two-sided power, an independent electric-only expression, derivative refinements, and input guards are checked. It has no geometry or full-wave/experimental validation. Comparisons link to existing full-wave Chapters 3 and 5. Chapter 2 develops electromagnetic waves and boundary descriptions; Chapter 6 is next in the current development plan.
 
 The [review and mini-project](chapters/01-foundations-review.md) adds eight self-check answers, a suggested grading rubric, a working glossary, and an editable report worksheet. The chapter includes an original geometry/port schematic; the worked guide illustrates delay and calculates flux normalization for one existing full-wave library row.
+
+## Chapter 2: Waves, interfaces, and sheets
+
+The [chapter](chapters/02-waves-and-interfaces.md), [nine worked examples](chapters/02-waves-guide.md), [review](chapters/02-waves-review.md), [lab](labs/02-waves-lab.md), and [executed notebook](notebooks/02-waves-and-interfaces.ipynb) establish Maxwell/phasor conventions, plane waves, power flux, polarization, Fresnel boundaries, evanescent fields, coherent films, scattering parameters, electric sheets, and equivalent circuits. Original schematics and five numerical figures support prediction-first explanations.
+
+The offline browser explorer directly evaluates interface, film, polarization/analyzer, and electric-sheet models. Benchmarks include Brewster and critical angles, independent field flux and film boundary-equation checks, power-normalized reciprocity/unitarity/passivity, Jones identities, coherent two-beam absorption, and continuity/phase-plane guards for sheet retrieval. These are restricted exact planar models, not patterned-geometry or experimental validation. Chapter 6 will develop numerical methods after the foundational sequence.
 
 ## Chapter 3: Unit-cell design and simulation
 

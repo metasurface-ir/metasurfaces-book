@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "model_version": "waves-interfaces-1.0",
+  "source_sha256": "005772da3bb31d9459a9307aa72fcba8cd88b24ac0a2e7a775665b6917c8ab2c",
+  "notebook_source_hash_checked": true,
+  "interface": {
+    "parameter_cases": 56,
+    "max_error": 6.661338147750939e-16,
+    "matched_grazing_angles_deg": [
+      89.0,
+      89.99999,
+      89.9999999
+    ],
+    "brewster_deg": 56.309932474020215,
+    "critical_deg": 41.810314895778596,
+    "exact_cutoff_and_adjacent_regimes": "passed"
+  },
+  "fields": {
+    "regimes": 2,
+    "max_flux_or_near_face_error": 2.156643747513671e-09,
+    "max_evanescent_amplitude_error": 2.7755575615628914e-17
+  },
+  "film": {
+    "parameter_cases": 32,
+    "independent_method": "four E/H boundary equations solved as a 4x4 linear system",
+    "max_complex_or_power_error": 6.661338147750939e-16,
+    "max_boundary_solve_residual": 5.79553433516819e-16,
+    "max_unitarity_error": 6.661338147750939e-16,
+    "max_reciprocity_error": 5.79553433516819e-16,
+    "quarter_wave_zero_and_exit_phase": "passed",
+    "zero_thickness_and_homogeneous_limits": "passed"
+  },
+  "sheet": {
+    "parameter_cases": 36,
+    "max_balance_error": 5.551115123125783e-16,
+    "max_joule_error": 1.6653345369377348e-16,
+    "max_passivity_excess": 4.440892098500626e-16,
+    "max_reciprocity_error": 2.220446049250313e-16,
+    "unequal_index_absorption_optima": "passed",
+    "coherent_phase_cases": 17,
+    "max_coherent_absorption_error": 3.885780586188048e-16
+  },
+  "retrieval": {
+    "parameter_cases": 27,
+    "max_complex_error": 1.831026719408895e-15,
+    "rejected_unstable_or_incompatible_cases": 4
+  },
+  "polarization": {
+    "jones_cases": 20,
+    "malus_cases": 16,
+    "max_stokes_error": 2.220446049250313e-16,
+    "max_analyzer_error": 4.440892098500626e-16,
+    "coordinate_time_convention": "passed"
+  },
+  "invalid_input_rejections": 18,
+  "scope": [
+    "Exact planar analytical models only",
+    "Positive real nonmagnetic bulk indices",
+    "Passive electric sheet with coincident reference planes",
+    "No patterned full-wave geometry or fabricated-device validation"
+  ]
+}

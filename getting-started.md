@@ -28,6 +28,12 @@ For a first computational activity, use the [Chapter 1 lab](labs/01-first-invest
 
 The model needs NumPy and Matplotlib, with no electromagnetic solver, GPU, or network dataset. Run `python scripts/validate_chapter01.py` from the extracted folder or repository root for the analytical audit. After saving the notebook and audit, `python scripts/export_chapter01.py` updates its three figures, standalone browser explorer, and source ZIP. The explorer template is `templates/foundations-explorer.html`. The model is an ideal sheet, with no assigned physical geometry.
 
+## Run the Chapter 2 investigations
+
+Open the [Chapter 2 lab](labs/02-waves-lab.md) to use the offline-capable interface, film, polarization, and electric-sheet explorer. To edit Python calculations, extract its complete source ZIP, install the shared `requirements-labs.txt` in a Python 3.12 environment, and restart/run all cells in `notebooks/02-waves-and-interfaces.ipynb`. It requires NumPy/Matplotlib for calculations and imports `simulations/waves_interfaces.py`; no commercial solver, GPU, or downloaded dataset is used.
+
+Run `python scripts/validate_chapter02.py` from the extracted root for the independent analytical audit. The full repository also provides `python scripts/export_chapter02.py` to regenerate five figures, the explorer, and the source bundle after a saved execution/audit. Keep the common tangential-E basis, outgoing branch, power normalization, phase planes, and model limits with every exported result.
+
 ## Run the Chapter 10 notebooks
 
 From the repository root, install the optional notebook environment into the same virtual environment:

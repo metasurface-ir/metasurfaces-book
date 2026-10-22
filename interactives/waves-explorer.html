@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waves at a boundary | Metasurface.ir</title>
+<style>
+:root{font:15px/1.5 system-ui,sans-serif;color:#17374b;background:#f0f5f8;--teal:#147d88;--orange:#cf7939;--blue:#426bd0;--line:#d8e4eb}*{box-sizing:border-box}body{margin:0;padding:18px}main{max-width:1120px;margin:auto}h1{font-size:clamp(1.65rem,4vw,2.65rem);line-height:1.17;margin:8px 0 12px;letter-spacing:-.025em}h2{font-size:1.08rem;line-height:1.3;margin:0 0 13px}h3{font-size:.95rem;margin:14px 0 8px}p{margin:9px 0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;font-weight:800;color:var(--teal)}.intro{color:#506b7b;max-width:78ch;font-size:.96rem}.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:19px 0 14px}.tabs button{padding:12px 9px;font-weight:700;border-radius:11px}.tabs small{display:block;font-size:.72rem;font-weight:500;margin-top:2px}.tabs [aria-selected=true]{background:#173f53;color:white;border-color:#173f53}.question{border-left:4px solid var(--orange);background:#fff7e9;border-radius:0 10px 10px 0;padding:12px 15px;margin-bottom:15px;font-size:.92rem}.question strong{display:block;margin-bottom:3px}.grid{display:grid;grid-template-columns:minmax(250px,.85fr) minmax(0,1.45fr);gap:15px}.card{min-width:0;background:white;border:1px solid var(--line);border-radius:15px;padding:19px}.wide{grid-column:1/-1}.presets{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px}button,select{font:inherit;border:1px solid #c8dbe4;background:#eef5f8;color:#17374b;border-radius:8px;padding:8px 11px}button{cursor:pointer}button:hover{border-color:var(--teal)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #83c3d4;outline-offset:3px}button[aria-pressed=true]{background:var(--teal);color:white;border-color:var(--teal)}button:disabled{cursor:default;opacity:.6}label{display:block;font-weight:650;font-size:.86rem;margin:14px 0 4px}label output{float:right;font-weight:500;color:#476473;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--teal);min-width:0;margin:4px 0 0}select{width:100%}.small{font-size:.8rem;color:#526e7f}.tag{display:inline-block;padding:3px 8px;border-radius:6px;background:#e9f4f4;color:#11636d;font-size:.76rem;font-weight:700}.scene{width:100%;display:block;background:#f7fafc;border-radius:10px;border:1px solid #e5edf2}.scene text{font:14px system-ui,sans-serif;fill:#35586b}.scene .tiny{font-size:12px}.scene .bold{font-weight:700;fill:#17374b}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:15px 0}.metric{background:#eef5f8;border-radius:9px;padding:10px;font-size:.73rem;min-width:0}.metric strong{font-size:1.18rem;display:block;margin-top:5px;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metric:nth-child(1) strong{color:#b25d25}.metric:nth-child(2) strong{color:#087684}.bar{height:13px;display:flex;background:#e8edf1;border-radius:7px;overflow:hidden}.bar span{display:block;min-width:0}.bar .reflection{background:var(--orange)}.bar .transmission{background:var(--teal)}.bar .absorption{background:#5d6880}.legend{display:flex;gap:13px;flex-wrap:wrap;font-size:.76rem;color:#4d697b}.legend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--orange);margin-right:5px}.legend span:nth-child(2):before{background:var(--teal)}.legend span:nth-child(3):before{background:#5d6880}.formula{font:clamp(.8rem,1.6vw,.94rem)/1.7 ui-monospace,monospace;white-space:normal;overflow-wrap:anywhere;color:#26596c;background:#eef7f8;padding:10px 12px;border-radius:8px;margin-top:12px}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.84rem;font-variant-numeric:tabular-nums}th,td{padding:8px 6px;border-bottom:1px solid #e1eaf0;text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}.bottom{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}.interpretation{font-size:.91rem}.notice{padding:11px 13px;background:#fff7e9;border-left:3px solid #d59a38;font-size:.81rem}.footer{font-size:.78rem;color:#526e7f;border-top:1px solid var(--line);padding-top:13px;margin-top:15px}.footer strong{color:#214d61}.download{background:#146f7b;color:white;margin-top:12px;padding:10px 15px}input[type=checkbox]{accent-color:var(--teal);margin-right:7px}.check-label{font-size:.84rem;line-height:1.4}fieldset{padding:0;border:0;margin:0;min-width:0}.coherent{border:1px solid #cae0e5;border-radius:9px;padding:10px 12px;margin-top:12px;background:#f2faf9}.coherent strong{color:#086e78}.coherent .bar{margin:7px 0}.coherent .bar span{background:var(--teal)}.animation-controls{display:flex;gap:8px;align-items:center;margin-top:10px}.animation-controls label{margin:0;flex:1}.animation-controls input{width:100%}[hidden]{display:none!important}@media(max-width:760px){body{padding:12px}.grid{grid-template-columns:1fr}.card{padding:15px}.bottom{grid-template-columns:1fr;gap:12px}.tabs{gap:5px}.tabs button{font-size:.82rem;padding:10px 5px}.tabs small{font-size:.66rem}.metrics{gap:5px}.metric{padding:8px}.metric strong{font-size:1.05rem}}@media(max-width:390px){.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Metasurface.ir · Chapter 2 · a boundary laboratory</div>
+<h1>A boundary can surprise you.</h1>
+<p class="intro">Can a nonzero field carry no power across an interface? Can adding a layer remove reflection? Predict first, then change one parameter and inspect what Maxwell's boundary conditions require.</p>
+<nav class="tabs" role="tablist" aria-label="Choose a wave investigation">
+<button id="tab-interface" role="tab" aria-selected="true" aria-controls="panel-interface" tabindex="0" data-tab="interface">1. Interface<small>Amplitude is not power</small></button>
+<button id="tab-film" role="tab" aria-selected="false" aria-controls="panel-film" tabindex="-1" data-tab="film">2. Thin film<small>Reflections can cancel</small></button>
+<button id="tab-polarization" role="tab" aria-selected="false" aria-controls="panel-polarization" tabindex="-1" data-tab="polarization">3. Polarization<small>A field traces a path</small></button>
+<button id="tab-sheet" role="tab" aria-selected="false" aria-controls="panel-sheet" tabindex="-1" data-tab="sheet">4. Electric sheet<small>Where does the power go?</small></button>
+</nav>
+<div class="question"><strong id="question-title">Predict before calculating.</strong><span id="question"></span></div>
+<div class="grid">
+<section class="card" aria-label="Experiment controls">
+<div id="panel-interface" role="tabpanel" aria-labelledby="tab-interface">
+<h2>Set the interface</h2><div class="presets" aria-label="Interface presets"><button data-preset="air-glass" aria-pressed="true">Air → glass</button><button data-preset="brewster" aria-pressed="false">Brewster angle</button><button data-preset="tir" aria-pressed="false">Total reflection</button></div>
+<label for="i-n1">Incident index n₁ <output id="i-n1-value"></output></label><input id="i-n1" type="range" min="1" max="2.5" step="0.01" value="1">
+<label for="i-n2">Output index n₂ <output id="i-n2-value"></output></label><input id="i-n2" type="range" min="1" max="2.5" step="0.01" value="1.5">
+<label for="i-angle">Incidence angle <output id="i-angle-value"></output></label><input id="i-angle" type="range" min="0" max="80" step="any" value="0">
+<label for="i-pol">Polarization</label><select id="i-pol"><option value="TE">TE: tangential E along y</option><option value="TM">TM: tangential E along x</option></select>
+<p class="small">Angles are measured from the normal. Both media have positive real indices and μ = μ₀. Coefficients use the same tangential electric-field direction for incident and reflected waves.</p>
+<p class="small notice">The TM reflection sign can differ from textbooks that rotate the reflected p-polarization basis. The reflected power is unchanged.</p>
+</div>
+<div id="panel-film" role="tabpanel" aria-labelledby="tab-film" hidden>
+<h2>Add one coherent layer</h2><div class="presets" aria-label="Film presets"><button data-preset="film-ar" aria-pressed="true">Quarter-wave match</button><button data-preset="film-bare" aria-pressed="false">Zero thickness</button></div>
+<label for="f-n1">Incident index n₁ <output id="f-n1-value"></output></label><input id="f-n1" type="range" min="0.5" max="3" step="0.01" value="1">
+<label for="f-nf">Film index nᶠ <output id="f-nf-value"></output></label><input id="f-nf" type="range" min="0.5" max="3" step="any" value="1.224744871391589">
+<label for="f-n2">Substrate index n₂ <output id="f-n2-value"></output></label><input id="f-n2" type="range" min="0.5" max="3" step="0.01" value="1.5">
+<label for="f-thickness">Film thickness <output id="f-thickness-value"></output></label><input id="f-thickness" type="range" min="0" max="0.8" step="any" value="0.1224744871391589">
+<label for="f-wavelength">Vacuum wavelength <output id="f-wavelength-value"></output></label><input id="f-wavelength" type="range" min="0.3" max="1.5" step="0.001" value="0.6">
+<p class="small">Normal incidence; one uniform lossless layer; real constant indices. The phase is referenced from the layer entrance to its exit. These are coherent plane-wave amplitudes.</p>
+</div>
+<div id="panel-polarization" role="tabpanel" aria-labelledby="tab-polarization" hidden>
+<h2>Draw a field with two components</h2><div class="presets" aria-label="Polarization presets"><button data-preset="pol-linear" aria-pressed="false">Linear</button><button data-preset="pol-circular" aria-pressed="true">Circular</button><button data-preset="pol-elliptical" aria-pressed="false">Elliptical</button></div>
+<label for="p-alpha">Component mixing α <output id="p-alpha-value"></output></label><input id="p-alpha" type="range" min="0" max="90" step="0.5" value="45">
+<label for="p-delta">Relative phase δ <output id="p-delta-value"></output></label><input id="p-delta" type="range" min="-180" max="180" step="1" value="90">
+<label for="p-analyzer">Linear analyzer angle β <output id="p-analyzer-value"></output></label><input id="p-analyzer" type="range" min="0" max="180" step="1" value="0">
+<p class="small">Jones vector: [cos α, sin α exp(iδ)]. The total incident power is normalized to 1. A perfect linear analyzer projects the vector onto its transmission axis.</p>
+<p class="small notice">The drawing uses x to the right and y upward at one fixed point. V = 2 Im(Eₓ*Eᵧ) is an explicit coordinate convention; no ambiguous right/left circular label is used.</p>
+</div>
+<div id="panel-sheet" role="tabpanel" aria-labelledby="tab-sheet" hidden>
+<h2>Give a zero-thickness sheet an admittance</h2><div class="presets" aria-label="Sheet presets"><button data-preset="sheet-transparent" aria-pressed="false">Transparent</button><button data-preset="sheet-reactive" aria-pressed="false">Reactive</button><button data-preset="sheet-half" aria-pressed="true">50% absorption</button></div>
+<label for="s-conductance">Conductance G <output id="s-conductance-value"></output></label><input id="s-conductance" type="range" min="0" max="6" step="0.01" value="2">
+<label for="s-susceptance">Susceptance B <output id="s-susceptance-value"></output></label><input id="s-susceptance" type="range" min="-6" max="6" step="0.01" value="0">
+<p class="small">g = η₀Yₛ = G + iB is dimensionless. Equal exterior indices n₁ = n₂ = 1; normal incidence; electric current sheet only. G ≥ 0 makes the sheet passive.</p>
+<label class="check-label" for="coherent-enabled"><input id="coherent-enabled" type="checkbox">Try two coherent incoming beams</label>
+<div id="coherent-controls" class="coherent" hidden><label for="s-coherent-phase">Relative input phase φ <output id="s-coherent-phase-value"></output></label><input id="s-coherent-phase" type="range" min="-180" max="180" step="1" value="0"><p class="small">Inputs (1, exp(iφ))/√2 keep total incident power at 1.</p><p>Two-beam absorption: <strong id="coherent-absorption"></strong></p><div class="bar" aria-hidden="true"><span id="coherent-meter"></span></div><p class="small">The main R, T, A metrics below still describe one-sided illumination. Changing illumination changes the relevant absorption limit.</p></div>
+</div>
+</section>
+<section class="card" aria-label="Calculated wave response"><div><span class="tag" id="regime"></span></div><h2 id="scene-title" style="margin-top:9px"></h2>
+<svg id="scene" class="scene" viewBox="0 0 540 350" role="img" aria-label="Calculated wave behavior"></svg>
+<div id="animation-controls" class="animation-controls" hidden><button id="play" type="button" aria-pressed="false">Play field</button><label for="time-phase" class="small">Time phase <output id="time-phase-value"></output><input id="time-phase" type="range" min="0" max="360" step="1" value="0"></label></div>
+<p id="scene-caption" class="small"></p>
+<div class="metrics" aria-live="polite"><div class="metric"><span id="label-R">Reflected power R</span><strong id="R"></strong></div><div class="metric"><span id="label-T">Transmitted power T</span><strong id="T"></strong></div><div class="metric"><span id="label-A">Absorbed power A</span><strong id="A"></strong></div><div class="metric"><span id="label-phase">Phase of t</span><strong id="phase"></strong></div></div>
+<div id="power-bar" class="bar" aria-hidden="true"><span id="rbar" class="reflection"></span><span id="tbar" class="transmission"></span><span id="abar" class="absorption"></span></div><p id="legend" class="legend"><span>Reflected</span><span>Transmitted</span><span>Absorbed</span></p>
+<div id="formula" class="formula"></div>
+</section>
+<section class="card wide bottom"><div><h2>What changed, and why?</h2><p id="interpretation" class="interpretation"></p><p id="balance" class="small"></p><button id="download" class="download">Download this experiment</button></div><div><h2 id="table-title">Complex field coefficients</h2><div class="scroll"><table><thead><tr><th>Quantity</th><th>Real part</th><th>Imaginary part</th></tr></thead><tbody id="coefficients"></tbody></table></div><p id="reference-note" class="small"></p></div></section>
+</div>
+<p class="footer"><strong>Analytical teaching models.</strong> These controls solve the stated boundary/plane-wave equations directly in your browser and work offline. They do not run a geometry-based full-wave solver, retrieve a physical meta-atom, include material dispersion, or validate a fabricated device. Time convention exp(−iωt), spatial convention exp(+ik·r). Power fractions use incident power as their denominator. Phase at zero transmitted amplitude is undefined.</p>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),PI=Math.PI,rad=x=>x*PI/180,deg=x=>x*180/PI;
+const c=(re=0,im=0)=>({re,im}),add=(a,b)=>c(a.re+b.re,a.im+b.im),sub=(a,b)=>c(a.re-b.re,a.im-b.im),mul=(a,b)=>c(a.re*b.re-a.im*b.im,a.re*b.im+a.im*b.re),scale=(a,s)=>c(a.re*s,a.im*s),abs2=a=>a.re*a.re+a.im*a.im;
+function div(a,b){const d=abs2(b);if(d===0)throw Error('Undefined complex division.');return c((a.re*b.re+a.im*b.im)/d,(a.im*b.re-a.re*b.im)/d);}
+function phase(a){return Math.sqrt(abs2(a))>1e-12?deg(Math.atan2(a.im,a.re)):null;}
+function finite(p,keys){for(const key of keys)if(typeof p[key]!=='number'||!Number.isFinite(p[key]))throw Error('Use finite real parameters: '+key);}
+function positive(p,keys){finite(p,keys);for(const key of keys)if(p[key]<=0)throw Error('Require positive '+key);}
+function interfaceResponse(p){
+ positive(p,['n1','n2']);finite(p,['angle_deg']);if(p.angle_deg<0||p.angle_deg>=90)throw Error('Require 0 ≤ incidence angle < 90 degrees.');if(!['TE','TM'].includes(p.polarization))throw Error('Choose TE or TM.');
+ const angle=rad(p.angle_deg),kx=p.n1*Math.sin(angle),q1=p.n1*Math.cos(angle),q2sq=(p.n2-p.n1)*(p.n2+p.n1)+q1*q1,tol=1e-12*Math.max(1,p.n1*p.n1,p.n2*p.n2),Yi=p.polarization==='TE'?q1:p.n1*p.n1/q1;
+ let q2,Yt,r,t,regime;
+ if(p.n1>p.n2&&Math.abs(q2sq)<=tol){q2=c();regime='cutoff';Yt=p.polarization==='TE'?c():null;r=c(p.polarization==='TE'?1:-1);t=c(p.polarization==='TE'?2:0);}
+ else{q2=q2sq>0?c(Math.sqrt(q2sq)):c(0,Math.sqrt(-q2sq));regime=q2sq>0?'propagating':'evanescent';Yt=p.polarization==='TE'?q2:div(c(p.n2*p.n2),q2);r=div(sub(c(Yi),Yt),add(c(Yi),Yt));t=add(c(1),r);}
+ const R=abs2(r),T=regime==='propagating'?Yt.re/Yi*abs2(t):0;
+ return {r,t,R,T,A:0,phase_deg:phase(t),q2,regime,Yi,Yt,angle_t_deg:regime==='propagating'?deg(Math.asin(Math.min(1,kx/p.n2))):regime==='cutoff'?90:null,critical_deg:p.n1>p.n2?deg(Math.asin(p.n2/p.n1)):null,brewster_deg:deg(Math.atan(p.n2/p.n1)),balance_error:Math.abs(1-R-T)};
+}
+function filmResponse(p){
+ positive(p,['n1','nf','n2','wavelength_um']);finite(p,['thickness_um']);if(p.thickness_um<0)throw Error('Film thickness must be nonnegative.');
+ const delta=2*PI*p.nf*p.thickness_um/p.wavelength_um,r01=(p.n1-p.nf)/(p.n1+p.nf),r12=(p.nf-p.n2)/(p.nf+p.n2),e=c(Math.cos(delta),Math.sin(delta)),e2=mul(e,e),den=add(c(1),scale(e2,r01*r12)),r=div(add(c(r01),scale(e2,r12)),den),t=div(scale(e,4*p.n1*p.nf/((p.n1+p.nf)*(p.nf+p.n2))),den),R=abs2(r),T=p.n2/p.n1*abs2(t);
+ return {r,t,R,T,A:0,phase_deg:phase(t),delta_rad:delta,balance_error:Math.abs(1-R-T)};
+}
+function sheetResponse(p){
+ finite(p,['conductance','susceptance']);if(p.conductance<0)throw Error('A passive sheet requires nonnegative conductance.');
+ const g=c(p.conductance,p.susceptance),den=add(c(2),g),r=div(scale(g,-1),den),t=div(c(2),den),R=abs2(r),T=abs2(t),A=4*p.conductance/abs2(den);
+ return {r,t,R,T,A,phase_deg:phase(t),balance_error:Math.abs(1-R-T-A)};
+}
+function polarizationResponse(p){
+ finite(p,['alpha_deg','delta_deg','analyzer_deg']);if(p.alpha_deg<0||p.alpha_deg>90)throw Error('Use 0 ≤ component mixing α ≤ 90 degrees.');
+ const a=rad(p.alpha_deg),d=rad(p.delta_deg),b=rad(p.analyzer_deg),Ex=c(Math.cos(a)),Ey=c(Math.sin(a)*Math.cos(d),Math.sin(a)*Math.sin(d)),product=mul(c(Ex.re,-Ex.im),Ey),analyzer=add(scale(Ex,Math.cos(b)),scale(Ey,Math.sin(b)));
+ return {Ex,Ey,I:abs2(Ex)+abs2(Ey),Q:abs2(Ex)-abs2(Ey),U:2*product.re,V:2*product.im,analyzer_power:abs2(analyzer)};
+}
+function coherentSheet(p){
+ finite(p,['phase_deg']);const v=sheetResponse(p),e=c(Math.cos(rad(p.phase_deg)),Math.sin(rad(p.phase_deg))),left=scale(add(v.r,mul(v.t,e)),1/Math.sqrt(2)),right=scale(add(v.t,mul(v.r,e)),1/Math.sqrt(2)),output_power=abs2(left)+abs2(right),A2=1-output_power;
+ return {input_power:1,output_power,A2:Math.abs(A2)<1e-14?0:A2,b_left:left,b_right:right};
+}
+window.wavesCompute={interface:interfaceResponse,film:filmResponse,polarization:polarizationResponse,sheet:sheetResponse,coherentSheet};
+const colors={teal:'#147d88',orange:'#cf7939',blue:'#426bd0',ink:'#254f64'};
+const defs='<defs><marker id="arr-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#147d88"/></marker><marker id="arr-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#cf7939"/></marker><marker id="arr-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#426bd0"/></marker></defs>';
+const line=(x1,y1,x2,y2,color,width=3,arrow=true)=>`<path d="M${x1} ${y1}L${x2} ${y2}" stroke="${colors[color]}" stroke-width="${width}" fill="none" ${arrow?`marker-end="url(#arr-${color})"`:''}/>`;
+const text=(x,y,s,cls='')=>`<text x="${x}" y="${y}" class="${cls}">${s}</text>`;
+let active='interface',playing=false,lastFrame=0,animationPhase=0;
+const motionAllowed=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+function values(){switch(active){case 'interface':return {n1:+$('i-n1').value,n2:+$('i-n2').value,angle_deg:+$('i-angle').value,polarization:$('i-pol').value};case 'film':return {n1:+$('f-n1').value,nf:+$('f-nf').value,n2:+$('f-n2').value,thickness_um:+$('f-thickness').value,wavelength_um:+$('f-wavelength').value};case 'polarization':return {alpha_deg:+$('p-alpha').value,delta_deg:+$('p-delta').value,analyzer_deg:+$('p-analyzer').value};case 'sheet':return {conductance:+$('s-conductance').value,susceptance:+$('s-susceptance').value};}}
+function table(rows){$('coefficients').innerHTML=rows.map(([name,z])=>`<tr><td>${name}</td><td>${z.re.toFixed(6)}</td><td>${z.im.toFixed(6)}</td></tr>`).join('');}
+const pct=v=>(100*v).toFixed(2)+'%',angleLabel=v=>v===null?'Undefined':v.toFixed(2)+'°';
+function interfaceScene(p,v){
+ const cx=250,cy=177,L=140,a=rad(p.angle_deg);let s=defs+'<rect x="250" y="0" width="290" height="350" fill="#e8f2f6"/><path d="M250 24V325" stroke="#91b5c8" stroke-width="2"/><path d="M62 177H505" stroke="#bdcdd7" stroke-dasharray="5 5"/>';
+ s+=text(35,33,'medium 1 · n₁ = '+p.n1.toFixed(2),'bold')+text(285,33,'medium 2 · n₂ = '+p.n2.toFixed(2),'bold')+text(455,196,'normal z →','tiny');
+ s+=line(cx-L*Math.cos(a),cy+L*Math.sin(a),cx,cy,'blue',4)+line(cx,cy,cx-L*Math.cos(a),cy-L*Math.sin(a),'orange',2+4*Math.sqrt(v.R));
+ s+=text(30,315,'Blue: incident · Orange: reflected','tiny');
+ if(v.regime==='propagating'){
+  const b=rad(v.angle_t_deg);s+=line(cx,cy,cx+L*Math.cos(b),cy-L*Math.sin(b),'teal',2+4*Math.sqrt(v.T));
+  s+=text(295,315,'Teal: transmitted power','tiny')+text(292,63,'Refraction angle '+v.angle_t_deg.toFixed(2)+'°');
+ }else if(v.regime==='evanescent'){
+  const kap=v.q2.im;for(let x=0;x<220;x+=7){const envelope=Math.exp(-x/Math.max(24,75/kap));s+=`<path d="M${cx+x} ${cy-52*envelope}V${cy+52*envelope}" stroke="#147d88" stroke-width="4" opacity="${.15+.65*envelope}"/>`;}
+  const upper=[],lower=[];for(let x=0;x<=220;x+=2){const envelope=46*Math.exp(-x/Math.max(24,75/kap));upper.push(`${cx+x},${cy-envelope}`);lower.push(`${cx+x},${cy+envelope}`);}s+=`<polyline points="${upper.join(' ')}" fill="none" stroke="#147d88" stroke-width="2"/><polyline points="${lower.join(' ')}" fill="none" stroke="#147d88" stroke-width="2"/>`+text(283,69,'Nonzero field; T = 0','bold')+text(289,315,'Schematic decay envelope','tiny');
+ }else{s+=line(cx+8,cy,cx+8,57,'teal',3)+text(285,70,'Grazing cutoff','bold')+text(282,315,'Normal transmitted power is zero','tiny');}
+ return s+`<circle cx="${cx}" cy="${cy}" r="5" fill="#244f64"/>`;
+}
+function filmScene(p,v){
+ if(p.thickness_um===0)return defs+'<rect x="260" y="38" width="280" height="248" fill="#e8f2f6"/><path d="M260 38V286" stroke="#7eaab6" stroke-width="2"/>'+text(35,30,'n₁ = '+p.n1.toFixed(2),'bold')+text(365,30,'n₂ = '+p.n2.toFixed(2),'bold')+line(38,122,257,122,'blue',4)+line(257,214,42,214,'orange',3)+line(263,168,491,168,'teal',4)+text(69,100,'incident','tiny')+text(60,247,'reflected','tiny')+text(380,198,'transmitted','tiny')+text(123,320,'d = 0: one direct interface remains','bold');
+ let s=defs+'<rect x="174" y="42" width="166" height="196" fill="#d6efef"/><path d="M174 34V245M340 34V245" stroke="#7eaab6" stroke-width="2"/>'+text(35,30,'n₁ = '+p.n1.toFixed(2),'bold')+text(187,30,'nᶠ = '+p.nf.toFixed(4),'bold')+text(375,30,'n₂ = '+p.n2.toFixed(2),'bold');
+ s+=line(36,108,174,108,'blue',4)+line(174,108,44,166,'orange',3)+line(174,108,340,161,'teal',3)+line(340,161,174,214,'orange',2)+line(174,214,340,237,'teal',2)+line(340,161,491,161,'teal',4);
+ s+=text(186,77,'one-way phase δ','tiny')+text(181,270,'d = '+p.thickness_um.toFixed(5)+' μm','tiny')+text(35,195,'reflected waves','tiny')+text(365,193,'transmitted waves','tiny');
+ const pts=[];let maxR=0;for(let j=0;j<=160;j++){const lambda=.3+1.2*j/160,w=filmResponse({...p,wavelength_um:lambda});maxR=Math.max(maxR,w.R);pts.push(`${40+460*j/160},${333-43*w.R}`);}s+='<path d="M40 286V333H503" stroke="#beced8" fill="none"/>'+`<polyline points="${pts.join(' ')}" stroke="#cf7939" stroke-width="2" fill="none"/>`+text(43,283,'R spectrum · fixed geometry','tiny')+text(42,348,'0.3 μm','tiny')+text(450,348,'1.5 μm','tiny');
+ const x=40+(p.wavelength_um-.3)/1.2*460;s+=`<circle cx="${x}" cy="${333-43*v.R}" r="5" fill="#173f53"/>`;return s;
+}
+function polarizationScene(p,v){
+ const cx=270,cy=173,k=125,pts=[];for(let j=0;j<=180;j++){const tau=2*PI*j/180;pts.push(`${cx+k*v.Ex.re*Math.cos(tau)},${cy-k*(v.Ey.re*Math.cos(tau)+v.Ey.im*Math.sin(tau))}`);}
+ const tau=rad(+$('time-phase').value),x=v.Ex.re*Math.cos(tau),y=v.Ey.re*Math.cos(tau)+v.Ey.im*Math.sin(tau),b=rad(p.analyzer_deg);
+ return defs+`<circle cx="${cx}" cy="${cy}" r="${k}" fill="none" stroke="#cedde7" stroke-dasharray="5 5"/><path d="M100 ${cy}H440M${cx} 18V328" stroke="#ccdce5"/><path d="M${cx-145*Math.cos(b)} ${cy+145*Math.sin(b)}L${cx+145*Math.cos(b)} ${cy-145*Math.sin(b)}" stroke="#cf7939" stroke-width="2" stroke-dasharray="7 4"/><polyline points="${pts.join(' ')}" fill="none" stroke="#147d88" stroke-width="3"/>`+line(cx,cy,cx+k*x,cy-k*y,'blue',3)+`<circle cx="${cx+k*x}" cy="${cy-k*y}" r="6" fill="#426bd0"/>`+text(447,179,'Eₓ')+text(280,25,'Eᵧ')+text(30,332,'Teal: field path · Blue: field now · Dashed: analyzer','tiny');
+}
+function sheetScene(p,v){
+ const two=$('coherent-enabled').checked,out=two?coherentSheet({...p,phase_deg:+$('s-coherent-phase').value}):null,leftPower=two?abs2(out.b_left):v.R,rightPower=two?abs2(out.b_right):v.T;let s=defs+'<rect x="260" y="58" width="20" height="224" rx="4" fill="#5b6a7e"/><path d="M45 175H494" stroke="#c6d5df" stroke-dasharray="5 5"/>'+text(30,32,'n₁ = 1','bold')+text(415,32,'n₂ = 1','bold')+text(183,318,'g = '+p.conductance.toFixed(2)+(p.susceptance<0?' − ':' + ')+Math.abs(p.susceptance).toFixed(2)+'i','bold');
+ s+=line(42,117,257,117,'blue',4);if(leftPower>1e-12)s+=line(258,224,48,224,'orange',2+4*Math.sqrt(leftPower));if(rightPower>1e-12)s+=line(282,224,492,224,'teal',2+4*Math.sqrt(rightPower));if(two&&out.output_power<1e-12)s+=text(121,219,'Interference leaves no outgoing field.','bold');
+ if(two){s+=line(492,117,283,117,'blue',4)+text(345,86,'second input: phase φ','tiny')+text(30,86,'equal input amplitudes','tiny');}
+ else{s+=text(50,86,'one incoming wave','tiny')+text(354,86,'no incoming wave','tiny');}
+ s+=text(62,262,two?'outgoing left':'reflection','tiny')+text(369,262,two?'outgoing right':'transmission','tiny');
+ return s;
+}
+function updateOutputs(){
+ const formats={'i-n1':2,'i-n2':2,'i-angle':2,'f-n1':2,'f-nf':5,'f-n2':2,'f-thickness':5,'f-wavelength':3,'p-alpha':1,'p-delta':0,'p-analyzer':0,'s-conductance':2,'s-susceptance':2,'s-coherent-phase':0};
+ for(const [id,digits] of Object.entries(formats)){$(id+'-value').textContent=(+$(id).value).toFixed(digits)+(id==='f-thickness'||id==='f-wavelength'?' μm':['i-angle','p-alpha','p-delta','p-analyzer','s-coherent-phase'].includes(id)?'°':'');}
+ $('time-phase-value').textContent=Math.round(+$('time-phase').value)+'°';
+}
+function render(){
+ updateOutputs();const p=values(),v=window.wavesCompute[active](p);window.wavesState={kind:active,parameters:p,response:v};const pol=active==='polarization';
+ $('label-R').textContent=pol?'Input power I':'Reflected power R';$('label-T').textContent=pol?'Analyzer / input power':'Transmitted power T';$('label-A').textContent=pol?'Coordinate Stokes V':'Absorbed power A';$('label-phase').textContent=pol?'Relative phase δ':'Phase of t';$('animation-controls').hidden=!pol;$('power-bar').hidden=pol;$('legend').hidden=pol;
+ $('R').textContent=pol?v.I.toFixed(3):pct(v.R);$('T').textContent=pct(pol?v.analyzer_power:v.T);$('A').textContent=pol?v.V.toFixed(3):pct(v.A);$('phase').textContent=pol?p.delta_deg.toFixed(1)+'°':angleLabel(v.phase_deg);
+ if(!pol){$('rbar').style.width=pct(v.R);$('tbar').style.width=pct(v.T);$('abar').style.width=pct(v.A);table([['r',v.r],['t',v.t]]);$('table-title').textContent='Complex tangential-E coefficients';$('balance').textContent='Power check: R + T + A = '+(v.R+v.T+v.A).toFixed(10)+'.';}
+ if(active==='interface'){
+  $('question').textContent=v.regime==='evanescent'?'If all the incident power is reflected, must the field on the other side vanish?':'Air → glass gives |t|² = 0.64 at normal incidence. Is 36% of the incident power missing?';$('regime').textContent=v.regime==='evanescent'?'Total internal reflection':v.regime==='cutoff'?'Grazing cutoff':p.polarization+' · propagating output';$('scene-title').textContent=v.regime==='evanescent'?'There is a field on the other side.':'The boundary fixes the outgoing amplitudes.';$('scene').innerHTML=interfaceScene(p,v);
+  $('scene-caption').textContent=v.regime==='evanescent'?'The transmitted field decays normally while varying along the interface. A single evanescent wave has zero time-averaged normal power in this lossless half-space. Schematic envelope: not a full-wave field map.':'Ray directions obey tangential wavevector continuity. Arrow widths suggest power, not the electric-field amplitude.';
+  $('formula').textContent='r = (Y₁ − Y₂)/(Y₁ + Y₂),  t = 1 + r;  T = Re(Y₂)|t|²/Y₁.  TE: Y = q; TM: Y = n²/q.';
+  $('interpretation').textContent=v.regime==='evanescent'?'The angle exceeds the critical angle '+v.critical_deg.toFixed(2)+'°. Reflection has unit magnitude, while the transmitted tangential field can be nonzero. Zero normal power is different from zero field.':v.regime==='cutoff'?'At the exact threshold the output wave is grazing. The TE and TM tangential-E limits differ, but both have zero transmitted normal power. These limits avoid dividing by a zero TM longitudinal wavevector.':Math.abs(p.n1-p.n2)<1e-12?'The two indices match, so the boundary produces no reflected field for either polarization.':p.polarization==='TM'&&v.R<1e-8?'The TM reflected amplitude cancels at Brewster incidence. This cancellation depends on polarization and angle; it does not remove reflection for every wave.':'Reflection and transmission follow two boundary equations. Their field magnitudes alone do not give both power fractions: different media and angles require the normal-admittance factor.';
+  $('reference-note').textContent='Both amplitudes are referenced to the interface. At normal incidence air → glass gives r = −0.2, t = 0.8, R = 4%, T = 96%. Indices and angle are frequency-independent here.';
+ }else if(active==='film'){
+  $('question').textContent='Can two reflecting interfaces together produce zero reflection? Tune the layer, then move away from its design wavelength.';$('regime').textContent='Coherent normal-incidence film';$('scene-title').textContent=p.thickness_um===0?'The layer collapses to one boundary.':v.R<1e-10?'Two boundary reflections cancel.':'A round trip changes the interference.';$('scene').innerHTML=filmScene(p,v);$('scene-caption').textContent=p.thickness_um===0?'The zero-thickness limit restores the direct interface. The nominal film index has no effect on the response.':'The zigzag separates successive contributions for clarity. Their actual wavevectors are normal to the film. The small spectrum shows R from 0.3 to 1.5 μm; its dot marks the current wavelength.';
+  $('formula').textContent='δ = 2πnᶠd/λ₀;  r = (r₁ᶠ + rᶠ₂ exp(2iδ))/(1 + r₁ᶠrᶠ₂ exp(2iδ)).';
+  $('interpretation').textContent=v.R<1e-10?'At the matched quarter-wave design, nᶠ = √(n₁n₂) and nᶠd = λ₀/4. The coherent sum of reflected waves vanishes. Matching one wavelength does not establish broadband antireflection with real dispersive materials.':p.thickness_um===0?'At zero thickness the two interfaces collapse to the direct n₁ → n₂ interface. The nominal film index no longer changes the answer.':'The reflected contributions add as complex amplitudes. Thickness and wavelength change their round-trip phase. Adding separate reflected intensities would discard this interference.';
+  $('reference-note').textContent='Reflection is referenced to the entrance, transmission to the exit. The unwrapped propagation phase is part of t. The model has no angle spread, absorption, roughness, or material dispersion.';
+ }else if(active==='polarization'){
+  $('question').textContent='For a circular field, will a rotating ideal linear analyzer ever extinguish the light? Compare with a linear field.';$('regime').textContent='Normalized Jones vector';$('scene-title').textContent=Math.abs(v.V)>1-1e-8?'Two components trace a circle.':Math.abs(v.V)<1e-8?'The field stays on one line.':'Amplitude and phase trace an ellipse.';$('scene').innerHTML=polarizationScene(p,v);$('scene-caption').textContent='At a fixed point, E(t) = Re{[Eₓ,Eᵧ] exp(−iωt)}. The time slider or Play button changes the blue field vector, while the ellipse and analyzer power remain fixed.';
+  $('formula').textContent='I = |Eₓ|² + |Eᵧ|²;  Pβ/I = |cosβ Eₓ + sinβ Eᵧ|²;  V = 2 Im(Eₓ*Eᵧ).';
+  $('interpretation').textContent=Math.abs(v.V)>1-1e-8?'Equal component magnitudes and a ±90° relative phase produce circular polarization. Every ideal linear analyzer passes one half of the normalized incident power.':Math.abs(v.V)<1e-8?'The components have a linear polarization relation (or one component vanishes). A suitable linear analyzer can extinguish the field; rotating it changes the projection.':'Changing relative phase changes the field path even when total input power stays at 1. A linear analyzer probes the projection, not each Cartesian intensity separately.';
+  table([['Eₓ',v.Ex],['Eᵧ',v.Ey],['Stokes Q + iU',c(v.Q,v.U)]]);$('table-title').textContent='Jones components and Stokes values';$('balance').textContent='Polarization check: Q² + U² + V² = '+(v.Q*v.Q+v.U*v.U+v.V*v.V).toFixed(10)+' = I² for this pure normalized state.';$('reference-note').textContent='No Jones device or polarization conversion is being fabricated or simulated. This panel constructs an incident state and projects it through an ideal analyzer.';
+ }else{
+  const two=$('coherent-enabled').checked;$('coherent-controls').hidden=!two;$('question').textContent='Why does this electric sheet stop at 50% absorption from one side? What changes if a second phase-controlled beam arrives?';$('regime').textContent='Passive electric shunt sheet';$('scene-title').textContent=v.A>.499999?'A one-sided absorption maximum.':'A boundary current redistributes power.';$('scene').innerHTML=sheetScene(p,v);$('scene-caption').textContent='Zero-thickness electric sheet between identical media. The primary R, T, A values describe one incoming wave. The optional second-beam result uses the full symmetric scattering matrix.';
+  $('formula').textContent='g = G + iB;  r = −g/(2 + g), t = 2/(2 + g);  A = 4G/[(2 + G)² + B²] ≤ 1/2.';
+  $('interpretation').textContent=p.conductance===0&&p.susceptance===0?'The sheet current vanishes: r = 0 and t = 1.':p.conductance===0?'A purely reactive sheet stores and returns energy without time-averaged dissipation. It still changes amplitudes and phase.':'The conductance dissipates energy. For an electric-only symmetric sheet under one-sided illumination, the maximum A = 1/2 occurs at G = 2, B = 0. Other sheet types, exteriors, or illumination conditions can have different limits.';
+  $('reference-note').textContent='All coefficients refer to the sheet plane. g is an effective admittance, not a geometry or a measured material. The model omits magnetic surface currents and polarization coupling.';
+  if(two){const v2=coherentSheet({...p,phase_deg:+$('s-coherent-phase').value});window.wavesState.coherent={phase_deg:+$('s-coherent-phase').value,...v2};$('coherent-absorption').textContent=pct(v2.A2);$('coherent-meter').style.width=pct(v2.A2);$('interpretation').textContent+=' With two phase-locked inputs, interference can select an absorbing or a nonabsorbing scattering eigenchannel. At G = 2, B = 0, the two-beam absorbed fraction is (1 + cosφ)/2.';}
+ }
+}
+function setTab(name,focus=false){active=name;playing=false;$('play').textContent=motionAllowed?'Play field':'Motion off';$('play').setAttribute('aria-pressed','false');for(const b of document.querySelectorAll('[data-tab]')){const chosen=b.dataset.tab===name;b.setAttribute('aria-selected',String(chosen));b.tabIndex=chosen?0:-1;$('panel-'+b.dataset.tab).hidden=!chosen;if(chosen&&focus)b.focus();}render();}
+const presets={
+ 'air-glass':{tab:'interface',values:{'i-n1':1,'i-n2':1.5,'i-angle':0,'i-pol':'TE'}},
+ brewster:{tab:'interface',values:{'i-n1':1,'i-n2':1.5,'i-angle':deg(Math.atan(1.5)),'i-pol':'TM'}},
+ tir:{tab:'interface',values:{'i-n1':1.5,'i-n2':1,'i-angle':50,'i-pol':'TE'}},
+ 'film-ar':{tab:'film',values:{'f-n1':1,'f-nf':Math.sqrt(1.5),'f-n2':1.5,'f-thickness':.6/(4*Math.sqrt(1.5)),'f-wavelength':.6}},
+ 'film-bare':{tab:'film',values:{'f-thickness':0}},
+ 'pol-linear':{tab:'polarization',values:{'p-alpha':45,'p-delta':0,'p-analyzer':135}},
+ 'pol-circular':{tab:'polarization',values:{'p-alpha':45,'p-delta':90,'p-analyzer':0}},
+ 'pol-elliptical':{tab:'polarization',values:{'p-alpha':25,'p-delta':65,'p-analyzer':30}},
+ 'sheet-transparent':{tab:'sheet',values:{'s-conductance':0,'s-susceptance':0}},
+ 'sheet-reactive':{tab:'sheet',values:{'s-conductance':0,'s-susceptance':2}},
+ 'sheet-half':{tab:'sheet',values:{'s-conductance':2,'s-susceptance':0}}
+};
+document.querySelectorAll('[data-tab]').forEach(b=>{b.addEventListener('click',()=>setTab(b.dataset.tab));b.addEventListener('keydown',e=>{const names=['interface','film','polarization','sheet'],i=names.indexOf(active);if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();setTab(e.key==='Home'?names[0]:e.key==='End'?names[3]:names[(i+(e.key==='ArrowRight'?1:3))%4],true);}});});
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{const preset=presets[b.dataset.preset];for(const [id,value] of Object.entries(preset.values))$(id).value=value;document.querySelectorAll('#panel-'+preset.tab+' [data-preset]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));if(active!==preset.tab)setTab(preset.tab);else render();}));
+document.querySelectorAll('input,select').forEach(input=>input.addEventListener(input.tagName==='SELECT'?'change':'input',()=>{if(input.id!=='time-phase'&&input.id!=='coherent-enabled'&&input.id!=='s-coherent-phase')document.querySelectorAll('#panel-'+active+' [data-preset]').forEach(b=>b.setAttribute('aria-pressed','false'));render();}));
+$('play').disabled=!motionAllowed;if(!motionAllowed)$('play').textContent='Motion off';
+$('play').addEventListener('click',()=>{playing=!playing;lastFrame=0;animationPhase=+$('time-phase').value;$('play').textContent=playing?'Pause field':'Play field';$('play').setAttribute('aria-pressed',String(playing));if(playing)requestAnimationFrame(animate);});
+function animate(now){if(!playing||active!=='polarization')return;if(!lastFrame)lastFrame=now;const dt=Math.min(now-lastFrame,100);lastFrame=now;animationPhase=(animationPhase+dt*.06)%360;$('time-phase').value=animationPhase;updateOutputs();$('scene').innerHTML=polarizationScene(values(),window.wavesState.response);requestAnimationFrame(animate);}
+$('download').addEventListener('click',()=>{const record={model_version:'waves-interfaces-1.0',...window.wavesState,time_convention:'exp(-i omega t)',spatial_convention:'exp(+i k.r)',phase_references:active==='film'?'reflection at entrance; transmission at exit':'interface/sheet plane; fixed Cartesian axes for polarization',limits:['Analytical plane-wave model','Positive real constant bulk indices, nonmagnetic media','No geometry/full-wave solver or fabricated-device validation','Electric sheet uses a local effective admittance']},blob=new Blob([JSON.stringify(record,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='waves-'+active+'-experiment.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
+setTab('interface');
+</script></body></html>

@@ -30,6 +30,13 @@ project:
         - file: chapters/01-foundations-review.md
         - file: labs/01-first-investigation.md
         - file: notebooks/01-first-metasurface-model.ipynb
+    - title: Chapter 2 - Waves, interfaces, and sheets
+      children:
+        - file: chapters/02-waves-and-interfaces.md
+        - file: chapters/02-waves-guide.md
+        - file: chapters/02-waves-review.md
+        - file: labs/02-waves-lab.md
+        - file: notebooks/02-waves-and-interfaces.ipynb
     - title: Chapter 3 - Unit-cell design and simulation
       children:
         - file: chapters/03-unit-cell-design.md
