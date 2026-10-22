@@ -1,4 +1,5 @@
-@import url("../bilingual.css");
+/* MyST serves this stylesheet as myst-theme.css in each edition's root. */
+@import url("./bilingual.css");
 
 /* Give the Chapter 4 controls a usable viewport without affecting other figures. */
 .floquet-explorer-frame div:has(> iframe) {

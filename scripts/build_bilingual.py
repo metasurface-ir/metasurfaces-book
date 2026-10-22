@@ -6,9 +6,11 @@ BASE_URL may be empty or a project path such as /metasurfaces-book.
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
+from urllib.parse import urljoin, urlparse
 from localize_chapter02 import export
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -97,6 +99,18 @@ def decorate(output, language):
         path.write_text(text, encoding='utf-8', newline='\n')
     for name in ('bilingual.js', 'bilingual.css'):
         shutil.copy2(ROOT / 'styles' / name, output / name)
+    # Resolve imports at the deployed theme URL, not at styles/book.css.
+    # Reject paths outside this edition even if a permissive local server serves them.
+    theme_css = output / 'myst-theme.css'
+    for href in re.findall(r'@import\s+url\([\"\x27]?([^\"\x27)]+)', theme_css.read_text(encoding='utf-8')):
+        resolved = urlparse(urljoin(f'https://book.invalid{target_base}/myst-theme.css', href))
+        if resolved.netloc != 'book.invalid':
+            continue
+        prefix = target_base + '/'
+        if not resolved.path.startswith(prefix):
+            raise RuntimeError(f'Stylesheet import escapes edition prefix: {href}')
+        if not (output / resolved.path[len(prefix):]).is_file():
+            raise RuntimeError(f'Missing stylesheet import: {href}')
 
 
 def main():
