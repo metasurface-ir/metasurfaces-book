@@ -1,7 +1,9 @@
 # Chapter 1 investigation report
 
-Name/credit:  
-Date and source commit:  
+Name/credit:
+
+Date and source commit:
+
 Notebook/model version and environment:
 
 ## Question and prediction
