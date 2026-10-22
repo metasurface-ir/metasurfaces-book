@@ -33,6 +33,8 @@ The [chapter](chapters/01-metasurface-foundations.md), [six worked examples](cha
 
 The ideal two-port model assumes equal exterior impedances, normal incidence, one polarization, and specular ports only. Analytical limits, full matrix unitarity, two-sided power, an independent electric-only expression, derivative refinements, and input guards are checked. It has no geometry or full-wave/experimental validation. Comparisons link to existing full-wave Chapters 3 and 5. Chapter 2 will develop electromagnetic waves and boundary descriptions next; Chapter 6 follows the foundational chapters in the current development plan.
 
+The [review and mini-project](chapters/01-foundations-review.md) adds eight self-check answers, a suggested grading rubric, a working glossary, and an editable report worksheet. The chapter includes an original geometry/port schematic; the worked guide illustrates delay and calculates flux normalization for one existing full-wave library row.
+
 ## Chapter 3: Unit-cell design and simulation
 
 The [chapter](chapters/03-unit-cell-design.md), [six worked examples](chapters/03-unit-cell-guide.md), [computational lab](labs/03-unit-cell-lab.md), and [executed notebook](notebooks/03-unit-cell-library.ipynb) build an original one-dimensional TE RCWA solver and a 50-width dielectric response library. The browser explorer selects precomputed responses and reports feasible/unmet phase targets. The downloadable source bundle preserves the solver, environment, notebook, data, and audit.

@@ -19,6 +19,7 @@ assert hashlib.sha256((ROOT/'simulations/intro_sheet.py').read_bytes()).hexdiges
 (ROOT/'interactives/foundations-explorer.html').write_text((ROOT/'templates/foundations-explorer.html').read_text(encoding='utf-8'),encoding='utf-8')
 files=['notebooks/01-first-metasurface-model.ipynb','simulations/intro_sheet.py',
        'requirements-labs.txt','scripts/validate_chapter01.py','data/chapter-01/README.md',
+       'downloads/chapter-01-report-template.md',
        'data/chapter-01/sheet-response.json','data/chapter-01/sheet-response.csv','data/chapter-01/validation.json']
 with zipfile.ZipFile(ROOT/'downloads/chapter-01-foundations.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
     for file in files:archive.write(ROOT/file,file)

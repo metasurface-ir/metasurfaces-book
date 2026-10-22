@@ -46,6 +46,18 @@ The response depends on geometry, material properties, illumination, and interac
 
 These viewpoints overlap. A periodic metasurface diffracts according to the same channel physics as a grating. Calling a structure a metasurface does not remove unwanted diffraction, coupling, or material loss. The [flat-optics overview by Yu and Capasso](https://capasso.seas.harvard.edu/publications/flat-optics-designer-metasurfaces) provides context for engineered interfaces and wavefront control.
 
+Microwave frequency-selective surfaces, transmitarrays, and reflectarrays provide part of the engineering context for optical flat components. The operating band changes materials, fabrication, loss, dispersion, and measurement methods; a geometric scaling alone need not preserve performance. The Yu–Capasso review connects those traditions without implying that one design transfers unchanged between them.
+
+| Intended function | What to specify and measure |
+| --- | --- |
+| Beam steering or splitting | Power in each desired direction/order, angular response, and polarization |
+| Focusing or imaging | Wavelength, aperture, focal region, spot/line width, and collection normalization |
+| Polarization transformation | Desired output polarization, conversion power, and leakage |
+| Spectral filtering or absorption | Band, transmitted/reflected channels, loss, and bandwidth |
+| Reconfigurable communication surface | State-dependent response plus the actual illumination and system channel |
+
+A passive surface need not be lossless. A tunable surface changes state under external control; tuning alone does not establish electromagnetic amplification or nonreciprocity. A scalar coefficient describes one selected polarization channel, while a general polarization transformation requires multiple coupled field components. [Arbabi and colleagues](https://arxiv.org/abs/1411.1494) demonstrate phase/polarization control with a specific dielectric-post platform; its reported results are not predictions of our scalar model.
+
 ## 1.3 Identify the scales before choosing a model
 
 For free-space wavelength $\lambda_0$, positive real refractive index $n$, and frequency $f$,
@@ -61,6 +73,12 @@ Compare dimensions with the wavelength in the relevant medium, not only with $\l
 - **Primitive period:** the smallest translation restoring the complete material pattern.
 - **Supercell:** a computational or physical sequence containing multiple sites, possibly with different elements.
 - **Aperture:** the finite illuminated or fabricated extent, whose edges affect the outgoing field.
+
+```{figure} ../assets/chapter-01/geometry-and-ports.svg
+:alt: Annotated element width, height, pitch, supercell period, and a separate ideal sheet with two incoming and two outgoing port amplitudes.
+
+Original schematic of two descriptions. The upper drawing names physical scales; the lower drawing defines the ideal two-port experiment. No fitted relation between their geometry and channel strengths is assumed. An aperture can contain many periods.
+```
 
 For six different sites spaced by $0.65\,\mu\mathrm m$, a repeated sequence has period $3.90\,\mu\mathrm m$. Six identical sites can preserve the smaller $0.65\,\mu\mathrm m$ primitive period. The available supercell labels and their actual amplitudes are different questions. [Chapter 4](04-periodic-floquet.md) derives the channels; [Chapter 5](05-metasurface-synthesis.md) verifies both sequences with a full-wave calculation.
 
@@ -208,3 +226,5 @@ Chapter 2 will establish waves, boundaries, polarization, and power normalizatio
 8. Propose one experiment connecting the analytical model to a specific full-wave geometry without assuming a parameter-to-geometry mapping.
 
 Continue with the [six worked examples](01-foundations-guide.md) and the [first computational investigation](../labs/01-first-investigation.md). The browser explorer runs offline; the source ZIP provides editable code, notebook, data, and validation.
+
+Finish with the [self-check answers, mini-project, rubric, and glossary](01-foundations-review.md). The worked guide also checks power normalization against a saved Chapter 3 full-wave result, making the evidence difference explicit before Chapter 2.

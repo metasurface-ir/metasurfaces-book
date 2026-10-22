@@ -84,6 +84,24 @@ At $f_0=200\,\mathrm{THz}$ and $a=0.25$, the group delay is about $12.73\,\mathr
 
 The derivative concerns this imposed balanced analytical channel. It does not establish material dispersion, an achromatic geometry, or a geometry-specific bandwidth.
 
+```{figure} ../assets/chapter-01/delay.png
+:alt: Unwrapped phase and exact group delay for two strengths of the matched analytical channel.
+
+The executed notebook's two balanced cases retain unit transmitted power by construction. Their different phase widths and delays concern this model, rather than a measured or simulated geometry bandwidth.
+```
+
+## A bridge to saved full-wave data
+
+For a worked comparison, inspect the first accepted row in the existing [Chapter 3 TE ridge library](../notebooks/03-unit-cell-library.ipynb). Its exterior indices are $n_i=1$ and $n_t=1.5$, with real nonmagnetic media, normal incidence, and only the specular order open. For the electric-field transmission coefficient,
+
+$$
+T=\frac{n_t}{n_i}|t|^2.
+$$
+
+This follows from a normally incident propagating wave's average flux $|E|^2/(2\eta)$ and $\eta=\eta_0/n$. The 0.08 μm ridge has $|t|^2\approx0.63996$ but $T\approx0.95994$. Its reflected power is about 0.04006. Adding $R+|t|^2$ would incorrectly report missing power. These values can be checked directly from the saved complex coefficient in that Chapter 3 dataset: $t\approx-0.797799-0.058944i$.
+
+The ridge has height 0.60 μm, pitch 0.65 μm, wavelength 1.55 μm, and ridge/gap indices 2.4/1. Its transmission reference is at the layer exit, whereas the introductory sheet uses its single sheet plane. This worked arithmetic uses a previously executed full-wave result; it does not rerun Maxwell's equations or retrieve a geometry-to-sheet mapping. Oblique incidence and more general media need the appropriate admittance factors developed in Chapter 2.
+
 ## Reading a research result
 
 Choose a metasurface figure or abstract and record the illumination, structure/material model, target quantity, normalization, and evidence level. Distinguish analytical, simulated, and experimental results. Check whether “efficiency” refers to incident power, transmitted power, one polarization, or a finite collection region.
@@ -93,3 +111,5 @@ For physical context, read [Decker et al. on dielectric Huygens surfaces](https:
 ## Report checklist
 
 Submit predictions, parameter changes, complex coefficients, power and phase plots, assumptions, checks, and a paragraph describing a claim the model cannot support. A successful report can conclude that more geometry/material information is needed. The [lab](../labs/01-first-investigation.md) provides the runnable source and a bridge to existing full-wave results.
+
+Use the [self-check and mini-project page](01-foundations-review.md) for answer guidance, a suggested grading rubric, a glossary, and an editable report worksheet.
