@@ -1,12 +1,12 @@
 # Computational investigations
 
-The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 1 provides an executed analytical introduction and an offline browser explorer. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook and a browser explorer. Chapter 5 verifies four full-wave supercells and adds separate scalar focusing/Jones notebooks. The AI pilot includes two executed analytical notebooks. Further lab stages state their individual execution status. Chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 1 provides an executed analytical introduction and an offline browser explorer. Chapter 2 adds executed planar interface/film/sheet and Jones models with a four-view browser explorer. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook and a browser explorer. Chapter 5 verifies four full-wave supercells and adds separate scalar focusing/Jones notebooks. The AI pilot includes two executed analytical notebooks. Further lab stages state their individual execution status. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Investigation | Related chapter(s) |
 | --- | --- | --- |
-| ms-01-waves-interfaces | Fresnel amplitudes versus power; a thin-film baseline | 2 |
+| ms-01-waves-interfaces | [Waves, interfaces, TIR fields, antireflection, and polarization](02-waves-lab.md) | 2 |
 | ms-02-scattering | [First analytical sheet investigation: channel balance, phase, power, and model limits](01-first-investigation.md) | 1, 2 |
-| ms-03-sheet-response | Sheet-response retrieval and consistency | 2, 5 |
+| ms-03-sheet-response | [Electric-sheet response, coherent absorption, and guarded algebraic retrieval](02-waves-lab.md) | 2, 5 |
 | ms-04-floquet-orders | [Floquet channels: browser explorer, analytical notebook, and full-wave validation outline](04-floquet-lab.md) | 4 |
 | ms-05-beam-steering | [Ideal/sampled/local/full-wave beam steering with four verified supercells](05-synthesis-lab.md) | 5 |
 | ms-06-polarization | [Executed analytical Jones matrices, rotated elements, geometric phase](05-synthesis-lab.md) | 2, 5 |

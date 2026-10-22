@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1030" viewBox="0 0 840 1030" role="img" aria-labelledby="title desc">
+  <title id="title">Electric-sheet boundary conditions, film phase references, and power normalization</title>
+  <desc id="desc">An ideal zero-thickness electric sheet at z equals zero has continuous tangential electric field and a magnetic-field jump set by its surface current. The unit normal points from region 1 into region 2. A separate finite film has two different reference faces at z equals zero and z equals d. A final example shows that electric-field transmission amplitude 0.8 from index 1 to index 1.5 corresponds to power transmission 0.96, rather than squared amplitude 0.64.</desc>
+  <defs>
+    <marker id="navy-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#173e54"/></marker>
+    <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#16818b"/></marker>
+    <marker id="amber-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#bd7426"/></marker>
+  </defs>
+  <rect width="840" height="1030" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#173e54">
+    <rect x="18" y="18" width="804" height="367" rx="15" fill="#f2f7fb" stroke="#c8dce6"/>
+    <text x="43" y="58" font-size="28" font-weight="bold">A. Zero thickness: an electric current sheet</text>
+    <text x="43" y="92" font-size="21">Pure electric response; no equivalent magnetic surface current.</text>
+    <path d="M56 221H782" stroke="#bd7426" stroke-width="7"/>
+    <text x="59" y="142" font-size="24">region 1</text>
+    <text x="59" y="300" font-size="24">region 2</text>
+    <g stroke="#16818b" stroke-width="4" marker-end="url(#teal-arrow)"><path d="M185 167H342"/><path d="M185 274H342"/></g>
+    <text x="359" y="175" font-size="24">Eₜ,₁</text>
+    <text x="359" y="282" font-size="24">Eₜ,₂</text>
+    <path d="M511 221H667" stroke="#bd7426" stroke-width="5" marker-end="url(#amber-arrow)"/>
+    <text x="507" y="193" font-size="24" fill="#ad651f">Jₛ = Yₛ Eₜ</text>
+    <path d="M736 142V291" stroke="#173e54" stroke-width="3" marker-end="url(#navy-arrow)"/>
+    <text x="677" y="130" font-size="23">n̂ = +z</text>
+    <text x="507" y="271" font-size="21">sheet plane z = 0</text>
+    <text x="59" y="337" font-size="25">Eₜ,₂ = Eₜ,₁</text>
+    <text x="309" y="337" font-size="25">n̂ × (H₂ − H₁) = Jₛ</text>
+    <text x="59" y="369" font-size="21">E stays continuous; the sheet current supplies the H jump.</text>
+    <rect x="18" y="407" width="804" height="346" rx="15" fill="#f5faf9" stroke="#c8dce6"/>
+    <text x="43" y="449" font-size="28" font-weight="bold">B. Finite film: two distinct phase planes</text>
+    <text x="43" y="482" font-size="21">A propagation phase is not a zero-thickness sheet phase.</text>
+    <rect x="270" y="514" width="280" height="133" fill="#d2eae6"/>
+    <path d="M270 514V647M550 514V647" stroke="#16818b" stroke-width="3"/>
+    <path d="M95 584H741" stroke="#173e54" stroke-width="3.5" marker-end="url(#navy-arrow)"/>
+    <text x="128" y="551" font-size="25">n₁</text><text x="395" y="551" font-size="25">n<tspan baseline-shift="sub" font-size="18">f</tspan></text><text x="672" y="551" font-size="25">n₂</text>
+    <text x="218" y="678" font-size="23">z = 0</text><text x="518" y="678" font-size="23">z = d</text>
+    <path d="M273 703H547" stroke="#173e54" stroke-width="2" marker-start="url(#navy-arrow)" marker-end="url(#navy-arrow)"/>
+    <text x="400" y="695" font-size="23">d</text>
+    <text x="59" y="736" font-size="22">r: entrance face · t: exit face · δ = 2π n<tspan baseline-shift="sub" font-size="16">f</tspan> d / λ₀</text>
+    <rect x="18" y="775" width="804" height="237" rx="15" fill="#f8f7f2" stroke="#ddd8c7"/>
+    <text x="43" y="817" font-size="28" font-weight="bold">C. Amplitude is not transmitted power</text>
+    <g font-size="28" font-weight="bold">
+      <rect x="49" y="845" width="184" height="68" rx="10" fill="white" stroke="#c8dce6"/><text x="78" y="888">t = 0.8</text>
+      <rect x="300" y="845" width="229" height="68" rx="10" fill="white" stroke="#c8dce6"/><text x="327" y="888">|t|² = 0.64</text>
+      <rect x="596" y="845" width="194" height="68" rx="10" fill="#e4f2ef" stroke="#16818b"/><text x="621" y="888">T = 0.96</text>
+    </g>
+    <g stroke="#173e54" stroke-width="2.5" marker-end="url(#navy-arrow)"><path d="M244 880H285"/><path d="M540 880H581"/></g>
+    <text x="49" y="950" font-size="22">Normal incidence, n₁ = 1 and n₂ = 1.5, real nonmagnetic media:</text>
+    <text x="49" y="985" font-size="25">T = (n₂ / n₁)|t|² · R = 0.04 · R + T = 1</text>
+  </g>
+</svg>

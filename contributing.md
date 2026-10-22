@@ -71,6 +71,10 @@ For Chapter 4, use `python scripts/export_chapter04_figures.py` after running an
 
 For Chapter 1, keep `notebooks/01-first-metasurface-model.ipynb` with `simulations/intro_sheet.py`. Run all cells from a fresh kernel, then `python scripts/validate_chapter01.py` and `python scripts/export_chapter01.py`. The browser template is `templates/foundations-explorer.html`; check its parity with Python, undefined transmission phase, presets, controls, offline use, and narrow-screen layout after edits. Retain the ideal-sheet assumptions and avoid interpreting analytical consistency checks as a full-wave or experimental validation.
 
+## Chapter 2 source and data workflow
+
+Keep `notebooks/02-waves-and-interfaces.ipynb` with `simulations/waves_interfaces.py`. Execute from a fresh kernel, then run `python scripts/validate_chapter02.py` and `python scripts/export_chapter02.py`. The editable browser source is `templates/waves-explorer.html`; verify its numerical parity with Python and its four views, coherent phase control, downloads, offline use, and mobile layout. The two SVG schematics are editable originals; the five PNGs come directly from tagged notebook cells. Preserve the tangential TM sign convention, phase references, cutoff/evanescent distinctions, and assumptions of electric-sheet retrieval.
+
 ## Chapter 3 source and data workflow
 
 For Chapter 3, keep the notebook and `simulations/unit_cell_te.py` together. After saving a fresh execution, run `python scripts/validate_chapter03.py --grcwa` with the optional validation environment, then `python scripts/export_chapter03.py`. This updates the data audit, three figures, embedded-data explorer, and source ZIP. If you skip the optional comparison, report that explicitly. The explorer's editable template is `templates/unit-cell-explorer.html`; its published file is generated from the JSON library. Preserve the source hash, domain, phase references, and acceptance thresholds when adding data. Use a new dataset version for another physical experiment.

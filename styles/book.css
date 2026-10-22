@@ -44,3 +44,14 @@
   border: 1px solid #d9e2e8 !important;
   border-radius: 10px;
 }
+
+.waves-explorer-frame div:has(> iframe) {
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  height: 1360px;
+}
+
+.waves-explorer-frame iframe {
+  border: 1px solid #d9e2e8 !important;
+  border-radius: 10px;
+}
