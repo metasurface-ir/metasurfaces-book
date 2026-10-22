@@ -26,6 +26,10 @@
     'No results found.': 'نتیجه‌ای پیدا نشد.', 'No results found': 'نتیجه‌ای پیدا نشد',
     'Search for a page': 'جست‌وجوی صفحه', 'Type to search...': 'برای جست‌وجو بنویسید…'
   });
+  function hydrated(element) {
+    const key = Object.keys(element).find(name => name.startsWith('__reactFiber'));
+    return key && element[key]?.memoizedProps != null;
+  }
   let scheduled = false;
   function update() {
     scheduled = false;
@@ -65,6 +69,7 @@
     }
     // Only theme chrome is localized here. Authored Persian content is in source files.
     for (const el of document.querySelectorAll('nav,button,aside,header,[role="dialog"],input')) {
+      if (!hydrated(el)) continue;
       for (const attr of ['aria-label', 'title', 'placeholder']) {
         const val = el.getAttribute(attr);
         if (words[val]) el.setAttribute(attr, words[val]);
@@ -75,6 +80,9 @@
     while (walker.nextNode()) {
       const node = walker.currentNode, parent = node.parentElement;
       if (!parent || parent.closest('script,style,code,pre,.katex')) continue;
+      // Suspense can hydrate the sidebar/footer after the top bar. Changing their
+      // text earlier causes a React text mismatch and a document recovery.
+      if (!hydrated(parent)) continue;
       const key = node.textContent.trim();
       if (words[key]) node.textContent = node.textContent.replace(key, words[key]);
     }
@@ -110,11 +118,13 @@
     }
     addEventListener('popstate', update);
     update();
+    setTimeout(update, 1000);
+    setTimeout(update, 3000);
   }
   function ready() {
     // React attaches its fiber marker when this header has hydrated.
     const header = document.querySelector('.myst-top-nav-bar');
-    if (!header || !Object.keys(header).some(key => key.startsWith('__reactFiber'))) {
+    if (!header || !hydrated(header)) {
       setTimeout(ready, 100);return;
     }
     enhance();
