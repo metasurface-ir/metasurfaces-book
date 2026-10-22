@@ -4,6 +4,8 @@ project:
   title: 'Metasurface.ir'
   description: Graduate computational investigations in electromagnetic metasurfaces.
   github: https://github.com/metasurface-ir/metasurfaces-book
+  bibliography:
+    - references.bib
   static_files:
     - interactives
   keywords:
