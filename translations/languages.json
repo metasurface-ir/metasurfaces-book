@@ -190,6 +190,31 @@
       "source": "notebooks/10-neural-comparison.ipynb",
       "translation": "translations/fa/notebooks/10-neural-comparison.ipynb",
       "route": "neural-comparison"
+    },
+    {
+      "source": "attribution.md",
+      "translation": "translations/fa/attribution.md",
+      "route": "attribution"
+    },
+    {
+      "source": "chapters/06-numerical-methods.md",
+      "translation": "translations/fa/chapters/06-numerical-methods.md",
+      "route": "numerical-methods"
+    },
+    {
+      "source": "chapters/06-numerical-guide.md",
+      "translation": "translations/fa/chapters/06-numerical-guide.md",
+      "route": "numerical-guide"
+    },
+    {
+      "source": "labs/06-numerical-lab.md",
+      "translation": "translations/fa/labs/06-numerical-lab.md",
+      "route": "numerical-lab"
+    },
+    {
+      "source": "notebooks/06-numerical-methods.ipynb",
+      "translation": "translations/fa/notebooks/06-numerical-methods.ipynb",
+      "route": "numerical-methods-1"
     }
   ]
 }

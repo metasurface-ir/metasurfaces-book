@@ -26,7 +26,7 @@ After this chapter, you should be able to:
 4. Explain why an accurate average prediction can still yield an unreliable optimized design.
 5. Validate a candidate against physical constraints and an independent electromagnetic calculation.
 
-You should be comfortable with complex amplitudes, S parameters, power balance, basic linear algebra, and numerical optimization. Start with the NumPy kernel notebook, then use the scikit-learn comparison notebook. The [pilot guide](10-pilot-guide.md) gives a sequence and readiness checks. Chapter 10 is our first authoring pilot; the full course will introduce its electromagnetic prerequisites before it.
+You should be comfortable with complex amplitudes, S parameters, power balance, basic linear algebra, and numerical optimization. Start with the NumPy kernel notebook, then use the scikit-learn comparison notebook. The [pilot guide](10-pilot-guide.md) gives a sequence and readiness checks. Use Chapters 2–4 for the wave, unit-cell, and diffraction prerequisites, Chapter 5 for synthesis, and Chapter 6 for the numerical verification needed before a full-wave dataset study.
 
 ## 10.2 Three problems that should be kept distinct
 
@@ -288,6 +288,25 @@ This mapping is deliberately synthetic: $g$ is not a documented pillar radius or
 For a symmetric two-port matrix $S=\begin{pmatrix}r&t\\t&r\end{pmatrix}$, power balance for one incident port is only the diagonal part of $S^\dagger S=I$. The off-diagonal condition is $r^*t+t^*r=0$. Here $r^*t=i\gamma\Delta/(\gamma^2+\Delta^2)$ is purely imaginary, so that condition also holds. The comparison notebook checks both identities. They apply to this model and its specified port basis.
 
 Retrieving an exact training spectrum automatically preserves this model's power balance, even when its resonance is in the wrong place for the requested design. Conversely, a regression can have very small complex error and a nonzero power residual. Accuracy and physical consistency answer different questions; report both.
+
+### Inspect physical consistency in the complex plane
+
+For this reconstructed equal-air electric sheet, the signed quantity
+
+$$
+A_{\mathrm{implied}}=1-|\widehat t-1|^2-|\widehat t|^2
+=\frac12-2\left|\widehat t-\frac12\right|^2.
+$$
+
+vanishes on a circle centered at $1/2$ with radius $1/2$. Its interior corresponds to a passive reconstructed response; its exterior would require gain under these specific assumptions. The comparison notebook plots the frozen predictions in this plane and reports the signed diagnostic over all held-out geometries.
+
+Complex linear interpolation joins lossless training responses by chords inside that disk. It can therefore introduce artificial loss relative to the generator while preserving passivity. Nearest retrieval stays on the lossless circle even when the retrieved resonance is wrong. A small response error, passivity, and losslessness are distinct checks. Projecting onto the circle alone would not establish spectral accuracy, causality, or a realizable geometry.
+
+```{figure} ../assets/chapter-10/passivity-locus.png
+:alt: Complex transmission predictions compared with the lossless electric-shunt circle and the signed implied absorption over frequency for one fixed held-out design.
+
+Original calculation from the frozen analytical comparison. The circle and interpolation chord expose artificial loss or implied gain in the reconstructed model. The signed quantity is a surrogate diagnostic, not measured material absorption; the notebook table also covers all held-out geometries.
+```
 
 That last step verifies the surrogate against its analytical data generator. It is not independent full-wave or experimental validation. The next lab stage replaces this generator with a converged unit-cell library while preserving the split, metrics, and reporting structure.
 

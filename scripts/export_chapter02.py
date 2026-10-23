@@ -10,7 +10,7 @@ notebook=json.loads((ROOT/'notebooks/02-waves-and-interfaces.ipynb').read_text(e
 destination=ROOT/'assets/chapter-02';destination.mkdir(parents=True,exist_ok=True)
 figures={'ch02-interface':'interface-power.png','ch02-tir':'tir-field.png',
          'ch02-film':'film-interference.png','ch02-polarization':'polarization.png',
-         'ch02-sheet':'sheet-response.png'}
+         'ch02-sheet':'sheet-response.png','ch02-retrieval-conditioning':'retrieval-conditioning.png'}
 for tag,name in figures.items():
     cells=[c for c in notebook['cells'] if tag in c.get('metadata',{}).get('tags',[])]
     assert len(cells)==1 and cells[0].get('execution_count') is not None
@@ -49,4 +49,4 @@ limitations when modifying results. The film and electric sheet are distinct
 models, and arbitrary film coefficients cannot be retrieved as a zero-thickness
 electric shunt without validating the model and phase planes first.
 ''')
-print('Exported five figures, offline explorer, and chapter-02-waves.zip')
+print('Exported six figures, offline explorer, and chapter-02-waves.zip')

@@ -194,7 +194,7 @@ The notebook compares two balanced ideal channels: a narrower phase transition h
 | Full-wave simulation | Maxwell scattering for the specified numerical model | Convergence, materials, illumination, and experimental relevance |
 | Experiment | Performance of a measured sample in a stated setup | Calibration, uncertainty, repeatability, and collection geometry |
 
-A simulation is not automatically converged because it finishes, and a model is not accurate merely because it conserves power. Record the source/version, parameters, conventions, numerical controls, checks, and scope. Chapter 6 will develop these habits systematically; the existing full-wave chapters already apply them.
+A simulation is not automatically converged because it finishes, and a model is not accurate merely because it conserves power. Record the source/version, parameters, conventions, numerical controls, checks, and scope. [Chapter 6](06-numerical-methods.md) develops these habits systematically; the existing full-wave chapters already apply them.
 
 In a simple lossless two-port problem, $R+T=1$. In a real diffracting or polarization-converting structure, include all relevant outgoing channels before attributing missing measured power to absorption. Finite collection angles and unmeasured polarization channels can also matter.
 
@@ -214,7 +214,7 @@ For example: “At normal incidence and one stated wavelength, select a dielectr
 
 ## 1.11 Course map and exercises
 
-Chapter 2 will establish waves, boundaries, polarization, and power normalization. Chapter 3 computes unit-cell amplitudes; Chapter 4 develops periodic channels; Chapter 5 synthesizes and verifies wavefront transformations. Chapter 6 will expand numerical methods. Chapters 7–9 address tuning, applications, and experimental/material considerations, and Chapter 10 develops AI workflows with independent verification.
+[Chapter 2](02-waves-and-interfaces.md) establishes waves, boundaries, polarization, and power normalization. Chapter 3 computes unit-cell amplitudes; Chapter 4 develops periodic channels; Chapter 5 synthesizes and verifies wavefront transformations. [Chapter 6](06-numerical-methods.md) develops numerical methods. Chapters 7–9 have syllabus outlines for tuning, applications, and experimental/material considerations, and Chapter 10 develops AI workflows with independent verification.
 
 1. Draw an element, primitive cell, supercell, and aperture for a proposed surface. State which dimensions you would compare with which wavelength.
 2. Explain why a periodic metasurface can also be described as a diffraction grating. Identify a case where pitch and full period differ.

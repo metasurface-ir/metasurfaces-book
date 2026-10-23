@@ -6,6 +6,13 @@ coefficients, spectra, environment, source SHA-256, and time/basis/phase-plane
 conventions. The CSV exports interface-angle, film-wavelength, and sheet-strength
 sweeps. Undefined transmission phase is JSON null and CSV blank.
 
+The JSON also retains `retrieval_conditioning`: the declared complex perturbation,
+nominal and perturbed coefficients, inferred sheet parameters, exact parameter
+errors, local derivative estimates, and relative perturbation magnitudes. This
+is a deterministic model-consistent sensitivity experiment. It does not specify
+a measurement-noise distribution; independently perturbed coefficients can fail
+the continuity test and require a separate uncertainty/model treatment.
+
 Bulk indices are positive real constants in isotropic nonmagnetic media.
 The interface permits TE/TM oblique incidence, transmitted cutoff, and decaying
 evanescent fields. The film and electric sheet use normal incidence. The sheet

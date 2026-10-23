@@ -46,6 +46,21 @@ def main():
     for name,digest in data['metadata']['source_sha256'].items():
         assert hashlib.sha256((ROOT/'simulations'/name).read_bytes()).hexdigest()==digest
     assert wave['source_sha256']==data['metadata']['source_sha256']['metasurface_synthesis.py']
+    focus_checks=wave.get('refinement_checks',[])
+    assert {(r['study'],r['model']) for r in focus_checks}=={
+        (study,model) for study in ['window','grid']
+        for model in ['continuous','sampled','local_library']}, 'Execute the all-aperture scalar refinement notebook first.'
+    assert len(focus_checks)==6
+    for record in focus_checks:
+        for metric,limit in record['limits'].items():
+            assert np.isfinite(record[metric]) and 0<=record[metric]<limit
+        if record['study']=='window':
+            assert np.isclose(*record['compared_dx_um'])
+            assert record['compared_windows_um'][1]>record['compared_windows_um'][0]
+        else:
+            assert np.isclose(*record['compared_windows_um'])
+            assert record['compared_dx_um'][1]<record['compared_dx_um'][0]
+        assert record['passed']
     assert len(data['extended_library'])==161 and all(r['accepted'] for r in data['extended_library'])
     assert all(max(r['delta_T'],r['delta_R'])<1e-4 for c in data['cases'] for r in c['orders'])
     assert all(r['delta_complex_t']<1e-4 for c in data['cases'] for r in c['orders'] if r['transmission_open'])
@@ -86,6 +101,9 @@ def main():
                 forbidden_supercell_amplitude=float(forbidden_error),mirror_order_power_error=float(mirror),
                 quantized_ramp=quantization,scalar_plane_wave_error=propagation_error,gaussian_fwhm_error=float(gaussian_error),jones_error=jones_error,
                 full_wave_refinement=dict(half_orders=[144,192],max_open_order_power_change=max(max(r['delta_T'],r['delta_R']) for c in data['cases'] for r in c['orders']),max_open_complex_t_change=max(r['delta_complex_t'] for c in data['cases'] for r in c['orders'] if r['transmission_open'])),
+                scalar_focus_refinement=dict(status='passed',checks=focus_checks,
+                    normalization=wave['metric_normalization'],
+                    scope='Independent FFT window/grid checks for three prescribed scalar apertures; no finite-device Maxwell validation'),
                 model_limits=['1D lossless TE infinite periodic supercells','Scalar line focusing is not a full-wave lens','Jones polarization model is independent of the TE ridge','No fabricated-device or independent FEM/FDTD validation'])
     if args.grcwa:
         comparisons=[]

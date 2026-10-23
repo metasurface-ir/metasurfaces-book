@@ -20,6 +20,16 @@ window/grid refinements, and separate ideal Jones-matrix checks. Those models
 are not a full-wave finite metalens or a vector response calculation of the TE
 ridges. Line-intensity concentration is not a physical focusing efficiency.
 
+The scalar `refinements` table now contains independent window/grid studies for
+all three apertures: continuous, sampled phase, and local library. Its six
+`refinement_checks` records compare the final independent pairs in profile,
+FWHM, peak, fixed-window integral, and concentration. `metric_normalization`
+documents the one frozen peak reference, exact physical integration endpoints,
+aperture-width denominator, and separate per-model concentration denominator.
+The audit checks those recorded limits and independent-study geometry before
+accepting the saved scalar evidence. These checks do not validate a finite lens
+with Maxwell's equations.
+
 `python scripts/validate_chapter05.py --grcwa` generates `validation.json`.
 Install requirements-labs.txt and optional requirements-validation.txt first.
 The audit checks identical-cell embedding, forbidden supercell coefficients,

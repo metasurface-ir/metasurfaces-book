@@ -27,7 +27,7 @@ After completing the investigation, you should be able to:
 5. Export a versioned response library and select a geometry with explicit feasibility criteria.
 6. Identify when a periodic-cell prediction needs a supercell or finite-device test.
 
-Prerequisites are Maxwell boundary conditions, phasors, Fresnel coefficients, Fourier series, eigenvectors, and basic Python. Reading Sections 4.1–4.7 first provides the channel geometry. This development order leaves the course chapter numbering intact; Chapters 1 and 2 will supply the earlier conceptual foundation.
+Prerequisites are Maxwell boundary conditions, phasors, Fresnel coefficients, Fourier series, eigenvectors, and basic Python. Reading Sections 4.1–4.7 first provides the channel geometry. [Chapter 1](01-metasurface-foundations.md) and [Chapter 2](02-waves-and-interfaces.md) supply the earlier foundation.
 
 ## 3.2 Define the electromagnetic experiment
 
@@ -233,7 +233,7 @@ A local-periodicity approximation assigns a cell the response it would have in a
 
 Before claiming device efficiency, assemble an appropriate supercell or finite structure, include its actual outgoing channels, and compare its scattering with the library-based prediction. Sharp gradients, resonant near fields, aperture edges, and rapidly changing neighboring geometries deserve particular attention. An element library is an input to that test, rather than a completed beam-deflector simulation.
 
-For a research cell, add physical material dispersion, relevant loss, geometric tolerances, and solver checks appropriate to the chosen fabrication geometry. [Chapter 4](04-periodic-floquet.md) supplies channel bookkeeping; Chapter 5 will develop synthesis, and Chapter 6 will expand numerical validation.
+For a research cell, add physical material dispersion, relevant loss, geometric tolerances, and solver checks appropriate to the chosen fabrication geometry. [Chapter 4](04-periodic-floquet.md) supplies channel bookkeeping; [Chapter 5](05-metasurface-synthesis.md) develops synthesis, and [Chapter 6](06-numerical-methods.md) develops numerical validation.
 
 ## 3.11 Exercises
 

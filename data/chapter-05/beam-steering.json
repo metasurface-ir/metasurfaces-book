@@ -16,6 +16,22 @@
     "n_substrate": 1.5,
     "n_ridge": 2.4,
     "n_gap": 1.0,
+    "angle_deg": 0.0,
+    "library_parameters": {
+      "period_um": 0.65,
+      "width_um": 0.325,
+      "height_um": 1.8,
+      "wavelength_um": 1.55,
+      "n_ridge": 2.4,
+      "n_gap": 1.0,
+      "n_incident": 1.0,
+      "n_substrate": 1.5,
+      "angle_deg": 0.0
+    },
+    "library_phase_references": {
+      "r": "z=0",
+      "t": "z=height"
+    },
     "target_order": 1,
     "target_angle_deg": 15.36441349084721,
     "half_order": 144,
@@ -3103,49 +3119,49 @@
       "M": 12,
       "harmonics": 25,
       "target_T": 0.838333103538104,
-      "delta_target_vs_192": 0.017022039678504353,
+      "delta_target_vs_check": 0.017022039678504353,
       "balance_error": 5.551115123125783e-16
     },
     {
       "M": 24,
       "harmonics": 49,
       "target_T": 0.8564049322028311,
-      "delta_target_vs_192": 0.001049788986222766,
+      "delta_target_vs_check": 0.001049788986222766,
       "balance_error": 4.440892098500626e-16
     },
     {
       "M": 36,
       "harmonics": 73,
       "target_T": 0.8555818849714082,
-      "delta_target_vs_192": 0.00022674175479986403,
+      "delta_target_vs_check": 0.00022674175479986403,
       "balance_error": 0.0
     },
     {
       "M": 48,
       "harmonics": 97,
       "target_T": 0.8554351437817753,
-      "delta_target_vs_192": 8.000056516699328e-05,
+      "delta_target_vs_check": 8.000056516699328e-05,
       "balance_error": 3.3306690738754696e-16
     },
     {
       "M": 72,
       "harmonics": 145,
       "target_T": 0.8553768388575294,
-      "delta_target_vs_192": 2.1695640921026715e-05,
+      "delta_target_vs_check": 2.1695640921026715e-05,
       "balance_error": 3.3306690738754696e-16
     },
     {
       "M": 96,
       "harmonics": 193,
       "target_T": 0.8553669513692512,
-      "delta_target_vs_192": 1.180815264290036e-05,
+      "delta_target_vs_check": 1.180815264290036e-05,
       "balance_error": 4.440892098500626e-16
     },
     {
       "M": 144,
       "harmonics": 289,
       "target_T": 0.8553565666096787,
-      "delta_target_vs_192": 1.4233930704099507e-06,
+      "delta_target_vs_check": 1.4233930704099507e-06,
       "balance_error": 1.1102230246251565e-15
     }
   ]

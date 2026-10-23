@@ -12,42 +12,511 @@
     {
       "model": "continuous",
       "fwhm_um": 0.9705965619857666,
+      "peak_intensity": 27.619160687049202,
       "relative_peak": 1.0,
-      "line_intensity_fraction": 0.8808993043581491
+      "fixed_window_line_intensity": 27.260706245611463,
+      "line_intensity_per_aperture": 0.8737405847952391,
+      "total_line_intensity": 30.970169893609672,
+      "line_intensity_fraction": 0.8802246270930657
     },
     {
       "model": "sampled",
       "fwhm_um": 0.9824114619526049,
+      "peak_intensity": 25.231184283018845,
       "relative_peak": 0.9135391393283687,
-      "line_intensity_fraction": 0.895183415037246
+      "fixed_window_line_intensity": 25.2860180804663,
+      "line_intensity_per_aperture": 0.8104492974508428,
+      "total_line_intensity": 28.286580942828785,
+      "line_intensity_fraction": 0.8939227449076631
     },
     {
       "model": "local_library",
       "fwhm_um": 0.9849398338991406,
+      "peak_intensity": 15.198394763745549,
       "relative_peak": 0.5502844541859004,
-      "line_intensity_fraction": 0.8952809692570377
+      "fixed_window_line_intensity": 15.261884123680355,
+      "line_intensity_per_aperture": 0.4891629526820626,
+      "total_line_intensity": 17.071232958560284,
+      "line_intensity_fraction": 0.8940118244960954
     }
   ],
   "refinements": [
     {
-      "dx_um": 0.1,
-      "window_um": 102.4,
-      "fwhm_um": 0.972592406759125,
-      "roi_peak_normalized_difference": 0.0013129341956203621
-    },
-    {
-      "dx_um": 0.1,
-      "window_um": 409.6,
-      "fwhm_um": 0.9714129384351624,
-      "roi_peak_normalized_difference": 0.0005231186366735874
-    },
-    {
+      "study": "window",
+      "model": "continuous",
       "dx_um": 0.05,
+      "fft_samples": 2048,
+      "window_um": 102.4,
+      "fwhm_um": 0.970828746874457,
+      "peak_intensity": 27.67166018045197,
+      "relative_peak": 1.0019008359449308,
+      "fixed_window_line_intensity": 27.311642018401564,
+      "line_intensity_per_aperture": 0.8753731416154347,
+      "total_line_intensity": 31.017916909955716,
+      "line_intensity_fraction": 0.880511805408681,
+      "roi_peak_normalized_difference": 0.0003984769011552503
+    },
+    {
+      "study": "window",
+      "model": "sampled",
+      "dx_um": 0.05,
+      "fft_samples": 2048,
+      "window_um": 102.4,
+      "fwhm_um": 0.9931540883673631,
+      "peak_intensity": 25.083363380187294,
+      "relative_peak": 0.9081870251020713,
+      "fixed_window_line_intensity": 25.335073282260534,
+      "line_intensity_per_aperture": 0.8120215795596324,
+      "total_line_intensity": 28.291492463973764,
+      "line_intensity_fraction": 0.8955014767963225,
+      "roi_peak_normalized_difference": 0.0033848382552158487
+    },
+    {
+      "study": "window",
+      "model": "local_library",
+      "dx_um": 0.05,
+      "fft_samples": 2048,
+      "window_um": 102.4,
+      "fwhm_um": 0.9965310090262766,
+      "peak_intensity": 15.101811191528675,
+      "relative_peak": 0.5467874770941178,
+      "fixed_window_line_intensity": 15.292551105083747,
+      "line_intensity_per_aperture": 0.4901458687526842,
+      "total_line_intensity": 17.075807202475676,
+      "line_intensity_fraction": 0.8955682694090509,
+      "roi_peak_normalized_difference": 0.002652425284498122
+    },
+    {
+      "study": "window",
+      "model": "continuous",
+      "dx_um": 0.05,
+      "fft_samples": 4096,
       "window_um": 204.8,
       "fwhm_um": 0.9698811115911047,
-      "roi_peak_normalized_difference": 0.00251916436968437
+      "peak_intensity": 27.688737892572604,
+      "relative_peak": 1.0025191643696845,
+      "fixed_window_line_intensity": 27.309806511883366,
+      "line_intensity_per_aperture": 0.8753143112783129,
+      "total_line_intensity": 31.017532368220518,
+      "line_intensity_fraction": 0.8804635451872387,
+      "roi_peak_normalized_difference": 0.00021985152359817677
+    },
+    {
+      "study": "window",
+      "model": "sampled",
+      "dx_um": 0.05,
+      "fft_samples": 4096,
+      "window_um": 204.8,
+      "fwhm_um": 0.9809462475542778,
+      "peak_intensity": 25.2822008347998,
+      "relative_peak": 0.915386282779215,
+      "fixed_window_line_intensity": 25.320377609502593,
+      "line_intensity_per_aperture": 0.8115505644071344,
+      "total_line_intensity": 28.290241846358544,
+      "line_intensity_fraction": 0.895021603103113,
+      "roi_peak_normalized_difference": 0.003814419421927876
+    },
+    {
+      "study": "window",
+      "model": "local_library",
+      "dx_um": 0.05,
+      "fft_samples": 4096,
+      "window_um": 204.8,
+      "fwhm_um": 0.9834629499600489,
+      "peak_intensity": 15.229455560046823,
+      "relative_peak": 0.551409064620418,
+      "fixed_window_line_intensity": 15.282777294363008,
+      "line_intensity_per_aperture": 0.4898326055885579,
+      "total_line_intensity": 17.075229327988882,
+      "line_intensity_fraction": 0.8950261809551351,
+      "roi_peak_normalized_difference": 0.001969162241802085
+    },
+    {
+      "study": "window",
+      "model": "continuous",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.9702351734397532,
+      "peak_intensity": 27.682665778015053,
+      "relative_peak": 1.0022993128460862,
+      "fixed_window_line_intensity": 27.310491690408334,
+      "line_intensity_per_aperture": 0.8753362721284722,
+      "total_line_intensity": 31.017370871529117,
+      "line_intensity_fraction": 0.8804902196103497,
+      "roi_peak_normalized_difference": 0.0
+    },
+    {
+      "study": "window",
+      "model": "sampled",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.9875527719727181,
+      "peak_intensity": 25.17684977185777,
+      "relative_peak": 0.9115718633572871,
+      "fixed_window_line_intensity": 25.32755647791084,
+      "line_intensity_per_aperture": 0.8117806563432961,
+      "total_line_intensity": 28.289716197785143,
+      "line_intensity_fraction": 0.895291995891206,
+      "roi_peak_normalized_difference": 0.0
+    },
+    {
+      "study": "window",
+      "model": "local_library",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.989132016691903,
+      "peak_intensity": 15.175068951671621,
+      "relative_peak": 0.549439902378616,
+      "fixed_window_line_intensity": 15.286565775777934,
+      "line_intensity_per_aperture": 0.48995403127493375,
+      "total_line_intensity": 17.075000851434464,
+      "line_intensity_fraction": 0.8952600300745354,
+      "roi_peak_normalized_difference": 0.0
+    },
+    {
+      "study": "grid",
+      "model": "continuous",
+      "dx_um": 0.1,
+      "fft_samples": 4096,
+      "window_um": 409.6,
+      "fwhm_um": 0.9714129384351624,
+      "peak_intensity": 27.604712589364524,
+      "relative_peak": 0.9994768813633265,
+      "fixed_window_line_intensity": 27.262016726643935,
+      "line_intensity_per_aperture": 0.8737825873924338,
+      "total_line_intensity": 30.970048269538065,
+      "line_intensity_fraction": 0.8802703983338209,
+      "roi_peak_normalized_difference": 0.011554666495165015
+    },
+    {
+      "study": "grid",
+      "model": "sampled",
+      "dx_um": 0.1,
+      "fft_samples": 4096,
+      "window_um": 409.6,
+      "fwhm_um": 0.9890002193013874,
+      "peak_intensity": 25.125530054520965,
+      "relative_peak": 0.9097137432674587,
+      "fixed_window_line_intensity": 25.29333787947529,
+      "line_intensity_per_aperture": 0.8106839063934387,
+      "total_line_intensity": 28.286097156761805,
+      "line_intensity_fraction": 0.8941968112214062,
+      "roi_peak_normalized_difference": 0.02522996026723622
+    },
+    {
+      "study": "grid",
+      "model": "local_library",
+      "dx_um": 0.1,
+      "fft_samples": 4096,
+      "window_um": 409.6,
+      "fwhm_um": 0.9905891300338938,
+      "peak_intensity": 15.143858937150057,
+      "relative_peak": 0.5483098892375505,
+      "fixed_window_line_intensity": 15.265742793836305,
+      "line_intensity_per_aperture": 0.48928662800757383,
+      "total_line_intensity": 17.071021382576102,
+      "line_intensity_fraction": 0.8942489410397908,
+      "roi_peak_normalized_difference": 0.015114261497401488
+    },
+    {
+      "study": "grid",
+      "model": "continuous",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.9702351734397532,
+      "peak_intensity": 27.682665778015053,
+      "relative_peak": 1.0022993128460862,
+      "fixed_window_line_intensity": 27.310491690408334,
+      "line_intensity_per_aperture": 0.8753362721284722,
+      "total_line_intensity": 31.017370871529117,
+      "line_intensity_fraction": 0.8804902196103497,
+      "roi_peak_normalized_difference": 0.0038106591881386983
+    },
+    {
+      "study": "grid",
+      "model": "sampled",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.9875527719727181,
+      "peak_intensity": 25.17684977185777,
+      "relative_peak": 0.9115718633572871,
+      "fixed_window_line_intensity": 25.32755647791084,
+      "line_intensity_per_aperture": 0.8117806563432961,
+      "total_line_intensity": 28.289716197785143,
+      "line_intensity_fraction": 0.895291995891206,
+      "roi_peak_normalized_difference": 0.02507636020204193
+    },
+    {
+      "study": "grid",
+      "model": "local_library",
+      "dx_um": 0.05,
+      "fft_samples": 8192,
+      "window_um": 409.6,
+      "fwhm_um": 0.989132016691903,
+      "peak_intensity": 15.175068951671621,
+      "relative_peak": 0.549439902378616,
+      "fixed_window_line_intensity": 15.286565775777934,
+      "line_intensity_per_aperture": 0.48995403127493375,
+      "total_line_intensity": 17.075000851434464,
+      "line_intensity_fraction": 0.8952600300745354,
+      "roi_peak_normalized_difference": 0.01507429212125605
+    },
+    {
+      "study": "grid",
+      "model": "continuous",
+      "dx_um": 0.025,
+      "fft_samples": 16384,
+      "window_um": 409.6,
+      "fwhm_um": 0.9695478595683718,
+      "peak_intensity": 27.721607407565262,
+      "relative_peak": 1.0037092626266553,
+      "fixed_window_line_intensity": 27.333106341300166,
+      "line_intensity_per_aperture": 0.8760611006826975,
+      "total_line_intensity": 31.041668556287373,
+      "line_intensity_fraction": 0.8805295466555695,
+      "roi_peak_normalized_difference": 0.0010468772980287194
+    },
+    {
+      "study": "grid",
+      "model": "sampled",
+      "dx_um": 0.025,
+      "fft_samples": 16384,
+      "window_um": 409.6,
+      "fwhm_um": 0.9861351249743877,
+      "peak_intensity": 25.222492880580038,
+      "relative_peak": 0.9132244519076579,
+      "fixed_window_line_intensity": 25.33793587334616,
+      "line_intensity_per_aperture": 0.8121133292739153,
+      "total_line_intensity": 28.306350007908506,
+      "line_intensity_fraction": 0.895132571534903,
+      "roi_peak_normalized_difference": 0.008372492110315346
+    },
+    {
+      "study": "grid",
+      "model": "local_library",
+      "dx_um": 0.025,
+      "fft_samples": 16384,
+      "window_um": 409.6,
+      "fwhm_um": 0.9877117127979367,
+      "peak_intensity": 15.202690800055246,
+      "relative_peak": 0.5504399996913695,
+      "fixed_window_line_intensity": 15.292937919173962,
+      "line_intensity_per_aperture": 0.490158266640191,
+      "total_line_intensity": 17.085957254502794,
+      "line_intensity_fraction": 0.8950588890852864,
+      "roi_peak_normalized_difference": 0.0050330010598740585
+    },
+    {
+      "study": "grid",
+      "model": "continuous",
+      "dx_um": 0.0125,
+      "fft_samples": 32768,
+      "window_um": 409.6,
+      "fwhm_um": 0.969202051607924,
+      "peak_intensity": 27.741070014549585,
+      "relative_peak": 1.0044139403395247,
+      "fixed_window_line_intensity": 27.34401361354334,
+      "line_intensity_per_aperture": 0.8764106927417736,
+      "total_line_intensity": 31.053974039690964,
+      "line_intensity_fraction": 0.8805318629620216,
+      "roi_peak_normalized_difference": 0.0
+    },
+    {
+      "study": "grid",
+      "model": "sampled",
+      "dx_um": 0.0125,
+      "fft_samples": 32768,
+      "window_um": 409.6,
+      "fwhm_um": 0.9856587449820771,
+      "peak_intensity": 25.240066890758097,
+      "relative_peak": 0.9138607496712716,
+      "fixed_window_line_intensity": 25.34363008465269,
+      "line_intensity_per_aperture": 0.8122958360465605,
+      "total_line_intensity": 28.317687143046175,
+      "line_intensity_fraction": 0.8949752837027226,
+      "roi_peak_normalized_difference": 0.0
+    },
+    {
+      "study": "grid",
+      "model": "local_library",
+      "dx_um": 0.0125,
+      "fft_samples": 32768,
+      "window_um": 409.6,
+      "fwhm_um": 0.9872261110818066,
+      "peak_intensity": 15.213352682179618,
+      "relative_peak": 0.5508260317741391,
+      "fixed_window_line_intensity": 15.296413516345265,
+      "line_intensity_per_aperture": 0.4902696639854251,
+      "total_line_intensity": 17.093237274920796,
+      "line_intensity_fraction": 0.8948810146564904,
+      "roi_peak_normalized_difference": 0.0
     }
   ],
+  "refinement_checks": [
+    {
+      "study": "window",
+      "model": "continuous",
+      "compared_dx_um": [
+        0.05,
+        0.05
+      ],
+      "compared_windows_um": [
+        204.8,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.00021985152359817677,
+      "relative_fwhm_change": 0.00036492374049196117,
+      "peak_change_over_fixed_peak": 0.00021985152359817677,
+      "fixed_window_integral_change_over_aperture": 2.1960850159263856e-05,
+      "line_concentration_change": 2.6674423110994994e-05,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.02,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.02,
+        "fixed_window_integral_change_over_aperture": 0.01,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    },
+    {
+      "study": "window",
+      "model": "sampled",
+      "compared_dx_um": [
+        0.05,
+        0.05
+      ],
+      "compared_windows_um": [
+        204.8,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.003814419421927876,
+      "relative_fwhm_change": 0.0066897938074166425,
+      "peak_change_over_fixed_peak": 0.003814419421927876,
+      "fixed_window_integral_change_over_aperture": 0.00023009193616174706,
+      "line_concentration_change": 0.00027039278809304346,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.02,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.02,
+        "fixed_window_integral_change_over_aperture": 0.01,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    },
+    {
+      "study": "window",
+      "model": "local_library",
+      "compared_dx_um": [
+        0.05,
+        0.05
+      ],
+      "compared_windows_um": [
+        204.8,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.001969162241802085,
+      "relative_fwhm_change": 0.0057313550023524226,
+      "peak_change_over_fixed_peak": 0.001969162241802085,
+      "fixed_window_integral_change_over_aperture": 0.00012142568637585338,
+      "line_concentration_change": 0.00023384911940027564,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.02,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.02,
+        "fixed_window_integral_change_over_aperture": 0.01,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    },
+    {
+      "study": "grid",
+      "model": "continuous",
+      "compared_dx_um": [
+        0.025,
+        0.0125
+      ],
+      "compared_windows_um": [
+        409.6,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.0010468772980287194,
+      "relative_fwhm_change": 0.0003567965625681408,
+      "peak_change_over_fixed_peak": 0.0007046777128694304,
+      "fixed_window_integral_change_over_aperture": 0.00034959205907614255,
+      "line_concentration_change": 2.316306452088135e-06,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.03,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.03,
+        "fixed_window_integral_change_over_aperture": 0.02,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    },
+    {
+      "study": "grid",
+      "model": "sampled",
+      "compared_dx_um": [
+        0.025,
+        0.0125
+      ],
+      "compared_windows_um": [
+        409.6,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.008372492110315346,
+      "relative_fwhm_change": 0.00048331128266843683,
+      "peak_change_over_fixed_peak": 0.00063629776361378,
+      "fixed_window_integral_change_over_aperture": 0.00018250677264519677,
+      "line_concentration_change": 0.0001572878321803861,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.03,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.03,
+        "fixed_window_integral_change_over_aperture": 0.02,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    },
+    {
+      "study": "grid",
+      "model": "local_library",
+      "compared_dx_um": [
+        0.025,
+        0.0125
+      ],
+      "compared_windows_um": [
+        409.6,
+        409.6
+      ],
+      "profile_difference_over_fixed_peak": 0.0050330010598740585,
+      "relative_fwhm_change": 0.0004918850004868463,
+      "peak_change_over_fixed_peak": 0.00038603208276969444,
+      "fixed_window_integral_change_over_aperture": 0.00011139734523407663,
+      "line_concentration_change": 0.000177874428796021,
+      "limits": {
+        "profile_difference_over_fixed_peak": 0.03,
+        "relative_fwhm_change": 0.02,
+        "peak_change_over_fixed_peak": 0.03,
+        "fixed_window_integral_change_over_aperture": 0.02,
+        "line_concentration_change": 0.02
+      },
+      "passed": true
+    }
+  ],
+  "focus_comparison_half_um": 4.0,
+  "metric_normalization": {
+    "peak": "one frozen baseline continuous-aperture peak",
+    "fixed_window": "same physical endpoints integrated with interpolation",
+    "line_intensity": "fixed-window integral divided by physical aperture width",
+    "concentration": "fixed-window integral divided by each model total line intensity",
+    "scope": "scalar squared-field metrics, not electromagnetic focusing efficiency"
+  },
   "axial_peak_um": 29.75,
   "max_jones_error": 6.395250856282128e-16,
   "library_phase_rms_deg": 0.6872031881601142,

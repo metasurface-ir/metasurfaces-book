@@ -1,0 +1,401 @@
+{
+  "scope": "generation paths of book-owned chapter images; not a general reuse license",
+  "assets": [
+    {
+      "asset": "assets/chapter-01/delay.png",
+      "sha256": "7f1c168cbd6ef81d4bf8dadbd00132369bda464ac9e8a675ea86ba005f8dd344",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/01-first-metasurface-model.ipynb",
+          "cell_index": 9,
+          "tags": [
+            "ch01-delay"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-01/geometry-and-ports.svg",
+      "sha256": "05b5227388b742ad34501750e4549f58470da34bae41c8c43461d7efe5dba704",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-01/geometry-and-ports.svg"
+    },
+    {
+      "asset": "assets/chapter-01/phasors.png",
+      "sha256": "8d22e9bd63f5405e48c2197864b98aaeb0b8b9baa48aae01bcfadba3147ddb15",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/01-first-metasurface-model.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch01-phasors"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-01/response.png",
+      "sha256": "94fd99cac54e294bc475d40743d260b201ee3ea56135bc3ec15e030605a6e5ca",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/01-first-metasurface-model.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ch01-response"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/film-interference.png",
+      "sha256": "547a4abca20081d63103881b365b345ec432fda1382456b6bae7f56711c8d027",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch02-film"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/interface-power.png",
+      "sha256": "471a0adb62e86cdce423b9040e98686a2c3be3189e5411a7e33cdad42699581d",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 3,
+          "tags": [
+            "ch02-interface"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/polarization.png",
+      "sha256": "ddf1ffc7d050f308d378e4c6b4a05ce4959c1d09de243f70606c211ce997f798",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 9,
+          "tags": [
+            "ch02-polarization"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/retrieval-conditioning.png",
+      "sha256": "6599e00f163b7c1e7f7f9f19a9f282d8a25c2eed7d944decc66ac516dafb3dae",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 13,
+          "tags": [
+            "ch02-retrieval-conditioning"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/sheet-boundaries.svg",
+      "sha256": "1135b3a775a09eb7c3d77317a8ff263993d0c683ded7d38c0c5c312be6983c1c",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/sheet-boundaries.svg"
+    },
+    {
+      "asset": "assets/chapter-02/sheet-response.png",
+      "sha256": "76136bebaa145e73fa335250ece2dcca6b0af6c22046f1ac2e45b2bd0615831f",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 11,
+          "tags": [
+            "ch02-sheet"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/tir-field.png",
+      "sha256": "77b92aeba6c358c28857f6b75d7b67d5b425edd1e7c338607c7daa4e1b26b256",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/02-waves-and-interfaces.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ch02-tir"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-02/wave-geometry.svg",
+      "sha256": "b10cef58e08f97ddc3c50e27099b9672e69f072a239725f41ab5f768e8f3ec9e",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/wave-geometry.svg"
+    },
+    {
+      "asset": "assets/chapter-03/fields.png",
+      "sha256": "51d753434b8122240079a322c3209331acaca1088f6755bd93794e9573c46eb7",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/03-unit-cell-library.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch03-fields"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-03/library.png",
+      "sha256": "85b8aedc9d403c613a2f5cbece62636e23e5b9eddd25973ad02835ed98c3b62a",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/03-unit-cell-library.ipynb",
+          "cell_index": 10,
+          "tags": [
+            "ch03-library"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-03/spectra.png",
+      "sha256": "12c928853699fa2e11c8faf71fb1b78d8ea922dc1bc8ae9e956e9551be14a499",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/03-unit-cell-library.ipynb",
+          "cell_index": 12,
+          "tags": [
+            "ch03-spectra"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-04/channel-maps.png",
+      "sha256": "d79159983e27a8fe2c9009f46e6f227b59a0ee80859c12a240a37cd5d8106505",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/04-floquet-orders.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch04-channel-maps"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-04/finite-array.png",
+      "sha256": "91c186185332c22b32f6a54e095a29e3f5fed1e5fe5def5208d2c2794378abdc",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/04-floquet-orders.ipynb",
+          "cell_index": 11,
+          "tags": [
+            "ch04-finite-array"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/axial.png",
+      "sha256": "0e1dc2563dea9f5ac5c71231c67dfcd569f58342665394d70de79127a97eb999",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-wavefront-models.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ch05-axial"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/coverage.png",
+      "sha256": "9248642a7e748997c7bb6a370827631186839ff0b9071a24b19d7fb63cf563f7",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-beam-steering.ipynb",
+          "cell_index": 3,
+          "tags": [
+            "ch05-coverage"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/field.png",
+      "sha256": "ece271882a54c93c6729eb18677642b9e585e9a9a2d6575801e37638f85cfcc9",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-beam-steering.ipynb",
+          "cell_index": 11,
+          "tags": [
+            "ch05-field"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/focus.png",
+      "sha256": "bbf7d955599f06653ad0577fdcf2c9d3fe4509175e4ee6c749eb2d323b767127",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-wavefront-models.ipynb",
+          "cell_index": 3,
+          "tags": [
+            "ch05-focus"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/orders.png",
+      "sha256": "e328ea9a142030c0314e9779b016d86e720e0a50f352ef037707bac9b1b66d85",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-beam-steering.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch05-orders"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/polarization.png",
+      "sha256": "420157c8dbb4d0ec0ba2daccf229104a32f3776abde0b6bd4edc7d902a4e103d",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/05-wavefront-models.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch05-polarization"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-06/boundaries.png",
+      "sha256": "24b96dc3efd3503ff7d87a93bf23d5a36ef6ae6d267116116811aff733ba54dd",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/06-numerical-methods.ipynb",
+          "cell_index": 8,
+          "tags": [
+            "ch06-boundaries"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-06/convergence.png",
+      "sha256": "eb4261fc458247320604202ec5d218d1699fea1963bf50f2e0cf40a5cd138a27",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/06-numerical-methods.ipynb",
+          "cell_index": 4,
+          "tags": [
+            "ch06-convergence"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-06/fields.png",
+      "sha256": "3d845f65d4d244ad7531d4866baad6fdba9c23c4459b5b633f577317e69d11f6",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/06-numerical-methods.ipynb",
+          "cell_index": 6,
+          "tags": [
+            "ch06-fields"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-06/harmonics.png",
+      "sha256": "6f893cbd21af0c60b9d263d65a598a50228c414c6a5ba83327f0b908aa173204",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/06-numerical-methods.ipynb",
+          "cell_index": 10,
+          "tags": [
+            "ch06-harmonics"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-10/inverse-comparison.png",
+      "sha256": "5b674fbcdbaeb06ebd5738d4d6e377ba448f3ae2eecbb0139f72d43f4214ec9c",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/10-neural-comparison.ipynb",
+          "cell_index": 15,
+          "tags": [
+            "ch10-inverse-comparison"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-10/model-comparison.png",
+      "sha256": "c27681b78d6a36fd03e282e05e8552f1e69a3c23ebc142935f6449c714b47f76",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/10-neural-comparison.ipynb",
+          "cell_index": 13,
+          "tags": [
+            "ch10-model-comparison"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-10/passivity-locus.png",
+      "sha256": "232d6d5031f862248f600f0b3939777bafe17f61a4f62da99be1cd37837ed418",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/10-neural-comparison.ipynb",
+          "cell_index": 11,
+          "tags": [
+            "ch10-passivity-locus"
+          ]
+        }
+      ]
+    }
+  ]
+}

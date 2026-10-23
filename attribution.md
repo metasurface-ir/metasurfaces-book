@@ -1,0 +1,34 @@
+---
+title: Sources, figures, and reuse
+short_title: Sources and reuse
+---
+
+# Sources, figures, and reuse
+
+The explanations, numerical examples, and diagrams prepared for this book are written or generated for this project. Research references identify the scientific ideas and comparisons; they do not imply permission to reproduce a publisher's text or figures.
+
+## Trace a figure to its source
+
+Every numerical PNG in `assets/chapter-*` is exported from a tagged saved output in an executed notebook. The machine-readable [figure provenance inventory](https://github.com/metasurface-ir/metasurfaces-book/blob/main/assets/provenance.json) records its notebook, cell tag, and SHA-256. Each chapter's asset README explains assumptions and the export command. The three editable SVG schematics were drawn for the book; the Persian Chapter 2 versions translate their labels. No paper screenshot or publisher figure is used in this inventory.
+
+To reuse a numerical result in the companion course site, retain its notebook path, parameters, model limits, and the source commit. Keep the generating code and data here as the authoritative source. A link to the figure's source is useful even when the other site displays an exported image.
+
+## Cite an idea; check permission for an image
+
+Write explanations in your own words, cite the original scientific source, and generate your own examples and plots. A new plot of this project's calculations differs from tracing or redrawing an existing paper figure. Label any adapted material explicitly and check its actual license or written permission before submission. An openly readable paper is not automatically licensed for figure reuse.
+
+Copyright can protect the expression of an idea, including text and artwork, while ideas and methods themselves receive different treatment. The [U.S. Copyright Office overview](https://www.copyright.gov/help/faq/faq-protect.html) explains that distinction; applicable rules and exceptions depend on jurisdiction. Attribution alone is not a substitute for permission when permission is required.
+
+## A student's contribution should include
+
+- Original prose, a primary reference for scientific claims, and verified bibliographic metadata.
+- For every image: author or generator, source path, whether it is original or adapted, and any applicable permission/license record.
+- For numerical plots: an executed notebook, editable parameters, data, environment, validation, and clear model limitations.
+- For imported datasets or software: their source, version, license terms, and any required notices. Keep third-party notices with the material.
+- A description of AI assistance and the human checks of equations, citations, code, and results.
+
+The repository has **no general reuse license selected**. Contributors retain their rights; public availability does not grant a blanket right to republish everything. Dependencies and the theme keep their own licenses. Do not add third-party content whose publication you cannot authorize. Ask the instructor to resolve uncertain rights before submitting that material.
+
+## References and scope
+
+References throughout the book support scientific context. Our restricted analytical and numerical examples do not reproduce the devices, datasets, or experimental claims of the cited papers. The provenance inventory documents the current assets' generation paths; it is not a legal certification of every possible future contribution.

@@ -39,6 +39,9 @@ short_title: واژه‌نامهٔ دو‌زبانه
 | Unit cell | سلول واحد | Repeated geometry that defines a periodic structure |
 | Full-wave simulation | شبیه‌سازی تمام‌موج | A Maxwell solve for the specified geometry and model |
 | Source / data / validation | منبع / داده / راستی‌آزمایی | Code or text, recorded results, and evidence supporting a claim |
+| FDFD | تفاضل محدود حوزهٔ فرکانس | حل مسئلهٔ مرزی حوزهٔ فرکانس با گسسته‌سازی مکانی |
+| Equation residual | باقیماندهٔ معادله | میزان برآورده‌شدن معادلات مونتاژشده توسط بردار محاسبه‌شده |
+| Model discrepancy | اختلاف مدل | اختلاف ناشی از تقریب فیزیکی، جدا از ریزسازی عددی |
 
 
 کلید نمودارهای مشترک: **Incidence angle** یعنی زاویهٔ تابش؛ **Vacuum wavelength** طول موج خلأ؛ **Power fraction** کسر توان؛ **Relative phase** فاز نسبی؛ **Bare interface** مرز بدون پوشش؛ **Quarter-wave film** لایهٔ ربع‌موج؛ **Normal flux** شار عمود بر سطح؛ **Decay length** طول افت؛ و **Snapshot** نمای لحظه‌ای است. واحد um یا μm میکرومتر و deg درجه است. برچسب‌های انگلیسی نمودار و جدول عددی از خروجی مرجع مشترک نگه داشته شده‌اند؛ زیرنویس‌ها و متن آموزشی فارسی‌اند.

@@ -20,7 +20,7 @@ Use this page to work through the complete introductory pilot and decide when yo
 
 **Suggested teaching use:** one session for the physical model, splitting, and kernel notebook; a second for neural comparison and inverse verification. Assign reading and the written interpretation between or after sessions. This is a planning suggestion, not a fixed course timetable.
 
-Chapter 10 is the first chapter we have developed as a complete publishing and teaching example. Students still need the electromagnetic foundations. Before full-wave Lab B, complete the relevant material from Chapters 2, 3, 4, and 6. Before fabrication-aware Lab C, connect Chapters 5 and 9. Developing the book in this order does not change the eventual prerequisite order for learning it.
+Before full-wave Lab B, complete the wave, unit-cell, diffraction, and numerical-verification material in Chapters 2, 3, 4, and 6. Before fabrication-aware Lab C, connect the synthesis and experimental/material considerations in Chapters 5 and 9. The analytical Stage A can be completed first if its stated model assumptions are understood.
 
 ## Before opening Python
 

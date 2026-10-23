@@ -20,6 +20,7 @@ project:
         - file: getting-started.md
         - file: contributing.md
         - file: translations.md
+        - file: attribution.md
         - file: glossary.md
     - title: Computational investigations
       children:
@@ -58,6 +59,12 @@ project:
         - file: labs/05-synthesis-lab.md
         - file: notebooks/05-beam-steering.ipynb
         - file: notebooks/05-wavefront-models.ipynb
+    - title: Chapter 6 - Numerical modeling and simulation methods
+      children:
+        - file: chapters/06-numerical-methods.md
+        - file: chapters/06-numerical-guide.md
+        - file: labs/06-numerical-lab.md
+        - file: notebooks/06-numerical-methods.ipynb
     - title: Chapter 10 - AI and Metasurfaces
       children:
         - file: chapters/10-ai-metasurfaces.md

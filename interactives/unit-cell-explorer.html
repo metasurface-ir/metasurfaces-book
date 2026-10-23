@@ -25,7 +25,7 @@
 <h2>2. Inspect the available phase arc</h2>
 <svg id="complex" class="plot" viewBox="0 0 440 310" role="img" aria-label="Computed complex transmission amplitudes and selected geometry"></svg>
 <p id="complex-value" class="small"></p>
-<p class="notice small">The dashed circle marks |t|=1. Here T=1.5|t|² because the exterior indices differ.</p>
+<p class="notice small">The dashed circle marks |t|=1. Here T=1.5|t|² because the exterior indices differ. The dotted circle marks the requested minimum power: eligible points lie on or outside it. Muted points fail that power threshold; the purple ray marks the target phase and the purple ring marks the nearest eligible row. Orange marks the width being inspected.</p>
 </section>
 <section class="card wide">
 <h2>3. Request a phase and test feasibility</h2>
@@ -60,14 +60,20 @@ function update(){
  const ridgeWidth=row.width_um/.65*320;
  $('geometry').innerHTML=`<rect x="60" y="20" width="320" height="118" fill="#f3f7fa"/><rect x="60" y="138" width="320" height="28" fill="#bdd8e8"/><rect x="${220-ridgeWidth/2}" y="65" width="${ridgeWidth}" height="73" fill="#348891"/><path d="M60 20V166M380 20V166" stroke="#9eb5c4" stroke-dasharray="5 4"/><path d="M220 24V49m-5-6 5 6 5-6" fill="none" stroke="#17334b" stroke-width="2"/><text x="70" y="44">air</text><text x="70" y="158">substrate n=1.5</text><text x="220" y="104" text-anchor="middle" style="fill:white">n=2.4</text><text x="220" y="183" text-anchor="middle">period 0.65 µm</text>`;
  const px=r=>220+112*r.t_real,py=r=>150-112*r.t_imag;
- const path=rows.map((r,i)=>(i?'L':'M')+px(r)+','+py(r)).join(' ');
- $('complex').innerHTML=`<circle cx="220" cy="150" r="112" fill="none" stroke="#9cafbc" stroke-dasharray="5 4"/><path d="M90 150H350M220 20V280" stroke="#d3dde5"/><path d="${path}" fill="none" stroke="#12828b" stroke-width="3"/>${rows.map(r=>`<circle cx="${px(r)}" cy="${py(r)}" r="2" fill="#16858c"/>`).join('')}<path d="M220 150L${px(row)} ${py(row)}" stroke="#dc8a44" stroke-width="2"/><circle cx="${px(row)}" cy="${py(row)}" r="6" fill="#dc8a44"/><text x="355" y="154">Re(t)</text><text x="227" y="20">Im(t)</text><text x="334" y="140">1</text><text x="228" y="43">1</text><text x="98" y="140">−1</text><text x="228" y="274">−1</text>`;
- $('complex-value').textContent=`Selected t = ${number(row.t_real,5)} ${row.t_imag<0?'−':'+'} ${number(Math.abs(row.t_imag),5)} i; phase reference at the bottom ridge face.`;
- $('span').textContent='The sampled continuous transmission-phase span is '+library.metadata.unwrapped_phase_span_deg.toFixed(2)+'°. It does not cover a full 360°.';
  const target=Number($('target').value),minT=Number($('minT').value);
  const valid=$('target').value.trim()!==''&&$('minT').value.trim()!==''&&Number.isFinite(target)&&target>=-180&&target<=180&&Number.isFinite(minT)&&minT>=0&&minT<=1;
+ nearest=valid?selectCandidate(target,minT):null;
+ const path=rows.map((r,i)=>(i?'L':'M')+px(r)+','+py(r)).join(' ');
+ const parameters=library.metadata.parameters,fluxFactor=parameters.n_substrate/parameters.n_incident;
+ const threshold=valid?`<circle cx="220" cy="150" r="${112*Math.sqrt(minT/fluxFactor)}" fill="none" stroke="#687d56" stroke-width="1.5" stroke-dasharray="2 4"/>`:'';
+ const radians=target*Math.PI/180;
+ const targetRay=valid?`<path d="M220 150L${220+128*Math.cos(radians)} ${150-128*Math.sin(radians)}" stroke="#7a4c98" stroke-width="1.7" stroke-dasharray="7 3"/><text x="${220+140*Math.cos(radians)}" y="${150-140*Math.sin(radians)}" text-anchor="middle" style="fill:#7a4c98">φ★</text>`:'';
+ const nearestRing=nearest?`<circle cx="${px(nearest.row)}" cy="${py(nearest.row)}" r="9" fill="none" stroke="#7a4c98" stroke-width="2"/>`:'';
+ $('complex').innerHTML=`<circle cx="220" cy="150" r="112" fill="none" stroke="#9cafbc" stroke-dasharray="5 4"/><path d="M90 150H350M220 20V280" stroke="#d3dde5"/><path d="${path}" fill="none" stroke="#9bbbc0" stroke-width="2"/>${threshold}${targetRay}${rows.map(r=>`<circle cx="${px(r)}" cy="${py(r)}" r="${valid&&r.T<minT?2:3}" fill="${!r.accepted||(valid&&r.T<minT)?'#b3bdc5':'#16858c'}"/>`).join('')}${nearestRing}<path d="M220 150L${px(row)} ${py(row)}" stroke="#dc8a44" stroke-width="2"/><circle cx="${px(row)}" cy="${py(row)}" r="6" fill="#dc8a44"/><text x="355" y="154">Re(t)</text><text x="227" y="20">Im(t)</text><text x="334" y="140">1</text><text x="228" y="43">1</text><text x="98" y="140">−1</text><text x="228" y="274">−1</text>`;
+ $('complex-value').textContent=`Selected t = ${number(row.t_real,5)} ${row.t_imag<0?'−':'+'} ${number(Math.abs(row.t_imag),5)} i; phase reference at the bottom ridge face.`;
+ $('span').textContent='The sampled continuous transmission-phase span is '+library.metadata.unwrapped_phase_span_deg.toFixed(2)+'°. It does not cover a full 360°.';
  $('error').textContent=valid?'':'Enter a target between −180° and 180°, and a minimum T between 0 and 1.';
- nearest=valid?selectCandidate(target,minT):null;$('apply').disabled=!nearest;
+ $('apply').disabled=!nearest;
  if(!valid){$('decision').textContent='Correct the inputs to evaluate a design.';}
  else if(!nearest){$('decision').textContent='No eligible geometry meets this minimum transmission.';}
  else{const okay=nearest.error<=5;$('decision').textContent=(okay?'Target feasible. ':'Target unmet. ')+`Nearest eligible width: ${nearest.row.width_um.toFixed(3)} µm; T=${nearest.row.T.toFixed(3)}; circular phase error ${nearest.error.toFixed(2)}°.`;$('decision').className='status '+(okay?'good':'bad');}

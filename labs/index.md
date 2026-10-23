@@ -1,6 +1,6 @@
 # Computational investigations
 
-The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 1 provides an executed analytical introduction and an offline browser explorer. Chapter 2 adds executed planar interface/film/sheet and Jones models with a four-view browser explorer. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook and a browser explorer. Chapter 5 verifies four full-wave supercells and adds separate scalar focusing/Jones notebooks. The AI pilot includes two executed analytical notebooks. Further lab stages state their individual execution status. Chapters organize subject matter, while labs organize computational activities.
+The identifiers below preserve the existing course handoff, with a new AI investigation for Chapter 10. Chapter 1 provides an executed analytical introduction and an offline browser explorer. Chapter 2 adds executed planar interface/film/sheet and Jones models with a four-view browser explorer. Chapter 3 includes an executed full-wave TE ridge library and a browser data explorer. Chapter 4 includes an executed analytical notebook and a browser explorer. Chapter 5 verifies four full-wave supercells and adds separate scalar focusing/Jones notebooks. Chapter 6 adds an executed FDFD slab benchmark, error/field plots and a bilingual offline diagnostic explorer. The AI pilot includes two executed analytical notebooks. Further lab stages state their individual execution status. Chapters organize subject matter, while labs organize computational activities.
 
 | Topic ID | Investigation | Related chapter(s) |
 | --- | --- | --- |
@@ -17,6 +17,7 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-11-inverse-design | Bounded optimization with independent checks | 5, 6, 10 |
 | ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
 | ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
+| ms-14-numerical-validation | [Mesh, domain, boundaries, reference planes and numerical evidence](06-numerical-lab.md) | 3, 5, 6 |
 
 ## Start with an analytical investigation
 

@@ -92,3 +92,7 @@ Include the source page or notebook, its images/data, a requirements file if it 
 ## Scientific and editorial review
 
 Use original explanations and properly attributed figures. Link claims to sources and label your assumptions. If you use AI assistance, verify equations, citations, code, and numerical results yourself and describe the assistance in the pull request. Submit only material you can authorize for public publication; the repository currently has no general reuse license.
+
+## Chapter 6 and figure provenance
+
+Keep the numerical-methods notebook with `simulations/numerical_methods.py` and its exact-film dependency. Restart/run, validate, and export using the Chapter 6 scripts. Run `python scripts/export_figure_provenance.py` after all image exports; `--check` verifies the inventory during publication. Follow [source and reuse guidance](attribution.md): include original generators and check actual permissions for adapted material. The provenance record documents generation, not a blanket legal clearance.

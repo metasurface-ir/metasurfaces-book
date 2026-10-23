@@ -82,4 +82,4 @@ If retardance is only $90^\circ$, the ideal lossless retarder converts a fractio
 
 Preserve target fields, phase/reference conventions, illumination, candidate library, selection objective, geometry sequence, local predictions, all-channel full-wave powers, numerical refinements, and control cases. For focusing/polarization, name the scalar or Jones model and its metrics. Retain lower-performing or infeasible cases when they reveal a limitation.
 
-The [lab](../labs/05-synthesis-lab.md) specifies executed stages and further finite-device, independent-method, and optimization outlines. Chapter 6 will broaden validation methods; Chapter 10 can reuse versioned simulation data for learned design.
+The [lab](../labs/05-synthesis-lab.md) specifies executed stages and further finite-device, independent-method, and optimization outlines. [Chapter 6](06-numerical-methods.md) broadens validation methods; Chapter 10 can reuse versioned simulation data for learned design.

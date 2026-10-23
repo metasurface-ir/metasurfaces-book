@@ -57,7 +57,7 @@ Separate training, model selection, and testing; preserve whole geometries in ea
 3. Split IDs before model fitting. Do not split frequency rows independently.
 4. In the starter, fit a nearest-neighbor baseline and select kernel length scale/regularization using validation data only. Evaluate the frozen model, then perform and verify the inverse search.
 5. In the comparison, reproduce the same generator and split. Add linear interpolation and an MLP. Standardize inputs using training data only; choose architecture/regularization on validation complex RMSE. Freeze the chosen configuration before running the additional initializations.
-6. Evaluate all frozen methods on the held-out geometries. Report complex, power, amplitude, worst-case, and masked phase errors, plus physical consistency. Plot every test geometry's error and a fixed example spectrum.
+6. Evaluate all frozen methods on the held-out geometries. Report complex, power, amplitude, worst-case, and masked phase errors, plus physical consistency. Plot every test geometry's error and a fixed example spectrum. Use the complex-transmission disk and signed implied-absorption diagnostic to distinguish artificial loss from implied gain in the reconstructed shunt model; neither quantity is measured material absorption.
 7. Create the target analytically. Search each continuous surrogate on the same grid, retrieve an actual training design for the nearest baseline, and evaluate all selected coordinates with the exact formula.
 8. Compare predicted and verified target errors. Explain the method ranking without assuming a neural network should win. Plan a separate extension with fewer training designs or a withheld interval; declare that extension's protocol before inspecting its test results.
 
@@ -73,7 +73,7 @@ The starter's assertions check split separation, finite outputs, and the analyti
 
 ## B. Replace the generator with a validated unit-cell library
 
-**Status:** outline; no full-wave dataset is supplied.
+**Status:** outline; no full-wave spectral dataset is supplied for this stage. For a smaller fixed-wavelength extension, reuse the saved [Chapter 3 ridge library](../notebooks/03-unit-cell-library.ipynb), split complete widths into training/validation/test sets, and preserve its TE polarization, geometry, phase references, and power normalization. That reuse is a surrogate experiment on existing full-wave data, not a new electromagnetic run. A frequency-spectral task requires an additional converged library.
 
 **Prerequisites:** periodic boundary conditions, Floquet ports, S-parameter normalization, and a solver convergence study. Choose one geometry family and one material model before scaling up the dataset.
 

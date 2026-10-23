@@ -7,18 +7,19 @@ short_title: English / فارسی
 
 Use **English | فارسی** in the header to open the corresponding page. English keeps its existing URLs; the Persian edition lives under `/fa/`. A page without a Persian counterpart leads to the translation-status page rather than silently presenting English as a translation.
 
-The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, and 10. It includes every published chapter guide, self-check/project page, computational lab, all eight notebook narratives, the complete syllabus, lab index/template, setup/contribution guides, homepage, and bilingual glossary. These translations are prepared for instructor review; technical terminology and pedagogical wording can be improved through pull requests.
+The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, 6, and 10. It includes every published chapter guide, self-check/project page, computational lab, all nine notebook narratives, the complete syllabus, lab index/template, setup/contribution guides, homepage, and bilingual glossary. These translations are prepared for instructor review; technical terminology and pedagogical wording can be improved through pull requests.
 
 | Material | Persian status |
 | --- | --- |
 | Homepage and navigation | Available |
-| All six developed chapters, their worked examples, self-check/project pages and labs | Available |
-| All eight notebook narratives | Available; numerical cells and saved outputs are shared |
+| All seven developed chapters, their worked examples, self-check/project pages and labs | Available |
+| All nine notebook narratives | Available; numerical cells and saved outputs are shared |
 | Chapter 2 interactive controls and interpretation | Available; same JavaScript equations as English |
+| Chapter 6 offline explorer | Fully localized controls, captions, and interpretation; shared saved numerical data |
 | Two Chapter 2 schematics | Persian labels available |
 | Computational plots, numerical tables and other shared scientific browser tools | Shared English scientific labels; Persian captions, lab instructions and glossary explain them |
 | Syllabus, lab index/template, glossary, setup, and contribution instructions | Available |
-| Chapters 6–9 | Syllabus outlines translated; full chapters do not yet exist in either edition |
+| Chapters 7–9 | Syllabus outlines translated; full chapters do not yet exist in either edition |
 
 ## Contribute a translation
 

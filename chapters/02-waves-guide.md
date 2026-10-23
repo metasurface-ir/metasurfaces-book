@@ -152,6 +152,14 @@ $$
 
 Thus a fixed absolute uncertainty in the measured complex field can cause a large absolute parameter error near a transmission zero. At exactly zero the inverse is undefined. Good retrieval retains complex $r$ and $t$, verifies $t=1+r$ at the same plane, checks passivity, and tests another independent illumination or frequency before making a broader claim.
 
+The notebook now makes this sensitivity test directly editable. Its controlled perturbation changes both coefficients consistently with the synthetic shunt relation; a separate printed continuity residual shows why independent measurement errors need their own model test. Compare the exact finite error with the derivative estimate, and report the ratio of perturbation magnitude to transmission. The approximation requires that ratio to be much smaller than one.
+
+```{figure} ../assets/chapter-02/retrieval-conditioning.png
+:alt: Exact inferred sheet-parameter error and the local derivative estimate as transmission decreases, with their ratio plotted against relative field perturbation.
+
+Original deterministic sensitivity calculation from the analytical sheet inverse. A small absolute field error becomes a large parameter error near zero transmission. The local estimate loses validity when the perturbation is comparable to transmission; these are synthetic model-consistent perturbations, not measured uncertainty.
+```
+
 ## 9. Absorb two beams with their phase
 
 Keep $g=2$ and illuminate coherently from both sides with $\mathbf a=(1,e^{i\phi})^T/\sqrt2$. The input power is one. Multiplying by the equal-air scattering matrix gives

@@ -65,7 +65,7 @@ Individual files: {download}`../notebooks/02-waves-and-interfaces.ipynb`, {downl
 4. Calculate a quarter-wave film response and change its optical thickness. Retain the entrance/exit phase references.
 5. Inspect the Jones trajectory and analyzer response. Compare global and relative phase changes.
 6. Compare a reactive and resistive sheet. Check surface-current continuity and the power dissipated by its conductance.
-7. Retrieve the known synthetic shunt only under its valid same-plane assumptions. Test how a fixed absolute perturbation of a small transmission coefficient affects the inverse, and identify an incompatible response rather than forcing a fit.
+7. Retrieve the known synthetic shunt only under its valid same-plane assumptions. Run the notebook's controlled retrieval-error experiment: change the fixed complex perturbation's magnitude/direction, compare exact and linearized parameter errors, and report perturbation magnitude relative to transmission. Its perturbed reflection preserves the model continuity deliberately; independently noisy coefficients need a separate residual check. Identify an incompatible response rather than forcing a fit.
 8. For $g=2$ in air, compare one-sided illumination with normalized equal-power two-sided inputs. Calculate outgoing field sums before powers; sweep relative phase and explain the coherent-absorption result.
 9. Save the executed notebook, generated figures, CSV/JSON, parameter records, and audit output. Preserve the model, source version, and assumptions when modifying an experiment.
 

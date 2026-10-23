@@ -32,7 +32,7 @@ The model needs NumPy and Matplotlib, with no electromagnetic solver, GPU, or ne
 
 Open the [Chapter 2 lab](labs/02-waves-lab.md) to use the offline-capable interface, film, polarization, and electric-sheet explorer. To edit Python calculations, extract its complete source ZIP, install the shared `requirements-labs.txt` in a Python 3.12 environment, and restart/run all cells in `notebooks/02-waves-and-interfaces.ipynb`. It requires NumPy/Matplotlib for calculations and imports `simulations/waves_interfaces.py`; no commercial solver, GPU, or downloaded dataset is used.
 
-Run `python scripts/validate_chapter02.py` from the extracted root for the independent analytical audit. The full repository also provides `python scripts/export_chapter02.py` to regenerate five figures, the explorer, and the source bundle after a saved execution/audit. Keep the common tangential-E basis, outgoing branch, power normalization, phase planes, and model limits with every exported result.
+Run `python scripts/validate_chapter02.py` from the extracted root for the independent analytical audit. The full repository also provides `python scripts/export_chapter02.py` to regenerate six figures, the explorer, and the source bundle after a saved execution/audit. Keep the common tangential-E basis, outgoing branch, power normalization, phase planes, and model limits with every exported result.
 
 ## Run the Chapter 10 notebooks
 
@@ -83,3 +83,9 @@ After saved notebook executions and audit, `python scripts/export_chapter05.py` 
 The analytical starters need no electromagnetic solver. Chapters 3 and 5 supply restricted TE solvers. Further full-wave labs will specify their own solver versions, licenses where applicable, data inputs, and execution environments.
 
 Full-wave solvers such as COMSOL, FDTD, or RCWA will have separate setup and validation instructions. Routine book publication will use saved results rather than rerunning expensive simulations.
+
+## Run the Chapter 6 numerical-methods notebook
+
+Extract the complete source ZIP from the [Chapter 6 lab](labs/06-numerical-lab.md), or use the full checkout. Install the shared `requirements-labs.txt`, then restart/run `notebooks/06-numerical-methods.ipynb`. It uses CPU NumPy/SciPy/Matplotlib and the shared `simulations/` modules. The adjustable slab calculations are separate from the fixed RCWA comparison datasets. The browser explorer selects saved data and works offline.
+
+Run `python scripts/validate_chapter06.py` for the declared benchmark audit; after saving execution and audit, run `python scripts/export_chapter06.py` in the full repository. The executed solver is a 1D real-index equal-exterior FDFD slab with matched discrete radiation boundaries. FEM/FDTD, PML, patterned-cell cross-method and finite-device stages remain outlines.

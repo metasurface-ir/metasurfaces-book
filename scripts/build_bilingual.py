@@ -12,6 +12,7 @@ import subprocess
 import sys
 from urllib.parse import urljoin, urlparse
 from localize_chapter02 import export
+from render_numerical_explorer import render
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get('BASE_URL', '').rstrip('/')
@@ -61,15 +62,16 @@ def prepare_persian():
         # This annotation explains shared English plot/table labels in the Persian edition.
         (STAGE / row['source']).write_text(json.dumps(original, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     export(STAGE)
+    render(STAGE / 'interactives/numerical-explorer.html', language='fa')
     # Localized bundles preserve their original shared code/data and filenames.
     # Replace only notebook narratives with the assembled executable notebooks.
     import zipfile
-    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip'):
+    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip', 'chapter-06-numerical.zip'):
         with zipfile.ZipFile(ROOT / 'downloads' / name) as original:
             with zipfile.ZipFile(STAGE / 'downloads' / name, 'w', compression=zipfile.ZIP_DEFLATED) as translated_zip:
                 for item in original.infolist():
                     path = STAGE / item.filename
-                    contents = path.read_bytes() if path.is_file() and (item.filename.startswith('notebooks/') or item.filename == 'downloads/chapter-01-report-template.md') else original.read(item)
+                    contents = path.read_bytes() if path.is_file() and (item.filename.startswith('notebooks/') or item.filename in ('downloads/chapter-01-report-template.md', 'interactives/numerical-explorer.html')) else original.read(item)
                     if item.filename == 'START-HERE.md':
                         contents = ('# بستهٔ فارسی کتاب فراسطوح\n\nکل بسته را استخراج و ساختار پوشه‌ها را حفظ کنید. متن دفترچه فارسی و کد و داده با مرجع انگلیسی مشترک است. راهنمای اجرای اصلی در ادامه آمده است.\n\n').encode('utf-8') + contents
                     translated_zip.writestr(item, contents)
@@ -125,6 +127,7 @@ def decorate(output, language):
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'scripts/validate_translations.py')], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/export_figure_provenance.py'), '--check'], check=True)
     run_book(ROOT, BASE)
     decorate(ROOT / '_build/html', 'en')
     prepare_persian()

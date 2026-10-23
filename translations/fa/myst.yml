@@ -15,6 +15,7 @@ project:
         - file: getting-started.md
         - file: contributing.md
         - file: translations.md
+        - file: attribution.md
         - file: glossary.md
     - title: آزمایشگاه‌های محاسباتی
       children:
@@ -53,6 +54,12 @@ project:
         - file: labs/05-synthesis-lab.md
         - file: notebooks/05-beam-steering.ipynb
         - file: notebooks/05-wavefront-models.ipynb
+    - title: فصل ۶ — مدل‌سازی عددی و روش‌های شبیه‌سازی
+      children:
+        - file: chapters/06-numerical-methods.md
+        - file: chapters/06-numerical-guide.md
+        - file: labs/06-numerical-lab.md
+        - file: notebooks/06-numerical-methods.ipynb
     - title: فصل ۱۰ — هوش مصنوعی و فراسطوح
       children:
         - file: chapters/10-ai-metasurfaces.md

@@ -51,6 +51,169 @@
     "max_open_order_power_change": 2.319748602652716e-06,
     "max_open_complex_t_change": 1.3659322512799215e-05
   },
+  "scalar_focus_refinement": {
+    "status": "passed",
+    "checks": [
+      {
+        "study": "window",
+        "model": "continuous",
+        "compared_dx_um": [
+          0.05,
+          0.05
+        ],
+        "compared_windows_um": [
+          204.8,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.00021985152359817677,
+        "relative_fwhm_change": 0.00036492374049196117,
+        "peak_change_over_fixed_peak": 0.00021985152359817677,
+        "fixed_window_integral_change_over_aperture": 2.1960850159263856e-05,
+        "line_concentration_change": 2.6674423110994994e-05,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.02,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.02,
+          "fixed_window_integral_change_over_aperture": 0.01,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      },
+      {
+        "study": "window",
+        "model": "sampled",
+        "compared_dx_um": [
+          0.05,
+          0.05
+        ],
+        "compared_windows_um": [
+          204.8,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.003814419421927876,
+        "relative_fwhm_change": 0.0066897938074166425,
+        "peak_change_over_fixed_peak": 0.003814419421927876,
+        "fixed_window_integral_change_over_aperture": 0.00023009193616174706,
+        "line_concentration_change": 0.00027039278809304346,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.02,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.02,
+          "fixed_window_integral_change_over_aperture": 0.01,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      },
+      {
+        "study": "window",
+        "model": "local_library",
+        "compared_dx_um": [
+          0.05,
+          0.05
+        ],
+        "compared_windows_um": [
+          204.8,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.001969162241802085,
+        "relative_fwhm_change": 0.0057313550023524226,
+        "peak_change_over_fixed_peak": 0.001969162241802085,
+        "fixed_window_integral_change_over_aperture": 0.00012142568637585338,
+        "line_concentration_change": 0.00023384911940027564,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.02,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.02,
+          "fixed_window_integral_change_over_aperture": 0.01,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      },
+      {
+        "study": "grid",
+        "model": "continuous",
+        "compared_dx_um": [
+          0.025,
+          0.0125
+        ],
+        "compared_windows_um": [
+          409.6,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.0010468772980287194,
+        "relative_fwhm_change": 0.0003567965625681408,
+        "peak_change_over_fixed_peak": 0.0007046777128694304,
+        "fixed_window_integral_change_over_aperture": 0.00034959205907614255,
+        "line_concentration_change": 2.316306452088135e-06,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.03,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.03,
+          "fixed_window_integral_change_over_aperture": 0.02,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      },
+      {
+        "study": "grid",
+        "model": "sampled",
+        "compared_dx_um": [
+          0.025,
+          0.0125
+        ],
+        "compared_windows_um": [
+          409.6,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.008372492110315346,
+        "relative_fwhm_change": 0.00048331128266843683,
+        "peak_change_over_fixed_peak": 0.00063629776361378,
+        "fixed_window_integral_change_over_aperture": 0.00018250677264519677,
+        "line_concentration_change": 0.0001572878321803861,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.03,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.03,
+          "fixed_window_integral_change_over_aperture": 0.02,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      },
+      {
+        "study": "grid",
+        "model": "local_library",
+        "compared_dx_um": [
+          0.025,
+          0.0125
+        ],
+        "compared_windows_um": [
+          409.6,
+          409.6
+        ],
+        "profile_difference_over_fixed_peak": 0.0050330010598740585,
+        "relative_fwhm_change": 0.0004918850004868463,
+        "peak_change_over_fixed_peak": 0.00038603208276969444,
+        "fixed_window_integral_change_over_aperture": 0.00011139734523407663,
+        "line_concentration_change": 0.000177874428796021,
+        "limits": {
+          "profile_difference_over_fixed_peak": 0.03,
+          "relative_fwhm_change": 0.02,
+          "peak_change_over_fixed_peak": 0.03,
+          "fixed_window_integral_change_over_aperture": 0.02,
+          "line_concentration_change": 0.02
+        },
+        "passed": true
+      }
+    ],
+    "normalization": {
+      "peak": "one frozen baseline continuous-aperture peak",
+      "fixed_window": "same physical endpoints integrated with interpolation",
+      "line_intensity": "fixed-window integral divided by physical aperture width",
+      "concentration": "fixed-window integral divided by each model total line intensity",
+      "scope": "scalar squared-field metrics, not electromagnetic focusing efficiency"
+    },
+    "scope": "Independent FFT window/grid checks for three prescribed scalar apertures; no finite-device Maxwell validation"
+  },
   "model_limits": [
     "1D lossless TE infinite periodic supercells",
     "Scalar line focusing is not a full-wave lens",

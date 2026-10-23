@@ -16,6 +16,7 @@ destination.mkdir(parents=True, exist_ok=True)
 for tag, filename in {
     "ch10-model-comparison": "model-comparison.png",
     "ch10-inverse-comparison": "inverse-comparison.png",
+    "ch10-passivity-locus": "passivity-locus.png",
 }.items():
     cells = [cell for cell in notebook["cells"] if tag in cell.get("metadata", {}).get("tags", [])]
     if len(cells) != 1 or cells[0].get("execution_count") is None:

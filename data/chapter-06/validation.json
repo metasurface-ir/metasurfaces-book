@@ -1,0 +1,363 @@
+{
+  "status": "passed",
+  "model": "slab-fdfd-1.0",
+  "source_sha256": {
+    "numerical_methods.py": "24f0cc7c187c6c92ba906aea101024b3249be87a2bae86c9ad148c79e7c0dd51",
+    "waves_interfaces.py": "005772da3bb31d9459a9307aa72fcba8cd88b24ac0a2e7a775665b6917c8ab2c",
+    "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6"
+  },
+  "environment": {
+    "python": "3.12.1",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1"
+  },
+  "analytic_benchmarks": {
+    "cases": [
+      {
+        "parameters": {
+          "wavelength_um": 1.55,
+          "thickness_um": 0.6,
+          "n_film": 2.4,
+          "n_exterior": 1.0
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 0.0005859375,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.0023751966169870894,
+          "continuum_phase_step_rad": 0.002375196058661638,
+          "R": 0.15462124887370216,
+          "T": 0.8453787511262973,
+          "T_forward": 0.8453787511262973,
+          "T_backward": 0.0,
+          "T_net": 0.8453787511262973,
+          "energy_defect": 4.440892098500626e-16,
+          "algebraic_residual": 8.441676551610383e-13,
+          "current_spread": 1.6564527527407336e-13,
+          "r_real": -0.21958868795104478,
+          "r_imag": -0.32619328165619976,
+          "t_real": 0.7627216732885296,
+          "t_imag": -0.5134534060869037,
+          "backward_exit_real": 0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 1.0122110492356735e-05,
+          "complex_r_error": 8.197808511540046e-06,
+          "power_T_error": 5.568873174599531e-06,
+          "power_R_error": 5.568873175265665e-06,
+          "phase_deg": -33.94788034756309,
+          "phase_error_deg": 0.0006018743064171133,
+          "boundary_reflection_amplitude": 0.0
+        }
+      },
+      {
+        "parameters": {
+          "wavelength_um": 0.8,
+          "thickness_um": 0.23,
+          "n_film": 1.7,
+          "n_exterior": 1.3
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 0.000224609375,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.002293301780431023,
+          "continuum_phase_step_rad": 0.002293301277889034,
+          "R": 0.00036752255044580304,
+          "T": 0.999632477449557,
+          "T_forward": 0.999632477449557,
+          "T_backward": 0.0,
+          "T_net": 0.999632477449557,
+          "energy_defect": 2.7755575615628914e-15,
+          "algebraic_residual": 9.860164825194796e-13,
+          "current_spread": 1.66644475996236e-13,
+          "r_real": -0.0014027133950050325,
+          "r_imag": -0.019119491247867357,
+          "t_real": -0.9971362728903705,
+          "t_imag": 0.07315552430170522,
+          "backward_exit_real": 0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 1.2007259314497274e-06,
+          "complex_r_error": 3.463857230377032e-07,
+          "power_T_error": 1.325178977662489e-08,
+          "power_R_error": 1.3251787164456595e-08,
+          "phase_deg": 175.8039770260221,
+          "phase_error_deg": 6.880812602910398e-05,
+          "boundary_reflection_amplitude": 0.0
+        }
+      },
+      {
+        "parameters": {
+          "wavelength_um": 1.1,
+          "thickness_um": 0.37,
+          "n_film": 2.9,
+          "n_exterior": 1.2
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 0.000361328125,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.002476682341434896,
+          "continuum_phase_step_rad": 0.0024766817084408165,
+          "R": 0.023114838143674845,
+          "T": 0.976885161856429,
+          "T_forward": 0.976885161856429,
+          "T_backward": 0.0,
+          "T_net": 0.976885161856429,
+          "energy_defect": 1.0391687510491465e-13,
+          "algebraic_residual": 7.298684980799742e-13,
+          "current_spread": 1.758593271006248e-13,
+          "r_real": -0.03266596153964023,
+          "r_imag": -0.14848492549873737,
+          "t_real": 0.96529197029373,
+          "t_imag": -0.21235953932629864,
+          "backward_exit_real": 0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 1.3127539241613774e-05,
+          "complex_r_error": 9.729039040739137e-06,
+          "power_T_error": 2.8947951511426595e-06,
+          "power_R_error": 2.8947950477600792e-06,
+          "phase_deg": -12.407152765174866,
+          "phase_error_deg": 0.0007562499343667601,
+          "boundary_reflection_amplitude": 0.0
+        }
+      },
+      {
+        "parameters": {
+          "wavelength_um": 0.65,
+          "thickness_um": 0.11,
+          "n_film": 1.25,
+          "n_exterior": 1.5
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 0.000107421875,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.0015575806497638205,
+          "continuum_phase_step_rad": 0.0015575804923146509,
+          "R": 0.030712931696299843,
+          "T": 0.9692870683037006,
+          "T_forward": 0.9692870683037006,
+          "T_backward": 0.0,
+          "T_net": 0.9692870683037006,
+          "energy_defect": 4.440892098500626e-16,
+          "algebraic_residual": 2.048255518117951e-12,
+          "current_spread": 2.8987923172962837e-13,
+          "r_real": 0.1703172513766773,
+          "r_imag": -0.041291228848189525,
+          "t_real": 0.231965490792706,
+          "t_imag": 0.9568067095213116,
+          "backward_exit_real": -0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 8.804975738072964e-08,
+          "complex_r_error": 8.482410481709307e-08,
+          "power_T_error": 2.923378894514883e-08,
+          "power_R_error": 2.9233788043092623e-08,
+          "phase_deg": 76.37230669756512,
+          "phase_error_deg": 5.050812862578115e-06,
+          "boundary_reflection_amplitude": 0.0
+        }
+      },
+      {
+        "parameters": {
+          "wavelength_um": 2.0,
+          "thickness_um": 0.9,
+          "n_film": 3.2,
+          "n_exterior": 1.0
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 0.00087890625,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.002761166295329086,
+          "continuum_phase_step_rad": 0.002761165418194154,
+          "R": 0.22022593986259592,
+          "T": 0.779774060137263,
+          "T_forward": 0.779774060137263,
+          "T_backward": 0.0,
+          "T_net": 0.779774060137263,
+          "energy_defect": 1.411093464298574e-13,
+          "algebraic_residual": 5.572691083037141e-13,
+          "current_spread": 3.2363001167823313e-13,
+          "r_real": -0.2678948225944305,
+          "r_imag": -0.385302872932054,
+          "t_real": -0.725024033680347,
+          "t_imag": 0.5040974218572658,
+          "backward_exit_real": 0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 4.1983391496230644e-05,
+          "complex_r_error": 3.727272878561858e-05,
+          "power_T_error": 2.92126976340068e-05,
+          "power_R_error": 2.921269777492186e-05,
+          "phase_deg": 145.18973881638584,
+          "phase_error_deg": 0.0025037433214202785,
+          "boundary_reflection_amplitude": 0.0
+        }
+      },
+      {
+        "parameters": {
+          "wavelength_um": 0.6,
+          "thickness_um": 0.06,
+          "n_film": 2.4,
+          "n_exterior": 1.0
+        },
+        "diagnostics": {
+          "cells": 1024,
+          "step_um": 5.859375e-05,
+          "left_padding_cells": 17,
+          "right_padding_cells": 31,
+          "boundary": "discrete",
+          "deembed": "discrete",
+          "phase_step_rad": 0.000613592324779872,
+          "continuum_phase_step_rad": 0.0006135923151542565,
+          "R": 0.4948282942904015,
+          "T": 0.5051717057095999,
+          "T_forward": 0.5051717057095999,
+          "T_backward": 0.0,
+          "T_net": 0.5051717057095999,
+          "energy_defect": 1.3322676295501878e-15,
+          "algebraic_residual": 2.5375510878729026e-12,
+          "current_spread": 1.6542323066914832e-13,
+          "r_real": -0.7027394550434171,
+          "r_imag": 0.03139351231835562,
+          "t_real": 0.031719925173503624,
+          "t_imag": 0.7100461619194819,
+          "backward_exit_real": -0.0,
+          "backward_exit_imag": 0.0,
+          "boundary_reflection_real": -0.0,
+          "boundary_reflection_imag": 0.0,
+          "complex_t_error": 1.2624438042421922e-07,
+          "complex_r_error": 1.268930669363142e-07,
+          "power_T_error": 1.547847405802827e-07,
+          "power_R_error": 1.5478473952557081e-07,
+          "phase_deg": 87.4421236442723,
+          "phase_error_deg": 5.14982980094918e-06,
+          "boundary_reflection_amplitude": 0.0
+        }
+      }
+    ],
+    "tolerance_complex": 0.0005,
+    "exact_fresnel_vs_boundary_equation_error": 4.449557262054371e-16,
+    "interpretation": "Exact model benchmark, not experimental validation"
+  },
+  "homogeneous_discrete_dispersion": {
+    "cases": 9,
+    "max_error": 7.281821127508087e-14
+  },
+  "spatial_refinement": {
+    "cells": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "final_complex_t_error": 4.0489125923104726e-05,
+    "final_phase_error_deg": 0.0024075331179604915,
+    "final_observed_order": 2.000099622574943
+  },
+  "expected_failures": {
+    "coarse_mesh": {
+      "cells": 4,
+      "complex_t_error": 0.8233652293232888,
+      "phase_error_deg": 50.94294980208968,
+      "energy_defect": 3.3306690738754696e-16,
+      "algebraic_residual": 2.881284837137441e-16
+    },
+    "boundary_mismatch": {
+      "cells": 8,
+      "padding_range_cells": [
+        0,
+        64
+      ],
+      "reflection_power_span": 0.0019477482551696623,
+      "reflection_amplitude": 0.0019725400195397783
+    },
+    "wrong_deembedding": {
+      "cells": 8,
+      "padding_cells_each_side": 64,
+      "phase_drift_deg": 8.677703700130866
+    }
+  },
+  "discrete_boundary_domain_invariance": {
+    "cases": 7,
+    "max_complex_change": 3.7855837620466416e-14
+  },
+  "current_conservation": {
+    "max_field_case_spread": 1.0824674490095276e-13
+  },
+  "field_refinement": {
+    "cells": [
+      8,
+      64,
+      512
+    ],
+    "max_complex_errors": [
+      0.1851882211583178,
+      0.002659391928843817,
+      4.149351181737891e-05
+    ]
+  },
+  "input_guards": {
+    "rejected_cases": 13
+  },
+  "harmonic_companion": {
+    "reference_half_order": 64,
+    "M48_complex_t_difference": 2.3554992659615517e-07,
+    "M0_complex_t_difference": 0.3204391394490622,
+    "interpretation": "RCWA harmonic convergence, with a numerical high-order reference"
+  },
+  "model_comparison": {
+    "thin_complex_t_difference": 2.7070639512984513e-05,
+    "thick_complex_t_difference": 0.9814516744581938,
+    "interpretation": "Difference of mathematical models; no experiment"
+  },
+  "chapter05_saved_evidence": {
+    "status": "read saved audit; not rerun by this script",
+    "path": "data/chapter-05/validation.json",
+    "sha256": "f9056a859547bd9281f7308faa362fd96529334b4b8e83dd48e69e92993471f8",
+    "full_wave_refinement": {
+      "half_orders": [
+        144,
+        192
+      ],
+      "max_open_order_power_change": 2.319748602652716e-06,
+      "max_open_complex_t_change": 1.3659322512799215e-05
+    },
+    "interpretation": "1D TE periodic supercell harmonic refinement; not FDFD/FEM/FDTD validation of ridges"
+  },
+  "limitations": [
+    "1D real constant indices, isotropic nonmagnetic film, equal exteriors",
+    "FDFD slab benchmark is independent of the RCWA numerical method",
+    "It does not independently validate the patterned ridge grating",
+    "No FDTD, FEM, PML, 3D, finite array, physical dispersion, loss, or experiment was run"
+  ],
+  "runtime_seconds": 0.38003880018368363
+}

@@ -39,5 +39,8 @@ These working equivalents keep the two editions consistent. They are teaching ch
 | Unit cell | سلول واحد | Repeated geometry that defines a periodic structure |
 | Full-wave simulation | شبیه‌سازی تمام‌موج | A Maxwell solve for the specified geometry and model |
 | Source / data / validation | منبع / داده / راستی‌آزمایی | Code or text, recorded results, and evidence supporting a claim |
+| FDFD | تفاضل محدود حوزهٔ فرکانس | Spatially discretized frequency-domain boundary-value method |
+| Equation residual | باقیماندهٔ معادله | How closely the computed vector solves the assembled equations |
+| Model discrepancy | اختلاف مدل | Difference due to the physical approximation, separate from numerical refinement |
 
 Quantitative figure keys: **Incidence angle** = زاویهٔ تابش; **Vacuum wavelength** = طول موج خلأ; **Power fraction** = کسر توان; **Relative phase** = فاز نسبی; **Bare interface** = مرز بدون پوشش; **Quarter-wave film** = لایهٔ ربع‌موج. English plot/table labels are retained with shared numerical outputs; Persian captions and this key explain them.

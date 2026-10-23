@@ -5,6 +5,11 @@ These original figures are copied from saved outputs in
 full-wave simulations or experiments. The tagged cells retain the plotting code,
 parameters, and package versions needed to regenerate them.
 
+`passivity-locus.png` comes from the `ch10-passivity-locus` cell and reuses the
+frozen held-out predictions. Its lossless circle and signed implied-absorption
+diagnostic apply to the reconstructed equal-air electric-shunt model only.
+The curves are original calculations, not adapted paper figures or measured loss.
+
 After editing the experiment, restart the notebook's kernel, run every cell, and
 save it. From the repository root run:
 
@@ -12,6 +17,6 @@ save it. From the repository root run:
 python scripts/export_chapter10_figures.py
 ```
 
-Review both figures and any numerical interpretation in the chapter and lab
+Review all three figures and any numerical interpretation in the chapter and lab
 before committing. The book build publishes saved results; it does not rerun the
 experiment or synchronize figures automatically.
