@@ -25,7 +25,7 @@ Switch between the expanded library, original limited library, identical ridges,
 Four saved, validated TE ridge supercells. Controls inspect precomputed Maxwell results and their local approximations; they do not execute a solver.
 :::
 
-<a href="../interactives/synthesis-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/synthesis-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 **Prediction:** which directions are allowed, which carry power for identical cells, and what changes after reversal? Explain why a local-mask power imbalance cannot be called physical absorption here.
 
@@ -114,6 +114,9 @@ Compare a precisely defined angular or focal observable with the local/scalar pr
 **Deliverables:** solver/model files, independent refinements, geometry-to-model mapping, order/angular or focal metrics, numerical cost, and unresolved differences.
 
 ## E. Amplitude, bandwidth, and robust-design outline
+
+**Now available:** [ms-09](09-dispersion-lab.md) executes fixed-geometry spectral sweeps, [ms-10](10-coupling-lab.md) studies local/supercell discrepancies, and [ms-11](11-inverse-design-lab.md) executes nominal bounded width optimization with independent checks. The extensions below go beyond those restricted demonstrations.
+
 
 **Status:** outline; hologram reconstruction, a vector full-wave geometric-phase device, material-dispersive broadband optimization, and fabrication-tolerance optimization have not been run.
 

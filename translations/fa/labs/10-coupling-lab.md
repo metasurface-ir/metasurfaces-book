@@ -23,7 +23,7 @@ short_title: آزمایشگاه کوپلینگ و مدل موضعی
 
 <iframe src="../interactives/design-studies.html?lab=coupling" title="مقایسهٔ هندسهٔ سلول موضعی و ابرسلول" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=coupling" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/10-coupling.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/design-studies.html?lab=coupling" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/10-coupling.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
 
 لغزنده پنج هندسه و نتیجهٔ ذخیره‌شده را انتخاب می‌کند. ZIP را استخراج، `requirements-labs.txt` را در Python 3.12 نصب و `notebooks/10-coupling.ipynb` را از ابتدا اجرا کنید. دفترچه مرز واقعی تیغه را روی |Eᵧ/Eincident| می‌گذارد. دامنهٔ میدان، نقشهٔ چگالی توان موضعی نیست.
 

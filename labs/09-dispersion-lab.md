@@ -23,7 +23,7 @@ Use normal incidence, electric field along y and time dependence exp(−iωt). R
 
 <iframe src="../interactives/design-studies.html?lab=dispersion" title="Spectral bandwidth and geometry explorer" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=dispersion" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/09-dispersion.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/design-studies.html?lab=dispersion" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/09-dispersion.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
 
 The browser selects saved calculations. Extract the complete ZIP, preserve folders, install `requirements-labs.txt` in Python 3.12, launch JupyterLab and restart/run `notebooks/09-dispersion.ipynb`. Physical inputs, performance requirements and numerical controls are separate parameters. One BLAS thread is efficient for these small matrices.
 

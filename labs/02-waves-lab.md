@@ -23,7 +23,7 @@ Read the [chapter](../chapters/02-waves-and-interfaces.md), use the [nine worked
 Original analytical experiments in wave amplitudes, flux, phase, and response assumptions.
 :::
 
-<a href="../interactives/waves-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/waves-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 Use the corresponding experiment controls to investigate:
 

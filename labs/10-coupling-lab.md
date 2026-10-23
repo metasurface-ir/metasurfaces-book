@@ -23,7 +23,7 @@ The independent cells are **not isolated particles**: each is a periodic-array c
 
 <iframe src="../interactives/design-studies.html?lab=coupling" title="Local-cell and supercell geometry comparison" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=coupling" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/10-coupling.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/design-studies.html?lab=coupling" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/10-coupling.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
 
 The slider selects five saved geometries and their results. To rerun, extract the ZIP, install `requirements-labs.txt` in Python 3.12 and restart/run `notebooks/10-coupling.ipynb`. The notebook overlays actual ridge outlines on |Eᵧ/Eincident|. Field amplitude is not a local power-density map.
 

@@ -27,7 +27,7 @@ short_title: آزمایشگاه سلول واحد
 کنترل‌ها دادهٔ معتبر ازپیش‌محاسبه‌شدهٔ ریج TE را انتخاب می‌کنند و حل‌گر ماکسول در مرورگر اجرا نمی‌شود.
 :::
 
-<a href="../interactives/unit-cell-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a>
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/unit-cell-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a>
 
 پیش‌بینی کنید آیا هر فاز با $T\geq0.8$ قابل‌دستیابی است. هدف‌های $-160^\circ,-100^\circ,-50^\circ,0^\circ$ را بیازمایید. سپس حداقل توان را ۱ کنید و مجموعهٔ مجاز خالی را توضیح دهید.
 

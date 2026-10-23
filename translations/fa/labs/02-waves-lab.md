@@ -23,7 +23,7 @@ short_title: آزمایشگاه موج و مرز
 آزمایش‌های تحلیلی دربارهٔ دامنه، شار، فاز و فرض‌های مدل پاسخ.
 :::
 
-<a href="../interactives/waves-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a>
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/waves-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a>
 
 با کنترل‌های مربوط به هر آزمایش بررسی کنید:
 

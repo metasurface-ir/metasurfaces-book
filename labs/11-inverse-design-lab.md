@@ -15,7 +15,7 @@ Only the six ridge widths change. Height 1.8 µm, pitch 0.65 µm, constant real 
 
 <iframe src="../interactives/design-studies.html?lab=inverse" title="Bounded optimization geometry and validation explorer" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=inverse" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/11-inverse-design.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/design-studies.html?lab=inverse" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Executed notebook](../notebooks/11-inverse-design.ipynb) · [Complete source bundle](../downloads/design-studies.zip)
 
 Controls inspect saved results; they do not run an optimizer in the browser. All plots and geometry views come from recorded parameters.
 

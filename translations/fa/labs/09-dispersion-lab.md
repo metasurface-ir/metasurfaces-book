@@ -23,7 +23,7 @@ short_title: آزمایشگاه پهنای باند
 
 <iframe src="../interactives/design-studies.html?lab=dispersion" title="مرورگر پهنای باند و هندسه" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=dispersion" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/09-dispersion.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/design-studies.html?lab=dispersion" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/09-dispersion.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
 
 مرورگر محاسبات ذخیره‌شده را انتخاب می‌کند. کل ZIP را استخراج و پوشه‌ها را حفظ کنید؛ `requirements-labs.txt` را در Python 3.12 نصب، JupyterLab را باز و `notebooks/09-dispersion.ipynb` را از ابتدا اجرا کنید. ورودی فیزیکی، شرط عملکرد و کنترل عددی جدا هستند. یک رشتهٔ BLAS برای این ماتریس‌های کوچک کارآمد است.
 

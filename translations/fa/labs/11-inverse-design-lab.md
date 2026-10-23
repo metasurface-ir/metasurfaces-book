@@ -15,7 +15,7 @@ short_title: آزمایشگاه طراحی معکوس
 
 <iframe src="../interactives/design-studies.html?lab=inverse" title="مرورگر هندسه و اعتبارسنجی بهینه‌سازی کران‌دار" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/design-studies.html?lab=inverse" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/11-inverse-design.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/design-studies.html?lab=inverse" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دفترچهٔ اجراشده](../notebooks/11-inverse-design.ipynb) · [بستهٔ کامل منابع](../downloads/design-studies.zip)
 
 کنترل‌ها نتیجهٔ ذخیره‌شده را نشان می‌دهند؛ بهینه‌ساز در مرورگر اجرا نمی‌شود. نمودار و شکل از پارامتر ثبت‌شده ساخته می‌شوند.
 

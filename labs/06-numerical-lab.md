@@ -17,7 +17,7 @@ The controls select saved Python calculations; they do not solve Maxwell's equat
 
 <iframe src="../interactives/numerical-explorer.html" title="Mesh, field and boundary validation explorer" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/numerical-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Download complete executable sources](../downloads/chapter-06-numerical.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/numerical-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Download complete executable sources](../downloads/chapter-06-numerical.zip)
 
 ## Run the investigation
 

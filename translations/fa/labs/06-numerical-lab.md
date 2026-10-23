@@ -17,7 +17,7 @@ short_title: آزمایشگاه اعتبارسنجی عددی
 
 <iframe src="../interactives/numerical-explorer.html" title="کاوشگر اعتبارسنجی شبکه، میدان و مرز" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-<a href="../interactives/numerical-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دریافت منبع کامل قابل اجرا](../downloads/chapter-06-numerical.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/numerical-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دریافت منبع کامل قابل اجرا](../downloads/chapter-06-numerical.zip)
 
 ## اجرای بررسی
 
