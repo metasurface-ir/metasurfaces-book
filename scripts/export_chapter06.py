@@ -29,11 +29,7 @@ assert audit['status'] == 'passed'
 for name, digest in reference['metadata']['source_sha256'].items():
     assert hashlib.sha256((ROOT/'simulations'/name).read_bytes()).hexdigest() == digest
 render(ROOT/'interactives/numerical-explorer.html', language='en')
-files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.py',
-         'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py',
-         'scripts/validate_chapter06.py', 'requirements-labs.txt',
-         'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json',
-         'interactives/numerical-explorer.html','assets/chapter-06/slab-geometry.svg']
+files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.py', 'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py', 'scripts/validate_chapter06.py', 'requirements-labs.txt', 'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json', 'assets/chapter-06/slab-geometry.svg']
 files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'data/chapter-06').glob('*')) if p.is_file()]
 with zipfile.ZipFile(ROOT/'downloads/chapter-06-numerical.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
     for name in files: archive.write(ROOT/name, name)
@@ -48,8 +44,7 @@ parameters generate a separate data/chapter-06/notebook-experiment.json.
 Run python scripts/validate_chapter06.py from the extracted root for the fixed
 benchmark audit. It writes reference data and a validation report. A successful
 reference audit does not certify a newly modified physical configuration.
-The browser explorer opens offline from interactives/numerical-explorer.html.
-It selects saved data, not a live solver.
+The browser explorer is hosted on the book website and selects saved data.
 
 This is a 1D lossless equal-exterior FDFD slab with a discrete radiation boundary.
 It is not FDTD, FEM, PML, finite-device or experimental validation. The separate

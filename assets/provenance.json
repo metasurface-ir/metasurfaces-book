@@ -149,6 +149,34 @@
       "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
+      "asset": "assets/chapter-03/coupling-comparison.png",
+      "sha256": "62833443aae7de912a578c64dff030074912f9e5b2dbc87104cfb0e3f7ba8b90",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/10-coupling.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ms10-comparison"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-03/coupling-field.png",
+      "sha256": "d6403c22dac707ae7fecad553826a08bba0a67e0477364ee0e73aa4f3fb14f4d",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/10-coupling.ipynb",
+          "cell_index": 6,
+          "tags": [
+            "ms10-field"
+          ]
+        }
+      ]
+    },
+    {
       "asset": "assets/chapter-03/fields.png",
       "sha256": "51d753434b8122240079a322c3209331acaca1088f6755bd93794e9573c46eb7",
       "origin": "original numerical notebook output",
@@ -251,6 +279,34 @@
           "cell_index": 3,
           "tags": [
             "ch05-coverage"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/dispersion-diagnostics.png",
+      "sha256": "845e4c998741f8770f14f85a5a3bb884c994f6ed35df95885ce34312fbb3afb8",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/09-dispersion.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ms09-diagnostics"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-05/dispersion-spectrum.png",
+      "sha256": "b2f6135cce495c8cd1fd3415b9a1bcbed1a7c3517c56750f675a4f3045524901",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/09-dispersion.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ms09-spectrum"
           ]
         }
       ]
@@ -395,6 +451,20 @@
       "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
     },
     {
+      "asset": "assets/chapter-10/inverse-checks.png",
+      "sha256": "b8b5d2320382c239662248f35c73a51957dc4709771b5ee3407e311cbdd87013",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/11-inverse-design.ipynb",
+          "cell_index": 8,
+          "tags": [
+            "ms11-checks"
+          ]
+        }
+      ]
+    },
+    {
       "asset": "assets/chapter-10/inverse-comparison.png",
       "sha256": "5b674fbcdbaeb06ebd5738d4d6e377ba448f3ae2eecbb0139f72d43f4214ec9c",
       "origin": "original numerical notebook output",
@@ -404,6 +474,20 @@
           "cell_index": 15,
           "tags": [
             "ch10-inverse-comparison"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-10/inverse-search.png",
+      "sha256": "87052302f14ff771def2aaf4123dfc3e32421ef5307724d5399316a51f2c8f9d",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/11-inverse-design.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ms11-search"
           ]
         }
       ]

@@ -66,3 +66,5 @@ A learned response does not establish a physical geometry. Connecting it to a ri
 3. Identify the physical reference planes and distinguish numerical nodes/boundaries from material interfaces.
 4. Name the plotted quantity: field, complex amplitude, incident-normalized order power, scalar intensity, or model-prediction error.
 5. Keep the geometry and model label with exported results. These drawings use the book's saved parameter files and the original shared renderer `templates/model-geometry.js`; they are generated without external artwork.
+
+The same six-ridge geometry now anchors [ms-09 spectral sweeps](labs/09-dispersion-lab.md), [ms-10 local/supercell comparisons](labs/10-coupling-lab.md), and [ms-11 bounded width optimization](labs/11-inverse-design-lab.md). Their browser drawings follow the saved wavelength, width contrast or selected candidate.

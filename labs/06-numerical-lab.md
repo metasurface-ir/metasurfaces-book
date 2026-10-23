@@ -7,7 +7,7 @@ short_title: Numerical validation lab
 
 **Question:** how can a perfectly balanced simulation mislead a designer? Predict what will happen when the film mesh is refined, then compare the same observables at the same physical reference planes.
 
-Read [Chapter 6](../chapters/06-numerical-methods.md) and its [worked examples](../chapters/06-numerical-guide.md). The [executed notebook](../notebooks/06-numerical-methods.ipynb) is the authoritative calculation. The source bundle contains the solver, notebook, reference data, validator, and standalone explorer.
+Read [Chapter 6](../chapters/06-numerical-methods.md) and its [worked examples](../chapters/06-numerical-guide.md). The [executed notebook](../notebooks/06-numerical-methods.ipynb) is the authoritative calculation. The source bundle contains the solver, notebook, reference data and validator. The browser explorer is hosted on this site.
 
 Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
 
@@ -17,7 +17,7 @@ The controls select saved Python calculations; they do not solve Maxwell's equat
 
 <iframe src="../interactives/numerical-explorer.html" title="Mesh, field and boundary validation explorer" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-[Open the explorer](../interactives/numerical-explorer.html) · [Download complete executable sources](../downloads/chapter-06-numerical.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/numerical-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · [Download complete executable sources](../downloads/chapter-06-numerical.zip)
 
 ## Run the investigation
 

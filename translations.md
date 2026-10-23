@@ -7,15 +7,15 @@ short_title: English / فارسی
 
 Use **English | فارسی** in the header to open the corresponding page. English keeps its existing URLs; the Persian edition lives under `/fa/`. A page without a Persian counterpart leads to the translation-status page rather than silently presenting English as a translation.
 
-The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, 6, and 10. It includes every published chapter guide, self-check/project page, computational lab, all nine notebook narratives, the complete syllabus, lab index/template, setup/contribution guides, homepage, and bilingual glossary. These translations are prepared for instructor review; technical terminology and pedagogical wording can be improved through pull requests.
+The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, 6, and 10. It includes every published chapter guide, self-check/project page, computational lab, all twelve notebook narratives, the complete syllabus, lab index/template, setup/contribution guides, homepage, and bilingual glossary. These translations are prepared for instructor review; technical terminology and pedagogical wording can be improved through pull requests.
 
 | Material | Persian status |
 | --- | --- |
 | Homepage and navigation | Available |
 | All seven developed chapters, their worked examples, self-check/project pages and labs | Available |
-| All nine notebook narratives | Available; numerical cells and saved outputs are shared |
+| All twelve notebook narratives | Available; numerical cells and saved outputs are shared |
 | Chapter 2 interactive controls and interpretation | Available; same JavaScript equations as English |
-| Chapter 6 offline explorer | Fully localized controls, captions, and interpretation; shared saved numerical data |
+| Chapter 6 browser explorer | Fully localized controls, captions, and interpretation; shared saved numerical data |
 | Two Chapter 2 schematics | Persian labels available |
 | Computational plots, numerical tables and other shared scientific browser tools | Shared English scientific labels; Persian captions, lab instructions and glossary explain them |
 | Syllabus, lab index/template, glossary, setup, and contribution instructions | Available |
@@ -38,3 +38,5 @@ Browser search is separate in each edition and searches the translated pages ava
 
 
 The [model and geometry guide](models.md), four original geometry figures, and model drawings in Chapters 1, 3, 5 and 6 explorers have Persian counterparts/labels. The geometry renderer is shared. Other existing scientific plot/interface labels retain the scope above.
+
+The three ms-09/10/11 lab guides and notebooks are available in both languages. Their shared browser explorer has Persian controls, geometry labels and interpretation; numerical plot labels inside notebooks remain shared. There are 48 matched published pages.

@@ -7,7 +7,7 @@ short_title: آزمایشگاه اعتبارسنجی عددی
 
 **پرسش:** یک شبیه‌سازی با توازن توان کامل چگونه می‌تواند طراح را گمراه کند؟ پیش از ریزسازی شبکهٔ لایه پیش‌بینی کنید و همان کمیت‌ها را در همان صفحه‌های مرجع فیزیکی مقایسه کنید.
 
-[فصل ۶](../chapters/06-numerical-methods.md) و [مثال‌های حل‌شده](../chapters/06-numerical-guide.md) را بخوانید. [دفترچهٔ اجراشده](../notebooks/06-numerical-methods.ipynb) مرجع اصلی محاسبه است. بستهٔ منبع شامل حل‌گر، دفترچه، دادهٔ مرجع، اعتبارسنج و کاوشگر مستقل است.
+[فصل ۶](../chapters/06-numerical-methods.md) و [مثال‌های حل‌شده](../chapters/06-numerical-guide.md) را بخوانید. [دفترچهٔ اجراشده](../notebooks/06-numerical-methods.ipynb) مرجع اصلی محاسبه است. بستهٔ منبع شامل حل‌گر، دفترچه، دادهٔ مرجع و اعتبارسنج است. کاوشگر مرورگری در وب‌سایت کتاب باز می‌شود.
 
 پیش از خواندن نتایج، [راهنمای مدل و هندسه](../models.md) را ببینید. جسم، ابعاد، موج فرودی، جهت ناوردایی یا تکرار و صفحه‌های مرجع را در شکل مشخص کنید.
 
@@ -17,7 +17,7 @@ short_title: آزمایشگاه اعتبارسنجی عددی
 
 <iframe src="../interactives/numerical-explorer.html" title="کاوشگر اعتبارسنجی شبکه، میدان و مرز" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
-[بازکردن کاوشگر](../interactives/numerical-explorer.html) · [دریافت منبع کامل قابل اجرا](../downloads/chapter-06-numerical.zip)
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/numerical-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه در زبانهٔ تازه</a> · [دریافت منبع کامل قابل اجرا](../downloads/chapter-06-numerical.zip)
 
 ## اجرای بررسی
 

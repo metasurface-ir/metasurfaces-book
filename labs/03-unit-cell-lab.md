@@ -25,11 +25,11 @@ The explorer contains 50 saved full-wave TE ridge responses. Move the width slid
 An explorer of a validated, precomputed dielectric TE ridge library. Browser controls select saved data without running a Maxwell solver.
 :::
 
-[Open the explorer in a full browser page](/interactives/unit-cell-explorer.html), or download it for offline use: {download}`../interactives/unit-cell-explorer.html`.
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/unit-cell-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 Before revealing the answer, predict whether this geometry can achieve every phase at $T\geq0.8$. Test targets $-160^\circ$, $-100^\circ$, $-50^\circ$, and $0^\circ$. Then raise the minimum power to 1 and explain the empty eligible set.
 
-**Deliverable:** two satisfactory targets and one unmet request, with width, complex amplitude, power, circular phase error, and the relevant model limits. The selected-row download includes metadata for attribution and reuse.
+**Deliverable:** two satisfactory targets and one unmet request, with width, complex amplitude, power, circular phase error, and the relevant model limits. Record the selected row and its source metadata for attribution and reuse.
 
 ## B. Run the full-wave reference notebook
 

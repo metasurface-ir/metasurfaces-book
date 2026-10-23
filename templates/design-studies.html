@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="__LANG__" dir="__DIR__"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metasurface.ir · Design studies</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f7fa;color:#173449;font:16px/1.65 Tahoma,Arial,sans-serif}main{max-width:1050px;margin:auto;padding:20px}h1{font-size:25px;line-height:1.4;margin:0}h2{font-size:18px;margin:0 0 12px}p{margin:10px 0}.kicker{font-size:12px;letter-spacing:.08em;color:#187e8d}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}button,select{font:inherit;border:1px solid #b5cbd5;background:white;color:#173449;border-radius:10px;padding:9px 13px;cursor:pointer}button[aria-pressed=true]{background:#176b7c;color:white;border-color:#176b7c}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e99835;outline-offset:3px}.card{background:white;border:1px solid #dae5eb;border-radius:15px;padding:18px;margin-bottom:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.grid>*{min-width:0}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.fact{background:#edf5f6;padding:10px;border-radius:10px;min-width:0}.fact strong{display:block;font-size:23px;color:#176b7c;direction:ltr;unicode-bidi:isolate}.fact span{font-size:12px}input[type=range]{width:100%;accent-color:#176b7c;direction:ltr;min-height:32px}.note{border-inline-start:4px solid #da9e41;padding-inline-start:12px;color:#526778;font-size:14px}.chart{width:100%;height:auto;direction:ltr;display:block}.chart text{font:15px Tahoma,Arial,sans-serif;fill:#294c60}.model-geometry{max-width:100%}#widths{direction:ltr;overflow-wrap:anywhere;font-size:12px}.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.legend span:before{content:'';display:inline-block;width:18px;height:3px;background:var(--c);vertical-align:middle;margin:0 5px}#status{font-size:14px;overflow-wrap:anywhere}output{font-weight:bold;direction:ltr;unicode-bidi:isolate}@media(max-width:720px){main{padding:12px}.grid{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,1fr)}.card{padding:12px}h1{font-size:22px}.tabs button{flex:1;font-size:13px}}
+</style></head><body><main>
+<div class="kicker">METASURFACE.IR · ms-09 / ms-10 / ms-11</div><h1 id="title"></h1><p id="intro"></p>
+<nav class="tabs" aria-label="Investigations"><button data-lab="dispersion"></button><button data-lab="coupling"></button><button data-lab="inverse"></button></nav>
+<section class="card"><label id="control-label" for="sample"></label> <output id="chosen" for="sample"></output><input id="sample" type="range" min="0" step="1"><label for="candidate" id="candidate-label" hidden></label><select id="candidate" hidden><option value="baseline"></option><option value="selected"></option></select><div class="facts" id="facts" aria-live="polite"></div></section>
+<div class="grid"><section class="card"><h2 id="geometry-title"></h2><div id="geometry"></div><p id="widths"></p></section><section class="card"><h2 id="plot-title"></h2><div id="plot"></div><div id="legend" class="legend"></div><p id="status"></p><p id="meaning" class="note"></p></section></div>
+<p class="note" id="scope"></p></main><script>
+__MODEL_GEOMETRY_JS__
+const data=__STUDY_DATA__,fa=document.documentElement.lang==='fa';
+const t=fa?{
+ title:'از پهنای باند تا طراحیِ بررسی‌شده',intro:'یک خانوادهٔ هندسی، سه پرسش. کنترل‌ها نتیجهٔ ذخیره‌شده را انتخاب می‌کنند؛ حل‌گر در مرورگر اجرا نمی‌شود.',
+ dispersion:'ms-09 · پهنای باند',coupling:'ms-10 · کوپلینگ',inverse:'ms-11 · طراحی معکوس',
+ wavelength:'طول موج خلأ (µm)',contrast:'تضاد عرض α',candidate:'هندسهٔ منتخب',baseline:'مرجع فصل ۵',selected:'بهترین نامزد جست‌وجو',geometry:'شکل دقیقاً مربوط به کدام نتیجه است؟',
+ target:'توان مرتبهٔ +1 نسبت به فرودی',total:'کل توان عبوری',angle:'زاویهٔ پرتو (درجه)',local:'پیش‌بینی پله‌ای موضعی',full:'ابرسلول تمام‌موج',balance:'مجموع R+T موضعی',
+ spectrum:'توان عبوری در طیف',orders:'توان عبوری برحسب مرتبه',refine:'کنترل هارمونیک بعد از تثبیت هندسه',
+ band:'باند بازده',usable:'باند کاربردی با رواداری ۰٫۵ درجه',nm:'نانومتر',cutoff:'تعداد مرتبه‌های عبوری باز',
+ dmeaning:'هندسه و ضریب‌ها ثابت‌اند. زاویه و بازده هر دو تغییر می‌کنند. باند آستانه‌ای با پهنای نیمه‌بیشینهٔ تشدید متفاوت است.',
+ cmeaning:'هر سلول موضعی میان همسایه‌های یکسان حل شده است. اختلاف با ابرسلول شامل تغییر همسایه و تقریب پله‌ای میدان است؛ R+T را دوباره نرمال نکنید.',
+ imeaning:'فقط عرض‌ها بهینه شده‌اند. نامزد پیش از پالایش ثابت شد. بهبود اسمی، بهینگی سراسری یا عملکرد پهن‌باند را ثابت نمی‌کند.',
+ checked:'بازده بررسی‌شده در M=192',search:'ارزیابی هدف',worst:'کمینهٔ ۱۴ اغتشاش مشخص ±۵ نانومتر',
+ xlambda:'طول موج خلأ (µm)',xorder:'مرتبهٔ پراش m',xm:'نیم‌مرتبهٔ هارمونیک M',power:'توان نسبت به فرودی',
+ scope:'مدل TE یک‌بعدی با ضریب حقیقی ثابت و تکرار نامحدود. FEM/FDTD، قطعهٔ متناهی و آزمایش تجربی اجرا نشده‌اند. جزئیات و منابع در دفترچه و راهنمای هر آزمایشگاه است.'
+}:{title:'From bandwidth to a checked design',intro:'One geometry family, three questions. Controls select saved calculations; no solver runs in this browser.',
+ dispersion:'ms-09 · Bandwidth',coupling:'ms-10 · Coupling',inverse:'ms-11 · Inverse design',wavelength:'Vacuum wavelength (µm)',contrast:'Width contrast α',candidate:'Choose geometry',baseline:'Chapter 5 baseline',selected:'Best search candidate',geometry:'Which structure produced this result?',
+ target:'Incident power in order +1',total:'Total transmitted power',angle:'Beam angle (deg)',local:'Local staircase prediction',full:'Full supercell',balance:'Local R+T sum',spectrum:'Transmitted power across the spectrum',orders:'Transmitted power by order',refine:'Harmonic checks after freezing the geometry',band:'Efficiency bandwidth',usable:'Useful band, 0.5° angular tolerance',nm:'nm',cutoff:'Open transmitted orders',dmeaning:'Geometry and indices stay fixed. Both angle and efficiency disperse. A threshold bandwidth is different from resonance FWHM.',cmeaning:'Each local cell was solved among identical neighbors. The discrepancy includes changed neighbors and the staircase field approximation; do not renormalize R+T.',imeaning:'Only widths were optimized. The candidate was frozen before refinement. Nominal improvement does not prove a global optimum or broadband performance.',checked:'Checked efficiency at M=192',search:'Objective evaluations',worst:'Minimum of 14 specified ±5 nm perturbations',xlambda:'Vacuum wavelength (µm)',xorder:'Diffraction order m',xm:'Retained harmonic half-order M',power:'Incident-power fraction',scope:'1D TE, constant real indices, infinite periodic repetition. No FEM/FDTD, finite-device or experimental validation. See each notebook and lab guide for details and sources.'};
+const $=id=>document.getElementById(id),fmt=(v,n=3)=>Number(v).toFixed(n),percent=v=>fmt(100*v,2)+'%',escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const palette=['#16828c','#b76c34'];let lab=new URLSearchParams(location.search).get('lab')||'dispersion';if(!['dispersion','coupling','inverse'].includes(lab))lab='dispersion';
+function facts(rows){$('facts').innerHTML=rows.map(([v,l])=>`<div class="fact"><strong>${escape(v)}</strong><span>${escape(l)}</span></div>`).join('')}
+function chart(xs,series,xlabel,selected=null,bars=false){
+ const W=660,H=400,L=63,R=18,T=20,B=60,minx=Math.min(...xs)-(bars?.6:0),maxx=Math.max(...xs)+(bars?.6:0),ymax=1.05;
+ const X=x=>L+(x-minx)/(maxx-minx)*(W-L-R),Y=y=>H-B-y/ymax*(H-B-T);
+ let s=`<svg class="chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${escape($('plot-title').textContent)}"><title>${escape($('plot-title').textContent)}</title>`;
+ for(let y=0;y<1.01;y+=.25)s+=`<path d="M${L} ${Y(y)}H${W-R}" stroke="#dce6eb"/><text x="${L-9}" y="${Y(y)+5}" text-anchor="end">${y.toFixed(2)}</text>`;
+ const ticks=bars?xs:Array.from({length:5},(_,j)=>minx+j*(maxx-minx)/4);
+ for(const x of ticks)s+=`<text x="${X(x)}" y="${H-B+25}" text-anchor="middle">${bars?x:fmt(x,lab==='inverse'?0:2)}</text>`;
+ series.forEach((a,j)=>{if(bars){const bw=(W-L-R)/xs.length/3;s+=a.values.map((y,i)=>`<rect x="${X(xs[i])+(j-.5)*bw-bw/2}" y="${Y(y)}" width="${bw}" height="${Y(0)-Y(y)}" fill="${palette[j]}"/>`).join('')}else{s+=`<polyline fill="none" stroke="${palette[j]}" stroke-width="3" points="${xs.map((x,i)=>X(x)+','+Y(a.values[i])).join(' ')}"/>`}});
+ if(selected!==null)s+=`<path d="M${X(selected)} ${T}V${H-B}" stroke="#5f467d" stroke-width="2" stroke-dasharray="5 5"/>`;
+ s+=`<text x="${(L+W-R)/2}" y="${H-10}" text-anchor="middle">${escape(xlabel)}</text><text transform="translate(17,180) rotate(-90)" text-anchor="middle">${escape(t.power)}</text></svg>`;
+ $('plot').innerHTML=s;$('legend').innerHTML=series.map((a,j)=>`<span style="--c:${palette[j]}">${escape(a.label)}</span>`).join('');
+}
+function draw(){
+ let p={...data.dispersion.metadata.parameters},w=p.widths_um;
+ $('sample').hidden=lab==='inverse';$('chosen').hidden=lab==='inverse';$('control-label').hidden=lab==='inverse';$('candidate').hidden=lab!=='inverse';$('candidate-label').hidden=lab!=='inverse';
+ if(lab==='dispersion'){
+  const d=data.dispersion,rows=d.rows,i=Number($('sample').value),r=rows[i],bands=d.bandwidths.at(-1);p.wavelength_um=r.wavelength_um;
+  $('control-label').textContent=t.wavelength;$('chosen').textContent=fmt(r.wavelength_um,5);$('plot-title').textContent=t.spectrum;
+  facts([[percent(r.T),t.target],[percent(r.total_T),t.total],[fmt(r.angle_deg,2)+'°',t.angle]]);
+  chart(rows.map(x=>x.wavelength_um),[{label:t.target,values:rows.map(x=>x.T)},{label:t.total,values:rows.map(x=>x.total_T)}],t.xlambda,r.wavelength_um);
+  const bandText=(b)=>b?`${fmt(b.lower_um,4)}–${fmt(b.upper_um,4)} µm (${fmt(b.width_um*1000,1)} ${t.nm})${b.left_clipped||b.right_clipped?' *':''}`:'—';
+  $('status').textContent=`${t.band}: ${bandText(bands.efficiency)}. ${t.usable}: ${bandText(bands.usable)}. ${t.cutoff}: ${r.open_transmission_orders}.`;$('meaning').textContent=t.dmeaning;
+ }else if(lab==='coupling'){
+  const c=data.coupling.cases[Number($('sample').value)],i=c.orders.indexOf(1);w=c.widths_um;$('control-label').textContent=t.contrast;$('chosen').textContent=fmt(c.contrast,2);$('plot-title').textContent=t.orders;
+  facts([[percent(c.local_T[i]),t.local],[percent(c.full_T[i]),t.full],[fmt(c.local_power_sum,4),t.balance]]);
+  chart(c.orders,[{label:t.local,values:c.local_T},{label:t.full,values:c.full_T}],t.xorder,null,true);
+  $('status').textContent=`M = 144 → 192: Δ(R,T) ≤ ${c.harmonic_power_change.toExponential(2)}. M(cell) = 24 → 32: ${c.local_harmonic_change.toExponential(2)}.`;$('meaning').textContent=t.cmeaning;
+ }else{
+  const d=data.inverse,key=$('candidate').value,check=d.refinement.at(-1);p=key==='selected'?d.selected_parameters:d.metadata.parameters;w=p.widths_um;$('plot-title').textContent=t.refine;
+  const fs=[[percent(check[key].T),t.checked],[String(d.evaluations),t.search]];if(key==='selected')fs.push([percent(Math.min(...d.perturbations.map(x=>x.T))),t.worst]);facts(fs);
+  chart(d.refinement.map(x=>x.half_order),[{label:t.baseline,values:d.refinement.map(x=>x.baseline.T)},{label:t.selected,values:d.refinement.map(x=>x.selected.T)}],t.xm);
+  $('status').textContent=`M=192: ${t.baseline} ${percent(check.baseline.T)} → ${t.selected} ${percent(check.selected.T)}. grcwa: ${d.independent_implementation.checks.at(-1)?.max_order_power_error.toExponential(2)||'—'}.`;$('meaning').textContent=t.imeaning;
+ }
+ $('geometry').innerHTML=BookGeometry.ridge(p,w,fa?'fa':'en');$('widths').textContent='w₁…w₆ (µm): '+w.map(x=>fmt(x,6)).join(', ');
+}
+function activate(name){lab=name;document.querySelectorAll('[data-lab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lab===lab)));$('sample').max=lab==='coupling'?'4':String(data.dispersion.rows.length-1);$('sample').value=lab==='coupling'?'4':String(data.dispersion.rows.findIndex(x=>Math.abs(x.wavelength_um-1.55)<1e-8));draw()}
+$('title').textContent=t.title;$('intro').textContent=t.intro;$('scope').textContent=t.scope;$('geometry-title').textContent=t.geometry;$('candidate-label').textContent=t.candidate;
+for(const o of $('candidate').options)o.textContent=t[o.value];$('candidate').value='selected';
+document.querySelectorAll('[data-lab]').forEach(b=>{b.textContent=t[b.dataset.lab];b.onclick=()=>activate(b.dataset.lab)});$('sample').oninput=draw;$('candidate').onchange=draw;activate(lab);
+</script></body></html>

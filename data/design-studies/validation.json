@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "sources": {
+    "design_studies.py": "cfce9433da951c3bef1fddaccf29ec590ed18de3b841b6a54f0175074426d707",
+    "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+    "metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629"
+  },
+  "spectral_samples": 161,
+  "max_spectral_harmonic_power_change": 3.5677626034180676e-05,
+  "band_edge_grid_change_um": 6.44736975541349e-06,
+  "uniform_embedding_error": 5.689763699370293e-13,
+  "uniform_film_complex_error": 2.0291964471435265e-15,
+  "mirror_order_power_error": 1.3766765505351941e-14,
+  "bandwidth_input_guards": 3,
+  "objective_evaluations": 768,
+  "baseline_T": 0.8553551432162186,
+  "selected_T": 0.8893819518243993,
+  "selected_refinement_complex_change": 1.2284154061399244e-05,
+  "independent_implementation": {
+    "status": "passed; separate RCWA implementation, same method family",
+    "checks": [
+      {
+        "pixels": 4096,
+        "max_order_power_error": 7.567330212680107e-07
+      },
+      {
+        "pixels": 8192,
+        "max_order_power_error": 2.841090168109045e-07
+      }
+    ]
+  },
+  "scope": "Fixed reference studies; no FEM/FDTD, finite-device, measured material or experimental validation"
+}

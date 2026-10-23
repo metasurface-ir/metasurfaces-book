@@ -13,6 +13,7 @@ import sys
 from urllib.parse import urljoin, urlparse
 from localize_chapter02 import export
 from render_numerical_explorer import render
+from render_design_studies import render as render_design
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get('BASE_URL', '').rstrip('/')
@@ -63,6 +64,7 @@ def prepare_persian():
         (STAGE / row['source']).write_text(json.dumps(original, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     export(STAGE)
     render(STAGE / 'interactives/numerical-explorer.html', language='fa')
+    render_design(STAGE / 'interactives/design-studies.html', language='fa')
     # Model drawings share one implementation, with Persian labels selected by lang.
     for name in ('unit-cell-explorer.html', 'synthesis-explorer.html', 'foundations-explorer.html'):
         path = STAGE / 'interactives' / name
@@ -71,7 +73,7 @@ def prepare_persian():
     # Localized bundles preserve their original shared code/data and filenames.
     # Replace only notebook narratives with the assembled executable notebooks.
     import zipfile
-    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip', 'chapter-06-numerical.zip'):
+    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip', 'chapter-06-numerical.zip', 'design-studies.zip'):
         with zipfile.ZipFile(ROOT / 'downloads' / name) as original:
             with zipfile.ZipFile(STAGE / 'downloads' / name, 'w', compression=zipfile.ZIP_DEFLATED) as translated_zip:
                 for item in original.infolist():
