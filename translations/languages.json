@@ -220,6 +220,36 @@
       "source": "models.md",
       "translation": "translations/fa/models.md",
       "route": "models"
+    },
+    {
+      "source": "labs/09-dispersion-lab.md",
+      "translation": "translations/fa/labs/09-dispersion-lab.md",
+      "route": "dispersion-lab"
+    },
+    {
+      "source": "notebooks/09-dispersion.ipynb",
+      "translation": "translations/fa/notebooks/09-dispersion.ipynb",
+      "route": "dispersion"
+    },
+    {
+      "source": "labs/10-coupling-lab.md",
+      "translation": "translations/fa/labs/10-coupling-lab.md",
+      "route": "coupling-lab"
+    },
+    {
+      "source": "notebooks/10-coupling.ipynb",
+      "translation": "translations/fa/notebooks/10-coupling.ipynb",
+      "route": "coupling"
+    },
+    {
+      "source": "labs/11-inverse-design-lab.md",
+      "translation": "translations/fa/labs/11-inverse-design-lab.md",
+      "route": "inverse-design-lab"
+    },
+    {
+      "source": "notebooks/11-inverse-design.ipynb",
+      "translation": "translations/fa/notebooks/11-inverse-design.ipynb",
+      "route": "inverse-design"
     }
   ]
 }

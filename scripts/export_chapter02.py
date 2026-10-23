@@ -24,16 +24,13 @@ audit=json.loads((ROOT/'data/chapter-02/validation.json').read_text(encoding='ut
 assert audit['status']=='passed'
 assert audit['source_sha256']==reference['metadata']['source_sha256']
 (ROOT/'interactives/waves-explorer.html').write_text((ROOT/'templates/waves-explorer.html').read_text(encoding='utf-8'),encoding='utf-8',newline='\n')
-files=['notebooks/02-waves-and-interfaces.ipynb','simulations/waves_interfaces.py',
-       'scripts/validate_chapter02.py','requirements-labs.txt','data/chapter-02/README.md',
-       'data/chapter-02/waves-reference.json','data/chapter-02/waves-reference.csv',
-       'data/chapter-02/validation.json','interactives/waves-explorer.html']
+files=['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
 with zipfile.ZipFile(ROOT/'downloads/chapter-02-waves.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
     for file in files:archive.write(ROOT/file,file)
     archive.writestr('START-HERE.md','''# Chapter 2: waves, interfaces, and sheets
 
 Extract the complete ZIP and preserve notebooks/, simulations/, scripts/, data/,
-and interactives/. The browser explorer runs directly offline from interactives/.
+and assets/. Browser labs are hosted on the book website.
 
 For Python, use Python 3.12 in a virtual environment. Install requirements-labs.txt
 and open notebooks/02-waves-and-interfaces.ipynb in JupyterLab. Restart its kernel

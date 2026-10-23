@@ -13,7 +13,7 @@ Read the [chapter](../chapters/02-waves-and-interfaces.md), use the [nine worked
 
 ## A. Predict in the browser
 
-**Status:** executable analytical browser exploration. It evaluates equations directly, without a full-wave solver, external dataset, or installation. The standalone HTML also works offline.
+**Status:** executable analytical browser exploration. It evaluates equations directly, without a full-wave solver, external dataset, or installation.
 
 :::{iframe} ../interactives/waves-explorer.html
 :width: 100%
@@ -23,7 +23,7 @@ Read the [chapter](../chapters/02-waves-and-interfaces.md), use the [nine worked
 Original analytical experiments in wave amplitudes, flux, phase, and response assumptions.
 :::
 
-[Open the explorer in a full browser page](/interactives/waves-explorer.html), or download an offline copy: {download}`../interactives/waves-explorer.html`.
+<a href="../interactives/waves-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 Use the corresponding experiment controls to investigate:
 
@@ -34,7 +34,7 @@ Use the corresponding experiment controls to investigate:
 5. **Polarization:** compare a linear state, a circular state, and an ellipse. Predict a linear analyzer's response. State the axes and time convention before describing rotation.
 6. **Sheet response:** compare a passive resistive and a reactive electric sheet. Identify the assumptions behind the one-sided 50% absorption bound.
 
-Keep a downloaded parameter/response record, one failed prediction and its explanation, and a short statement of what the browser does not calculate. At exact TM cutoff, use the stated limiting interpretation rather than treating an infinite intermediate admittance as an ordinary field value.
+Keep a written parameter/response record, one failed prediction and its explanation, and a short statement of what the browser does not calculate. At exact TM cutoff, use the stated limiting interpretation rather than treating an infinite intermediate admittance as an ordinary field value.
 
 ## B. Run the analytical notebook
 

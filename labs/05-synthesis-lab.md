@@ -25,11 +25,11 @@ Switch between the expanded library, original limited library, identical ridges,
 Four saved, validated TE ridge supercells. Controls inspect precomputed Maxwell results and their local approximations; they do not execute a solver.
 :::
 
-[Open the explorer in a full browser page](/interactives/synthesis-explorer.html), or download it for offline use: {download}`../interactives/synthesis-explorer.html`.
+<a href="../interactives/synthesis-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 **Prediction:** which directions are allowed, which carry power for identical cells, and what changes after reversal? Explain why a local-mask power imbalance cannot be called physical absorption here.
 
-**Deliverable:** a comparison of the four cases, with denominator definitions, model limits, and one symmetry prediction checked against the data. The explorer downloads a selected design together with its evidence and metadata.
+**Deliverable:** a comparison of the four cases, with denominator definitions, model limits, and one symmetry prediction checked against the data. The explorer displays the selected design with its evidence and metadata.
 
 ## B. Execute beam synthesis and full-wave verification
 

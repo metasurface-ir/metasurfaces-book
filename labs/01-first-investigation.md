@@ -25,11 +25,11 @@ Before clicking a preset, predict $R$, $T$, and whether transmission phase is me
 An ideal lossless specular sheet model, evaluated directly in the browser. It has no assigned fabrication geometry and does not run a full-wave solver.
 :::
 
-[Open the explorer in a full browser page](/interactives/foundations-explorer.html), or download an offline copy: {download}`../interactives/foundations-explorer.html`.
+<a href="../interactives/foundations-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 The reference has equal exterior impedances, normal incidence, one polarization, only specular reflection/transmission, and both coefficient reference planes at the ideal sheet. Channel strengths are dimensionless effective parameters. At zero transmitted amplitude the explorer reports phase as undefined.
 
-**Deliverable:** predictions and observations for all four presets, one custom case with unequal strengths, and a downloaded parameter/response record. Explain why perfect balanced matching over the entire sweep is an imposed assumption rather than a verified broadband physical device.
+**Deliverable:** predictions and observations for all four presets, one custom case with unequal strengths, and a written parameter/response record. Explain why perfect balanced matching over the entire sweep is an imposed assumption rather than a verified broadband physical device.
 
 ## B. Run and audit the notebook
 

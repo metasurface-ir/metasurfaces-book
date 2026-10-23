@@ -14,3 +14,5 @@ using `templates/model-geometry.js` and saved model parameters. The same
 drawing code is embedded in the offline explorers. Persian labels are generated
 into `translations/fa/assets/` from the same implementation. No external artwork
 is used; cuts, invariance, boundaries and phase planes are labeled explicitly.
+
+dispersion-spectrum.png and dispersion-diagnostics.png come from notebooks/09-dispersion.ipynb. Export with python scripts/export_design_studies.py. These are original numerical outputs with actual ridge geometry.

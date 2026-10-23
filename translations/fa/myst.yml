@@ -22,6 +22,12 @@ project:
       children:
         - file: labs/index.md
         - file: labs/lab-template.md
+        - file: labs/09-dispersion-lab.md
+        - file: notebooks/09-dispersion.ipynb
+        - file: labs/10-coupling-lab.md
+        - file: notebooks/10-coupling.ipynb
+        - file: labs/11-inverse-design-lab.md
+        - file: notebooks/11-inverse-design.ipynb
     - title: فصل ۱ — مبانی فراسطوح
       children:
         - file: chapters/01-metasurface-foundations.md

@@ -225,6 +225,6 @@ For example: “At normal incidence and one stated wavelength, select a dielectr
 7. Critique a claimed efficiency: identify the denominator, measured/simulated channels, material assumptions, and validation.
 8. Propose one experiment connecting the analytical model to a specific full-wave geometry without assuming a parameter-to-geometry mapping.
 
-Continue with the [six worked examples](01-foundations-guide.md) and the [first computational investigation](../labs/01-first-investigation.md). The browser explorer runs offline; the source ZIP provides editable code, notebook, data, and validation.
+Continue with the [six worked examples](01-foundations-guide.md) and the [first computational investigation](../labs/01-first-investigation.md). The browser explorer opens in a new tab; the source ZIP provides editable code, notebook, data, and validation.
 
 Finish with the [self-check answers, mini-project, rubric, and glossary](01-foundations-review.md). The worked guide also checks power normalization against a saved Chapter 3 full-wave result, making the evidence difference explicit before Chapter 2.

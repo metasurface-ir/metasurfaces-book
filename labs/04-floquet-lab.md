@@ -27,7 +27,7 @@ Use the controls below to predict and reveal transmitted and reflected channel s
 An analytical explorer for a one-dimensional periodic surface in isotropic lossless exterior media. It runs locally in the browser without a solver or external scripts.
 :::
 
-[Open the explorer in a full browser page](/interactives/floquet-explorer.html), or download an offline copy: {download}`../interactives/floquet-explorer.html`.
+<a href="../interactives/floquet-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a>
 
 Before moving a control, write down the change you expect. Try the six-element, smaller-period, glass-output, and exact-cutoff presets. Apply the propagation test separately on the incident and transmitted sides. Explain an asymmetric order set at oblique incidence.
 

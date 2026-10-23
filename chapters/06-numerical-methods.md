@@ -155,3 +155,7 @@ For a periodic ridge, refine harmonics while keeping geometry, material law, inc
 Record the physical problem, model omissions, units and phasor convention, solver/version/source hash, material data, numerical controls, source/monitor definitions, all power channels, independent refinements, acceptance criteria, and results including failed candidates. Archive the notebook and data used for each exported figure.
 
 **Before accepting your next design:** explain which error was varied, what stayed fixed, why the comparison is independent, and which conclusions remain unsupported. Continue to Chapter 7's tunable models when available; use these checks immediately in Chapters 3, 5, and 10.
+
+## Linked computational investigations
+
+Continue with [ms-09: spectral bandwidth](../labs/09-dispersion-lab.md), [ms-10: independent cells versus supercells](../labs/10-coupling-lab.md), and [ms-11: bounded optimization with independent checks](../labs/11-inverse-design-lab.md). These executed studies use the same explicit ridge geometry and connect spectral response, model approximation and design validation. The inverse-design study is a direct full-wave baseline for later AI comparisons.

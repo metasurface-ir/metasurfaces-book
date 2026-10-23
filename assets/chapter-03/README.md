@@ -13,3 +13,5 @@ using `templates/model-geometry.js` and saved model parameters. The same
 drawing code is embedded in the offline explorers. Persian labels are generated
 into `translations/fa/assets/` from the same implementation. No external artwork
 is used; cuts, invariance, boundaries and phase planes are labeled explicitly.
+
+coupling-comparison.png and coupling-field.png come from notebooks/10-coupling.ipynb. Export with python scripts/export_design_studies.py. These are original numerical outputs with actual ridge geometry.

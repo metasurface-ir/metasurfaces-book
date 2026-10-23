@@ -32,7 +32,7 @@
 <div class="controls"><div><label for="target">Target phase (degrees)</label><input id="target" type="number" min="-180" max="180" step="any" value="0"></div><div><label for="minT">Minimum transmission power</label><input id="minT" type="number" min="0" max="1" step="any" value="0.8"></div></div>
 <p id="error" class="invalid small" role="alert"></p>
 <div id="decision" class="status" aria-live="polite"></div>
-<div class="presets"><button id="apply">Inspect nearest eligible row</button><button id="download">Download selected row + metadata</button></div>
+<div class="presets"><button id="apply">Inspect nearest eligible row</button></div>
 <p class="small sub">Feasible means a circular phase error ≤5° and the requested minimum T within this discrete library. A nearest row can still miss the target.</p>
 </section>
 <section class="card wide"><h2>Model and evidence</h2>
@@ -178,7 +178,6 @@ function update(){
 for(const id of ['width','target','minT'])$(id).addEventListener('input',update);
 document.querySelectorAll('[data-index]').forEach(button=>button.addEventListener('click',()=>{$('width').value=button.dataset.index;update();}));
 $('apply').addEventListener('click',()=>{if(nearest){$('width').value=rows.indexOf(nearest.row);update();}});
-$('download').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({metadata:library.metadata,row:rows[Number($('width').value)]},null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='unit-cell-selected-row.json';link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);});
 window.unitCellSelect=selectCandidate;update();
 </script>
 </html>

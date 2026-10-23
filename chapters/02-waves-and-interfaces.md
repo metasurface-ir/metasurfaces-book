@@ -362,3 +362,7 @@ Before accepting any metasurface response, ask:
 Chapter [3](03-unit-cell-design.md) adds patterned geometry and a full-wave library; Chapter [4](04-periodic-floquet.md) adds diffraction channels; Chapter [5](05-metasurface-synthesis.md) assembles transformations. Chapter [10](10-ai-metasurfaces.md) uses data that must preserve exactly these conventions. Continue with the [nine worked examples](02-waves-guide.md), [computational lab](../labs/02-waves-lab.md), and [self-check and mini-project](02-waves-review.md).
 
 For an independent foundational route, the [Cornell ECE 3030 handouts](https://ocw.ece.cornell.edu/courses/ece-3030-electromagnetic-fields-and-waves-2/ece-3030-lectures-notes-and-handouts-2/) cover plane waves, polarization, interfaces, and multilayers. [MIT's optics lecture notes](https://ocw.mit.edu/courses/2-71-optics-spring-2014/pages/lecture-notes/) provide complementary wave and polarization material. The explanations, derivations, figures, and experiments in this chapter are original course material.
+
+## Linked computational investigations
+
+Continue with [ms-09: spectral bandwidth](../labs/09-dispersion-lab.md), [ms-10: independent cells versus supercells](../labs/10-coupling-lab.md), and [ms-11: bounded optimization with independent checks](../labs/11-inverse-design-lab.md). These executed studies use the same explicit ridge geometry and connect spectral response, model approximation and design validation. The inverse-design study is a direct full-wave baseline for later AI comparisons.
