@@ -17,9 +17,10 @@
     },
     {
       "asset": "assets/chapter-01/geometry-and-ports.svg",
-      "sha256": "05b5227388b742ad34501750e4549f58470da34bae41c8c43461d7efe5dba704",
+      "sha256": "c1eef98bc508fdd45dc5548f861cf64f525254d0b1089ff37f960e1fb4195eca",
       "origin": "original editable SVG schematic",
-      "source": "assets/chapter-01/geometry-and-ports.svg"
+      "source": "assets/chapter-01/geometry-and-ports.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
       "asset": "assets/chapter-01/phasors.png",
@@ -107,9 +108,10 @@
     },
     {
       "asset": "assets/chapter-02/sheet-boundaries.svg",
-      "sha256": "1135b3a775a09eb7c3d77317a8ff263993d0c683ded7d38c0c5c312be6983c1c",
+      "sha256": "713ec8daed0fd9e7ebe959c61bd2790d16f0d119faaa55dce913e0d1e8b903af",
       "origin": "original editable SVG schematic",
-      "source": "assets/chapter-02/sheet-boundaries.svg"
+      "source": "assets/chapter-02/sheet-boundaries.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
       "asset": "assets/chapter-02/sheet-response.png",
@@ -141,9 +143,10 @@
     },
     {
       "asset": "assets/chapter-02/wave-geometry.svg",
-      "sha256": "b10cef58e08f97ddc3c50e27099b9672e69f072a239725f41ab5f768e8f3ec9e",
+      "sha256": "20279f3cca591f9fcdc2e5c25baa5b0b6483b366d33b772da0e9279729e87e5a",
       "origin": "original editable SVG schematic",
-      "source": "assets/chapter-02/wave-geometry.svg"
+      "source": "assets/chapter-02/wave-geometry.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
       "asset": "assets/chapter-03/fields.png",

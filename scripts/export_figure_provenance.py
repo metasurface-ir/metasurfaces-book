@@ -28,7 +28,10 @@ def inventory():
     rows = []
     for path in sorted((ROOT/'assets').glob('chapter-*/*')):
         if path.suffix not in ('.png', '.svg'): continue
-        key = hashlib.sha256(path.read_bytes()).hexdigest()
+        # Git normalizes editable SVG line endings across Windows/Linux.
+        raw = (path.read_text(encoding='utf-8').encode('utf-8')
+               if path.suffix == '.svg' else path.read_bytes())
+        key = hashlib.sha256(raw).hexdigest()
         row = dict(asset=path.relative_to(ROOT).as_posix(), sha256=key)
         if path.suffix == '.png':
             assert key in outputs, f'PNG does not match a saved notebook output: {path}'
@@ -36,7 +39,8 @@ def inventory():
         else:
             tree = ET.parse(path)
             assert not any(el.tag.endswith('image') for el in tree.iter()), 'Embedded raster image in schematic'
-            row.update(origin='original editable SVG schematic', source=row['asset'])
+            row.update(origin='original editable SVG schematic', source=row['asset'],
+                       sha256_basis='UTF-8 text with LF line endings')
         rows.append(row)
     return dict(scope='generation paths of book-owned chapter images; not a general reuse license', assets=rows)
 
