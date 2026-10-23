@@ -11,6 +11,7 @@ short_title: خانهٔ کتاب فارسی
 
 ## از کجا شروع کنم؟
 
+- جسم پشت هر نتیجه را در [چه چیزی را شبیه‌سازی می‌کنم؟](models.md) با برش سه‌بعدی و مقطع برچسب‌دار ببینید.
 - ابتدا [سرفصل فارسی](syllabus.md) و [فصل ۱: آشنایی با فراسطوح](chapters/01-metasurface-foundations.md)، [مثال‌ها](chapters/01-foundations-guide.md)، [خودآزمایی](chapters/01-foundations-review.md) و [آزمایشگاه نخست](labs/01-first-investigation.md) را ببینید.
 
 - [فصل ۲: موج‌های الکترومغناطیسی، مرزها و ورقه‌ها](chapters/02-waves-and-interfaces.md) را بخوانید و سه معمای آغاز فصل را پیش‌بینی کنید.

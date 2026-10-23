@@ -9,11 +9,13 @@ short_title: آزمایشگاه اعتبارسنجی عددی
 
 [فصل ۶](../chapters/06-numerical-methods.md) و [مثال‌های حل‌شده](../chapters/06-numerical-guide.md) را بخوانید. [دفترچهٔ اجراشده](../notebooks/06-numerical-methods.ipynb) مرجع اصلی محاسبه است. بستهٔ منبع شامل حل‌گر، دفترچه، دادهٔ مرجع، اعتبارسنج و کاوشگر مستقل است.
 
+پیش از خواندن نتایج، [راهنمای مدل و هندسه](../models.md) را ببینید. جسم، ابعاد، موج فرودی، جهت ناوردایی یا تکرار و صفحه‌های مرجع را در شکل مشخص کنید.
+
 ## کاوش شواهد ذخیره‌شده
 
 کنترل‌ها محاسبات ذخیره‌شدهٔ پایتون را انتخاب می‌کنند و در مرورگر معادلات ماکسول را حل نمی‌کنند. همهٔ مقدارها به لایهٔ منتشرشده و تنظیمات عددی مشخص مربوط‌اند. نمودارهای شهودی گسترده و نمایش‌های کلاسی برای سایت همراه درس کنار گذاشته شده‌اند.
 
-<iframe src="../interactives/numerical-explorer.html" title="کاوشگر اعتبارسنجی شبکه، میدان و مرز" width="100%" height="1130" loading="lazy" style="border:0;border-radius:14px"></iframe>
+<iframe src="../interactives/numerical-explorer.html" title="کاوشگر اعتبارسنجی شبکه، میدان و مرز" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
 [بازکردن کاوشگر](../interactives/numerical-explorer.html) · [دریافت منبع کامل قابل اجرا](../downloads/chapter-06-numerical.zip)
 

@@ -5,7 +5,7 @@
 <title>Unit-cell response library | Metasurface.ir</title>
 <style>
 :root{font-family:system-ui,sans-serif;color:#17334b;background:#f2f6fa;font-size:15px}*{box-sizing:border-box}body{margin:0;padding:18px}main{max-width:1060px;margin:auto}h1{font-size:clamp(1.5rem,4vw,2.2rem);margin:6px 0}h2{font-size:1.05rem;margin:0 0 10px}p{line-height:1.5}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;font-weight:750;color:#187b7c}.sub{color:#536779;font-size:.9rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:white;padding:17px;border:1px solid #dbe5ed;border-radius:14px;min-width:0}.wide{grid-column:1/-1}label{display:block;font-weight:650;margin-bottom:8px}input[type=range]{width:100%;accent-color:#147f85}input[type=number]{width:100%;padding:8px;border:1px solid #a8bac8;border-radius:6px;font:inherit}.controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}button{border:0;background:#176878;color:white;border-radius:7px;padding:9px 12px;font:inherit;cursor:pointer}.presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.presets button{background:#e7f1f3;color:#17556a}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.metric{background:#f1f6f9;padding:10px;border-radius:9px;font-size:.8rem}.metric strong{display:block;font-size:1.2rem;margin-top:4px}.good{color:#09694b}.bad{color:#a33d19}.plot{width:100%;display:block;overflow:visible}.bar{height:16px;border-radius:6px;overflow:hidden;background:#e9eff5;display:flex;margin:15px 0 8px}.bar span{display:block}#tbar{background:#16858c}#rbar{background:#dc8a44}.legend{font-size:.85rem}.status{padding:10px;border-radius:8px;background:#edf6f2;margin-top:12px;font-size:.9rem}.notice{border-left:4px solid #d49a3a;padding:8px 12px;background:#fff7e5}.small{font-size:.8rem}svg text{font-family:system-ui,sans-serif;fill:#395467;font-size:12px}output{font-variant-numeric:tabular-nums}.invalid{color:#a33d19;min-height:1.2rem}button:disabled{opacity:.5;cursor:default}@media(max-width:620px){body{padding:12px}.grid{grid-template-columns:1fr}.metrics{gap:5px}.metric{padding:8px}.metric strong{font-size:1.02rem}.controls{grid-template-columns:1fr}h1{line-height:1.2}}
-</style>
+.geometry-view{max-width:740px;margin:14px auto}.geometry-view svg{max-width:740px}.geometry-caption{font-size:.86rem;line-height:1.7;overflow-wrap:anywhere}.geometry-view text{font-size:19px}</style>
 <main>
 <div class="eyebrow">Metasurface.ir · Chapter 3</div>
 <h1>From width to complex response</h1>
@@ -16,7 +16,7 @@
 <label for="width">Width: <output id="width-value"></output> µm</label>
 <input id="width" type="range" min="0" max="49" value="25" step="1">
 <div class="presets"><button data-index="7">Narrow ridge</button><button data-index="25">Middle</button><button data-index="42">Wide ridge</button></div>
-<svg id="geometry" class="plot" viewBox="0 0 440 190" role="img" aria-label="Cross section of one periodic ridge unit cell"></svg>
+<div id="geometry" class="geometry-view"></div><p id="geometry-caption" class="geometry-caption" dir="auto"></p>
 <div class="metrics"><div class="metric">Transmission T<strong id="T"></strong></div><div class="metric">Reflection R<strong id="R"></strong></div><div class="metric">Phase of t<strong id="phase"></strong></div></div>
 <div class="bar" aria-hidden="true"><span id="tbar"></span><span id="rbar"></span></div><div class="legend">Teal: transmitted power · Orange: reflected power</div>
 <p id="convergence" class="small good"></p>
@@ -41,6 +41,7 @@
 <p id="span" class="small"></p><p class="small sub">The library passed analytic film tests, harmonic refinements, and a separate grcwa implementation comparison. Both implementations use RCWA; no FDTD/FEM or experimental comparison is claimed.</p>
 </section>
 </div></main>
+<script>__MODEL_GEOMETRY_JS__</script>
 <script id="library-data" type="application/json">__CH03_LIBRARY_DATA__</script>
 <script>
 'use strict';
@@ -57,8 +58,9 @@ function update(){
  $('width-value').textContent=number(row.width_um);$('T').textContent=number(row.T);$('R').textContent=number(row.R);$('phase').textContent=number(row.phase_deg,1)+'°';
  $('tbar').style.width=(100*row.T)+'%';$('rbar').style.width=(100*row.R)+'%';
  $('convergence').textContent='Convergence check passed · |Δt|='+row.delta_t.toExponential(2)+' · Δphase='+row.delta_phase_deg.toExponential(2)+'°';
- const ridgeWidth=row.width_um/.65*320;
- $('geometry').innerHTML=`<rect x="60" y="20" width="320" height="118" fill="#f3f7fa"/><rect x="60" y="138" width="320" height="28" fill="#bdd8e8"/><rect x="${220-ridgeWidth/2}" y="65" width="${ridgeWidth}" height="73" fill="#348891"/><path d="M60 20V166M380 20V166" stroke="#9eb5c4" stroke-dasharray="5 4"/><path d="M220 24V49m-5-6 5 6 5-6" fill="none" stroke="#17334b" stroke-width="2"/><text x="70" y="44">air</text><text x="70" y="158">substrate n=1.5</text><text x="220" y="104" text-anchor="middle" style="fill:white">n=2.4</text><text x="220" y="183" text-anchor="middle">period 0.65 µm</text>`;
+ const gp=library.metadata.parameters,fa=document.documentElement.lang==='fa';
+ $('geometry').innerHTML=BookGeometry.ridge(gp,[row.width_um],fa?'fa':'en');
+ $('geometry-caption').textContent=fa?'در این نتیجه، عرض تیغهٔ مرکزی انتخاب‌شده در تمام دوره‌ها تکرار می‌شود. نمای سه‌بعدی تنها برشی از تیغهٔ نامتناهی در y است؛ نقاط مرزی بنفش یک سلول را مشخص می‌کنند. r روی وجه بالا و t روی وجه پایین لایه تعریف شده‌اند.':'This result is for the selected ridge width repeated in every period. The 3D view shows a cut of ridges extending indefinitely along y. Purple dashed boundaries enclose one cell. Reflection r is at the top face; transmission t is at the bottom face.';
  const px=r=>220+112*r.t_real,py=r=>150-112*r.t_imag;
  const target=Number($('target').value),minT=Number($('minT').value);
  const valid=$('target').value.trim()!==''&&$('minT').value.trim()!==''&&Number.isFinite(target)&&target>=-180&&target<=180&&Number.isFinite(minT)&&minT>=0&&minT<=1;

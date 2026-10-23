@@ -35,3 +35,6 @@ The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, 6, and 10. It
 The build stages copies of shared data, figures, and simulation modules; contributors maintain one authoritative numerical source. The Persian ZIP contains the executable translated notebook and the shared model. Theme controls are localized by the small maintained layer in `styles/bilingual.js`; language direction and equation/code isolation are in `styles/bilingual.css`. When changing the theme, verify these controls again.
 
 Browser search is separate in each edition and searches the translated pages available in that edition. Existing English links remain valid. The site does not send book text to an external translation service.
+
+
+The [model and geometry guide](models.md), four original geometry figures, and model drawings in Chapters 1, 3, 5 and 6 explorers have Persian counterparts/labels. The geometry renderer is shared. Other existing scientific plot/interface labels retain the scope above.

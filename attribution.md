@@ -9,7 +9,7 @@ The explanations, numerical examples, and diagrams prepared for this book are wr
 
 ## Trace a figure to its source
 
-Every numerical PNG in `assets/chapter-*` is exported from a tagged saved output in an executed notebook. The machine-readable [figure provenance inventory](https://github.com/metasurface-ir/metasurfaces-book/blob/main/assets/provenance.json) records its notebook, cell tag, and SHA-256. Each chapter's asset README explains assumptions and the export command. The three editable SVG schematics were drawn for the book; the Persian Chapter 2 versions translate their labels. No paper screenshot or publisher figure is used in this inventory.
+Every numerical PNG in `assets/chapter-*` is exported from a tagged saved output in an executed notebook. The machine-readable [figure provenance inventory](https://github.com/metasurface-ir/metasurfaces-book/blob/main/assets/provenance.json) records its notebook, cell tag, and SHA-256. Each chapter's asset README explains assumptions and the export command. The seven editable SVG schematics were drawn for the book; the Persian Chapter 2 versions translate their labels. No paper screenshot or publisher figure is used in this inventory.
 
 To reuse a numerical result in the companion course site, retain its notebook path, parameters, model limits, and the source commit. Keep the generating code and data here as the authoritative source. A link to the figure's source is useful even when the other site displays an exported image.
 
@@ -32,3 +32,6 @@ The repository has **no general reuse license selected**. Contributors retain th
 ## References and scope
 
 References throughout the book support scientific context. Our restricted analytical and numerical examples do not reproduce the devices, datasets, or experimental claims of the cited papers. The provenance inventory documents the current assets' generation paths; it is not a legal certification of every possible future contribution.
+
+
+Four model drawings share the original renderer `templates/model-geometry.js`, exported by `node scripts/export_model_geometry.cjs` from the saved model parameter files. Persian labels use the same geometry implementation. These are original diagrams, not adapted publisher artwork.

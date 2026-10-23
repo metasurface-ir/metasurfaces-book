@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import zipfile
+from geometry_assets import embed_geometry
 
 ROOT=Path(__file__).resolve().parents[1]
 destination=ROOT/'assets/chapter-05';destination.mkdir(parents=True,exist_ok=True)
@@ -20,7 +21,7 @@ for notebook,tags in notebooks.items():
 data=json.loads((ROOT/'data/chapter-05/beam-steering.json').read_text())
 for name,digest in data['metadata']['source_sha256'].items():
     assert hashlib.sha256((ROOT/'simulations'/name).read_bytes()).hexdigest()==digest
-template=(ROOT/'templates/synthesis-explorer.html').read_text(encoding='utf-8')
+template=embed_geometry((ROOT/'templates/synthesis-explorer.html').read_text(encoding='utf-8'))
 assert template.count('__CH05_SYNTHESIS_DATA__')==1
 (ROOT/'interactives/synthesis-explorer.html').write_text(template.replace('__CH05_SYNTHESIS_DATA__',json.dumps(data,separators=(',',':'))),encoding='utf-8')
 files=['notebooks/05-beam-steering.ipynb','notebooks/05-wavefront-models.ipynb',
@@ -28,7 +29,8 @@ files=['notebooks/05-beam-steering.ipynb','notebooks/05-wavefront-models.ipynb',
        'requirements-labs.txt','requirements-validation.txt','scripts/validate_chapter05.py',
        'data/chapter-03/response-library.json','data/chapter-05/README.md',
        'data/chapter-05/beam-steering.json','data/chapter-05/extended-library.csv',
-       'data/chapter-05/wavefront-models.json','data/chapter-05/validation.json']
+       'data/chapter-05/wavefront-models.json','data/chapter-05/validation.json',
+       'interactives/synthesis-explorer.html','assets/chapter-05/supercell-geometry.svg']
 with zipfile.ZipFile(ROOT/'downloads/chapter-05-synthesis.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
     for file in files:archive.write(ROOT/file,file)
     archive.writestr('START-HERE.md','''# Chapter 5 source bundle

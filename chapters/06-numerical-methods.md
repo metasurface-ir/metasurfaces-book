@@ -11,6 +11,13 @@ In [Chapter 2](02-waves-and-interfaces.md), a planar film had an exact scatterin
 
 Use the [worked examples](06-numerical-guide.md), [interactive lab](../labs/06-numerical-lab.md), and [executed notebook](../notebooks/06-numerical-methods.ipynb). Prerequisites are Chapter 2, linear systems, and complex numbers; the RCWA comparison also uses Chapters 3–5. Study this methods strand before trusting a new response library.
 
+```{figure} ../assets/chapter-06/slab-geometry.svg
+:alt: A three-dimensional cut of the uniform film and a one-dimensional z grid, showing physical faces, incoming/reflected/transmitted waves and radiation boundaries.
+
+The benchmark object is a uniform film, infinite along x and y: d = 0.60 µm, film index 2.4, exterior index 1.0. Numerical nodes are not extra layers. This reference sketch shows N = 8 and zero exterior padding; the explorer updates mesh and padding labels from its controls.
+```
+
+
 ## What you should learn
 
 By the end, you should be able to choose a solver family for a specified geometry and observable, derive a small frequency-domain discretization, separate equation residual from prediction error, refine independent numerical controls, compare complex amplitudes at common reference planes, and write a reproducible acceptance statement.

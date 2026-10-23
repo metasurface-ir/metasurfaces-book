@@ -191,6 +191,15 @@
       ]
     },
     {
+      "asset": "assets/chapter-03/unit-cell-geometry.svg",
+      "sha256": "6c9403c2a92830faf9aa2b8ca5c49b11920d496fa5991f5fbca5c24e123fb53c",
+      "origin": "original editable SVG schematic",
+      "source": "templates/model-geometry.js",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "node scripts/export_model_geometry.cjs",
+      "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
+    },
+    {
       "asset": "assets/chapter-04/channel-maps.png",
       "sha256": "d79159983e27a8fe2c9009f46e6f227b59a0ee80859c12a240a37cd5d8106505",
       "origin": "original numerical notebook output",
@@ -303,6 +312,15 @@
       ]
     },
     {
+      "asset": "assets/chapter-05/supercell-geometry.svg",
+      "sha256": "c292ab10b446857ae48ef5283d707790db3f98e721e4fbe620419386abfa06f0",
+      "origin": "original editable SVG schematic",
+      "source": "templates/model-geometry.js",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "node scripts/export_model_geometry.cjs",
+      "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
+    },
+    {
       "asset": "assets/chapter-06/boundaries.png",
       "sha256": "24b96dc3efd3503ff7d87a93bf23d5a36ef6ae6d267116116811aff733ba54dd",
       "origin": "original numerical notebook output",
@@ -357,6 +375,24 @@
           ]
         }
       ]
+    },
+    {
+      "asset": "assets/chapter-06/slab-geometry.svg",
+      "sha256": "7f49d3037490690d7b9e056bd81ce4b465a05c72f667cd89a523e3d15474d9c4",
+      "origin": "original editable SVG schematic",
+      "source": "templates/model-geometry.js",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "node scripts/export_model_geometry.cjs",
+      "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
+    },
+    {
+      "asset": "assets/chapter-10/analytical-sheet.svg",
+      "sha256": "8cb50219bd6c087687e541624322a07b33557030f7ce4cbdc0c46241bbc8d416",
+      "origin": "original editable SVG schematic",
+      "source": "templates/model-geometry.js",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "node scripts/export_model_geometry.cjs",
+      "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
     },
     {
       "asset": "assets/chapter-10/inverse-comparison.png",

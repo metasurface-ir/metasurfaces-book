@@ -215,6 +215,11 @@
       "source": "notebooks/06-numerical-methods.ipynb",
       "translation": "translations/fa/notebooks/06-numerical-methods.ipynb",
       "route": "numerical-methods-1"
+    },
+    {
+      "source": "models.md",
+      "translation": "translations/fa/models.md",
+      "route": "models"
     }
   ]
 }

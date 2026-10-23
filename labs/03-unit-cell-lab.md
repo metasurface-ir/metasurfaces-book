@@ -11,6 +11,8 @@ short_title: Unit-cell computational lab
 
 **Question:** can a width sweep meet a desired transmission phase and power, and what evidence makes the resulting library reusable?
 
+Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
+
 ## A. Predict and inspect in your browser
 
 The explorer contains 50 saved full-wave TE ridge responses. Move the width slider and observe the geometry, complex transmission trajectory, phase, power, and convergence record. Enter a target phase and minimum transmitted power. Distinguish a nearest eligible candidate from one meeting the $5^\circ$ phase-error criterion.

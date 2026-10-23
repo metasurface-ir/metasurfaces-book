@@ -22,6 +22,8 @@ The investigation has four stages. Stage A is the completed analytical pilot, wi
 
 Use the [pilot guide](../chapters/10-pilot-guide.md) for the teaching sequence, worked examples, and report criteria.
 
+Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
+
 ## A. Learn a synthetic resonant response
 
 **Available:** [the executed starter notebook](../notebooks/10-resonant-surrogate.ipynb). It uses NumPy and Matplotlib, requires no GPU, and contains its data generator. The model is a synthetic lossless resonant sheet with a dimensionless design coordinate, as derived in Chapter 10.

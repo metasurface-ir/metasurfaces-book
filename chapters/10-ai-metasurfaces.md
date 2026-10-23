@@ -16,6 +16,13 @@ This chapter develops that workflow, from the electromagnetic problem to a learn
 The pilot includes this chapter, a [learning path and worked exercises](10-pilot-guide.md), two executed notebooks, and four [computational lab stages](../labs/13-ai-metasurfaces.md). Stage A is runnable with analytical data; Stages B-D specify future full-wave investigations. The examples demonstrate a learning workflow; they do not validate a fabricated geometry or a full-wave metasurface design.
 :::
 
+```{figure} ../assets/chapter-10/analytical-sheet.svg
+:alt: Ideal sheet model with incident, reflected and transmitted waves, explicitly without an assigned particle geometry.
+
+The executed AI pilot uses an analytical sheet response with an abstract design coordinate. No nanostructure is assigned to that coordinate. This drawing explains the scattering model; a physical ridge or other geometry requires the separate full-wave dataset stages.
+```
+
+
 ## 10.1 Learning goals and prerequisites
 
 After this chapter, you should be able to:

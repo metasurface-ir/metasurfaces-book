@@ -16,6 +16,13 @@ This computational chapter builds that chain of evidence. It follows the [Floque
 The reference run is a full-wave, frequency-domain calculation for a **one-dimensional dielectric ridge grating under TE illumination**. It includes analytical interface/film checks, harmonic refinements, a separate grcwa implementation comparison, near-field reconstruction, and 50 accepted library entries. A two-dimensional lattice of posts, a finite metasurface, TM polarization, material dispersion, and fabrication are outside this reference model. Additional FEM/FDTD and supercell investigations are prepared as lab extensions.
 :::
 
+```{figure} ../assets/chapter-03/unit-cell-geometry.svg
+:alt: The simulated ridge unit cell: three-dimensional cut and x-z section with periodic boundaries, dimensions, TE illumination and scattering reference planes.
+
+The reference width is 0.325 µm; the library sweeps w while keeping period, height and materials fixed. The ridges extend indefinitely along y and repeat along x. Purple dashed lines identify one unit cell. The lab drawing updates with the selected width.
+```
+
+
 ## 3.1 Outcomes and prerequisites
 
 After completing the investigation, you should be able to:

@@ -16,6 +16,13 @@ We develop a complete teaching example: a six-cell dielectric beam deflector, se
 The beam-steering case uses an original one-dimensional, lossless TE RCWA calculation for an infinitely repeated six-ridge supercell. It includes an expanded unit-cell library, four geometry sequences, all-channel powers, harmonic refinements, and a separate grcwa implementation comparison. Focusing uses scalar angular-spectrum propagation of a prescribed aperture field. Polarization uses ideal analytical Jones matrices. Neither is a full-wave finite metalens or a vector response calculation of the TE ridges. Materials are ideal real constant indices; fabrication and physical broadband performance are outside these runs.
 :::
 
+```{figure} ../assets/chapter-05/supercell-geometry.svg
+:alt: Three-dimensional cut and x-z cross-section of the expanded six-ridge supercell with ordered widths, common height, incident wave and period.
+
+This saved expanded design has h = 1.80 µm and L = 6Λ = 3.90 µm. All six ridges are solved together, and the entire sequence repeats. The case controls update widths and height together with the diffraction powers. Focusing and Jones examples later in this chapter are separate models.
+```
+
+
 ## 5.1 Outcomes and the synthesis chain
 
 By completing the chapter, you should be able to:

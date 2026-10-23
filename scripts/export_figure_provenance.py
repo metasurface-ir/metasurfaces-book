@@ -41,6 +41,10 @@ def inventory():
             assert not any(el.tag.endswith('image') for el in tree.iter()), 'Embedded raster image in schematic'
             row.update(origin='original editable SVG schematic', source=row['asset'],
                        sha256_basis='UTF-8 text with LF line endings')
+            if path.name in ('unit-cell-geometry.svg', 'supercell-geometry.svg', 'slab-geometry.svg', 'analytical-sheet.svg'):
+                generator = ROOT/'templates/model-geometry.js'
+                row.update(source='templates/model-geometry.js', export_command='node scripts/export_model_geometry.cjs',
+                           generator_sha256=hashlib.sha256(generator.read_text(encoding='utf-8').encode('utf-8')).hexdigest())
         rows.append(row)
     return dict(scope='generation paths of book-owned chapter images; not a general reuse license', assets=rows)
 
