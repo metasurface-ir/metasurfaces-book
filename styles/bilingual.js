@@ -47,6 +47,14 @@
       host.append(nav);
     }
     const prefix = config.base + (fa ? '/fa' : '');
+    // Static Pages adds a redirect for extensionless URLs without a final slash.
+    // Normalize authored and sidebar links before a click or opening a new tab.
+    for (const link of document.querySelectorAll('a[href]')) {
+      const url = new URL(link.getAttribute('href'), location.href);
+      if (url.origin !== location.origin || !url.pathname.startsWith(prefix + '/') || url.pathname.endsWith('/')) continue;
+      const candidate = decodeURIComponent(url.pathname.slice(prefix.length)).replace(/^\/+|\/+$/g, '');
+      if (config.routes.includes(candidate)) { url.pathname += '/';link.setAttribute('href', url.pathname + url.search + url.hash); }
+    }
     const route = decodeURIComponent(location.pathname.slice(prefix.length)).replace(/^\/+|\/+$/g, '');
     const paired = config.routes.includes(route);
     for (const a of nav.querySelectorAll('[data-lang]')) {

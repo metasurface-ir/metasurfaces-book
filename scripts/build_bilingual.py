@@ -99,9 +99,19 @@ def decorate(output, language):
         path.write_text(text, encoding='utf-8', newline='\n')
     for name in ('bilingual.js', 'bilingual.css'):
         shutil.copy2(ROOT / 'styles' / name, output / name)
+    # Persian layout must be correct before JavaScript or React starts. Keep the
+    # document attributes untouched for hydration, but apply direction in CSS.
+    bilingual_css = (output / 'bilingual.css').read_text(encoding='utf-8')
+    if language == 'fa':
+        bilingual_css = 'html{direction:rtl}\n' + bilingual_css.replace('html[lang=fa]', 'html')
+        (output / 'bilingual.css').write_text(bilingual_css, encoding='utf-8', newline='\n')
+    theme_css = output / 'myst-theme.css'
+    theme_text = theme_css.read_text(encoding='utf-8')
+    # Avoid an extra stylesheet request on every document navigation.
+    theme_text = theme_text.replace('@import url("./bilingual.css");', bilingual_css)
+    theme_css.write_text(theme_text, encoding='utf-8', newline='\n')
     # Resolve imports at the deployed theme URL, not at styles/book.css.
     # Reject paths outside this edition even if a permissive local server serves them.
-    theme_css = output / 'myst-theme.css'
     for href in re.findall(r'@import\s+url\([\"\x27]?([^\"\x27)]+)', theme_css.read_text(encoding='utf-8')):
         resolved = urlparse(urljoin(f'https://book.invalid{target_base}/myst-theme.css', href))
         if resolved.netloc != 'book.invalid':
