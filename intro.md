@@ -14,6 +14,7 @@ The companion course website will provide conceptual lessons and course guidance
 
 **English | فارسی:** the [Persian edition](https://metasurface-ir.github.io/metasurfaces-book/fa/) covers every developed chapter (1, 2, 3, 4, 5, 6, and 10), its guides and labs, all nine notebook narratives, and the syllabus. See [translation status and contribution instructions](translations.md) for coverage and review status.
 
+- Identify the object behind each result in [What am I simulating?](models.md), with 3D cuts and labeled sections.
 - Read the [ten-chapter syllabus](syllabus.md).
 - Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), its [six worked examples](chapters/01-foundations-guide.md), and the [first computational investigation](labs/01-first-investigation.md).
 - Explore [Chapter 2: Waves, Interfaces, and Sheets](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).

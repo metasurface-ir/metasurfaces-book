@@ -8,6 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 import zipfile
+from geometry_assets import embed_geometry
 
 ROOT = Path(__file__).resolve().parents[1]
 nb = json.loads((ROOT/'notebooks/03-unit-cell-library.ipynb').read_text(encoding='utf-8'))
@@ -23,13 +24,14 @@ for tag, name in {'ch03-fields':'fields.png', 'ch03-library':'library.png', 'ch0
 library_path = ROOT/'data/chapter-03/response-library.json'
 library = json.loads(library_path.read_text())
 assert library['metadata']['source_sha256'] == hashlib.sha256((ROOT/'simulations/unit_cell_te.py').read_bytes()).hexdigest()
-template = (ROOT/'templates/unit-cell-explorer.html').read_text(encoding='utf-8')
+template = embed_geometry((ROOT/'templates/unit-cell-explorer.html').read_text(encoding='utf-8'))
 assert template.count('__CH03_LIBRARY_DATA__') == 1
 (ROOT/'interactives/unit-cell-explorer.html').write_text(template.replace('__CH03_LIBRARY_DATA__', json.dumps(library, separators=(',', ':'))), encoding='utf-8')
 files = ['notebooks/03-unit-cell-library.ipynb', 'simulations/unit_cell_te.py',
          'requirements-labs.txt', 'requirements-validation.txt', 'scripts/validate_chapter03.py',
          'data/chapter-03/response-library.json', 'data/chapter-03/response-library.csv',
-         'data/chapter-03/validation.json', 'data/chapter-03/README.md']
+         'data/chapter-03/validation.json', 'data/chapter-03/README.md',
+         'interactives/unit-cell-explorer.html', 'assets/chapter-03/unit-cell-geometry.svg']
 download = ROOT/'downloads/chapter-03-unit-cell.zip'
 download.parent.mkdir(exist_ok=True)
 with zipfile.ZipFile(download, 'w', compression=zipfile.ZIP_DEFLATED) as archive:

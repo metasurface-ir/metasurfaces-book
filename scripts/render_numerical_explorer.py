@@ -6,6 +6,7 @@ This script reads numerical results and never launches a physics solver.
 import argparse
 import hashlib
 import json
+from geometry_assets import embed_geometry
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,7 +29,7 @@ def render(output_path, language='en', data_path=None):
         raise ValueError('The explorer requires the declared eight saved mesh cases.')
     if len(data['padding']) != 195:
         raise ValueError('The explorer requires three complete saved padding sweeps.')
-    template = (ROOT/'templates/numerical-explorer.html').read_text(encoding='utf-8')
+    template = embed_geometry((ROOT/'templates/numerical-explorer.html').read_text(encoding='utf-8'))
     if template.count(MARKER) != 1:
         raise ValueError('The template must contain exactly one numerical data marker.')
     embedded = json.dumps(data, separators=(',', ':'), ensure_ascii=False, allow_nan=False)

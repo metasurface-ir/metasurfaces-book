@@ -12,6 +12,7 @@ project:
     - title: راهنمای دوره
       children:
         - file: syllabus.md
+        - file: models.md
         - file: getting-started.md
         - file: contributing.md
         - file: translations.md

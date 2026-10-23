@@ -33,7 +33,7 @@ files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.
          'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py',
          'scripts/validate_chapter06.py', 'requirements-labs.txt',
          'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json',
-         'interactives/numerical-explorer.html']
+         'interactives/numerical-explorer.html','assets/chapter-06/slab-geometry.svg']
 files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'data/chapter-06').glob('*')) if p.is_file()]
 with zipfile.ZipFile(ROOT/'downloads/chapter-06-numerical.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
     for name in files: archive.write(ROOT/name, name)

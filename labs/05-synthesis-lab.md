@@ -11,6 +11,8 @@ short_title: Synthesis computational lab
 
 **Question:** how much of a target wavefront survives sampling, response constraints, and interactions between different elements?
 
+Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
+
 ## A. Predict the effect of a geometry sequence
 
 Switch between the expanded library, original limited library, identical ridges, and reversed sequence. Compare incident-normalized desired-order power, the fraction conditional on transmission, local-mask estimates, and the full-wave order table. The reversed sequence's desired order is $m=-1$.

@@ -63,6 +63,11 @@ def prepare_persian():
         (STAGE / row['source']).write_text(json.dumps(original, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     export(STAGE)
     render(STAGE / 'interactives/numerical-explorer.html', language='fa')
+    # Model drawings share one implementation, with Persian labels selected by lang.
+    for name in ('unit-cell-explorer.html', 'synthesis-explorer.html', 'foundations-explorer.html'):
+        path = STAGE / 'interactives' / name
+        value = path.read_text(encoding='utf-8').replace('<html lang="en">', '<html lang="fa">', 1)
+        path.write_text(value, encoding='utf-8', newline='\n')
     # Localized bundles preserve their original shared code/data and filenames.
     # Replace only notebook narratives with the assembled executable notebooks.
     import zipfile
@@ -71,7 +76,7 @@ def prepare_persian():
             with zipfile.ZipFile(STAGE / 'downloads' / name, 'w', compression=zipfile.ZIP_DEFLATED) as translated_zip:
                 for item in original.infolist():
                     path = STAGE / item.filename
-                    contents = path.read_bytes() if path.is_file() and (item.filename.startswith('notebooks/') or item.filename in ('downloads/chapter-01-report-template.md', 'interactives/numerical-explorer.html')) else original.read(item)
+                    contents = path.read_bytes() if path.is_file() and (item.filename.startswith(('notebooks/', 'assets/')) or item.filename in ('downloads/chapter-01-report-template.md', 'interactives/numerical-explorer.html', 'interactives/unit-cell-explorer.html', 'interactives/synthesis-explorer.html', 'interactives/foundations-explorer.html')) else original.read(item)
                     if item.filename == 'START-HERE.md':
                         contents = ('# بستهٔ فارسی کتاب فراسطوح\n\nکل بسته را استخراج و ساختار پوشه‌ها را حفظ کنید. متن دفترچه فارسی و کد و داده با مرجع انگلیسی مشترک است. راهنمای اجرای اصلی در ادامه آمده است.\n\n').encode('utf-8') + contents
                     translated_zip.writestr(item, contents)

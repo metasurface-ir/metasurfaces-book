@@ -9,11 +9,13 @@ short_title: Numerical validation lab
 
 Read [Chapter 6](../chapters/06-numerical-methods.md) and its [worked examples](../chapters/06-numerical-guide.md). The [executed notebook](../notebooks/06-numerical-methods.ipynb) is the authoritative calculation. The source bundle contains the solver, notebook, reference data, validator, and standalone explorer.
 
+Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
+
 ## Explore the saved evidence
 
 The controls select saved Python calculations; they do not solve Maxwell's equations in the browser. All values correspond to the published slab and specified numerical settings. Broad intuition diagrams and classroom demonstrations are reserved for the companion course site.
 
-<iframe src="../interactives/numerical-explorer.html" title="Mesh, field and boundary validation explorer" width="100%" height="1130" loading="lazy" style="border:0;border-radius:14px"></iframe>
+<iframe src="../interactives/numerical-explorer.html" title="Mesh, field and boundary validation explorer" width="100%" height="1650" loading="lazy" style="border:0;border-radius:14px"></iframe>
 
 [Open the explorer](../interactives/numerical-explorer.html) · [Download complete executable sources](../downloads/chapter-06-numerical.zip)
 

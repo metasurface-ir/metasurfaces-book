@@ -11,6 +11,8 @@ short_title: First computational investigation
 
 **Question:** can we change transmission phase without reflecting power, and what assumptions make that possible?
 
+Before reading the results, use the [model and geometry guide](../models.md). Identify the object, dimensions, incident wave, invariant/repeated directions, and reference planes in the drawing.
+
 ## A. Predict and explore
 
 Before clicking a preset, predict $R$, $T$, and whether transmission phase is meaningful. Compare no response, electric-like only, balanced, and detuned channels. Move the illumination frequency away from resonance and vary the two strengths.

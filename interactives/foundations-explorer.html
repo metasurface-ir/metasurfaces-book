@@ -2,10 +2,10 @@
 <title>First metasurface model | Metasurface.ir</title>
 <style>
 :root{font:15px system-ui,sans-serif;color:#18384f;background:#f1f6fa}*{box-sizing:border-box}body{margin:0;padding:16px}main{max-width:1040px;margin:auto}h1{font-size:clamp(1.45rem,4vw,2.1rem);margin:6px 0}h2{font-size:1.05rem;margin:0 0 12px}p{line-height:1.5}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:#157d83;font-weight:750}.sub{color:#516c7e;font-size:.9rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:white;border:1px solid #dbe5ed;border-radius:14px;padding:16px;min-width:0}.wide{grid-column:1/-1}.presets{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}button{background:#e8f1f5;border:1px solid #d4e2e9;border-radius:8px;padding:9px 12px;font:inherit;color:#17384f;cursor:pointer}button[aria-pressed=true],#download{background:#146f7b;color:white}label{display:block;font-weight:650;font-size:.88rem;margin:13px 0 4px}input[type=range]{width:100%;accent-color:#15818b}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:13px 0}.metric{padding:9px;border-radius:8px;background:#f0f6f9;font-size:.8rem}.metric strong{display:block;font-size:1.2rem;margin-top:5px}.plot{width:100%;display:block}svg text{font:12px system-ui,sans-serif;fill:#3c586b}.notice{border-left:4px solid #d29a3a;background:#fff7e6;padding:9px 12px}.small{font-size:.8rem}.good{color:#09694f}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{padding:8px;border-bottom:1px solid #e3eaf0;text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}.bar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:#e7eef4}.bar span{display:block}#rbar{background:#d98c42}#tbar{background:#16818b}@media(max-width:620px){body{padding:12px}.grid{grid-template-columns:1fr}.metric{padding:8px}.metric strong{font-size:1.05rem}.metrics{gap:5px}}
-</style>
+.geometry-view{max-width:740px;margin:14px auto}.geometry-view svg{max-width:740px}.geometry-caption{font-size:.86rem;line-height:1.7;overflow-wrap:anywhere}.geometry-view text{font-size:19px}</style>
 <main><div class="eyebrow">Metasurface.ir · Chapter 1</div><h1>Can a sheet change phase without reflecting?</h1><p class="sub">Explore an analytical, lossless sheet with two response channels. This model has no assigned geometry and does not run a full-wave solver.</p>
 <div class="presets" role="group" aria-label="Choose a response"><button data-preset="transparent">No response</button><button data-preset="electric">Electric-like only</button><button data-preset="balanced" aria-pressed="true">Balanced pair</button><button data-preset="detuned">Detuned pair</button></div>
-<div class="grid"><section class="card"><h2>1. Set the experiment</h2>
+<section class="card"><h2 id="geometry-title">What is this model?</h2><div id="geometry" class="geometry-view"></div><p id="geometry-caption" class="geometry-caption" dir="auto"></p></section><div class="grid"><section class="card"><h2>1. Set the experiment</h2>
 <label for="frequency">Illumination frequency: <output id="f-value"></output> THz</label><input id="frequency" type="range" min="120" max="280" step="1" value="200">
 <label for="ae">Electric-like strength: <output id="ae-value"></output></label><input id="ae" type="range" min="0" max="0.8" step="0.01" value="0.25">
 <label for="am">Magnetic-like strength: <output id="am-value"></output></label><input id="am" type="range" min="0" max="0.8" step="0.01" value="0.25">
@@ -15,6 +15,101 @@
 <div class="bar" aria-hidden="true"><span id="rbar"></span><span id="tbar"></span></div><p class="small">Orange: R · Teal: T</p><p id="phase-note" class="small notice"></p></section>
 <section class="card"><h2>2. Inspect complex transmission</h2><svg id="phasor" class="plot" viewBox="0 0 440 320" role="img" aria-label="Complex reflection and transmission phasors"></svg><p class="small">Teal: transmission t · Orange: reflection r. The dashed circle has unit field amplitude. Equal exterior impedances make squared field ratios equal the specular power fractions.</p><div class="scroll"><table><thead><tr><th>Coefficient</th><th>Real part</th><th>Imaginary part</th></tr></thead><tbody id="coefficients"></tbody></table></div><p id="balance" class="small good"></p></section>
 <section class="card wide"><h2>3. Interpret the result</h2><p id="interpretation"></p><button id="download">Download this experiment</button><p class="small notice">Perfect matching over an entire frequency sweep is imposed when the two channels are identical. It is not evidence for a real broadband, lossless metasurface.</p><p class="small sub">Assumptions: normal incidence; equal real impedance on both sides; one polarization; only specular reflection/transmission; reciprocal mirror-symmetric sheet; no absorption, diffraction, polarization conversion, geometry, or experiment. Time dependence exp(−iωt); both reference planes are at the ideal sheet.</p></section></div></main>
+<script>/* Original course schematics. Drawing only: no electromagnetic solver lives here.
+ * Shared by exported SVG figures and offline interactive labs. Length inputs: um.
+ */
+(() => {
+  'use strict';
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+  const f=x=>Number(x).toFixed(3).replace(/0+$/,'').replace(/\.$/,'');
+  const text=(x,y,s,extra='')=>`<text x="${x}" y="${y}" ${extra}>${esc(s)}</text>`;
+  const line=(x1,y1,x2,y2,color='#647d90',extra='')=>`<path d="M${x1} ${y1}L${x2} ${y2}" fill="none" stroke="${color}" stroke-width="2" ${extra}/>`;
+  const rect=(x,y,w,h,color,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${color}" ${extra}/>`;
+  const arrow=(x1,y1,x2,y2,color='#174b68')=>line(x1,y1,x2,y2,color,'marker-end="url(#geom-arrow)"');
+  const dim=(x1,y1,x2,y2,label)=>line(x1,y1,x2,y2,'#4b6173','marker-start="url(#geom-dim)" marker-end="url(#geom-dim)"')+text((x1+x2)/2,(y1+y2)/2-9,label,'text-anchor="middle"');
+  function svg(title,description,body,height=680){
+    return `<svg xmlns="http://www.w3.org/2000/svg" class="model-geometry" viewBox="0 0 800 ${height}" role="img" aria-label="${esc(title)}"><title>${esc(title)}</title><desc>${esc(description)}</desc><defs><marker id="geom-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="context-stroke"/></marker><marker id="geom-dim" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M10 0L0 5L10 10" fill="none" stroke="#4b6173" stroke-width="1.5"/></marker></defs><style>.model-geometry{width:100%;height:auto;display:block;background:#f8fbfd;border-radius:12px;direction:ltr}.model-geometry text{font:19px Tahoma,Arial,sans-serif;fill:#23465c}.model-geometry .small{font-size:16px}.model-geometry .heading{font-size:21px;font-weight:700}.model-geometry .label{fill:#fff;font-weight:700}</style>${body}</svg>`;
+  }
+  const words=fa=>fa?{
+    ridge:'سلول واحد تیغه‌ای دی‌الکتریک',supercell:'ابرسلول انحراف پرتو',view:'نمای سه‌بعدی؛ برش نمایشی در راستای y',section:'مقطع x–z و صفحه‌های مرجع',air:'محیط فرودی',substrate:'زیرلایه',periodic:'مرز تناوبی',repeat:'تکرار نامحدود در x',invariant:'ناوردا در y؛ ستون منفرد نیست',schematic:'طرح هندسی؛ مقیاس دیدها یکسان نیست',input:'تابش TE',reflected:'بازتاب r',transmitted:'عبور t',slab:'لایهٔ تخت برای آزمون عددی',slabView:'برش سه‌بعدی از لایهٔ نامحدود در x و y',mesh:'شبکه فقط در راستای z است',outgoing:'مرز تابشی گسسته',padding:'فاصلهٔ بیرونی',sheet:'ورقهٔ ایده‌آل؛ مدل تحلیلی',sheetView:'مدل دو‌درگاهی؛ هندسهٔ ذره تعیین نشده است',sheetNote:'نتیجهٔ این مدل، شبیه‌سازی ذرهٔ سه‌بعدی نیست',dimension:'ضخامت صفر؛ هر دو مرجع روی ورقه',node:'نقطه‌ها گرهٔ عددی‌اند؛ لایهٔ مادی نیستند'
+  }:{ridge:'Dielectric ridge unit cell',supercell:'Beam-steering supercell',view:'3D view: illustrative cut along y',section:'x–z section and reference planes',air:'Incident medium',substrate:'Substrate',periodic:'Periodic boundary',repeat:'Repeats indefinitely along x',invariant:'Invariant along y; not isolated posts',schematic:'Schematic: views use different scales',input:'TE illumination',reflected:'Reflection r',transmitted:'Transmission t',slab:'Uniform slab: numerical benchmark',slabView:'3D cut: film extends indefinitely in x and y',mesh:'Only z is discretized',outgoing:'Discrete radiation boundary',padding:'Exterior padding',sheet:'Ideal sheet: analytical model',sheetView:'Two-port model; no particle geometry assigned',sheetNote:'This response is not a simulated 3D particle',dimension:'Zero thickness; both references on the sheet',node:'Dots are numerical nodes, not material layers'};
+  function ridge(p,widths,language='en'){
+    const w=words(language==='fa'),multi=widths.length>1,pitch=p.period_um||p.pitch_um,h=p.height_um,L=pitch*widths.length;
+    const shown=multi?widths:[widths[0],widths[0],widths[0]],displayL=pitch*shown.length;
+    let s=text(28,34,multi?w.supercell:w.ridge,'class="heading"')+text(28,62,w.view,'class="small"');
+    // Orthographic extrusion with visible cut ends; material dimensions remain explicit.
+    const scale=Math.min(570/displayL,155/h),span=displayL*scale,left=(800-span-75)/2,base=265,depth=64;
+    const poly=(points,color)=>`<polygon points="${points.map(v=>v.join(',')).join(' ')}" fill="${color}" stroke="#4c758a" stroke-width="1.2"/>`;
+    s+=poly([[left,base],[left+span,base],[left+span+depth,base-40],[left+depth,base-40]],'#d6e9f4');
+    s+=poly([[left,base],[left+span,base],[left+span,base+23],[left,base+23]],'#a8cadf');
+    for(let j=shown.length-1;j>=0;j--){
+      const x=left+(j+.5)*pitch*scale-shown[j]*scale/2,rw=shown[j]*scale,top=base-h*scale;
+      s+=poly([[x,top],[x+rw,top],[x+rw+depth,top-40],[x+depth,top-40]],'#68bfc0');
+      s+=poly([[x+rw,top],[x+rw+depth,top-40],[x+rw+depth,base-40],[x+rw,base]],'#1b677b');
+      s+=poly([[x,top],[x+rw,top],[x+rw,base],[x,base]],multi||j===1?'#16828c':'#86bfc4');
+    }
+    const a=multi?left:left+pitch*scale,b=multi?left+span:left+2*pitch*scale;
+    for(const x of [a,b])s+=line(x,82,x,base+31,'#8b699b','stroke-dasharray="7 5"');
+    s+=dim(a,310,b,310,`${multi?'L':'Λ'} = ${f(L)} µm`)+text(400,340,w.repeat+' · '+w.invariant,'text-anchor="middle" class="small"');
+    s+=arrow(58,142,58,209)+text(79,162,'+z')+arrow(58,142,118,142)+text(126,148,'x')+arrow(58,142,89,119)+text(95,115,'y');
+    s+=text(28,379,w.section,'class="heading"');
+    const x0=110,x1=684,z0=464,z1=577,cell=(x1-x0)/widths.length;
+    s+=rect(x0,408,x1-x0,z1-408,'#edf4f8')+rect(x0,z1,x1-x0,39,'#c3deed');
+    for(let j=0;j<widths.length;j++){
+      const rw=widths[j]/pitch*cell,x=x0+(j+.5)*cell-rw/2;
+      s+=rect(x,z0,rw,z1-z0,'#16828c',`data-width-um="${widths[j]}"`);
+      if(multi)s+=text(x0+(j+.5)*cell,z0+27,String(j+1),'text-anchor="middle" class="label small"');
+    }
+    s+=line(90,z0,710,z0,'#9a5e3d','stroke-dasharray="7 4"')+line(90,z1,710,z1,'#9a5e3d','stroke-dasharray="7 4"');
+    for(const x of [x0,x1])s+=line(x,405,x,622,'#8b699b','stroke-dasharray="7 5"');
+    s+=text(116,435,`${w.air}: nᵢ = ${f(p.n_incident)}`,'class="small"')+text(118,604,`${w.substrate}: nₜ = ${f(p.n_substrate)}`,'class="small"');
+    s+=text(697,469,'z = 0','class="small"')+text(697,582,'z = h','class="small"');
+    s+=arrow(315,409,315,459)+text(334,421,'kᵢ (+z)','class="small"')+text(334,444,'E ∥ y (TE)','class="small"');
+    s+=arrow(560,455,560,409)+text(582,428,'r','class="heading"')+arrow(560,589,560,632)+text(582,627,'t','class="heading"');
+    s+=dim(73,z0,73,z1,`h`)+dim(x0,648,x1,648,`${multi?'L = '+widths.length+'Λ':'Λ'} = ${f(L)} µm`);
+    if(!multi)s+=dim((x0+x1)/2-widths[0]/pitch*cell/2,548,(x0+x1)/2+widths[0]/pitch*cell/2,548,'w');
+    s+=text(28,691,`h = ${f(h)} µm · nᵣ = ${f(p.n_ridge)} · n_gap = ${f(p.n_gap)} · λ₀ = ${f(p.wavelength_um)} µm`,'class="small"');
+    s+=text(28,721,`${multi?'wⱼ ≈':'w ='} ${widths.map(f).join(', ')} µm`,'class="small"');
+    return svg(multi?w.supercell:w.ridge,w.invariant,s,744).replace('<svg ',`<svg data-model="${multi?'supercell':'ridge'}" data-height-um="${h}" data-period-um="${L}" `);
+  }
+  function slab(p,N=8,padding=0,language='en'){
+    const w=words(language==='fa'),d=p.thickness_um,n=p.n_exterior;
+    let s=text(28,34,w.slab,'class="heading"')+text(28,62,w.slabView,'class="small"');
+    s+=`<path d="M180 105H585L665 70H260Z" fill="#8ed0cb" stroke="#247d87"/><path d="M180 105H585V245H180Z" fill="#24919b"/><path d="M585 105L665 70V210L585 245Z" fill="#1b667a"/>`;
+    s+=text(370,182,`nᶠ = ${f(p.n_film)}`,'text-anchor="middle" class="label"')+dim(138,105,138,245,`d`);
+    s+=arrow(390,75,390,101)+text(421,96,'kᵢ (+z)')+arrow(560,263,560,298)+text(584,288,'t');
+    s+=text(400,334,`${w.mesh} · d = ${f(d)} µm`,'text-anchor="middle"');
+    s+=text(28,377,w.section,'class="heading"');
+    const left=140,right=660,top=441,bottom=552;
+    s+=rect(left,397,right-left,bottom-397,'#eef5f8')+rect(left,top,right-left,bottom-top,'#9bd3ce')+rect(left,bottom,right-left,74,'#eef5f8');
+    s+=text(155,426,`nₑ = ${f(n)}`)+text(155,503,`nᶠ = ${f(p.n_film)}`)+text(155,608,`nₑ = ${f(n)}`);
+    for(const y of [top,bottom])s+=line(120,y,690,y,'#9a5e3d','stroke-dasharray="7 4"');
+    s+=text(697,446,'z = 0','class="small"')+text(697,557,'z = d','class="small"');
+    // Display a sparse subset for large N: positions still come from the actual grid.
+    const indices=N<=16?Array.from({length:N+1},(_,i)=>i):[0,1,2,N/2,N-2,N-1,N];
+    s+=line(400,409,400,603,'#6f7f91');
+    for(const j of indices)s+=`<circle cx="400" cy="${top+(bottom-top)*j/N}" r="${N<=16?4:3}" fill="#173e58" data-node-index="${j}"/>`;
+    const bcTop=padding?397:top,bcBottom=padding?626:bottom;
+    s+=line(120,bcTop,690,bcTop,'#855696','stroke-dasharray="3 4"')+line(120,bcBottom,690,bcBottom,'#855696','stroke-dasharray="3 4"');
+    s+=text(65,bcTop+5,'BC−','class="small"')+text(65,bcBottom+5,'BC+','class="small"');
+    s+=arrow(560,401,560,435)+text(582,424,'kᵢ')+arrow(609,435,609,400)+text(628,424,'r')+arrow(560,564,560,610)+text(582,606,'t');
+    s+=text(28,656,`N = ${N} · Δz = d/N = ${Number(d/N).toPrecision(4)} µm · ${w.node}`,'class="small"');
+    s+=text(28,686,`${w.padding}: ${padding} Δz = ${f(padding*d/N)} µm / side`,'class="small"');
+    s+=text(28,716,`${w.outgoing} · ${N>16?(language==='fa'?'بخشی از گره‌ها نمایش داده شده':'subset of nodes shown'):w.schematic}`,'class="small"');
+    return svg(w.slab,w.slabView,s,744).replace('<svg ',`<svg data-model="slab" data-cells="${N}" data-padding-cells="${padding}" data-domain-left-um="${-padding*d/N}" data-domain-right-um="${d+padding*d/N}" `);
+  }
+  function sheet(language='en'){
+    const w=words(language==='fa');
+    let s=text(28,34,w.sheet,'class="heading"')+text(28,65,w.sheetView,'class="small"');
+    s+=`<path d="M180 205L570 205L660 145L270 145Z" fill="#9bd5d4" stroke="#197c87" stroke-width="3"/>`;
+    s+=arrow(340,91,340,186)+text(367,117,language==='fa'?'موج فرودی':'Incident wave')+arrow(440,186,440,98)+text(463,123,'r')+arrow(440,225,440,316)+text(463,293,'t');
+    s+=text(205,236,'z = 0')+text(400,355,w.dimension,'text-anchor="middle"')+text(400,391,w.sheetNote,'text-anchor="middle" class="small"');
+    return svg(w.sheet,w.sheetView,s,420);
+  }
+  globalThis.BookGeometry={ridge,slab,sheet};
+  if(typeof module!=='undefined'&&module.exports)module.exports=globalThis.BookGeometry;
+})();
+</script>
 <script>
 'use strict';const $=id=>document.getElementById(id),presets={transparent:{ae:0,am:0,fm:200},electric:{ae:.25,am:0,fm:200},balanced:{ae:.25,am:.25,fm:200},detuned:{ae:.25,am:.25,fm:230}};
 function channel(f,f0,a){if(a===0)return {re:1,im:0};const u=f/f0,d=1-u*u,v=a*u,den=d*d+v*v;return {re:(d*d-v*v)/den,im:2*d*v/den};}
@@ -24,7 +119,7 @@ function compute(p){
  const ce=channel(p.frequency,p.fe,p.ae),cm=channel(p.frequency,p.fm,p.am),r={re:(ce.re-cm.re)/2,im:(ce.im-cm.im)/2},t={re:(ce.re+cm.re)/2,im:(ce.im+cm.im)/2},R=r.re*r.re+r.im*r.im,T=t.re*t.re+t.im*t.im;
  return {ce,cm,r,t,R,T,phase_deg:Math.sqrt(T)>1e-12?Math.atan2(t.im,t.re)*180/Math.PI:null,balance_error:Math.abs(1-R-T)};
 }
-function render(){
+function render(){const fa=document.documentElement.lang==='fa';$('geometry').innerHTML=BookGeometry.sheet(fa?'fa':'en');$('geometry-title').textContent=fa?'مدل چه چیزی است؟':'What is this model?';$('geometry-caption').textContent=fa?'ورقه، پاسخ معادل دو‌درگاهی دارد؛ شکل ذره، ضخامت و مادهٔ واقعی برای آن تعیین نشده‌اند. خروجی این آزمایش پاسخ تحلیلی ورقه است.':'The sheet has an equivalent two-port response. No particle shape, physical thickness or measured material is assigned; this experiment calculates an analytical sheet response.';
  const p={frequency:Number($('frequency').value),fe:200,fm:Number($('fm').value),ae:Number($('ae').value),am:Number($('am').value)},v=compute(p);
  $('f-value').textContent=p.frequency.toFixed(0);$('fm-value').textContent=p.fm.toFixed(0);$('ae-value').textContent=p.ae.toFixed(2);$('am-value').textContent=p.am.toFixed(2);
  $('R').textContent=(v.R*100).toFixed(2)+'%';$('T').textContent=(v.T*100).toFixed(2)+'%';$('phase').textContent=v.phase_deg===null?'Undefined':v.phase_deg.toFixed(1)+'°';$('rbar').style.width=(100*v.R)+'%';$('tbar').style.width=(100*v.T)+'%';

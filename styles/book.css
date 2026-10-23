@@ -18,7 +18,7 @@
 .unit-cell-explorer-frame div:has(> iframe) {
   padding-bottom: 0 !important;
   width: 100% !important;
-  height: 1080px;
+  height: 1550px;
 }
 
 .unit-cell-explorer-frame iframe {
@@ -29,7 +29,7 @@
 .synthesis-explorer-frame div:has(> iframe) {
   padding-bottom: 0 !important;
   width: 100% !important;
-  height: 1160px;
+  height: 1600px;
 }
 
 .synthesis-explorer-frame iframe {
@@ -40,7 +40,7 @@
 .foundations-explorer-frame div:has(> iframe) {
   padding-bottom: 0 !important;
   width: 100% !important;
-  height: 1120px;
+  height: 1500px;
 }
 
 .foundations-explorer-frame iframe {
