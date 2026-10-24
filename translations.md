@@ -16,6 +16,7 @@ The Persian edition covers every developed chapter: 1, 2, 3, 4, 5, 6, and 10. It
 | All twelve notebook narratives | Available; numerical cells and saved outputs are shared |
 | Chapter 2 interactive controls and interpretation | Available; same JavaScript equations as English |
 | Chapter 6 browser explorer | Fully localized controls, captions, and interpretation; shared saved numerical data |
+| Chapter 4 Floquet explorer and expanded derivations | Persian controls, structure/phasor labels and field interpretation; paired proofs and shared notebook calculations |
 | Two Chapter 2 schematics | Persian labels available |
 | Computational plots, numerical tables and other shared scientific browser tools | Shared English scientific labels; Persian captions, lab instructions and glossary explain them |
 | Syllabus, lab index/template, glossary, setup, and contribution instructions | Available |
