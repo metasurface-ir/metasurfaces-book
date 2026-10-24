@@ -110,6 +110,33 @@ $$
 
 The bound is stricter than the normal-incidence-only condition $\Lambda<1.55\,\mu\mathrm m$. Equality permits a grazing order at the edge of the scan. If the output index or wavelength changes, recalculate the bound rather than treating half-wavelength spacing as a universal rule.
 
+## Example 7: a visible field without outward power
+
+Use the outgoing-field figure in the chapter. Let $n_o=1$, $q_m=1.2$, and $\lambda_0=1.55\,\mu\mathrm m$. The channel is outside the light cone, so its outward normal wavenumber is imaginary:
+
+$$
+\alpha=\frac{2\pi}{1.55}\sqrt{1.2^2-1}\,\mu\mathrm m^{-1},\qquad
+L_E=\frac1\alpha\approx0.3719\,\mu\mathrm m,\qquad
+L_{|E|^2}=\frac1{2\alpha}\approx0.1860\,\mu\mathrm m.
+$$
+
+At $s=L_E$ the amplitude is $e^{-1}$ and its squared magnitude is $e^{-2}$. For this isolated TE harmonic, $\operatorname{Re}\kappa=0$, so the time-averaged normal flux is zero everywhere. The surface-parallel phase variation remains visible. On reflection, substitute $s=-z$; the outgoing field decays as you move to more negative laboratory $z$.
+
+**Check visually:** choose a closed order in the browser and move the time-phase slider. The fringes move along the surface; the envelope and its decay length stay fixed. Explain why this pattern can matter in interface matching even though it contributes no outgoing normal power.
+
+## Example 8: the width of a finite-array beam
+
+For the reference air case, the positive first-order maximum is at $\theta_1\approx31.109^\circ$. Take $N=24$ equal prescribed sources with spacing $\Lambda=3\,\mu\mathrm m$ and $\lambda_0=1.55\,\mu\mathrm m$. The first nulls satisfy
+
+$$
+\sin\theta_{\rm null}=\frac{1.55}{3}\pm\frac{1.55}{24\cdot3},\qquad
+\theta_{\rm null}\approx29.679^\circ,\ 32.561^\circ.
+$$
+
+The exact full width between these nulls is approximately $2.882^\circ$. Doubling $N$ halves their separation in sine-angle coordinates exactly and approximately halves the angular width away from grazing. The notebook compares the direct complex sum with the geometric-series expression and checks these zeros.
+
+**Read the model:** these are array-factor nulls. An element radiation pattern, nonuniform illumination, coupling, or an actual Maxwell solution can change the full device pattern. Do not label this width as the measured beamwidth of the schematic ridges.
+
 ## Report checklist
 
 Retain the conventions and units, primitive-period argument, parameters, order-enumeration bounds, cutoff tolerance, open-order sets, signed angles, and the notebook's analytical assertions. Discuss one case where an open order has zero amplitude and one reason why a closed order still matters in a solver.

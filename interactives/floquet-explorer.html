@@ -6,7 +6,7 @@
 <title>Floquet Channel Explorer | Metasurface.ir</title>
 <style>
 :root{color-scheme:light;--ink:#173044;--muted:#506373;--line:#d9e2e8;--teal:#087f83;--gold:#b36b10;--paper:#f7f9fb}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:22px}header small{color:var(--teal);font-weight:750;letter-spacing:.08em}h1{font-size:clamp(23px,4vw,34px);line-height:1.15;margin:9px 0 12px}p{margin:8px 0 16px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:18px;padding:7px 12px;color:var(--ink);background:white}button:hover,button:focus-visible{border-color:var(--teal);outline:2px solid #b9e3e3}button.active{background:#e2f1f1;border-color:var(--teal)}.presets{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.control{background:white;padding:12px;border:1px solid var(--line);border-radius:12px;min-width:0}.control label{display:block;font-weight:650;font-size:13px}.control input[type=number]{width:100%;border:1px solid var(--line);border-radius:5px;margin:7px 0;padding:5px 7px;color:var(--ink)}input[type=range]{accent-color:var(--teal);width:100%;margin:5px 0}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.stat{background:#eaf3f4;border-radius:10px;padding:12px}.stat strong{display:block;font-size:22px}.stat span{font-size:12px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;margin:12px 0;min-width:0}.panel h2{font-size:18px;margin:0 0 8px}.visuals{display:grid;grid-template-columns:1.05fr 1fr;gap:12px}.visuals .panel{margin:0}svg{display:block;width:100%;height:auto}svg text{font:14px system-ui,sans-serif;fill:var(--ink)}.note{font-size:13px;color:var(--muted)}.key{display:flex;flex-wrap:wrap;gap:15px;font-size:13px}.key b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.table-wrap{overflow-x:auto;max-width:100%;margin-top:10px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:8px 7px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#f1f5f8}td.number{font-variant-numeric:tabular-nums}.badge{font-size:12px;border-radius:15px;padding:2px 8px;background:#edf0f3}.open{background:#d8f0ea;color:#075e52}.grazing{background:#fff0d4;color:#865006}.closed{color:#5f6f7d}.table-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}select{padding:5px;border:1px solid var(--line);border-radius:5px}#error{color:#9c2c2c;font-weight:650;min-height:0}footer{font-size:12px;color:var(--muted);margin-top:20px}a{color:#087984}details{margin-top:12px}summary{cursor:pointer;font-weight:650}code{font-family:ui-monospace,monospace;font-size:.92em}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,sans-serif}main{max-width:1080px;margin:auto;padding:22px}header small{color:var(--teal);font-weight:750;letter-spacing:.08em}h1{font-size:clamp(23px,4vw,34px);line-height:1.15;margin:9px 0 12px}p{margin:8px 0 16px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:18px;padding:7px 12px;color:var(--ink);background:white}button:hover,button:focus-visible{border-color:var(--teal);outline:2px solid #b9e3e3}button.active{background:#e2f1f1;border-color:var(--teal)}.presets{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.control{background:white;padding:12px;border:1px solid var(--line);border-radius:12px;min-width:0}.control label{display:block;font-weight:650;font-size:13px}.control input[type=number]{width:100%;border:1px solid var(--line);border-radius:5px;margin:7px 0;padding:5px 7px;color:var(--ink)}input[type=range]{accent-color:var(--teal);width:100%;margin:5px 0}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.stat{background:#eaf3f4;border-radius:10px;padding:12px}.stat strong{display:block;font-size:22px}.stat span{font-size:12px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;margin:12px 0;min-width:0}.panel h2{font-size:18px;margin:0 0 8px}.visuals{display:grid;grid-template-columns:1.05fr 1fr;gap:12px}.visuals .panel{margin:0}svg{display:block;width:100%;height:auto;direction:ltr}canvas{display:block;width:100%;height:auto;direction:ltr;border-radius:8px}.field-controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:12px 0}.field-controls label{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.field-controls input[type=range]{width:160px}.field-controls select{max-width:100%}.formula{direction:ltr;text-align:center;background:#edf5f5;border-radius:8px;padding:9px;font-family:ui-monospace,monospace;overflow-wrap:anywhere}.field-reading{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.field-reading div{border-inline-start:3px solid var(--teal);padding:5px 9px}.field-reading strong{display:block;direction:ltr;text-align:start;font-size:16px}.field-reading span{font-size:12px}.invalid{opacity:.45}.motif-label{display:flex;flex-wrap:wrap;gap:8px;align-items:center}html[dir=rtl] th,html[dir=rtl] td{text-align:right}td.number,input[type=number]{direction:ltr}html[dir=rtl] .key b{margin-left:5px;margin-right:0}@media(max-width:500px){.field-reading{grid-template-columns:1fr}.field-reading strong{font-size:15px}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}.controls{grid-template-columns:1fr 1fr}.table-wrap{direction:ltr}.visuals svg text{font-size:16px}}svg text{font:14px system-ui,sans-serif;fill:var(--ink)}.note{font-size:13px;color:var(--muted)}.key{display:flex;flex-wrap:wrap;gap:15px;font-size:13px}.key b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.table-wrap{overflow-x:auto;max-width:100%;margin-top:10px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:8px 7px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#f1f5f8}td.number{font-variant-numeric:tabular-nums}.badge{font-size:12px;border-radius:15px;padding:2px 8px;background:#edf0f3}.open{background:#d8f0ea;color:#075e52}.grazing{background:#fff0d4;color:#865006}.closed{color:#5f6f7d}.table-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}select{padding:5px;border:1px solid var(--line);border-radius:5px}#error{color:#9c2c2c;font-weight:650;min-height:0}footer{font-size:12px;color:var(--muted);margin-top:20px}a{color:#087984}details{margin-top:12px}summary{cursor:pointer;font-weight:650}code{font-family:ui-monospace,monospace;font-size:.92em}
 @media(max-width:760px){.visuals{grid-template-columns:1fr}main{padding:14px}.stat{padding:9px}.stat strong{font-size:18px}.stats{gap:6px}.panel{padding:12px}}
 @media(prefers-reduced-motion:no-preference){button{transition:background .15s,border-color .15s}}
 </style>
@@ -34,10 +34,28 @@
 <div class="stat"><strong id="r-count">3 open</strong><span id="r-detail">Reflection</span></div>
 <div class="stat"><strong id="phase">0.0°</strong><span>Bloch phase along +x, modulo 360°</span></div>
 </div>
+<section class="panel" id="geometry-panel">
+<div class="table-head"><h2>What actually repeats?</h2><label class="motif-label" for="motif">Illustrative motif <select id="motif"><option value="six">Six distinct elements</option><option value="single">One element per repeat</option></select></label></div>
+<p class="note">The rectangles are symbolic ridges in an x–z cross-section, invariant along y. Their widths and height are illustrative; no scattering amplitudes have been solved. Λ is always the actual structural repeat used in the channel calculation.</p>
+<svg id="geometry" viewBox="0 0 900 220" role="img" aria-label="Repeated ridge motif with pitch, full period and Bloch phase arrows"></svg>
+<p id="geometry-note" class="note"></p>
+<div class="formula" id="bloch-equation"></div>
+<p class="note">Phasors compare the same field component at equivalent points, normalized to a nonzero reference value. Move the incidence slider: identical geometry can repeat while its complex field acquires a phase.</p>
+</section>
 <div class="visuals">
 <section class="panel"><h2>Outgoing directions</h2><svg id="rays" viewBox="0 0 600 370" role="img" aria-label="Allowed reflected and transmitted directions"></svg><p class="note">Equal-length arrows mark directions. They do not represent intensity. Grazing channels run along the interface; closed orders are listed in the table.</p></section>
 <section class="panel"><h2>Tangential wavevectors</h2><svg id="momentum" viewBox="0 0 600 370" role="img" aria-label="Floquet wavevectors inside and outside the two output light cones"></svg><div class="key"><span><b style="background:#087f83"></b>Open</span><span><b style="background:#b36b10"></b>Grazing</span><span><b style="background:#9ba7b5"></b>Closed</span></div><p class="note">The shaded interval is |kₓ/k₀| &lt; n for that side. A larger index widens it. Every dot shares the same Bloch multiplier.</p></section>
 </div>
+<section class="panel" id="field-panel">
+<h2>Follow one outgoing harmonic</h2>
+<p class="note">Select a side in the table below, then choose an order. The field is normalized to unit amplitude at the surface; its pattern is an analytical basis wave, not a computed device field.</p>
+<div class="field-controls"><label for="field-order">Order to inspect <select id="field-order"></select></label><label for="time-phase">Time phase ωt <input type="range" id="time-phase" min="0" max="360" step="5" value="0"><output id="time-value" for="time-phase">0°</output></label></div>
+<div class="formula">Re E/E₀ = exp(−Im κ · s) cos(kₓx + Re κ · s − ωt)</div>
+<canvas id="field-canvas" width="1050" height="410" role="img" aria-label="Real outgoing harmonic field and amplitude envelope versus outward distance"></canvas>
+<div class="field-reading" aria-live="polite"><div><span>Selected channel</span><strong id="field-state"></strong></div><div><span>Amplitude decay length 1/α</span><strong id="decay-length"></strong></div><div><span>TE normal-flux factor Re(κ/k₀)</span><strong id="flux-factor"></strong></div></div>
+<p class="note" id="field-note"></p>
+<p class="note">The outward coordinate is s = +z on transmission and s = −z on reflection, with the interface at z = 0. For fixed TE electric-field amplitude, the flux factor is proportional to normal power in a real, positive permeability medium. It is not a diffraction efficiency.</p>
+</section>
 <section class="panel">
 <div class="table-head"><h2>Order-by-order result</h2><label for="side">Show <select id="side"><option value="transmission">Transmission</option><option value="reflection">Reflection</option></select></label></div>
 <div class="table-wrap" tabindex="0" aria-label="Scrollable channel results"><table><thead><tr><th scope="col">Order m</th><th scope="col">kₓ/k₀</th><th scope="col">State</th><th scope="col">Signed angle</th><th scope="col">Outward κ/k₀</th></tr></thead><tbody id="results"></tbody></table></div>
@@ -49,13 +67,107 @@
 <script>
 'use strict';
 const TOL=1e-10, NS='http://www.w3.org/2000/svg';
+const IS_FA=document.documentElement.lang==='fa';
+const lex={
+ "Floquet Channel Explorer | Metasurface.ir": "کاوشگر کانال‌های فلوکه | Metasurface.ir",
+ "METASURFACE.IR · CHAPTER 4": "METASURFACE.IR · فصل ۴",
+ "Which orders can propagate?": "کدام مرتبه‌ها منتشر می‌شوند؟",
+ "Predict an order set, change one parameter, and check the result. These are analytical channel directions; their amplitudes and efficiencies require a scattering solution.": "مجموعهٔ مرتبه‌ها را پیش‌بینی کنید، یک پارامتر را تغییر دهید و نتیجه را بررسی کنید. این جهت‌ها از روابط تحلیلی کانال‌ها به دست می‌آیند؛ دامنه و بازده آن‌ها به حل مسئلهٔ پراکندگی نیاز دارد.",
+ "Reference examples": "مثال‌های مرجع",
+ "Six-element repeat": "تکرار شش‌عنصری",
+ "Smaller period": "دورهٔ کوچک‌تر",
+ "Glass output": "محیط خروجی شیشه",
+ "Exact cutoff": "قطع دقیق",
+ "Oblique incidence": "تابش مایل",
+ "Full period Λ (μm)": "دورهٔ کامل Λ (μm)",
+ "Wavelength λ₀ (μm)": "طول موج λ₀ (μm)",
+ "Incidence angle (°)": "زاویهٔ تابش (°)",
+ "Incident index nᵢ": "ضریب شکست ورودی nᵢ",
+ "Transmitted index nₜ": "ضریب شکست خروجی nₜ",
+ "Period slider": "تنظیم دوره",
+ "Wavelength slider": "تنظیم طول موج",
+ "Incidence angle slider": "تنظیم زاویهٔ تابش",
+ "Incident index slider": "تنظیم ضریب شکست ورودی",
+ "Transmitted index slider": "تنظیم ضریب شکست خروجی",
+ "Bloch phase along +x, modulo 360°": "فاز بلوخ در راستای +x، به پیمانهٔ ۳۶۰ درجه",
+ "What actually repeats?": "چه چیزی واقعاً تکرار می‌شود؟",
+ "Illustrative motif": "الگوی شماتیک",
+ "Six distinct elements": "شش عنصر متفاوت",
+ "One element per repeat": "یک عنصر در هر دوره",
+ "The rectangles are symbolic ridges in an x–z cross-section, invariant along y. Their widths and height are illustrative; no scattering amplitudes have been solved. Λ is always the actual structural repeat used in the channel calculation.": "مستطیل‌ها نمایش نمادین تیغه‌ها در مقطع x–z و یکنواخت در راستای y هستند. عرض و ارتفاع آن‌ها صرفاً شماتیک است و دامنهٔ پراکندگی حل نشده است. Λ همواره دورهٔ واقعی ساختار در محاسبهٔ کانال‌ها است.",
+ "Repeated ridge motif with pitch, full period and Bloch phase arrows": "الگوی تیغه‌های تکراری همراه با گام، دورهٔ کامل و بردارهای فاز بلوخ",
+ "Phasors compare the same field component at equivalent points, normalized to a nonzero reference value. Move the incidence slider: identical geometry can repeat while its complex field acquires a phase.": "فازورها یک مؤلفهٔ میدان را در نقاط معادل، پس از نرمال‌سازی به یک مقدار مرجع ناصفر، مقایسه می‌کنند. زاویهٔ تابش را تغییر دهید: هندسه تکرار می‌شود، اما میدان مختلط آن می‌تواند اختلاف فاز داشته باشد.",
+ "Six distinct widths repeat after Λ = 6p. If all six became identical, the primitive repeat would become p; using Λ would merely relabel the harmonics, with only m divisible by six allowed by symmetry.": "شش عرض متفاوت پس از Λ = 6p تکرار می‌شوند. اگر هر شش عنصر یکسان شوند، دورهٔ بنیادی p خواهد بود؛ استفاده از Λ فقط نام‌گذاری هارمونیک‌ها را تغییر می‌دهد و تقارن تنها مرتبه‌های m بخش‌پذیر بر شش را مجاز می‌کند.",
+ "One element repeats after p = Λ. The smaller-period preset illustrates this primitive-cell description.": "یک عنصر پس از p = Λ تکرار می‌شود. مثال «دورهٔ کوچک‌تر» این توصیف سلول بنیادی را نشان می‌دهد.",
+ "Outgoing directions": "جهت‌های خروجی",
+ "Allowed reflected and transmitted directions": "جهت‌های مجاز بازتاب و عبور",
+ "Equal-length arrows mark directions. They do not represent intensity. Grazing channels run along the interface; closed orders are listed in the table.": "پیکان‌های هم‌اندازه فقط جهت را نشان می‌دهند و بیانگر شدت نیستند. کانال‌های مماسی در امتداد فصل مشترک قرار دارند؛ مرتبه‌های بسته در جدول آمده‌اند.",
+ "Tangential wavevectors": "بردارهای موج مماسی",
+ "Floquet wavevectors inside and outside the two output light cones": "بردارهای موج فلوکه درون و بیرون دو مخروط نوری",
+ "Open": "باز",
+ "Grazing": "مماسی",
+ "Closed": "بسته",
+ "open": "باز",
+ "grazing": "مماسی",
+ "closed": "بسته",
+ "The shaded interval is |kₓ/k₀| < n for that side. A larger index widens it. Every dot shares the same Bloch multiplier.": "بازهٔ رنگی شرط |kₓ/k₀| < n را برای همان سمت نشان می‌دهد. ضریب شکست بزرگ‌تر این بازه را گسترش می‌دهد. ضریب بلوخ همهٔ نقطه‌ها یکسان است.",
+ "Follow one outgoing harmonic": "یک هارمونیک خروجی را دنبال کنید",
+ "Select a side in the table below, then choose an order. The field is normalized to unit amplitude at the surface; its pattern is an analytical basis wave, not a computed device field.": "ابتدا سمت خروجی را در جدول پایین و سپس یک مرتبه را انتخاب کنید. دامنهٔ میدان روی سطح برابر یک در نظر گرفته شده است؛ الگو یک موج پایهٔ تحلیلی است و میدان حل‌شدهٔ یک دستگاه نیست.",
+ "Order to inspect": "مرتبهٔ مورد بررسی",
+ "Time phase ωt": "فاز زمانی ωt",
+ "Real outgoing harmonic field and amplitude envelope versus outward distance": "قسمت حقیقی میدان هارمونیک خروجی و پوش دامنه بر حسب فاصلهٔ رو به بیرون",
+ "Selected channel": "کانال انتخاب‌شده",
+ "Amplitude decay length 1/α": "طول افت دامنه 1/α",
+ "TE normal-flux factor Re(κ/k₀)": "ضریب شار عمودی TE: Re(κ/k₀)",
+ "The outward coordinate is s = +z on transmission and s = −z on reflection, with the interface at z = 0. For fixed TE electric-field amplitude, the flux factor is proportional to normal power in a real, positive permeability medium. It is not a diffraction efficiency.": "با قرار دادن فصل مشترک در z = 0، مختصات رو به بیرون برای عبور s = +z و برای بازتاب s = −z است. برای دامنهٔ ثابت میدان الکتریکی TE در محیطی با تراوایی حقیقی و مثبت، این ضریب متناسب با توان عمودی است؛ این کمیت بازده پراش نیست.",
+ "Real field: one normalized harmonic": "میدان حقیقی: یک هارمونیک نرمال‌شده",
+ "Amplitude envelope": "پوش دامنه",
+ "∞ (no exponential decay)": "∞ (بدون افت نمایی)",
+ "Evanescent: phase varies along x, while the amplitude decays away from the surface. This isolated harmonic carries zero time-averaged normal power in the lossless exterior. The intensity decay length is half the amplitude decay length.": "میرا: فاز در راستای x تغییر می‌کند و دامنه با دور شدن از سطح کاهش می‌یابد. این هارمونیک منفرد در محیط بیرونی بی‌اتلاف توان عمودی میانگین زمانی حمل نمی‌کند. طول افت شدت نصف طول افت دامنه است.",
+ "Grazing: the phase varies only parallel to the surface at exact cutoff. For bounded field amplitude, the normal flux is zero. The numerical cutoff classification uses a tolerance of 10⁻¹⁰.": "مماسی: در قطع دقیق، فاز تنها موازی سطح تغییر می‌کند. برای دامنهٔ میدان محدود، شار عمودی صفر است. طبقه‌بندی عددی قطع با تلرانس ۱۰⁻¹⁰ انجام می‌شود.",
+ "Propagating: tilted phase fronts extend into the exterior without exponential decay. Their normal phase gradient is Re κ. Changing the time phase moves the phase fronts, not the envelope.": "منتشرشونده: جبهه‌های فاز بدون افت نمایی در محیط بیرونی ادامه می‌یابند. گرادیان عمودی فاز برابر Re κ است. تغییر فاز زمانی جبهه‌های فاز را جابه‌جا می‌کند، اما پوش ثابت می‌ماند.",
+ "Each field panel rescales its axes to resolve the selected wave; read the axis limits when comparing orders.": "مقیاس محورهای نمودار برای نمایش روشن موج انتخاب‌شده تنظیم می‌شود؛ هنگام مقایسهٔ مرتبه‌ها به حدود محورها توجه کنید.",
+ "Order-by-order result": "نتیجهٔ هر مرتبه",
+ "Show": "نمایش",
+ "Transmission": "عبور",
+ "Reflection": "بازتاب",
+ "Order m": "مرتبهٔ m",
+ "State": "وضعیت",
+ "Signed angle": "زاویهٔ علامت‌دار",
+ "Outward κ/k₀": "κ/k₀ رو به بیرون",
+ "Scrollable channel results": "جدول پیمایش‌پذیر نتایج کانال‌ها",
+ "Equations, signs, and limits": "روابط، قرارداد علامت و محدودیت‌ها",
+ "Original teaching tool · Metasurface.ir · No external scripts, data, or network requests are required. Read Chapter 4 and run the companion notebook for derivations, power-normalization checks, and finite-array examples.": "ابزار آموزشی تألیفی · Metasurface.ir · بدون نیاز به اسکریپت یا دادهٔ بیرونی و درخواست شبکه. برای اثبات روابط، بررسی نرمال‌سازی توان و مثال‌های آرایهٔ محدود، فصل ۴ و دفترچهٔ همراه را مطالعه و اجرا کنید.",
+ "Incident / reflected side": "سمت تابش و بازتاب",
+ "Transmitted side": "سمت عبور",
+ "Equally spaced kₓ/k₀ values; labels show order m": "مقادیر هم‌فاصلهٔ kₓ/k₀؛ برچسب‌ها مرتبهٔ m هستند",
+ "undefined": "تعریف‌نشده",
+ "none": "هیچ‌کدام",
+ "Open orders: ": "مرتبه‌های باز: ",
+ "Closed neighbors are included for context. No channel power has been calculated.": "مرتبه‌های بستهٔ مجاور نیز برای مقایسه آمده‌اند. توان هیچ کانالی محاسبه نشده است.",
+ "Use positive finite lengths and indices, and incidence strictly between −90° and 90°.": "طول‌ها و ضرایب شکست باید مثبت و متناهی باشند و زاویهٔ تابش باید اکیداً بین ۹۰− و ۹۰ درجه باشد.",
+ "This parameter range needs too many orders for the teaching explorer.": "این محدودهٔ پارامترها به تعداد مرتبه‌ای بیش از ظرفیت این کاوشگر آموزشی نیاز دارد.",
+ "Results are not updated: enter valid parameters within the displayed control ranges.": "نتایج به‌روز نشده‌اند: پارامترهای معتبر در محدودهٔ مشخص‌شده وارد کنید."
+};
+const tr=value=>IS_FA?(lex[value]||value):value;
+if(IS_FA){
+ document.documentElement.dir='rtl';document.title=tr(document.title);
+ const walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;
+ while((node=walk.nextNode())){if(['SCRIPT','STYLE'].includes(node.parentElement.tagName))continue;const key=node.nodeValue.trim();if(lex[key])node.nodeValue=node.nodeValue.replace(key,lex[key]);}
+ document.querySelectorAll('[aria-label]').forEach(el=>el.setAttribute('aria-label',tr(el.getAttribute('aria-label'))));
+ const notes=document.querySelectorAll('details p');
+ notes[0].textContent='قرارداد زمانی exp(−iωt)، قرارداد مکانی exp(ik·r)، تابش از z < 0 و تناوب در راستای x است. با تعریف qᵢ = nᵢ sin θᵢ داریم qₘ = qᵢ + mλ₀/Λ. مرتبه برای |qₘ| < n باز، در تساوی مماسی و برای مقدار بزرگ‌تر میرا است.';
+ notes[1].textContent='ریشهٔ عمودی نمایش‌داده‌شده در مختصات رو به بیرون κ/k₀ = √(n² − qₘ²) است. در مختصات آزمایشگاه، k_z برای عبور +κ و برای بازتاب −κ است. میدان بستهٔ خروجی در هر دو نیم‌فضا میرا می‌شود. تلرانس بی‌بُعد قطع روی |qₘ/n| − 1 برابر ۱۰⁻¹⁰ است. کانال بسته زاویهٔ حقیقی میدان دور ندارد.';
+ notes[2].textContent='همهٔ مرتبه‌های بالقوهٔ باز، همراه با دو همسایهٔ بسته در بیرون کران‌های محافظه‌کارانه، خودکار شمارش می‌شوند. ضرایب شکست حقیقی و مثبت و kᵧ = 0 است. این مدل محیط‌های اتلافی یا ناهمسانگرد را طبقه‌بندی نمی‌کند و دامنه، جذب یا بازده فراسطح را به دست نمی‌دهد.';
+}
+
 const presets={six:{period:3,wavelength:1.55,theta:0,ni:1,no:1},primitive:{period:.5,wavelength:1.55,theta:0,ni:1,no:1},glass:{period:3,wavelength:1.55,theta:0,ni:1,no:1.5},cutoff:{period:1.55,wavelength:1.55,theta:0,ni:1,no:1},oblique:{period:.8,wavelength:1.55,theta:45,ni:1,no:1.5}};
 const rad=x=>x*Math.PI/180, deg=x=>x*180/Math.PI;
 function compute(p,n){
- if(![p.period,p.wavelength,p.theta,p.ni,n].every(Number.isFinite)||Math.min(p.period,p.wavelength,p.ni,n)<=0||Math.abs(p.theta)>=90)throw Error('Use positive finite lengths and indices, and incidence strictly between −90° and 90°.');
+ if(![p.period,p.wavelength,p.theta,p.ni,n].every(Number.isFinite)||Math.min(p.period,p.wavelength,p.ni,n)<=0||Math.abs(p.theta)>=90)throw Error(tr('Use positive finite lengths and indices, and incidence strictly between −90° and 90°.'));
  const qi=p.ni*Math.sin(rad(p.theta)),step=p.wavelength/p.period,pad=TOL*n/step;
  const lo=Math.floor((-n-qi)/step-pad)-2,hi=Math.ceil((n-qi)/step+pad)+2;
- if(hi-lo+1>10000)throw Error('This parameter range needs too many orders for the teaching explorer.');
+ if(hi-lo+1>10000)throw Error(tr('This parameter range needs too many orders for the teaching explorer.'));
  const rows=[];
  for(let m=lo;m<=hi;m++){
   const q=qi+m*step,d=Math.abs(q/n)-1,state=d < -TOL?'open':d > TOL?'closed':'grazing';
@@ -70,7 +182,7 @@ function drawRays(p,r,t){
  const svg=document.getElementById('rays');svg.replaceChildren();
  const defs=svgNode(svg,'defs');for(const [id,color]of [['t','#087f83'],['r','#65758c'],['i','#b36b10']]){const marker=svgNode(defs,'marker',{id:'arrow-'+id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:6,markerHeight:6,orient:'auto-start-reverse'});svgNode(marker,'path',{d:'M 0 0 L 10 5 L 0 10 z',fill:color});}
  const cx=300,cy=185,L=140;svgNode(svg,'rect',{x:0,y:cy,width:600,height:185,fill:'#eef8f6'});line(svg,20,cy,580,cy,'#aebac5');line(svg,cx,20,cx,350,'#d6dce2',1,{'stroke-dasharray':'4 5'});
- svgNode(svg,'text',{x:12,y:22},'Incident / reflected side, nᵢ='+p.ni);svgNode(svg,'text',{x:12,y:353},'Transmitted side, nₜ='+p.no);
+ svgNode(svg,'text',{x:12,y:22},tr('Incident / reflected side')+', nᵢ='+p.ni);svgNode(svg,'text',{x:12,y:353},tr('Transmitted side')+', nₜ='+p.no);
  line(svg,cx-L*Math.sin(rad(p.theta)),cy-L*Math.cos(rad(p.theta)),cx,cy,'#b36b10',2,{'stroke-dasharray':'6 5','marker-end':'url(#arrow-i)'});
  function rays(rows,sign,id,color){const visible=rows.filter(x=>x.state!=='closed');for(const row of visible){const a=rad(row.angle),x=cx+L*Math.sin(a),y=cy+sign*L*Math.cos(a);line(svg,cx,cy,x,y,row.state==='grazing'?'#b36b10':color,2,{'marker-end':'url(#arrow-'+id+')'});if(visible.length<=11||row.m===0)svgNode(svg,'text',{x:x+6,y:y+sign*17,'text-anchor':row.angle>60?'end':'start','font-size':13},(id==='r'?'r':'t')+' m='+row.m);}}
  rays(r,-1,'r','#65758c');rays(t,1,'t','#087f83');svgNode(svg,'circle',{cx,cy,r:4,fill:'#173044'});
@@ -81,28 +193,65 @@ function drawMomentum(p,r,t){
  const x=q=>45+(q+maxQ)/(2*maxQ)*510;
  for(const [row,rows,n,label]of [[0,r,p.ni,'Reflection'],[1,t,p.no,'Transmission']]){
   const y=105+row*145;
-  svgNode(svg,'text',{x:20,y:y-55},label+' light cone: n='+n);
+  svgNode(svg,'text',{x:20,y:y-55},tr(label)+' · n='+n);
   svgNode(svg,'rect',{x:x(-n),y:y-16,width:x(n)-x(-n),height:32,fill:'#dff0ef',rx:3});
   line(svg,30,y,570,y,'#ccd5dc',1);
   for(const q of [-n,n])line(svg,x(q),y-23,x(q),y+23,'#173044',1);
   for(const value of rows){const color={open:'#087f83',grazing:'#b36b10',closed:'#9ba7b5'}[value.state];svgNode(svg,'circle',{cx:x(value.q),cy:y,r:5,fill:color});if(rows.length<=17||value.m===0)svgNode(svg,'text',{x:x(value.q),y:y+43,'text-anchor':'middle','font-size':12},value.m);}
  }
- svgNode(svg,'text',{x:300,y:355,'text-anchor':'middle'},'Equally spaced kₓ/k₀ values; labels show order m');
+ svgNode(svg,'text',{x:300,y:355,'text-anchor':'middle'},tr('Equally spaced kₓ/k₀ values; labels show order m'));
 }
-function renderTable(){const rows=window.floquetState[document.getElementById('side').value],body=document.getElementById('results');body.replaceChildren();for(const row of rows){const tr=document.createElement('tr');const values=[row.m,row.q.toFixed(5),row.state,row.angle===null?'undefined':row.angle.toFixed(2)+'°',row.kzImag>0?'i '+row.kzImag.toFixed(5):row.kzReal.toFixed(5)];values.forEach((value,index)=>{const td=document.createElement('td');td.textContent=value;if(index===2){const badge=document.createElement('span');badge.className='badge '+row.state;badge.textContent=value;td.replaceChildren(badge);}else td.className='number';tr.append(td);});body.append(tr);}const set=rows.filter(x=>x.state==='open').map(x=>x.m);document.getElementById('order-summary').textContent='Open orders: '+(set.length?set.join(', '):'none')+'. '+rows.filter(x=>x.state==='grazing').length+' grazing. Closed neighbors are included for context. No channel power has been calculated.';}
+function renderTable(){
+ const rows=window.floquetState[document.getElementById('side').value],body=document.getElementById('results');body.replaceChildren();
+ for(const row of rows){const line=document.createElement('tr'),values=[row.m,row.q.toFixed(5),tr(row.state),row.angle===null?tr('undefined'):row.angle.toFixed(2)+'°',row.kzImag>0?'i '+row.kzImag.toFixed(5):row.kzReal.toFixed(5)];values.forEach((value,index)=>{const td=document.createElement('td');td.textContent=value;if(index===2){const badge=document.createElement('span');badge.className='badge '+row.state;badge.textContent=value;td.replaceChildren(badge);}else td.className='number';line.append(td);});body.append(line);}
+ const set=rows.filter(x=>x.state==='open').map(x=>x.m);document.getElementById('order-summary').textContent=tr('Open orders: ')+(set.length?set.join(', '):tr('none'))+'. '+rows.filter(x=>x.state==='grazing').length+' '+tr('grazing')+'. '+tr('Closed neighbors are included for context. No channel power has been calculated.');
+ const select=document.getElementById('field-order'),old=select.value;select.replaceChildren();for(const row of rows){const option=document.createElement('option');option.value=row.m;option.textContent='m = '+row.m+' · '+tr(row.state);select.append(option);}select.value=rows.some(x=>String(x.m)===old)?old:'0';drawField();
+}
+function drawGeometry(p){
+ const svg=document.getElementById('geometry');svg.replaceChildren();const count=document.getElementById('motif').value==='six'?6:1,pitch=p.period/count;
+ svg.dataset.periodUm=p.period;svg.dataset.pitchUm=pitch;svg.dataset.elements=count;
+ const phase=2*Math.PI*p.period/p.wavelength*p.ni*Math.sin(rad(p.theta)),widths=count===6?[.30,.43,.61,.76,.52,.24]:[.52];
+ const x0=28,span=270,base=100,step=span/count;
+ svgNode(svg,'rect',{x:18,y:base,width:855,height:20,fill:'#e0eceb'});
+ for(let repeat=0;repeat<3;repeat++){for(let j=0;j<count;j++){const width=step*widths[j];svgNode(svg,'rect',{x:x0+repeat*span+(j+.5)*step-width/2,y:48,width,height:52,rx:2,fill:repeat%2?'#7ab4b5':'#087f83',stroke:'#075f62'});}line(svg,x0+repeat*span,34,x0+repeat*span,120,'#8ba0ad',1,{'stroke-dasharray':'4 4'});}
+ line(svg,x0+span,24,x0+2*span,24,'#173044');for(const x of [x0+span,x0+2*span])line(svg,x,19,x,29,'#173044');svgNode(svg,'text',{x:x0+1.5*span,y:17,'text-anchor':'middle'},'Λ = '+p.period.toFixed(3)+' μm');
+ const c1=x0+.5*step,c2=c1+step;line(svg,c1,133,c2,133,'#b36b10');for(const x of [c1,c2])line(svg,x,128,x,138,'#b36b10');svgNode(svg,'text',{x:(c1+c2)/2,y:155,'text-anchor':'middle'},'p = '+pitch.toFixed(3)+' μm');
+ for(let j=0;j<3;j++){const cx=x0+span*(j+.5),cy=185,a=j*phase;svgNode(svg,'circle',{cx,cy,r:22,fill:'none',stroke:'#d0dcdf'});line(svg,cx-25,cy,cx+25,cy,'#e0e5e8',1);line(svg,cx,cy+25,cx,cy-25,'#e0e5e8',1);line(svg,cx,cy,cx+21*Math.cos(a),cy-21*Math.sin(a),'#b36b10',3);svgNode(svg,'circle',{cx:cx+21*Math.cos(a),cy:cy-21*Math.sin(a),r:3,fill:'#b36b10'});svgNode(svg,'text',{x:cx+36,y:cy+5},j===0?'E(x₀)':j===1?'E(x₀+Λ)':'E(x₀+2Λ)');}
+ document.getElementById('bloch-equation').textContent='E(x + Λ) / E(x) = exp(i kₓ,ᵢ Λ) = '+Math.cos(phase).toFixed(3)+(Math.sin(phase)<0?' − ':' + ')+Math.abs(Math.sin(phase)).toFixed(3)+' i';
+ document.getElementById('geometry-note').textContent=count===6?tr('Six distinct widths repeat after Λ = 6p. If all six became identical, the primitive repeat would become p; using Λ would merely relabel the harmonics, with only m divisible by six allowed by symmetry.'):tr('One element repeats after p = Λ. The smaller-period preset illustrates this primitive-cell description.');
+}
+function drawField(){
+ if(!window.floquetState)return;
+ const p=window.floquetState.parameters,side=document.getElementById('side').value,rows=window.floquetState[side],m=Number(document.getElementById('field-order').value),row=rows.find(v=>v.m===m)||rows.find(v=>v.m===0),k0=2*Math.PI/p.wavelength;
+ const kr=row.kzReal*k0,ki=row.kzImag*k0,phase=rad(Number(document.getElementById('time-phase').value));
+ const xMax=Math.min(p.period,Math.abs(row.q)>1e-12?3*p.wavelength/Math.abs(row.q):p.period),sMax=ki>0?Math.min(4/ki,12*p.wavelength):kr>0?Math.min(3*2*Math.PI/kr,12*p.wavelength):3*p.wavelength;
+ const canvas=document.getElementById('field-canvas'),mobile=innerWidth<600;canvas.width=mobile?600:1050;canvas.height=mobile?790:410;const ctx=canvas.getContext('2d');canvas.dataset.state=row.state;canvas.dataset.order=row.m;canvas.dataset.side=side;canvas.dataset.alpha=ki;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.font='18px system-ui';ctx.textAlign='left';ctx.fillStyle='#173044';ctx.fillText(tr('Real field: one normalized harmonic'),54,28);ctx.fillText(tr('Amplitude envelope'),mobile?120:665,mobile?426:28);
+ const box={x:58,y:50,w:510,h:286},nx=170,ny=90;
+ for(let iy=0;iy<ny;iy++){const s=(1-(iy+.5)/ny)*sMax,amp=Math.exp(-ki*s);for(let ix=0;ix<nx;ix++){const x=(ix+.5)/nx*xMax,v=amp*Math.cos(k0*row.q*x+kr*s-phase),c=Math.abs(v),base=v>=0?[10,127,132]:[189,85,57];ctx.fillStyle='rgb('+base.map(b=>Math.round(248+(b-248)*c)).join(',')+')';ctx.fillRect(box.x+ix*box.w/nx,box.y+iy*box.h/ny,box.w/nx+1,box.h/ny+1);}}
+ ctx.strokeStyle='#b8c7cf';ctx.lineWidth=1;ctx.strokeRect(box.x,box.y,box.w,box.h);ctx.fillStyle='#173044';ctx.font='16px system-ui';ctx.textAlign='center';ctx.fillText('x / μm',box.x+box.w/2,386);ctx.fillText('0',box.x,360);ctx.fillText(xMax.toPrecision(3),box.x+box.w,360);ctx.textAlign='right';ctx.fillText('0',box.x-10,box.y+box.h);ctx.fillText(sMax.toPrecision(3),box.x-10,box.y+7);ctx.save();ctx.translate(17,200);ctx.rotate(-Math.PI/2);ctx.textAlign='center';ctx.fillText('s / μm',0,0);ctx.restore();
+ const chart={x:mobile?120:700,y:mobile?450:50,w:mobile?375:285,h:286},px=v=>chart.x+v*chart.w,py=s=>chart.y+chart.h*(1-s/sMax);
+ ctx.strokeStyle='#dbe3e7';for(const v of [0,.5,1]){ctx.beginPath();ctx.moveTo(px(v),chart.y);ctx.lineTo(px(v),chart.y+chart.h);ctx.stroke();ctx.fillStyle='#173044';ctx.textAlign='center';ctx.fillText(v.toFixed(1),px(v),chart.y+chart.h+24);}ctx.strokeStyle='#087f83';ctx.lineWidth=3;ctx.beginPath();for(let j=0;j<=180;j++){const s=sMax*j/180,x=px(Math.exp(-ki*s)),y=py(s);if(j===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();ctx.strokeStyle='#b8c7cf';ctx.lineWidth=1;ctx.strokeRect(chart.x,chart.y,chart.w,chart.h);ctx.fillStyle='#173044';ctx.textAlign='right';ctx.fillText('0',chart.x-10,chart.y+chart.h);ctx.fillText(sMax.toPrecision(3),chart.x-10,chart.y+7);ctx.textAlign='center';ctx.fillText('|E(s)| / |E(0)|',chart.x+chart.w/2,chart.y+chart.h+50);
+ if(ki>0&&1/ki<=sMax){ctx.setLineDash([5,4]);ctx.strokeStyle='#b36b10';ctx.beginPath();ctx.moveTo(chart.x,py(1/ki));ctx.lineTo(chart.x+chart.w,py(1/ki));ctx.stroke();ctx.setLineDash([]);ctx.textAlign='left';ctx.fillStyle='#94600d';ctx.fillText('s = 1/α,  |E| = 1/e',chart.x+6,py(1/ki)-8);}
+ document.getElementById('time-value').textContent=document.getElementById('time-phase').value+'°';document.getElementById('field-state').textContent=tr(side==='transmission'?'Transmission':'Reflection')+' · m = '+m+' · '+tr(row.state);document.getElementById('decay-length').textContent=ki>0?(1/ki).toPrecision(4)+' μm':tr('∞ (no exponential decay)');document.getElementById('flux-factor').textContent=row.kzReal.toFixed(5);
+ document.getElementById('field-note').textContent=tr(row.state==='closed'?'Evanescent: phase varies along x, while the amplitude decays away from the surface. This isolated harmonic carries zero time-averaged normal power in the lossless exterior. The intensity decay length is half the amplitude decay length.':row.state==='grazing'?'Grazing: the phase varies only parallel to the surface at exact cutoff. For bounded field amplitude, the normal flux is zero. The numerical cutoff classification uses a tolerance of 10⁻¹⁰.':'Propagating: tilted phase fronts extend into the exterior without exponential decay. Their normal phase gradient is Re κ. Changing the time phase moves the phase fronts, not the envelope.')+' '+tr('Each field panel rescales its axes to resolve the selected wave; read the axis limits when comparing orders.');
+}
 function update(){
  try{
-  const p={};for(const id of ['period','wavelength','theta','ni','no']){const input=document.getElementById(id);if(!input.checkValidity()||input.value==='')throw Error('Results are not updated: enter valid parameters within the displayed control ranges.');p[id]=Number(input.value);}
+  const p={};for(const id of ['period','wavelength','theta','ni','no']){const input=document.getElementById(id);if(!input.checkValidity()||input.value==='')throw Error(tr('Results are not updated: enter valid parameters within the displayed control ranges.'));p[id]=Number(input.value);}
   const transmission=compute(p,p.no),reflection=compute(p,p.ni);window.floquetState={parameters:p,transmission,reflection};
-  for(const [id,rows,name]of [['t',transmission,'Transmission'],['r',reflection,'Reflection']]){document.getElementById(id+'-count').textContent=rows.filter(x=>x.state==='open').length+' open';document.getElementById(id+'-detail').textContent=name+' · '+rows.filter(x=>x.state==='grazing').length+' grazing';}
+  for(const [id,rows,name]of [['t',transmission,'Transmission'],['r',reflection,'Reflection']]){document.getElementById(id+'-count').textContent=rows.filter(x=>x.state==='open').length+' '+tr('open');document.getElementById(id+'-detail').textContent=tr(name)+' · '+rows.filter(x=>x.state==='grazing').length+' '+tr('grazing');}
   const phase=deg(2*Math.PI*p.period/p.wavelength*p.ni*Math.sin(rad(p.theta))),wrapped=((phase+180)%360+360)%360-180;
-  document.getElementById('phase').textContent=wrapped.toFixed(1)+'°';document.getElementById('error').textContent='';drawRays(p,reflection,transmission);drawMomentum(p,reflection,transmission);renderTable();
+  document.getElementById('phase').textContent=wrapped.toFixed(1)+'°';document.getElementById('error').textContent='';drawRays(p,reflection,transmission);drawMomentum(p,reflection,transmission);drawGeometry(p);renderTable();
  }catch(error){document.getElementById('error').textContent=error.message;}
 }
-for(const slider of document.querySelectorAll('input[type=range]'))slider.addEventListener('input',()=>{document.getElementById(slider.dataset.for).value=slider.value;document.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('active'));update();});
+for(const slider of document.querySelectorAll('input[type=range][data-for]'))slider.addEventListener('input',()=>{document.getElementById(slider.dataset.for).value=slider.value;document.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('active'));update();});
 for(const input of document.querySelectorAll('input[type=number]')){input.step='any';input.addEventListener('input',()=>{document.querySelector('input[data-for="'+input.id+'"]').value=input.value;document.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('active'));update();});}
-document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{for(const [id,value]of Object.entries(presets[button.dataset.preset])){document.getElementById(id).value=value;document.querySelector('input[data-for="'+id+'"]').value=value;}document.querySelectorAll('[data-preset]').forEach(b=>b.classList.toggle('active',b===button));update();}));
+document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('motif').value=['primitive','cutoff','oblique'].includes(button.dataset.preset)?'single':'six';for(const [id,value]of Object.entries(presets[button.dataset.preset])){document.getElementById(id).value=value;document.querySelector('input[data-for="'+id+'"]').value=value;}document.querySelectorAll('[data-preset]').forEach(b=>b.classList.toggle('active',b===button));update();}));
 document.getElementById('side').addEventListener('change',renderTable);
+document.getElementById('motif').addEventListener('change',()=>drawGeometry(window.floquetState.parameters));
+document.getElementById('field-order').addEventListener('change',drawField);
+document.getElementById('time-phase').addEventListener('input',drawField);
+window.addEventListener('resize',drawField);
 window.floquetCompute=compute;
 update();
 </script>

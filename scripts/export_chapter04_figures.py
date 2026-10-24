@@ -12,7 +12,7 @@ root = Path(__file__).resolve().parents[1]
 nb = json.loads((root/'notebooks/04-floquet-orders.ipynb').read_text(encoding='utf-8'))
 destination = root/'assets/chapter-04'
 destination.mkdir(parents=True, exist_ok=True)
-for tag, filename in {'ch04-channel-maps': 'channel-maps.png', 'ch04-finite-array': 'finite-array.png'}.items():
+for tag, filename in {'ch04-channel-maps': 'channel-maps.png', 'ch04-finite-array': 'finite-array.png', 'ch04-period-and-phase': 'period-and-phase.png', 'ch04-outgoing-fields': 'outgoing-fields.png', 'ch04-sampled-phase-spectrum': 'sampled-phase-spectrum.png'}.items():
     cells = [c for c in nb['cells'] if tag in c.get('metadata', {}).get('tags', [])]
     if len(cells) != 1 or cells[0].get('execution_count') is None:
         raise ValueError(f'Expected one executed cell tagged {tag}')

@@ -66,7 +66,7 @@ def prepare_persian():
     render(STAGE / 'interactives/numerical-explorer.html', language='fa')
     render_design(STAGE / 'interactives/design-studies.html', language='fa')
     # Model drawings share one implementation, with Persian labels selected by lang.
-    for name in ('unit-cell-explorer.html', 'synthesis-explorer.html', 'foundations-explorer.html'):
+    for name in ('unit-cell-explorer.html', 'synthesis-explorer.html', 'foundations-explorer.html', 'floquet-explorer.html'):
         path = STAGE / 'interactives' / name
         value = path.read_text(encoding='utf-8').replace('<html lang="en">', '<html lang="fa">', 1)
         path.write_text(value, encoding='utf-8', newline='\n')

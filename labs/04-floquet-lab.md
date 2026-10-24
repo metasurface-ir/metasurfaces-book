@@ -33,6 +33,12 @@ Before moving a control, write down the change you expect. Try the six-element, 
 
 **Deliverable:** a parameter table and three predictions checked against the explorer: one supercell case, one medium-dependent case, and one opening/closing transition.
 
+### Three visual investigations
+
+1. **Translate the structure.** Compare six different elements with six identical ones. Mark the pitch and the complete repeat on a sketch. At oblique incidence, calculate the Bloch phase advance before inspecting the phasor arrows. Explain why translating the material back onto itself need not restore the instantaneous field.
+2. **Follow one harmonic away from the surface.** Select an open order, a closed neighbor, and the exact-cutoff preset. Compare the field pattern and its envelope in the outward coordinate. For the closed order, find the distance where the amplitude reaches $1/e$; distinguish this from the intensity decay length. Explain why the reflected outgoing field decays toward negative laboratory $z$.
+3. **Separate a channel from its excitation.** An open order is an available direction. The drawing does not assign its amplitude. Use the six-identical-element selection rule to identify channels that symmetry forbids, then compare this prediction with the [executed uniform-supercell control](10-coupling-lab.md).
+
 ## B. Execute the analytical notebook
 
 **Available:** [the executed notebook](../notebooks/04-floquet-orders.ipynb). Download its editable source: {download}`../notebooks/04-floquet-orders.ipynb`. It contains its functions and data generation, needs no electromagnetic solver, and uses NumPy and Matplotlib. Optional sliders run in Jupyter with ipywidgets; the web explorer above is already interactive in the browser.
@@ -63,11 +69,12 @@ Conventions are $e^{-i\omega t}$, $e^{i\mathbf k\cdot\mathbf r}$, incidence from
 6. Check TE Fresnel power normalization at a flat interface, including a total-internal-reflection case. Explain why the nonzero supercell orders have zero amplitude there.
 7. Compare finite-array factors for three lengths. Connect their peak locations to Floquet angles and their finite widths to aperture length.
 8. Run the rectangular-lattice example and identify why a test using only $k_x$ could misclassify an order with nonzero $k_y$.
-9. Optionally set `ENABLE_WIDGETS=True` and rerun the notebook in Jupyter to use its sliders. Saved reference outputs use this flag as `False` so the book can display its calculations independently of a live kernel.
+9. Read the new structure/phasor, outgoing-field, and sampled-phase figures alongside their derivations. Check the six-cell Fourier selection rule, compare the direct finite-array sum with its closed form, and verify the first-null spacing. Compare the sampled-ramp coefficients with independent numerical integration; explain why their squared magnitudes are not automatically power fractions.
+10. Optionally set `ENABLE_WIDGETS=True` and rerun the notebook in Jupyter to use its sliders. Saved reference outputs use this flag as `False` so the book can display its calculations independently of a live kernel.
 
 ### Evidence and acceptance
 
-Submit the executed notebook, environment, edited parameters, reference channel sets, cutoff tests, two figures, and a short interpretation. Analytical assertions must pass. Closed channels must not acquire fabricated real angles; enumeration must include all potentially open orders; and reflected evanescent waves must decay in the outward direction rather than grow.
+Submit the executed notebook, environment, edited parameters, reference channel sets, cutoff tests, and three annotated figures of your choice. Include at least one structure/field visualization and one Fourier or array-factor plot. For each figure, state the equation it checks and one prediction it cannot make. Analytical assertions must pass. Closed channels must not acquire fabricated real angles; enumeration must include all potentially open orders; and reflected evanescent waves must decay in the outward direction rather than grow.
 
 The numerical tolerance classifies a known analytical boundary. Changing it is not a substitute for converging a Maxwell solver. The notebook's scalar array-factor plot must not be reported as a simulated diffraction efficiency.
 

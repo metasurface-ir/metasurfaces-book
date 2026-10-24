@@ -69,13 +69,15 @@ For the Chapter 10 comparison, two figures are also displayed in the chapter. Af
 
 For Chapter 4, use `python scripts/export_chapter04_figures.py` after running and saving `notebooks/04-floquet-orders.ipynb`. Its independent browser explorer is in `interactives/floquet-explorer.html`; check its reference examples, narrow-screen layout, and control behavior when changing the equations. The `interactives/` folder is published through `project.static_files` in `myst.yml`. Numerical tables should use a supported rich-output format such as HTML, and their published rendering should be checked alongside notebook execution.
 
+The Chapter 4 notebook exports five original figures and checks the selection rule, finite-array formula, outgoing-field decay, and sampled-phase Fourier coefficients. Keep the paired Persian notebook's prose in sync and its numerical outputs empty. The browser selects English or Persian from the document language; verify both editions, the geometry/phase controls, and the selected harmonic. Preserve the distinction between illustrative motifs, prescribed scalar fields, and a solved device. Browser launch links must open in a new tab, with no browser-lab download control.
+
 ## Chapter 1 source and data workflow
 
 For Chapter 1, keep `notebooks/01-first-metasurface-model.ipynb` with `simulations/intro_sheet.py`. Run all cells from a fresh kernel, then `python scripts/validate_chapter01.py` and `python scripts/export_chapter01.py`. The browser template is `templates/foundations-explorer.html`; check its parity with Python, undefined transmission phase, presets, controls, offline use, and narrow-screen layout after edits. Retain the ideal-sheet assumptions and avoid interpreting analytical consistency checks as a full-wave or experimental validation.
 
 ## Chapter 2 source and data workflow
 
-Keep `notebooks/02-waves-and-interfaces.ipynb` with `simulations/waves_interfaces.py`. Execute from a fresh kernel, then run `python scripts/validate_chapter02.py` and `python scripts/export_chapter02.py`. The editable browser source is `templates/waves-explorer.html`; verify its numerical parity with Python and its four views, coherent phase control, downloads, offline use, and mobile layout. The two SVG schematics are editable originals; the five PNGs come directly from tagged notebook cells. Preserve the tangential TM sign convention, phase references, cutoff/evanescent distinctions, and assumptions of electric-sheet retrieval.
+Keep `notebooks/02-waves-and-interfaces.ipynb` with `simulations/waves_interfaces.py`. Execute from a fresh kernel, then run `python scripts/validate_chapter02.py` and `python scripts/export_chapter02.py`. The editable browser source is `templates/waves-explorer.html`; verify its numerical parity with Python and its four views, coherent phase control, new-tab launch, offline operation, and mobile layout. The two SVG schematics are editable originals; the five PNGs come directly from tagged notebook cells. Preserve the tangential TM sign convention, phase references, cutoff/evanescent distinctions, and assumptions of electric-sheet retrieval.
 
 ## Chapter 3 source and data workflow
 

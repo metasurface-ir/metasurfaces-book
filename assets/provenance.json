@@ -234,7 +234,7 @@
       "generators": [
         {
           "notebook": "notebooks/04-floquet-orders.ipynb",
-          "cell_index": 7,
+          "cell_index": 9,
           "tags": [
             "ch04-channel-maps"
           ]
@@ -248,9 +248,51 @@
       "generators": [
         {
           "notebook": "notebooks/04-floquet-orders.ipynb",
-          "cell_index": 11,
+          "cell_index": 15,
           "tags": [
             "ch04-finite-array"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-04/outgoing-fields.png",
+      "sha256": "202e6fe5adf9ba8d864743add3191d3bd84bdc422789ca7a9b9f7c890393f78e",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/04-floquet-orders.ipynb",
+          "cell_index": 11,
+          "tags": [
+            "ch04-outgoing-fields"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-04/period-and-phase.png",
+      "sha256": "d047b3a8d00fcea0599ec1abb74e05a086d044c326327f40a21a4f13cc4313d1",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/04-floquet-orders.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch04-period-and-phase"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-04/sampled-phase-spectrum.png",
+      "sha256": "3637451c4b84a813702106dc5e6bbb36c9ec43b4d5b8054735db60c7e22e8c9b",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/04-floquet-orders.ipynb",
+          "cell_index": 19,
+          "tags": [
+            "ch04-sampled-phase-spectrum"
           ]
         }
       ]
