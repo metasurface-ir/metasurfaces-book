@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "model": "passive equivalent impedance; scalar array; synthetic feedback; adiabatic envelope",
+  "source_sha256": "83f99451b6ad139c0d59a042bc136b580a707665630fccc17f6c971634287473",
+  "parameters": {
+    "inductance_nH": 20.0,
+    "capacitance0_pF": 0.12,
+    "junction_voltage_V": 1.0,
+    "exponent": 1.0,
+    "resistance_ohm": 25.0,
+    "impedance_ohm": 376.730313668,
+    "voltage_max_V": 20.0
+  },
+  "checks": {
+    "power_balance": 8.881784197001252e-16,
+    "boundary_solution": 4.002966042486721e-16,
+    "quantization_integral": 1.0471978839632989e-10,
+    "RC_ODE": 2.7714719408322708e-11,
+    "binary_harmonics": 3.4009594624229706e-08,
+    "FFT_parity": 1.8041124150158794e-16,
+    "Parseval": 0.0,
+    "invalid_inputs": 9
+  },
+  "reference": {
+    "resonant_voltage_V": 8.474820225045782,
+    "phase_span_deg": 295.2729379755838,
+    "ideal_quantized_target_metric": {
+      "1": 0.3890473155342615,
+      "2": 0.8086045059657944,
+      "3": 0.9483436297375956,
+      "4": 0.9867832585469344
+    },
+    "circuit_target_metric": 0.8440039160100381,
+    "feedback_voltage_V": 9.079999999573442,
+    "feedback_queries": 26,
+    "voltage_settle_2percent_us": 15.648092021712584
+  }
+}
