@@ -250,6 +250,26 @@
       "source": "notebooks/11-inverse-design.ipynb",
       "translation": "translations/fa/notebooks/11-inverse-design.ipynb",
       "route": "inverse-design"
+    },
+    {
+      "source": "chapters/07-active-tunable.md",
+      "translation": "translations/fa/chapters/07-active-tunable.md",
+      "route": "active-tunable"
+    },
+    {
+      "source": "chapters/07-tunable-guide.md",
+      "translation": "translations/fa/chapters/07-tunable-guide.md",
+      "route": "tunable-guide"
+    },
+    {
+      "source": "labs/07-tunable-lab.md",
+      "translation": "translations/fa/labs/07-tunable-lab.md",
+      "route": "tunable-lab"
+    },
+    {
+      "source": "notebooks/07-tunable-metasurfaces.ipynb",
+      "translation": "translations/fa/notebooks/07-tunable-metasurfaces.ipynb",
+      "route": "tunable-metasurfaces"
     }
   ]
 }

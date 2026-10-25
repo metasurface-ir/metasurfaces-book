@@ -98,3 +98,7 @@ Use original explanations and properly attributed figures. Link claims to source
 ## Chapter 6 and figure provenance
 
 Keep the numerical-methods notebook with `simulations/numerical_methods.py` and its exact-film dependency. Restart/run, validate, and export using the Chapter 6 scripts. Run `python scripts/export_figure_provenance.py` after all image exports; `--check` verifies the inventory during publication. Follow [source and reuse guidance](attribution.md): include original generators and check actual permissions for adapted material. The provenance record documents generation, not a blanket legal clearance.
+
+## Chapter 7 evidence and exports
+
+Edit the shared `simulations/tunable_surface.py` and English notebook, then rerun all notebook cells and `python scripts/validate_chapter07.py`. Preserve the paired Persian notebook code and translate its Markdown cells. Export original schematics with `python scripts/export_tunable_geometry.py`, and saved plots, browser evidence and sources with `python scripts/export_chapter07.py`. The browser renderer checks the model hash and reference parameters against the audit. Regenerate figure provenance, review affected Persian prose and source locks, and run the strict bilingual build. Browser labs open in a new tab; source bundles contain Python/notebook/data files, with no browser-lab HTML download.

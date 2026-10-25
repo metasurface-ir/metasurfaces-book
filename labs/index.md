@@ -18,7 +18,9 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
 | ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
 | ms-14-numerical-validation | [Mesh, domain, boundaries, reference planes and numerical evidence](06-numerical-lab.md) | 3, 5, 6 |
+| ms-15-tunable-control | [Bias tuning, programmed arrays, feedback and temporal harmonics](07-tunable-lab.md) | 7 |
 
+Chapter 7 adds an executed effective circuit, scalar array, synthetic calibration and driver/envelope model with independent checks.
 ## Start with an analytical investigation
 
 The [Chapter 1 lab](01-first-investigation.md) starts with predictions and an browser explorer, then supplies an executed notebook and complete source bundle. It illustrates complex responses, effective electric-like/magnetic-like channels, reflected cancellation, transmission zeros, and spectral phase. Its analytical consistency checks are distinct from full-wave geometry validation.

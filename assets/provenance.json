@@ -484,6 +484,69 @@
       "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
     },
     {
+      "asset": "assets/chapter-07/array.png",
+      "sha256": "039c4e6e6b455e649ef4c81c86f2fd5cba25b27f5df39a11e2d53ad569edc763",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/07-tunable-metasurfaces.ipynb",
+          "cell_index": 5,
+          "tags": [
+            "ch07-array"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-07/dynamics.png",
+      "sha256": "1df54314f27ba259d499760eed7968c2723ca3ebc923d1d7e23baee5c7ff5123",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/07-tunable-metasurfaces.ipynb",
+          "cell_index": 9,
+          "tags": [
+            "ch07-dynamics"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-07/feedback.png",
+      "sha256": "bb528a4db4b22f3936d520f0ac589683e186e8ce6d28ed70828063a3637abb41",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/07-tunable-metasurfaces.ipynb",
+          "cell_index": 7,
+          "tags": [
+            "ch07-feedback"
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "assets/chapter-07/tunable-cell.svg",
+      "sha256": "e83c51bf7a08fcd2c819801e098ca6813190eeaf638e5f304835a4cd6f8a1678",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-07/tunable-cell.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-07/tuning.png",
+      "sha256": "fdf479ba14387c2bab04e8f852d1fa16cfeaecd2c89fe37e1a1aecc3596a1b8a",
+      "origin": "original numerical notebook output",
+      "generators": [
+        {
+          "notebook": "notebooks/07-tunable-metasurfaces.ipynb",
+          "cell_index": 3,
+          "tags": [
+            "ch07-tuning"
+          ]
+        }
+      ]
+    },
+    {
       "asset": "assets/chapter-10/analytical-sheet.svg",
       "sha256": "8cb50219bd6c087687e541624322a07b33557030f7ce4cbdc0c46241bbc8d416",
       "origin": "original editable SVG schematic",
