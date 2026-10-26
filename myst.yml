@@ -84,6 +84,12 @@ project:
         - file: chapters/08-communications-guide.md
         - file: labs/08-communications-lab.md
         - file: notebooks/08-communication-links.ipynb
+    - title: Chapter 9 - Materials, fabrication, and measurement
+      children:
+        - file: chapters/09-materials-measurement.md
+        - file: chapters/09-measurement-guide.md
+        - file: labs/09-measurement-lab.md
+        - file: notebooks/09-fabrication-measurement.ipynb
     - title: Chapter 10 - AI and Metasurfaces
       children:
         - file: chapters/10-ai-metasurfaces.md

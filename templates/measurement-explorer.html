@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metasurface.ir · Measurement lab</title>
+<style>
+:root{font:16px/1.55 "Segoe UI",Tahoma,sans-serif;color:#19354a;background:#f1f6f8;color-scheme:light}*{box-sizing:border-box}body{margin:0}main{max-width:1050px;margin:auto;padding:24px}h1{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:8px 0 14px}h2{font-size:23px;margin:0 0 12px}p{margin:8px 0 16px}.eyebrow{color:#087f8c;font-weight:700}
+.note{background:#e5f0f2;border-inline-start:4px solid #087f8c;padding:13px 16px;border-radius:8px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}button,select,input{font:inherit}button{border:1px solid #bcced8;border-radius:9px;background:white;color:inherit;padding:11px 15px;cursor:pointer}button[aria-selected=true]{background:#183e52;color:white}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e18431;outline-offset:3px}
+.card{background:white;border:1px solid #d7e2e8;border-radius:13px;padding:20px;margin:14px 0;min-width:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.controls{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:15px 0}.controls label{display:grid;gap:6px;flex:1;min-width:160px}input,select{width:100%;max-width:100%;accent-color:#087f8c}select{padding:8px;border:1px solid #aabdc9;border-radius:7px;background:white;color:inherit}
+.metric{display:flex;flex-wrap:wrap;gap:15px;background:#f4f8fa;border-radius:8px;padding:15px}.metric>div{flex:1;min-width:130px}.metric strong{display:block;font-size:23px;font-variant-numeric:tabular-nums}.metric strong,output,.unit{direction:ltr;unicode-bidi:isolate}.unit,.small{font-size:13px;color:#556d7c}.plot{width:100%;display:block;direction:ltr;overflow:hidden}.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.legend span:before{content:"";display:inline-block;width:16px;height:3px;background:var(--color);vertical-align:middle;margin-inline-end:5px}section[hidden]{display:none!important}.formula{direction:ltr;unicode-bidi:isolate;text-align:center;font-family:Georgia,serif;padding:12px;font-size:19px;background:#f4f8fa;border-radius:8px;overflow-wrap:anywhere}a{color:#076c80}
+@media(max-width:650px){main{padding:13px}.grid{grid-template-columns:1fr}.card{padding:13px}.tabs button{flex:1 1 42%;padding:9px}h2{font-size:21px}.controls label{min-width:150px}}
+</style></head>
+<body><main>
+<div class="eyebrow">METASURFACE.IR / 09</div>
+<h1 data-en="From fabrication to a trustworthy measurement" data-fa="از ساخت تا اندازه‌گیری قابل اعتماد"></h1>
+<p data-en="Predict the discrepancy, inspect the geometry, then separate device variation from measurement error." data-fa="اختلاف را پیش‌بینی کنید، هندسه را ببینید و سپس تغییر دستگاه را از خطای اندازه‌گیری جدا کنید."></p>
+<div class="note" data-en="All observations are synthetic. The material oscillator is illustrative; the one-port resonator has assigned parameters. No fabricated patch or instrument is being simulated or measured here." data-fa="تمام مشاهدات مصنوعی‌اند. نوسانگر ماده آموزشی و پارامترهای تشدیدگر تک‌درگاهی تعیین‌شده‌اند. اینجا وصلهٔ ساخته‌شده یا ابزار واقعی شبیه‌سازی یا اندازه‌گیری نمی‌شود."></div>
+<div class="card"><div class="grid"><svg id="patch" class="plot" viewBox="0 0 440 200" role="img"></svg><svg id="planes" class="plot" viewBox="0 0 440 200" role="img"></svg></div>
+<p class="small" data-en="Possible grounded-patch concept, not a solved geometry. Ideal short/load/open standards apply at the modeled port plane; this is not a free-space horn calibration recipe." data-fa="مفهوم وصلهٔ زمین‌دار ممکن، نه هندسهٔ حل‌شده. استانداردهای ایده‌آل اتصال‌کوتاه، بار و مدار باز در صفحهٔ درگاه مدل اعمال می‌شوند؛ این دستور کالیبراسیون شیپور فضای آزاد نیست."></p></div>
+<nav class="tabs" role="tablist" aria-label="Investigations">
+<button id="tab-materials" role="tab" aria-controls="materials" aria-selected="true" data-view="materials" data-en="Materials" data-fa="مواد"></button>
+<button id="tab-tolerance" role="tab" aria-controls="tolerance" aria-selected="false" tabindex="-1" data-view="tolerance" data-en="Tolerances" data-fa="تلرانس"></button>
+<button id="tab-calibration" role="tab" aria-controls="calibration" aria-selected="false" tabindex="-1" data-view="calibration" data-en="Calibration" data-fa="کالیبراسیون"></button>
+<button id="tab-uncertainty" role="tab" aria-controls="uncertainty" aria-selected="false" tabindex="-1" data-view="uncertainty" data-en="Uncertainty" data-fa="عدم‌قطعیت"></button></nav>
+<section id="materials" role="tabpanel" aria-labelledby="tab-materials"><div class="card">
+<h2 data-en="Loss and dispersion move together" data-fa="اتلاف و پاشندگی با هم تغییر می‌کنند"></h2>
+<p data-en="A passive Lorentz oscillator with a 14-GHz material pole. This spectrum is separate from the resonator's effective-permittivity tolerance model." data-fa="نوسانگر لورنتس غیرفعال با قطب ماده در ۱۴ گیگاهرتز. این طیف از مدل تلرانس گذردهی مؤثر تشدیدگر جداست."></p>
+<div class="controls"><label><span data-en="Damping (GHz)" data-fa="میرایی (گیگاهرتز)"></span><select id="damping"><option>0.6</option><option selected>1.2</option><option>2.4</option></select></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Re(ε) at the pole" data-fa="بخش حقیقی گذردهی در قطب"></span><strong id="pole-real"></strong></div><div><span data-en="Im(ε) at the pole" data-fa="بخش موهومی گذردهی در قطب"></span><strong id="pole-imag"></strong></div></div>
+<svg id="material-plot" class="plot" role="img"></svg><div id="material-legend" class="legend"></div>
+<svg id="index-plot" class="plot" role="img"></svg><div id="index-legend" class="legend"></div>
+<p class="note" data-en="With exp(−iωt), positive Im(ε) represents loss. The passive square root gives n + iκ. These are teaching curves, not measured material data." data-fa="با قرارداد exp(−iωt)، بخش موهومی مثبت گذردهی نشان‌دهندهٔ اتلاف است. ریشهٔ غیرفعال n + iκ می‌دهد. این‌ها منحنی آموزشی‌اند، نه دادهٔ مادهٔ اندازه‌گیری‌شده."></p>
+</div></section>
+<section id="tolerance" role="tabpanel" aria-labelledby="tab-tolerance" hidden><div class="card">
+<h2 data-en="Correlation changes the population" data-fa="هم‌بستگی جمعیت را تغییر می‌دهد"></h2>
+<p data-en="20,000 seeded samples per case. The histogram and spread metrics use zero bias. The acceptance curve and selected acceptance also include a common width bias." data-fa="برای هر حالت ۲۰۰۰۰ نمونهٔ بذرثابت. هیستوگرام و معیار پراکندگی برای سوگیری صفرند. منحنی و مقدار پذیرش منتخب، سوگیری مشترک پهنا را نیز لحاظ می‌کنند."></p>
+<div class="controls"><label><span data-en="Width / permittivity correlation" data-fa="هم‌بستگی پهنا و گذردهی"></span><select id="rho"><option value="-0.6">−0.6</option><option value="0.0" selected>0</option><option value="0.6">+0.6</option></select></label>
+<label><span data-en="Width bias (mm)" data-fa="سوگیری پهنا (میلی‌متر)"></span><input id="bias" type="range" min="0" max="8" value="4" step="1"><output id="bias-value"></output></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Sampled spread at zero bias" data-fa="پراکندگی نمونه‌ای با سوگیری صفر"></span><strong id="sample-std"></strong><span class="unit">GHz</span></div><div><span data-en="Linear prediction" data-fa="پیش‌بینی خطی"></span><strong id="linear-std"></strong><span class="unit">GHz</span></div><div><span data-en="Selected acceptance" data-fa="پذیرش منتخب"></span><strong id="acceptance"></strong><span id="interval" class="unit"></span></div></div>
+<svg id="hist-plot" class="plot" role="img"></svg><div id="hist-legend" class="legend"></div>
+<svg id="accept-plot" class="plot" role="img"></svg>
+<p class="note" data-en="Acceptance means |f₀−10 GHz| ≤ 0.12 GHz. The displayed 95% Wilson interval describes Monte Carlo sampling error in the assumed population, not confidence in an actual fabrication process." data-fa="پذیرش یعنی |f₀−10 GHz| ≤ 0.12 GHz. بازهٔ ویلسون ۹۵ درصد، خطای نمونه‌گیری مونت‌کارلو در جمعیت مفروض را توصیف می‌کند، نه اطمینان به فرایند ساخت واقعی."></p>
+</div></section>
+<section id="calibration" role="tabpanel" aria-labelledby="tab-calibration" hidden><div class="card">
+<h2 data-en="The right magnitude can hide a wrong plane" data-fa="اندازهٔ درست می‌تواند صفحهٔ غلط را پنهان کند"></h2>
+<p data-en="Exact synthetic standards recover the error box. A known 5 mm air offset is then removed separately. Compare phase as well as magnitude." data-fa="استانداردهای مصنوعی دقیق جعبهٔ خطا را بازیابی می‌کنند. سپس فاصلهٔ هوایی معلوم ۵ میلی‌متری جداگانه حذف می‌شود. فاز و اندازه را با هم مقایسه کنید."></p>
+<div class="controls"><label><span data-en="Response to inspect" data-fa="پاسخ مورد بررسی"></span><select id="response"><option value="raw" data-en="Raw instrument reading" data-fa="قرائت خام ابزار"></option><option value="at_port" data-en="Calibrated at port" data-fa="کالیبره در درگاه"></option><option value="recovered" selected data-en="Corrected at surface" data-fa="اصلاح‌شده در سطح"></option></select></label>
+<label><span data-en="Frequency (GHz)" data-fa="فرکانس (گیگاهرتز)"></span><input id="frequency" type="range" min="0" max="240" value="120" step="1"><output id="frequency-value"></output></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Magnitude squared" data-fa="مربع اندازه"></span><strong id="power"></strong></div><div><span data-en="Wrapped phase (deg)" data-fa="فاز پیچیده‌شده (درجه)"></span><strong id="phase"></strong></div><div><span data-en="Complex error versus surface truth" data-fa="خطای مختلط نسبت به حقیقت سطح"></span><strong id="complex-error"></strong></div></div>
+<div class="formula">m = D + TΓ/(1 − SΓ) &nbsp; · &nbsp; Γsurface = Γport exp(−2ikd)</div>
+<svg id="cal-power-plot" class="plot" role="img"></svg><div id="cal-legend" class="legend"></div>
+<svg id="cal-phase-plot" class="plot" role="img"></svg>
+<p class="note" data-en="Raw magnitude squared is not reflectance. Port and surface reflectance coincide, but phase differs by 120.083° at 10 GHz. Numerical recovery here is noiseless algebra, not experimental calibration accuracy." data-fa="مربع اندازهٔ خام بازتابندگی نیست. بازتابندگی درگاه و سطح یکسان است اما فاز در ۱۰ گیگاهرتز ۱۲۰٫۰۸۳ درجه اختلاف دارد. بازیابی عددی اینجا جبر بدون نویز است، نه دقت کالیبراسیون تجربی."></p>
+</div></section>
+<section id="uncertainty" role="tabpanel" aria-labelledby="tab-uncertainty" hidden><div class="card">
+<h2 data-en="Averages cannot remove a shared offset" data-fa="میانگین، آفست مشترک را حذف نمی‌کند"></h2>
+<p data-en="The cloud includes standard-characterization error, reading noise and placement uncertainty: 400 displayed points from 2,000 trials. Its ellipse uses sample covariance and the approximate bivariate-normal 95% threshold." data-fa="ابر شامل خطای شناخت استاندارد، نویز قرائت و عدم‌قطعیت مکان است: ۴۰۰ نقطه از ۲۰۰۰ اجرا نمایش داده می‌شود. بیضی از کوواریانس نمونه و آستانهٔ تقریبی ۹۵ درصد نرمال دوبعدی استفاده می‌کند."></p>
+<div class="controls"><label><span data-en="Placement standard deviation (mm)" data-fa="انحراف معیار مکان (میلی‌متر)"></span><select id="position"><option value="0.0">0</option><option value="0.05" selected>0.05</option><option value="0.2">0.2</option></select></label>
+<label><span data-en="Readings in the separate averaging model" data-fa="تعداد قرائت در مدل جداگانهٔ میانگین‌گیری"></span><input id="readings" type="range" min="0" value="0" step="1"><output id="readings-value"></output></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Full cloud RMS about truth" data-fa="RMS ابر کامل نسبت به حقیقت"></span><strong id="cloud-rms"></strong></div><div><span data-en="Averaging-model RMS" data-fa="RMS مدل میانگین‌گیری"></span><strong id="average-rms"></strong></div><div><span data-en="Placement-only floor" data-fa="کف ناشی از مکان"></span><strong id="floor"></strong></div></div>
+<svg id="cloud-plot" class="plot" role="img"></svg><div id="cloud-legend" class="legend"></div>
+<svg id="average-plot" class="plot" role="img"></svg><div id="average-legend" class="legend"></div>
+<p class="note" data-en="The averaging curve is a separate analytic model: independent surface-plane noise (complex RMS 0.002) plus a placement offset fixed within each batch. It excludes calibration-standard uncertainty. The floor is RMS about truth, including nonlinear bias." data-fa="منحنی میانگین‌گیری مدل تحلیلی جداگانه است: نویز مستقل صفحهٔ سطح (RMS مختلط ۰٫۰۰۲) به‌علاوهٔ آفست مکان ثابت در هر دسته. عدم‌قطعیت استاندارد کالیبراسیون در آن نیست. کف، RMS نسبت به حقیقت و شامل سوگیری غیرخطی است."></p>
+</div></section>
+<footer class="small" data-en="Original plots from the executed Chapter 9 notebook. Model hash and parameters are checked against the independent audit before export. Shared data and equations in both languages." data-fa="نمودارهای تألیفی از دفترچهٔ اجراشدهٔ فصل ۹. هش مدل و پارامترها پیش از خروجی با ارزیابی مستقل تطبیق داده می‌شوند. داده و رابطه‌ها در دو زبان مشترک‌اند."></footer>
+</main><script>
+'use strict';
+const D=__CH09_DATA__;window.measurementReference=D;
+const fa=document.documentElement.lang==='fa';if(fa)document.documentElement.dir='rtl';
+const tr=(a,b)=>fa?b:a,el=id=>document.getElementById(id),C=['#087f8c','#e18431','#7252a1'];
+document.querySelectorAll('[data-en]').forEach(e=>e.textContent=e.dataset[fa?'fa':'en']);
+document.title=tr('Measurement lab','آزمایشگاه اندازه‌گیری')+' · Metasurface.ir';
+document.querySelector('[role=tablist]').setAttribute('aria-label',tr('Investigations','بررسی‌ها'));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const text=(x,y,s,size=13,anchor='middle')=>'<text x="'+x+'" y="'+y+'" font-size="'+size+'" text-anchor="'+anchor+'" fill="#385366">'+esc(s)+'</text>';
+function plot(id,x,ys,labels,ymin,ymax,xlabel,ylabel,mark=null){
+ const width=Math.min(750,Math.max(360,el(id).clientWidth)),left=65,right=width-15,top=25,bottom=258,xmin=Math.min(...x),xmax=Math.max(...x),xx=v=>left+(v-xmin)/(xmax-xmin)*(right-left),yy=v=>bottom-(v-ymin)/(ymax-ymin)*(bottom-top);
+ el(id).setAttribute('viewBox','0 0 '+width+' 310');
+ let s='<title>'+esc(xlabel+' / '+ylabel)+'</title><defs><clipPath id="'+id+'-clip"><rect x="'+left+'" y="'+top+'" width="'+(right-left)+'" height="'+(bottom-top)+'"/></clipPath></defs>';
+ for(let i=0;i<=4;i++){const y=top+(bottom-top)*i/4,v=ymax-(ymax-ymin)*i/4;s+='<path d="M'+left+' '+y+'H'+right+'" stroke="#e2eaee"/>'+text(left-8,y+4,Math.abs(v)>999?v.toExponential(1):v.toFixed(Math.abs(ymax-ymin)<5?2:0),12,'end');}
+ for(let i=0;i<=4;i++){const v=xmin+(xmax-xmin)*i/4;s+=text(xx(v),bottom+20,v.toFixed(xmax-xmin<20?1:0),12);}
+ s+='<g clip-path="url(#'+id+'-clip)">';
+ ys.forEach((y,j)=>{s+='<polyline fill="none" stroke="'+C[j%C.length]+'" stroke-width="2.5" points="'+x.map((v,i)=>xx(v).toFixed(2)+','+yy(y[i]).toFixed(2)).join(' ')+'"/>';});
+ if(mark!==null)s+='<path d="M'+xx(mark)+' '+top+'V'+bottom+'" stroke="#18354b" stroke-dasharray="5 5"/>';
+ s+='</g>'+text((left+right)/2,303,xlabel,13)+'<text transform="translate(16 145) rotate(-90)" text-anchor="middle" font-size="12" fill="#385366">'+esc(ylabel)+'</text>';
+ el(id).innerHTML=s;el(id).setAttribute('aria-label',xlabel+'; '+ylabel+'; '+labels.join(', '));
+}
+function legend(id,labels){el(id).innerHTML=labels.map((s,i)=>'<span style="--color:'+C[i%C.length]+'">'+esc(s)+'</span>').join('');}
+el('patch').innerHTML='<title>'+tr('Possible grounded patch','وصلهٔ زمین‌دار ممکن')+'</title><path d="M65 73L290 45L367 125L142 154Z" fill="#dbe9e6"/><path d="M142 154V169L367 140V125M65 73V88L142 169V154" fill="#8ca4b1"/><path d="M121 84L267 66L314 113L168 132Z" fill="#d49443"/>'+text(220,25,tr('Possible grounded patch','وصلهٔ زمین‌دار ممکن'),19)+text(220,193,'w₀ = 5 mm · εeff,₀ = 3',17);
+el('planes').innerHTML='<title>'+tr('One-port reference planes','صفحه‌های مرجع تک‌درگاهی')+'</title><rect x="20" y="70" width="100" height="60" rx="8" fill="#eee9f7"/><path d="M120 100H400" stroke="#087f8c" stroke-width="3"/><path d="M200 55V145M395 55V145" stroke="#e18431" stroke-width="3" stroke-dasharray="7 5"/>'+text(70,105,'D, T, S',18)+text(200,32,tr('Port','درگاه'),18)+text(390,32,tr('Surface','سطح'),18)+text(300,85,'d = 5 mm',17)+text(280,180,'Γport = Γsurface exp(2ikd)',17);
+function materials(){
+ const row=D.materials.rows[el('damping').value],j=D.materials.GHz.indexOf(14),labels=[tr('Real','حقیقی'),tr('Imaginary','موهومی')];
+ el('pole-real').textContent=row.epsilon[j][0].toFixed(4);el('pole-imag').textContent=row.epsilon[j][1].toFixed(4);
+ plot('material-plot',D.materials.GHz,[row.epsilon.map(x=>x[0]),row.epsilon.map(x=>x[1])],labels,-12,28,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Relative permittivity','گذردهی نسبی'),14);legend('material-legend',labels);
+ const indexLabels=[tr('Refractive index n','ضریب شکست n'),tr('Extinction coefficient κ','ضریب خاموشی κ')];
+ plot('index-plot',D.materials.GHz,[row.index.map(x=>x[0]),row.index.map(x=>x[1])],indexLabels,0,4.5,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('n, κ','n, κ'),14);legend('index-legend',indexLabels);
+}
+function tolerance(){
+ const row=D.tolerance.rows[el('rho').value],i=+el('bias').value,r=row.rows[i],keys=['-0.6','0.0','0.6'],labels=keys.map(x=>'ρ = '+x);
+ el('bias-value').textContent=r.bias_mm.toFixed(3)+' mm';el('sample-std').textContent=row.std_GHz.toFixed(6);el('linear-std').textContent=row.linear_std_GHz.toFixed(6);
+ el('acceptance').textContent=(100*r.acceptance).toFixed(2)+'%';el('interval').textContent='95%: '+(100*r.low).toFixed(2)+'–'+(100*r.high).toFixed(2)+'%';
+ const edges=D.tolerance.edges_GHz,x=edges.slice(1).map((v,i)=>(v+edges[i])/2);
+ plot('hist-plot',x,keys.map(k=>D.tolerance.rows[k].histogram),labels,0,8.5,tr('Zero-bias resonance (GHz)','تشدید با سوگیری صفر (گیگاهرتز)'),tr('Density (1/GHz)','چگالی (1/GHz)'));legend('hist-legend',labels);
+ plot('accept-plot',row.rows.map(v=>v.bias_mm),[row.rows.map(v=>v.acceptance)],['acceptance'],0,1,tr('Width bias (mm)','سوگیری پهنا (میلی‌متر)'),tr('Acceptance fraction','سهم پذیرش'),r.bias_mm);
+ // The generic axis formatter is too coarse for sub-millimetre biases.
+ const svg=el('accept-plot');[...svg.querySelectorAll('text')].filter(t=>+t.getAttribute('y')===278).forEach((t,j)=>{t.textContent=(-.08+.04*j).toFixed(2);});
+}
+const power=g=>g[0]*g[0]+g[1]*g[1],angle=g=>Math.atan2(g[1],g[0])*180/Math.PI;
+function unwrap(values){let offset=0,previous=angle(values[0]);return values.map((g,i)=>{const a=angle(g);if(i){let delta=a-previous;if(delta>180)offset-=360;if(delta< -180)offset+=360;}previous=a;return a+offset;});}
+function calibration(){
+ const row=D.calibration,i=+el('frequency').value,key=el('response').value,g=row[key][i],truth=row.truth[i],labels=[tr('Raw','خام'),tr('Port','درگاه'),tr('Surface','سطح')];
+ el('frequency-value').textContent=row.GHz[i].toFixed(4)+' GHz';el('power').textContent=power(g).toFixed(6);el('phase').textContent=angle(g).toFixed(3);
+ el('complex-error').textContent=Math.hypot(g[0]-truth[0],g[1]-truth[1]).toExponential(3);
+ plot('cal-power-plot',row.GHz,['raw','at_port','recovered'].map(k=>row[k].map(power)),labels,0,1.2,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Magnitude squared','مربع اندازه'),row.GHz[i]);legend('cal-legend',labels);
+ plot('cal-phase-plot',row.GHz,['raw','at_port','recovered'].map(k=>unwrap(row[k])),labels,-180,360,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Unwrapped phase (deg)','فاز بازشده (درجه)'),row.GHz[i]);
+}
+function cloud(row){
+ const svg=el('cloud-plot'),w=Math.min(750,Math.max(360,svg.clientWidth)),left=68,right=w-15,top=25,bottom=280,center=row.center;
+ const points=row.samples.concat(row.ellipse),span=Math.max(...points.map(v=>Math.hypot(v[0]-center[0],v[1]-center[1])))*1.15;
+ const scale=Math.min((right-left),(bottom-top))/(2*span),cx=(left+right)/2,cy=(top+bottom)/2,xx=v=>cx+(v-center[0])*scale,yy=v=>cy-(v-center[1])*scale;
+ svg.setAttribute('viewBox','0 0 '+w+' 335');
+ let s='<title>'+tr('Complex uncertainty region with equal coordinate scales','ناحیهٔ عدم‌قطعیت مختلط با مقیاس مختصات برابر')+'</title>';
+ for(let j=-2;j<=2;j++){const delta=j*span/2,x=center[0]+delta,y=center[1]+delta;s+='<path d="M'+xx(x)+' '+top+'V'+bottom+'M'+left+' '+yy(y)+'H'+right+'" stroke="#e2eaee"/>'+text(xx(x),bottom+19,x.toFixed(3),11)+text(left-8,yy(y)+4,y.toFixed(3),11,'end');}
+ s+=row.samples.map(v=>'<circle cx="'+xx(v[0])+'" cy="'+yy(v[1])+'" r="2" fill="'+C[0]+'" opacity=".35"/>').join('');
+ s+='<polyline fill="none" stroke="'+C[2]+'" stroke-width="2.5" points="'+row.ellipse.map(v=>xx(v[0])+','+yy(v[1])).join(' ')+'"/>';
+ const t=D.uncertainty.truth,tx=xx(t[0]),ty=yy(t[1]);s+='<path d="M'+(tx-6)+' '+(ty-6)+'l12 12m0 -12l-12 12" stroke="'+C[1]+'" stroke-width="3"/>'+text(cx,330,tr('Real reflection','بازتاب حقیقی'),13)+'<text transform="translate(15 150) rotate(-90)" text-anchor="middle" font-size="12">'+tr('Imaginary reflection','بازتاب موهومی')+'</text>';
+ svg.innerHTML=s;svg.setAttribute('aria-label',tr('Complex uncertainty region; equal real and imaginary scales','ناحیهٔ عدم‌قطعیت مختلط؛ مقیاس حقیقی و موهومی برابر'));
+ legend('cloud-legend',[tr('Trials','اجراها'),tr('Synthetic truth','حقیقت مصنوعی'),tr('Approximate 95% ellipse','بیضی تقریبی ۹۵ درصد')]);
+}
+function uncertainty(){
+ const row=D.uncertainty.rows[el('position').value],i=+el('readings').value,n=D.uncertainty.readings[i];
+ el('readings-value').textContent=n;el('cloud-rms').textContent=row.rms.toFixed(6);el('average-rms').textContent=row.averaging_rms[i].toFixed(6);el('floor').textContent=row.floor.toFixed(6);cloud(row);
+ const keys=['0.0','0.05','0.2'],labels=keys.map(k=>tr('Placement std ','انحراف معیار مکان ')+k+' mm');
+ plot('average-plot',D.uncertainty.readings.map(Math.log10),keys.map(k=>D.uncertainty.rows[k].averaging_rms.map(Math.log10)),labels,-4.5,-1.2,tr('log₁₀(number of readings)','log₁₀(تعداد قرائت)'),tr('log₁₀(complex RMS)','log₁₀(RMS مختلط)'),Math.log10(n));legend('average-legend',labels);
+}
+el('readings').max=D.uncertainty.readings.length-1;
+const tabs=[...document.querySelectorAll('[role=tab]')],views={materials,tolerance,calibration,uncertainty};
+function activate(button){tabs.forEach(b=>{const on=b===button;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;el(b.dataset.view).hidden=!on;});views[button.dataset.view]();}
+tabs.forEach((b,i)=>{b.onclick=()=>activate(b);b.onkeydown=e=>{let j=i;if(e.key==='ArrowRight')j=(i+(fa?3:1))%4;else if(e.key==='ArrowLeft')j=(i+(fa?1:3))%4;else if(e.key==='Home')j=0;else if(e.key==='End')j=3;else return;e.preventDefault();activate(tabs[j]);tabs[j].focus();};});
+el('damping').addEventListener('change',materials);['rho','bias'].forEach(id=>el(id).addEventListener('input',tolerance));['response','frequency'].forEach(id=>el(id).addEventListener('input',calibration));['position','readings'].forEach(id=>el(id).addEventListener('input',uncertainty));
+materials();let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>activate(document.querySelector('[role=tab][aria-selected=true]')),100);});
+</script></body></html>

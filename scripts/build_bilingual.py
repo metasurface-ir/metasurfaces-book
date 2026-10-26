@@ -16,6 +16,7 @@ from render_numerical_explorer import render
 from render_design_studies import render as render_design
 from render_tunable_explorer import render as render_tunable
 from render_communications_explorer import render as render_communications
+from render_measurement_explorer import render as render_measurement
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get('BASE_URL', '').rstrip('/')
@@ -69,6 +70,7 @@ def prepare_persian():
     render_design(STAGE / 'interactives/design-studies.html', language='fa')
     render_tunable(STAGE / 'interactives/tunable-explorer.html', language='fa')
     render_communications(STAGE / 'interactives/communications-explorer.html', language='fa')
+    render_measurement(STAGE / 'interactives/measurement-explorer.html', language='fa')
     # Model drawings share one implementation, with Persian labels selected by lang.
     for name in ('unit-cell-explorer.html', 'synthesis-explorer.html', 'foundations-explorer.html', 'floquet-explorer.html'):
         path = STAGE / 'interactives' / name
@@ -77,7 +79,7 @@ def prepare_persian():
     # Localized bundles preserve their original shared code/data and filenames.
     # Replace only notebook narratives with the assembled executable notebooks.
     import zipfile
-    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip', 'chapter-06-numerical.zip', 'chapter-07-tunable.zip', 'chapter-08-communications.zip', 'design-studies.zip'):
+    for name in ('chapter-01-foundations.zip', 'chapter-03-unit-cell.zip', 'chapter-05-synthesis.zip', 'chapter-06-numerical.zip', 'chapter-07-tunable.zip', 'chapter-08-communications.zip', 'chapter-09-measurement.zip', 'design-studies.zip'):
         with zipfile.ZipFile(ROOT / 'downloads' / name) as original:
             with zipfile.ZipFile(STAGE / 'downloads' / name, 'w', compression=zipfile.ZIP_DEFLATED) as translated_zip:
                 for item in original.infolist():

@@ -22,10 +22,10 @@ By completing the course, students should be able to formulate a metasurface sca
 | 6 | [Numerical modeling and simulation methods](chapters/06-numerical-methods.md) | Executed FDFD slab benchmark, mesh/domain refinements, original field/error plots, phase-plane diagnostics, and RCWA convergence companion |
 | 7 | [Active, tunable, and intelligent metasurfaces](chapters/07-active-tunable.md) | Executed bias-tuned circuit, scalar codebooks, synthetic feedback, driver dynamics and temporal harmonics |
 | 8 | [Emerging applications in communications engineering](chapters/08-communications.md) | Executed aperture/link model, spherical focusing, direct-path interference, bandwidth, phase errors and training overhead |
-| 9 | Materials, fabrication, and measurement methods | Tolerance analysis, measured-data processing, uncertainty |
+| 9 | [Materials, fabrication, and measurement methods](chapters/09-materials-measurement.md) | Material dispersion, correlated fabrication tolerances, synthetic one-port calibration, reference planes and complex uncertainty |
 | 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
-Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. The supplied excerpt gives only chapter-level headings for Chapters 7-9. Chapters 7 and 8 now have developed computational investigations; Chapter 9 remains an open outline.
+Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. The supplied excerpt gives only chapter-level headings for Chapters 7-9. Chapters 7, 8 and 9 now have developed computational investigations. All ten chapter drafts are available for instructor review; further experimental and advanced numerical stages remain explicitly unexecuted outlines.
 
 ## Chapter 1: Metasurface foundations
 
@@ -65,7 +65,7 @@ Focusing is an executed scalar cylindrical-line model with independent FFT windo
 
 The [chapter](chapters/06-numerical-methods.md), [six worked examples and self-check](chapters/06-numerical-guide.md), [interactive lab](labs/06-numerical-lab.md), and [executed notebook](notebooks/06-numerical-methods.ipynb) distinguish equation residual, discrete conservation, observable convergence, and model discrepancy. Four original figures and a bilingual offline explorer show spatial refinement, fields, padding/boundary errors, reference-plane mistakes, and harmonic convergence.
 
-The core is a parameterized normal-incidence, equal-exterior, real-index FDFD slab benchmarked against the independent exact Chapter 2 film. It is a different numerical family from RCWA, for the slab only. Further FEM/FDTD, patterned-cell comparisons, finite-device and material-uncertainty stages are explicitly unexecuted outlines. Chapter 9 remains a syllabus outline.
+The core is a parameterized normal-incidence, equal-exterior, real-index FDFD slab benchmarked against the independent exact Chapter 2 film. It is a different numerical family from RCWA, for the slab only. Further FEM/FDTD, patterned-cell comparisons, finite-device and material-uncertainty stages are explicitly unexecuted outlines. Chapter 9 now develops materials, fabrication tolerance, calibration and measurement uncertainty using synthetic evidence.
 
 ## Chapter 7: Active, tunable, and intelligent metasurfaces
 
@@ -78,6 +78,12 @@ The geometry is explanatory; no physical biased patch or hardware loop has been 
 The [chapter](chapters/08-communications.md), [six worked examples](chapters/08-communications-guide.md), [lab](labs/08-communications-lab.md) and [executed notebook](notebooks/08-communication-links.ipynb) connect aperture geometry to a declared scalar channel, coherent/direct-path interference, received power, ideal AWGN rate, bandwidth and training. An original geometry/patch concept and four numerical figures accompany the bilingual four-tab explorer.
 
 Checks include independent quadrature, scalar-loop comparison, reciprocity, far-field normalization, phase-error identities and rate accounting. This is not a vector device solver or measured link. Hardware calibration, vector cross-checks, noisy training, wideband rate, multiuser scheduling and sensing are explicit further lab outlines.
+
+## Chapter 9: Materials, fabrication and measurement
+
+The [chapter](chapters/09-materials-measurement.md), [six worked examples](chapters/09-measurement-guide.md), [lab](labs/09-measurement-lab.md) and [executed notebook](notebooks/09-fabrication-measurement.ipynb) follow a device from material spectra and correlated fabrication tolerances to calibrated complex measurements, reference-plane correction and uncertainty. An original device/measurement schematic and four numerical figures accompany a bilingual four-tab explorer.
+
+The executed data are synthetic; the one-port resonator is an assigned effective model. Independent checks cover power balance, calibration algebra and a held-out standard, phase transport, derivative refinement, sampling and uncertainty identities. Six further outlines specify actual material data, geometry metrology, nonideal standards, microwave/optical measurements and blind device comparison.
 
 ## Chapter 10: AI and Metasurfaces
 

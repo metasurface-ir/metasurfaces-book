@@ -106,3 +106,7 @@ Edit the shared `simulations/tunable_surface.py` and English notebook, then reru
 ## Chapter 8 evidence and exports
 
 Edit simulations/communication_link.py and the English notebook, execute it, and run python scripts/validate_chapter08.py. Synchronize Persian code cells and translate its Markdown cells. Run scripts/export_communications_geometry.py and scripts/export_chapter08.py, then regenerate figure provenance. Review paired prose and source locks and run the strict bilingual build. The browser renderer requires matching model hashes and audited parameters. The source ZIP contains Python, notebook and data files; browser labs open in a new tab without a download option.
+
+## Chapter 9 evidence and exports
+
+Edit simulations/materials_measurement.py and the English notebook, execute it, and run python scripts/validate_chapter09.py. Synchronize Persian code cells and translate Markdown cells. Run scripts/export_measurement_geometry.py and scripts/export_chapter09.py, then regenerate figure provenance. Review paired prose and source locks and run the strict bilingual build. Label synthetic observations explicitly; retain raw experimental data and provenance if adding an experimental extension. Browser tools open in new tabs; the source ZIP contains notebook, Python and data, with no browser HTML.

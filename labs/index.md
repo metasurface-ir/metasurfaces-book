@@ -20,6 +20,7 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-14-numerical-validation | [Mesh, domain, boundaries, reference planes and numerical evidence](06-numerical-lab.md) | 3, 5, 6 |
 | ms-15-tunable-control | [Bias tuning, programmed arrays, feedback and temporal harmonics](07-tunable-lab.md) | 7 |
 | ms-16-communications | [Aperture geometry, link budget, bandwidth and training](08-communications-lab.md) | 2, 5, 6, 7, 8 |
+| ms-17-measurement | [Materials, fabrication tolerances, calibration and uncertainty](09-measurement-lab.md) | 2, 3, 6, 9 |
 
 Chapter 7 adds an executed effective circuit, scalar array, synthetic calibration and driver/envelope model with independent checks.
 ## Start with an analytical investigation

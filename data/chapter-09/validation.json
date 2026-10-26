@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "parameters": {
+    "resonance_GHz": 10.0,
+    "width_mm": 5.0,
+    "epsilon_eff": 3.0,
+    "external_GHz": 0.35,
+    "internal_GHz": 0.12,
+    "width_std_mm": 0.025,
+    "epsilon_std": 0.04,
+    "offset_mm": 5.0,
+    "position_std_mm": 0.05,
+    "noise_rms": 0.002,
+    "standard_phase_std_deg": 0.4,
+    "load_std": 0.002,
+    "tolerance_GHz": 0.12,
+    "seed": 9
+  },
+  "source_sha256": "8bab93639e1c7ec85a5d361f429d7ac0ef4f939348f8f2bce3af2817f8a31e12",
+  "checks": {
+    "power_balance": 4.440892098500626e-16,
+    "error_term_recovery": 9.664760850780579e-17,
+    "random_inverse": 4.52150940353156e-16,
+    "independent_scattering_series": 6.206335383118183e-16,
+    "calibrated_surface": 6.206335383118183e-16,
+    "derivative_errors": [
+      1.15741454864704e-07,
+      2.8935337015312257e-08
+    ],
+    "ellipse_probability": 0.9500000000000001,
+    "averaging_floor_quadrature_error": 0.0,
+    "invalid_inputs": 8
+  },
+  "reference": {
+    "resonant_gamma": 0.4893617021276595,
+    "resonant_absorption": 0.7605251244907197,
+    "loaded_Q": 10.638297872340425,
+    "roundtrip_phase_deg_5mm": 120.08307427133472,
+    "position_phase_std_deg": 1.2008307427133473,
+    "tolerance": {
+      "-0.6": {
+        "sample_std_GHz": 0.05427277568731131,
+        "linear_std_GHz": 0.05426273532033236
+      },
+      "0.0": {
+        "sample_std_GHz": 0.083517870354944,
+        "linear_std_GHz": 0.08333333333333334
+      },
+      "0.6": {
+        "sample_std_GHz": 0.10498148785267801,
+        "linear_std_GHz": 0.1046156988431681
+      }
+    },
+    "calibration_condition": 3.3706818562897993,
+    "complex_measurement_rms": 0.011143503332402256
+  },
+  "limits": "Synthetic models and synthetic measurements only; no fabricated device or instrument validation."
+}
