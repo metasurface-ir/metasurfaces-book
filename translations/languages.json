@@ -290,6 +290,26 @@
       "source": "notebooks/08-communication-links.ipynb",
       "translation": "translations/fa/notebooks/08-communication-links.ipynb",
       "route": "communication-links"
+    },
+    {
+      "source": "chapters/09-materials-measurement.md",
+      "translation": "translations/fa/chapters/09-materials-measurement.md",
+      "route": "materials-measurement"
+    },
+    {
+      "source": "chapters/09-measurement-guide.md",
+      "translation": "translations/fa/chapters/09-measurement-guide.md",
+      "route": "measurement-guide"
+    },
+    {
+      "source": "labs/09-measurement-lab.md",
+      "translation": "translations/fa/labs/09-measurement-lab.md",
+      "route": "measurement-lab"
+    },
+    {
+      "source": "notebooks/09-fabrication-measurement.ipynb",
+      "translation": "translations/fa/notebooks/09-fabrication-measurement.ipynb",
+      "route": "fabrication-measurement"
     }
   ]
 }

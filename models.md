@@ -19,6 +19,7 @@ Start each investigation by identifying the object, its environment, the inciden
 | [6](chapters/06-numerical-methods.md) | A uniform dielectric slab, infinite along x and y | Numerical approximation to a known film-scattering problem |
 | [7](chapters/07-active-tunable.md) | Assigned bias-dependent impedance and prescribed scalar sources | Reachable reflection, coding, synthetic calibration and slow modulation; no solved patch geometry |
 | [8](chapters/08-communications.md) | Square reflective aperture and two free-space propagation legs | Scalar channel, ideal phases, assigned efficiency and noise; no solved patch or measured wireless link |
+| [9](chapters/09-materials-measurement.md) | Possible grounded patch, assigned one-port resonance, calibrated port and surface planes | Synthetic material/tolerance/calibration data; no solved patch, actual material or experimental instrument |
 | [10](chapters/10-ai-metasurfaces.md) | Synthetic analytical resonant sheet | Learning and inverse-search performance on analytical data; no fabricated unit cell |
 
 ## Chapter 3: one ridge width, repeated everywhere
@@ -84,3 +85,7 @@ The same six-ridge geometry now anchors [ms-09 spectral sweeps](labs/09-dispersi
 ## Chapter 8: aperture geometry and the communication link
 
 The [Chapter 8 geometry](chapters/08-communications.md) shows a transmitter, reflective square aperture, receiver and optional direct path. A loaded-patch inset is a possible implementation only. Integration samples carry area weights; they are not separately normalized antennas. The [explorer](labs/08-communications-lab.md) moves the receiver while retaining the programmed target, and displays the corresponding aperture phase and gain. The shared model is simulations/communication_link.py.
+
+## Chapter 9: from device to measurement
+
+The [measurement schematic](chapters/09-materials-measurement.md) distinguishes a possible grounded patch from the one-port model actually executed. Width and effective permittivity change an assigned resonance by a local scaling law. The port and surface planes are separated by a known 5 mm air path. An independent free-space/horn sketch is an unexecuted extension, not the calibration fixture solved by the notebook. Shared calculations live in simulations/materials_measurement.py.
