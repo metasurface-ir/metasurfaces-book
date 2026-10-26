@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "parameters": {
+    "frequency_GHz": 28.0,
+    "side_m": 0.48,
+    "samples_side": 96,
+    "tx_m": [
+      -10.0,
+      0.0,
+      20.0
+    ],
+    "rx_m": [
+      8.0,
+      0.0,
+      12.0
+    ],
+    "efficiency": 0.8,
+    "tx_gain": 1.0,
+    "rx_gain": 1.0,
+    "power_dBm": 10.0,
+    "bandwidth_MHz": 100.0,
+    "noise_figure_dB": 7.0,
+    "temperature_K": 290.0
+  },
+  "source_sha256": "0ccb26907ba7ac77713dd315a769f60c37bce5558ab01a0fd519211843289129",
+  "checks": {
+    "coherent_relative": 5.939798433439992e-19,
+    "adaptive_quadrature_relative": 1.4600749926688193e-08,
+    "independent_loop_relative": 3.1999771255915374e-12,
+    "reciprocity_relative": 4.220792494548411e-19,
+    "far_field_relative": 4.87947018346091e-08,
+    "Gaussian_moment_relative": 7.524174030739161e-16,
+    "sinc_absolute": 1.107997124992141e-06,
+    "invalid_inputs": 8,
+    "quantized_grid_power_spread": 0.0021042997781257474,
+    "off_frequency_relative": 1.1164059816771453e-12
+  },
+  "refinements": [
+    {
+      "samples_side": 24,
+      "relative_error": 2.3361206247691187e-07
+    },
+    {
+      "samples_side": 48,
+      "relative_error": 5.840300248757368e-08
+    },
+    {
+      "samples_side": 96,
+      "relative_error": 1.4600749926688193e-08
+    },
+    {
+      "samples_side": 192,
+      "relative_error": 3.6501875589170734e-09
+    }
+  ],
+  "reference": {
+    "gain_dB": -87.15820436461476,
+    "noise_dBm": -86.9751871942281,
+    "snr_dB": 9.816982829613352,
+    "gross_Mbps": 340.4268724525804,
+    "plane_ratio": 0.5955341022711761,
+    "two_bit_ratio": 0.8099854423971597,
+    "training": [
+      {
+        "count": 1,
+        "selected_x": 8.0,
+        "gain": 1.2546778215082225e-10,
+        "gross_Mbps": 70.06581272089042,
+        "net_Mbps": 69.71548365728597
+      },
+      {
+        "count": 3,
+        "selected_x": 8.0,
+        "gain": 1.2546778215082225e-10,
+        "gross_Mbps": 70.06581272089042,
+        "net_Mbps": 69.01482553007706
+      },
+      {
+        "count": 5,
+        "selected_x": 8.0,
+        "gain": 1.2546778215082225e-10,
+        "gross_Mbps": 70.06581272089042,
+        "net_Mbps": 68.31416740286816
+      },
+      {
+        "count": 9,
+        "selected_x": 8.0,
+        "gain": 1.2546778215082225e-10,
+        "gross_Mbps": 70.06581272089042,
+        "net_Mbps": 66.91285114845034
+      },
+      {
+        "count": 17,
+        "selected_x": 8.5,
+        "gain": 1.4520166086832795e-09,
+        "gross_Mbps": 304.191973778099,
+        "net_Mbps": 278.3356560069606
+      },
+      {
+        "count": 33,
+        "selected_x": 8.25,
+        "gain": 1.4960141777461478e-09,
+        "gross_Mbps": 307.98246164154534,
+        "net_Mbps": 257.1653554706904
+      },
+      {
+        "count": 65,
+        "selected_x": 8.375,
+        "gain": 1.842188695928624e-09,
+        "gross_Mbps": 334.76960655781124,
+        "net_Mbps": 225.9694844265226
+      }
+    ]
+  },
+  "limits": "Scalar aperture approximation only; no vector Maxwell solution or measured device/link validation."
+}

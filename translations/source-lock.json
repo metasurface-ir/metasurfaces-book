@@ -1,11 +1,11 @@
 {
-  "intro.md": "883aea6b103355ae820ea260515796bf9bb1ac8f770ade1c267516e1abd573cf",
-  "syllabus.md": "59ed9e7be967edb1678d2896eb72062d6bd304c570119b6187e891bbdd0243fc",
+  "intro.md": "945905c956ee85dca2b912827df49920661e97dd4dd2638ebd4c4b4ed42c1de1",
+  "syllabus.md": "b65477a51ec36dac48ddd7d8f05c2a635ea5d6d2476a7c8b87e73b9d278c5950",
   "getting-started.md": "d43e841881cb09fb612d89fc4bc9305a4357b34649527923edf2a0aa1914b949",
-  "contributing.md": "5c8cbb4e67c82422303d5dd59540944f0ea01985a76e6daeb13e2fbf3def862e",
-  "translations.md": "3680ea72eae306bf6cc405a7c84a5226184b491dca8a0199a85761aad6998743",
+  "contributing.md": "bd0b3ae6de2318d8c8cadc751fed80343226006e9a36bc903fcb3f7d5148a80b",
+  "translations.md": "db9a12ddcaed6027662162c15d8f082add2d0a4dd92d20468c13761a7163d570",
   "glossary.md": "5054f2f28fa15a529808c58b55aabdd31342b958e0ef061f2c23e8a462a6da42",
-  "labs/index.md": "5f53790d83ee0309f7f7102000347255c66ea2c43aa403d1247de3c3d98cfc5e",
+  "labs/index.md": "db6bc9239d4b1d80aa6e6e8e90fd2f6c46861981bb2824e558823b372f291fcf",
   "labs/lab-template.md": "847812a1a51f605f9b2d61ebc28f79922c8b778d231b5e2a14dcaff1c6d2b36c",
   "chapters/01-metasurface-foundations.md": "3647992201a136fe66782f4253225a953455df430018312c31498926743379d4",
   "chapters/01-foundations-guide.md": "641074430a1d6229ba534d042c9f2fba5e46241582b4942b61e2a7285c1d15b3",
@@ -43,7 +43,7 @@
   "chapters/06-numerical-guide.md": "00f3c13c3441ca07592c3cb306bab911e4adef6c45a6cbafb12f8e3b2e70c5d0",
   "labs/06-numerical-lab.md": "13ce9c50865f6fa711270553b8be2bcd110feaad4dd8f8454d31eb083523f93f",
   "notebooks/06-numerical-methods.ipynb": "c051353ca64016d74928ca878aeb6ab45849f43adcf83af1517f469315e7553d",
-  "models.md": "fd3890ad0bd4a3826e80b09a76c83dd6ab3e1f03e089193ca410caeb8f1a70e6",
+  "models.md": "6718311d940afeebfbfbf34cdb27d749a19ffe90e6499bf99d331f64e8adffc8",
   "templates/model-geometry.js": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a",
   "notebooks/10-coupling.ipynb": "f63e14df90360349a68cae9729cbc684ab25cc11a280eecab9edb8013e253897",
   "notebooks/11-inverse-design.ipynb": "3429883ccccbbfae3bc35c55220ed553cc90fa37db718e731b4f9afe7c981f53",
@@ -55,5 +55,9 @@
   "chapters/07-active-tunable.md": "70dddfd40ecdfc56ed7f9b7b7e2e8e13bed77ecd69a088597701b7a0029907a6",
   "chapters/07-tunable-guide.md": "99ef76768e44f486e96c5ccb3c9bbd9c672a170ba8cc0d38abd1f5b0f77a885c",
   "labs/07-tunable-lab.md": "002a31af87d26107976d6740a7f63cf0c7e22f1e3553d7c1c490658b8d14ea2f",
-  "notebooks/07-tunable-metasurfaces.ipynb": "c199c058e7346ac5576538dbd3ba2342bfedde859b29a5a00822126f8f1ad1fb"
+  "notebooks/07-tunable-metasurfaces.ipynb": "c199c058e7346ac5576538dbd3ba2342bfedde859b29a5a00822126f8f1ad1fb",
+  "chapters/08-communications.md": "52740b96880bbd08082db69a8ea7982ed5824cb180f78a966028e3f4411d9843",
+  "chapters/08-communications-guide.md": "70a0675a707c82a7301edd518dcbb73ecfa9956e3950a425ab2b6d8b9faf5501",
+  "labs/08-communications-lab.md": "7c2335843a1f7714df5a0f33a44876b656b08c3b5cba5c4b030b1e92e3f6ade9",
+  "notebooks/08-communication-links.ipynb": "f7d9e1e83bb989e10c2b80e00d0a74559b61d78c27117bbf395b33f80484205e"
 }

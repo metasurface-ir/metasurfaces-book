@@ -102,3 +102,7 @@ Keep the numerical-methods notebook with `simulations/numerical_methods.py` and 
 ## Chapter 7 evidence and exports
 
 Edit the shared `simulations/tunable_surface.py` and English notebook, then rerun all notebook cells and `python scripts/validate_chapter07.py`. Preserve the paired Persian notebook code and translate its Markdown cells. Export original schematics with `python scripts/export_tunable_geometry.py`, and saved plots, browser evidence and sources with `python scripts/export_chapter07.py`. The browser renderer checks the model hash and reference parameters against the audit. Regenerate figure provenance, review affected Persian prose and source locks, and run the strict bilingual build. Browser labs open in a new tab; source bundles contain Python/notebook/data files, with no browser-lab HTML download.
+
+## Chapter 8 evidence and exports
+
+Edit simulations/communication_link.py and the English notebook, execute it, and run python scripts/validate_chapter08.py. Synchronize Persian code cells and translate its Markdown cells. Run scripts/export_communications_geometry.py and scripts/export_chapter08.py, then regenerate figure provenance. Review paired prose and source locks and run the strict bilingual build. The browser renderer requires matching model hashes and audited parameters. The source ZIP contains Python, notebook and data files; browser labs open in a new tab without a download option.

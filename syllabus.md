@@ -21,11 +21,11 @@ By completing the course, students should be able to formulate a metasurface sca
 | 5 | [Metasurface synthesis](chapters/05-metasurface-synthesis.md) | Executed full-wave beam steering, expanded library, scalar line focusing, Jones/geometric phase, and further design outlines |
 | 6 | [Numerical modeling and simulation methods](chapters/06-numerical-methods.md) | Executed FDFD slab benchmark, mesh/domain refinements, original field/error plots, phase-plane diagnostics, and RCWA convergence companion |
 | 7 | [Active, tunable, and intelligent metasurfaces](chapters/07-active-tunable.md) | Executed bias-tuned circuit, scalar codebooks, synthetic feedback, driver dynamics and temporal harmonics |
-| 8 | Emerging applications in communications engineering | Beam control and system-level performance investigations |
+| 8 | [Emerging applications in communications engineering](chapters/08-communications.md) | Executed aperture/link model, spherical focusing, direct-path interference, bandwidth, phase errors and training overhead |
 | 9 | Materials, fabrication, and measurement methods | Tolerance analysis, measured-data processing, uncertainty |
 | 10 | [AI and Metasurfaces](chapters/10-ai-metasurfaces.md) | Physically informed datasets, surrogate models, inverse design, uncertainty, and full-wave verification |
 
-Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. The supplied excerpt gives only chapter-level headings for Chapters 7-9. Chapter 7 now has a developed computational investigation; Chapters 8-9 remain open outlines.
+Chapter 6 may be introduced earlier as a methods strand, so students establish validation habits before building a unit-cell library. The supplied excerpt gives only chapter-level headings for Chapters 7-9. Chapters 7 and 8 now have developed computational investigations; Chapter 9 remains an open outline.
 
 ## Chapter 1: Metasurface foundations
 
@@ -65,13 +65,19 @@ Focusing is an executed scalar cylindrical-line model with independent FFT windo
 
 The [chapter](chapters/06-numerical-methods.md), [six worked examples and self-check](chapters/06-numerical-guide.md), [interactive lab](labs/06-numerical-lab.md), and [executed notebook](notebooks/06-numerical-methods.ipynb) distinguish equation residual, discrete conservation, observable convergence, and model discrepancy. Four original figures and a bilingual offline explorer show spatial refinement, fields, padding/boundary errors, reference-plane mistakes, and harmonic convergence.
 
-The core is a parameterized normal-incidence, equal-exterior, real-index FDFD slab benchmarked against the independent exact Chapter 2 film. It is a different numerical family from RCWA, for the slab only. Further FEM/FDTD, patterned-cell comparisons, finite-device and material-uncertainty stages are explicitly unexecuted outlines. Chapters 8–9 remain syllabus outlines.
+The core is a parameterized normal-incidence, equal-exterior, real-index FDFD slab benchmarked against the independent exact Chapter 2 film. It is a different numerical family from RCWA, for the slab only. Further FEM/FDTD, patterned-cell comparisons, finite-device and material-uncertainty stages are explicitly unexecuted outlines. Chapter 9 remains a syllabus outline.
 
 ## Chapter 7: Active, tunable, and intelligent metasurfaces
 
 The [chapter](chapters/07-active-tunable.md), [six worked examples](chapters/07-tunable-guide.md), [lab](labs/07-tunable-lab.md), and [executed notebook](notebooks/07-tunable-metasurfaces.ipynb) connect a bias-dependent effective impedance to reachable complex states, quantized scalar arrays, synthetic calibration, RC settling and temporal Fourier channels. One original geometry/circuit schematic and four numerical figures accompany a bilingual four-tab browser explorer. Independent boundary, ODE, Fourier and limiting-case checks support the calculations.
 
 The geometry is explanatory; no physical biased patch or hardware loop has been solved or measured. Array intensity and envelope harmonic weights are not device efficiencies. Calibrated components, biased full-wave cells, unlike-neighbor arrays, robust feedback and complete modulated energy budgets have explicit further lab outlines.
+
+## Chapter 8: Communications engineering
+
+The [chapter](chapters/08-communications.md), [six worked examples](chapters/08-communications-guide.md), [lab](labs/08-communications-lab.md) and [executed notebook](notebooks/08-communication-links.ipynb) connect aperture geometry to a declared scalar channel, coherent/direct-path interference, received power, ideal AWGN rate, bandwidth and training. An original geometry/patch concept and four numerical figures accompany the bilingual four-tab explorer.
+
+Checks include independent quadrature, scalar-loop comparison, reciprocity, far-field normalization, phase-error identities and rate accounting. This is not a vector device solver or measured link. Hardware calibration, vector cross-checks, noisy training, wideband rate, multiuser scheduling and sensing are explicit further lab outlines.
 
 ## Chapter 10: AI and Metasurfaces
 

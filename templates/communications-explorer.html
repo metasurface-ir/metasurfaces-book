@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metasurface.ir · Communication links</title>
+<style>
+:root{font:16px/1.55 "Segoe UI",Tahoma,sans-serif;color:#19354a;background:#f1f6f8;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:24px}h1{font-size:clamp(25px,4vw,36px);line-height:1.2;margin:8px 0 14px}h2{font-size:23px;margin:0 0 12px}h3{font-size:17px}p{margin:8px 0 16px}.eyebrow{color:#087f8c;font-weight:700;letter-spacing:.05em}
+.note{background:#e5f0f2;border-inline-start:4px solid #087f8c;padding:13px 16px;border-radius:8px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}
+button,select,input{font:inherit}button{border:1px solid #bcced8;border-radius:9px;background:white;color:inherit;padding:11px 15px;cursor:pointer}button[aria-selected=true]{background:#183e52;color:white;border-color:#183e52}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e18431;outline-offset:3px}
+.card{background:white;border:1px solid #d7e2e8;border-radius:13px;padding:20px;margin:14px 0;min-width:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.controls{display:flex;gap:16px;align-items:end;flex-wrap:wrap;margin:15px 0}.controls label{display:grid;gap:6px;flex:1;min-width:180px}
+input,select{width:100%;max-width:100%;accent-color:#087f8c}select{padding:8px;border:1px solid #aabdc9;border-radius:7px;background:white;color:inherit}
+.metric{display:flex;flex-wrap:wrap;gap:15px;background:#f4f8fa;border-radius:8px;padding:15px}.metric>div{flex:1;min-width:130px}.metric strong{display:block;font-size:25px;font-variant-numeric:tabular-nums}.unit{font-size:13px;color:#556d7c}.plot{width:100%;display:block;direction:ltr;overflow:hidden}.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.legend span:before{content:"";display:inline-block;width:16px;height:3px;background:var(--color);vertical-align:middle;margin-inline-end:5px}
+figure{margin:0}figcaption{font-size:14px;color:#516a7a}section[hidden]{display:none!important}.formula{direction:ltr;unicode-bidi:isolate;text-align:center;font-family:Georgia,serif;padding:12px;font-size:19px;background:#f4f8fa;border-radius:8px;overflow-wrap:anywhere}
+.small{font-size:13px;color:#526c7a}a{color:#076c80}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;text-align:start;border-bottom:1px solid #dde6eb}
+.metric strong,output,.unit{direction:ltr;unicode-bidi:isolate}
+@media(max-width:650px){main{padding:13px}.grid{grid-template-columns:1fr}.card{padding:13px}.tabs button{flex:1 1 42%;padding:9px}h2{font-size:21px}.controls label{min-width:150px}}
+</style></head>
+<body><main>
+<div class="eyebrow">METASURFACE.IR / 08</div>
+<h1 data-en="From a programmed surface to a communication link" data-fa="از سطح برنامه‌ریزی‌شده تا پیوند مخابراتی"></h1>
+<p data-en="See the geometry, predict the change, then inspect the saved numerical evidence." data-fa="هندسه را ببینید، تغییر را پیش‌بینی کنید و سپس شواهد عددی ذخیره‌شده را بررسی کنید."></p>
+<div class="note" data-en="Declared scalar aperture model · 28 GHz · 0.48 m square · efficiency 0.8. These are numerical teaching results, not a full-wave device or a measured link." data-fa="مدل اسکالر مفروض دهانه · ۲۸ گیگاهرتز · مربع ۰٫۴۸ متری · بازده ۰٫۸. نتایج عددی آموزشی‌اند؛ دستگاه تمام‌موج یا پیوند اندازه‌گیری‌شده نیستند."></div>
+<nav class="tabs" role="tablist" aria-label="Investigations">
+<button id="tab-focus" role="tab" aria-controls="focus" aria-selected="true" data-view="focus" data-en="Geometry & focus" data-fa="هندسه و تمرکز"></button>
+<button id="tab-power" role="tab" aria-controls="power" aria-selected="false" tabindex="-1" data-view="power" data-en="Power & interference" data-fa="توان و تداخل"></button>
+<button id="tab-band" role="tab" aria-controls="band" aria-selected="false" tabindex="-1" data-view="band" data-en="Bandwidth" data-fa="پهنای باند"></button>
+<button id="tab-training" role="tab" aria-controls="training" aria-selected="false" tabindex="-1" data-view="training" data-en="Training & errors" data-fa="آموزش و خطا"></button></nav>
+<section id="focus" role="tabpanel" aria-labelledby="tab-focus">
+<div class="card"><h2 data-en="Where is the receiver?" data-fa="گیرنده کجاست؟"></h2>
+<p data-en="Keep the surface command fixed while moving the receiver. The target remains at x = 8 m, z = 12 m." data-fa="هنگام حرکت گیرنده، فرمان سطح ثابت می‌ماند. هدف در x = 8 m و z = 12 m باقی می‌ماند."></p>
+<div class="controls"><label><span data-en="Phase law" data-fa="قانون فاز"></span><select id="law"><option value="focus" data-en="Spherical focus" data-fa="تمرکز کروی"></option><option value="plane" data-en="Plane-wave approximation" data-fa="تقریب موج صفحه‌ای"></option><option value="2bit" data-en="Two-bit spherical phase" data-fa="فاز کروی دوبیتی"></option></select></label>
+<label><span data-en="Receiver x (m)" data-fa="مختصات x گیرنده (متر)"></span><input id="receiver" type="range" min="0" max="240" value="120" step="1"><output id="receiver-value"></output></label></div>
+<div class="grid"><figure><svg id="geometry" class="plot" viewBox="0 0 520 320" role="img"></svg><figcaption data-en="Side view, y = 0. The aperture marker is enlarged. Both nodes are above the reflective plane." data-fa="نمای جانبی در y = 0. نشانهٔ دهانه بزرگ شده است. هر دو گره بالای صفحهٔ بازتابی‌اند."></figcaption></figure>
+<figure><svg id="phase-map" class="plot" viewBox="0 0 400 320" role="img"></svg><figcaption data-en="Subsampled command phase on the aperture (24 × 24 display samples). Colors span −π to +π; this is not a fabricated patch layout." data-fa="نمونه‌هایی از فاز فرمان دهانه (نمایش ۲۴ × ۲۴ نمونه). رنگ از −π تا +π تغییر می‌کند؛ نقشهٔ ساخت پچ نیست."></figcaption></figure></div>
+<div class="metric" aria-live="polite"><div><span data-en="Channel power gain" data-fa="بهرهٔ توان کانال"></span><strong id="gain"></strong><span class="unit">dB</span></div><div><span data-en="Relative to ideal target" data-fa="نسبت به هدف ایده‌آل"></span><strong id="relative"></strong><span class="unit">dB</span></div></div>
+<svg id="focus-plot" class="plot" viewBox="0 0 750 310" role="img"></svg><div id="focus-legend" class="legend"></div>
+<p class="note" data-en="A plane phase ramp drops curvature on both propagation legs. Two-bit rounding introduces a different error. Compare at the target before interpreting sidelobes." data-fa="رمپ فاز صفحه‌ای انحنای هر دو مسیر انتشار را حذف می‌کند. گردکردن دوبیتی خطای دیگری ایجاد می‌کند. پیش از تفسیر لوب جانبی، در هدف مقایسه کنید."></p></div></section>
+<section id="power" role="tabpanel" aria-labelledby="tab-power" hidden>
+<div class="card"><h2 data-en="Fields interfere; powers do not simply add" data-fa="میدان‌ها تداخل می‌کنند؛ توان‌ها ساده جمع نمی‌شوند"></h2>
+<p data-en="Focused surface path plus a direct Friis path with an assigned 10-dB excess power loss. Endpoints are fixed at the reference positions. The phase is relative to the direct path." data-fa="مسیر متمرکز سطح همراه مسیر مستقیم فریس با افت اضافی توان مفروض ۱۰ دسی‌بل. گره‌ها در مکان مرجع ثابت‌اند. فاز نسبت به مسیر مستقیم تعریف می‌شود."></p>
+<div class="controls"><label><span data-en="Transmit power (dBm)" data-fa="توان ارسال (dBm)"></span><input id="tx-power" type="range" min="-10" max="30" value="10"><output id="power-value"></output></label>
+<label><span data-en="Relative phase (degrees)" data-fa="فاز نسبی (درجه)"></span><input id="offset" type="range" min="0" max="360" value="180"><output id="offset-value"></output></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Received power" data-fa="توان دریافتی"></span><strong id="received"></strong><span class="unit">dBm</span></div><div><span data-en="SNR" data-fa="نسبت سیگنال به نویز"></span><strong id="snr"></strong><span class="unit">dB</span></div><div><span data-en="Gross AWGN benchmark" data-fa="مرجع ناخالص AWGN"></span><strong id="rate"></strong><span class="unit">Mbps</span></div></div>
+<div class="formula">Pᵣ = Pₜ |h𝒹 + hₛ|² &nbsp; · &nbsp; R = B log₂(1 + SNR)</div>
+<svg id="power-plot" class="plot" viewBox="0 0 750 310" role="img"></svg>
+<p data-en="Noise is −86.975 dBm for 100 MHz, 290 K and 7-dB noise figure. Rate assumes a flat channel, ideal Gaussian signaling and no overhead." data-fa="نویز برای ۱۰۰ مگاهرتز، ۲۹۰ کلوین و عدد نویز ۷ دسی‌بل برابر −86.975 dBm است. نرخ، کانال تخت، سیگنال‌دهی گاوسی ایده‌آل و نبود سربار را فرض می‌کند."></p>
+<h3 data-en="Change area, not just sample count" data-fa="مساحت را تغییر دهید، نه فقط تعداد نمونه"></h3>
+<svg id="area-plot" class="plot" viewBox="0 0 750 310" role="img"></svg><div id="area-legend" class="legend"></div>
+<p class="note" data-en="At fixed physical area, increasing the integration grid from 24 to 192 samples per side changes the coherent gain by less than 0.000003 dB. It refines the integral; it does not create more aperture." data-fa="در مساحت ثابت، افزایش شبکه از ۲۴ به ۱۹۲ نمونه در هر ضلع بهرهٔ همدوس را کمتر از 0.000003 dB تغییر می‌دهد. انتگرال دقیق‌تر می‌شود؛ دهانهٔ بیشتری ساخته نمی‌شود."></p></div></section>
+<section id="band" role="tabpanel" aria-labelledby="tab-band" hidden>
+<div class="card"><h2 data-en="One phase setting, several frequencies" data-fa="یک تنظیم فاز، چند فرکانس"></h2>
+<p data-en="The command stays designed for 28 GHz. Select a frequency to inspect beam displacement at z = 12 m. All curves use the same target reference." data-fa="فرمان همچنان برای ۲۸ گیگاهرتز طراحی شده است. فرکانس را برای بررسی جابه‌جایی پرتو در z = 12 m انتخاب کنید. همهٔ منحنی‌ها مرجع هدف یکسان دارند."></p>
+<div class="controls"><label><span data-en="Frequency (GHz)" data-fa="فرکانس (گیگاهرتز)"></span><select id="frequency"><option>25</option><option selected>28</option><option>31</option></select></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Target gain penalty" data-fa="کاهش بهره در هدف"></span><strong id="band-loss"></strong><span class="unit">dB</span></div><div><span data-en="Peak on sampled receiver cut" data-fa="قله روی برش نمونه‌برداری‌شدهٔ گیرنده"></span><strong id="peak-x"></strong><span class="unit">m</span></div></div>
+<svg id="band-plot" class="plot" viewBox="0 0 750 310" role="img"></svg>
+<svg id="spectrum-plot" class="plot" viewBox="0 0 750 310" role="img"></svg><div id="spectrum-legend" class="legend"></div>
+<p class="note" data-en="The ideal relative-delay line assumes nondispersive amplitude and compensation of all path differences. It is a benchmark, not simulated delay hardware. Frequency-swept gain is not broadband throughput." data-fa="خط تأخیر نسبی ایده‌آل، دامنهٔ بی‌پاشندگی و جبران همهٔ اختلاف مسیرها را فرض می‌کند. مرجع مقایسه است، نه سخت‌افزار تأخیر شبیه‌سازی‌شده. بهرهٔ جاروب فرکانسی، گذردهی پهن‌باند نیست."></p></div></section>
+<section id="training" role="tabpanel" aria-labelledby="tab-training" hidden>
+<div class="card"><h2 data-en="Pay for finding the beam" data-fa="هزینهٔ یافتن پرتو را حساب کنید"></h2>
+<p data-en="A user at x = 8.37 m, z = 12 m selects the strongest noiseless pilot from K focal points spanning x = 4–12 m. Each candidate costs one symbol; K = 1 points to x = 8 m. This is beam selection, not channel estimation." data-fa="کاربر در x = 8.37 m و z = 12 m قوی‌ترین پایلوت بدون نویز را از K نقطهٔ کانونی در بازهٔ x = 4–12 m انتخاب می‌کند. هر نامزد یک نماد هزینه دارد؛ K = 1 به x = 8 m اشاره می‌کند. این انتخاب پرتو است، نه تخمین کانال."></p>
+<div class="controls"><label><span data-en="Coherence block (symbols)" data-fa="بلوک همدوسی (نماد)"></span><select id="coherence"><option>100</option><option selected>200</option><option>500</option></select></label></div>
+<div class="metric" aria-live="polite"><div><span data-en="Best tested K" data-fa="بهترین K آزمایش‌شده"></span><strong id="best-k"></strong></div><div><span data-en="Best net rate" data-fa="بهترین نرخ خالص"></span><strong id="net-rate"></strong><span class="unit">Mbps</span></div></div>
+<div class="formula">Rₙₑₜ = (1 − K/Tc) B log₂(1 + SNR)</div>
+<svg id="training-plot" class="plot" viewBox="0 0 750 310" role="img"></svg><div id="training-legend" class="legend"></div>
+<h3 data-en="Independent phase errors reduce coherent addition" data-fa="خطاهای فاز مستقل، جمع همدوس را کاهش می‌دهند"></h3>
+<svg id="error-plot" class="plot" viewBox="0 0 750 310" role="img"></svg><div id="error-legend" class="legend"></div>
+<p class="note" data-en="The error curve is mean power for independent Gaussian phase errors. A common phase error does not reduce isolated surface-path power. Neither curve is an outage probability. Pilot noise, switching latency, drift and protocol overhead are omitted." data-fa="منحنی خطا میانگین توان برای خطاهای فاز گاوسی مستقل است. خطای فاز مشترک توان مسیر منفرد سطح را کم نمی‌کند. هیچ‌یک احتمال قطعی نیست. نویز پایلوت، تأخیر کلیدزنی، رانش و سربار پروتکل حذف شده‌اند."></p></div></section>
+<footer class="small" data-en="Original teaching plots from the executed Chapter 8 notebook. Saved model and parameter hashes are checked before publication. No external scripts, tracking, or browser-lab downloads." data-fa="نمودارهای آموزشی تألیفی از دفترچهٔ اجراشدهٔ فصل ۸. هش مدل و پارامترهای ذخیره‌شده پیش از انتشار بررسی می‌شوند. بدون اسکریپت خارجی، رهگیری یا دانلود آزمایشگاه مرورگر."></footer>
+</main><script>
+'use strict';
+const D=__CH08_DATA__;window.communicationReference=D;
+const fa=document.documentElement.lang==='fa';if(fa)document.documentElement.dir='rtl';
+const tr=(en,per)=>fa?per:en,el=id=>document.getElementById(id),db=x=>10*Math.log10(Math.max(x,1e-30)),C=['#087f8c','#e18431','#7252a1'];
+document.querySelectorAll('[data-en]').forEach(e=>e.textContent=e.dataset[fa?'fa':'en']);
+document.title=tr('Communication links','پیوندهای مخابراتی')+' · Metasurface.ir';
+document.querySelector('[role=tablist]').setAttribute('aria-label',tr('Investigations','بررسی‌ها'));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const text=(x,y,s,size=13,anchor='middle')=>'<text x="'+x+'" y="'+y+'" font-size="'+size+'" text-anchor="'+anchor+'" fill="#385366">'+esc(s)+'</text>';
+function plot(id,x,ys,labels,ymin,ymax,xlabel,ylabel,mark=null){
+ const width=Math.min(750,Math.max(360,el(id).clientWidth)),left=65,right=width-15,top=25,bottom=258,xmin=Math.min(...x),xmax=Math.max(...x),xx=v=>left+(v-xmin)/(xmax-xmin)*(right-left),yy=v=>bottom-(v-ymin)/(ymax-ymin)*(bottom-top);
+ el(id).setAttribute('viewBox','0 0 '+width+' 310');
+ let s='<title>'+esc(xlabel+' / '+ylabel)+'</title><defs><clipPath id="'+id+'-clip"><rect x="'+left+'" y="'+top+'" width="'+(right-left)+'" height="'+(bottom-top)+'"/></clipPath></defs>';
+ for(let i=0;i<=4;i++){let y=top+(bottom-top)*i/4,v=ymax-(ymax-ymin)*i/4;s+='<path d="M'+left+' '+y+'H'+right+'" stroke="#e2eaee"/>'+text(left-8,y+4,Math.abs(v)>999?v.toExponential(1):v.toFixed(Math.abs(ymax-ymin)<5?2:0),12,'end');}
+ for(let i=0;i<=4;i++){const v=xmin+(xmax-xmin)*i/4;s+=text(xx(v),bottom+20,v.toFixed(xmax-xmin<20?1:0),12);}
+ s+='<g clip-path="url(#'+id+'-clip)">';
+ ys.forEach((y,j)=>{s+='<polyline fill="none" stroke="'+C[j]+'" stroke-width="2.5" points="'+x.map((v,i)=>xx(v).toFixed(2)+','+yy(y[i]).toFixed(2)).join(' ')+'"/>';});
+ if(mark!==null)s+='<path d="M'+xx(mark)+' '+top+'V'+bottom+'" stroke="#18354b" stroke-dasharray="5 5"/>';
+ s+='</g>'+text((left+right)/2,303,xlabel,13)+'<text transform="translate(16 145) rotate(-90)" text-anchor="middle" font-size="12" fill="#385366">'+esc(ylabel)+'</text>';
+ el(id).innerHTML=s;el(id).setAttribute('aria-label',xlabel+'; '+ylabel+'; '+labels.join(', '));
+}
+function legend(id,labels){el(id).innerHTML=labels.map((s,i)=>'<span style="--color:'+C[i]+'">'+esc(s)+'</span>').join('');}
+const names=[tr('Spherical','کروی'),tr('Plane','صفحه‌ای'),tr('Two-bit','دوبیتی')],target=D.focus.target_gain.focus;
+function focus(){
+ const i=+el('receiver').value,x=D.focus.x_m[i],key=el('law').value,g=D.focus.gain[key][i];
+ el('receiver-value').textContent=x.toFixed(3)+' m';el('gain').textContent=db(g).toFixed(3);el('relative').textContent=db(g/target).toFixed(3);
+ const rx=330+(x/12)*140;
+ el('geometry').innerHTML='<title>'+tr('Transmitter, aperture and moving receiver','فرستنده، دهانه و گیرندهٔ متحرک')+'</title><path d="M30 270H495" stroke="#aebfca"/><path d="M65 65L280 265L'+rx+' 150" fill="none" stroke="#087f8c" stroke-width="3"/><circle cx="65" cy="65" r="7" fill="#18354b"/><circle cx="'+rx+'" cy="150" r="7" fill="#e18431"/><rect x="260" y="260" width="40" height="10" fill="#e18431"/>'+text(85,20,tr('Transmitter','فرستنده'),17)+text(85,45,'(−10, 0, 20) m',16)+text(rx-15,104,tr('Receiver','گیرنده'),17)+text(rx-15,130,'x = '+x.toFixed(2)+' m',16)+text(280,298,tr('Aperture','دهانه'),17)+text(400,298,'z = 0',16)+text(480,290,'x',16);
+ const phase=D.focus.phase[key],n=phase.length,w=240/n;let s='<title>'+tr('Commanded aperture phase','فاز فرمان دهانه')+'</title>';
+ phase.forEach((row,j)=>row.forEach((v,k)=>{s+='<rect data-phase="'+v+'" x="'+(80+k*w)+'" y="'+(20+(n-1-j)*w)+'" width="'+(w+.2)+'" height="'+(w+.2)+'" fill="hsl('+((v+Math.PI)/(2*Math.PI)*360)+',50%,51%)"/>';}));
+ s+=text(200,286,'x: −0.24 … +0.24 m',16)+text(200,312,tr('y runs upward; phase colors are cyclic','محور y رو به بالا؛ رنگ فاز چرخه‌ای است'),13);
+ el('phase-map').innerHTML=s;
+ plot('focus-plot',D.focus.x_m,['focus','plane','2bit'].map(k=>D.focus.gain[k].map(v=>db(v/target))),names,-45,1,tr('Receiver x (m)','مختصات x گیرنده (متر)'),tr('Relative gain (dB)','بهرهٔ نسبی (دسی‌بل)'),x);legend('focus-legend',names);
+}
+function power(){
+ const i=+el('offset').value,pt=+el('tx-power').value,phi=D.power.phase_deg[i],gain=D.power.combined_gain[i],noise=1.380649e-23*290*1e8*10**.7,pr=10**((pt-30)/10)*gain,snr=pr/noise;
+ el('power-value').textContent=pt+' dBm';el('offset-value').textContent=phi+'°';
+ el('received').textContent=(pt+db(gain)).toFixed(3);el('snr').textContent=db(snr).toFixed(3);el('rate').textContent=(100*Math.log2(1+snr)).toFixed(2);
+ plot('power-plot',D.power.phase_deg,[D.power.combined_gain.map(v=>pt+db(v))],['power'],pt-92,pt-83,tr('Relative phase (degrees)','فاز نسبی (درجه)'),tr('Received power (dBm)','توان دریافتی (dBm)'),phi);
+ const labels=[tr('Spherical sum','جمع کروی'),tr('Far-field comparison','مقایسهٔ میدان دور')];
+ plot('area-plot',D.power.side_m.map(v=>v*v),[D.power.area_gain.map(db),D.power.far_gain.map(db)],labels,-113,-79,tr('Physical area (m²)','مساحت فیزیکی (متر مربع)'),tr('Channel gain (dB)','بهرهٔ کانال (دسی‌بل)'));legend('area-legend',labels);
+}
+function band(){
+ const f=el('frequency').value,curve=D.bandwidth.profiles[f],peak=curve.indexOf(Math.max(...curve)),idx=D.bandwidth.GHz.indexOf(+f);
+ el('band-loss').textContent=db(D.bandwidth.fixed_gain[idx]/target).toFixed(3);el('peak-x').textContent=D.focus.x_m[peak].toFixed(3);
+ plot('band-plot',D.focus.x_m,[curve.map(v=>db(v/target))],[f+' GHz'],-35,1,tr('Receiver x (m)','مختصات x گیرنده (متر)'),tr('Relative gain (dB)','بهرهٔ نسبی (دسی‌بل)'),8);
+ const labels=[tr('Fixed phase','فاز ثابت'),tr('Ideal relative delay','تأخیر نسبی ایده‌آل')];
+ plot('spectrum-plot',D.bandwidth.GHz,[D.bandwidth.fixed_gain.map(v=>db(v/target)),D.bandwidth.delay_gain.map(v=>db(v/target))],labels,-15,1,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Target relative gain (dB)','بهرهٔ نسبی هدف (دسی‌بل)'),+f);legend('spectrum-legend',labels);
+}
+function training(){
+ const tc=+el('coherence').value,rows=D.training.rows,net=rows.map(r=>(1-r.count/tc)*r.gross_Mbps),best=net.indexOf(Math.max(...net));
+ el('best-k').textContent=rows[best].count;el('net-rate').textContent=net[best].toFixed(2);
+ const labels=[tr('Gross rate','نرخ ناخالص'),tr('After pilot time','پس از زمان پایلوت')];
+ plot('training-plot',rows.map(r=>r.count),[rows.map(r=>r.gross_Mbps),net],labels,0,360,tr('Tested focus points K','تعداد نقاط کانونی K'),tr('Rate (Mbps)','نرخ (Mbps)'));legend('training-legend',labels);
+ const lab=[tr('Exact mean','میانگین دقیق'),tr('Seeded sample mean','میانگین نمونهٔ بذرثابت')];
+ plot('error-plot',D.training.sigma_deg,[D.training.mean_ratio,D.training.mc_ratio],lab,0,1.05,tr('Phase error standard deviation (deg)','انحراف معیار خطای فاز (درجه)'),tr('Mean gain / ideal gain','میانگین بهره / بهرهٔ ایده‌آل'));legend('error-legend',lab);
+}
+const tabs=[...document.querySelectorAll('[role=tab]')];
+function activate(button){tabs.forEach(b=>{const on=b===button;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;el(b.dataset.view).hidden=!on;});({focus,power,band,training})[button.dataset.view]();}
+tabs.forEach((b,i)=>{b.onclick=()=>activate(b);b.onkeydown=e=>{let j=i;if(e.key==='ArrowRight')j=(i+1)%4;else if(e.key==='ArrowLeft')j=(i+3)%4;else if(e.key==='Home')j=0;else if(e.key==='End')j=3;else return;e.preventDefault();activate(tabs[j]);tabs[j].focus();};});
+['law','receiver'].forEach(id=>el(id).addEventListener('input',focus));['offset','tx-power'].forEach(id=>el(id).addEventListener('input',power));
+el('frequency').addEventListener('change',band);el('coherence').addEventListener('change',training);
+focus();power();band();training();
+let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const b=document.querySelector('[role=tab][aria-selected=true]');activate(b);},100);});
+</script></body></html>
