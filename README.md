@@ -52,3 +52,5 @@ Chapters 1, 2, 3, 4, 5, 6, and 10 have developed computational materials. Start 
 Chapters 1-9 follow an instructor-supplied contents outline; Chapter 10, AI and Metasurfaces, was added by the instructor. Individual pages state their development status. This repository is the authoritative editing home for this book; the original local starter in the website workspace is an earlier snapshot.
 
 Authors retain rights to their contributions. No general reuse license has yet been selected. Submit only material you have permission to publish, and include attribution for external sources. See [source and reuse guidance](attribution.md) and the generated [figure provenance inventory](assets/provenance.json).
+
+Chapter 8 is an executed bilingual scalar aperture-to-communication-link investigation. Its reproducibility entry points are notebooks/08-communication-links.ipynb and scripts/validate_chapter08.py; figure/browser/source exports are in scripts/export_chapter08.py. It does not claim full-wave or measured-link validation.

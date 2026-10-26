@@ -270,6 +270,26 @@
       "source": "notebooks/07-tunable-metasurfaces.ipynb",
       "translation": "translations/fa/notebooks/07-tunable-metasurfaces.ipynb",
       "route": "tunable-metasurfaces"
+    },
+    {
+      "source": "chapters/08-communications.md",
+      "translation": "translations/fa/chapters/08-communications.md",
+      "route": "communications"
+    },
+    {
+      "source": "chapters/08-communications-guide.md",
+      "translation": "translations/fa/chapters/08-communications-guide.md",
+      "route": "communications-guide"
+    },
+    {
+      "source": "labs/08-communications-lab.md",
+      "translation": "translations/fa/labs/08-communications-lab.md",
+      "route": "communications-lab"
+    },
+    {
+      "source": "notebooks/08-communication-links.ipynb",
+      "translation": "translations/fa/notebooks/08-communication-links.ipynb",
+      "route": "communication-links"
     }
   ]
 }

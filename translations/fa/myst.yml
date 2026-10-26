@@ -73,6 +73,12 @@ project:
         - file: chapters/07-tunable-guide.md
         - file: labs/07-tunable-lab.md
         - file: notebooks/07-tunable-metasurfaces.ipynb
+    - title: فصل ۸ — مهندسی مخابرات
+      children:
+        - file: chapters/08-communications.md
+        - file: chapters/08-communications-guide.md
+        - file: labs/08-communications-lab.md
+        - file: notebooks/08-communication-links.ipynb
     - title: فصل ۱۰ — هوش مصنوعی و فراسطوح
       children:
         - file: chapters/10-ai-metasurfaces.md

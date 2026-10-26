@@ -18,6 +18,7 @@ Start each investigation by identifying the object, its environment, the inciden
 | [5](chapters/05-metasurface-synthesis.md) | Six different ridges forming one repeated supercell | Collective reflected/transmitted order powers; separate scalar/Jones exercises use their own models |
 | [6](chapters/06-numerical-methods.md) | A uniform dielectric slab, infinite along x and y | Numerical approximation to a known film-scattering problem |
 | [7](chapters/07-active-tunable.md) | Assigned bias-dependent impedance and prescribed scalar sources | Reachable reflection, coding, synthetic calibration and slow modulation; no solved patch geometry |
+| [8](chapters/08-communications.md) | Square reflective aperture and two free-space propagation legs | Scalar channel, ideal phases, assigned efficiency and noise; no solved patch or measured wireless link |
 | [10](chapters/10-ai-metasurfaces.md) | Synthetic analytical resonant sheet | Learning and inverse-search performance on analytical data; no fabricated unit cell |
 
 ## Chapter 3: one ridge width, repeated everywhere
@@ -79,3 +80,7 @@ A learned response does not establish a physical geometry. Connecting it to a ri
 5. Keep the geometry and model label with exported results. These drawings use the book's saved parameter files and the original shared renderer `templates/model-geometry.js`; they are generated without external artwork.
 
 The same six-ridge geometry now anchors [ms-09 spectral sweeps](labs/09-dispersion-lab.md), [ms-10 local/supercell comparisons](labs/10-coupling-lab.md), and [ms-11 bounded width optimization](labs/11-inverse-design-lab.md). Their browser drawings follow the saved wavelength, width contrast or selected candidate.
+
+## Chapter 8: aperture geometry and the communication link
+
+The [Chapter 8 geometry](chapters/08-communications.md) shows a transmitter, reflective square aperture, receiver and optional direct path. A loaded-patch inset is a possible implementation only. Integration samples carry area weights; they are not separately normalized antennas. The [explorer](labs/08-communications-lab.md) moves the receiver while retaining the programmed target, and displays the corresponding aperture phase and gain. The shared model is simulations/communication_link.py.
