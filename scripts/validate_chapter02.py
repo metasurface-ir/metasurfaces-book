@@ -1,6 +1,7 @@
 """Independent checks for the exact planar Chapter 2 teaching models.
 
-Execute/save the Chapter 2 notebook first. This audit checks its source hash,
+Execute/save the Chapter 2 notebook first. This audit checks its module and
+numerical-code identities, recorded parameters and saved result payload,
 then writes data/chapter-02/validation.json. No patterned-geometry solver,
 material-data fit, or fabricated-device measurement is performed here.
 """
@@ -14,6 +15,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'simulations'))
 import waves_interfaces as waves
+from source_provenance import check_reference
 
 
 def maximum(value):
@@ -51,7 +53,8 @@ def main():
     if not reference_path.exists():
         raise FileNotFoundError('Execute/save the Chapter 2 notebook before running this audit.')
     reference = json.loads(reference_path.read_text(encoding='utf-8'))
-    assert reference['metadata']['source_sha256'] == digest, 'Notebook/module source hash differs.'
+    assert reference['metadata']['source_sha256'] == digest, 'Simulation module hash differs.'
+    check_reference(reference, ROOT/'notebooks/02-waves-and-interfaces.ipynb')
 
     interface_errors = []
     interface_cases = 0
@@ -231,7 +234,12 @@ def main():
 
     report = dict(
         status='passed', model_version=waves.MODEL_VERSION, source_sha256=digest,
-        notebook_source_hash_checked=True,
+        simulation_module_hash_checked=True,
+        notebook_code_hash_checked=True,
+        parameters_hash_checked=True,
+        result_payload_hash_checked=True,
+        provenance={key:reference['metadata'][key] for key in
+                    ('notebook_code_sha256','parameters_sha256','result_payload_sha256')},
         interface=dict(parameter_cases=interface_cases, max_error=max(interface_errors),
                        matched_grazing_angles_deg=[89., 89.99999, 89.9999999],
                        brewster_deg=brewster, critical_deg=critical,

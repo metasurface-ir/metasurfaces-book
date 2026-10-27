@@ -21,7 +21,7 @@
     "units": "um, degrees; incident-normalized power",
     "conventions": "exp(-i omega t), TE Ey, r at z=0, t at z=height",
     "sources": {
-      "design_studies.py": "cfce9433da951c3bef1fddaccf29ec590ed18de3b841b6a54f0175074426d707",
+      "design_studies.py": "7cea8600887e798b313a93f03f9cbe00dfb69c26fa2aabc5c48778665305e85d",
       "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
       "metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629"
     },
@@ -10843,6 +10843,7 @@
     "n_substrate": 1.5,
     "angle_deg": 0.0
   },
+  "stage": "investigation_complete",
   "refinement": [
     {
       "half_order": 32,
@@ -11140,5 +11141,9 @@
         "max_order_power_error": 2.841090168109045e-07
       }
     ]
+  },
+  "validation": {
+    "improved": true,
+    "refinement_passed": true
   }
 }

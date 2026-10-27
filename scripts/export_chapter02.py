@@ -4,8 +4,11 @@ import hashlib
 import json
 from pathlib import Path
 import zipfile
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'simulations'))
+from source_provenance import check_reference
 notebook=json.loads((ROOT/'notebooks/02-waves-and-interfaces.ipynb').read_text(encoding='utf-8'))
 destination=ROOT/'assets/chapter-02';destination.mkdir(parents=True,exist_ok=True)
 figures={'ch02-interface':'interface-power.png','ch02-tir':'tir-field.png',
@@ -23,8 +26,10 @@ assert hashlib.sha256((ROOT/'simulations/waves_interfaces.py').read_bytes()).hex
 audit=json.loads((ROOT/'data/chapter-02/validation.json').read_text(encoding='utf-8'))
 assert audit['status']=='passed'
 assert audit['source_sha256']==reference['metadata']['source_sha256']
+check_reference(reference, ROOT/'notebooks/02-waves-and-interfaces.ipynb')
+assert all(audit['provenance'][key]==reference['metadata'][key] for key in audit['provenance']), 'Audit and data provenance differ.'
 (ROOT/'interactives/waves-explorer.html').write_text((ROOT/'templates/waves-explorer.html').read_text(encoding='utf-8'),encoding='utf-8',newline='\n')
-files=['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
+files=['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'simulations/source_provenance.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
 with zipfile.ZipFile(ROOT/'downloads/chapter-02-waves.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
     for file in files:archive.write(ROOT/file,file)
     archive.writestr('START-HERE.md','''# Chapter 2: waves, interfaces, and sheets

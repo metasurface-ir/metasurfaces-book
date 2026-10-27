@@ -8,7 +8,7 @@ from dataclasses import asdict, dataclass
 import numpy as np
 from scipy.optimize import minimize_scalar
 
-MODEL_VERSION = 'tunable-impedance-1.0'
+MODEL_VERSION = 'tunable-impedance-1.1'
 C0 = 299792458.0
 
 
@@ -68,6 +68,21 @@ def array_positions(elements=32, spacing_wavelength=.5):
     return (np.arange(elements)-(elements-1)/2)*spacing_wavelength
 
 
+def unwrapped_phase_deg(gamma, amplitude_floor=1e-10):
+    """Unwrap each usable 1D segment independently; retain gaps at zeros."""
+    g = np.asarray(gamma, complex)
+    if g.ndim != 1 or not np.all(np.isfinite(g)):
+        raise ValueError('Use a finite one-dimensional complex response.')
+    if not np.isfinite(amplitude_floor) or amplitude_floor <= 0:
+        raise ValueError('Use a positive finite amplitude floor.')
+    usable = abs(g) > amplitude_floor
+    phase = np.full(g.shape, np.nan)
+    edges = np.flatnonzero(np.diff(np.r_[False, usable, False]))
+    for start, stop in zip(edges[::2], edges[1::2]):
+        phase[start:stop] = np.rad2deg(np.unwrap(np.angle(g[start:stop])))
+    return phase
+
+
 def array_field(coefficients, angles_deg, positions_wavelength):
     g = np.asarray(coefficients, dtype=complex)
     x = real_values(positions_wavelength, 'Positions')
@@ -79,12 +94,12 @@ def array_field(coefficients, angles_deg, positions_wavelength):
     return np.mean(g * np.exp(-2j*np.pi*np.sin(np.deg2rad(angles))[...,None]*x), axis=-1)
 
 
-def code_array(target_deg=25., bits=4, circuit=False, surface=Surface(), frequency_GHz=10., elements=32):
+def code_array(target_deg=25., bits=4, circuit=False, surface=Surface(), frequency_GHz=10., elements=32, spacing_wavelength=.5):
     if not np.isfinite(target_deg) or abs(target_deg) >= 80:
         raise ValueError('Use a target strictly inside +/-80 degrees.')
     if isinstance(bits, bool) or not isinstance(bits, (int,np.integer)) or not 1 <= bits <= 8:
         raise ValueError('Use 1 to 8 integer control bits.')
-    x = array_positions(elements)
+    x = array_positions(elements, spacing_wavelength)
     desired = np.exp(2j*np.pi*x*np.sin(np.deg2rad(target_deg)))
     levels = 2**bits
     voltage = np.linspace(0,surface.voltage_max_V,levels)
