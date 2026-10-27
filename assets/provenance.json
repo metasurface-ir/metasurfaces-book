@@ -52,7 +52,7 @@
     },
     {
       "asset": "assets/chapter-02/film-interference.png",
-      "sha256": "547a4abca20081d63103881b365b345ec432fda1382456b6bae7f56711c8d027",
+      "sha256": "5e18a6618da4c4278d12a08528744d07430b3e4e3763f13d0c038ae187e614b2",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -129,7 +129,7 @@
     },
     {
       "asset": "assets/chapter-02/tir-field.png",
-      "sha256": "77b92aeba6c358c28857f6b75d7b67d5b425edd1e7c338607c7daa4e1b26b256",
+      "sha256": "1fe6e98533c5bd747d31e6f53ec7ba9a08cff76dac7ab204431ce6abd6ad0957",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -341,7 +341,7 @@
     },
     {
       "asset": "assets/chapter-05/dispersion-spectrum.png",
-      "sha256": "b2f6135cce495c8cd1fd3415b9a1bcbed1a7c3517c56750f675a4f3045524901",
+      "sha256": "5dc89fb872735434dd63f5fda2910bc11e628b8e16143a22619822152aced639",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -548,7 +548,7 @@
     },
     {
       "asset": "assets/chapter-08/bandwidth.png",
-      "sha256": "f2a9a4055e08f0f4de0b63177e6f1d357105611eeede1ad60a28fad8826bc4b5",
+      "sha256": "0ba1e88f5f47e51321c8dacb287147247213e29c12f906417d648d6d3b3a0515",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -646,7 +646,7 @@
     },
     {
       "asset": "assets/chapter-09/tolerance.png",
-      "sha256": "db35eb0607ba0760cd11f0a9d2897e5c7b9f0206d9b7485462c1b133a06a3791",
+      "sha256": "2b55a88df6b9a3ef5d4a9fb41d32ead3c4f7e5c67303bb466c8da9e8b86bdeca",
       "origin": "original numerical notebook output",
       "generators": [
         {
