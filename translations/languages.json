@@ -310,6 +310,16 @@
       "source": "notebooks/09-fabrication-measurement.ipynb",
       "translation": "translations/fa/notebooks/09-fabrication-measurement.ipynb",
       "route": "fabrication-measurement"
+    },
+    {
+      "source": "learning-path.md",
+      "translation": "translations/fa/learning-path.md",
+      "route": "learning-path"
+    },
+    {
+      "source": "labs/12-research-project.md",
+      "translation": "translations/fa/labs/12-research-project.md",
+      "route": "research-project"
     }
   ]
 }

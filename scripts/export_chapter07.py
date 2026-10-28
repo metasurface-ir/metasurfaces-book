@@ -1,4 +1,5 @@
 """Export saved Chapter 7 plots and source bundle; no simulation is run here."""
+from bundle_notices import write_notices
 import base64
 import json
 from pathlib import Path
@@ -22,6 +23,7 @@ files = ['notebooks/07-tunable-metasurfaces.ipynb', 'simulations/tunable_surface
          'data/chapter-07/validation.json', 'data/chapter-07/reference.json',
          'assets/chapter-07/tunable-cell.svg']
 with zipfile.ZipFile(ROOT/'downloads/chapter-07-tunable.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for name in files:
         archive.write(ROOT/name, name)
     archive.writestr('START-HERE.md', '''# Chapter 7: tuning, coding and feedback

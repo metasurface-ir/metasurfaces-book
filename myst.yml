@@ -18,6 +18,7 @@ project:
       children:
         - file: syllabus.md
         - file: models.md
+        - file: learning-path.md
         - file: getting-started.md
         - file: contributing.md
         - file: translations.md
@@ -27,6 +28,7 @@ project:
       children:
         - file: labs/index.md
         - file: labs/lab-template.md
+        - file: labs/12-research-project.md
         - file: labs/09-dispersion-lab.md
         - file: notebooks/09-dispersion.ipynb
         - file: labs/10-coupling-lab.md

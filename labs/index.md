@@ -15,7 +15,7 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | ms-09-dispersion | [Spectral sweeps and bandwidth metrics](09-dispersion-lab.md) | 2, 5 |
 | ms-10-coupling | [Independent-cell versus supercell predictions](10-coupling-lab.md) | 3, 6 |
 | ms-11-inverse-design | [Bounded optimization with independent checks](11-inverse-design-lab.md) | 5, 6, 10 |
-| ms-12-research-project | Reproducible project and evidence report | 7, 8, 9, 10 |
+| ms-12-research-project | [Reproducible project brief and evidence rubric](12-research-project.md) | 7, 8, 9, 10 |
 | ms-13-ai-metasurfaces | [Learn, design, and verify: analytical starter and full-wave lab outlines](13-ai-metasurfaces.md) | 10 |
 | ms-14-numerical-validation | [Mesh, domain, boundaries, reference planes and numerical evidence](06-numerical-lab.md) | 3, 5, 6 |
 | ms-15-tunable-control | [Bias tuning, programmed arrays, feedback and temporal harmonics](07-tunable-lab.md) | 7 |

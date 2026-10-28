@@ -1,0 +1,28 @@
+Metasurface.ir — license scope
+
+Copyright (c) 2026 Metasurface.ir contributors.
+
+Unless a file or asset explicitly states otherwise:
+
+1. Original book prose, Markdown notebook cells, educational figure captions,
+   original figures/schematics, and original generated numerical datasets are
+   licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+   The full terms are in LICENSES/CC-BY-4.0.txt and at
+   https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+2. Original software source, including Python, JavaScript, CSS, computational
+   notebook code cells, and interactive application/template implementation,
+   is licensed under the MIT License in LICENSES/MIT.txt.
+
+Notebooks and generated HTML may contain both types of material; apply the
+corresponding license to the part reused. Credit the named contributors, book,
+source URL and version; retain applicable notices and identify modifications.
+
+Third-party dependencies, theme code, imported datasets, quoted material and
+externally sourced assets retain their own terms and are not relicensed by
+this notice. A research citation alone does not include the cited paper or
+its artwork in this grant. No trademark rights or endorsement are granted.
+
+See attribution.md, CONTRIBUTORS.md and CITATION.cff for source and citation
+guidance. The snapshot identifier is in VERSION; cite the exact Git commit
+when a reproducible version is needed.

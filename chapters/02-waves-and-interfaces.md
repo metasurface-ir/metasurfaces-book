@@ -16,6 +16,7 @@ These are our three puzzles. Make an initial prediction for each, then return to
 This chapter evaluates analytical plane-wave, single-interface, coherent thin-film, Jones-vector, and local electric-sheet models. Bulk media have positive real constant refractive indices and permeability $\mu_0$. The film and sheet calculations use normal incidence; the interface calculation includes TE/TM oblique incidence. A sheet may dissipate through a nonnegative conductance. These calculations do not simulate a patterned geometry, retrieve a fabricated material, or establish a broadband physical device. Chapters [3](03-unit-cell-design.md) and [5](05-metasurface-synthesis.md) supply separate full-wave geometry examples.
 :::
 
+(ch02-section-01)=
 ## 2.1 A route through the prerequisites
 
 By the end of this chapter, you should be able to derive rather than memorize the flat-interface response; calculate its power with the correct admittance; distinguish propagation, evanescence, and grazing cutoff; express coherent polarization states with Jones vectors; and decide whether proposed scattering coefficients could describe a stated sheet.
@@ -31,6 +32,7 @@ By the end of this chapter, you should be able to derive rather than memorize th
 
 Keep a small record beside every calculation: illumination, material model, basis, time convention, reference planes, and power denominator. This is the foundation for every later unit-cell library, diffraction efficiency, and learned response in the book.
 
+(ch02-section-02)=
 ## 2.2 Give a wave a direction
 
 We use real physical fields obtained from complex phasors:
@@ -70,6 +72,7 @@ $$
 
 The magnetic field is fixed by the electric field and propagation direction. It cannot be assigned an independent sign. In particular, reversing the propagation direction reverses the relevant electric-to-magnetic relation. That sign creates the $1-r$ term in the interface derivation below.
 
+(ch02-section-03)=
 ## 2.3 A field is not a power meter
 
 For phasors defined as peak amplitudes, the time-averaged power-flux density is
@@ -92,6 +95,7 @@ At normal incidence from $n_i=1.5$ to $n_t=1$, suppose $t=1.2$. Calculate $T=(n_
 
 Power is only one observable. The fields $t=1$ and $t=-1$ have equal transmitted power in the same normalization, but they interfere differently with a fixed reference. Always retain amplitude and phase together when the design concerns a complex wavefront.
 
+(ch02-section-04)=
 ## 2.4 Make polarization visible
 
 At a fixed point, the tip of the transverse electric field can trace a line, ellipse, or circle over one period. Write a unit-norm Jones vector for propagation along positive $z$ as
@@ -131,6 +135,7 @@ $$
 
 For linear input this becomes Malus's law; for a normalized circular state it is $1/2$ for every analyzer angle. These are coherent, fully polarized models. A single Jones vector does not represent unpolarized or partially coherent light. Chapter [5](05-metasurface-synthesis.md) builds ideal Jones transformations; a physical element still needs conversion and leakage data.
 
+(ch02-section-05)=
 ## 2.5 Ask what is continuous
 
 Place the interface at $z=0$, with unit normal $\widehat{\mathbf n}=\widehat{\mathbf z}$ pointing from region 1 to region 2. Integrating the curl equations across an infinitesimal loop gives the tangential jump conditions
@@ -156,6 +161,7 @@ $$
 
 This is phase matching and, for propagating transmission, Snell's law. A periodic surface can add reciprocal-lattice wavevectors, as developed in [Chapter 4](04-periodic-floquet.md). A desired phase profile is consequently a scattering specification, not a replacement for Maxwell's boundary conditions.
 
+(ch02-section-06)=
 ## 2.6 Derive the interface response
 
 Take the plane of incidence to be $xz$. **TE** has electric field along $y$. **TM** has magnetic field along $y$ and electric field in the $xz$ plane. We compare the same tangential electric component on each side: $E_y$ for TE and $E_x$ for TM. Define
@@ -201,6 +207,7 @@ Some references define reflected TM amplitude along a polarization unit vector t
 The geometry, polarization basis, and reference plane are part of the definition of a scattering coefficient. Positive normal power leaves the interface into the transmitted half-space.
 ```
 
+(ch02-section-07)=
 ## 2.7 Brewster, evanescence, and cutoff
 
 For nonmagnetic dielectric media, TM reflection vanishes when the two TM admittances match. Substituting Snell's law gives
@@ -234,6 +241,7 @@ The field penetrates the second medium while its net transmitted normal power is
 
 At exact grazing cutoff, formulas containing $1/q_t$ need limiting treatment. For TM, $t$ defined from tangential $E_x$ tends to zero, but the factor relating $E_z$ to $E_x$ can diverge so that the complete transmitted field need not vanish. Approach cutoff from either side and report it separately; do not evaluate a singular intermediate admittance as if it were an ordinary finite propagating channel.
 
+(ch02-section-08)=
 ## 2.8 Add a film and keep the phase
 
 Can adding a material layer reduce reflection? At normal incidence, let a lossless film of index $n_f$ and thickness $d$ lie between media $n_0$ and $n_2$. Use the single-interface coefficients $r_{ab}=(n_a-n_b)/(n_a+n_b)$ and $t_{ab}=2n_a/(n_a+n_b)$, and define
@@ -261,6 +269,7 @@ An exact normal-incidence, constant-index analytical film. Perfect antireflectio
 
 Moving a reference plane changes phase even in a uniform medium. If only the output plane moves a distance $\ell$ downstream, $t_{\mathrm{new}}=t\,e^{ik_z\ell}$. This fact matters when comparing a zero-thickness sheet, a finite-height ridge, measured S parameters, and a stored training dataset.
 
+(ch02-section-09)=
 ## 2.9 Normalize a scattering matrix
 
 For propagating ports with real positive admittance, scale each incoming/outgoing tangential field by $\sqrt{Y_j/(2\eta_0)}$. The resulting amplitudes have squared magnitude equal to normal power flux. Write
@@ -281,6 +290,7 @@ $$
 
 The opposite reflection signs follow our field bases and port arrangement. $S$ is symmetric and unitary. Raw electric-field transmission coefficients from opposite sides need not be equal; their power-normalized counterparts are equal here. An evanescent solution with zero normal flux cannot be normalized as an independent unit-power propagating port by dividing by $\sqrt{\operatorname{Re}Y}$.
 
+(ch02-section-10)=
 ## 2.10 Give a sheet a current
 
 Consider an ideal, local, purely electric surface at normal incidence. Let its sheet admittance be $Y_s$ in siemens, and define the dimensionless quantity $g=\eta_0Y_s$. Because there is no magnetic surface current, tangential electric continuity still gives $t=1+r$. The electric jump condition adds a shunt current:
@@ -309,6 +319,7 @@ $$
 
 with equality at $G=2$. A larger conductance eventually reflects more strongly instead of absorbing more. This 50% limit belongs to this one-sided, purely electric, equal-medium sheet model. A backed sheet, added magnetic response, different environment, or different illumination changes the problem.
 
+(ch02-section-11)=
 ## 2.11 Retrieve only what is identifiable
 
 For the equal-air electric shunt at the common sheet plane,
@@ -323,6 +334,7 @@ An arbitrary finite film or patterned ridge does not automatically meet those co
 
 The [Chapter 1 model](01-metasurface-foundations.md) introduced two effective response channels. Its balanced electric-like/magnetic-like construction is richer than a pure electric shunt, which enforces $t=1+r$ and cannot independently specify an arbitrary transmission amplitude and phase. General susceptibility-tensor retrieval and bianisotropic sheet synthesis require more unknowns, illuminations, and consistency conditions than the scalar illustration here.
 
+(ch02-section-12)=
 ## 2.12 Where did the missing light go?
 
 Return to the air-surrounded sheet with $g=2$. One incident beam gives $r=-1/2$, $t=1/2$, and $A=1/2$. Now illuminate it coherently from both sides, with total incoming power normalized to one:
@@ -348,6 +360,7 @@ The one-sided and two-sided experiments have different incident states and the s
 
 This is an entry point to coherent perfect absorption, a research topic developed by [Chong, Ge, Cao, and Stone](https://arxiv.org/abs/1003.4968). Our shunt derivation illustrates a restricted analytical example and does not reproduce their slab calculation. An experiment would additionally need controlled phase, matched spatial modes, calibrated power, material dispersion/loss, and uncertainty.
 
+(ch02-section-13)=
 ## 2.13 Carry this into the next chapters
 
 Before accepting any metasurface response, ask:
@@ -363,6 +376,7 @@ Chapter [3](03-unit-cell-design.md) adds patterned geometry and a full-wave libr
 
 For an independent foundational route, the [Cornell ECE 3030 handouts](https://ocw.ece.cornell.edu/courses/ece-3030-electromagnetic-fields-and-waves-2/ece-3030-lectures-notes-and-handouts-2/) cover plane waves, polarization, interfaces, and multilayers. [MIT's optics lecture notes](https://ocw.mit.edu/courses/2-71-optics-spring-2014/pages/lecture-notes/) provide complementary wave and polarization material. The explanations, derivations, figures, and experiments in this chapter are original course material.
 
+(ch02-section-14)=
 ## Linked computational investigations
 
 Continue with [ms-09: spectral bandwidth](../labs/09-dispersion-lab.md), [ms-10: independent cells versus supercells](../labs/10-coupling-lab.md), and [ms-11: bounded optimization with independent checks](../labs/11-inverse-design-lab.md). These executed studies use the same explicit ridge geometry and connect spectral response, model approximation and design validation. The inverse-design study is a direct full-wave baseline for later AI comparisons.

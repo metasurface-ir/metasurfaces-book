@@ -462,7 +462,7 @@
     },
     {
       "asset": "assets/chapter-06/harmonics.png",
-      "sha256": "6f893cbd21af0c60b9d263d65a598a50228c414c6a5ba83327f0b908aa173204",
+      "sha256": "68216c5f63194f87a242ecaaf5b88d9ef2cddb403595ba9edf71063f056914c9",
       "origin": "original numerical notebook output",
       "generators": [
         {

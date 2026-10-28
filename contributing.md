@@ -1,112 +1,87 @@
 # Contribute to the book
 
-You can help write a section, improve an explanation, add a numerical investigation, or correct an error. Every contribution uses the same book layout: you write Markdown or a Jupyter notebook, and the site supplies navigation, mathematics, captions, and styling.
+(contribute-route)=
+## Choose a route
 
-## Choose a contribution route
+Contribute original explanations, corrections, investigations, figures, or translations using Markdown and Jupyter notebooks. The site supplies the layout. Coordinate a substantial contribution with the instructor before duplicating work. The instructor reviews scientific content and merges accepted pull requests.
 
-For Persian contributions, follow the [translation workflow and coverage record](translations.md). The Persian [contribution guide](https://metasurface-ir.github.io/metasurfaces-book/fa/contributing/) explains the same process for student translators. Keep numerical models shared across languages.
+| Route | Deliverable |
+| --- | --- |
+| GitHub browser editor | A small focused edit and pull request, including the paired language |
+| Fork and local editor | A topic branch with source, translation, numerical evidence and build results |
+| Instructor handoff | Editable `.md`/`.ipynb`, figures/data, references, dependencies, preferred credit and a clear list of executed checks |
 
-| Route | Best for | What to submit |
-| --- | --- | --- |
-| GitHub in the browser | Corrections and short text additions | Edit a file, then propose the change in a pull request |
-| A fork and a local editor | Chapters, notebooks, and figures | Push a topic branch to your fork and open a pull request |
-| An instructor handoff | Contributors new to Git | Give the instructor `.md` or `.ipynb` files, figures, references, and a short description |
+For an original idea written first in Persian, retain that draft and prepare its English counterpart; the English notebook is the common numerical source. Ask for language review in the PR if needed. Do not claim an unreviewed machine translation has been scientifically checked.
 
-Open an issue before beginning a large contribution so the instructor can coordinate scope and avoid duplicate work. The instructor reviews the scientific content and merges accepted work. The live site updates automatically after a successful build and deployment.
-
-## Edit in the browser
-
-1. Open the [source repository](https://github.com/metasurface-ir/metasurfaces-book).
-2. Navigate to a Markdown file and choose the pencil icon. GitHub may ask you to fork the repository.
-3. Make a small, focused change and describe why it helps the reader.
-4. Propose the change and open a pull request. Check the build result and respond to review comments.
-
-## Add a chapter section or lab locally
-
-Fork the repository on GitHub, then substitute your GitHub username below:
+(contribute-create)=
+## Create the contribution and its counterpart
 
 ```sh
 git clone https://github.com/YOUR-USERNAME/metasurfaces-book.git
 cd metasurfaces-book
-git switch -c chapter-10-surrogate-models
+git switch -c codex/your-investigation
 ```
 
-Copy `templates/chapter-section.md` for a text contribution or `templates/lab-outline.md` for an investigation. Put chapter text in `chapters/`, lab instructions in `labs/`, notebooks in `notebooks/`, and figures beside the relevant chapter or in `assets/`. Use descriptive file names without spaces.
+Use {download}`templates/chapter-section.md` or {download}`templates/lab-outline.md`. Put chapter pages in `chapters/`, instructions in `labs/`, notebooks in `notebooks/`, code in `simulations/`, results in `data/`, and figures in `assets/`. Keep the matching Persian paths under `translations/fa/`. Follow [the prerequisite map](learning-path.md) and avoid duplicating the companion site's conceptual galleries.
 
-Download a starting file: {download}`templates/chapter-section.md` or {download}`templates/lab-outline.md`.
+Translate headings, narrative, questions, captions, alt text, assumptions and interpretation. Preserve equations, units, signs, references and code identifiers. Use [the glossary](glossary.md) consistently. For notebooks, copy code cells exactly; translate Markdown cells, leave Persian source outputs empty and execution counts null. The build inserts English numerical outputs into the Persian edition and its executable bundles.
 
-Add the page to `project.toc` in `myst.yml`:
+(contribute-evidence)=
+## Execute and preserve scientific evidence
 
-```yaml
-- title: Chapter 10 - AI and Metasurfaces
-  children:
-    - file: chapters/10-ai-metasurfaces.md
-    - file: labs/13-ai-metasurfaces.md
-```
+Save edits first; restart the English notebook kernel and run every cell in order. Record parameters, seeds, environment, reference planes and failure reasons. Explain whether a result is analytical, a prescribed scalar field, a full-wave solution, a surrogate prediction, or a measurement. Include appropriate analytical limits, observable convergence, and independent checks. Save failed optimizations as evidence, not just successful candidates.
 
-Keep related entries together. Existing entries may already provide the right place to add your page; avoid duplicating them. Install the book environment described in [Getting started](getting-started.md), preview with `jupyter-book start`, and check with `jupyter-book build --html --strict`.
+Use the [all-chapter run/audit/export matrix](getting-started.md#setup-run-matrix). Exports require the full checkout; source bundles contain the scientific sources and their audit scripts. If a source dataset changes, rerun its dependents: Chapter 3 library → Chapter 5 steering → Chapter 5 wavefront models; regenerate Chapter 6 benchmark data before checking its notebook; run ms-09/10/11 before their combined audit/export.
+
+For new figures, keep an original generator or a tagged notebook output. After the relevant chapter export, run:
 
 ```sh
-git add chapters/your-section.md myst.yml
-git commit -m "Add explanation of surrogate validation"
-git push -u origin chapter-10-surrogate-models
+python scripts/export_figure_provenance.py
+python scripts/check_notebook_provenance.py --record YOUR-NOTEBOOK-STEM
 ```
 
-Open a pull request from your branch to `metasurface-ir/metasurfaces-book:main`. The automated build is a formatting and configuration check; scientific correctness still requires review.
+`--record` stores a reviewed saved-artifact snapshot; it does not execute a notebook or certify its science. It binds code, saved outputs, registered dependencies/results and explicit parameter records. Register a new notebook and its direct/transitive local file dependencies in `GROUPS` in `scripts/check_notebook_provenance.py`. Update figure provenance export mappings if adding a new asset. See [reuse and citation](attribution.md) for imported material.
 
-## Notebook contributions
+(contribute-register)=
+## Register the page in both editions
 
-- Use a Python 3 kernel and expose parameters in a clearly labeled cell.
-- Define units, coordinate directions, phasor conventions, material models, and boundary conditions.
-- Restart the kernel and run all cells in order. Save the outputs and record the environment.
-- Include analytical checks, convergence studies, and independent comparisons appropriate to the model.
-- Keep modest demonstration datasets in the repository; link large datasets from an archival host with a version or DOI.
-- Explain what an output establishes. A synthetic response, an allowed diffraction order, and a converged full-wave efficiency are different kinds of evidence.
+1. Add the English page to `project.toc` in `myst.yml` and the equivalent entry to `translations/fa/myst.yml` (the Persian staging tree uses the same relative filenames).
+2. Add `source`, `translation`, and a unique, stable `route` to `translations/languages.json`. Set the same explicit MyST `slug` in both new pages when using a custom route.
+3. Add identical explicit section labels, such as `(your-investigation-checks)=`, before corresponding headings. These labels preserve a section when switching languages; translated heading text alone usually creates different anchors.
+4. Compare both texts for scientific equivalence, then record only the reviewed sources:
 
-The publishing workflow displays saved notebook results. It does not execute all student notebooks or run licensed solvers. Do not include private data, credentials, or unapproved answer keys in submitted files.
+```sh
+python scripts/update_translation_lock.py chapters/your-section.md
+```
 
-For the Chapter 10 comparison, two figures are also displayed in the chapter. After rerunning and saving `notebooks/10-neural-comparison.ipynb`, run `python scripts/export_chapter10_figures.py` to copy its tagged plot outputs into `assets/chapter-10/`. Check the accompanying interpretation when results change. The export command needs only Python's standard library.
+The source lock is a change detector and a record of a review decision; it cannot judge translation quality. Never update every hash just to silence a failure. When a numerical rerun changes saved outputs, confirm code parity and review whether the interpretation/captions must change before recording the English notebook's new lock.
 
-For Chapter 4, use `python scripts/export_chapter04_figures.py` after running and saving `notebooks/04-floquet-orders.ipynb`. Its independent browser explorer is in `interactives/floquet-explorer.html`; check its reference examples, narrow-screen layout, and control behavior when changing the equations. The `interactives/` folder is published through `project.static_files` in `myst.yml`. Numerical tables should use a supported rich-output format such as HTML, and their published rendering should be checked alongside notebook execution.
+(contribute-preview)=
+## Check the complete result
 
-The Chapter 4 notebook exports five original figures and checks the selection rule, finite-array formula, outgoing-field decay, and sampled-phase Fourier coefficients. Keep the paired Persian notebook's prose in sync and its numerical outputs empty. The browser selects English or Persian from the document language; verify both editions, the geometry/phase controls, and the selected harmonic. Preserve the distinction between illustrative motifs, prescribed scalar fields, and a solved device. Browser launch links must open in a new tab, with no browser-lab download control.
+Use the scientific environment for the regression suite and the book environment for the build, as described in [setup](getting-started.md).
 
-## Chapter 1 source and data workflow
+```sh
+python -m unittest discover -s tests -v
+python scripts/check_notebook_provenance.py
+python scripts/validate_translations.py
+python scripts/export_figure_provenance.py --check
+python scripts/build_bilingual.py
+```
 
-For Chapter 1, keep `notebooks/01-first-metasurface-model.ipynb` with `simulations/intro_sheet.py`. Run all cells from a fresh kernel, then `python scripts/validate_chapter01.py` and `python scripts/export_chapter01.py`. The browser template is `templates/foundations-explorer.html`; check its parity with Python, undefined transmission phase, presets, controls, offline use, and narrow-screen layout after edits. Retain the ideal-sheet assumptions and avoid interpreting analytical consistency checks as a full-wave or experimental validation.
+Preview both languages with the local static server. Inspect equations, figures, tables, citations, shared section links, mobile layouts, keyboard controls, search results and language switches. Browser labs must open in a new tab and have no download control; Python bundles may be downloaded. An interactive change needs browser behavior checks in both languages. Use original SVG generators for changed geometry, and render each localized browser tool from its shared template/data.
 
-## Chapter 2 source and data workflow
+CI runs a bounded parameter-edit regression set, artifact-identity checks and the strict bilingual build. It uses saved scientific results and does not rerun every notebook, expensive solver sweep, or licensed solver. Fresh-kernel execution and human scientific review remain separate requirements. Chapter 2's equation-block parity check is not a guarantee of all browser physics or complete Persian semantic equivalence.
 
-Keep `notebooks/02-waves-and-interfaces.ipynb` with `simulations/waves_interfaces.py`. Execute from a fresh kernel, then run `python scripts/validate_chapter02.py` and `python scripts/export_chapter02.py`. The editable browser source is `templates/waves-explorer.html`; verify its numerical parity with Python and its four views, coherent phase control, new-tab launch, offline operation, and mobile layout. The two SVG schematics are editable originals; the five PNGs come directly from tagged notebook cells. Preserve the tangential TM sign convention, phase references, cutoff/evanescent distinctions, and assumptions of electric-sheet retrieval.
+(contribute-submit)=
+## Submit a reviewable pull request
 
-## Chapter 3 source and data workflow
+```sh
+git add YOUR-CHANGED-FILES
+git commit -m "Explain the investigation and its validation"
+git push -u origin codex/your-investigation
+```
 
-For Chapter 3, keep the notebook and `simulations/unit_cell_te.py` together. After saving a fresh execution, run `python scripts/validate_chapter03.py --grcwa` with the optional validation environment, then `python scripts/export_chapter03.py`. This updates the data audit, three figures, embedded-data explorer, and source ZIP. If you skip the optional comparison, report that explicitly. The explorer's editable template is `templates/unit-cell-explorer.html`; its published file is generated from the JSON library. Preserve the source hash, domain, phase references, and acceptance thresholds when adding data. Use a new dataset version for another physical experiment.
+Open a PR to `metasurface-ir/metasurfaces-book:main`. Describe the learning question, changed model/data, EN/FA coverage, execution and checks, limitations, and any AI assistance. Include your preferred contributor credit. Cite primary sources and retain third-party notices. Original book text/figures use CC BY 4.0 and original code uses MIT; contribute only material you can publish under the applicable policy in [Sources and reuse](attribution.md).
 
-## Chapter 5 source and data workflow
-
-For Chapter 5, execute `05-beam-steering.ipynb` before `05-wavefront-models.ipynb`, then run `scripts/validate_chapter05.py --grcwa` and `scripts/export_chapter05.py`. The source ZIP includes both modules and the original Chapter 3 data dependency. The editable explorer template is `templates/synthesis-explorer.html`; its published HTML embeds the generated data. Preserve the distinction between full-wave supercells, local estimates, scalar focusing, and ideal Jones matrices. Update captions and validation when results change.
-
-## Share a folder with the instructor
-
-Include the source page or notebook, its images/data, a requirements file if it needs additional packages, references, your name as you want it credited, and a note describing what has been executed or verified. The instructor can integrate that folder and add its table-of-contents entry. No special design software or HTML editing is required.
-
-## Scientific and editorial review
-
-Use original explanations and properly attributed figures. Link claims to sources and label your assumptions. If you use AI assistance, verify equations, citations, code, and numerical results yourself and describe the assistance in the pull request. Submit only material you can authorize for public publication; the repository currently has no general reuse license.
-
-## Chapter 6 and figure provenance
-
-Keep the numerical-methods notebook with `simulations/numerical_methods.py` and its exact-film dependency. Restart/run, validate, and export using the Chapter 6 scripts. Run `python scripts/export_figure_provenance.py` after all image exports; `--check` verifies the inventory during publication. Follow [source and reuse guidance](attribution.md): include original generators and check actual permissions for adapted material. The provenance record documents generation, not a blanket legal clearance.
-
-## Chapter 7 evidence and exports
-
-Edit the shared `simulations/tunable_surface.py` and English notebook, then rerun all notebook cells and `python scripts/validate_chapter07.py`. Preserve the paired Persian notebook code and translate its Markdown cells. Export original schematics with `python scripts/export_tunable_geometry.py`, and saved plots, browser evidence and sources with `python scripts/export_chapter07.py`. The browser renderer checks the model hash and reference parameters against the audit. Regenerate figure provenance, review affected Persian prose and source locks, and run the strict bilingual build. Browser labs open in a new tab; source bundles contain Python/notebook/data files, with no browser-lab HTML download.
-
-## Chapter 8 evidence and exports
-
-Edit simulations/communication_link.py and the English notebook, execute it, and run python scripts/validate_chapter08.py. Synchronize Persian code cells and translate its Markdown cells. Run scripts/export_communications_geometry.py and scripts/export_chapter08.py, then regenerate figure provenance. Review paired prose and source locks and run the strict bilingual build. The browser renderer requires matching model hashes and audited parameters. The source ZIP contains Python, notebook and data files; browser labs open in a new tab without a download option.
-
-## Chapter 9 evidence and exports
-
-Edit simulations/materials_measurement.py and the English notebook, execute it, and run python scripts/validate_chapter09.py. Synchronize Persian code cells and translate Markdown cells. Run scripts/export_measurement_geometry.py and scripts/export_chapter09.py, then regenerate figure provenance. Review paired prose and source locks and run the strict bilingual build. Label synthetic observations explicitly; retain raw experimental data and provenance if adding an experimental extension. Browser tools open in new tabs; the source ZIP contains notebook, Python and data, with no browser HTML.
+A push or successful PR build is not publication. The instructor merges accepted work; GitHub Pages updates only after the main-branch deployment succeeds and the public routes are checked.

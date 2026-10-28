@@ -1,4 +1,5 @@
 """Export six original notebook plots and a Python/notebook source bundle."""
+from bundle_notices import write_notices
 import base64
 import json
 from pathlib import Path
@@ -28,6 +29,7 @@ files += ['scripts/validate_design_studies.py','requirements-labs.txt','requirem
           'assets/chapter-05/supercell-geometry.svg']
 files += [p.relative_to(ROOT).as_posix() for p in (ROOT/'data/design-studies').glob('*') if p.is_file()]
 with zipfile.ZipFile(ROOT/'downloads/design-studies.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for name in files: archive.write(ROOT/name,name)
     archive.writestr('START-HERE.md','''# Computational labs ms-09, ms-10, ms-11
 

@@ -214,7 +214,7 @@ For example: “At normal incidence and one stated wavelength, select a dielectr
 
 ## 1.11 Course map and exercises
 
-[Chapter 2](02-waves-and-interfaces.md) establishes waves, boundaries, polarization, and power normalization. Chapter 3 computes unit-cell amplitudes; Chapter 4 develops periodic channels; Chapter 5 synthesizes and verifies wavefront transformations. [Chapter 6](06-numerical-methods.md) develops numerical methods. Chapters 7–9 have syllabus outlines for tuning, applications, and experimental/material considerations, and Chapter 10 develops AI workflows with independent verification.
+[Chapter 2](02-waves-and-interfaces.md) establishes waves, boundaries, polarization and power normalization. Read the core of [Chapter 4](04-periodic-floquet.md) before the unit-cell amplitudes in [Chapter 3](03-unit-cell-design.md), then design with [Chapter 5](05-metasurface-synthesis.md). [Chapter 6](06-numerical-methods.md) supplies numerical checks alongside this work. [Chapter 7](07-active-tunable.md) develops tuning/control, [Chapter 8](08-communications.md) scalar communication links, [Chapter 9](09-materials-measurement.md) materials and synthetic measurements, and [Chapter 10](10-ai-metasurfaces.md) AI workflows with verification. Each has executed notebooks; advanced extensions retain their explicit outline status.
 
 1. Draw an element, primitive cell, supercell, and aperture for a proposed surface. State which dimensions you would compare with which wavelength.
 2. Explain why a periodic metasurface can also be described as a diffraction grating. Identify a case where pitch and full period differ.

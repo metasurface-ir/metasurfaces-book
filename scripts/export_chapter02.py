@@ -1,4 +1,5 @@
 """Export saved Chapter 2 plots, editable explorer, and standalone lab bundle."""
+from bundle_notices import write_notices
 import base64
 import hashlib
 import json
@@ -31,6 +32,7 @@ assert all(audit['provenance'][key]==reference['metadata'][key] for key in audit
 (ROOT/'interactives/waves-explorer.html').write_text((ROOT/'templates/waves-explorer.html').read_text(encoding='utf-8'),encoding='utf-8',newline='\n')
 files=['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'simulations/source_provenance.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
 with zipfile.ZipFile(ROOT/'downloads/chapter-02-waves.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for file in files:archive.write(ROOT/file,file)
     archive.writestr('START-HERE.md','''# Chapter 2: waves, interfaces, and sheets
 

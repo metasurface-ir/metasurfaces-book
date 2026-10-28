@@ -1,0 +1,450 @@
+{
+  "schema": 1,
+  "scope": "Saved-artifact identity only; fresh-kernel execution and human scientific review are separate requirements.",
+  "notebooks": {
+    "01-first-metasurface-model": {
+      "code_sha256": "a911cd18d9b834db4f43f460e9caf7863ed4f18d77804b401df0b57950a0b716",
+      "saved_outputs_sha256": "fe2050b6e59968ab454b6d90e461d67e9f1cceca01253923c110543b5101352f",
+      "dependencies": {
+        "simulations/intro_sheet.py": "e4437a59b83edf1252a63dee0c822e5c3a794a6baf3c08b334d6f112cfd90449",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-01/sheet-response.json": "a1ff8e1bdcf7da139c89bc6f66296695007f06850c46b99d0ac6883fe14bd658",
+        "data/chapter-01/sheet-response.csv": "fe8c2b2162fd56e8415bb8247de9922fc45966f87cd9968588085b07f99023c6"
+      },
+      "parameter_fields": {
+        "chapter-01/sheet-response.json": {
+          "/presets/transparent/parameters": {
+            "electric_frequency_THz": 200.0,
+            "magnetic_frequency_THz": 200.0,
+            "electric_strength": 0.0,
+            "magnetic_strength": 0.0
+          },
+          "/presets/electric/parameters": {
+            "electric_frequency_THz": 200.0,
+            "magnetic_frequency_THz": 200.0,
+            "electric_strength": 0.25,
+            "magnetic_strength": 0.0
+          },
+          "/presets/balanced/parameters": {
+            "electric_frequency_THz": 200.0,
+            "magnetic_frequency_THz": 200.0,
+            "electric_strength": 0.25,
+            "magnetic_strength": 0.25
+          },
+          "/presets/detuned/parameters": {
+            "electric_frequency_THz": 200.0,
+            "magnetic_frequency_THz": 230.0,
+            "electric_strength": 0.25,
+            "magnetic_strength": 0.25
+          }
+        }
+      },
+      "parameter_fields_sha256": "48fe9561560a16561c1f6d4a2960441534499c61c074529e9f3fef4a79ff9880"
+    },
+    "02-waves-and-interfaces": {
+      "code_sha256": "0ca1f4576bd5c534b3e89e176e6b247170b38c29d20ee437d66c8e6e0fb7cc21",
+      "saved_outputs_sha256": "6cce006ba88f341be00cebeff6378399d4f19fca44eb62351b28eacfedd195e2",
+      "dependencies": {
+        "simulations/waves_interfaces.py": "005772da3bb31d9459a9307aa72fcba8cd88b24ac0a2e7a775665b6917c8ab2c",
+        "simulations/source_provenance.py": "ddad81f4bf1b8bbdf98cabc5571776e7a158b92d94974b1ed3f4a6806bd67fde",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-02/waves-reference.json": "a3ab50098ae461377d7b9076a9aad870943ce5861719ebf9c5636b3cca98f8ea",
+        "data/chapter-02/waves-reference.csv": "77dc9d9dda9d93fffa0f37ab576ef1464facba871895e100c14bb3f6a1476c39"
+      },
+      "parameter_fields": {
+        "chapter-02/waves-reference.json": {
+          "/metadata/parameters_sha256": "35aa8846bcc29348e316059d26735a81626c3734130da5489b8a0f2662c63054",
+          "/parameters": {
+            "n1": 1.0,
+            "n2": 1.5,
+            "nf": 1.224744871391589,
+            "wavelength_um": 0.6,
+            "thickness_um": 0.12247448713915891,
+            "field_n1": 1.5,
+            "field_n2": 1.0,
+            "field_angle_deg": 50.0,
+            "jones_alpha_deg": 45.0,
+            "sheet_G": 2.0,
+            "sheet_B": 0.0,
+            "retrieval_perturbation": 0.0001,
+            "retrieval_min_transmission": 1e-05,
+            "retrieval_direction_deg": 45.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "1ce1b18f44212b457ddca850bb8f97e27baae5733ab3de3bb6d58fba787325ee"
+    },
+    "03-unit-cell-library": {
+      "code_sha256": "29ecd61248a6ff19cd9898eb91f6e4c48d836defddb9a9b25febe48c55e204e3",
+      "saved_outputs_sha256": "d653a6abd7c0450d83aab94f88d5e9ac44abad3e010137b432fb31ec7f0b3984",
+      "dependencies": {
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-03/response-library.json": "3200d516c4495a469250e4fcf9ee95cb4636a2cfb4d6c05cf62d9f57e59b79f6",
+        "data/chapter-03/response-library.csv": "f53772f9e01f2161688a6f210148e5a6cf9072d8db3a2a575dcd915fd2450456"
+      },
+      "parameter_fields": {
+        "chapter-03/response-library.json": {
+          "/metadata/parameters": {
+            "period_um": 0.65,
+            "width_um": 0.325,
+            "height_um": 0.6,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "a45f06897ee3bb82a1443bbba5d95316693bf2ae0a80bcecd560e19d1ef2a955"
+    },
+    "04-floquet-orders": {
+      "code_sha256": "1a4b1dd938102eafbb7e554c948bcdc8df7abfb1603c010a5f17acb119adca7f",
+      "saved_outputs_sha256": "1fdca33d4cd8ca85f447efe8be3789ea3fe7836634392a90f7007b27ac787c59",
+      "dependencies": {
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {},
+      "parameter_fields": {},
+      "parameter_fields_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "05-beam-steering": {
+      "code_sha256": "07b91c6028403c40c72697f0a781baf0d0fa68284c066bd343972d8a08a1de00",
+      "saved_outputs_sha256": "67bb73d6e1010d8b8e2d0c4992935a2407d1be454f464e5620d91d2934df5218",
+      "dependencies": {
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "simulations/metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+        "data/chapter-03/response-library.json": "3200d516c4495a469250e4fcf9ee95cb4636a2cfb4d6c05cf62d9f57e59b79f6",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-05/beam-steering.json": "a2c1cb927f7f77c52ae4853437d8fc6cb0271b7d6918cdbdb15b79241f07cd6c",
+        "data/chapter-05/extended-library.csv": "6cab7bc4e79db518290a372f3163b2ab11a7c95d510100d39f90e3621194d4dd"
+      },
+      "parameter_fields": {
+        "chapter-05/beam-steering.json": {
+          "/metadata/library_parameters": {
+            "period_um": 0.65,
+            "width_um": 0.325,
+            "height_um": 1.8,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "f2980a5efe75c9c4ee54f4fb767ae82b666700493b37d394bcddc5ff6c8a3223"
+    },
+    "05-wavefront-models": {
+      "code_sha256": "1fb6624c971c3ad959392bb6014d751b0533626ae7348c61047156204ac6c99d",
+      "saved_outputs_sha256": "d8bf7fb1d03677649abb10e57693ca1330818ffd005750b222db1137f70e56c0",
+      "dependencies": {
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "simulations/metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+        "data/chapter-05/beam-steering.json": "a2c1cb927f7f77c52ae4853437d8fc6cb0271b7d6918cdbdb15b79241f07cd6c",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-05/wavefront-models.json": "380cb6492dd6cdf1c24884eb9f1e8425b455e434a117e2affa31cc019b32f495"
+      },
+      "parameter_fields": {
+        "chapter-05/wavefront-models.json": {}
+      },
+      "parameter_fields_sha256": "1a5536e39c5d65952e69bd1e5c670cb6eed881d6db12ea12eb4d1ef8a55f8e22"
+    },
+    "06-numerical-methods": {
+      "code_sha256": "7ee90c8cdf0d60dbc6646873fc55d234b7df3ff1652f5d58c1074a3d56938097",
+      "saved_outputs_sha256": "6c8c0b03a7e9ed5c2348c11224af2b3e311302d1b4c90bc7a824ae6d9a85b063",
+      "dependencies": {
+        "simulations/numerical_methods.py": "24f0cc7c187c6c92ba906aea101024b3249be87a2bae86c9ad148c79e7c0dd51",
+        "simulations/waves_interfaces.py": "005772da3bb31d9459a9307aa72fcba8cd88b24ac0a2e7a775665b6917c8ab2c",
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "data/chapter-05/beam-steering.json": "a2c1cb927f7f77c52ae4853437d8fc6cb0271b7d6918cdbdb15b79241f07cd6c",
+        "data/chapter-06/numerical-reference.json": "cecd2d7e68e7f761a2b30589a498a305ec242236112ece82f8c248eac10b5bca",
+        "data/chapter-06/model-comparison.csv": "d082ab88dbc980435735f80890df7443127f8603b8e5a318d06f695f88f20cdb",
+        "data/chapter-06/harmonic-sweep.csv": "221ca593724d3e574e4767aa50fdaaf4ae1eb19680e954742f844b49d6ccba20",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-06/notebook-experiment.json": "03797ab1c543b5e72321915fce801834d03047aaa90fc5aa8dac5490784b8b22"
+      },
+      "parameter_fields": {
+        "chapter-06/notebook-experiment.json": {
+          "/parameters": {
+            "wavelength_um": 1.55,
+            "thickness_um": 0.6,
+            "n_film": 2.4,
+            "n_exterior": 1.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "7350cfa1ea10454298a8d6767b6e626f475b222a6e36c2c2daa9102c083ee48a"
+    },
+    "07-tunable-metasurfaces": {
+      "code_sha256": "d7fb32898c9e458ab6badfebf0a0060c71659a655ab8782b825f41ba685a6efd",
+      "saved_outputs_sha256": "d820023b694c76a0d2dc7d76c2e4cd41d1a3567ba67d81716e293e0e6e81e961",
+      "dependencies": {
+        "simulations/tunable_surface.py": "4d519b16936e204e6ec5b07a1282def5caeac7c214d8442efac725d4ee58ccdc",
+        "scripts/validate_chapter07.py": "dc7b6ed085aad7c819e3c0c1c54e5c208c533ed101ae64e3ca24052e59628ea3",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-07/reference.json": "d80b2d049f53f227d1346356f818c655cfef58857cb71047dcabbf11ad908343",
+        "data/chapter-07/validation.json": "b08f983b8ad151c74c564ee3ba78aefd2c8248473129bd5647cd885e9e35fc6f"
+      },
+      "parameter_fields": {
+        "chapter-07/reference.json": {
+          "/metadata/parameters": {
+            "inductance_nH": 20.0,
+            "capacitance0_pF": 0.12,
+            "junction_voltage_V": 1.0,
+            "exponent": 1.0,
+            "resistance_ohm": 25.0,
+            "impedance_ohm": 376.730313668,
+            "voltage_max_V": 20.0
+          }
+        },
+        "chapter-07/validation.json": {
+          "/parameters": {
+            "inductance_nH": 20.0,
+            "capacitance0_pF": 0.12,
+            "junction_voltage_V": 1.0,
+            "exponent": 1.0,
+            "resistance_ohm": 25.0,
+            "impedance_ohm": 376.730313668,
+            "voltage_max_V": 20.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "e9bc47f40cb5a0a489ff5810573605b12db5571fb94cb28d2327cfc85b0b223e"
+    },
+    "08-communication-links": {
+      "code_sha256": "a4d65835c10ab2c7e2a7fba9fcb666ee8e1bc10a774a33c7ee70503289c056bc",
+      "saved_outputs_sha256": "be0b3dc8771e9b563a4916d22862a01703c26d6ca5f06d2a1f41d1fcc243dac0",
+      "dependencies": {
+        "simulations/communication_link.py": "0ccb26907ba7ac77713dd315a769f60c37bce5558ab01a0fd519211843289129",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-08/reference.json": "7d92b55cad313311e4283c5cef5767ac76ace99e185cfe90e05848c16ee6587e"
+      },
+      "parameter_fields": {
+        "chapter-08/reference.json": {
+          "/metadata/parameters": {
+            "frequency_GHz": 28.0,
+            "side_m": 0.48,
+            "samples_side": 96,
+            "tx_m": [
+              -10.0,
+              0.0,
+              20.0
+            ],
+            "rx_m": [
+              8.0,
+              0.0,
+              12.0
+            ],
+            "efficiency": 0.8,
+            "tx_gain": 1.0,
+            "rx_gain": 1.0,
+            "power_dBm": 10.0,
+            "bandwidth_MHz": 100.0,
+            "noise_figure_dB": 7.0,
+            "temperature_K": 290.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "397b0d3dcb8b209c0ddd6e3f211cb3883699dbbe7b4bd9e4b5406deadfeb4680"
+    },
+    "09-fabrication-measurement": {
+      "code_sha256": "31d69e641c1b5f7f41c774b8bcfb9bce8234055d2b0d1f018efe4683733877b0",
+      "saved_outputs_sha256": "6b5f7683457833c208525ae95e63b0d0f9659d0b7a87806b7f1e7dd8c83e602a",
+      "dependencies": {
+        "simulations/materials_measurement.py": "6894f793df6c227e207978c8e4c9af95a5fe4b7c0de24f5eced4c633c75bd2c1",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/chapter-09/reference.json": "302fe16ac3a3aa4bea74147c552ba58ba3ab42c1e2e77d67a5268cedd8f4ce4f",
+        "data/chapter-09/synthetic-sweep.csv": "0b5eb6ce102ebcf4451815d5ed19e0bfa53b5478231f1a9ac7bf709d5b9981e8"
+      },
+      "parameter_fields": {
+        "chapter-09/reference.json": {
+          "/metadata/parameters": {
+            "resonance_GHz": 10.0,
+            "width_mm": 5.0,
+            "epsilon_eff": 3.0,
+            "external_GHz": 0.35,
+            "internal_GHz": 0.12,
+            "width_std_mm": 0.025,
+            "epsilon_std": 0.04,
+            "offset_mm": 5.0,
+            "position_std_mm": 0.05,
+            "noise_rms": 0.002,
+            "standard_phase_std_deg": 0.4,
+            "load_std": 0.002,
+            "tolerance_GHz": 0.12,
+            "seed": 9
+          }
+        }
+      },
+      "parameter_fields_sha256": "572e0f02125d92e08c260525c0063487c37dff40c485001f61cb130229e25711"
+    },
+    "09-dispersion": {
+      "code_sha256": "ba9b4433f5dc3e49c22842e6e4ab717eb265edcc452265c7480c103ee97ee865",
+      "saved_outputs_sha256": "459441661a87595671e1956ea5ab9f5323fc625e6d360931154f0fadfb043056",
+      "dependencies": {
+        "simulations/design_studies.py": "7cea8600887e798b313a93f03f9cbe00dfb69c26fa2aabc5c48778665305e85d",
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "simulations/metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/design-studies/dispersion.json": "df00fbdd9e1095b43b122ced327b8457a1c94894530d355ef15a6a2243f68317"
+      },
+      "parameter_fields": {
+        "design-studies/dispersion.json": {
+          "/metadata/parameters": {
+            "widths_um": [
+              0.159625,
+              0.2055625,
+              0.26375,
+              0.355625,
+              0.4689375,
+              0.1198125
+            ],
+            "pitch_um": 0.65,
+            "height_um": 1.8,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "31681c01e390d2af84d96c9dba030265a3427faf21ce5d51d136f8e1f1bc7531"
+    },
+    "10-coupling": {
+      "code_sha256": "ec88c9bbf9070605e90e8a0937310f5bdfc38c5d999d99cf1f29a9274fc39dba",
+      "saved_outputs_sha256": "32292f211a56d91a1e0a6f9a43c9e383b06b6b5cd92e8d3062e0ce6aa6252670",
+      "dependencies": {
+        "simulations/design_studies.py": "7cea8600887e798b313a93f03f9cbe00dfb69c26fa2aabc5c48778665305e85d",
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "simulations/metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/design-studies/coupling.json": "4380e12a30ac6eae79fd41ee5f05a1b6afa8c636ef0f9b83021e3db1e236ad65"
+      },
+      "parameter_fields": {
+        "design-studies/coupling.json": {
+          "/metadata/parameters": {
+            "widths_um": [
+              0.159625,
+              0.2055625,
+              0.26375,
+              0.355625,
+              0.4689375,
+              0.1198125
+            ],
+            "pitch_um": 0.65,
+            "height_um": 1.8,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "ae4dd0248459500828b9c9718d8937c145d776e2cf37e9a28fbc1430ded49e53"
+    },
+    "11-inverse-design": {
+      "code_sha256": "52ee08373f90239fe4fc94ee9849577bb40fa122991cd63d68c95eaaf63894ed",
+      "saved_outputs_sha256": "843f34744bd74bae217012934f03b8aaba00ad40aea2625856b236785baa60cd",
+      "dependencies": {
+        "simulations/design_studies.py": "7cea8600887e798b313a93f03f9cbe00dfb69c26fa2aabc5c48778665305e85d",
+        "simulations/unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+        "simulations/metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {
+        "data/design-studies/inverse-design.json": "1b2bdde2abf9d82e367502e2c39bffc119932c6bf8ea6eb6c43516ffee00a8c4"
+      },
+      "parameter_fields": {
+        "design-studies/inverse-design.json": {
+          "/metadata/parameters": {
+            "widths_um": [
+              0.159625,
+              0.2055625,
+              0.26375,
+              0.355625,
+              0.4689375,
+              0.1198125
+            ],
+            "pitch_um": 0.65,
+            "height_um": 1.8,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          },
+          "/selected_parameters": {
+            "widths_um": [
+              0.13723640529583608,
+              0.16518197975125032,
+              0.21951022970727538,
+              0.26300956024738753,
+              0.40168191418921106,
+              0.5077454465285082
+            ],
+            "pitch_um": 0.65,
+            "height_um": 1.8,
+            "wavelength_um": 1.55,
+            "n_ridge": 2.4,
+            "n_gap": 1.0,
+            "n_incident": 1.0,
+            "n_substrate": 1.5,
+            "angle_deg": 0.0
+          }
+        }
+      },
+      "parameter_fields_sha256": "c655a5a646c36cf41933b7e4c1ef92a6357de1e8281c6dfb470b0ed8ff75c31c"
+    },
+    "10-resonant-surrogate": {
+      "code_sha256": "3ad6d888f187fe1e07ca9f2022556360731efc7dcf173407338ebcd312ac574c",
+      "saved_outputs_sha256": "af853821eaa05b2d8c9a67a6303834367d05022e8e43ab72bd9608ea824c4bb5",
+      "dependencies": {
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {},
+      "parameter_fields": {},
+      "parameter_fields_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "10-neural-comparison": {
+      "code_sha256": "c0cf460ac12ebcb48b2f8e84c1a9dfde2ca80441c95b2a7b6fbf4c3d4d5f770e",
+      "saved_outputs_sha256": "92ce1f913f2508792f2c5dcac23ed3a9b14abda3bea14b0651fda4662f45214f",
+      "dependencies": {
+        "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
+      },
+      "generated_files": {},
+      "parameter_fields": {},
+      "parameter_fields_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  }
+}

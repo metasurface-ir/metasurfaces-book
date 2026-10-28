@@ -3,6 +3,7 @@
 Execute the notebook and validate_chapter06.py before running this script.
 This exporter never runs a simulation.
 """
+from bundle_notices import write_notices
 import base64
 import hashlib
 import json
@@ -32,6 +33,7 @@ render(ROOT/'interactives/numerical-explorer.html', language='en')
 files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.py', 'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py', 'scripts/validate_chapter06.py', 'requirements-labs.txt', 'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json', 'assets/chapter-06/slab-geometry.svg']
 files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'data/chapter-06').glob('*')) if p.is_file()]
 with zipfile.ZipFile(ROOT/'downloads/chapter-06-numerical.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for name in files: archive.write(ROOT/name, name)
     archive.writestr('START-HERE.md', '''# Chapter 6 numerical methods
 

@@ -3,6 +3,7 @@
 Run after saving the executed notebook and numerical audit. Standard library only.
 The explorer embeds saved data and does not run RCWA in the browser.
 """
+from bundle_notices import write_notices
 import base64
 import hashlib
 import json
@@ -31,6 +32,7 @@ files = ['notebooks/03-unit-cell-library.ipynb', 'simulations/unit_cell_te.py', 
 download = ROOT/'downloads/chapter-03-unit-cell.zip'
 download.parent.mkdir(exist_ok=True)
 with zipfile.ZipFile(download, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for file in files:
         archive.write(ROOT/file, file)
     archive.writestr('START-HERE.md', '''# Chapter 3 source bundle
