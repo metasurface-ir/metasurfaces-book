@@ -29,8 +29,8 @@ function plot(id,series,xlim,ylim,xlabel,ylabel,points=[]){
  const left=id==='trajectory'?190:72,right=id==='trajectory'?455:592;
  const X=x=>left+(x-xlim[0])/(xlim[1]-xlim[0])*(right-left),Y=y=>300-(y-ylim[0])/(ylim[1]-ylim[0])*265;
  for(let j=0;j<=4;j++){let x=xlim[0]+j*(xlim[1]-xlim[0])/4,y=ylim[0]+j*(ylim[1]-ylim[0])/4;node(svg,'line',{x1:X(x),y1:35,x2:X(x),y2:300,stroke:'#e5ecef'});node(svg,'line',{x1:left,y1:Y(y),x2:right,y2:Y(y),stroke:'#e5ecef'});node(svg,'text',{x:X(x),y:325,'text-anchor':'middle'},Number(x.toFixed(2)));node(svg,'text',{x:left-11,y:Y(y)+5,'text-anchor':'end'},Number(y.toFixed(2)));}
- for(const [si,s] of series.entries()){if(id==='harmonic-chart'){s.x.forEach((x,i)=>{const xx=X(x+(si===0?-.13:.13));node(svg,'line',{x1:xx,x2:xx,y1:Y(0),y2:Y(s.y[i]),stroke:s.color||'#087f83','stroke-width':2});node(svg,'circle',{cx:xx,cy:Y(s.y[i]),r:3,fill:s.color||'#087f83'});});continue;}const pts=s.x.map((x,i)=>X(x)+','+Y(Math.max(ylim[0],Math.min(ylim[1],s.y[i])))).join(' ');node(svg,'polyline',{points:pts,fill:'none',stroke:s.color||'#087f83','stroke-width':2.5,'stroke-dasharray':s.dash||''});}
- for(const p of points)node(svg,'circle',{cx:X(p.x),cy:Y(p.y),r:6,fill:p.color||'#b36b10',stroke:'white','stroke-width':1.5});
+ for(const [si,s] of series.entries()){if(id==='harmonic-chart'){s.x.forEach((x,i)=>{const xx=X(x+(si===0?-.13:.13));node(svg,'line',{x1:xx,x2:xx,y1:Y(0),y2:Y(s.y[i]),stroke:s.color||'#087f83','stroke-width':2});node(svg,'circle',{cx:xx,cy:Y(s.y[i]),r:3,fill:s.color||'#087f83'});});continue;}let connected=false;const path=s.x.map((x,i)=>{const y=s.y[i];if(!Number.isFinite(x)||!Number.isFinite(y)){connected=false;return '';}const point=(connected?'L':'M')+X(x)+','+Y(Math.max(ylim[0],Math.min(ylim[1],y)));connected=true;return point;}).join(' ');node(svg,'path',{d:path,fill:'none',stroke:s.color||'#087f83','stroke-width':2.5,'stroke-dasharray':s.dash||''});}
+ for(const p of points.filter(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)))node(svg,'circle',{cx:X(p.x),cy:Y(p.y),r:6,fill:p.color||'#b36b10',stroke:'white','stroke-width':1.5});
  node(svg,'text',{x:330,y:354,'text-anchor':'middle'},xlabel);node(svg,'text',{x:15,y:165,'text-anchor':'middle',transform:'rotate(-90 15 165)'},ylabel);
 }
 function drawCell(v){
@@ -46,10 +46,11 @@ function drawCell(v){
  node(svg,'path',{d:'M 465 20 L 465 82 M 459 70 L 465 82 L 471 70 M 630 82 L 630 20 M 624 32 L 630 20 L 636 32',fill:'none',stroke:'#087f83','stroke-width':3});
  node(svg,'text',{x:490,y:34,'text-anchor':'middle'},'Eᵢ');node(svg,'text',{x:665,y:34,'text-anchor':'middle'},'ΓEᵢ');
 }
+function phaseLimits(values){const finite=values.filter(Number.isFinite);if(!finite.length)return [-180,180];const lo=Math.floor(Math.min(...finite)/45)*45,hi=Math.ceil(Math.max(...finite)/45)*45;return lo===hi?[lo-45,hi+45]:[lo,hi];}
 function cell(){const index=Number(el('bias').value),f=Number(el('frequency').value),v=DATA.voltage[index],c=DATA.cell_curves.find(c=>c.frequency_GHz===f),p=DATA.metadata.parameters;
- el('bias-value').textContent=v.toFixed(2)+' V';el('reflectance').textContent=c.reflected[index].toFixed(4);el('cell-phase').textContent=c.phase[index].toFixed(2)+'°';el('capacitance').textContent=(p.capacitance0_pF/(1+v/p.junction_voltage_V)**p.exponent).toFixed(5);drawCell(v);
+ el('bias-value').textContent=v.toFixed(2)+' V';el('reflectance').textContent=c.reflected[index].toFixed(4);el('cell-phase').textContent=Number.isFinite(c.phase[index])?c.phase[index].toFixed(2)+'°':tr('Undefined','تعریف‌نشده');el('capacitance').textContent=(p.capacitance0_pF/(1+v/p.junction_voltage_V)**p.exponent).toFixed(5);drawCell(v);
  const u=Array.from({length:161},(_,i)=>2*Math.PI*i/160);plot('trajectory',[{x:u.map(Math.cos),y:u.map(Math.sin),color:'#a9bbc6',dash:'4 4'},{x:c.real,y:c.imag}],[-1.1,1.1],[-1.1,1.1],'Re Γ','Im Γ',[{x:c.real[index],y:c.imag[index]}]);
- plot('phase-chart',[{x:DATA.voltage,y:c.phase}],[0,20],[Math.floor(Math.min(...c.phase)/45)*45,Math.ceil(Math.max(...c.phase)/45)*45],tr('Bias (V)','بایاس (ولت)'),tr('Phase (degrees)','فاز (درجه)'),[{x:v,y:c.phase[index]}]);
+ plot('phase-chart',[{x:DATA.voltage,y:c.phase}],[0,20],phaseLimits(c.phase),tr('Bias (V)','بایاس (ولت)'),tr('Phase (degrees)','فاز (درجه)'),[{x:v,y:c.phase[index]}]);
 }
 function array(){const target=Number(el('target').value),key=el('codebook').value,c=DATA.beams.find(c=>c.target_deg===target),d=c.variants.find(v=>v.key===key),ideal=c.variants.find(v=>v.key==='ideal4');
  el('target-value').textContent=target+'°';el('target-metric').textContent=d.target_metric.toFixed(4);el('state-count').textContent=key==='ideal1'?'2':key==='ideal2'?'4':'16';let max=Math.max(...d.intensity),idx=d.intensity.indexOf(max);el('peak-angle').textContent=DATA.angles[idx].toFixed(2)+'°';

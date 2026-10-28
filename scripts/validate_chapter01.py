@@ -11,6 +11,25 @@ sys.path.insert(0,str(ROOT/'simulations'))
 from intro_sheet import Sheet,PRESETS,response,scattering_matrix,channel_group_delay_fs
 
 
+def check_saved_reference(reference):
+    """Check snapshots at their recorded frequency, including the phase mask."""
+    frequency=reference['reference_frequency_THz']
+    floor=reference['metadata']['phase_floor']
+    for row in reference['presets'].values():
+        expected=response(frequency,Sheet(**row['parameters']),floor)
+        for key in ('r','t'):
+            saved=complex(row[key+'_real'],row[key+'_imag'])
+            assert abs(saved-expected[key])<1e-12, 'Saved complex response differs.'
+        for key in ('R','T'):
+            assert abs(row[key]-expected[key])<1e-12, 'Saved power differs.'
+        if abs(expected['t'])<=floor:
+            assert row['phase_deg'] is None, 'Zero-amplitude phase must be null.'
+        else:
+            assert row['phase_deg'] is not None
+            error=np.angle(np.exp(1j*np.deg2rad(row['phase_deg']-float(expected['phase_deg']))))
+            assert abs(error)<1e-12, 'Saved phase differs.'
+
+
 def main():
     f=np.linspace(80.,340.,521)
     cases=[Sheet(electric_frequency_THz=fe,magnetic_frequency_THz=fm,electric_strength=ae,magnetic_strength=am)
@@ -56,7 +75,7 @@ def main():
     reference=json.loads((ROOT/'data/chapter-01/sheet-response.json').read_text())
     digest=hashlib.sha256((ROOT/'simulations/intro_sheet.py').read_bytes()).hexdigest()
     assert digest==reference['metadata']['source_sha256']
-    assert reference['presets']['electric']['phase_deg'] is None
+    check_saved_reference(reference)
     report=dict(status='passed',model='analytical equal-impedance specular sheet',source_sha256=digest,
                 parameter_cases=len(cases),frequencies_per_case=len(f),max_power_balance_error=worst_balance,
                 max_unitarity_error=worst_unitarity,max_two_sided_power_error=worst_two_sided,

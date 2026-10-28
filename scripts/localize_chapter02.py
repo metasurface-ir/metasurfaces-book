@@ -50,7 +50,7 @@ html[lang=fa] .intro{max-width:none}
 
 def export(stage):
     (stage / 'interactives/waves-explorer.html').write_text(explorer(), encoding='utf-8', newline='\n')
-    files = ['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
+    files = ['notebooks/02-waves-and-interfaces.ipynb', 'simulations/waves_interfaces.py', 'simulations/source_provenance.py', 'scripts/validate_chapter02.py', 'requirements-labs.txt', 'data/chapter-02/README.md', 'data/chapter-02/waves-reference.json', 'data/chapter-02/waves-reference.csv', 'data/chapter-02/validation.json']
     (stage / 'scripts').mkdir(exist_ok=True)
     (stage / 'scripts/validate_chapter02.py').write_bytes((ROOT / 'scripts/validate_chapter02.py').read_bytes())
     with zipfile.ZipFile(stage / 'downloads/chapter-02-waves-fa.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:

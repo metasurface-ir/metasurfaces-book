@@ -102,18 +102,28 @@ def passband(x, margin, anchor):
 
 
 def bandwidth(rows, anchor=1.55, efficiency=.8, angle_tolerance_deg=None):
+    """Intersect independently interpolated, anchor-connected constraints."""
     x = np.array([r['wavelength_um'] for r in rows])
     margin = np.array([r['T'] for r in rows])-efficiency
+    power_band = passband(x, margin, anchor)
     if angle_tolerance_deg is not None:
         if not np.isfinite(angle_tolerance_deg) or angle_tolerance_deg <= 0:
             raise ValueError('Angular tolerance must be positive.')
         i = np.flatnonzero(np.isclose(x, anchor, atol=1e-12, rtol=0))
         if len(i) != 1: raise ValueError('Include the anchor wavelength in the sweep.')
         angle0 = rows[int(i[0])]['angle_deg']
-        # Dimensionless margins preserve the zero crossing of either constraint.
-        angular = 1-abs(np.array([r['angle_deg'] for r in rows])-angle0)/angle_tolerance_deg
-        margin = np.minimum(margin, angular)
-    return passband(x, margin, anchor)
+        angular = angle_tolerance_deg-abs(np.array([r['angle_deg'] for r in rows])-angle0)
+        angle_band = passband(x, angular, anchor)
+        if power_band is None or angle_band is None:
+            return None
+        lo = max(power_band['lower_um'], angle_band['lower_um'])
+        hi = min(power_band['upper_um'], angle_band['upper_um'])
+        return dict(lower_um=lo, upper_um=hi, width_um=hi-lo,
+                    fractional_wavelength_width=(hi-lo)/anchor,
+                    frequency_width_THz=299.792458*(1/lo-1/hi),
+                    left_clipped=power_band['left_clipped'] and angle_band['left_clipped'],
+                    right_clipped=power_band['right_clipped'] and angle_band['right_clipped'])
+    return power_band
 
 
 def optimize_widths(design=Design(), starts=2, maxfev=1000, half_order=32,

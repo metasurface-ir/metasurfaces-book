@@ -127,7 +127,12 @@ const tabs=[...document.querySelectorAll('[role=tab]')];
 function activate(button){tabs.forEach(b=>{const on=b===button;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;el(b.dataset.view).hidden=!on;});({focus,power,band,training})[button.dataset.view]();}
 tabs.forEach((b,i)=>{b.onclick=()=>activate(b);b.onkeydown=e=>{let j=i;if(e.key==='ArrowRight')j=(i+1)%4;else if(e.key==='ArrowLeft')j=(i+3)%4;else if(e.key==='Home')j=0;else if(e.key==='End')j=3;else return;e.preventDefault();activate(tabs[j]);tabs[j].focus();};});
 ['law','receiver'].forEach(id=>el(id).addEventListener('input',focus));['offset','tx-power'].forEach(id=>el(id).addEventListener('input',power));
-el('frequency').addEventListener('change',band);el('coherence').addEventListener('change',training);
+// Use the saved profile keys verbatim; JSON may spell a frequency as "28.0".
+const frequencySelect=el('frequency'),initialFrequency=D.metadata.parameters.frequency_GHz;
+frequencySelect.replaceChildren(...Object.keys(D.bandwidth.profiles).sort((a,b)=>Number(a)-Number(b)).map(key=>{
+ const option=document.createElement('option');option.value=key;option.textContent=String(Number(key));option.selected=Number(key)===initialFrequency;return option;
+}));
+frequencySelect.addEventListener('change',band);el('coherence').addEventListener('change',training);
 focus();power();band();training();
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const b=document.querySelector('[role=tab][aria-selected=true]');activate(b);},100);});
 </script></body></html>

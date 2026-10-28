@@ -15,6 +15,8 @@ def render(destination, language='en'):
     assert audit['status'] == 'passed'
     assert audit['source_sha256'] == digest, 'Validate the current model'
     assert data['metadata']['parameters'] == audit['parameters'], 'Published explorer requires the audited reference parameters'
+    assert data['metadata']['operating_frequency_GHz'] == 10., 'Published explorer requires the 10 GHz reference'
+    assert abs(data['metadata']['element_spacing_mm']-299792458./(2*10e9)*1e3)<1e-12, 'Published explorer requires the reference physical spacing'
     template = (ROOT/'templates/tunable-explorer.html').read_text(encoding='utf-8')
     assert template.count('__CH07_DATA__') == 1
     result = template.replace('__CH07_DATA__', json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c'))

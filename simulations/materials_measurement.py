@@ -8,6 +8,49 @@ import numpy as np
 
 C0=299792458.
 
+
+def covariance_region(samples, probability=.95, points=181):
+    """Gaussian covariance region, with point/line limits for degenerate data.
+
+    Rank is determined at floating-point resolution. Coverage is measured in
+    the nonzero covariance subspace and also checks the orthogonal residual.
+    The Gaussian probability interpretation remains approximate for nonlinear
+    Monte Carlo clouds; this is not a confidence region for their mean.
+    """
+    from scipy.stats import chi2
+    xy = np.asarray(samples, float)
+    if xy.ndim != 2 or xy.shape[1] != 2 or len(xy) < 2 or not np.all(np.isfinite(xy)):
+        raise ValueError('Use at least two finite two-coordinate samples.')
+    if not 0 < probability < 1 or not isinstance(points, int) or points < 3:
+        raise ValueError('Use a probability in (0,1) and at least three points.')
+    # Center small clouds relative to one observation to avoid a false spread
+    # from summing many identical nonzero floating-point coordinates.
+    shifted = xy-xy[0]
+    offset = shifted.mean(axis=0)
+    center = xy[0]+offset
+    delta = shifted-offset
+    cov = delta.T@delta/(len(xy)-1)
+    vals, vec = np.linalg.eigh(cov)
+    roundoff = 64*np.finfo(float).eps*max(float(np.max(abs(vals))), np.finfo(float).tiny)
+    if np.min(vals) < -roundoff:
+        raise ValueError('Covariance is not positive semidefinite within roundoff.')
+    vals = np.maximum(vals, 0.)
+    resolution = 64*np.finfo(float).eps*max(1., float(np.max(abs(xy))))
+    active = vals > max(roundoff, resolution**2)
+    rank = int(active.sum())
+    threshold = float(chi2.ppf(probability, rank)) if rank else 0.
+    theta = np.linspace(0, 2*np.pi, points)
+    unit = np.array([np.cos(theta), np.sin(theta)])
+    radii = np.sqrt(threshold*np.where(active, vals, 0.))
+    boundary = (center[:, None]+vec@np.diag(radii)@unit).T
+    projected = delta@vec
+    distance2 = np.sum(projected[:, active]**2/vals[active], axis=1) if rank else np.zeros(len(xy))
+    orthogonal2 = np.sum(projected[:, ~active]**2, axis=1)
+    fraction = float(np.mean((distance2 <= threshold)*(orthogonal2 <= resolution**2)))
+    return dict(center=center, covariance=cov, boundary=boundary, rank=rank,
+                threshold=threshold, sample_fraction=fraction,
+                kind=('point', 'line', 'ellipse')[rank])
+
 @dataclass(frozen=True)
 class Experiment:
     resonance_GHz: float=10.
