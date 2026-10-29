@@ -17363,8 +17363,8 @@
       "T": 0.8570923465063031,
       "energy_defect": 3.3306690738754696e-16,
       "algebraic_residual": 1.4304896245381992e-17,
-      "complex_t_error": 0.3204391394490622,
-      "phase_error_deg": -24.91430541617452
+      "complex_t_error": 0.32043913944906227,
+      "phase_error_deg": -24.914305416174525
     },
     {
       "half_order": 1,
@@ -17376,37 +17376,37 @@
       "R": 0.21842752282563943,
       "T": 0.7815724771743606,
       "energy_defect": 0.0,
-      "algebraic_residual": 7.844710335904596e-17,
-      "complex_t_error": 0.005774092409385661,
-      "phase_error_deg": -0.45680410407660954
+      "algebraic_residual": 8.869595499790925e-17,
+      "complex_t_error": 0.005774092409385688,
+      "phase_error_deg": -0.45680410407661115
     },
     {
       "half_order": 2,
       "retained_harmonics": 5,
       "t_real": 0.14515302859020557,
-      "t_imag": -0.7070506064976347,
-      "r_real": -0.464286947005746,
-      "r_imag": -0.05433864236167968,
-      "R": 0.21851505721362693,
-      "T": 0.781484942786373,
+      "t_imag": -0.7070506064976346,
+      "r_real": -0.46428694700574613,
+      "r_imag": -0.05433864236167967,
+      "R": 0.21851505721362705,
+      "T": 0.7814849427863729,
       "energy_defect": 0.0,
-      "algebraic_residual": 7.711536099270962e-17,
-      "complex_t_error": 0.003656928957377086,
+      "algebraic_residual": 1.6211864486254883e-16,
+      "complex_t_error": 0.0036569289573770763,
       "phase_error_deg": -0.2881469885390682
     },
     {
       "half_order": 4,
       "retained_harmonics": 9,
-      "t_real": 0.14803766859232034,
-      "t_imag": -0.7060618123576898,
+      "t_real": 0.14803766859232032,
+      "t_imag": -0.7060618123576897,
       "r_real": -0.46502048371436044,
       "r_imag": -0.055662361052591036,
       "R": 0.2193423487118868,
-      "T": 0.7806576512881129,
-      "energy_defect": 2.220446049250313e-16,
-      "algebraic_residual": 5.2081522535387724e-17,
-      "complex_t_error": 0.0006075396001900986,
-      "phase_error_deg": -0.04793164319366173
+      "T": 0.7806576512881125,
+      "energy_defect": 6.661338147750939e-16,
+      "algebraic_residual": 2.3176798832663446e-16,
+      "complex_t_error": 0.0006075396001901161,
+      "phase_error_deg": -0.04793164319366542
     },
     {
       "half_order": 8,
@@ -17414,83 +17414,83 @@
       "t_real": 0.14853407857162704,
       "t_imag": -0.7058954026752506,
       "r_real": -0.4651349034903912,
-      "r_imag": -0.055888134091412134,
+      "r_imag": -0.05588813409141211,
       "R": 0.21947396197723523,
       "T": 0.7805260380227648,
       "energy_defect": 0.0,
-      "algebraic_residual": 1.0537785788733327e-16,
-      "complex_t_error": 8.398055538295095e-05,
-      "phase_error_deg": -0.006629469214362619
+      "algebraic_residual": 8.768737410895906e-17,
+      "complex_t_error": 8.39805553829773e-05,
+      "phase_error_deg": -0.006629469214364147
     },
     {
       "half_order": 16,
       "retained_harmonics": 33,
-      "t_real": 0.148603673967432,
-      "t_imag": -0.7058724373334071,
-      "r_real": -0.4651500570607292,
+      "t_real": 0.14860367396743196,
+      "t_imag": -0.705872437333407,
+      "r_real": -0.4651500570607293,
       "r_imag": -0.055919583876897785,
-      "R": 0.21949157544456507,
-      "T": 0.7805084245554352,
-      "energy_defect": 3.3306690738754696e-16,
-      "algebraic_residual": 1.0957798543878248e-16,
-      "complex_t_error": 1.0693989834829426e-05,
-      "phase_error_deg": -0.000844425638987371
+      "R": 0.21949157544456518,
+      "T": 0.780508424555435,
+      "energy_defect": 2.220446049250313e-16,
+      "algebraic_residual": 1.5949047570279612e-16,
+      "complex_t_error": 1.0693989834847697e-05,
+      "phase_error_deg": -0.0008444256389895285
     },
     {
       "half_order": 24,
       "retained_harmonics": 49,
       "t_real": 0.1486109184230277,
-      "t_imag": -0.7058700665849764,
+      "t_imag": -0.7058700665849765,
       "r_real": -0.46515158955860747,
-      "r_imag": -0.05592284656809276,
+      "r_imag": -0.05592284656809275,
       "R": 0.21949336603717765,
-      "T": 0.7805066339628222,
-      "energy_defect": 2.220446049250313e-16,
-      "algebraic_residual": 3.3696587020565765e-16,
-      "complex_t_error": 3.071486119476541e-06,
-      "phase_error_deg": -0.0002425545002142609
+      "T": 0.7805066339628224,
+      "energy_defect": 0.0,
+      "algebraic_residual": 2.67036557710151e-16,
+      "complex_t_error": 3.0714861195373385e-06,
+      "phase_error_deg": -0.0002425545002188453
     },
     {
       "half_order": 32,
       "retained_harmonics": 65,
       "t_real": 0.14861269721283815,
-      "t_imag": -0.705869486241455,
-      "r_real": -0.4651519619119888,
-      "r_imag": -0.055923646697545897,
-      "R": 0.2194938019305242,
-      "T": 0.7805061980694754,
-      "energy_defect": 4.440892098500626e-16,
-      "algebraic_residual": 1.6338956735420853e-16,
-      "complex_t_error": 1.2004192543749588e-06,
-      "phase_error_deg": -9.480088889133917e-05
+      "t_imag": -0.7058694862414551,
+      "r_real": -0.4651519619119887,
+      "r_imag": -0.055923646697545945,
+      "R": 0.21949380193052412,
+      "T": 0.7805061980694756,
+      "energy_defect": 2.220446049250313e-16,
+      "algebraic_residual": 9.903772581224705e-17,
+      "complex_t_error": 1.200419254435718e-06,
+      "phase_error_deg": -9.480088889592352e-05
     },
     {
       "half_order": 48,
       "retained_harmonics": 97,
       "t_real": 0.14861361466460635,
-      "t_imag": -0.7058691874855169,
-      "r_real": -0.4651521526984944,
-      "r_imag": -0.05592405906441606,
-      "R": 0.2194940255422837,
-      "T": 0.7805059744577155,
-      "energy_defect": 7.771561172376096e-16,
-      "algebraic_residual": 3.0631146072079293e-16,
-      "complex_t_error": 2.3554992659615517e-07,
-      "phase_error_deg": -1.860285315372368e-05
+      "t_imag": -0.705869187485517,
+      "r_real": -0.4651521526984945,
+      "r_imag": -0.05592405906441608,
+      "R": 0.2194940255422838,
+      "T": 0.7805059744577159,
+      "energy_defect": 3.3306690738754696e-16,
+      "algebraic_residual": 1.766800728955858e-16,
+      "complex_t_error": 2.3554992665687885e-07,
+      "phase_error_deg": -1.8602853158308038e-05
     },
     {
       "half_order": 64,
       "retained_harmonics": 129,
-      "t_real": 0.14861383867182262,
+      "t_real": 0.14861383867182265,
       "t_imag": -0.7058691146532783,
       "r_real": -0.46515219903185034,
       "r_imag": -0.055924159685840136,
       "R": 0.21949407990073347,
       "T": 0.7805059200992661,
       "energy_defect": 4.440892098500626e-16,
-      "algebraic_residual": 1.3609906348055704e-16,
+      "algebraic_residual": 1.2725748013716721e-16,
       "complex_t_error": 0.0,
-      "phase_error_deg": 7.191526202055868e-16
+      "phase_error_deg": -1.7978293581833122e-16
     }
   ],
   "model_comparison": [
@@ -17575,14 +17575,14 @@
   "chapter05_saved_evidence": {
     "status": "read saved audit; not rerun by this script",
     "path": "data/chapter-05/validation.json",
-    "sha256": "f9056a859547bd9281f7308faa362fd96529334b4b8e83dd48e69e92993471f8",
+    "sha256": "30f8d3ad2d2e1c336ed5b0a38301fcc6ab91388a301cfa89d00eee92c0f16d66",
     "full_wave_refinement": {
       "half_orders": [
         144,
         192
       ],
-      "max_open_order_power_change": 2.319748602652716e-06,
-      "max_open_complex_t_change": 1.3659322512799215e-05
+      "max_open_order_power_change": 2.319748037771241e-06,
+      "max_open_complex_t_change": 1.365932445677846e-05
     },
     "interpretation": "1D TE periodic supercell harmonic refinement; not FDFD/FEM/FDTD validation of ridges"
   }

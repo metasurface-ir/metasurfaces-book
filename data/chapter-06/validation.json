@@ -330,8 +330,8 @@
   },
   "harmonic_companion": {
     "reference_half_order": 64,
-    "M48_complex_t_difference": 2.3554992659615517e-07,
-    "M0_complex_t_difference": 0.3204391394490622,
+    "M48_complex_t_difference": 2.3554992665687885e-07,
+    "M0_complex_t_difference": 0.32043913944906227,
     "interpretation": "RCWA harmonic convergence, with a numerical high-order reference"
   },
   "model_comparison": {
@@ -342,14 +342,14 @@
   "chapter05_saved_evidence": {
     "status": "read saved audit; not rerun by this script",
     "path": "data/chapter-05/validation.json",
-    "sha256": "f9056a859547bd9281f7308faa362fd96529334b4b8e83dd48e69e92993471f8",
+    "sha256": "30f8d3ad2d2e1c336ed5b0a38301fcc6ab91388a301cfa89d00eee92c0f16d66",
     "full_wave_refinement": {
       "half_orders": [
         144,
         192
       ],
-      "max_open_order_power_change": 2.319748602652716e-06,
-      "max_open_complex_t_change": 1.3659322512799215e-05
+      "max_open_order_power_change": 2.319748037771241e-06,
+      "max_open_complex_t_change": 1.365932445677846e-05
     },
     "interpretation": "1D TE periodic supercell harmonic refinement; not FDFD/FEM/FDTD validation of ridges"
   },
@@ -359,5 +359,5 @@
     "It does not independently validate the patterned ridge grating",
     "No FDTD, FEM, PML, 3D, finite array, physical dispersion, loss, or experiment was run"
   ],
-  "runtime_seconds": 0.38003880018368363
+  "runtime_seconds": 0.20361039997078478
 }

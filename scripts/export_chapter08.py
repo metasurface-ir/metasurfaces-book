@@ -1,4 +1,5 @@
 """Export only saved notebook figures, a bilingual-ready explorer and source ZIP."""
+from bundle_notices import write_notices
 import base64,json,zipfile
 from pathlib import Path
 from render_communications_explorer import render
@@ -15,6 +16,7 @@ render(ROOT/'interactives/communications-explorer.html')
 files=['notebooks/08-communication-links.ipynb','simulations/communication_link.py','scripts/validate_chapter08.py',
        'requirements-labs.txt','data/chapter-08/reference.json','data/chapter-08/validation.json','assets/chapter-08/link-geometry.svg']
 with zipfile.ZipFile(ROOT/'downloads/chapter-08-communications.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+    write_notices(z)
     for f in files:z.write(ROOT/f,f)
     z.writestr('START-HERE.md','''# Chapter 8: communication links
 

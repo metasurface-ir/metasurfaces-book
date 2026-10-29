@@ -1,4 +1,5 @@
 """Export saved Chapter 5 plots, embedded explorer, and complete source ZIP."""
+from bundle_notices import write_notices
 import base64
 import hashlib
 import json
@@ -26,6 +27,7 @@ assert template.count('__CH05_SYNTHESIS_DATA__')==1
 (ROOT/'interactives/synthesis-explorer.html').write_text(template.replace('__CH05_SYNTHESIS_DATA__',json.dumps(data,separators=(',',':'))),encoding='utf-8')
 files=['notebooks/05-beam-steering.ipynb', 'notebooks/05-wavefront-models.ipynb', 'simulations/metasurface_synthesis.py', 'simulations/unit_cell_te.py', 'requirements-labs.txt', 'requirements-validation.txt', 'scripts/validate_chapter05.py', 'data/chapter-03/response-library.json', 'data/chapter-05/README.md', 'data/chapter-05/beam-steering.json', 'data/chapter-05/extended-library.csv', 'data/chapter-05/wavefront-models.json', 'data/chapter-05/validation.json', 'assets/chapter-05/supercell-geometry.svg']
 with zipfile.ZipFile(ROOT/'downloads/chapter-05-synthesis.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
+    write_notices(archive)
     for file in files:archive.write(ROOT/file,file)
     archive.writestr('START-HERE.md','''# Chapter 5 source bundle
 

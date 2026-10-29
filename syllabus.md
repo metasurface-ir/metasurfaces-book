@@ -108,4 +108,6 @@ The proposed capstone is to build a surrogate from a validated unit-cell library
 
 ## Research project
 
-Students will eventually pose a design question, justify the model, preserve inputs and outputs, and report both performance and uncertainty. Assessment weights, teaching schedule, software access, and project requirements remain to be set by the instructor.
+The project brief specifies a bounded question, justified model, reproducible baseline, computational budget, milestones and evidence rubric. Students preserve inputs, outputs and failed trials, and report performance and uncertainty. The instructor sets assessment weights, teaching dates, team size and specialist software access.
+
+Use the [prerequisite map](learning-path.md) and [reproducible project brief](labs/12-research-project.md) to plan reading and project evidence. Teaching dates and assessment weights remain instructor decisions.

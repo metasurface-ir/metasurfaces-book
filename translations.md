@@ -40,7 +40,7 @@ Browser search is separate in each edition and searches the translated pages ava
 
 The [model and geometry guide](models.md), four original geometry figures, and model drawings in Chapters 1, 3, 5 and 6 explorers have Persian counterparts/labels. The geometry renderer is shared. Other existing scientific plot/interface labels retain the scope above.
 
-The three ms-09/10/11 lab guides and notebooks are available in both languages. Their shared browser explorer has Persian controls, geometry labels and interpretation; numerical plot labels inside notebooks remain shared. There are 60 matched published pages.
+The three ms-09/10/11 lab guides and notebooks are available in both languages. Their shared browser explorer has Persian controls, geometry labels and interpretation; numerical plot labels inside notebooks remain shared. There are 62 matched published pages.
 
 Chapter 7 includes translated chapter/guide/lab/notebook prose, a Persian unit-cell/circuit schematic and fully localized browser controls and interpretation. Numerical notebook plot labels remain shared; Persian captions explain each panel.
 

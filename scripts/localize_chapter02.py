@@ -3,6 +3,7 @@
 Called by build_bilingual.py. Translation authors maintain explorer-strings.json;
 the English template remains the sole implementation of browser physics.
 """
+from bundle_notices import write_notices
 import html
 import json
 from pathlib import Path
@@ -54,6 +55,7 @@ def export(stage):
     (stage / 'scripts').mkdir(exist_ok=True)
     (stage / 'scripts/validate_chapter02.py').write_bytes((ROOT / 'scripts/validate_chapter02.py').read_bytes())
     with zipfile.ZipFile(stage / 'downloads/chapter-02-waves-fa.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+        write_notices(archive)
         for file in files:
             archive.write(stage / file, file)
         archive.writestr('START-HERE.md', '''# اجرای فصل ۲ فارسی

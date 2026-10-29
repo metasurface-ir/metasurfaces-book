@@ -20,7 +20,7 @@ short_title: فهرست آزمایشگاه‌ها
 | ms-09-dispersion | [جاروب طیفی و سنجهٔ پهنای باند](09-dispersion-lab.md) | ۲، ۵ |
 | ms-10-coupling | [سلول مستقل در برابر ابرسلول](10-coupling-lab.md) | ۳، ۶ |
 | ms-11-inverse-design | [بهینه‌سازی کران‌دار با کنترل مستقل](11-inverse-design-lab.md) | ۵، ۶، ۱۰ |
-| ms-12-research-project | پروژهٔ بازتولیدپذیر و گزارش شاهد | ۷، ۸، ۹، ۱۰ |
+| ms-12-research-project | [پروژهٔ پژوهشی بازتولیدپذیر و ارزیابی شواهد](12-research-project.md) | ۷، ۸، ۹، ۱۰ |
 | ms-13-ai-metasurfaces | [یادگیری، طراحی و بررسی تحلیلی و طرح تمام‌موج](13-ai-metasurfaces.md) | ۱۰ |
 | ms-14-numerical-validation | [شبکه، مرز و شواهد عددی](06-numerical-lab.md) | ۳، ۵، ۶ |
 | ms-15-tunable-control | [تنظیم بایاس، آرایهٔ برنامه‌ریزی‌شده، بازخورد و هارمونیک زمانی](07-tunable-lab.md) | 7 |

@@ -1,91 +1,99 @@
-# Computational environment
+---
+title: Run the computational book
+short_title: Setup and run matrix
+---
 
-## Read the book
+# Run the computational book
 
-The published book is readable in a browser without installing Python. Saved notebook outputs are displayed in the static site. Running or modifying calculations requires a local Jupyter environment or a separately configured hosted kernel.
+(setup-read)=
+## Read and explore
 
-## Build this starter locally
+The published book displays saved results without a Python installation. Open a browser lab from its chapter or use **Open in a new tab**. Browser labs are hosted tools; their HTML is not offered for download and is not included in the Python source bundles. Editing Python calculations requires a local Jupyter environment.
 
-Use Python 3.12 and Node.js 24 with npm. Run these commands from the book directory in PowerShell:
+(setup-sources)=
+## Choose your source files
 
-```powershell
+| What you want to do | What to obtain |
+| --- | --- |
+| Rerun a chapter investigation | Extract its complete source ZIP from the chapter lab; preserve `notebooks/`, `simulations/`, `scripts/`, and `data/` |
+| Run Chapter 4 or either Chapter 10 notebook | Download that notebook from its book page and obtain the repository's `requirements-labs.txt`; these notebooks contain their own numerical functions |
+| Add material, regenerate figures/browser tools, or build both languages | Clone the [complete repository](https://github.com/metasurface-ir/metasurfaces-book); source bundles do not contain the publication exporters/templates |
+
+For a source bundle, follow its `START-HERE.md` from the extracted root. A notebook alone is insufficient when it imports `simulations/` or reads `data/`. Downloaded Persian bundles contain translated narrative with the same executable code and reference outputs as English.
+
+(setup-environment)=
+## Prepare the scientific environment
+
+Use Python 3.12. From the extracted bundle or repository root:
+
+```sh
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\jupyter-book.exe build --html
 ```
 
-The generated website is written to `_build/html/`. For a local development server:
+Activate with `.\.venv\Scripts\Activate.ps1` in PowerShell, or `source .venv/bin/activate` on macOS/Linux. If PowerShell activation is unavailable, replace `python` below with `.\.venv\Scripts\python.exe`.
 
-```powershell
-.\.venv\Scripts\jupyter-book.exe start
+```sh
+python -m pip install -r requirements-labs.txt
+python -m jupyterlab
 ```
 
-Open the local URL printed by the command. On macOS/Linux the executable is `.venv/bin/jupyter-book`.
+Choose this environment's kernel. Save parameter edits, choose **Restart Kernel and Run All Cells**, and save the completed notebook. The examples use CPU NumPy/SciPy/Matplotlib; the neural comparison also uses scikit-learn. No GPU, commercial solver, or external dataset is needed for the published examples. Optional widgets should remain disabled when saving static publication outputs.
 
-## Start with the Chapter 1 notebook
+For the separate RCWA implementation comparisons in Chapters 3/5 and ms-11, install `requirements-validation.txt` from the full checkout or the relevant complete bundle. Without `--grcwa`, audits explicitly report that comparison as unexecuted. Agreement between two RCWA implementations is not an independent numerical-family check.
 
-For a first computational activity, use the [Chapter 1 lab](labs/01-first-investigation.md). Its browser explorer runs online or offline without Python. To edit calculations, install `requirements-labs.txt` in a Python 3.12 environment and extract the complete source ZIP, preserving `notebooks/`, `simulations/`, and `data/`. Open `01-first-metasurface-model.ipynb`, restart its kernel, and run all cells. It imports `simulations/intro_sheet.py` and generates response CSV/JSON files.
+(setup-run-matrix)=
+## Notebook order, dependencies, and measured time
 
-The model needs NumPy and Matplotlib, with no electromagnetic solver, GPU, or network dataset. Run `python scripts/validate_chapter01.py` from the extracted folder or repository root for the analytical audit. After saving the notebook and audit, `python scripts/export_chapter01.py` updates its three figures, standalone browser explorer, and source ZIP. The explorer template is `templates/foundations-explorer.html`. The model is an ideal sheet, with no assigned physical geometry.
+All paths below are relative to `notebooks/`. Times are approximate fresh-kernel execution measurements on 28 October 2026, Windows, Intel Core i3-5005U, Python 3.12, one BLAS thread. They include kernel startup and plots, exclude package installation/audits/builds, and are not performance guarantees. For small matrix examples, set `OPENBLAS_NUM_THREADS=1` and `OMP_NUM_THREADS=1` **before** launching Jupyter (PowerShell: `$env:OPENBLAS_NUM_THREADS='1'`; shell: `export OPENBLAS_NUM_THREADS=1`).
 
-## Run the Chapter 2 investigations
+| Chapter/lab | Notebook(s), in order | Required local inputs | Measured time |
+| --- | --- | --- | --- |
+| 1 | `01-first-metasurface-model.ipynb` | `intro_sheet.py` | 20 s |
+| 2 | `02-waves-and-interfaces.ipynb` | `waves_interfaces.py`, `source_provenance.py` | 22 s |
+| 4, before the Chapter 3 solver | `04-floquet-orders.ipynb` | Self-contained; optional ipywidgets | 13 s |
+| 3 | `03-unit-cell-library.ipynb` | `unit_cell_te.py`; creates the Chapter 3 library | 18 s |
+| 5 | `05-beam-steering.ipynb` → `05-wavefront-models.ipynb` | Shared TE/synthesis modules; saved Chapter 3 library; second notebook reads the first's Chapter 5 library | 13 s + 7 s |
+| 6, alongside 3/5 | `06-numerical-methods.ipynb` | Numerical/film/TE modules and bundled Chapter 6 benchmark files; regenerate them with the Chapter 6 validator if needed | 11 s |
+| 7 | `07-tunable-metasurfaces.ipynb` | `tunable_surface.py`; assigned circuit, scalar array and synthetic control | 20 s |
+| 8 | `08-communication-links.ipynb` | `communication_link.py`; scalar aperture/channel model | 16 s |
+| 9 | `09-fabrication-measurement.ipynb` | `materials_measurement.py`; generated synthetic observations | 17 s |
+| 10 | `10-resonant-surrogate.ipynb` → `10-neural-comparison.ipynb` | Self-contained analytical data; comparison adds scikit-learn; either can execute independently | 10 s + 28 s |
+| ms-09/10/11 | `09-dispersion.ipynb` → `10-coupling.ipynb` → `11-inverse-design.ipynb` | `design_studies.py`, TE/synthesis modules; run all three before the combined audit/export | 57 s + 18 s + 27 s |
 
-Open the [Chapter 2 lab](labs/02-waves-lab.md) to use the offline-capable interface, film, polarization, and electric-sheet explorer. To edit Python calculations, extract its complete source ZIP, install the shared `requirements-labs.txt` in a Python 3.12 environment, and restart/run all cells in `notebooks/02-waves-and-interfaces.ipynb`. It requires NumPy/Matplotlib for calculations and imports `simulations/waves_interfaces.py`; no commercial solver, GPU, or downloaded dataset is used.
+Read the [prerequisite map](learning-path.md) for the conceptual order. A successful execution can still contain an unsuccessful optimizer or an infeasible design; retain those results and their stopping reasons.
 
-Run `python scripts/validate_chapter02.py` from the extracted root for the independent analytical audit. The full repository also provides `python scripts/export_chapter02.py` to regenerate six figures, the explorer, and the source bundle after a saved execution/audit. Keep the common tangential-E basis, outgoing branch, power normalization, phase planes, and model limits with every exported result.
+(setup-validation)=
+## Validate results; export only from a full checkout
 
-## Run the Chapter 10 notebooks
+Run audit commands from the bundle/repository root. The corresponding `scripts/validate_*.py` files are included in their complete bundles. Fixed-reference audits test the declared reference and may reject a deliberately changed experiment; adapt acceptance criteria explicitly and keep reference regressions separate.
 
-From the repository root, install the optional notebook environment into the same virtual environment:
+| Investigation | Audit command after saved execution | Publication command — full repository only |
+| --- | --- | --- |
+| 1 | `python scripts/validate_chapter01.py` | `python scripts/export_chapter01.py` |
+| 2 | `python scripts/validate_chapter02.py` | `python scripts/export_chapter02.py` |
+| 3 | `python scripts/validate_chapter03.py --grcwa` | `python scripts/export_chapter03.py` |
+| 4 | Independent analytical assertions in the notebook | `python scripts/export_chapter04_figures.py` |
+| 5 | `python scripts/validate_chapter05.py --grcwa` | `python scripts/export_chapter05.py` |
+| 6 | `python scripts/validate_chapter06.py` (also regenerates benchmark data) | `python scripts/export_chapter06.py` |
+| 7 | `python scripts/validate_chapter07.py` | `python scripts/export_chapter07.py` |
+| 8 | `python scripts/validate_chapter08.py` | `python scripts/export_chapter08.py` |
+| 9 | `python scripts/validate_chapter09.py` | `python scripts/export_chapter09.py` |
+| 10 | Notebook-held-out comparisons, invariants, and recorded optimizer status | `python scripts/export_chapter10_figures.py` |
+| ms-09/10/11 | `python scripts/validate_design_studies.py --grcwa` | `python scripts/export_design_studies.py` |
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-labs.txt
-.\.venv\Scripts\python.exe -m jupyterlab notebooks
+Preserve units, time/space signs, reference planes, parameter values, random seeds, convergence evidence, and model limitations. A small residual, a conserved power sum, or a provenance hash alone does not establish scientific accuracy. See the [contribution workflow](contributing.md) before replacing a published reference.
+
+(setup-build)=
+## Build and preview both languages
+
+Use the **full checkout** with Python 3.12 and Node.js 24/npm on `PATH`. In a separate `.book-env` virtual environment, activate it as above, then run:
+
+```sh
+python -m pip install -r requirements.txt
+python scripts/validate_translations.py
+python scripts/check_notebook_provenance.py
+python scripts/build_bilingual.py
+python -m http.server 8000 --directory _build/html
 ```
 
-Open `10-resonant-surrogate.ipynb` first, then `10-neural-comparison.ipynb`. Select the environment's Python kernel and choose **Restart Kernel and Run All Cells**. Each notebook records its numerical package versions. Parameters are in its first code cell; the data are generated locally. The neural comparison also uses scikit-learn and runs several small CPU fits; a GPU is unnecessary.
-
-Both notebooks are downloadable from their book pages and can run independently. If you download a notebook alone, install the packages in the repository's `requirements-labs.txt`. Saved outputs show the published reference run; edited parameters produce a new experiment and may change results or optimizer behavior.
-
-The comparison intentionally preserves optimizer warnings from unsuccessful validation candidates. Check the selected-model and repeat-run status separately from the trial table. An execution that finishes is not evidence that every optimizer met its convergence criterion.
-
-## Run the Chapter 4 notebook
-
-Use the same `requirements-labs.txt` environment and open `04-floquet-orders.ipynb`. Restart the kernel and run all cells. NumPy and Matplotlib produce the analytical reference outputs; ipywidgets supplies optional sliders when `ENABLE_WIDGETS=True`. Keep the flag `False` when saving a static reference for publication, so the page can display its results without a live widget session.
-
-The [Chapter 4 lab](labs/04-floquet-lab.md) also embeds a standalone HTML explorer. Its controls run in the browser with no Python kernel or network data service. The explorer can be opened in its own page or downloaded for offline use.
-
-## Run the Chapter 3 full-wave notebook
-
-Use the same `requirements-labs.txt` environment. Clone the repository or extract the complete ZIP from the [Chapter 3 lab](labs/03-unit-cell-lab.md), then open `notebooks/03-unit-cell-library.ipynb`. The notebook imports `simulations/unit_cell_te.py`; preserve both folders. Restart the kernel and run all cells. It generates response-library CSV/JSON files in `data/chapter-03/` and displays field, response, spectral, and validation results. These are CPU calculations for a restricted one-dimensional dielectric TE model.
-
-To reproduce the additional audit, run from the extracted folder or repository root:
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-validation.txt
-.\.venv\Scripts\python.exe scripts/validate_chapter03.py --grcwa
-```
-
-The optional grcwa dependency is required only for the separate implementation comparison. Both implementations use RCWA. Without `--grcwa`, the audit records that this optional comparison was not run. Editing physical or numerical parameters requires renewed validation and a new dataset version. The fixed reference audit describes the published experiment.
-
-Run `python scripts/export_chapter03.py` after saving the executed notebook and audit to update its chapter figures, offline data explorer, and source ZIP. The explorer displays saved data rather than running Python in the browser. Optional Jupyter controls also inspect the computed rows; set `ENABLE_WIDGETS=True` locally and keep it `False` for the saved static reference.
-
-## Run the Chapter 5 synthesis notebooks
-
-Use `requirements-labs.txt` and extract the complete source ZIP from the [Chapter 5 lab](labs/05-synthesis-lab.md), or clone the repository. Preserve the `simulations/`, `data/`, and `notebooks/` folders. Run `05-beam-steering.ipynb` first, then `05-wavefront-models.ipynb`; the second reads the library generated by the first. Restart each kernel and run all cells.
-
-The first notebook computes an expanded library, geometry selection, full-wave supercells, local estimates, and convergence. The second executes scalar line-focus propagation and analytical Jones models. They use CPU NumPy/SciPy/Matplotlib with no licensed solver or GPU. Install `requirements-validation.txt` and run `python scripts/validate_chapter05.py --grcwa` for the optional separate RCWA implementation comparison. Its fixed reference cases need adaptation when changing the experiment.
-
-After saved notebook executions and audit, `python scripts/export_chapter05.py` exports six original figures, the embedded-data browser explorer, and the source ZIP. Keep the scalar/Jones and full-wave evidence labels when contributing edited results. The browser explorer only selects saved cases.
-
-## Further computational labs
-
-The analytical starters need no electromagnetic solver. Chapters 3 and 5 supply restricted TE solvers. Further full-wave labs will specify their own solver versions, licenses where applicable, data inputs, and execution environments.
-
-Full-wave solvers such as COMSOL, FDTD, or RCWA will have separate setup and validation instructions. Routine book publication will use saved results rather than rerunning expensive simulations.
-
-## Run the Chapter 6 numerical-methods notebook
-
-Extract the complete source ZIP from the [Chapter 6 lab](labs/06-numerical-lab.md), or use the full checkout. Install the shared `requirements-labs.txt`, then restart/run `notebooks/06-numerical-methods.ipynb`. It uses CPU NumPy/SciPy/Matplotlib and the shared `simulations/` modules. The adjustable slab calculations are separate from the fixed RCWA comparison datasets. The browser explorer selects saved data and works offline.
-
-Run `python scripts/validate_chapter06.py` for the declared benchmark audit; after saving execution and audit, run `python scripts/export_chapter06.py` in the full repository. The executed solver is a 1D real-index equal-exterior FDFD slab with matched discrete radiation boundaries. FEM/FDTD, PML, patterned-cell cross-method and finite-device stages remain outlines.
+Leave `BASE_URL` empty for this local server (PowerShell: `$env:BASE_URL=''`). Visit `http://localhost:8000/` and `http://localhost:8000/fa/`. GitHub Actions sets the deployed project prefix automatically. `jupyter-book start` is useful for English authoring; the complete language switch and Persian output require the bilingual build. The build displays saved outputs and checks identities; it does not rerun all simulations. Pull requests also run the small parameter-edit regression suite.

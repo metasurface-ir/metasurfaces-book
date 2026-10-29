@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this computational book and identify the exact source commit and notebook used. The version is a book snapshot label, not a DOI or a peer-reviewed release."
+type: software
+title: "Metasurface.ir: Metasurfaces — From Wave Physics to Design"
+authors:
+  - name: "Metasurface.ir contributors"
+repository-code: "https://github.com/metasurface-ir/metasurfaces-book"
+url: "https://metasurface-ir.github.io/metasurfaces-book/"
+version: "2026.10.28-section2"
+license:
+  - CC-BY-4.0
+  - MIT
+abstract: "A bilingual English–Persian graduate computational book with electromagnetic metasurface models, executable investigations and explicit validation limits. LICENSE specifies the separate scopes for content and code."
+keywords:
+  - electromagnetic metasurfaces
+  - computational electromagnetics
+  - graduate education
+  - reproducibility

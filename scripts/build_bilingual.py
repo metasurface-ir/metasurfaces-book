@@ -10,6 +10,7 @@ import re
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
 from localize_chapter02 import export
 from render_numerical_explorer import render
@@ -93,7 +94,17 @@ def prepare_persian():
 def decorate(output, language):
     manifest = json.loads((ROOT / 'translations/languages.json').read_text(encoding='utf-8'))
     target_base = BASE + ('/fa' if language == 'fa' else '')
-    config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']]}
+    anchors = {}
+    for row in manifest['pages']:
+        if not row['source'].endswith('.md'):
+            continue
+        en = (ROOT / row['source']).read_text(encoding='utf-8')
+        fa = (ROOT / row['translation']).read_text(encoding='utf-8')
+        shared = set(re.findall(r'^\(([a-z0-9-]+)\)=$', fa, re.M))
+        labels = [label for label in re.findall(r'^\(([a-z0-9-]+)\)=$', en, re.M) if label in shared]
+        if labels:
+            anchors[row['route']] = labels
+    config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']], 'anchors': anchors}
     for path in output.rglob('*.html'):
         if 'interactives' in path.parts or 'build' in path.relative_to(output).parts:
             continue
@@ -140,6 +151,7 @@ def decorate(output, language):
 
 def main():
     subprocess.run([sys.executable, str(ROOT / 'scripts/validate_translations.py')], check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/check_notebook_provenance.py')], check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/export_figure_provenance.py'), '--check'], check=True)
     run_book(ROOT, BASE)
     decorate(ROOT / '_build/html', 'en')
@@ -152,6 +164,13 @@ def main():
         assert output.resolve().parent == (ROOT / '_build/html').resolve()
         shutil.rmtree(output)
     copy_tree(STAGE / '_build/html', output)
+    revision = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
+    dirty = bool(subprocess.run(['git', 'status', '--porcelain', '--untracked-files=normal'], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip())
+    identity = dict(version=(ROOT / 'VERSION').read_text(encoding='utf-8').strip(),
+                    source_commit=revision, source_modified=dirty, built_utc=datetime.now(timezone.utc).isoformat(),
+                    scope='Static book built from saved scientific outputs; see the source review and audit records.')
+    for edition in (ROOT / '_build/html', output):
+        (edition / 'build-info.json').write_text(json.dumps(identity, indent=2) + '\n', encoding='utf-8')
     print('Built English and Persian editions in _build/html')
 
 

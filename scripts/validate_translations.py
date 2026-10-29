@@ -55,7 +55,12 @@ def validate():
         ET.parse(ROOT / 'translations/fa/assets/chapter-02' / name)
     toc_files = re.findall(r'- file: (.+)', (ROOT / 'myst.yml').read_text(encoding='utf-8'))
     assert set(toc_files) == {row['source'] for row in manifest['pages']}, 'Every published English page must have a Persian counterpart'
-    print(f'Passed: {len(routes)} language pairs covering the complete table of contents, source review locks, all chapter display equations/figures, all notebook code and browser physics, two localized SVGs')
+    for filename in ('getting-started.md', 'contributing.md', 'learning-path.md', 'glossary.md', 'attribution.md', 'labs/12-research-project.md'):
+        en = (ROOT / filename).read_text(encoding='utf-8')
+        fa = (ROOT / 'translations/fa' / filename).read_text(encoding='utf-8')
+        assert len(re.findall(r'^## ', en, re.M)) == len(re.findall(r'^## ', fa, re.M)), f'Missing paired help-page section: {filename}'
+        assert re.findall(r'^\(([a-z0-9-]+)\)=$', en, re.M) == re.findall(r'^\(([a-z0-9-]+)\)=$', fa, re.M), f'Paired section anchors differ: {filename}'
+    print(f'Passed: {len(routes)} registered language pairs and source review locks; chapter display equations/figures and section counts; shared notebook code with translation outputs empty; Chapter 2 browser equation-block parity; two localized SVGs; paired help-page section/anchor coverage. These checks do not establish semantic translation equivalence or all browser behavior.')
 
 
 if __name__ == '__main__':

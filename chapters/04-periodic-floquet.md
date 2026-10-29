@@ -16,6 +16,7 @@ This chapter develops the translation symmetry, the allowed wavevectors, and the
 The channel maps, limiting cases, finite-array factors, and flat-interface power checks have analytical models and executable code. The periodic-grating and metasurface solver investigations are detailed lab outlines. No full-wave efficiency or fabricated-device performance is claimed for those structures.
 :::
 
+(ch04-section-01)=
 ## 4.1 Goals and conventions
 
 After this chapter, you should be able to:
@@ -40,6 +41,7 @@ The incident and transmitted half-spaces are homogeneous, isotropic, lossless me
 | $m\in\mathbb Z$ | Diffraction-order label under our sign convention |
 | $n_o$ | Index of the output region being examined: $n_i$ for reflection or $n_t$ for transmission |
 
+(ch04-section-02)=
 ## 4.2 Find the pattern that actually repeats
 
 A translation by a primitive period restores the complete material distribution. Translating by one pitch in a row of different pillars generally replaces one geometry with another. Translating by the complete sequence restores it. For six distinct elements separated by $p=0.5\,\mu\mathrm m$, a possible primitive period is $\Lambda=6p=3\,\mu\mathrm m$.
@@ -61,6 +63,7 @@ Original schematic and incident-phase calculation: $p=0.5\,\mu\mathrm m$, $\Lamb
 
 **Predict from the drawing:** if the six elements become identical, which distance changes in the smallest material repeat, and does the incident wave's phase advance across the original $3\,\mu\mathrm m$ distance change?
 
+(ch04-section-03)=
 ## 4.3 Translation symmetry and the Bloch phase
 
 For one incident plane wave, the driven scattering solution lies in the same Bloch sector as the excitation. A field component can be written
@@ -96,6 +99,7 @@ This argument concerns a driven response, not an arbitrary sum of eigenmodes. At
 
 Replacing $k_{x,i}$ by $k_{x,i}+\ell G$ leaves the translation multiplier unchanged because $e^{i\ell G\Lambda}=1$. This is the origin of reciprocal-lattice equivalence. It relabels harmonics; it does not change their physical tangential wavevectors when the labels are shifted consistently. The incident wavevector remains fixed by the physical incidence condition.
 
+(ch04-section-04)=
 ## 4.4 Derive the Floquet orders
 
 Expand the periodic factor in a Fourier series:
@@ -152,6 +156,7 @@ When the ratio is not one, the geometric-series numerator is $1-e^{-i2\pi m}=0$;
 The [cell-versus-supercell lab](../labs/10-coupling-lab.md) tests this extinction with an executed TE solver using a different geometry ($p=0.65\,\mu\mathrm m$, $N=6$). Its uniform-array control compares the same physical harmonic cutoff in primitive-cell and supercell calculations. The six unequal elements in the opening puzzle do not have this smaller translation symmetry.
 :::
 
+(ch04-section-05)=
 ## 4.5 Open, grazing, and evanescent channels
 
 In output region $o$, the homogeneous-medium dispersion relation gives
@@ -239,6 +244,7 @@ $$
 
 This formula excludes an integer endpoint automatically. Near a floating-point cutoff, use the notebook's explicit per-order classification rather than trusting a rounded endpoint.
 
+(ch04-section-06)=
 ## 4.6 Two output media, two channel maps
 
 Apply the classification separately with $n_o=n_i$ for reflection and $n_o=n_t$ for transmission. Both sides share $k_{x,m}$, but their light-cone boundaries differ. A larger refractive index can support additional propagating orders.
@@ -252,6 +258,7 @@ For $\Lambda=3\,\mu\mathrm m$, $\lambda_0=1.55\,\mu\mathrm m$, and normal incide
 Analytical channel geometry from the executed notebook. The map counts possible outgoing channels. No scattering amplitude or diffraction efficiency is assigned to them.
 ```
 
+(ch04-section-07)=
 ## 4.7 Channel existence and diffraction efficiency
 
 Knowing $k_{x,m}$ and $k_{z,m}$ identifies the available basis waves. Solving Maxwell's boundary-value problem determines their amplitudes. A symmetry-forbidden order, an unpatterned interface, or destructive interference can give zero amplitude in an open channel.
@@ -317,6 +324,7 @@ At a flat nonmagnetic interface, translational invariance permits only the physi
 
 The notebook checks this case and a total-internal-reflection limit. These are analytical interface checks, not simulations of a patterned metasurface. For numerical mode/flux normalization examples, see the official [Meep mode-decomposition tutorial](https://meep.readthedocs.io/en/latest/Python_Tutorials/Mode_Decomposition/).
 
+(ch04-section-08)=
 ## 4.8 Finite arrays and grating lobes
 
 An infinite periodic calculation produces discrete Floquet directions. A finite illuminated array has angular lobes with nonzero width. For $N$ equally spaced prescribed scalar sources with identical weights and the incident phase progression, a normalized array factor is
@@ -379,6 +387,7 @@ $$
 Thus all nonzero orders are strictly outside the light cone over the stated scan. At equality, an edge incidence and the oppositely signed first order can touch the cone. The proof is about channel geometry: an allowed extra channel can still have zero amplitude, and an element radiation pattern can suppress a finite-array maximum without changing this bound.
 :::
 
+(ch04-section-09)=
 ## 4.9 Phase gradients and generalized refraction
 
 For a prescribed transmission phase $\Phi(x)$, tangential phase matching motivates
@@ -426,6 +435,7 @@ An ideal scalar phase winding and its six-step approximation. The sampled functi
 
 A real sequence of resonant elements need not realize that ideal scalar transmission function. Material dispersion, amplitude variation, coupling, and impedance mismatch can change its performance. Floquet channels describe the periodic scattering basis; a phase-gradient design seeks to excite selected coefficients in that basis.
 
+(ch04-section-10)=
 ## 4.10 From a channel map to a periodic solver
 
 Start with a homogeneous or flat-interface cell whose response is analytically known. Then introduce a simple grating. Use the following checks before a large parameter sweep:
@@ -450,6 +460,7 @@ $$
 
 In an isotropic lossless exterior, compare its squared magnitude with $(n_o k_0)^2$. The notebook includes a small rectangular-lattice example so that the one-dimensional condition is not mistaken for a general two-dimensional rule. Lossy, anisotropic, nonlocal, or time-modulated systems require an appropriate dispersion relation and outgoing-wave/energy-flow analysis. A real-angle `arcsin` test is not a universal classification algorithm.
 
+(ch04-section-11)=
 ## 4.11 Exercises and discussion
 
 1. Derive the Bloch multiplier for a translation by $-\Lambda$. Explain why the multiplier alone cannot identify the incident diffraction-order label.
@@ -464,6 +475,7 @@ In an isotropic lossless exterior, compare its squared magnitude with $(n_o k_0)
 
 Continue with the [worked examples](04-floquet-guide.md), [browser explorer and lab](../labs/04-floquet-lab.md), and [executed notebook](../notebooks/04-floquet-orders.ipynb).
 
+(ch04-section-12)=
 ## References and further reading
 
 - Yu et al., *Light Propagation with Phase Discontinuities: Generalized Laws of Reflection and Refraction*, Science 334, 333-337 (2011). [Article](https://doi.org/10.1126/science.1210713); [author's publication page](https://capasso.seas.harvard.edu/publications/light-propagation-phase-discontinuities-generalized-laws-reflection-and).

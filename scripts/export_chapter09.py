@@ -1,4 +1,5 @@
 """Export saved notebook figures, bilingual-ready browser lab and source archive."""
+from bundle_notices import write_notices
 import base64,json,zipfile
 from pathlib import Path
 from render_measurement_explorer import render
@@ -16,6 +17,7 @@ files=['notebooks/09-fabrication-measurement.ipynb','simulations/materials_measu
        'requirements-labs.txt','data/chapter-09/reference.json','data/chapter-09/validation.json',
        'data/chapter-09/synthetic-sweep.csv','assets/chapter-09/measurement-geometry.svg']
 with zipfile.ZipFile(ROOT/'downloads/chapter-09-measurement.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+    write_notices(z)
     for f in files:z.write(ROOT/f,f)
     z.writestr('START-HERE.md','''# Chapter 9: materials, fabrication and measurement
 

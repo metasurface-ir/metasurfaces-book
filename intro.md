@@ -29,10 +29,12 @@ The companion course website will provide conceptual lessons and course guidance
 - Follow the [pilot learning path and worked exercises](chapters/10-pilot-guide.md).
 - Work through the [AI computational lab](labs/13-ai-metasurfaces.md), [starter notebook](notebooks/10-resonant-surrogate.ipynb), and [neural comparison](notebooks/10-neural-comparison.ipynb).
 - Review the [computational environment](getting-started.md).
-- Explore the [planned investigations](labs/index.md).
+- Explore the [computational investigations](labs/index.md).
 - Check [figure provenance and reuse guidance](attribution.md).
 - Learn [how to contribute a chapter or notebook](contributing.md).
 
 :::{note} Development status
 Chapters 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10 are available for instructor review. Chapter 1 is the entry point, with an executed analytical notebook and browser explorer. Chapters 3 and 5 include executed full-wave TE ridge calculations and validated libraries; Chapter 5 also verifies four complete periodic supercells. Chapters 3-5 have browser explorers. Focusing and polarization use separately labeled scalar/Jones models, and the Chapter 10 pilot uses analytical data. Further FEM/FDTD, finite-device, broadband, and fabrication investigations remain outlines. Chapter 6 adds executed FDFD convergence, fields, boundary, and reference-plane diagnostics. Chapter 7 adds an executed equivalent-circuit and control investigation. Chapter 8 adds an executed scalar aperture-to-link investigation. Chapter 9 adds synthetic material, tolerance, calibration and uncertainty investigations. Experimental and advanced solver extensions remain explicitly unexecuted outlines. The website displays saved notebook results; download source bundles/notebooks to run or modify their Python calculations.
 :::
+
+Follow the [prerequisite map and reading paths](learning-path.md), then plan a bounded investigation with the [ms-12 research-project brief](labs/12-research-project.md).

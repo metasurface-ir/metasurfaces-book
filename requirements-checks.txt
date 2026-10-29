@@ -1,0 +1,7 @@
+# Small parameter-edit regressions; no Jupyter server, ML training, or solver sweep.
+# Shared numerical pins match requirements-labs.txt.
+numpy==2.4.6
+matplotlib==3.11.1
+scipy==1.18.1
+# Notebook cells import display helpers during the parameter-edit checks.
+ipython>=9.17.1,<10
