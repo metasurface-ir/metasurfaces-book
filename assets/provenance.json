@@ -23,6 +23,13 @@
       "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
+      "asset": "assets/chapter-01/meta-atom-gallery.svg",
+      "sha256": "32ec87e051dc34594085f1a34f093c8bf4e8f0d256500130880650b27f86beb7",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-01/meta-atom-gallery.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
       "asset": "assets/chapter-01/phasors.png",
       "sha256": "8d22e9bd63f5405e48c2197864b98aaeb0b8b9baa48aae01bcfadba3147ddb15",
       "origin": "original numerical notebook output",
