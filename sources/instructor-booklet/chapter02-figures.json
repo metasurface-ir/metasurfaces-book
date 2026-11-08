@@ -1,0 +1,56 @@
+{
+  "source": "Instructor-supplied Persian booklet, Chapter 2, printed pages 15–69",
+  "scope": "All nine embedded source diagrams plus the page-26 boundary table (recreated in LaTeX/Markdown)",
+  "figures": [
+    {
+      "source_page": 22,
+      "asset": "assets/chapter-02/textbook-normal-tangential.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 23,
+      "asset": "assets/chapter-02/textbook-gauss-pillbox.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 23,
+      "asset": "assets/chapter-02/textbook-surface-charge.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 24,
+      "asset": "assets/chapter-02/textbook-electric-loop.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 24,
+      "asset": "assets/chapter-02/textbook-tangential-continuity.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 25,
+      "asset": "assets/chapter-02/textbook-magnetic-loop.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 27,
+      "asset": "assets/chapter-02/textbook-electric-interface-example.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 28,
+      "asset": "assets/chapter-02/textbook-magnetic-interface-example.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    },
+    {
+      "source_page": 50,
+      "asset": "assets/chapter-02/textbook-normal-incidence.svg",
+      "method": "original vector redrawing; equations and symbol definitions remain LaTeX in captions"
+    }
+  ],
+  "table": {
+    "source_page": 26,
+    "location": "Section 2.4 source reading",
+    "method": "eight-row four-column Markdown/LaTeX table, shortened and corrected with instructor authorization; PEC tangential B and assumptions explicitly corrected"
+  }
+}

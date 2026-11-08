@@ -1,14 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
-<title id="title">Conceptual meta-atom gallery</title><desc id="desc">A metal strip, a split ring with a current arrow and gap marker, an unequal-arm cross, and a dielectric post on a substrate. These are conceptual drawings without a simulated response.</desc>
+<title id="title">Conceptual meta-atoms seated on substrate slabs</title><desc id="desc">A metal strip, split ring and unequal-arm cross patterned directly in the top plane of their substrate slabs, followed by a dielectric post whose base touches the top of its slab. These are conceptual drawings without a simulated response.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b44910"/></marker></defs>
 <rect width="960" height="280" rx="16" fill="#f3f7fa"/>
 <g fill="#fff" stroke="#bdcdd8"><rect x="15" y="16" width="220" height="245" rx="12"/><rect x="250" y="16" width="220" height="245" rx="12"/><rect x="485" y="16" width="220" height="245" rx="12"/><rect x="720" y="16" width="225" height="245" rx="12"/></g>
-<g fill="#b6cddc" stroke="#718b9c"><path d="M35 175L165 150L215 180L85 208Z"/><path d="M270 175L400 150L450 180L320 208Z"/><path d="M505 175L635 150L685 180L555 208Z"/><path d="M738 175L868 150L925 180L795 210Z"/></g>
-<path d="M72 100L172 80L179 111L79 131Z" fill="#d9a23d" stroke="#806020" stroke-width="2"/>
-<path d="M383 87A51 51 0 1 0 400 111" fill="none" stroke="#d9a23d" stroke-width="13"/>
-<path d="M331 66A70 70 0 0 1 426 128" fill="none" stroke="#b44910" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M389 88L402 105" stroke="#b44910" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<path d="M575 65H600V97H652V117H600V161H575V117H545V97H575Z" fill="#d9a23d" stroke="#806020" stroke-width="2"/>
-<path d="M798 97L842 83L869 103L824 118Z" fill="#4da9aa" stroke="#236568" stroke-width="2"/><path d="M798 97L824 118V174L798 154Z" fill="#329095" stroke="#236568" stroke-width="2"/><path d="M824 118L869 103V157L824 174Z" fill="#267175" stroke="#236568" stroke-width="2"/>
+<!-- All slabs share one affine top plane. Metal patterns use that same plane. -->
+<defs><g id="slab"><path d="M0 0L50 30L180 4V12L50 38L0 8Z" fill="#87a9be" stroke="#718b9c"/><path d="M0 0L130 -26L180 4L50 30Z" fill="#c5dbe7" stroke="#718b9c"/></g></defs>
+<use href="#slab" x="35" y="156"/><use href="#slab" x="270" y="156"/><use href="#slab" x="505" y="156"/><use href="#slab" x="738" y="156"/>
+<g transform="matrix(1.3 -.26 .5 .30 35 156)"><rect x="19" y="38" width="62" height="24" fill="#d9a23d" stroke="#806020" stroke-width="2"/></g>
+<g transform="matrix(1.3 -.26 .5 .30 270 156)">
+<path d="M76 28A34 34 0 1 0 84 46" fill="none" stroke="#806020" stroke-width="12"/>
+<path d="M76 28A34 34 0 1 0 84 46" fill="none" stroke="#d9a23d" stroke-width="10"/>
+<path d="M25 14A44 44 0 0 1 94 44" fill="none" stroke="#b44910" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M80 30L85 39" stroke="#b44910" stroke-width="1.4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+</g>
+<g transform="matrix(1.3 -.26 .5 .30 505 156)"><path d="M43 15H57V40H84V59H57V85H43V59H16V40H43Z" fill="#d9a23d" stroke="#806020" stroke-width="2"/></g>
+<!-- The post's four lower vertices lie in the same slab top plane. -->
+<path d="M803.5 101.6L845.1 93.28L860.1 102.28L818.5 110.6Z" fill="#4da9aa" stroke="#236568" stroke-width="2"/>
+<path d="M803.5 101.6L818.5 110.6V165.6L803.5 156.6Z" fill="#329095" stroke="#236568" stroke-width="2"/>
+<path d="M818.5 110.6L860.1 102.28V157.28L818.5 165.6Z" fill="#267175" stroke="#236568" stroke-width="2"/>
 <g font-family="Arial,sans-serif" font-size="17" fill="#163c51" text-anchor="middle"><text x="125" y="239">Strip</text><text x="360" y="239">Split ring</text><text x="595" y="239">Unequal-arm cross</text><text x="832" y="239">Dielectric post</text></g>
 </svg>
