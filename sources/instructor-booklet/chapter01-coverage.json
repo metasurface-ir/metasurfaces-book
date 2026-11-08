@@ -1,0 +1,16 @@
+{
+  "pdf_sha256": "e498dc9293e06b3566f898d7d2c6dbf7ef2f8701fbf215d07976db95f7332e92",
+  "pages": "5–14 (printed)",
+  "sections": 11,
+  "method": "manual Persian transcription with typography corrections; paired English translation; unchanged source sections embedded in order; supplementary material separately labeled",
+  "coverage": {
+    "en": {
+      "section_count": 11,
+      "all_transcribed_blocks_embedded": true
+    },
+    "fa": {
+      "section_count": 11,
+      "all_transcribed_blocks_embedded": true
+    }
+  }
+}

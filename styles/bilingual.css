@@ -1,4 +1,10 @@
 #book-language-switcher{display:flex;align-items:center;gap:.55rem;white-space:nowrap;flex-shrink:0;padding:.35rem .6rem;margin-inline:.4rem;font-size:.88rem;border:1px solid #9eafb966;border-radius:.5rem;background:var(--myst-background-color,transparent)}
+.book-exercise{border:1px solid #36969b!important;border-inline-start:5px solid #15777d!important;border-radius:.65rem;background:#eefafa!important;color:#143d43!important;margin-block:1.5rem!important}
+.book-exercise details{background:#fff6df!important;color:#4f3b13!important;border:1px solid #c9a04b!important;border-radius:.45rem;margin-block:1rem!important}
+.book-exercise summary{font-weight:700;cursor:pointer;padding-block:.5rem}
+.book-exercise summary:focus-visible{outline:3px solid #147c86;outline-offset:3px}
+.dark .book-exercise{background:#123438!important;color:#e2f6f6!important;border-color:#68bfc4!important}
+.dark .book-exercise details{background:#3a301b!important;color:#fff1d1!important;border-color:#d4af60!important}
 #book-language-switcher{color:#132e40}
 .dark #book-language-switcher{color:#f1f5f9}
 #book-language-switcher a{color:inherit;cursor:pointer;text-decoration:none;padding:.1rem .12rem}
