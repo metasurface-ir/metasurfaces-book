@@ -2,6 +2,8 @@
 title: "From a periodic library to a real device"
 ---
 
+(31-0-from-a-periodic-library-to-a-real-device)=
+
 # From a periodic library to a real device
 
 A local-periodicity approximation assigns a cell the response it would have in an infinite array of identical neighbors. A wavefront-shaping device places different geometries next to one another. Their coupling and collective diffraction can alter the response.

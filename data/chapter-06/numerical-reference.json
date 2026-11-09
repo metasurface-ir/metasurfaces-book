@@ -21,9 +21,9 @@
     "boundary": "exact discrete radiation condition, or deliberately mismatched continuum multiplier",
     "reference": "Independent exact Chapter 2 Fresnel/Fabry-Perot film",
     "source_sha256": {
-      "numerical_methods.py": "5d2e021257c6824f94ed15b8c981c936b7ffc053c82c240abd7fa818afa79f22",
-      "waves_interfaces.py": "f69aade38f65fc96b71ce5b28010a54b505de34ea478759bbd316c893bbb70cd",
-      "unit_cell_te.py": "bcbbb34199c7ef81b1d5626793fffc76cb1db199ab9f8c0d3aad9e9d2f51e75a"
+      "numerical_methods.py": "15fbca3c5b06d2337a0bd5476a27e8c5878c6fbc8fc904d35e2255e23911985c",
+      "waves_interfaces.py": "373a8f149e1cfee53225e8a7a7a433174388e663de856f2405b92414fc9c3a8b",
+      "unit_cell_te.py": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba"
     },
     "environment": {
       "python": "3.12.1",
@@ -17575,7 +17575,7 @@
   "chapter05_saved_evidence": {
     "status": "read saved audit; not rerun by this script",
     "path": "data/chapter-05/validation.json",
-    "sha256": "83d33224c6e1852882953f79bcf3bb419333b8e3d2eff9fbe23e0e895e1aa360",
+    "sha256": "ad0052054cb93e3c6041b5f206beeb59869970dfea9e02b198fe78ddc6de2ecc",
     "full_wave_refinement": {
       "half_orders": [
         144,

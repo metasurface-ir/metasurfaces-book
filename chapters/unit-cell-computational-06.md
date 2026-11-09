@@ -2,6 +2,8 @@
 title: "Extract phase at stated reference planes"
 ---
 
+(3-6-extract-phase-at-stated-reference-planes)=
+
 # Extract phase at stated reference planes
 
 A phase is meaningful relative to an excitation and a plane. Suppose an incident monitor is $L_i$ above the ridge and an output monitor $L_t$ below it. If both measured ratios use incident $E_y$ at $z=-L_i$, then

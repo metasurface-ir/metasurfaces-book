@@ -10,7 +10,7 @@
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-01/sheet-response.json": "5f5540d829f42ce9fb6b526529d1ce46f20a5ff39711ba221ff0f19d61474764",
+        "data/chapter-01/sheet-response.json": "23d863115f6f6f35936239d7e3bd0130be42efb61ec23fdb73fee92369c7de23",
         "data/chapter-01/sheet-response.csv": "5ad07ed1a5d5759d78f542c2f9cfe2528300a9f5a721c7c9cbddef26bd0be29e"
       },
       "parameter_fields": {
@@ -52,7 +52,7 @@
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-02/waves-reference.json": "6ebad97eb6dc01db7173605a8dbaac3f59a0f974d0e13c3040622d9811baf42f",
+        "data/chapter-02/waves-reference.json": "5eab3528de853ffe7736b224aa7cdd9aeb1038daad844335443bb3045d236052",
         "data/chapter-02/waves-reference.csv": "0a72887cd3dbcdfa8898e7aefd8a04ef877a52ced8dc3d667a6aeff27e5b4690"
       },
       "parameter_fields": {
@@ -86,7 +86,7 @@
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-03/response-library.json": "7897269559dc8717ade9181165c4c7e9d54cb46ac9d10b06dbe49307b01b757b",
+        "data/chapter-03/response-library.json": "ca5a31ab458177846a0b2ba1011edb98fa7be6bd7ef13b98649af1b20049dd4a",
         "data/chapter-03/response-library.csv": "73dcf53f9f443daa39c8bb14d436718f6a2b698d5e8a8f227f11fe9486885034"
       },
       "parameter_fields": {
@@ -122,11 +122,11 @@
       "dependencies": {
         "simulations/unit_cell_te.py": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
         "simulations/metasurface_synthesis.py": "16ce1580915bc779184920e82aab9730c6ae76b47d30b7d03e5410a0cf2c75bf",
-        "data/chapter-03/response-library.json": "7897269559dc8717ade9181165c4c7e9d54cb46ac9d10b06dbe49307b01b757b",
+        "data/chapter-03/response-library.json": "ca5a31ab458177846a0b2ba1011edb98fa7be6bd7ef13b98649af1b20049dd4a",
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-05/beam-steering.json": "601d02255afe8d097d5567c863da40f19bc1ab0510be73707dbcd7e811eaa675",
+        "data/chapter-05/beam-steering.json": "95cc20abd67980c7f3a3b021a5616852eb24d43040309ef473e349521133520f",
         "data/chapter-05/extended-library.csv": "cb81588baf1d7a0b7257397cf1b452b70741e79c834267e01501fc5186c857e4"
       },
       "parameter_fields": {
@@ -152,11 +152,11 @@
       "dependencies": {
         "simulations/unit_cell_te.py": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
         "simulations/metasurface_synthesis.py": "16ce1580915bc779184920e82aab9730c6ae76b47d30b7d03e5410a0cf2c75bf",
-        "data/chapter-05/beam-steering.json": "601d02255afe8d097d5567c863da40f19bc1ab0510be73707dbcd7e811eaa675",
+        "data/chapter-05/beam-steering.json": "95cc20abd67980c7f3a3b021a5616852eb24d43040309ef473e349521133520f",
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-05/wavefront-models.json": "5ad12768441182a74fbc0b47c62eaf035a8e45ececa10c9a3efd329c81d8c180"
+        "data/chapter-05/wavefront-models.json": "7d873239fc99ab940744739997c7559638872869150d1a1bc7255cca45c58334"
       },
       "parameter_fields": {
         "chapter-05/wavefront-models.json": {}
@@ -165,19 +165,19 @@
     },
     "06-numerical-methods": {
       "code_sha256": "7ee90c8cdf0d60dbc6646873fc55d234b7df3ff1652f5d58c1074a3d56938097",
-      "saved_outputs_sha256": "dadc0c136c790ba68be6b5231b3c807d2c46ef207076add9c0d9594b45fcb2fd",
+      "saved_outputs_sha256": "4ab10996a98ed0a83cebf223947a784073c1cc8a65cefd3911af7bd2b6f4f22e",
       "dependencies": {
         "simulations/numerical_methods.py": "15fbca3c5b06d2337a0bd5476a27e8c5878c6fbc8fc904d35e2255e23911985c",
         "simulations/waves_interfaces.py": "373a8f149e1cfee53225e8a7a7a433174388e663de856f2405b92414fc9c3a8b",
         "simulations/unit_cell_te.py": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
-        "data/chapter-05/beam-steering.json": "601d02255afe8d097d5567c863da40f19bc1ab0510be73707dbcd7e811eaa675",
-        "data/chapter-06/numerical-reference.json": "d0c18645fbb7e685ae2fc1009c88b08a5572f76b40c8649b858675567533b659",
+        "data/chapter-05/beam-steering.json": "95cc20abd67980c7f3a3b021a5616852eb24d43040309ef473e349521133520f",
+        "data/chapter-06/numerical-reference.json": "1d4739d2cb46ac41a36764520bef1919a5ecf3e57d95605efe5c96700bae4b35",
         "data/chapter-06/model-comparison.csv": "a0f7dddc715c1d35cf3535b08196dd448fc82987427008b257d0de3ae7aabff6",
         "data/chapter-06/harmonic-sweep.csv": "ec0d12b2bf1898b008e0a2defcaa58de04ae5d75e2d13b9393d330b5992463d2",
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },
       "generated_files": {
-        "data/chapter-06/notebook-experiment.json": "3b6435edd2f2866be1110d089ed948a538d9fa396d7deb61c19a24cb37a85e03"
+        "data/chapter-06/notebook-experiment.json": "39b210898b44a3c0b0b69d85d11cf62b238b49b120c85b5bfa8f82857e8f8562"
       },
       "parameter_fields": {
         "chapter-06/notebook-experiment.json": {
@@ -428,7 +428,7 @@
     },
     "10-resonant-surrogate": {
       "code_sha256": "7adc7174e5e590ab4f0c7848448df6a01ad0e756c4e58868fc5119d42c9e4d4f",
-      "saved_outputs_sha256": "af853821eaa05b2d8c9a67a6303834367d05022e8e43ab72bd9608ea824c4bb5",
+      "saved_outputs_sha256": "c0b79f0bbf1b41a485c0c55b1b3e3a1b70439a8297e071bf71ea65285fbb5dfa",
       "dependencies": {
         "requirements-labs.txt": "7303247bbb811d96f1a68b192a374d71948348e3be5ca3a87242f00d3e63f995"
       },

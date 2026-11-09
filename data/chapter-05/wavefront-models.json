@@ -520,7 +520,7 @@
   "axial_peak_um": 29.75,
   "max_jones_error": 6.395250856282128e-16,
   "library_phase_rms_deg": 0.6872031881601162,
-  "source_sha256": "db62e4f537d32a303b508cd8a3ef3749c3c3f7382dae5f73b28623d28f96d553",
+  "source_sha256": "16ce1580915bc779184920e82aab9730c6ae76b47d30b7d03e5410a0cf2c75bf",
   "limitations": [
     "Cylindrical scalar focus, not a full-wave metalens",
     "Library aperture uses local periodicity",

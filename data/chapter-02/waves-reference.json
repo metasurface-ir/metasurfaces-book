@@ -6,7 +6,7 @@
       "ms-03-sheet-response",
       "ms-06-polarization"
     ],
-    "source_sha256": "f69aade38f65fc96b71ce5b28010a54b505de34ea478759bbd316c893bbb70cd",
+    "source_sha256": "373a8f149e1cfee53225e8a7a7a433174388e663de856f2405b92414fc9c3a8b",
     "model": "exact planar interface/film/electric-sheet and Jones models",
     "time_convention": "exp(+i omega t)",
     "spatial_convention": "exp(-i k.r)",
@@ -31,7 +31,7 @@
     },
     "notebook_code_sha256": "ba4cd96d371abdc31023da63dea77580a213704009435a4eb87e8bee8e132b8f",
     "parameters_sha256": "35aa8846bcc29348e316059d26735a81626c3734130da5489b8a0f2662c63054",
-    "result_payload_sha256": "060696e2c592970a306836842e6a9305bcd8358fe8c333cd2c014e0b92fd511e"
+    "result_payload_sha256": "d275e5819f28503293e543e55de393a7493fad7158c8622fed7326f6aa4d6e72"
   },
   "parameters": {
     "n1": 1.0,

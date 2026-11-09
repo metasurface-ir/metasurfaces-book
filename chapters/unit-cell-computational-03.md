@@ -2,6 +2,8 @@
 title: "Choose a solver that matches the structure"
 ---
 
+(3-3-choose-a-solver-that-matches-the-structure)=
+
 # Choose a solver that matches the structure
 
 | Method | Natural use | Numerical controls to vary |

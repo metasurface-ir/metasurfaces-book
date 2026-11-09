@@ -315,5 +315,107 @@
       "en": "---\ntitle: 'Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces'\nshort_title: Waves, boundaries, and sheets\ndescription: Derive the wave, polarization, boundary, and power language needed to design and verify a metasurface, through predictions, exact analytical experiments, and a coherent-absorption finale.\n---\n\n# Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces\n\nWe follow the instructor-supplied booklet in its original section order, retaining the existing computational investigations alongside it. Equations remain LaTeX; source worked examples have colored panels with expandable answers.\n\n:::{note} Two equivalent time conventions, clearly separated\nThe primary reading uses $e^{+j\\omega t}$. Every section labeled “Computational connection” and the existing notebook/browser models uses $e^{-i\\omega t}$. To describe the same real harmonic field, conjugate the complete phasor description when switching conventions; reactive signs and material-loss signs change accordingly. The scientific code is unchanged. The normal direction and field basis are stated at each interface derivation.\n:::\n\n",
       "fa": "---\ntitle: 'فصل ۲: موج‌های الکترومغناطیسی و برهم‌کنش آن‌ها با فراسطوح'\nshort_title: موج‌ها، مرزها و ورقه‌ها\ndescription: زبان موج، قطبش، شرایط مرزی و توان را با پیش‌بینی، آزمایش‌های تحلیلی و جذب همدوس بیاموزید.\n---\n\n# فصل ۲: موج‌های الکترومغناطیسی و برهم‌کنش آن‌ها با فراسطوح\n\nاین بار مسیر فصل را با ترتیب کتابچه جلو می‌بریم؛ همان داستان را با شکل، رابطه و مثال دنبال می‌کنیم و هر جا لازم باشد، ابزارهای محاسباتی قبلی را کنار آن می‌گذاریم. رابطه‌ها با لاتک نوشته شده‌اند و برای مثال‌ها، اول صورت سؤال را می‌بینید و هر وقت خواستید پاسخ را باز می‌کنید.\n\n:::{note} دو قرارداد زمانی؛ هر کدام را در جای خودش بخوانیم\nمتن اصلی کتابچه با $e^{+j\\omega t}$ نوشته شده است. بخش‌هایی که با «پیوند محاسباتی» مشخص شده‌اند و ابزارهای مرورگری و دفترچهٔ قبلی، قرارداد $e^{-i\\omega t}$ دارند. برای توصیف همان میدان حقیقی، هنگام تغییر قرارداد، توصیف فازوری کامل را مزدوج می‌کنیم؛ علامت قسمت راکتیو و اتلاف ماده هم مطابق آن عوض می‌شود. کد علمی قبلی تغییر نکرده است. جهت عمود و پایهٔ میدان را هم در هر استخراج مشخص می‌کنیم.\n:::\n\n"
     }
+  },
+  {
+    "chapter": 3,
+    "parent_route": "unit-cell-design",
+    "sections": [
+      {
+        "source": "chapters/unit-cell-computational-01.md",
+        "route": "unit-cell-computational-01",
+        "anchors": [
+          "3-1-outcomes-and-prerequisites",
+          "۳-۱-نتیجهها-و-پیشنیازها"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-02.md",
+        "route": "unit-cell-computational-02",
+        "anchors": [
+          "3-2-define-the-electromagnetic-experiment",
+          "۳-۲-آزمایش-الکترومغناطیسی-را-تعریف-کنید"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-03.md",
+        "route": "unit-cell-computational-03",
+        "anchors": [
+          "3-3-choose-a-solver-that-matches-the-structure",
+          "۳-۳-حلگر-مناسب-ساختار"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-04.md",
+        "route": "unit-cell-computational-04",
+        "anchors": [
+          "3-4-channels-complex-amplitudes-and-power",
+          "۳-۴-کانال-دامنه-مختلط-و-توان"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-05.md",
+        "route": "unit-cell-computational-05",
+        "anchors": [
+          "3-5-derive-the-restricted-te-fourier-model",
+          "۳-۵-استخراج-مدل-فوریه-te-محدود"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-06.md",
+        "route": "unit-cell-computational-06",
+        "anchors": [
+          "3-6-extract-phase-at-stated-reference-planes",
+          "۳-۶-فاز-را-در-صفحات-مشخص-استخراج-کنید"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-07.md",
+        "route": "unit-cell-computational-07",
+        "anchors": [
+          "3-7-validate-before-exporting",
+          "۳-۷-پیش-از-صدور-راستیآزمایی-کنید"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-08.md",
+        "route": "unit-cell-computational-08",
+        "anchors": [
+          "3-8-build-a-response-library-a-colleague-can-reuse",
+          "۳-۸-کتابخانه-قابلاستفاده-همکار"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-09.md",
+        "route": "unit-cell-computational-09",
+        "anchors": [
+          "3-9-select-a-geometry-with-a-feasibility-test",
+          "۳-۹-انتخاب-هندسه-با-آزمون-امکانپذیری"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-10.md",
+        "route": "unit-cell-computational-10",
+        "anchors": [
+          "31-0-from-a-periodic-library-to-a-real-device",
+          "۳۱-۰-از-کتابخانه-تناوبی-تا-قطعه-واقعی"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-11.md",
+        "route": "unit-cell-computational-11",
+        "anchors": [
+          "31-1-exercises",
+          "۳۱-۱-تمرینها"
+        ]
+      },
+      {
+        "source": "chapters/unit-cell-computational-12.md",
+        "route": "unit-cell-computational-12",
+        "anchors": [
+          "linked-computational-investigations",
+          "بررسیهای-محاسباتی-مرتبط"
+        ]
+      }
+    ]
   }
 ]

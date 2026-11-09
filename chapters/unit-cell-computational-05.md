@@ -2,6 +2,8 @@
 title: "Derive the restricted TE Fourier model"
 ---
 
+(3-5-derive-the-restricted-te-fourier-model)=
+
 # Derive the restricted TE Fourier model
 
 For a nonmagnetic scalar permittivity and $E_y(x,z)$,

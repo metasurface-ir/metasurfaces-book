@@ -2,6 +2,8 @@
 title: "Channels, complex amplitudes, and power"
 ---
 
+(3-4-channels-complex-amplitudes-and-power)=
+
 # Channels, complex amplitudes, and power
 
 For retained integer orders $m=-M,\ldots,M$, define

@@ -2,6 +2,8 @@
 title: "Exercises"
 ---
 
+(31-1-exercises)=
+
 # Exercises
 
 1. Specify the smallest set of metadata that makes a complex transmission coefficient reproducible. Explain why a phase value without reference planes is incomplete.

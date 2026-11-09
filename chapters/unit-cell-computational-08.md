@@ -2,6 +2,8 @@
 title: "Build a response library a colleague can reuse"
 ---
 
+(3-8-build-a-response-library-a-colleague-can-reuse)=
+
 # Build a response library a colleague can reuse
 
 A useful record preserves more than width and phase:

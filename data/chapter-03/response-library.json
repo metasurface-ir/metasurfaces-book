@@ -4,7 +4,7 @@
     "topic_id": "ms-07-unit-cell",
     "model": "1D centered rectangular dielectric ridge, TE Ey, ky=0, single uniform-height layer",
     "solver": "te-ridge-1.0-positive-time",
-    "source_sha256": "bcbbb34199c7ef81b1d5626793fffc76cb1db199ab9f8c0d3aad9e9d2f51e75a",
+    "source_sha256": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
     "parameters": {
       "period_um": 0.65,
       "width_um": 0.325,

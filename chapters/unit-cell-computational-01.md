@@ -2,6 +2,8 @@
 title: "Outcomes and prerequisites"
 ---
 
+(3-1-outcomes-and-prerequisites)=
+
 # Outcomes and prerequisites
 
 After completing the investigation, you should be able to:

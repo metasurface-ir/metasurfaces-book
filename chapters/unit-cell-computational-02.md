@@ -2,6 +2,8 @@
 title: "Define the electromagnetic experiment"
 ---
 
+(3-2-define-the-electromagnetic-experiment)=
+
 # Define the electromagnetic experiment
 
 A unit cell describes a structure repeated indefinitely under a specified Bloch excitation. Its response includes interactions with that repeated environment. When every ridge width changes, the entire periodic environment changes along with it.

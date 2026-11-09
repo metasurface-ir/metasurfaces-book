@@ -7493,6 +7493,6 @@
     "phase_deg": 0.1,
     "phase_amplitude_floor": 1e-08
   },
-  "source_sha256": "5d2e021257c6824f94ed15b8c981c936b7ffc053c82c240abd7fa818afa79f22",
+  "source_sha256": "15fbca3c5b06d2337a0bd5476a27e8c5878c6fbc8fc904d35e2255e23911985c",
   "scope": "1D lossless equal-exterior FDFD slab; RCWA figures use separate fixed datasets"
 }

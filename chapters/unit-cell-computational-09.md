@@ -2,6 +2,8 @@
 title: "Select a geometry with a feasibility test"
 ---
 
+(3-9-select-a-geometry-with-a-feasibility-test)=
+
 # Select a geometry with a feasibility test
 
 For this first design exercise, retain accepted rows with $T\geq0.8$ and minimize the absolute circular phase error. A request is feasible only when that error is at most $5^\circ$.
