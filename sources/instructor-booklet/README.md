@@ -17,3 +17,7 @@ To maintain this chapter, update the source reading and corresponding language f
 ## Chapter 3
 
 The paired `chapter03-en.md` and `chapter03-fa.md` readings adapt printed pages 70–78. Six consecutive section pages normalize gaps in the original numbering. Both worked examples retain their numerical data and calculations, with answers in dropdowns. Repeated substitutions and obvious corrupted text in the source answer are consolidated; this is not a sentence-exact transcription. Separately marked notes clarify power normalization, geometric-phase assumptions, and the source's inconsistent use of phase lag versus signed argument. Four original SVGs implement drawing guides; existing ridge-library and scalar-focus figures are reused with explicit model labels. The twelve previous computational sections, lab and notebook remain available. Source rights reservations above still apply.
+
+## Chapter 4
+
+The ten paired reading pages adapt printed pages 79–88. The previous twelve computational sections, proofs, figures, laboratory and notebook remain available. The source's repeated substitutions are consolidated, and physical qualifications and numerical rounding are identified in the text. This is not a sentence-exact transcription. The source rights reservation above applies.
