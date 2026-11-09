@@ -8,6 +8,16 @@
   overflow-y: hidden;
 }
 
+@media (max-width: 640px) {
+  article :is(h1, h2, h3, h4) { padding-inline-end: 1.2rem; }
+  article :is(h1, h2, h3, h4) > a[aria-label="Link to this Section"] {
+    position: absolute;
+    inset-inline-end: 0;
+    transform: none;
+    width: auto;
+  }
+}
+
 /* Give the Chapter 4 controls a usable viewport without affecting other figures. */
 .floquet-explorer-frame div:has(> iframe) {
   /* MyST supplies an inline aspect-ratio wrapper; replace it for this tool. */
