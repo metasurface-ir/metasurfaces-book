@@ -132,7 +132,7 @@ def decorate(output, language):
         shutil.copy2(ROOT / 'styles' / name, output / name)
     font_css = (ROOT / 'styles/book-fonts.css').read_text(encoding='utf-8')
     if language == 'fa':
-        font_css = font_css.replace('html[lang=fa]', 'html')
+        font_css = font_css.replace('html[lang=fa]', ':root')
     (output / 'book-fonts.css').write_text(font_css, encoding='utf-8', newline='\n')
     copy_tree(ROOT / 'assets/fonts', output / 'assets/fonts')
     copy_tree(ROOT / 'assets/brand', output / 'assets/brand')
