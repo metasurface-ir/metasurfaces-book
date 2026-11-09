@@ -417,5 +417,95 @@
         ]
       }
     ]
+  },
+  {
+    "chapter": 4,
+    "parent_route": "periodic-floquet",
+    "sections": [
+      {
+        "source": "chapters/floquet-computational-01.md",
+        "route": "floquet-computational-01",
+        "anchors": [
+          "ch04-section-01"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-02.md",
+        "route": "floquet-computational-02",
+        "anchors": [
+          "ch04-section-02"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-03.md",
+        "route": "floquet-computational-03",
+        "anchors": [
+          "ch04-section-03"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-04.md",
+        "route": "floquet-computational-04",
+        "anchors": [
+          "ch04-section-04"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-05.md",
+        "route": "floquet-computational-05",
+        "anchors": [
+          "ch04-section-05"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-06.md",
+        "route": "floquet-computational-06",
+        "anchors": [
+          "ch04-section-06"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-07.md",
+        "route": "floquet-computational-07",
+        "anchors": [
+          "ch04-section-07"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-08.md",
+        "route": "floquet-computational-08",
+        "anchors": [
+          "ch04-section-08"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-09.md",
+        "route": "floquet-computational-09",
+        "anchors": [
+          "ch04-section-09"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-10.md",
+        "route": "floquet-computational-10",
+        "anchors": [
+          "ch04-section-10"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-11.md",
+        "route": "floquet-computational-11",
+        "anchors": [
+          "ch04-section-11"
+        ]
+      },
+      {
+        "source": "chapters/floquet-computational-12.md",
+        "route": "floquet-computational-12",
+        "anchors": [
+          "ch04-section-12"
+        ]
+      }
+    ]
   }
 ]
