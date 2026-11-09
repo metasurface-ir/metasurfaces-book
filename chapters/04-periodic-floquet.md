@@ -40,4 +40,4 @@ The primary reading now follows the full textbook chapter, printed pages 79–88
 - [Phase gradients and generalized refraction](floquet-computational-09.md)
 - [From a channel map to a periodic solver](floquet-computational-10.md)
 - [Exercises and discussion](floquet-computational-11.md)
-- [## References and further reading](floquet-computational-12.md)
+- [References and further reading](floquet-computational-12.md)

@@ -1,9 +1,9 @@
 ---
-title: "## References and further reading"
+title: "References and further reading"
 ---
 
 (ch04-section-12)=
-# ## References and further reading
+# References and further reading
 
 - Yu et al., *Light Propagation with Phase Discontinuities: Generalized Laws of Reflection and Refraction*, Science 334, 333-337 (2011). [Article](https://doi.org/10.1126/science.1210713); [author's publication page](https://capasso.seas.harvard.edu/publications/light-propagation-phase-discontinuities-generalized-laws-reflection-and).
 - COMSOL, [Diffraction Grating Theory](https://doc.comsol.com/6.4/doc/com.comsol.help.roptics/roptics_ug_optics.6.74.html). A software reference for grating directions; distinguish ray-direction models from full-wave amplitude calculations.
