@@ -415,4 +415,6 @@ $$
 
 :::{note} Supplementary clarification
 In the Snell relation, $\Phi$ is a phase-lag profile, so $t=Ae^{-i\Phi}$. The worked answer retains the textbook’s intermediate rounding, including $71.62$, $322.95$ and $-179.71\,\mathrm{rad/m}$. Keeping more digits gives $k_x\simeq71.6325\,\mathrm{rad/m}$ and a phase lag of $102.606^\circ$. The signed translation phase is the negative of that lag. The calculation establishes an open grating-lobe channel near $-59.1^\circ$; the actual power still requires solving scattering.
+
+The source value $71.62$ is reproduced for traceability. Its displayed product $209.44\times0.342$ equals $71.62848$, which would normally round to $71.63$; this small arithmetic/rounding discrepancy does not change any order classification.
 :::
