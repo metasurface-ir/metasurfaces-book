@@ -1,6 +1,23 @@
 /* MyST serves this stylesheet as myst-theme.css in each edition's root. */
 @import url("./bilingual.css");
 
+/* Long display equations scroll within the lesson on narrow screens. */
+.katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+@media (max-width: 640px) {
+  article :is(h1, h2, h3, h4) { padding-inline-end: 1.2rem; }
+  article :is(h1, h2, h3, h4) > a[aria-label="Link to this Section"] {
+    position: absolute;
+    inset-inline-end: 0;
+    transform: none;
+    width: auto;
+  }
+}
+
 /* Give the Chapter 4 controls a usable viewport without affecting other figures. */
 .floquet-explorer-frame div:has(> iframe) {
   /* MyST supplies an inline aspect-ratio wrapper; replace it for this tool. */
@@ -88,4 +105,12 @@
 .measurement-explorer-frame iframe {
   border: 1px solid #d9e2e8 !important;
   border-radius: 10px;
+}
+
+/* Keep the university emblem readable in either color theme. */
+img[src*="iust-logo"] {
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  box-sizing: content-box;
 }

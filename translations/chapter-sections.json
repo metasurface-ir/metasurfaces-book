@@ -1,0 +1,319 @@
+[
+  {
+    "chapter": 1,
+    "parent_route": "metasurface-foundations",
+    "sections": [
+      {
+        "source": "chapters/foundations-section-01.md",
+        "route": "foundations-section-01",
+        "hashes": {
+          "en": "d3df55bbba118d1ef98eac76ccd2bdf49febfc8355f3ee68db7ab804de408394",
+          "fa": "8313f72425d7752e401a9f482e01626a43c9b493b475eca3a4c03c02df316041"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-02.md",
+        "route": "foundations-section-02",
+        "hashes": {
+          "en": "3ca35fe1eeb838847831c4595c375163fb0953858ffdcac7bbe42f6adf0ed34d",
+          "fa": "459f70398203a2652fabed050d952a6141cdce6e3ac239f3e32c8ccdcf2b2565"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-03.md",
+        "route": "foundations-section-03",
+        "hashes": {
+          "en": "b2a81a5d64494d23eb1a75a5c26dff1e6e4f2ef7f3d1631e5d83f0a6d95436d0",
+          "fa": "d0c2a19d26869f1f044830dc6062508892979f686f046b0c4d1e092b302fadac"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-04.md",
+        "route": "foundations-section-04",
+        "hashes": {
+          "en": "85ea755d244a1e38b59a0f5846db27d637e1af75a125631bd008df7d4471bb1e",
+          "fa": "31d145fc4b0b5c023d71b8898064b56cc2f8d8fb21b6686d5116e774e46acab1"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-05.md",
+        "route": "foundations-section-05",
+        "hashes": {
+          "en": "611a98406e195e0a7d4d7135e4c56cc532f568df7b8fab42e97a98f2e23b75e5",
+          "fa": "5c43cff81cf550482748f273ad5aac8d78fe1115991188fecb55791f7d6a1cb1"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-06.md",
+        "route": "foundations-section-06",
+        "hashes": {
+          "en": "edb7eac7c2b6d8338b3e224c5a0927a62efd6c55e7b40f64be1cbafed2f127bd",
+          "fa": "ae9f98a4c6376f48ad290314a63ab5007be20954278734abea05363131779370"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-07.md",
+        "route": "foundations-section-07",
+        "hashes": {
+          "en": "e54ee95e60f6cf934ae30092135d136aa8d0ffdde551adba219945a3da7eab36",
+          "fa": "cb975234fc8c12dff5eb79d9cadd33f66e3626573a505744e4888a05a38bb5ae"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-08.md",
+        "route": "foundations-section-08",
+        "hashes": {
+          "en": "e23c171f24cc5cb17de4fcd43cec613880ab1c4e2c5781cef04d444c44ef5487",
+          "fa": "1274f7afd9e5209911cbce621778cfdf5ab8b3d77951608e1c838d462c39baab"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-09.md",
+        "route": "foundations-section-09",
+        "hashes": {
+          "en": "5c3a7d55121561afdd7e6ce211fdf855eca1ac2f2854b482ba9ba35d9172dfd4",
+          "fa": "5360c9d5cbc169854774ad7cb979a3294d9482d303ffe6a7fa3625e20e806e35"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-10.md",
+        "route": "foundations-section-10",
+        "hashes": {
+          "en": "6a124b4a627b5fe3702610f49c28b6ff6fe35d86d1d87ee8034075cd7f44aa58",
+          "fa": "b90e2352827972bad1b99e4420ef04fd54387816a937bd80dc7ecadd9ddd15ed"
+        },
+        "anchors": []
+      },
+      {
+        "source": "chapters/foundations-section-11.md",
+        "route": "foundations-section-11",
+        "hashes": {
+          "en": "ea5711482b79b2470fd2db9338bb935d3db5abc1b54e5257d43479cbd297ded4",
+          "fa": "5e3b3664383a136af6b1c076e2bbfb8acba91000676fdd01e4781d81897e882d"
+        },
+        "anchors": []
+      }
+    ],
+    "original_hashes": {
+      "en": "eeca4b730d5b14e7f4baafd3bcf68c14b88ccaef0aebfbebf281aa3c784aa587",
+      "fa": "01c76498a894374ea6909991de99aa215176626dcaa10be94928bb4972a7c2a9"
+    },
+    "intro": {
+      "en": "---\ntitle: 'Chapter 1: Introduction to Metasurfaces and Basic Concepts'\nshort_title: Metasurface foundations\ndescription: Build physical intuition for structured electromagnetic interfaces, complex responses, interference, design constraints, and levels of computational evidence.\n---\n\n# Chapter 1: Introduction to Metasurfaces and Basic Concepts\n\nThe source reading below follows the supplied booklet sentence by sentence, with normalized typography and LaTeX equations. Separately labeled notes qualify simplified claims; computational connections retain our existing work.\n\n",
+      "fa": "---\ntitle: 'فصل ۱: آشنایی با فراسطوح و مفاهیم پایه'\nshort_title: مبانی فراسطوح\ndescription: شهود فیزیکی مرزهای ساختاریافته، پاسخ مختلط، تداخل، محدودیت طراحی و سطوح شواهد محاسباتی.\n---\n\n# فصل ۱: آشنایی با فراسطوح و مفاهیم پایه\n\nدر این فصل، قدم‌به‌قدم با روایت کتابچه جلو می‌رویم. هر جا لازم باشد مکث می‌کنیم، یک شکل می‌بینیم یا با یک آزمایش کوچک، ایده را امتحان می‌کنیم. متن اصلی و ترتیب آن حفظ شده است؛ بخش‌های «پیوند محاسباتی» کمک می‌کنند همان داستان را در ابزارهای تعاملی هم دنبال کنیم.\n\n"
+    }
+  },
+  {
+    "chapter": 2,
+    "parent_route": "waves-and-interfaces",
+    "sections": [
+      {
+        "source": "chapters/waves-section-01.md",
+        "route": "waves-section-01",
+        "hashes": {
+          "en": "11d20140c66e98e21ba9522bf0dfc650be3369bbe6487d4258c91175944780f3",
+          "fa": "f0a1c616c249fc8e35ef259cf9d06b9fbab113d2512b88e85fb54e937336a93a"
+        },
+        "anchors": [
+          "ch02-source-01",
+          "ch02-section-01"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-02.md",
+        "route": "waves-section-02",
+        "hashes": {
+          "en": "db46086315b8100dd77016d6c70f05ecb1f05472cdf4bff9dd4db43d4e26e8d2",
+          "fa": "1b1597cb0c0e9d84be308d1083c6f45a42352ec35a9ed6ddc7b8d5d3c1a18ddf"
+        },
+        "anchors": [
+          "ch02-source-02"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-03.md",
+        "route": "waves-section-03",
+        "hashes": {
+          "en": "cf465c55b8aa491fa3132784bb8ec6e00077fd67a5a4ce9afa0ab9b4b2010a8f",
+          "fa": "ca06720873d4f08038a803ff9c223244e2e7f3ea2c439b729e855d2d8460b379"
+        },
+        "anchors": [
+          "ch02-source-03"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-04.md",
+        "route": "waves-section-04",
+        "hashes": {
+          "en": "d933f04abddea63e4c75535120181769c2930cea6d2a3c64a1e3a811fb0e716b",
+          "fa": "2a295a6922bba5e43c0bb29b1be3117e38b363b5230cd7773ea57ca6fa8e72fb"
+        },
+        "anchors": [
+          "ch02-source-04",
+          "ch02-section-05"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-05.md",
+        "route": "waves-section-05",
+        "hashes": {
+          "en": "3a148531ef64df4d2e678e14f3fb047579b5f101bc89a520dcbd433db73bea48",
+          "fa": "eb33b6a29dff188c8bcc216178bb2d938cd73883a45fc322bd03362c8214ee3b"
+        },
+        "anchors": [
+          "ch02-source-05",
+          "ch02-section-02"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-06.md",
+        "route": "waves-section-06",
+        "hashes": {
+          "en": "3ad6fb63ee7ef8ec7d30bd5df5489d84ad02fdadefd83af2418b497b6ecff51f",
+          "fa": "982fd03205404dab8ecfe23b85cc7d13afa8ca38755afee5c2a4e609a9a88e20"
+        },
+        "anchors": [
+          "ch02-source-06"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-07.md",
+        "route": "waves-section-07",
+        "hashes": {
+          "en": "0042d661e108e2b235e98e465a0341d29634fcc9a20b230965312438bd7dc78f",
+          "fa": "adff1d0c50dcf7729eccbde5448dbfbda933aaabb80176991081c1d1b842f7e6"
+        },
+        "anchors": [
+          "ch02-source-07"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-08.md",
+        "route": "waves-section-08",
+        "hashes": {
+          "en": "1803a61bccc9257154e5e8c020c0883b785e4daf9d0e380d9a1b716aa973fdbb",
+          "fa": "5085a74f56c59dd9299d8281994b995014fe9fd9ed718f1b313064767e6b4a14"
+        },
+        "anchors": [
+          "ch02-source-08"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-09.md",
+        "route": "waves-section-09",
+        "hashes": {
+          "en": "ca21074eb8d5d521c635ec53c82fd28e6d678f2943ef482c6f17f06245f944ff",
+          "fa": "a244c7d6eda0de5d624032cd78d96a846918e199e45f6c3c8c2ea9adc989afc8"
+        },
+        "anchors": [
+          "ch02-source-09",
+          "ch02-section-03"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-10.md",
+        "route": "waves-section-10",
+        "hashes": {
+          "en": "4f6b2d1443bf2b039240f79d624df836f93d0fe410fab0dcc16e62a23f12b8ff",
+          "fa": "0d7c94b303a17d0f473804c6b39d085d9a43d1f2fbe1ec29d6fa13e4b5524888"
+        },
+        "anchors": [
+          "ch02-source-10",
+          "ch02-section-04"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-11.md",
+        "route": "waves-section-11",
+        "hashes": {
+          "en": "183b5664716414373521b86a189572167a0fdcabfc473f185d45cf9a253b8b83",
+          "fa": "b756ed2330146de06a298f05c905d29e6f6d370a08a0e8a6017ee82900934c15"
+        },
+        "anchors": [
+          "ch02-source-11",
+          "ch02-section-08"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-12.md",
+        "route": "waves-section-12",
+        "hashes": {
+          "en": "6aaa40b4b0b6a2eeac142ceca6a8dcc3c04d71886da50c8c18c3d2dad400507f",
+          "fa": "ffcd7073bd95f8b7aecb2d8e8f7a3b95cfa8f0a6e1a22dda44ff4620abfddce3"
+        },
+        "anchors": [
+          "ch02-source-12",
+          "ch02-section-06",
+          "ch02-section-07"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-13.md",
+        "route": "waves-section-13",
+        "hashes": {
+          "en": "8bbcbf30df4ee2ff5bb3db3db7eb7c8f68454608c45c0ae4d85b82b9d5a47473",
+          "fa": "d50c8c3d560cb1ffd69317d95b78bc016a89228d2f615f3a7e1b7805c9a20b02"
+        },
+        "anchors": [
+          "ch02-source-13"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-14.md",
+        "route": "waves-section-14",
+        "hashes": {
+          "en": "57fdd491ae333b9ead08b692a0e1195fca85ad17f5122ed6f0d619428ab6ecb4",
+          "fa": "87a21d5a0897ac343ac3bd33f214c71497b89d095a4747c0f8e74aa2b509592c"
+        },
+        "anchors": [
+          "ch02-source-14",
+          "ch02-section-10",
+          "ch02-section-11"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-15.md",
+        "route": "waves-section-15",
+        "hashes": {
+          "en": "22aa97103069b342df2260f130fd4d69df8c462ab5f08fa50c9b8f9f8f3114e5",
+          "fa": "50131084055c9f6ff766b1e2b4cecffdf9fe7344e984c619d870d686df15a4d0"
+        },
+        "anchors": [
+          "ch02-source-15",
+          "ch02-section-09"
+        ]
+      },
+      {
+        "source": "chapters/waves-section-16.md",
+        "route": "waves-section-16",
+        "hashes": {
+          "en": "95d2ada6aa62eb73728c36185d5258f4a4fa4d1b93ba534e145a234c51b09e11",
+          "fa": "c101aceca9cb37ca214d3b86c02008720cc2e699eba3bab66235fae6a0dabda5"
+        },
+        "anchors": [
+          "ch02-source-16",
+          "ch02-section-12",
+          "ch02-section-13",
+          "ch02-section-14"
+        ]
+      }
+    ],
+    "original_hashes": {
+      "en": "ecd0da17d5644d6bc71aabe06314c4cc73e6a5b6acbb09b7efa0e2004457f931",
+      "fa": "3cb7b96d0e723e012fb4bcae5321da66993c50bf5eb0c86e5545a3c3c7709a7c"
+    },
+    "intro": {
+      "en": "---\ntitle: 'Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces'\nshort_title: Waves, boundaries, and sheets\ndescription: Derive the wave, polarization, boundary, and power language needed to design and verify a metasurface, through predictions, exact analytical experiments, and a coherent-absorption finale.\n---\n\n# Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces\n\nWe follow the instructor-supplied booklet in its original section order, retaining the existing computational investigations alongside it. Equations remain LaTeX; source worked examples have colored panels with expandable answers.\n\n:::{note} Two equivalent time conventions, clearly separated\nThe primary reading uses $e^{+j\\omega t}$. Every section labeled “Computational connection” and the existing notebook/browser models uses $e^{-i\\omega t}$. To describe the same real harmonic field, conjugate the complete phasor description when switching conventions; reactive signs and material-loss signs change accordingly. The scientific code is unchanged. The normal direction and field basis are stated at each interface derivation.\n:::\n\n",
+      "fa": "---\ntitle: 'فصل ۲: موج‌های الکترومغناطیسی و برهم‌کنش آن‌ها با فراسطوح'\nshort_title: موج‌ها، مرزها و ورقه‌ها\ndescription: زبان موج، قطبش، شرایط مرزی و توان را با پیش‌بینی، آزمایش‌های تحلیلی و جذب همدوس بیاموزید.\n---\n\n# فصل ۲: موج‌های الکترومغناطیسی و برهم‌کنش آن‌ها با فراسطوح\n\nاین بار مسیر فصل را با ترتیب کتابچه جلو می‌بریم؛ همان داستان را با شکل، رابطه و مثال دنبال می‌کنیم و هر جا لازم باشد، ابزارهای محاسباتی قبلی را کنار آن می‌گذاریم. رابطه‌ها با لاتک نوشته شده‌اند و برای مثال‌ها، اول صورت سؤال را می‌بینید و هر وقت خواستید پاسخ را باز می‌کنید.\n\n:::{note} دو قرارداد زمانی؛ هر کدام را در جای خودش بخوانیم\nمتن اصلی کتابچه با $e^{+j\\omega t}$ نوشته شده است. بخش‌هایی که با «پیوند محاسباتی» مشخص شده‌اند و ابزارهای مرورگری و دفترچهٔ قبلی، قرارداد $e^{-i\\omega t}$ دارند. برای توصیف همان میدان حقیقی، هنگام تغییر قرارداد، توصیف فازوری کامل را مزدوج می‌کنیم؛ علامت قسمت راکتیو و اتلاف ماده هم مطابق آن عوض می‌شود. کد علمی قبلی تغییر نکرده است. جهت عمود و پایهٔ میدان را هم در هر استخراج مشخص می‌کنیم.\n:::\n\n"
+    }
+  }
+]

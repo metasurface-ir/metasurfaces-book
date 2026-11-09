@@ -3,6 +3,14 @@
   'use strict';
   const config = JSON.parse(document.getElementById('book-language-config').textContent);
   const fa = config.language === 'fa', language = fa ? 'fa' : 'en';
+  // Keep previously shared chapter/section bookmarks working after pagination.
+  const editionBase = config.base + (fa ? '/fa' : '');
+  const currentRoute = location.pathname.slice(editionBase.length).replace(/^\/+|\/+$/g, '');
+  const legacyTarget = config.legacySections?.[currentRoute]?.[decodeURIComponent(location.hash.slice(1))];
+  if (legacyTarget) {
+    location.replace(editionBase + '/' + legacyTarget + '/' + location.search + location.hash);
+    return;
+  }
   const words = {
     'Table of Contents': 'فهرست مطالب', 'Navigation': 'ناوبری', 'On this page': 'در این صفحه',
     'Search': 'جست‌وجو', 'Search…': 'جست‌وجو…', 'Search...': 'جست‌وجو…',

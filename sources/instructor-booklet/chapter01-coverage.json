@@ -12,5 +12,19 @@
       "section_count": 11,
       "all_transcribed_blocks_embedded": true
     }
-  }
+  },
+  "published_layout": "Numbered sections published as separate paired pages; source and supplements retained in section order",
+  "published_section_files": [
+    "chapters/foundations-section-01.md",
+    "chapters/foundations-section-02.md",
+    "chapters/foundations-section-03.md",
+    "chapters/foundations-section-04.md",
+    "chapters/foundations-section-05.md",
+    "chapters/foundations-section-06.md",
+    "chapters/foundations-section-07.md",
+    "chapters/foundations-section-08.md",
+    "chapters/foundations-section-09.md",
+    "chapters/foundations-section-10.md",
+    "chapters/foundations-section-11.md"
+  ]
 }

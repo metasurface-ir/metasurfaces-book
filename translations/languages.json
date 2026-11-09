@@ -320,6 +320,141 @@
       "source": "labs/12-research-project.md",
       "translation": "translations/fa/labs/12-research-project.md",
       "route": "research-project"
+    },
+    {
+      "source": "chapters/foundations-section-01.md",
+      "translation": "translations/fa/chapters/foundations-section-01.md",
+      "route": "foundations-section-01"
+    },
+    {
+      "source": "chapters/foundations-section-02.md",
+      "translation": "translations/fa/chapters/foundations-section-02.md",
+      "route": "foundations-section-02"
+    },
+    {
+      "source": "chapters/foundations-section-03.md",
+      "translation": "translations/fa/chapters/foundations-section-03.md",
+      "route": "foundations-section-03"
+    },
+    {
+      "source": "chapters/foundations-section-04.md",
+      "translation": "translations/fa/chapters/foundations-section-04.md",
+      "route": "foundations-section-04"
+    },
+    {
+      "source": "chapters/foundations-section-05.md",
+      "translation": "translations/fa/chapters/foundations-section-05.md",
+      "route": "foundations-section-05"
+    },
+    {
+      "source": "chapters/foundations-section-06.md",
+      "translation": "translations/fa/chapters/foundations-section-06.md",
+      "route": "foundations-section-06"
+    },
+    {
+      "source": "chapters/foundations-section-07.md",
+      "translation": "translations/fa/chapters/foundations-section-07.md",
+      "route": "foundations-section-07"
+    },
+    {
+      "source": "chapters/foundations-section-08.md",
+      "translation": "translations/fa/chapters/foundations-section-08.md",
+      "route": "foundations-section-08"
+    },
+    {
+      "source": "chapters/foundations-section-09.md",
+      "translation": "translations/fa/chapters/foundations-section-09.md",
+      "route": "foundations-section-09"
+    },
+    {
+      "source": "chapters/foundations-section-10.md",
+      "translation": "translations/fa/chapters/foundations-section-10.md",
+      "route": "foundations-section-10"
+    },
+    {
+      "source": "chapters/foundations-section-11.md",
+      "translation": "translations/fa/chapters/foundations-section-11.md",
+      "route": "foundations-section-11"
+    },
+    {
+      "source": "chapters/waves-section-01.md",
+      "translation": "translations/fa/chapters/waves-section-01.md",
+      "route": "waves-section-01"
+    },
+    {
+      "source": "chapters/waves-section-02.md",
+      "translation": "translations/fa/chapters/waves-section-02.md",
+      "route": "waves-section-02"
+    },
+    {
+      "source": "chapters/waves-section-03.md",
+      "translation": "translations/fa/chapters/waves-section-03.md",
+      "route": "waves-section-03"
+    },
+    {
+      "source": "chapters/waves-section-04.md",
+      "translation": "translations/fa/chapters/waves-section-04.md",
+      "route": "waves-section-04"
+    },
+    {
+      "source": "chapters/waves-section-05.md",
+      "translation": "translations/fa/chapters/waves-section-05.md",
+      "route": "waves-section-05"
+    },
+    {
+      "source": "chapters/waves-section-06.md",
+      "translation": "translations/fa/chapters/waves-section-06.md",
+      "route": "waves-section-06"
+    },
+    {
+      "source": "chapters/waves-section-07.md",
+      "translation": "translations/fa/chapters/waves-section-07.md",
+      "route": "waves-section-07"
+    },
+    {
+      "source": "chapters/waves-section-08.md",
+      "translation": "translations/fa/chapters/waves-section-08.md",
+      "route": "waves-section-08"
+    },
+    {
+      "source": "chapters/waves-section-09.md",
+      "translation": "translations/fa/chapters/waves-section-09.md",
+      "route": "waves-section-09"
+    },
+    {
+      "source": "chapters/waves-section-10.md",
+      "translation": "translations/fa/chapters/waves-section-10.md",
+      "route": "waves-section-10"
+    },
+    {
+      "source": "chapters/waves-section-11.md",
+      "translation": "translations/fa/chapters/waves-section-11.md",
+      "route": "waves-section-11"
+    },
+    {
+      "source": "chapters/waves-section-12.md",
+      "translation": "translations/fa/chapters/waves-section-12.md",
+      "route": "waves-section-12"
+    },
+    {
+      "source": "chapters/waves-section-13.md",
+      "translation": "translations/fa/chapters/waves-section-13.md",
+      "route": "waves-section-13"
+    },
+    {
+      "source": "chapters/waves-section-14.md",
+      "translation": "translations/fa/chapters/waves-section-14.md",
+      "route": "waves-section-14"
+    },
+    {
+      "source": "chapters/waves-section-15.md",
+      "translation": "translations/fa/chapters/waves-section-15.md",
+      "route": "waves-section-15"
+    },
+    {
+      "source": "chapters/waves-section-16.md",
+      "translation": "translations/fa/chapters/waves-section-16.md",
+      "route": "waves-section-16"
     }
   ]
 }
