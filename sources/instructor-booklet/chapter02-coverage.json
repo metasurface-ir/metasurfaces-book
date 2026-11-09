@@ -27,5 +27,24 @@
       "retained_computational_sections": 14
     }
   },
-  "limits": "Insertion checks establish coverage of the manually transcribed files, not an automatic guarantee of perfect PDF transcription."
+  "limits": "Insertion checks establish coverage of the manually transcribed files, not an automatic guarantee of perfect PDF transcription.",
+  "published_layout": "Numbered sections published as separate paired pages; source and supplements retained in section order",
+  "published_section_files": [
+    "chapters/waves-section-01.md",
+    "chapters/waves-section-02.md",
+    "chapters/waves-section-03.md",
+    "chapters/waves-section-04.md",
+    "chapters/waves-section-05.md",
+    "chapters/waves-section-06.md",
+    "chapters/waves-section-07.md",
+    "chapters/waves-section-08.md",
+    "chapters/waves-section-09.md",
+    "chapters/waves-section-10.md",
+    "chapters/waves-section-11.md",
+    "chapters/waves-section-12.md",
+    "chapters/waves-section-13.md",
+    "chapters/waves-section-14.md",
+    "chapters/waves-section-15.md",
+    "chapters/waves-section-16.md"
+  ]
 }

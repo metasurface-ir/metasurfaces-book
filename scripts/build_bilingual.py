@@ -104,7 +104,12 @@ def decorate(output, language):
         labels = [label for label in re.findall(r'^\(([a-z0-9-]+)\)=$', en, re.M) if label in shared]
         if labels:
             anchors[row['route']] = labels
-    config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']], 'anchors': anchors}
+    section_map = json.loads((ROOT / 'translations/chapter-sections.json').read_text(encoding='utf-8'))
+    legacy_sections = {chapter['parent_route']: {anchor: section['route']
+                       for section in chapter['sections'] for anchor in section['anchors']}
+                       for chapter in section_map}
+    config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']], 'anchors': anchors,
+              'legacySections': legacy_sections}
     for path in output.rglob('*.html'):
         if 'interactives' in path.parts or 'build' in path.relative_to(output).parts:
             continue

@@ -38,6 +38,18 @@ project:
     - title: Chapter 1 - Metasurface foundations
       children:
         - file: chapters/01-metasurface-foundations.md
+          children:
+            - file: chapters/foundations-section-01.md
+            - file: chapters/foundations-section-02.md
+            - file: chapters/foundations-section-03.md
+            - file: chapters/foundations-section-04.md
+            - file: chapters/foundations-section-05.md
+            - file: chapters/foundations-section-06.md
+            - file: chapters/foundations-section-07.md
+            - file: chapters/foundations-section-08.md
+            - file: chapters/foundations-section-09.md
+            - file: chapters/foundations-section-10.md
+            - file: chapters/foundations-section-11.md
         - file: chapters/01-foundations-guide.md
         - file: chapters/01-foundations-review.md
         - file: labs/01-first-investigation.md
@@ -45,6 +57,23 @@ project:
     - title: Chapter 2 - Waves, interfaces, and sheets
       children:
         - file: chapters/02-waves-and-interfaces.md
+          children:
+            - file: chapters/waves-section-01.md
+            - file: chapters/waves-section-02.md
+            - file: chapters/waves-section-03.md
+            - file: chapters/waves-section-04.md
+            - file: chapters/waves-section-05.md
+            - file: chapters/waves-section-06.md
+            - file: chapters/waves-section-07.md
+            - file: chapters/waves-section-08.md
+            - file: chapters/waves-section-09.md
+            - file: chapters/waves-section-10.md
+            - file: chapters/waves-section-11.md
+            - file: chapters/waves-section-12.md
+            - file: chapters/waves-section-13.md
+            - file: chapters/waves-section-14.md
+            - file: chapters/waves-section-15.md
+            - file: chapters/waves-section-16.md
         - file: chapters/02-waves-guide.md
         - file: chapters/02-waves-review.md
         - file: labs/02-waves-lab.md
