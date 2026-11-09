@@ -655,6 +655,101 @@
       "source": "chapters/floquet-computational-12.md",
       "translation": "translations/fa/chapters/floquet-computational-12.md",
       "route": "floquet-computational-12"
+    },
+    {
+      "source": "chapters/synthesis-section-01.md",
+      "translation": "translations/fa/chapters/synthesis-section-01.md",
+      "route": "synthesis-section-01"
+    },
+    {
+      "source": "chapters/synthesis-section-02.md",
+      "translation": "translations/fa/chapters/synthesis-section-02.md",
+      "route": "synthesis-section-02"
+    },
+    {
+      "source": "chapters/synthesis-section-03.md",
+      "translation": "translations/fa/chapters/synthesis-section-03.md",
+      "route": "synthesis-section-03"
+    },
+    {
+      "source": "chapters/synthesis-section-04.md",
+      "translation": "translations/fa/chapters/synthesis-section-04.md",
+      "route": "synthesis-section-04"
+    },
+    {
+      "source": "chapters/synthesis-section-05.md",
+      "translation": "translations/fa/chapters/synthesis-section-05.md",
+      "route": "synthesis-section-05"
+    },
+    {
+      "source": "chapters/synthesis-section-06.md",
+      "translation": "translations/fa/chapters/synthesis-section-06.md",
+      "route": "synthesis-section-06"
+    },
+    {
+      "source": "chapters/synthesis-section-07.md",
+      "translation": "translations/fa/chapters/synthesis-section-07.md",
+      "route": "synthesis-section-07"
+    },
+    {
+      "source": "chapters/synthesis-computational-01.md",
+      "translation": "translations/fa/chapters/synthesis-computational-01.md",
+      "route": "synthesis-computational-01"
+    },
+    {
+      "source": "chapters/synthesis-computational-02.md",
+      "translation": "translations/fa/chapters/synthesis-computational-02.md",
+      "route": "synthesis-computational-02"
+    },
+    {
+      "source": "chapters/synthesis-computational-03.md",
+      "translation": "translations/fa/chapters/synthesis-computational-03.md",
+      "route": "synthesis-computational-03"
+    },
+    {
+      "source": "chapters/synthesis-computational-04.md",
+      "translation": "translations/fa/chapters/synthesis-computational-04.md",
+      "route": "synthesis-computational-04"
+    },
+    {
+      "source": "chapters/synthesis-computational-05.md",
+      "translation": "translations/fa/chapters/synthesis-computational-05.md",
+      "route": "synthesis-computational-05"
+    },
+    {
+      "source": "chapters/synthesis-computational-06.md",
+      "translation": "translations/fa/chapters/synthesis-computational-06.md",
+      "route": "synthesis-computational-06"
+    },
+    {
+      "source": "chapters/synthesis-computational-07.md",
+      "translation": "translations/fa/chapters/synthesis-computational-07.md",
+      "route": "synthesis-computational-07"
+    },
+    {
+      "source": "chapters/synthesis-computational-08.md",
+      "translation": "translations/fa/chapters/synthesis-computational-08.md",
+      "route": "synthesis-computational-08"
+    },
+    {
+      "source": "chapters/synthesis-computational-09.md",
+      "translation": "translations/fa/chapters/synthesis-computational-09.md",
+      "route": "synthesis-computational-09"
+    },
+    {
+      "source": "chapters/synthesis-computational-10.md",
+      "translation": "translations/fa/chapters/synthesis-computational-10.md",
+      "route": "synthesis-computational-10"
+    },
+    {
+      "source": "chapters/synthesis-computational-11.md",
+      "translation": "translations/fa/chapters/synthesis-computational-11.md",
+      "route": "synthesis-computational-11"
+    },
+    {
+      "source": "chapters/synthesis-computational-12.md",
+      "translation": "translations/fa/chapters/synthesis-computational-12.md",
+      "route": "synthesis-computational-12"
     }
   ]
 }

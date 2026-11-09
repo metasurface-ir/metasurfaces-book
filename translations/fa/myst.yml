@@ -127,6 +127,25 @@ project:
   - file: chapters/05-metasurface-synthesis.md
     title: فصل ۵ — سنتز فراسطح
     children:
+    - file: chapters/synthesis-section-01.md
+    - file: chapters/synthesis-section-02.md
+    - file: chapters/synthesis-section-03.md
+    - file: chapters/synthesis-section-04.md
+    - file: chapters/synthesis-section-05.md
+    - file: chapters/synthesis-section-06.md
+    - file: chapters/synthesis-section-07.md
+    - file: chapters/synthesis-computational-01.md
+    - file: chapters/synthesis-computational-02.md
+    - file: chapters/synthesis-computational-03.md
+    - file: chapters/synthesis-computational-04.md
+    - file: chapters/synthesis-computational-05.md
+    - file: chapters/synthesis-computational-06.md
+    - file: chapters/synthesis-computational-07.md
+    - file: chapters/synthesis-computational-08.md
+    - file: chapters/synthesis-computational-09.md
+    - file: chapters/synthesis-computational-10.md
+    - file: chapters/synthesis-computational-11.md
+    - file: chapters/synthesis-computational-12.md
     - file: chapters/05-synthesis-guide.md
     - file: labs/05-synthesis-lab.md
     - file: notebooks/05-beam-steering.ipynb
