@@ -24,7 +24,7 @@
     },
     {
       "asset": "assets/chapter-01/meta-atom-gallery.svg",
-      "sha256": "32ec87e051dc34594085f1a34f093c8bf4e8f0d256500130880650b27f86beb7",
+      "sha256": "e2004c0a556cc6162fadc0fe82c90430a27420bbc2107030d990f707741db534",
       "origin": "original editable SVG schematic",
       "source": "assets/chapter-01/meta-atom-gallery.svg",
       "sha256_basis": "UTF-8 text with LF line endings"
@@ -133,6 +133,69 @@
           ]
         }
       ]
+    },
+    {
+      "asset": "assets/chapter-02/textbook-electric-interface-example.svg",
+      "sha256": "5ddb9ecf5b54cf4130fdf3545943f13862d064915ed79462b984d9d249e66667",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-electric-interface-example.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-electric-loop.svg",
+      "sha256": "3e34c3253bf3367358d13e99c13506eccee2fb4c24bd9dc4fea080c62c43b0ff",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-electric-loop.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-gauss-pillbox.svg",
+      "sha256": "47ced3910a4b68ba8ed657d8649e7372f5fd3a99091972df9c43644c8e3bef68",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-gauss-pillbox.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-magnetic-interface-example.svg",
+      "sha256": "9108d8b4c3ab9fb8f639f9ef11c6e8a5bd47d8025c5a27a4cc554fa43eab2271",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-magnetic-interface-example.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-magnetic-loop.svg",
+      "sha256": "a22bcee7641e17ac6d0c8e164be0b00a26ea181d1a9540e5235bd117ffe7ba65",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-magnetic-loop.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-normal-incidence.svg",
+      "sha256": "6e2b5ed304c61cef19c1412e50cdee9462d63097ff10df5f60532f90ce365227",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-normal-incidence.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-normal-tangential.svg",
+      "sha256": "3129ba3dcd4e0f9ec69af0d10bd8b9080ada030489a556b75884ade4e7fe8c36",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-normal-tangential.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-surface-charge.svg",
+      "sha256": "ef303355e69aa6b586f793677e704c0aa05447071ec6dd3a70683fd548a34ffb",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-surface-charge.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-02/textbook-tangential-continuity.svg",
+      "sha256": "3dcef4a6f09139b78b9818ac0b63210592d70a2cdb56201d690f2084db7735f8",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-02/textbook-tangential-continuity.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
     },
     {
       "asset": "assets/chapter-02/tir-field.png",

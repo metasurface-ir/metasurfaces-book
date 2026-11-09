@@ -1,0 +1,31 @@
+{
+  "pdf_sha256": "e498dc9293e06b3566f898d7d2c6dbf7ef2f8701fbf215d07976db95f7332e92",
+  "pages": "15–69 (printed); body 16–69",
+  "method": "manual Persian transcription and paired English translation; source section order preserved; scientific qualifications and computational connections separately labeled",
+  "authorized_exception": "Page-26 summary table shortened to four columns and corrected at instructor request",
+  "typographic_normalizations": [
+    "Persian letter forms and spacing",
+    "equations re-typeset in LaTeX",
+    "duplicated source words removed",
+    "power-balance typing omissions completed",
+    "stray polarization amplitude glyph corrected"
+  ],
+  "source_diagrams": 9,
+  "coverage": {
+    "en": {
+      "section_count": 16,
+      "all_transcribed_blocks_embedded": true,
+      "worked_exercises": 15,
+      "display_equations_in_source": 299,
+      "retained_computational_sections": 14
+    },
+    "fa": {
+      "section_count": 16,
+      "all_transcribed_blocks_embedded": true,
+      "worked_exercises": 15,
+      "display_equations_in_source": 299,
+      "retained_computational_sections": 14
+    }
+  },
+  "limits": "Insertion checks establish coverage of the manually transcribed files, not an automatic guarantee of perfect PDF transcription."
+}

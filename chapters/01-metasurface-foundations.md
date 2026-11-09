@@ -63,7 +63,7 @@ $$
 Increasing effective capacitance with approximately fixed inductance lowers the resonance frequency. Geometry, substrate, radiation, loss, and coupling determine whether this approximation is accurate; it is not a universal formula for every element.
 
 ```{figure} ../assets/chapter-01/meta-atom-gallery.svg
-:alt: Original schematic of a strip, split ring, unequal-arm cross and dielectric post; arrows mark the ring gap and a possible circulating current.
+:alt: Substrate-supported elements: original schematic of a strip, split ring, unequal-arm cross and dielectric post; arrows mark the ring gap and a possible circulating current.
 
 Conceptual building blocks, without assigned dimensions or calculated device performance. The arrows are illustrative, not simulated field data.
 ```
