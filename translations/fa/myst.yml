@@ -1,128 +1,127 @@
 version: 1
 project:
   id: graduate-electromagnetic-metasurfaces-fa
-  title: 'Metasurface.ir · فارسی'
+  title: Metasurface.ir · فارسی
   description: کتاب محاسباتی فراسطوح الکترومغناطیسی در سطح تحصیلات تکمیلی؛ ویرایش فارسی.
   bibliography:
-    - references.bib
+  - references.bib
   static_files:
-    - interactives
+  - interactives
+  - assets/fonts
   toc:
-    - file: intro.md
-    - title: راهنمای دوره
-      children:
-        - file: syllabus.md
-        - file: models.md
-        - file: learning-path.md
-        - file: getting-started.md
-        - file: contributing.md
-        - file: translations.md
-        - file: attribution.md
-        - file: glossary.md
-    - title: آزمایشگاه‌های محاسباتی
-      children:
-        - file: labs/index.md
-        - file: labs/lab-template.md
-        - file: labs/12-research-project.md
-        - file: labs/09-dispersion-lab.md
-        - file: notebooks/09-dispersion.ipynb
-        - file: labs/10-coupling-lab.md
-        - file: notebooks/10-coupling.ipynb
-        - file: labs/11-inverse-design-lab.md
-        - file: notebooks/11-inverse-design.ipynb
-    - title: فصل ۱ — مبانی فراسطوح
-      children:
-        - file: chapters/01-metasurface-foundations.md
-          children:
-            - file: chapters/foundations-section-01.md
-            - file: chapters/foundations-section-02.md
-            - file: chapters/foundations-section-03.md
-            - file: chapters/foundations-section-04.md
-            - file: chapters/foundations-section-05.md
-            - file: chapters/foundations-section-06.md
-            - file: chapters/foundations-section-07.md
-            - file: chapters/foundations-section-08.md
-            - file: chapters/foundations-section-09.md
-            - file: chapters/foundations-section-10.md
-            - file: chapters/foundations-section-11.md
-        - file: chapters/01-foundations-guide.md
-        - file: chapters/01-foundations-review.md
-        - file: labs/01-first-investigation.md
-        - file: notebooks/01-first-metasurface-model.ipynb
-    - title: فصل ۲ — موج، مرز و ورقه
-      children:
-        - file: chapters/02-waves-and-interfaces.md
-          children:
-            - file: chapters/waves-section-01.md
-            - file: chapters/waves-section-02.md
-            - file: chapters/waves-section-03.md
-            - file: chapters/waves-section-04.md
-            - file: chapters/waves-section-05.md
-            - file: chapters/waves-section-06.md
-            - file: chapters/waves-section-07.md
-            - file: chapters/waves-section-08.md
-            - file: chapters/waves-section-09.md
-            - file: chapters/waves-section-10.md
-            - file: chapters/waves-section-11.md
-            - file: chapters/waves-section-12.md
-            - file: chapters/waves-section-13.md
-            - file: chapters/waves-section-14.md
-            - file: chapters/waves-section-15.md
-            - file: chapters/waves-section-16.md
-        - file: chapters/02-waves-guide.md
-        - file: chapters/02-waves-review.md
-        - file: labs/02-waves-lab.md
-        - file: notebooks/02-waves-and-interfaces.ipynb
-    - title: فصل ۳ — طراحی و شبیه‌سازی سلول واحد
-      children:
-        - file: chapters/03-unit-cell-design.md
-        - file: chapters/03-unit-cell-guide.md
-        - file: labs/03-unit-cell-lab.md
-        - file: notebooks/03-unit-cell-library.ipynb
-    - title: فصل ۴ — تناوب و پراش
-      children:
-        - file: chapters/04-periodic-floquet.md
-        - file: chapters/04-floquet-guide.md
-        - file: labs/04-floquet-lab.md
-        - file: notebooks/04-floquet-orders.ipynb
-    - title: فصل ۵ — سنتز فراسطح
-      children:
-        - file: chapters/05-metasurface-synthesis.md
-        - file: chapters/05-synthesis-guide.md
-        - file: labs/05-synthesis-lab.md
-        - file: notebooks/05-beam-steering.ipynb
-        - file: notebooks/05-wavefront-models.ipynb
-    - title: فصل ۶ — مدل‌سازی عددی و روش‌های شبیه‌سازی
-      children:
-        - file: chapters/06-numerical-methods.md
-        - file: chapters/06-numerical-guide.md
-        - file: labs/06-numerical-lab.md
-        - file: notebooks/06-numerical-methods.ipynb
-    - title: فصل ۷ — فراسطوح فعال، تنظیم‌پذیر و هوشمند
-      children:
-        - file: chapters/07-active-tunable.md
-        - file: chapters/07-tunable-guide.md
-        - file: labs/07-tunable-lab.md
-        - file: notebooks/07-tunable-metasurfaces.ipynb
-    - title: فصل ۸ — مهندسی مخابرات
-      children:
-        - file: chapters/08-communications.md
-        - file: chapters/08-communications-guide.md
-        - file: labs/08-communications-lab.md
-        - file: notebooks/08-communication-links.ipynb
-    - title: فصل ۹ — مواد، ساخت و اندازه‌گیری
-      children:
-        - file: chapters/09-materials-measurement.md
-        - file: chapters/09-measurement-guide.md
-        - file: labs/09-measurement-lab.md
-        - file: notebooks/09-fabrication-measurement.ipynb
-    - title: فصل ۱۰ — هوش مصنوعی و فراسطوح
-      children:
-        - file: chapters/10-ai-metasurfaces.md
-        - file: chapters/10-pilot-guide.md
-        - file: labs/13-ai-metasurfaces.md
-        - file: notebooks/10-resonant-surrogate.ipynb
-        - file: notebooks/10-neural-comparison.ipynb
+  - file: intro.md
+  - title: راهنمای دوره
+    children:
+    - file: syllabus.md
+    - file: models.md
+    - file: learning-path.md
+    - file: getting-started.md
+    - file: contributing.md
+    - file: translations.md
+    - file: attribution.md
+    - file: glossary.md
+  - title: آزمایشگاه‌های محاسباتی
+    children:
+    - file: labs/index.md
+    - file: labs/lab-template.md
+    - file: labs/12-research-project.md
+    - file: labs/09-dispersion-lab.md
+    - file: notebooks/09-dispersion.ipynb
+    - file: labs/10-coupling-lab.md
+    - file: notebooks/10-coupling.ipynb
+    - file: labs/11-inverse-design-lab.md
+    - file: notebooks/11-inverse-design.ipynb
+  - file: chapters/01-metasurface-foundations.md
+    title: فصل ۱ — مبانی فراسطوح
+    children:
+    - file: chapters/foundations-section-01.md
+    - file: chapters/foundations-section-02.md
+    - file: chapters/foundations-section-03.md
+    - file: chapters/foundations-section-04.md
+    - file: chapters/foundations-section-05.md
+    - file: chapters/foundations-section-06.md
+    - file: chapters/foundations-section-07.md
+    - file: chapters/foundations-section-08.md
+    - file: chapters/foundations-section-09.md
+    - file: chapters/foundations-section-10.md
+    - file: chapters/foundations-section-11.md
+    - file: chapters/01-foundations-guide.md
+    - file: chapters/01-foundations-review.md
+    - file: labs/01-first-investigation.md
+    - file: notebooks/01-first-metasurface-model.ipynb
+  - file: chapters/02-waves-and-interfaces.md
+    title: فصل ۲ — موج، مرز و ورقه
+    children:
+    - file: chapters/waves-section-01.md
+    - file: chapters/waves-section-02.md
+    - file: chapters/waves-section-03.md
+    - file: chapters/waves-section-04.md
+    - file: chapters/waves-section-05.md
+    - file: chapters/waves-section-06.md
+    - file: chapters/waves-section-07.md
+    - file: chapters/waves-section-08.md
+    - file: chapters/waves-section-09.md
+    - file: chapters/waves-section-10.md
+    - file: chapters/waves-section-11.md
+    - file: chapters/waves-section-12.md
+    - file: chapters/waves-section-13.md
+    - file: chapters/waves-section-14.md
+    - file: chapters/waves-section-15.md
+    - file: chapters/waves-section-16.md
+    - file: chapters/02-waves-guide.md
+    - file: chapters/02-waves-review.md
+    - file: labs/02-waves-lab.md
+    - file: notebooks/02-waves-and-interfaces.ipynb
+  - file: chapters/03-unit-cell-design.md
+    title: فصل ۳ — طراحی و شبیه‌سازی سلول واحد
+    children:
+    - file: chapters/03-unit-cell-guide.md
+    - file: labs/03-unit-cell-lab.md
+    - file: notebooks/03-unit-cell-library.ipynb
+  - file: chapters/04-periodic-floquet.md
+    title: فصل ۴ — تناوب و پراش
+    children:
+    - file: chapters/04-floquet-guide.md
+    - file: labs/04-floquet-lab.md
+    - file: notebooks/04-floquet-orders.ipynb
+  - file: chapters/05-metasurface-synthesis.md
+    title: فصل ۵ — سنتز فراسطح
+    children:
+    - file: chapters/05-synthesis-guide.md
+    - file: labs/05-synthesis-lab.md
+    - file: notebooks/05-beam-steering.ipynb
+    - file: notebooks/05-wavefront-models.ipynb
+  - file: chapters/06-numerical-methods.md
+    title: فصل ۶ — مدل‌سازی عددی و روش‌های شبیه‌سازی
+    children:
+    - file: chapters/06-numerical-guide.md
+    - file: labs/06-numerical-lab.md
+    - file: notebooks/06-numerical-methods.ipynb
+  - file: chapters/07-active-tunable.md
+    title: فصل ۷ — فراسطوح فعال، تنظیم‌پذیر و هوشمند
+    children:
+    - file: chapters/07-tunable-guide.md
+    - file: labs/07-tunable-lab.md
+    - file: notebooks/07-tunable-metasurfaces.ipynb
+  - file: chapters/08-communications.md
+    title: فصل ۸ — مهندسی مخابرات
+    children:
+    - file: chapters/08-communications-guide.md
+    - file: labs/08-communications-lab.md
+    - file: notebooks/08-communication-links.ipynb
+  - file: chapters/09-materials-measurement.md
+    title: فصل ۹ — مواد، ساخت و اندازه‌گیری
+    children:
+    - file: chapters/09-measurement-guide.md
+    - file: labs/09-measurement-lab.md
+    - file: notebooks/09-fabrication-measurement.ipynb
+  - file: chapters/10-ai-metasurfaces.md
+    title: فصل ۱۰ — هوش مصنوعی و فراسطوح
+    children:
+    - file: chapters/10-pilot-guide.md
+    - file: labs/13-ai-metasurfaces.md
+    - file: notebooks/10-resonant-surrogate.ipynb
+    - file: notebooks/10-neural-comparison.ipynb
 site:
   template: book-theme
   options:
@@ -130,5 +129,5 @@ site:
     logo_dark: ./assets/brand/metasurface-mark.svg
     logo_alt: نشان موج وب‌سایت فراسطح
     favicon: ./assets/brand/metasurface-mark.svg
-    logo_text: 'Metasurface.ir · فارسی'
+    logo_text: Metasurface.ir · فارسی
     style: ./styles/book.css

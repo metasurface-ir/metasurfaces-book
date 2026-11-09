@@ -1,0 +1,12 @@
+@font-face{font-family:Inter;src:url('./assets/fonts/inter.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url('./assets/fonts/inter-semibold.ttf') format('truetype');font-weight:500 900;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url('./assets/fonts/vazirmatn.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Playpen Sans Arabic';src:url('./assets/fonts/playpen-sans-arabic.ttf') format('truetype');font-weight:100 800;font-display:swap}
+:root{--book-body-font:Inter,Arial,Tahoma,sans-serif;--book-heading-font:'Iowan Old Style',Georgia,serif}
+html[lang=fa]{--book-body-font:Vazirmatn,Tahoma,Arial,sans-serif;--book-heading-font:'Playpen Sans Arabic',Vazirmatn,Tahoma,sans-serif}
+body,button,input,select,textarea,.myst-primary-sidebar,.myst-secondary-sidebar,.myst-top-nav-bar{font-family:var(--book-body-font)!important}
+h1,h2,h3{font-family:var(--book-heading-font)!important}
+html[lang=en] article :is(h1,h2,h3){font-weight:400}
+html[lang=fa] article :is(h1,h2,h3){font-weight:500}
+html[lang=fa] article h1{font-weight:800}
+/* KaTeX, MathJax, SVGs, preformatted code and their own fonts are untouched. */
