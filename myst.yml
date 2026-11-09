@@ -131,5 +131,9 @@ project:
 site:
   template: book-theme
   options:
+    logo: ./assets/brand/metasurface-mark.svg
+    logo_dark: ./assets/brand/metasurface-mark.svg
+    logo_alt: Metasurface website wave mark
+    favicon: ./assets/brand/metasurface-mark.svg
     logo_text: Metasurface.ir
     style: ./styles/book.css

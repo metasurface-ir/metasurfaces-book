@@ -126,5 +126,9 @@ project:
 site:
   template: book-theme
   options:
+    logo: ./assets/brand/metasurface-mark.svg
+    logo_dark: ./assets/brand/metasurface-mark.svg
+    logo_alt: نشان موج وب‌سایت فراسطح
+    favicon: ./assets/brand/metasurface-mark.svg
     logo_text: 'Metasurface.ir · فارسی'
     style: ./styles/book.css

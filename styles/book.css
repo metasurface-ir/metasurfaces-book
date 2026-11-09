@@ -89,3 +89,11 @@
   border: 1px solid #d9e2e8 !important;
   border-radius: 10px;
 }
+
+/* Keep the university emblem readable in either color theme. */
+img[src*="iust-logo"] {
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  box-sizing: content-box;
+}
