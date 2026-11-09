@@ -4,13 +4,6 @@
 
 This book connects mathematical models, editable Jupyter notebooks, and reproducible investigations. Chapter 1 introduces physical intuition, complex responses, model assumptions, and a first analytical sheet investigation. Chapter 2 builds the electromagnetic prerequisite through waves, boundaries, polarization, films, and sheets. Chapter 3 computes a validated dielectric unit-cell library. Chapter 4 develops periodicity and diffraction. Chapter 5 connects target wavefronts to full-wave beam steering, scalar focusing, and polarization models. Chapter 6 develops solver selection and numerical validation through an independently benchmarked FDFD slab. Chapter 7 develops bias tuning, programmable arrays, synthetic feedback and temporal modulation. Chapter 8 connects finite apertures to communication channels, bandwidth and training costs. Chapter 9 connects materials and fabrication tolerances to calibrated measurements and uncertainty. Chapter 10 connects electromagnetic models to AI-assisted design. All ten chapter drafts are available for instructor review; student contributions can extend their computational and experimental evidence.
 
-```{figure} assets/brand/iust-logo.png
-:width: 96px
-:alt: Iran University of Science and Technology emblem
-
-This graduate course is taught at the **School of Electrical Engineering, [Iran University of Science and Technology](https://www.iust.ac.ir/)**, under the supervision of **Prof. Ali Abdolali**.
-```
-
 ## Learn by investigating
 
 Each investigation will start with a physical question, ask for a prediction, develop a computational model, and compare the result with a limiting case or independent calculation. Parameters, units, assumptions, and the limits of the model will be explicit.

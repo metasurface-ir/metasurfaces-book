@@ -123,6 +123,23 @@
     const root = document.documentElement;
     if (root.lang !== language) root.lang = language;
     if (root.dir !== (fa ? 'rtl' : 'ltr')) root.dir = fa ? 'rtl' : 'ltr';
+    if (!document.getElementById('book-university-mark')) {
+      const header = document.querySelector('.myst-top-nav-bar');
+      if (header) {
+        const affiliation = document.createElement('a');
+        affiliation.id = 'book-university-mark';
+        affiliation.href = 'https://www.iust.ac.ir/';
+        affiliation.target = '_blank';
+        affiliation.rel = 'noopener';
+        affiliation.title = fa ? 'دانشگاه علم و صنعت ایران — دانشکدهٔ مهندسی برق' : 'Iran University of Science and Technology — School of Electrical Engineering';
+        affiliation.setAttribute('aria-label', affiliation.title);
+        const emblem = document.createElement('img');
+        emblem.src = config.base + (fa ? '/fa' : '') + '/assets/brand/iust-logo.png';
+        emblem.alt = fa ? 'نشان دانشگاه علم و صنعت ایران' : 'Iran University of Science and Technology emblem';
+        emblem.width = 40; emblem.height = 48;
+        affiliation.append(emblem);header.append(affiliation);
+      }
+    }
     let nav = document.getElementById('book-language-switcher');
     if (!nav) {
       const host = document.querySelector('.myst-top-nav-bar');

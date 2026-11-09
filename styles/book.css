@@ -1,5 +1,6 @@
 /* MyST serves this stylesheet as myst-theme.css in each edition's root. */
 @import url("./bilingual.css");
+@import url("./book-fonts.css");
 
 /* Long display equations scroll within the lesson on narrow screens. */
 .katex-display {
@@ -113,4 +114,16 @@ img[src*="iust-logo"] {
   border-radius: 6px;
   padding: 8px;
   box-sizing: content-box;
+}
+
+#book-university-mark{position:fixed;top:4px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;justify-content:center;width:42px;height:54px;background:white;border-radius:4px}
+#book-university-mark img{object-fit:contain;width:38px;height:48px;padding:0}
+#book-university-mark:focus-visible{outline:3px solid #16818b;outline-offset:2px}
+@media(max-width:640px){
+  #book-university-mark{position:static;transform:none;order:1;flex-shrink:0;width:26px;height:42px;margin-inline:3px}
+  #book-university-mark img{width:25px;height:36px}
+  .myst-top-nav-bar>div:first-child{order:0;flex-shrink:1}
+  .myst-top-nav-bar>div:nth-child(2){order:2}
+  #book-language-switcher{order:3}
+  .myst-home-link span{max-width:52px}
 }

@@ -130,6 +130,16 @@ def decorate(output, language):
         path.write_text(text, encoding='utf-8', newline='\n')
     for name in ('bilingual.js', 'bilingual.css'):
         shutil.copy2(ROOT / 'styles' / name, output / name)
+    font_css = (ROOT / 'styles/book-fonts.css').read_text(encoding='utf-8')
+    if language == 'fa':
+        font_css = font_css.replace('html[lang=fa]', 'html')
+    (output / 'book-fonts.css').write_text(font_css, encoding='utf-8', newline='\n')
+    copy_tree(ROOT / 'assets/fonts', output / 'assets/fonts')
+    copy_tree(ROOT / 'assets/brand', output / 'assets/brand')
+    for interactive in (output / 'interactives').glob('*.html'):
+        value = interactive.read_text(encoding='utf-8')
+        value = value.replace('</head>', '<link rel="stylesheet" href="../book-fonts.css"></head>', 1)
+        interactive.write_text(value, encoding='utf-8', newline='\n')
     # Persian layout must be correct before JavaScript or React starts. Keep the
     # document attributes untouched for hydration, but apply direction in CSS.
     bilingual_css = (output / 'bilingual.css').read_text(encoding='utf-8')
@@ -140,6 +150,7 @@ def decorate(output, language):
     theme_text = theme_css.read_text(encoding='utf-8')
     # Avoid an extra stylesheet request on every document navigation.
     theme_text = theme_text.replace('@import url("./bilingual.css");', bilingual_css)
+    theme_text = theme_text.replace('@import url("./book-fonts.css");', font_css)
     theme_css.write_text(theme_text, encoding='utf-8', newline='\n')
     # Resolve imports at the deployed theme URL, not at styles/book.css.
     # Reject paths outside this edition even if a permissive local server serves them.
