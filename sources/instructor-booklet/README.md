@@ -21,3 +21,7 @@ The paired `chapter03-en.md` and `chapter03-fa.md` readings adapt printed pages 
 ## Chapter 4
 
 The ten paired reading pages adapt printed pages 79–88. The previous twelve computational sections, proofs, figures, laboratory and notebook remain available. The source's repeated substitutions are consolidated, and physical qualifications and numerical rounding are identified in the text. This is not a sentence-exact transcription. The source rights reservation above applies.
+
+## Chapter 5
+
+Seven paired readings adapt printed pages 89–118. Nineteen worked-question panels preserve the numerical cases and conceptual questions, consolidating repeated substitutions and prose. This is an adaptation, not a sentence-exact transcription. Positive-time field-ratio signs and ideal-model qualifications are explicit. All twelve previous computational sections, the lab and both notebooks remain. Source rights reservations above apply.
