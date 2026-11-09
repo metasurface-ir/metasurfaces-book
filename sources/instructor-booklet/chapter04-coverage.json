@@ -99,7 +99,7 @@
   "retained_computational_sections": 12,
   "scientific_corrections": [
     "Persian outgoing-evanescent-root sentence corrected to negative imaginary part",
-    "Finite-array closed form corrected to agree with its positive-exponential defining sum; independent complex comparison performed",
+    "Finite-array definition and geometric-series numerator aligned with the executed notebook negative-exponential sum; independent complex comparison performed",
     "Dispersion-lab derivative instruction corrected to minus phase slope and typeset in LaTeX"
   ],
   "array_closed_form_max_error": 2.6376925378252274e-16,
