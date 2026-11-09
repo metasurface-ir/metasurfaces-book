@@ -99,6 +99,28 @@ project:
   - file: chapters/04-periodic-floquet.md
     title: فصل ۴ — تناوب و پراش
     children:
+    - file: chapters/floquet-section-01.md
+    - file: chapters/floquet-section-02.md
+    - file: chapters/floquet-section-03.md
+    - file: chapters/floquet-section-04.md
+    - file: chapters/floquet-section-05.md
+    - file: chapters/floquet-section-06.md
+    - file: chapters/floquet-section-07.md
+    - file: chapters/floquet-section-08.md
+    - file: chapters/floquet-section-09.md
+    - file: chapters/floquet-section-10.md
+    - file: chapters/floquet-computational-01.md
+    - file: chapters/floquet-computational-02.md
+    - file: chapters/floquet-computational-03.md
+    - file: chapters/floquet-computational-04.md
+    - file: chapters/floquet-computational-05.md
+    - file: chapters/floquet-computational-06.md
+    - file: chapters/floquet-computational-07.md
+    - file: chapters/floquet-computational-08.md
+    - file: chapters/floquet-computational-09.md
+    - file: chapters/floquet-computational-10.md
+    - file: chapters/floquet-computational-11.md
+    - file: chapters/floquet-computational-12.md
     - file: chapters/04-floquet-guide.md
     - file: labs/04-floquet-lab.md
     - file: notebooks/04-floquet-orders.ipynb
