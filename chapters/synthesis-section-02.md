@@ -27,3 +27,5 @@ $$
 \Phi_{\rm vortex}(r,\varphi)=\ell\varphi,\quad\varphi=\operatorname{atan2}(y,x).
 $$
 
+
+Here $\ell$ labels the winding of the phase lag $\Phi$. The signed transmission argument winds by $-2\pi\ell$; if topological charge is defined from that signed argument instead, use $\Phi=-\ell\varphi$.

@@ -12,6 +12,8 @@ The instructor has selected **[CC BY 4.0](https://creativecommons.org/licenses/b
 
 Third-party material and dependencies retain their own terms. Citing a paper does not license its figures or text for inclusion. Project names do not imply endorsement or grant trademark rights. Authors retain ownership while granting the applicable license; contributions must be compatible with this policy.
 
+The instructor-supplied primary reading for Chapters 1–5 is *کتابچه فراسطوح الکترومغناطیسی*, supervised by Dr. Ali Abdolali and compiled/finally edited by Mohammad Salman Shahroudi. The instructor requested its incorporation into this course. These source-derived passages and translations retain the original rights reservation; the book's general CC BY license does not newly license the booklet or any third-party material. Chapters 3–5 consolidate repeated material as educational adaptations. Source and coverage records are available in [the primary-reading directory](https://github.com/metasurface-ir/metasurfaces-book/tree/main/sources/instructor-booklet). The PDF and external raster illustrations are not redistributed.
+
 (reuse-provenance)=
 ## Trace figures and numerical evidence
 
