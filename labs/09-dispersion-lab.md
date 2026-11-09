@@ -17,7 +17,7 @@ short_title: Spectral bandwidth lab
 The six-ridge sequence repeats every 3.9 µm. Height is 1.8 µm, pitch 0.65 µm and ridge index 2.4; y is invariant. Gaps and the incident region contain air; substrate index is 1.5. This exact geometry stays fixed throughout the sweep.
 ```
 
-Use normal incidence, electric field along y and time dependence exp(−iωt). Reference reflection to z=0 and transmission to z=h. Sweep **vacuum wavelength**, keeping widths, pitch, height and indices fixed. Redesigning a different cell for each wavelength does not demonstrate a single broadband device.
+Use normal incidence, electric field along y and time dependence $e^{+i\omega t}$. Reference reflection to z=0 and transmission to z=h. Sweep **vacuum wavelength**, keeping widths, pitch, height and indices fixed. Redesigning a different cell for each wavelength does not demonstrate a single broadband device.
 
 ## Explore, then run
 
@@ -50,7 +50,7 @@ Total transmission and T₊₁/ΣTₘ answer different questions; neither replac
 2. **Sweep:** compare target efficiency, total transmission and angle over 1.36–1.74 µm. Identify which requirement sets each useful-band edge.
 3. **Resolve:** compare 41, 81 and 161 samples at the same harmonic resolution. Report edge changes rather than unsupported decimal places. Do not merge disconnected passing windows.
 4. **Refine independently:** compare M=96/144 at every wavelength. Small power-balance error does not replace refinement. Narrow features can require further spectral and harmonic resolution.
-5. **Differentiate:** for exp(−iωt), compute τ=d arg(t₊₁)/dω. Sort frequency, unwrap phase, mask weak transmission and neighboring derivative stencils, and compare 81/161-point derivatives. This is modal delay at fixed faces, not detector arrival time; power convergence does not guarantee derivative convergence.
+5. **Differentiate:** for $e^{+i\omega t}$, compute τ=d arg(t₊₁)/dω. Sort frequency, unwrap phase, mask weak transmission and neighboring derivative stencils, and compare 81/161-point derivatives. This is modal delay at fixed faces, not detector arrival time; power convergence does not guarantee derivative convergence.
 6. **Change the requirement:** repeat with another threshold or angular tolerance while preserving the device.
 
 ## Deliverable and extensions

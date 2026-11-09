@@ -34,10 +34,10 @@ Other exciting ideas appeared along the way:
 - **Chiral structures:** materials without mirror symmetry that can rotate the wave's plane of polarization.
 
 :::{note} Reading the source with consistent conventions
-The source loss expression above is consistent with the $e^{+j\omega t}$ convention. Our shared numerical work uses $e^{-i\omega t}$. For passive local scalar media at positive frequency, our convention gives
+The source loss expression above is consistent with the $e^{+j\omega t}$ convention. Our shared numerical work uses $e^{+i\omega t}$. For passive local scalar media at positive frequency, our convention gives
 
 $$
-\epsilon=\epsilon'+i\epsilon'',\qquad \mu=\mu'+i\mu'',\qquad \epsilon'',\mu''\geq0.
+\epsilon=\epsilon'-i\epsilon'',\qquad \mu=\mu'-i\mu'',\qquad \epsilon'',\mu''\geq0.
 $$
 
 The source's “memory” analogy is introductory: in dispersive media, stored energy cannot generally be read from the real parts alone. Negative refraction remains consistent with Maxwell's equations and Snell's law with the appropriate material branch. Sign classes assume a justified effective medium; not every natural material is DPS at every frequency, and not every patterned structure admits a local bulk index.

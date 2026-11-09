@@ -1,6 +1,6 @@
 """Chapter 9: synthetic materials, tolerances and one-port measurements.
 
-exp(-i omega t); positive material loss and positive propagation phase.
+exp(+i omega t); passive permittivity has nonpositive imaginary part; outgoing propagation has negative phase.
 No material sample, fabricated patch or instrument data are represented.
 """
 from dataclasses import dataclass, asdict
@@ -85,7 +85,7 @@ def validate_parameters(p):
 def lorentz(f_GHz,epsilon_inf=2.,strength=1.1,pole_GHz=14.,damping_GHz=1.2):
     f=real(f_GHz,'frequency',True)
     for x in (epsilon_inf,strength,pole_GHz,damping_GHz):real(x,'Lorentz parameter',True)
-    return epsilon_inf+strength*pole_GHz**2/(pole_GHz**2-f*f-1j*damping_GHz*f)
+    return epsilon_inf+strength*pole_GHz**2/(pole_GHz**2-f*f-(-1j)*damping_GHz*f)
 
 def resonance(width_mm,epsilon_eff,p=Experiment()):
     validate_parameters(p)
@@ -95,15 +95,15 @@ def resonance(width_mm,epsilon_eff,p=Experiment()):
 def reflection(f_GHz,f0_GHz=None,p=Experiment()):
     validate_parameters(p)
     f=real(f_GHz,'frequency',True);f0=p.resonance_GHz if f0_GHz is None else real(f0_GHz,'resonance',True)
-    return -1+2*p.external_GHz/(p.external_GHz+p.internal_GHz-1j*(f-f0))
+    return -1+2*p.external_GHz/(p.external_GHz+p.internal_GHz-(-1j)*(f-f0))
 
 def reference_factor(f_GHz,offset_mm):
-    return np.exp(4j*np.pi*real(f_GHz,'frequency',True)*1e9*real(offset_mm,'offset')*1e-3/C0)
+    return np.exp((-4j)*np.pi*real(f_GHz,'frequency',True)*1e9*real(offset_mm,'offset')*1e-3/C0)
 
 def error_terms(f_GHz):
     f=real(f_GHz,'frequency',True)
-    return (.03*np.exp(1j*(.4+.2*(f-10))), .88*np.exp(1j*(.3+.2*(f-10))),
-            .07*np.exp(-.8j)*np.ones_like(f))
+    return (.03*np.exp((-1j)*(.4+.2*(f-10))), .88*np.exp((-1j)*(.3+.2*(f-10))),
+            .07*np.exp(-(-.8j))*np.ones_like(f))
 
 def measured(gamma,directivity,tracking,source_match):
     g,d,t,s=np.broadcast_arrays(*[np.asarray(x,complex) for x in (gamma,directivity,tracking,source_match)])
@@ -133,7 +133,7 @@ def correct(observed,directivity,tracking,source_match):
 def complex_noise(rng,shape,rms):
     real(rms,'noise RMS')
     if rms<0:raise ValueError('Nonnegative noise required.')
-    return rms/np.sqrt(2)*(rng.normal(size=shape)+1j*rng.normal(size=shape))
+    return rms/np.sqrt(2)*(rng.normal(size=shape)+(-1j)*rng.normal(size=shape))
 
 def wilson(successes,count,z=1.959963984540054):
     if isinstance(count,bool) or not isinstance(count,(int,np.integer)) or count<=0 or not 0<=successes<=count:
@@ -179,7 +179,7 @@ def uncertain_measurements(count=1000,p=Experiment()):
     rng=np.random.default_rng(p.seed)
     known=np.array([-1.,0.,1.],complex)
     phase=rng.normal(0,np.deg2rad(p.standard_phase_std_deg),(count,2))
-    actual=np.column_stack([-np.exp(1j*phase[:,0]),complex_noise(rng,count,p.load_std),np.exp(1j*phase[:,1])])
+    actual=np.column_stack([-np.exp((-1j)*phase[:,0]),complex_noise(rng,count,p.load_std),np.exp((-1j)*phase[:,1])])
     assert np.max(abs(actual[:,1]))<1,'Load draws outside this passive synthetic population'
     d,t,s=error_terms(p.resonance_GHz)
     observed=measured(actual,d,t,s)+complex_noise(rng,(count,3),p.noise_rms)

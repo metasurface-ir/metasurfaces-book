@@ -123,7 +123,7 @@ The scalar relations above assume an appropriate linear, local, isotropic descri
 (ch02-section-01)=
 ### Computational connection: A route through the prerequisites
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 By the end of this chapter, you should be able to derive rather than memorize the flat-interface response; calculate its power with the correct admittance; distinguish propagation, evanescence, and grazing cutoff; express coherent polarization states with Jones vectors; and decide whether proposed scattering coefficients could describe a stated sheet.

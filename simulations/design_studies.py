@@ -1,6 +1,6 @@
 """Labs ms-09/10/11: restricted TE ridge studies, with explicit model checks.
 
-Lengths: micrometers. Time convention exp(-i omega t). Fixed real indices
+Lengths: micrometers. Time convention exp(+i omega t). Fixed real indices
 describe structural dispersion only. Numerical controls never change geometry.
 """
 from dataclasses import dataclass, asdict, replace

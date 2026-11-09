@@ -94,7 +94,7 @@ The notebook is authoritative for local units and symbol definitions. The same l
 
 | Symbol | Convention and units |
 | --- | --- |
-| $e^{-i\omega t}$; $e^{i\mathbf{k}\cdot\mathbf{r}}$ | Time/space signs used in the core examples; outgoing fields use the branch defined in each model |
+| $e^{+i\omega t}$; $e^{-i\mathbf{k}\cdot\mathbf{r}}$ | Time/space signs used in the core examples; outgoing fields use the branch defined in each model |
 | $f$, $\omega=2\pi f$, $\lambda_0$ | Frequency (Hz or explicitly GHz/THz), angular frequency (rad/s), vacuum wavelength (m or explicitly μm) |
 | $\Lambda$, $m$, $k_{x,m}$ | Period (length), integer order, transverse wavenumber (inverse length); declare the incident and output media |
 | $r$, $t$; $R$, $T$, $A$ | Complex field ratios versus power fractions. For unequal media or oblique incidence, T is not generally \|t\|² |

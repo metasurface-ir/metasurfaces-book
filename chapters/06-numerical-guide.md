@@ -20,7 +20,7 @@ short_title: Numerical worked examples
 
 ## Example 1: define the transmitted wave before comparing it
 
-The reference slab has wavelength $1.55\,\mu\mathrm m$, thickness $0.60\,\mu\mathrm m$, film index 2.4, exterior index 1, normal incidence, and unit incident electric amplitude at $z=0$. Transmission is measured at $z=d$. Even a uniform medium has $t=e^{ik_ed}$ with these two distinct reference planes; its transmission phase is not generally zero.
+The reference slab has wavelength $1.55\,\mu\mathrm m$, thickness $0.60\,\mu\mathrm m$, film index 2.4, exterior index 1, normal incidence, and unit incident electric amplitude at $z=0$. Transmission is measured at $z=d$. Even a uniform medium has $t=e^{-ik_ed}$ with these two distinct reference planes; its transmission phase is not generally zero.
 
 Check this limit with `Slab(n_film=1.0)`. The finite-grid counterpart is $t=e^{iN\theta}$ with zero reflection. It exactly solves the discrete system while its phase differs from the continuum result. This isolates numerical dispersion without a material interface.
 
@@ -54,7 +54,7 @@ The notebook uses circular phase differences and records actual left/right dista
 
 ## Example 5: distinguish boundary reflection from monitor phase
 
-Replace the right outgoing ghost multiplier $e^{i\theta}$ by $e^{ik_eh}$ while holding everything else fixed. This creates a backward wave in the exterior. Padding changes its interference with the slab, so errors can oscillate rather than decrease monotonically.
+Replace the right outgoing ghost multiplier $e^{-i\theta}$ by $e^{-ik_eh}$ while holding everything else fixed. This creates a backward wave in the exterior. Padding changes its interference with the slab, so errors can oscillate rather than decrease monotonically.
 
 Decompose forward/backward amplitudes and compare their **difference in power** with the discrete current. The squared total field at one output node contains interference and is not a transmitted-power measurement. Restoring the matched boundary removes this deliberate reflection; correcting only the monitor phase does not.
 

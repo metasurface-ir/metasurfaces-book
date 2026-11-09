@@ -46,7 +46,7 @@ Individual files: {download}`../notebooks/02-waves-and-interfaces.ipynb`, {downl
 
 | Setting | Reference experiment or convention |
 | --- | --- |
-| Time and space | $e^{-i\omega t}$, $e^{i\mathbf k\cdot\mathbf r}$ |
+| Time and space | $e^{+i\omega t}$, $e^{-i\mathbf k\cdot\mathbf r}$ |
 | Geometry | Interface near $z=0$; incidence from $z<0$; plane of incidence $xz$ |
 | Field basis | Common tangential $E_y$ for TE, $E_x$ for TM |
 | Bulk media | Positive real constant indices, $\mu=\mu_0$ |

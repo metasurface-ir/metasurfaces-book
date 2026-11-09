@@ -123,6 +123,9 @@
     const root = document.documentElement;
     if (root.lang !== language) root.lang = language;
     if (root.dir !== (fa ? 'rtl' : 'ltr')) root.dir = fa ? 'rtl' : 'ltr';
+    for (const search of document.querySelectorAll('.myst-search-bar')) {
+      search.setAttribute('aria-label', fa ? 'جست‌وجو در کتاب' : 'Search the book');
+    }
     if (!document.getElementById('book-university-mark')) {
       const header = document.querySelector('.myst-top-nav-bar');
       if (header) {

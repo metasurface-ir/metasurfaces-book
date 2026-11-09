@@ -51,7 +51,7 @@ The thermal density uses 290 K; −174 dBm/Hz is a rounded mnemonic. No direct p
 **Work:** For this algebraic example only, take equal direct and surface amplitudes a. Their combined power gain is
 
 $$
-|a+ae^{i\phi}|^2=2a^2(1+\cos\phi)=4a^2\cos^2(\phi/2).
+|a+ae^{-i\phi}|^2=2a^2(1+\cos\phi)=4a^2\cos^2(\phi/2).
 $$
 
 At 0°, the gain is four times either isolated gain; at 180°, it vanishes. The supplied browser instead uses its geometry-derived, unequal amplitudes and therefore does not reach a perfect null. The isolated-surface focusing law leaves a common phase free: use it to align with the direct channel when that channel is known.

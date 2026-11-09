@@ -53,17 +53,17 @@ $$
 \frac{|V(t)-V_1|}{|V_0-V_1|}=e^{-t/\tau},\qquad t_{2\%}=-\tau\ln0.02=15.6481\ \mu{\rm s}\quad(\tau=4\ \mu{\rm s}).
 $$
 
-For a small sinusoidal voltage command with the same $e^{-i\Omega t}$ convention, the driver transfer function is $H_d(\Omega)=1/(1-i\Omega\tau)$. Its magnitude falls to $1/\sqrt2$ at $f_{\rm 3dB}=1/(2\pi\tau)=39.79$ kHz. This bandwidth describes voltage response. The complex reflection follows a nonlinear map of voltage, so its large-signal switching waveform and spectral weights require evaluating $\Gamma[V(t)]$. Neither number is a measured property of a physical varactor or an FPGA.
+For a small sinusoidal voltage command with the same $e^{+i\Omega t}$ convention, the driver transfer function is $H_d(\Omega)=1/(1+i\Omega\tau)$. Its magnitude falls to $1/\sqrt2$ at $f_{\rm 3dB}=1/(2\pi\tau)=39.79$ kHz. This bandwidth describes voltage response. The complex reflection follows a nonlinear map of voltage, so its large-signal switching waveform and spectral weights require evaluating $\Gamma[V(t)]$. Neither number is a measured property of a physical varactor or an FPGA.
 
 ## 6. Explain where a suppressed carrier goes
 
 Let an ideal reflection envelope alternate between $+1$ and $-1$ with duty cycle $D=1/2$. Substitute into the derived coefficient formula:
 
 $$
-c_0=0,\qquad c_{+1}=\frac{2i}{\pi},\qquad c_{-1}=-\frac{2i}{\pi},\qquad |c_{\pm1}|^2=\frac4{\pi^2}\approx0.405285.
+c_0=0,\qquad c_{+1}=\frac{-2i}{\pi},\qquad c_{-1}=-\frac{-2i}{\pi},\qquad |c_{\pm1}|^2=\frac4{\pi^2}\approx0.405285.
 $$
 
-The first pair accounts for about 0.81057 of the mean-square envelope. The remaining 0.18943 lies in higher odd harmonics; a two-bar spectrum is incomplete. Parseval gives $\sum_\ell|c_\ell|^2=\langle|\Gamma(t)|^2\rangle=1$ for this ideal waveform. With $e^{-i\omega t}$, positive $\ell$ means $\omega_0+\ell\Omega$. The plotted reference uses actual circuit states at 3 and 14 V; its carrier is therefore not required to vanish. A finite RC transition changes the waveform and its coefficients. Envelope Parseval is not a full electromagnetic pump-and-sideband power balance.
+The first pair accounts for about 0.81057 of the mean-square envelope. The remaining 0.18943 lies in higher odd harmonics; a two-bar spectrum is incomplete. Parseval gives $\sum_\ell|c_\ell|^2=\langle|\Gamma(t)|^2\rangle=1$ for this ideal waveform. With $e^{+i\omega t}$, positive $\ell$ means $\omega_0+\ell\Omega$. The plotted reference uses actual circuit states at 3 and 14 V; its carrier is therefore not required to vanish. A finite RC transition changes the waveform and its coefficients. Envelope Parseval is not a full electromagnetic pump-and-sideband power balance.
 
 ## Assessment and evidence
 

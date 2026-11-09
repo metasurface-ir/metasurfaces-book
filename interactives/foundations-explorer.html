@@ -112,7 +112,7 @@
 </script>
 <script>
 'use strict';const $=id=>document.getElementById(id),presets={transparent:{ae:0,am:0,fm:200},electric:{ae:.25,am:0,fm:200},balanced:{ae:.25,am:.25,fm:200},detuned:{ae:.25,am:.25,fm:230}};
-function channel(f,f0,a){if(a===0)return {re:1,im:0};const u=f/f0,d=1-u*u,v=a*u,den=d*d+v*v;return {re:(d*d-v*v)/den,im:2*d*v/den};}
+function channel(f,f0,a){if(a===0)return {re:1,im:0};const u=f/f0,d=1-u*u,v=a*u,den=d*d+v*v;return {re:(d*d-v*v)/den,im:-2*d*v/den};}
 function compute(p){
  for(const key of ['frequency','fe','fm','ae','am'])if(!Number.isFinite(p[key]))throw Error('Use finite real parameters.');
  if(Math.min(p.frequency,p.fe,p.fm)<=0||Math.min(p.ae,p.am)<0)throw Error('Require positive frequencies and nonnegative strengths.');

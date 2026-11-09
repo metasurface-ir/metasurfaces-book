@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "source_sha256": {
-    "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
-    "metasurface_synthesis.py": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629"
+    "unit_cell_te.py": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
+    "metasurface_synthesis.py": "16ce1580915bc779184920e82aab9730c6ae76b47d30b7d03e5410a0cf2c75bf"
   },
   "library_rows": 161,
   "primitive_embedding_complex_error": 3.598394548285689e-13,
@@ -40,7 +40,7 @@
       "error": 0.0
     }
   ],
-  "scalar_plane_wave_error": 1.918350056099024e-15,
+  "scalar_plane_wave_error": 2.0520832886124996e-15,
   "gaussian_fwhm_error": 1.1458096338401447e-07,
   "jones_error": 4.002966042486721e-16,
   "full_wave_refinement": {
@@ -66,10 +66,10 @@
           409.6
         ],
         "profile_difference_over_fixed_peak": 0.00021985152359817677,
-        "relative_fwhm_change": 0.00036492374049196117,
+        "relative_fwhm_change": 0.00036492374049184673,
         "peak_change_over_fixed_peak": 0.00021985152359817677,
-        "fixed_window_integral_change_over_aperture": 2.1960850159263856e-05,
-        "line_concentration_change": 2.6674423110994994e-05,
+        "fixed_window_integral_change_over_aperture": 2.196085015937488e-05,
+        "line_concentration_change": 2.6674423111106016e-05,
         "limits": {
           "profile_difference_over_fixed_peak": 0.02,
           "relative_fwhm_change": 0.02,
@@ -91,7 +91,7 @@
           409.6
         ],
         "profile_difference_over_fixed_peak": 0.003814419421927876,
-        "relative_fwhm_change": 0.0066897938074166425,
+        "relative_fwhm_change": 0.006689793807416755,
         "peak_change_over_fixed_peak": 0.003814419421927876,
         "fixed_window_integral_change_over_aperture": 0.00023009193616174706,
         "line_concentration_change": 0.00027039278809304346,
@@ -118,8 +118,8 @@
         "profile_difference_over_fixed_peak": 0.001969162241802085,
         "relative_fwhm_change": 0.005731355002352534,
         "peak_change_over_fixed_peak": 0.001969162241802085,
-        "fixed_window_integral_change_over_aperture": 0.00012142568637585338,
-        "line_concentration_change": 0.0002338491194000536,
+        "fixed_window_integral_change_over_aperture": 0.00012142568637579787,
+        "line_concentration_change": 0.00023384911939994257,
         "limits": {
           "profile_difference_over_fixed_peak": 0.02,
           "relative_fwhm_change": 0.02,
@@ -140,11 +140,11 @@
           409.6,
           409.6
         ],
-        "profile_difference_over_fixed_peak": 0.0010468772980287194,
+        "profile_difference_over_fixed_peak": 0.001046877298028462,
         "relative_fwhm_change": 0.0003567965625681408,
         "peak_change_over_fixed_peak": 0.0007046777128694304,
-        "fixed_window_integral_change_over_aperture": 0.00034959205907614255,
-        "line_concentration_change": 2.316306452088135e-06,
+        "fixed_window_integral_change_over_aperture": 0.00034959205907625357,
+        "line_concentration_change": 2.3163064519771126e-06,
         "limits": {
           "profile_difference_over_fixed_peak": 0.03,
           "relative_fwhm_change": 0.02,
@@ -166,10 +166,10 @@
           409.6
         ],
         "profile_difference_over_fixed_peak": 0.008372492110315346,
-        "relative_fwhm_change": 0.00048331128266843683,
-        "peak_change_over_fixed_peak": 0.00063629776361378,
-        "fixed_window_integral_change_over_aperture": 0.00018250677264519677,
-        "line_concentration_change": 0.0001572878321803861,
+        "relative_fwhm_change": 0.0004833112826680988,
+        "peak_change_over_fixed_peak": 0.0006362977636135228,
+        "fixed_window_integral_change_over_aperture": 0.0001825067726453078,
+        "line_concentration_change": 0.00015728783218049713,
         "limits": {
           "profile_difference_over_fixed_peak": 0.03,
           "relative_fwhm_change": 0.02,
@@ -190,8 +190,8 @@
           409.6,
           409.6
         ],
-        "profile_difference_over_fixed_peak": 0.005033001059873994,
-        "relative_fwhm_change": 0.0004918850004865089,
+        "profile_difference_over_fixed_peak": 0.0050330010598740585,
+        "relative_fwhm_change": 0.0004918850004866214,
         "peak_change_over_fixed_peak": 0.0003860320827696301,
         "fixed_window_integral_change_over_aperture": 0.00011139734523413214,
         "line_concentration_change": 0.00017787442879590998,

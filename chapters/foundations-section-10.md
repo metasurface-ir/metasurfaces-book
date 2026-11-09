@@ -21,7 +21,7 @@ The same surface is illuminated at many possible frequencies, but its response a
 For a meaningful continuous transmission phase, group delay is
 
 $$
-\tau_g=\frac{d\arg t}{d\omega}.
+\tau_g=-\frac{d\arg t}{d\omega}.
 $$
 
 The notebook compares two balanced ideal channels: a narrower phase transition has a larger peak delay. This illustrates spectral dispersion while preserving the model's imposed unit transmission. It is not an achromatic metalens or a retrieved material group delay. Chapter 5 discusses focusing models, and later investigations will need justified material dispersion and wavelength-dependent geometry verification.

@@ -24,25 +24,25 @@ Choose a platform together with the operating band, polarization, thermal enviro
 
 A primary example of joint material/process selection is the amorphous-TiO₂ platform and atomic-layer-deposition route reported by [Devlin et al. (2016)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5035844/). Read the paper's material and fabrication evidence; its performance does not transfer automatically to a different wavelength or geometry. None of its figures or measured data are reproduced here.
 
-With time dependence exp(−iωt), the illustrative relative permittivity is
+With time dependence $e^{+i\omega t}$, the illustrative relative permittivity is
 
 $$
 \epsilon_r(\omega)=\epsilon_\infty+
-\frac{F\omega_p^2}{\omega_p^2-\omega^2-i\gamma\omega},
+\frac{F\omega_p^2}{\omega_p^2-\omega^2+i\gamma\omega},
 \qquad \epsilon_\infty,F,\omega_p,\gamma>0.
 $$
 
 Multiply numerator and denominator by the complex conjugate to check passivity:
 
 $$
-\operatorname{Im}\epsilon_r=
+\operatorname{Im}\epsilon_r=-
 \frac{F\omega_p^2\gamma\omega}
-{(\omega_p^2-\omega^2)^2+\gamma^2\omega^2}\ge0,\qquad
-\langle p_{\rm loss}\rangle=\frac{\omega\epsilon_0}{2}
+{(\omega_p^2-\omega^2)^2+\gamma^2\omega^2}\le0,\qquad
+\langle p_{\rm loss}\rangle=-\frac{\omega\epsilon_0}{2}
 \operatorname{Im}\epsilon_r\,|\mathbf E|^2.
 $$
 
-For a nonmagnetic isotropic medium, use the passive branch n+iκ = √εᵣ. For positive frequency, n and κ are nonnegative in this example. Conductivity contributes +iσ/(ωε₀) to relative permittivity under the same convention. Do not add that term a second time if the measured complex permittivity already includes conduction. The familiar loss tangent ε″/ε′ is useful only with a stated convention and away from ε′ = 0.
+For a nonmagnetic isotropic medium, use the passive branch $n-i\kappa=\sqrt{\epsilon_r}$. For positive frequency, n and κ are nonnegative in this example. Conductivity contributes $-i\sigma/(\omega\epsilon_0)$ to relative permittivity under the same convention. Do not add that term a second time if the measured complex permittivity already includes conduction. The familiar loss tangent ε″/ε′ is useful only with a stated convention and away from ε′ = 0.
 
 The notebook uses f in GHz and divides every angular-frequency factor by 2π consistently. Its material pole is 14 GHz, while its separate device resonance is 10 GHz. They are different models.
 
@@ -71,12 +71,12 @@ Photolithography, electron-beam lithography, imprinting and PCB patterning have 
 Let κₑ and κᵢ denote external and internal frequency halfwidths, both in GHz, with κₑ > 0 and κᵢ ≥ 0. The assigned reflection amplitude has background −1:
 
 $$
-\Gamma(f)=-1+\frac{2\kappa_e}{\kappa_e+\kappa_i-i(f-f_0)},\qquad
+\Gamma(f)=-1+\frac{2\kappa_e}{\kappa_e+\kappa_i+i(f-f_0)},\qquad
 A(f)=1-|\Gamma|^2=
 \frac{4\kappa_e\kappa_i}{(\kappa_e+\kappa_i)^2+(f-f_0)^2}.
 $$
 
-Proof: combine the two terms of Γ over a common denominator; its numerator becomes κₑ−κᵢ+i(f−f₀). Subtract the numerator's squared magnitude from the denominator's. The difference is 4κₑκᵢ, which is nonnegative. Thus the assumed one-port model conserves power and is passive. The absorption full width at half maximum and the loaded quality factor are
+Proof: combine the two terms of Γ over a common denominator; its numerator becomes κₑ−κᵢ−i(f−f₀). Subtract the numerator's squared magnitude from the denominator's. The difference is 4κₑκᵢ, which is nonnegative. Thus the assumed one-port model conserves power and is passive. The absorption full width at half maximum and the loaded quality factor are
 
 $$
 \Delta f_{\rm FWHM}=2(\kappa_e+\kappa_i),\qquad
@@ -178,15 +178,15 @@ A small inverse denominator amplifies noise. Reject singular cases instead of si
 
 ## 9.8 Move the reference plane
 
-Place the calibrated port plane at z = 0 and the sample at z = d in a uniform lossless medium, with incidence along +z. The incident wave accumulates exp(ikd); the reflected wave travels the same distance back. Under exp(−iωt),
+Place the calibrated port plane at z = 0 and the sample at z = d in a uniform lossless medium, with incidence along +z. The incident wave accumulates $e^{-ikd}$; the reflected wave travels the same distance back. Under $e^{+i\omega t}$,
 
 $$
-\Gamma_{\rm port}=\Gamma_{\rm surface}e^{2ikd},\qquad
-\Gamma_{\rm surface}=\Gamma_{\rm port}e^{-2ikd},\qquad
-\delta\phi=2k\,\delta d=\frac{4\pi f}{c}\delta d.
+\Gamma_{\rm port}=\Gamma_{\rm surface}e^{-2ikd},\qquad
+\Gamma_{\rm surface}=\Gamma_{\rm port}e^{+2ikd},\qquad
+\delta\phi=-2k\,\delta d=-\frac{4\pi f}{c}\delta d.
 $$
 
-Here k = 2πf/c for air. At 10 GHz, d = 5 mm contributes approximately +120.083°. It changes phase while preserving reflectance. Unknown placement with standard deviation 0.05 mm contributes about 1.201° phase standard deviation. A known displacement can be corrected; an uncertain displacement must also enter the uncertainty budget.
+Here k = 2πf/c for air. At 10 GHz, d = 5 mm contributes approximately −120.083°. It changes phase while preserving reflectance. Unknown placement with standard deviation 0.05 mm contributes about 1.201° phase standard deviation. A known displacement can be corrected; an uncertain displacement must also enter the uncertainty budget.
 
 The simple factor assumes one propagation mode and no extra fixture reflections. A lossy or multimode fixture needs its own network or field model. For oblique plane-wave incidence between parallel planes, the longitudinal wave number replaces k; do not use the normal-incidence expression blindly.
 

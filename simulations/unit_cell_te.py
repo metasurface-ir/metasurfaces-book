@@ -1,6 +1,6 @@
 """One-layer, 1D, lossless dielectric TE RCWA for the graduate course.
 
-Lengths are micrometers. exp(-i omega t), Ey polarization, incidence from z<0.
+Lengths are micrometers. exp(+i omega t), Ey polarization, incidence from z<0.
 The centered ridge occupies |x| < width/2 and 0 < z < height.
 r is referenced to z=0; t to z=height. This is not a TM/2D-lattice solver.
 """
@@ -8,7 +8,7 @@ from dataclasses import dataclass, asdict
 import numpy as np
 from scipy.linalg import eigh, solve
 
-SOLVER_VERSION = "te-ridge-1.0"
+SOLVER_VERSION = "te-ridge-1.0-positive-time"
 
 
 @dataclass(frozen=True)
@@ -37,8 +37,8 @@ class Cell:
 
 
 def outgoing_q(index, alpha):
-    """Positive real or positive imaginary kz/k0 in a lossless medium."""
-    return np.sqrt((index * index - np.asarray(alpha) ** 2).astype(complex))
+    """Positive real or negative imaginary kz/k0 in a lossless medium."""
+    return np.conj(np.sqrt((index * index - np.asarray(alpha) ** 2).astype(complex)))
 
 
 def solve_cell(cell=Cell(), half_order=16):
@@ -67,11 +67,11 @@ def solve_cell(cell=Cell(), half_order=16):
     eps = (cell.n_ridge ** 2 - cell.n_gap ** 2) * fill * np.sinc(fill * difference)
     eps += cell.n_gap ** 2 * np.eye(count)
     eigenvalues, W = eigh(eps - np.diag(alpha ** 2))
-    q = np.sqrt(eigenvalues.astype(complex))
+    q = np.conj(np.sqrt(eigenvalues.astype(complex)))
     if np.min(np.abs(q)) < 1e-10:
         raise ValueError("A layer eigenmode is at cutoff; perturb parameters away from this singular basis.")
     V = W * q[None, :]
-    P = np.exp(2j * np.pi * q * cell.height_um / cell.wavelength_um)
+    P = np.exp((-2j) * np.pi * q * cell.height_um / cell.wavelength_um)
     # a: forward modes at z=0; b: backward modes at z=height.
     QW_i, QW_t = qi[:, None] * W, qt[:, None] * W
     matrix = np.block([[V + QW_i, (QW_i - V) * P],
@@ -97,18 +97,18 @@ def sample_ey(cell, result, x_um, z_um):
     """Reconstruct Ey/Eincident on a rectangular x,z grid, including near fields."""
     x, z = np.asarray(x_um), np.asarray(z_um)
     k0 = 2*np.pi/cell.wavelength_um
-    basis = np.exp(1j*k0*result["alpha"][:, None]*x[None, :])
+    basis = np.exp((-1j)*k0*result["alpha"][:, None]*x[None, :])
     field = np.empty((len(z), len(x)), complex)
     modes = result["modes"]
     for row, depth in enumerate(z):
         if depth < 0:
-            reflected = result["r"]*np.exp(-1j*k0*result["qi"]*depth)
-            field[row] = reflected @ basis + np.exp(1j*k0*(result["alpha"][result["half_order"]]*x + result["qi"][result["half_order"]]*depth))
+            reflected = result["r"]*np.exp(-(-1j)*k0*result["qi"]*depth)
+            field[row] = reflected @ basis + np.exp((-1j)*k0*(result["alpha"][result["half_order"]]*x + result["qi"][result["half_order"]]*depth))
         elif depth > cell.height_um:
-            transmitted = result["t"]*np.exp(1j*k0*result["qt"]*(depth-cell.height_um))
+            transmitted = result["t"]*np.exp((-1j)*k0*result["qt"]*(depth-cell.height_um))
             field[row] = transmitted @ basis
         else:
-            modal = modes["a"]*np.exp(1j*k0*modes["q"]*depth) + modes["b"]*np.exp(1j*k0*modes["q"]*(cell.height_um-depth))
+            modal = modes["a"]*np.exp((-1j)*k0*modes["q"]*depth) + modes["b"]*np.exp((-1j)*k0*modes["q"]*(cell.height_um-depth))
             field[row] = (modes["W"] @ modal) @ basis
     return field
 
@@ -122,7 +122,7 @@ def film_reference(cell, layer_index):
     q2 = outgoing_q(cell.n_substrate, alpha)[0]
     r01, r12 = (q0-q1)/(q0+q1), (q1-q2)/(q1+q2)
     t01, t12 = 2*q0/(q0+q1), 2*q1/(q1+q2)
-    phase = np.exp(2j*np.pi*q1*cell.height_um/cell.wavelength_um)
+    phase = np.exp((-2j)*np.pi*q1*cell.height_um/cell.wavelength_um)
     denominator = 1+r01*r12*phase**2
     return (r01+r12*phase**2)/denominator, t01*t12*phase/denominator
 
@@ -134,8 +134,8 @@ def deembed_te(r_monitor, t_monitor, wavelength_um, qi0, qt0, incident_offset_um
     Each measured coefficient is divided by incident Ey at -Li.
     """
     k0 = 2*np.pi/wavelength_um
-    return (r_monitor*np.exp(-2j*k0*qi0*incident_offset_um),
-            t_monitor*np.exp(-1j*k0*(qi0*incident_offset_um+qt0*output_offset_um)))
+    return (r_monitor*np.exp(-(-2j)*k0*qi0*incident_offset_um),
+            t_monitor*np.exp(-(-1j)*k0*(qi0*incident_offset_um+qt0*output_offset_um)))
 
 
 def phase_error_deg(value, reference):

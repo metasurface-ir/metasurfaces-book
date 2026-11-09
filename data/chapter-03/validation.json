@@ -4,7 +4,7 @@
     "numpy": "2.4.6",
     "scipy": "1.18.1"
   },
-  "solver_sha256": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6",
+  "solver_sha256": "13952b27f9d8d7823fda063447154c8cf6f3f90b66e1eb5a6fe9f91a29e653ba",
   "analytic_films": {
     "cases": 18,
     "max_complex_error": 8.82085992141607e-15

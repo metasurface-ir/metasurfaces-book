@@ -61,7 +61,7 @@ $$
 \approx1.6215\,\mathrm{rad}\approx92.90^\circ.
 $$
 
-Moving the monitors leaves the device and its power response unchanged. Multiplying the raw coefficient by $e^{-i\Delta\phi_t}$ returns the phase at the two ridge faces. The notebook synthesizes three monitor placements and recovers the same complex coefficients to floating-point accuracy.
+Moving the monitors leaves the device and its power response unchanged. Multiplying the raw coefficient by $e^{+i\Delta\phi_t}$ returns the phase at the two ridge faces. The notebook synthesizes three monitor placements and recovers the same complex coefficients to floating-point accuracy.
 
 **Diagnostic:** two solvers can agree in $T$ yet show a constant phase discrepancy because they use different reference planes. Map those planes before changing the physical model.
 

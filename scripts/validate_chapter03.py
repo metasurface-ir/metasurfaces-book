@@ -22,7 +22,7 @@ from unit_cell_te import Cell, solve_cell, film_reference, sample_ey
 
 
 def grcwa_result(cell, half_order, pixels):
-    import grcwa
+    import grcwa  # External negative-time phasors are conjugated below.
     obj = grcwa.obj(2*half_order+3, [cell.period_um, 0], [0, cell.period_um/100],
                     1/cell.wavelength_um, np.deg2rad(cell.angle_deg), 0, verbose=0)
     obj.Add_LayerUniform(0, cell.n_incident**2)
@@ -39,7 +39,7 @@ def grcwa_result(cell, half_order, pixels):
     obj.MakeExcitationPlanewave(0, 0, 1, 0)
     R, T = obj.RT_Solve(normalize=1, byorder=1)
     E, _ = obj.Solve_FieldFourier(2, 0)
-    return dict(R=np.asarray(R), T=np.asarray(T), t0=complex(E[1][0]),
+    return dict(R=np.asarray(R), T=np.asarray(T), t0=complex(E[1][0]).conjugate(),
                 alpha=np.asarray(obj.kx)*cell.wavelength_um/(2*np.pi))
 
 

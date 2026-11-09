@@ -6,14 +6,14 @@ Use the [chapter](09-materials-measurement.md), [lab](../labs/09-measurement-lab
 
 **Predict:** At the material pole, does the imaginary permittivity vanish because the real detuning is zero?
 
-**Work:** Set f = fp = 14 GHz, ε∞ = 2, oscillator strength F = 1.1 and damping γf = 1.2 GHz. The oscillator denominator is purely negative imaginary:
+**Work:** Set f = fp = 14 GHz, ε∞ = 2, oscillator strength F = 1.1 and damping γf = 1.2 GHz. The oscillator denominator is purely positive imaginary:
 
 $$
-\epsilon_r(f_p)=\epsilon_\infty+i\frac{Ff_p}{\gamma_f}
-=2+i\,12.8333.
+\epsilon_r(f_p)=\epsilon_\infty-i\frac{Ff_p}{\gamma_f}
+=2-i\,12.8333.
 $$
 
-The imaginary part is positive, consistent with dissipation under exp(−iωt). Increasing damping to 2.4 GHz halves this pole value but also alters the real dispersion away from the pole. It does not justify changing only a loss-tangent parameter across the entire band.
+The imaginary part is negative, consistent with dissipation under $e^{+i\omega t}$. Increasing damping to 2.4 GHz halves this pole value but also alters the real dispersion away from the pole. It does not justify changing only a loss-tangent parameter across the entire band.
 
 **Check:** Evaluate the original complex fraction and the independent real/imaginary rational expressions. The notebook's illustrated spectrum is not TiO₂ or a measured substrate.
 
@@ -83,15 +83,15 @@ In contrast, m/mopen ≈ 0.38725. A single reference division does not identify 
 **Work:** At 10 GHz the air wavelength is 29.9792458 mm. A sample 5 mm beyond the calibrated plane adds round-trip phase
 
 $$
-\phi=\frac{4\pi d}{\lambda}\simeq2.09585\ {\rm rad}
-=120.083^\circ,\qquad
+\phi=-\frac{4\pi d}{\lambda}\simeq-2.09585\ {\rm rad}
+=-120.083^\circ,\qquad
 \sigma_\phi=\frac{4\pi(0.05\ {\rm mm})}{29.9792458\ {\rm mm}}
 \simeq0.0209585\ {\rm rad}=1.20083^\circ.
 $$
 
-Divide the port reflection by exp(2ikd) to recover the surface response. The reflectance is unchanged by this lossless correction. A positive unknown displacement creates a positive phase shift with our time convention; reversing the correction sign doubles the discrepancy.
+Divide the port reflection by $e^{-2ikd}$ to recover the surface response. The reflectance is unchanged by this lossless correction. A positive unknown displacement creates a negative signed phase shift with our time convention; reversing the correction sign doubles the discrepancy.
 
-**Check:** Compare the phase slope versus frequency with 4πd/c in radians per hertz. The normal-incidence air-path expression is not a general fixture-removal algorithm.
+**Check:** Compare the phase slope versus frequency with $-4\pi d/c$ in radians per hertz. The normal-incidence air-path expression is not a general fixture-removal algorithm.
 
 ## Example 6: what does 95% mean?
 

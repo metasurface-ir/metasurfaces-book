@@ -1,0 +1,23 @@
+{
+  "pdf_sha256": "e498dc9293e06b3566f898d7d2c6dbf7ef2f8701fbf215d07976db95f7332e92",
+  "printed_pages": "70–78",
+  "source_section_numbers": [
+    "3.1",
+    "3.2",
+    "3.4",
+    "3.5",
+    "3.6",
+    "3.9"
+  ],
+  "published_section_numbers": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6"
+  ],
+  "worked_exercises": 2,
+  "figure_guides": "Source contains drawing instructions, not supplied completed illustrations; original schematics and retained course calculations are used. No CST/HFSS results are claimed.",
+  "limits": "Manual adaptation and translation; repeated equation substitutions consolidated. Source reading contains separately identified scientific qualifications. Not a claim of sentence-exact transcription."
+}

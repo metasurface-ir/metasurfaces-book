@@ -24,7 +24,7 @@ def validate():
     for f in (7.,10.,13.):
         for v in (0.,3.,8.,14.,20.):
             c=capacitance(v,p);omega=2*np.pi*f*1e9
-            z=p.resistance_ohm+1j/(omega*c)-1j*omega*p.inductance_nH*1e-9
+            z=p.resistance_ohm+(-1j)/(omega*c)-(-1j)*omega*p.inductance_nH*1e-9
             refl,h=np.linalg.solve(np.array([[1.,-z],[1.,p.impedance_ohm]],complex),[-1.,1.])
             boundary_error=max(boundary_error,float(abs(refl-response(f,v,p)['gamma'])))
             assert abs((1-abs(refl)**2)-p.resistance_ohm*p.impedance_ohm*abs(h)**2)<1e-14
@@ -32,7 +32,7 @@ def validate():
     vr=p.junction_voltage_V*((p.capacitance0_pF*1e-12*(2*np.pi*10e9)**2*p.inductance_nH*1e-9)**(1/p.exponent)-1)
     critical=response(10.,vr,replace(p,resistance_ohm=p.impedance_ohm))
     assert abs(critical['gamma'])<1e-14 and np.isnan(critical['phase_deg'])
-    x=array_positions();ideal=np.exp(2j*np.pi*x*np.sin(np.deg2rad(25.)))
+    x=array_positions();ideal=np.exp((-2j)*np.pi*x*np.sin(np.deg2rad(25.)))
     assert abs(array_field(ideal,25.,x)-1)<1e-14
     cases={str(bits):code_array(bits=bits) for bits in range(1,5)}
     assert all(c['target_metric']<=1+1e-14 for c in cases.values())
@@ -46,7 +46,7 @@ def validate():
     quantization_error=0.
     for levels in (2,4,8,16):
         error=(np.arange(50000)+.5)/50000*2*np.pi/levels-np.pi/levels
-        quantization_error=max(quantization_error,float(abs(np.mean(np.exp(1j*error))-np.sinc(1/levels))))
+        quantization_error=max(quantization_error,float(abs(np.mean(np.exp((-1j)*error))-np.sinc(1/levels))))
     assert quantization_error<2e-10
     plant=replace(p,capacitance0_pF=p.capacitance0_pF*1.12)
     target=complex(response(10.,8.,p)['gamma'])
@@ -66,7 +66,7 @@ def validate():
     harmonic_error=float(np.max(abs(numerical-analytic)));assert harmonic_error<1e-6
     waveform=response(10.,periodic_voltage(u),p)['gamma']
     coeff=sampled_harmonics(waveform,orders)
-    fft=np.fft.ifft(waveform)[orders%samples]*np.exp(1j*np.pi*orders/samples)
+    fft=(np.fft.fft(waveform)/samples)[orders%samples]*np.exp((-1j)*np.pi*orders/samples)
     fft_error=float(np.max(abs(coeff-fft)));assert fft_error<1e-13
     parseval_error=float(abs(np.sum(abs(np.fft.ifft(waveform))**2)-np.mean(abs(waveform)**2)))
     assert parseval_error<1e-14

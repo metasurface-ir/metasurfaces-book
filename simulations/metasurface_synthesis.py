@@ -2,14 +2,14 @@
 
 Extends the Chapter 3 equations to multiple coplanar ridges of a common height.
 Scalar propagation and Jones matrices are separate models, not ridge solutions.
-All lengths use micrometers; exp(-i omega t), exp(i k.r).
+All lengths use micrometers; exp(+i omega t), exp(-i k.r).
 """
 from dataclasses import replace
 import numpy as np
 from scipy.linalg import eigh, solve
 from unit_cell_te import Cell, outgoing_q
 
-SOLVER_VERSION = 'te-supercell-1.0'
+SOLVER_VERSION = 'te-supercell-1.0-positive-time'
 
 
 def solve_supercell(widths_um, pitch_um=.65, height_um=1.5, wavelength_um=1.55,
@@ -45,14 +45,14 @@ def solve_supercell(widths_um, pitch_um=.65, height_um=1.5, wavelength_um=1.55,
     centers=(np.arange(count_cells)+.5)*pitch_um
     eps_coeff=np.sum((n_ridge**2-n_gap**2)*(widths[:,None]/cell.period_um)*
                      np.sinc(widths[:,None]*ell/cell.period_um)*
-                     np.exp(-2j*np.pi*centers[:,None]*ell/cell.period_um),axis=0)
+                     np.exp(-(-2j)*np.pi*centers[:,None]*ell/cell.period_um),axis=0)
     eps_coeff[2*half_order]+=n_gap**2
     eps = eps_coeff[m[:,None]-m[None,:]+2*half_order]
     eigenvalues,W=eigh(eps-np.diag(alpha**2))
-    q=np.sqrt(eigenvalues.astype(complex))
+    q=np.conj(np.sqrt(eigenvalues.astype(complex)))
     if np.min(abs(q))<1e-10:
         raise ValueError('Layer eigenmode cutoff is excluded from this modal basis.')
-    V=W*q;P=np.exp(2j*np.pi*q*height_um/wavelength_um)
+    V=W*q;P=np.exp((-2j)*np.pi*q*height_um/wavelength_um)
     QiW,QtW=qi[:,None]*W,qt[:,None]*W
     matrix=np.block([[V+QiW,(QiW-V)*P],[(V-QtW)*P,-V-QtW]])
     incident=np.zeros(len(m),complex);incident[half_order]=1
@@ -75,7 +75,7 @@ def staircase_coefficients(values, orders):
     if values.ndim!=1 or not values.size or not np.all(np.isfinite(values)):
         raise ValueError('Use a finite nonempty complex sample vector.')
     centers=(np.arange(len(values))+.5)/len(values)
-    return np.sinc(orders/len(values))*np.sum(values[None,:]*np.exp(-2j*np.pi*orders[:,None]*centers),axis=1)/len(values)
+    return np.sinc(orders/len(values))*np.sum(values[None,:]*np.exp(-(-2j)*np.pi*orders[:,None]*centers),axis=1)/len(values)
 
 
 def select_widths(rows, target_phases, minimum_T=.8, phase_offset=0.):
@@ -102,8 +102,8 @@ def angular_spectrum_1d(field, dx_um, wavelength_um, z_um, index=1., propagating
         raise ValueError('Require positive dx, wavelength, index and nonnegative propagation distance.')
     kx=2*np.pi*np.fft.fftfreq(len(field),dx_um)
     k=2*np.pi*index/wavelength_um
-    kz=np.sqrt((k*k-kx*kx).astype(complex))
-    transfer=np.exp(1j*kz*z_um)
+    kz=np.conj(np.sqrt((k*k-kx*kx).astype(complex)))
+    transfer=np.exp((-1j)*kz*z_um)
     if propagating_only:transfer[abs(kx)>=k]=0
     return np.fft.ifft(np.fft.fft(field)*transfer)
 

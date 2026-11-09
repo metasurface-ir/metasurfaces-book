@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "model": "analytical equal-impedance specular sheet",
-  "source_sha256": "e4437a59b83edf1252a63dee0c822e5c3a794a6baf3c08b334d6f112cfd90449",
+  "source_sha256": "f6103bbf4c3561d183e5e93a9775f8f3f376ff10eebcef2ddbead85546464862",
   "parameter_cases": 36,
   "frequencies_per_case": 521,
   "max_power_balance_error": 7.771561172376096e-16,

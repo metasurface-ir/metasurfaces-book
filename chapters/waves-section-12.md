@@ -275,7 +275,7 @@ At Brewster incidence a surviving reflected wave is TE only if the input contain
 (ch02-section-06)=
 ### Computational connection: Derive the interface response
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 Take the plane of incidence to be $xz$. **TE** has electric field along $y$. **TM** has magnetic field along $y$ and electric field in the $xz$ plane. We compare the same tangential electric component on each side: $E_y$ for TE and $E_x$ for TM. Define
@@ -284,7 +284,7 @@ $$
 s=n_i\sin\theta_i,\qquad q_j=\frac{k_{z,j}}{k_0}=\sqrt{n_j^2-s^2},
 $$
 
-choosing the outgoing/decaying root, with nonnegative real and imaginary parts for these lossless positive-index half-spaces. Our dimensionless tangential wave admittance is
+choosing the outgoing/decaying root, with nonnegative real and nonpositive imaginary parts for these lossless positive-index half-spaces. Our dimensionless tangential wave admittance is
 
 $$
 Y_j^{\mathrm{TE}}=q_j,\qquad Y_j^{\mathrm{TM}}=\frac{n_j^2}{q_j}.
@@ -324,7 +324,7 @@ The geometry, polarization basis, and reference plane are part of the definition
 (ch02-section-07)=
 ### Computational connection: Brewster, evanescence, and cutoff
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 For nonmagnetic dielectric media, TM reflection vanishes when the two TM admittances match. Substituting Snell's law gives
@@ -344,8 +344,8 @@ Keep field coefficients and normal power separate. The same admittance expressio
 If $n_i>n_t$, the critical angle satisfies $\sin\theta_c=n_t/n_i$. For glass to air, $\theta_c\approx41.81^\circ$. Above it,
 
 $$
-q_t=i\gamma,\qquad\gamma=\sqrt{s^2-n_t^2}>0,\qquad
-\widetilde E_t\propto e^{ik_xx}e^{-k_0\gamma z}.
+q_t=(-i)\gamma,\qquad\gamma=\sqrt{s^2-n_t^2}>0,\qquad
+\widetilde E_t\propto e^{-ik_xx}e^{-k_0\gamma z}.
 $$
 
 The transmitted field can be nonzero while $\operatorname{Re}Y_t=0$, giving $T=0$ and $R=1$. Its amplitude decay length is $\ell_E=1/(k_0\gamma)$; the intensity decay length is half as large. It is incorrect to interpret $T=0$ as proof that the entire transmitted field vanishes. It is also incorrect to interpret a nonzero evanescent amplitude as a nonzero outgoing normal-power channel.

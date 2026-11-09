@@ -30,13 +30,13 @@ def validate():
     assert all(b['relative_error']<a['relative_error'] for a,b in zip(refinements,refinements[1:]))
     # Independent nested scalar loop at an off-target point tests phase and geometry.
     q=replace(p,samples_side=12); command=phase_command(q,bits=2); receiver=np.array([7.6,0,12.])
-    v=0j; step=q.side_m/q.samples_side
+    v=(-0j); step=q.side_m/q.samples_side
     for iy in range(q.samples_side):
         for ix in range(q.samples_side):
             s=np.array([(ix+.5)*step-q.side_m/2,(iy+.5)*step-q.side_m/2,0])
             rt=np.sqrt(sum((s-tx)**2)); rr=np.sqrt(sum((s-receiver)**2))
             w=step**2*np.sqrt(q.efficiency*tx[2]*receiver[2])/(4*np.pi*(rt*rr)**1.5)
-            v+=w*command[iy*q.samples_side+ix]*complex(np.cos(2*np.pi*28e9*(rt+rr)/C0),np.sin(2*np.pi*28e9*(rt+rr)/C0))
+            v+=w*command[iy*q.samples_side+ix]*complex(np.cos(2*np.pi*28e9*(rt+rr)/C0),-np.sin(2*np.pi*28e9*(rt+rr)/C0))
     loop_error=float(abs(v-channel(command,q,receiver))/abs(v)); assert loop_error<1e-10
     reverse=replace(p,tx_m=p.rx_m,rx_m=p.tx_m)
     reciprocal_error=float(abs(channel(g,reverse)-h)/abs(h)); assert reciprocal_error<1e-12
@@ -49,7 +49,7 @@ def validate():
     # Scalar triangle bound and coherent reference, not an all-angle power proof.
     rng=np.random.default_rng(8)
     for _ in range(8):
-        assert abs(channel(np.exp(1j*rng.uniform(-np.pi,np.pi,len(a))),p))<=a.sum()
+        assert abs(channel(np.exp((-1j)*rng.uniform(-np.pi,np.pi,len(a))),p))<=a.sum()
     for bits in (1,2,3,4):
         assert abs(channel(phase_command(p,bits=bits),p))<=a.sum()*(1+1e-12)
     # Discontinuous quantized commands need their own sampling check.
@@ -63,7 +63,7 @@ def validate():
     spectral_error=0.
     for frequency in (25.,31.):
         independent=sum(float(w)*complex(v)*complex(np.cos(2*np.pi*frequency*1e9*s/C0),
-                        np.sin(2*np.pi*frequency*1e9*s/C0)) for w,v,s in zip(a,g,d))
+                        -np.sin(2*np.pi*frequency*1e9*s/C0)) for w,v,s in zip(a,g,d))
         spectral_error=max(spectral_error,float(abs(independent-channel(g,p,frequency_GHz=frequency))/abs(h)))
     assert spectral_error<1e-11
     n=noise_power(p)
@@ -82,7 +82,7 @@ def validate():
     # Physics checks against an independently sampled continuous-aperture sinc cut.
     u=np.linspace(-.8,.8,601); L=.48
     xm=((np.arange(4096)+.5)/4096-.5)*L
-    numerical=np.mean(np.exp(2j*np.pi*xm[:,None]*u[None,:]/(C0/28e9)),axis=0)
+    numerical=np.mean(np.exp((-2j)*np.pi*xm[:,None]*u[None,:]/(C0/28e9)),axis=0)
     sinc_error=float(np.max(abs(numerical-np.sinc(L*u/(C0/28e9))))); assert sinc_error<2e-6
     invalid=[lambda:aperture(replace(p,side_m=-1)),lambda:aperture(replace(p,efficiency=1.1)),
         lambda:paths(p,rx=(0,0,0)),lambda:paths(p,frequency_GHz=0),lambda:phase_command(p,bits=0),

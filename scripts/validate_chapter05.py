@@ -21,7 +21,7 @@ from metasurface_synthesis import solve_supercell,staircase_coefficients,angular
 
 
 def external_supercell(widths,height,M,pixels):
-    import grcwa
+    import grcwa  # External negative-time phasors are conjugated below.
     pitch=.65;period=pitch*len(widths)
     obj=grcwa.obj(2*M+3,[period,0],[0,period/1000],1/1.55,0.,0.,verbose=0)
     obj.Add_LayerUniform(0,1.);obj.Add_LayerGrid(height,pixels,1);obj.Add_LayerUniform(0,1.5**2)
@@ -36,7 +36,7 @@ def external_supercell(widths,height,M,pixels):
     obj.MakeExcitationPlanewave(0,0,1,0)
     R,T=obj.RT_Solve(normalize=1,byorder=1)
     E,_=obj.Solve_FieldFourier(2,0)
-    return dict(alpha=np.asarray(obj.kx)*1.55/(2*np.pi),R=np.asarray(R),T=np.asarray(T),t0=complex(E[1][0]))
+    return dict(alpha=np.asarray(obj.kx)*1.55/(2*np.pi),R=np.asarray(R),T=np.asarray(T),t0=complex(E[1][0]).conjugate())
 
 
 def main():
@@ -76,7 +76,7 @@ def main():
     assert mirror<1e-10
     quantization=[]
     for N in [2,3,4,6,8,16]:
-        target=np.exp(2j*np.pi*(np.arange(N)+.5)/N)
+        target=np.exp((-2j)*np.pi*(np.arange(N)+.5)/N)
         coefficient=staircase_coefficients(target,np.array([1]))[0]
         error=abs(abs(coefficient)**2-np.sinc(1/N)**2)
         assert error<1e-12
@@ -84,17 +84,17 @@ def main():
     x=np.linspace(-4,4,8001)
     gaussian_error=abs(line_fwhm(x,np.exp(-x*x))-2*np.sqrt(np.log(2)))
     assert gaussian_error<1e-6
-    plane=np.exp(2j*np.pi*3*np.arange(1024)/1024)
+    plane=np.exp((-2j)*np.pi*3*np.arange(1024)/1024)
     dx=.1;wavelength=1.55;index=1.5;z=30.
     k=2*np.pi*index/wavelength;kx=2*np.pi*3/(1024*dx)
     propagated=angular_spectrum_1d(plane,dx,wavelength,z,index)
-    propagation_error=float(np.max(abs(propagated-plane*np.exp(1j*np.sqrt(k*k-kx*kx)*z))))
+    propagation_error=float(np.max(abs(propagated-plane*np.exp((-1j)*np.sqrt(k*k-kx*kx)*z))))
     assert propagation_error<1e-10
     jones_error=0.
     for sigma in [-1,1]:
-        incident=np.array([1,1j*sigma])/np.sqrt(2);converted=np.conj(incident)
+        incident=np.array([1,(-1j)*sigma])/np.sqrt(2);converted=np.conj(incident)
         for theta in np.linspace(0,np.pi,91):
-            jones_error=max(jones_error,float(abs(np.vdot(converted,rotated_jones(1,-1,theta)@incident)-np.exp(2j*sigma*theta))))
+            jones_error=max(jones_error,float(abs(np.vdot(converted,rotated_jones(1,-1,theta)@incident)-np.exp((-2j)*sigma*theta))))
     assert jones_error<1e-12
     report=dict(status='passed',source_sha256=data['metadata']['source_sha256'],library_rows=161,
                 primitive_embedding_complex_error=float(embedding_error),

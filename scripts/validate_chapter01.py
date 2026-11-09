@@ -26,7 +26,7 @@ def check_saved_reference(reference):
             assert row['phase_deg'] is None, 'Zero-amplitude phase must be null.'
         else:
             assert row['phase_deg'] is not None
-            error=np.angle(np.exp(1j*np.deg2rad(row['phase_deg']-float(expected['phase_deg']))))
+            error=np.angle(np.exp((-1j)*np.deg2rad(row['phase_deg']-float(expected['phase_deg']))))
             assert abs(error)<1e-12, 'Saved phase differs.'
 
 
@@ -35,7 +35,7 @@ def main():
     cases=[Sheet(electric_frequency_THz=fe,magnetic_frequency_THz=fm,electric_strength=ae,magnetic_strength=am)
            for fe in [180.,220.] for fm in [180.,230.] for ae in [0.,.1,.4] for am in [0.,.15,.5]]
     worst_balance=0.;worst_unitarity=0.;worst_two_sided=0.
-    incoming=np.array([.3+.4j,-.2+.7j])
+    incoming=np.array([.3+(-.4j),-.2+(-.7j)])
     for sheet in cases:
         v=response(f,sheet);S=scattering_matrix(f,sheet)
         worst_balance=max(worst_balance,float(np.max(v['balance_error'])))
@@ -47,7 +47,7 @@ def main():
     sheet=PRESETS['electric'];v=response(f,sheet)
     u=f/sheet.electric_frequency_THz;d=1-u*u;z=sheet.electric_strength*u
     # Independent shunt-sheet algebra, avoiding the eigenchannel construction.
-    electric_error=float(max(np.max(abs(v['t']-d/(d-1j*z))),np.max(abs(v['r']-1j*z/(d-1j*z)))))
+    electric_error=float(max(np.max(abs(v['t']-d/(d-(-1j)*z))),np.max(abs(v['r']-(-1j)*z/(d-(-1j)*z)))))
     assert electric_error<1e-12
     exact=response(200.,PRESETS['electric']);assert abs(exact['t'])<1e-12 and np.isnan(exact['phase_deg'])
     balanced=response(f,PRESETS['balanced']);assert np.max(abs(balanced['r']))<1e-12
@@ -59,7 +59,7 @@ def main():
         errors=[]
         for step in [.2,.1,.05]:
             vp=response(200.+step,sheet)['t'];vm=response(200.-step,sheet)['t']
-            numerical=1000*np.angle(vp*np.conj(vm))/(4*np.pi*step)
+            numerical=-1000*np.angle(vp*np.conj(vm))/(4*np.pi*step)
             errors.append(float(abs(numerical-exact)))
         assert errors[-1]<.002 and errors[-1]<errors[0]
         derivative.append(dict(strength=strength,steps_THz=[.2,.1,.05],errors_fs=errors))

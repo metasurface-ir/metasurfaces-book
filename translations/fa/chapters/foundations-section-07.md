@@ -42,7 +42,7 @@ $$
 قرارداد فازور ما:
 
 $$
-E(t)=\operatorname{Re}\{\widetilde E e^{-i\omega t}\},\qquad
+E(t)=\operatorname{Re}\{\widetilde E e^{+i\omega t}\},\qquad
 \widetilde E=Ae^{i\phi}.
 $$
 

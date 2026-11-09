@@ -16,18 +16,18 @@
       "relative_peak": 1.0,
       "fixed_window_line_intensity": 27.260706245611463,
       "line_intensity_per_aperture": 0.8737405847952391,
-      "total_line_intensity": 30.970169893609672,
-      "line_intensity_fraction": 0.8802246270930657
+      "total_line_intensity": 30.970169893609665,
+      "line_intensity_fraction": 0.8802246270930658
     },
     {
       "model": "sampled",
-      "fwhm_um": 0.9824114619526049,
-      "peak_intensity": 25.231184283018845,
-      "relative_peak": 0.9135391393283687,
-      "fixed_window_line_intensity": 25.2860180804663,
-      "line_intensity_per_aperture": 0.8104492974508428,
+      "fwhm_um": 0.9824114619526046,
+      "peak_intensity": 25.23118428301885,
+      "relative_peak": 0.9135391393283689,
+      "fixed_window_line_intensity": 25.286018080466295,
+      "line_intensity_per_aperture": 0.8104492974508427,
       "total_line_intensity": 28.286580942828785,
-      "line_intensity_fraction": 0.8939227449076631
+      "line_intensity_fraction": 0.8939227449076629
     },
     {
       "model": "local_library",
@@ -65,10 +65,10 @@
       "fwhm_um": 0.9931540883673631,
       "peak_intensity": 25.083363380187294,
       "relative_peak": 0.9081870251020713,
-      "fixed_window_line_intensity": 25.335073282260534,
-      "line_intensity_per_aperture": 0.8120215795596324,
+      "fixed_window_line_intensity": 25.33507328226053,
+      "line_intensity_per_aperture": 0.8120215795596323,
       "total_line_intensity": 28.291492463973764,
-      "line_intensity_fraction": 0.8955014767963225,
+      "line_intensity_fraction": 0.8955014767963224,
       "roi_peak_normalized_difference": 0.0033848382552158487
     },
     {
@@ -92,7 +92,7 @@
       "dx_um": 0.05,
       "fft_samples": 4096,
       "window_um": 204.8,
-      "fwhm_um": 0.9698811115911047,
+      "fwhm_um": 0.9698811115911048,
       "peak_intensity": 27.688737892572604,
       "relative_peak": 1.0025191643696845,
       "fixed_window_line_intensity": 27.309806511883366,
@@ -107,7 +107,7 @@
       "dx_um": 0.05,
       "fft_samples": 4096,
       "window_um": 204.8,
-      "fwhm_um": 0.9809462475542778,
+      "fwhm_um": 0.9809462475542777,
       "peak_intensity": 25.2822008347998,
       "relative_peak": 0.915386282779215,
       "fixed_window_line_intensity": 25.320377609502593,
@@ -140,10 +140,10 @@
       "fwhm_um": 0.9702351734397532,
       "peak_intensity": 27.682665778015053,
       "relative_peak": 1.0022993128460862,
-      "fixed_window_line_intensity": 27.310491690408334,
-      "line_intensity_per_aperture": 0.8753362721284722,
+      "fixed_window_line_intensity": 27.310491690408337,
+      "line_intensity_per_aperture": 0.8753362721284723,
       "total_line_intensity": 31.017370871529117,
-      "line_intensity_fraction": 0.8804902196103497,
+      "line_intensity_fraction": 0.8804902196103498,
       "roi_peak_normalized_difference": 0.0
     },
     {
@@ -170,10 +170,10 @@
       "fwhm_um": 0.9891320166919031,
       "peak_intensity": 15.175068951671618,
       "relative_peak": 0.5494399023786158,
-      "fixed_window_line_intensity": 15.286565775777934,
-      "line_intensity_per_aperture": 0.48995403127493375,
+      "fixed_window_line_intensity": 15.286565775777932,
+      "line_intensity_per_aperture": 0.4899540312749337,
       "total_line_intensity": 17.075000851434464,
-      "line_intensity_fraction": 0.8952600300745354,
+      "line_intensity_fraction": 0.8952600300745353,
       "roi_peak_normalized_difference": 0.0
     },
     {
@@ -185,10 +185,10 @@
       "fwhm_um": 0.9714129384351624,
       "peak_intensity": 27.604712589364524,
       "relative_peak": 0.9994768813633265,
-      "fixed_window_line_intensity": 27.262016726643935,
-      "line_intensity_per_aperture": 0.8737825873924338,
+      "fixed_window_line_intensity": 27.26201672664394,
+      "line_intensity_per_aperture": 0.8737825873924339,
       "total_line_intensity": 30.970048269538065,
-      "line_intensity_fraction": 0.8802703983338209,
+      "line_intensity_fraction": 0.880270398333821,
       "roi_peak_normalized_difference": 0.011554666495165015
     },
     {
@@ -197,14 +197,14 @@
       "dx_um": 0.1,
       "fft_samples": 4096,
       "window_um": 409.6,
-      "fwhm_um": 0.9890002193013874,
+      "fwhm_um": 0.9890002193013875,
       "peak_intensity": 25.125530054520965,
       "relative_peak": 0.9097137432674587,
       "fixed_window_line_intensity": 25.29333787947529,
       "line_intensity_per_aperture": 0.8106839063934387,
-      "total_line_intensity": 28.286097156761805,
-      "line_intensity_fraction": 0.8941968112214062,
-      "roi_peak_normalized_difference": 0.02522996026723622
+      "total_line_intensity": 28.286097156761798,
+      "line_intensity_fraction": 0.8941968112214064,
+      "roi_peak_normalized_difference": 0.02522996026723609
     },
     {
       "study": "grid",
@@ -219,7 +219,7 @@
       "line_intensity_per_aperture": 0.48928662800757383,
       "total_line_intensity": 17.071021382576102,
       "line_intensity_fraction": 0.8942489410397908,
-      "roi_peak_normalized_difference": 0.015114261497401488
+      "roi_peak_normalized_difference": 0.015114261497401424
     },
     {
       "study": "grid",
@@ -230,11 +230,11 @@
       "fwhm_um": 0.9702351734397532,
       "peak_intensity": 27.682665778015053,
       "relative_peak": 1.0022993128460862,
-      "fixed_window_line_intensity": 27.310491690408334,
-      "line_intensity_per_aperture": 0.8753362721284722,
+      "fixed_window_line_intensity": 27.310491690408337,
+      "line_intensity_per_aperture": 0.8753362721284723,
       "total_line_intensity": 31.017370871529117,
-      "line_intensity_fraction": 0.8804902196103497,
-      "roi_peak_normalized_difference": 0.0038106591881386983
+      "line_intensity_fraction": 0.8804902196103498,
+      "roi_peak_normalized_difference": 0.00381065918813857
     },
     {
       "study": "grid",
@@ -260,10 +260,10 @@
       "fwhm_um": 0.9891320166919031,
       "peak_intensity": 15.175068951671618,
       "relative_peak": 0.5494399023786158,
-      "fixed_window_line_intensity": 15.286565775777934,
-      "line_intensity_per_aperture": 0.48995403127493375,
+      "fixed_window_line_intensity": 15.286565775777932,
+      "line_intensity_per_aperture": 0.4899540312749337,
       "total_line_intensity": 17.075000851434464,
-      "line_intensity_fraction": 0.8952600300745354,
+      "line_intensity_fraction": 0.8952600300745353,
       "roi_peak_normalized_difference": 0.01507429212125605
     },
     {
@@ -277,9 +277,9 @@
       "relative_peak": 1.0037092626266553,
       "fixed_window_line_intensity": 27.333106341300166,
       "line_intensity_per_aperture": 0.8760611006826975,
-      "total_line_intensity": 31.041668556287373,
-      "line_intensity_fraction": 0.8805295466555695,
-      "roi_peak_normalized_difference": 0.0010468772980287194
+      "total_line_intensity": 31.041668556287366,
+      "line_intensity_fraction": 0.8805295466555697,
+      "roi_peak_normalized_difference": 0.001046877298028462
     },
     {
       "study": "grid",
@@ -287,13 +287,13 @@
       "dx_um": 0.025,
       "fft_samples": 16384,
       "window_um": 409.6,
-      "fwhm_um": 0.9861351249743877,
-      "peak_intensity": 25.222492880580038,
-      "relative_peak": 0.9132244519076579,
+      "fwhm_um": 0.9861351249743876,
+      "peak_intensity": 25.222492880580045,
+      "relative_peak": 0.9132244519076581,
       "fixed_window_line_intensity": 25.33793587334616,
       "line_intensity_per_aperture": 0.8121133292739153,
-      "total_line_intensity": 28.306350007908506,
-      "line_intensity_fraction": 0.895132571534903,
+      "total_line_intensity": 28.3063500079085,
+      "line_intensity_fraction": 0.8951325715349032,
       "roi_peak_normalized_difference": 0.008372492110315346
     },
     {
@@ -309,7 +309,7 @@
       "line_intensity_per_aperture": 0.4901582666401909,
       "total_line_intensity": 17.085957254502794,
       "line_intensity_fraction": 0.8950588890852862,
-      "roi_peak_normalized_difference": 0.005033001059873994
+      "roi_peak_normalized_difference": 0.0050330010598740585
     },
     {
       "study": "grid",
@@ -320,10 +320,10 @@
       "fwhm_um": 0.969202051607924,
       "peak_intensity": 27.741070014549585,
       "relative_peak": 1.0044139403395247,
-      "fixed_window_line_intensity": 27.34401361354334,
-      "line_intensity_per_aperture": 0.8764106927417736,
+      "fixed_window_line_intensity": 27.344013613543343,
+      "line_intensity_per_aperture": 0.8764106927417737,
       "total_line_intensity": 31.053974039690964,
-      "line_intensity_fraction": 0.8805318629620216,
+      "line_intensity_fraction": 0.8805318629620217,
       "roi_peak_normalized_difference": 0.0
     },
     {
@@ -332,13 +332,13 @@
       "dx_um": 0.0125,
       "fft_samples": 32768,
       "window_um": 409.6,
-      "fwhm_um": 0.9856587449820771,
+      "fwhm_um": 0.9856587449820773,
       "peak_intensity": 25.240066890758097,
       "relative_peak": 0.9138607496712716,
-      "fixed_window_line_intensity": 25.34363008465269,
-      "line_intensity_per_aperture": 0.8122958360465605,
+      "fixed_window_line_intensity": 25.343630084652695,
+      "line_intensity_per_aperture": 0.8122958360465606,
       "total_line_intensity": 28.317687143046175,
-      "line_intensity_fraction": 0.8949752837027226,
+      "line_intensity_fraction": 0.8949752837027227,
       "roi_peak_normalized_difference": 0.0
     },
     {
@@ -347,7 +347,7 @@
       "dx_um": 0.0125,
       "fft_samples": 32768,
       "window_um": 409.6,
-      "fwhm_um": 0.9872261110818067,
+      "fwhm_um": 0.9872261110818066,
       "peak_intensity": 15.213352682179616,
       "relative_peak": 0.550826031774139,
       "fixed_window_line_intensity": 15.296413516345263,
@@ -370,10 +370,10 @@
         409.6
       ],
       "profile_difference_over_fixed_peak": 0.00021985152359817677,
-      "relative_fwhm_change": 0.00036492374049196117,
+      "relative_fwhm_change": 0.00036492374049184673,
       "peak_change_over_fixed_peak": 0.00021985152359817677,
-      "fixed_window_integral_change_over_aperture": 2.1960850159263856e-05,
-      "line_concentration_change": 2.6674423110994994e-05,
+      "fixed_window_integral_change_over_aperture": 2.196085015937488e-05,
+      "line_concentration_change": 2.6674423111106016e-05,
       "limits": {
         "profile_difference_over_fixed_peak": 0.02,
         "relative_fwhm_change": 0.02,
@@ -395,7 +395,7 @@
         409.6
       ],
       "profile_difference_over_fixed_peak": 0.003814419421927876,
-      "relative_fwhm_change": 0.0066897938074166425,
+      "relative_fwhm_change": 0.006689793807416755,
       "peak_change_over_fixed_peak": 0.003814419421927876,
       "fixed_window_integral_change_over_aperture": 0.00023009193616174706,
       "line_concentration_change": 0.00027039278809304346,
@@ -422,8 +422,8 @@
       "profile_difference_over_fixed_peak": 0.001969162241802085,
       "relative_fwhm_change": 0.005731355002352534,
       "peak_change_over_fixed_peak": 0.001969162241802085,
-      "fixed_window_integral_change_over_aperture": 0.00012142568637585338,
-      "line_concentration_change": 0.0002338491194000536,
+      "fixed_window_integral_change_over_aperture": 0.00012142568637579787,
+      "line_concentration_change": 0.00023384911939994257,
       "limits": {
         "profile_difference_over_fixed_peak": 0.02,
         "relative_fwhm_change": 0.02,
@@ -444,11 +444,11 @@
         409.6,
         409.6
       ],
-      "profile_difference_over_fixed_peak": 0.0010468772980287194,
+      "profile_difference_over_fixed_peak": 0.001046877298028462,
       "relative_fwhm_change": 0.0003567965625681408,
       "peak_change_over_fixed_peak": 0.0007046777128694304,
-      "fixed_window_integral_change_over_aperture": 0.00034959205907614255,
-      "line_concentration_change": 2.316306452088135e-06,
+      "fixed_window_integral_change_over_aperture": 0.00034959205907625357,
+      "line_concentration_change": 2.3163064519771126e-06,
       "limits": {
         "profile_difference_over_fixed_peak": 0.03,
         "relative_fwhm_change": 0.02,
@@ -470,10 +470,10 @@
         409.6
       ],
       "profile_difference_over_fixed_peak": 0.008372492110315346,
-      "relative_fwhm_change": 0.00048331128266843683,
-      "peak_change_over_fixed_peak": 0.00063629776361378,
-      "fixed_window_integral_change_over_aperture": 0.00018250677264519677,
-      "line_concentration_change": 0.0001572878321803861,
+      "relative_fwhm_change": 0.0004833112826680988,
+      "peak_change_over_fixed_peak": 0.0006362977636135228,
+      "fixed_window_integral_change_over_aperture": 0.0001825067726453078,
+      "line_concentration_change": 0.00015728783218049713,
       "limits": {
         "profile_difference_over_fixed_peak": 0.03,
         "relative_fwhm_change": 0.02,
@@ -494,8 +494,8 @@
         409.6,
         409.6
       ],
-      "profile_difference_over_fixed_peak": 0.005033001059873994,
-      "relative_fwhm_change": 0.0004918850004865089,
+      "profile_difference_over_fixed_peak": 0.0050330010598740585,
+      "relative_fwhm_change": 0.0004918850004866214,
       "peak_change_over_fixed_peak": 0.0003860320827696301,
       "fixed_window_integral_change_over_aperture": 0.00011139734523413214,
       "line_concentration_change": 0.00017787442879590998,
@@ -519,8 +519,8 @@
   },
   "axial_peak_um": 29.75,
   "max_jones_error": 6.395250856282128e-16,
-  "library_phase_rms_deg": 0.6872031881601146,
-  "source_sha256": "2f56ebde9128e363043b39aa7738734e734e27eb9d8ae01a7e55eb3dcec62629",
+  "library_phase_rms_deg": 0.6872031881601162,
+  "source_sha256": "16ce1580915bc779184920e82aab9730c6ae76b47d30b7d03e5410a0cf2c75bf",
   "limitations": [
     "Cylindrical scalar focus, not a full-wave metalens",
     "Library aperture uses local periodicity",

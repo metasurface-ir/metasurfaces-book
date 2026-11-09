@@ -56,12 +56,12 @@ Keep geometry, material uncertainty, discretization, artificial boundaries, alge
 
 ## Build a frequency-domain slab calculation
 
-Use $e^{-i\omega t}$, $k_0=2\pi/\lambda_0$, and $E_y(z)$ at normal incidence. The slab occupies $0<z<d$, with real indices $n_f$ inside and $n_e$ on both sides:
+Use $e^{+i\omega t}$, $k_0=2\pi/\lambda_0$, and $E_y(z)$ at normal incidence. The slab occupies $0<z<d$, with real indices $n_f$ inside and $n_e$ on both sides:
 
 $$
 \frac{d^2 E}{dz^2}+k_0^2 n^2(z)E=0,\qquad
-E(z<0)=e^{ik_ez}+r e^{-ik_ez},\qquad
-E(z>d)=t e^{ik_e(z-d)},\qquad k_e=k_0n_e.
+E(z<0)=e^{-ik_ez}+r e^{+ik_ez},\qquad
+E(z>d)=t e^{-ik_e(z-d)},\qquad k_e=k_0n_e.
 $$
 
 Thus $r$ is referenced to the entrance face and $t$ to the exit face. The incident field at the entrance has unit amplitude. The exact benchmark is Chapter 2's independent Fresnel-film formula.
@@ -83,7 +83,7 @@ $$
 
 The grid cutoff is a mathematical domain limit, not an accuracy recommendation. Even safely below cutoff, numerical dispersion can be substantial. The implementation requires $k_0h\max(n_f,n_e)<2$ in both media. Admissible coarse grids may still be inaccurate and are retained to expose that failure.
 
-The right outgoing ghost value is $E_{J+1}=e^{i\theta}E_J$. On the left, add a known incident wave and impose outgoing behavior on the reflected part. These discrete outgoing boundaries are exact for the homogeneous exterior stencil. They are **not a PML**. A deliberately mismatched option uses $e^{ik_eh}$ on the right to reveal small artificial reflections.
+The right outgoing ghost value is $E_{J+1}=e^{-i\theta}E_J$. On the left, add a known incident wave and impose outgoing behavior on the reflected part. These discrete outgoing boundaries are exact for the homogeneous exterior stencil. They are **not a PML**. A deliberately mismatched option uses $e^{-ik_eh}$ on the right to reveal small artificial reflections.
 
 ## See conservation fail as an accuracy certificate
 
@@ -106,14 +106,14 @@ Field agreement is checked at the same physical coordinates and incident normali
 Suppose incident/reflected amplitudes are extracted at a left node a distance $L_-$ from the entrance and transmission at a right node $L_+$ after the exit. With local incident normalization, the raw coefficients satisfy
 
 $$
-r_{\rm mon}=r_0 e^{2ik_hL_-},\qquad
-t_{\rm mon}=t_d e^{ik_h(L_-+L_+)},\qquad k_h=\theta/h.
+r_{\rm mon}=r_0 e^{-2ik_hL_-},\qquad
+t_{\rm mon}=t_d e^{-ik_h(L_-+L_+)},\qquad k_h=\theta/h.
 $$
 
 Deembed using the **same propagation law as the solved grid**. Using continuum $k_e$ instead leaves an error proportional to $(k_h-k_e)L$. Powers can remain unchanged while phase drifts. With the deliberately mismatched right boundary, forward and backward waves coexist in the output region; report their net flux separately. Here $t_{\rm mon}$ denotes the forward-wave coefficient obtained by decomposing the two traveling waves; the squared total field at one monitor node is not forward transmitted power.
 
 $$
-J_{j+1/2}=\operatorname{Im}(E_j^*E_{j+1}),\qquad
+J_{j+1/2}=-\operatorname{Im}(E_j^*E_{j+1}),\qquad
 T_{\rm net}=T_{\rm forward}-T_{\rm backward}.
 $$
 
