@@ -8,8 +8,8 @@ description: Derive the wave, polarization, boundary, and power language needed 
 
 We follow the instructor-supplied booklet in its original section order, retaining the existing computational investigations alongside it. Equations remain LaTeX; source worked examples have colored panels with expandable answers.
 
-:::{note} Two equivalent time conventions, clearly separated
-The primary reading uses $e^{+j\omega t}$. Every section labeled “Computational connection” and the existing notebook/browser models uses $e^{-i\omega t}$. To describe the same real harmonic field, conjugate the complete phasor description when switching conventions; reactive signs and material-loss signs change accordingly. The scientific code is unchanged. The normal direction and field basis are stated at each interface derivation.
+:::{note} One time convention throughout the course
+We use $e^{+i\omega t}$ in the reading, derivations, notebooks, and browser labs. The source booklet writes $j$ for the same imaginary unit, $j=i$. A forward plane wave therefore has spatial factor $e^{-i\mathbf k\cdot\mathbf r}$. The [course convention reference](../models.md#phasor-convention) fixes outgoing branches, passive loss, reactive signs, signed phase, phase lag, and group delay. Normals and field bases remain explicitly stated at each interface.
 :::
 
 - [2.1 Introduction and Maxwell's fundamental equations](waves-section-01.md)

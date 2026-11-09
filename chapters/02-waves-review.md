@@ -9,7 +9,7 @@ Attempt these questions after the [chapter](02-waves-and-interfaces.md), then op
 
 ## Q1: Which way is the power?
 
-A wave in air has $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{ik_0z}$ with time dependence $e^{-i\omega t}$. Which direction must its magnetic field point? What happens when you reverse the propagation direction while keeping electric polarization along $y$?
+A wave in air has $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{-ik_0z}$ with time dependence $e^{+i\omega t}$. Which direction must its magnetic field point? What happens when you reverse the propagation direction while keeping electric polarization along $y$?
 
 :::{dropdown} Answer
 For positive-$z$ propagation, $\mathbf H=(\widehat{\mathbf z}\times\mathbf E)/\eta_0$ points along negative $x$. Then $\operatorname{Re}(\mathbf E\times\mathbf H^*)$ points along positive $z$. Reversing propagation reverses the magnetic relation. Keeping its sign unchanged would give a wrong flux direction and a wrong reflection boundary equation.
@@ -25,7 +25,7 @@ The report omitted the admittance factor. At normal incidence in these real nonm
 
 ## Q3: What rotates in a Jones vector?
 
-For $(E_x,E_y)^T=(1,i)^T/\sqrt2$ at $z=0$, describe the electric-field trajectory under our time convention. What fraction passes an ideal linear analyzer? Would multiplying the entire Jones vector by one global phase change its polarization ellipse?
+For $(E_x,E_y)^T=(1,(-i))^T/\sqrt2$ at $z=0$, describe the electric-field trajectory under our time convention. What fraction passes an ideal linear analyzer? Would multiplying the entire Jones vector by one global phase change its polarization ellipse?
 
 :::{dropdown} Answer
 The real components are proportional to $(\cos\omega t,\sin\omega t)$, so the tip moves from positive $E_x$ toward positive $E_y$. A linear analyzer transmits $1/2$ at every orientation. A global phase shifts the timing of the same trajectory and does not change the polarization ellipse; relative component phase can change it. A handedness name needs an explicit viewing convention. A single Jones vector does not describe unpolarized light.
@@ -52,15 +52,15 @@ The transmitted field can be nonzero and decay as $e^{-\kappa z}$, while $\opera
 An ideal normal-incidence antireflection layer joins $n_0=1$ to $n_2=1.5$. Find its quarter-wave index/thickness at $\lambda_d=0.6\,\mu\mathrm m$. If its reflectance is zero, must the transmission coefficient be 1 with zero phase?
 
 :::{dropdown} Answer
-Choose $n_f=\sqrt{1.5}\approx1.224745$ and $d=\lambda_d/(4n_f)\approx0.122474\,\mu\mathrm m$. The two reflected contributions cancel at the design condition. With entrance and exit phase references, the electric coefficient is $t=i\sqrt{1/1.5}\approx0.816497i$, giving $T=1$. Its field amplitude and phase are not fixed by the statement $R=0$ alone. The perfect cancellation belongs to the stated wavelength, angle, indices, and coherence model.
+Choose $n_f=\sqrt{1.5}\approx1.224745$ and $d=\lambda_d/(4n_f)\approx0.122474\,\mu\mathrm m$. The two reflected contributions cancel at the design condition. With entrance and exit phase references, the electric coefficient is $t=(-i)\sqrt{1/1.5}\approx0.-816497i$, giving $T=1$. Its field amplitude and phase are not fixed by the statement $R=0$ alone. The perfect cancellation belongs to the stated wavelength, angle, indices, and coherence model.
 :::
 
 ## Q7: Is this a valid sheet retrieval?
 
-Empty air is described by $r=0,t=1$ at one common plane. Moving only the output reference downstream by $\lambda_0/4$ gives $t=i$. A retrieval $g=2(1-t)/t$ then returns negative conductance. What should you check before declaring an active material? How does fixed absolute amplitude uncertainty affect retrieval near $t=0$?
+Empty air is described by $r=0,t=1$ at one common plane. Moving only the output reference downstream by $\lambda_0/4$ gives $t=(-i)$. A retrieval $g=2(1-t)/t$ then returns negative conductance. What should you check before declaring an active material? How does fixed absolute amplitude uncertainty affect retrieval near $t=0$?
 
 :::{dropdown} Answer
-The formula assumes coincident reference planes and an equal-air local electric shunt. The shifted data fail $t=1+r$: $i\ne1$. Remove the known propagation phase before testing the model. The negative conductance is an interpretation error here. The derivative $dg/dt=-2/t^2$ means a fixed absolute field uncertainty can produce a large absolute parameter uncertainty near zero transmission; at zero the inverse is undefined. Deembedding and one fitted value do not establish a general local sheet model for a finite film or patterned structure.
+The formula assumes coincident reference planes and an equal-air local electric shunt. The shifted data fail $t=1+r$: $(-i)\ne1$. Remove the known propagation phase before testing the model. The negative conductance is an interpretation error here. The derivative $dg/dt=-2/t^2$ means a fixed absolute field uncertainty can produce a large absolute parameter uncertainty near zero transmission; at zero the inverse is undefined. Deembedding and one fitted value do not establish a general local sheet model for a finite film or patterned structure.
 :::
 
 ## Q8: Does phase change dissipation?
@@ -68,7 +68,7 @@ The formula assumes coincident reference planes and an equal-air local electric 
 A purely electric equal-air sheet has $g=2$, $r=-1/2$, and $t=1/2$. What is its one-sided absorption? What is absorbed for equal coherent counterpropagating beams of total unit input power and relative phase $0$, $90^\circ$, or $180^\circ$? Does this contradict the one-sided absorption bound?
 
 :::{dropdown} Answer
-One-sided absorption is $1-R-T=1/2$. With $\mathbf a=(1,e^{i\phi})^T/\sqrt2$, the two-sided fraction is $(1+\cos\phi)/2$, giving 1, $1/2$, and 0 at those phases. The input state has changed, so the original one-sided bound is not contradicted. The incoming fields must be coherent and must have the stated mode and phase relation. Sum their outgoing complex amplitudes before calculating powers. The result is an analytical prediction, not a claim about an implemented absorber.
+One-sided absorption is $1-R-T=1/2$. With $\mathbf a=(1,e^{-i\phi})^T/\sqrt2$, the two-sided fraction is $(1+\cos\phi)/2$, giving 1, $1/2$, and 0 at those phases. The input state has changed, so the original one-sided bound is not contradicted. The incoming fields must be coherent and must have the stated mode and phase relation. Sum their outgoing complex amplitudes before calculating powers. The result is an analytical prediction, not a claim about an implemented absorber.
 :::
 
 ## The wave detective project

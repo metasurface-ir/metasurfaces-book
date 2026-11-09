@@ -43,7 +43,7 @@ This investigation follows the existing companion lesson draft and preserves its
 
 ### Reference conventions
 
-Use the handoff conventions: time dependence exp(-i omega t), spatial dependence exp(i k dot r), periodicity along x, and ky = 0. The introductory model assumes homogeneous, isotropic, lossless media with positive refractive indices.
+Use the handoff conventions: time dependence exp(+i omega t), spatial dependence exp(i k dot r), periodicity along x, and ky = 0. The introductory model assumes homogeneous, isotropic, lossless media with positive refractive indices.
 
 For vacuum wavelength lambda0 and period Lambda, use k0 = 2 pi / lambda0 and kx,m = ni k0 sin(theta_i) + 2 pi m / Lambda. Classify an order as open when abs(kx,m) < no k0, at grazing cutoff when equal, and closed when greater. Use a documented numerical tolerance around cutoff.
 

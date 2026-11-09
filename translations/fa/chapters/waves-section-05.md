@@ -438,23 +438,23 @@ $$
 (ch02-section-02)=
 ### پیوند محاسباتی؛ به موج جهت بدهیم
 
-قرارداد زمانی این پیوند محاسباتی: $e^{-i\omega t}$.
+قرارداد زمانی این پیوند محاسباتی: $e^{+i\omega t}$.
 
 
 میدان فیزیکی حقیقی را از فازور مختلط به دست می‌آوریم:
 
 $$
-\mathbf E(\mathbf r,t)=\operatorname{Re}\{\widetilde{\mathbf E}(\mathbf r)e^{-i\omega t}\},\qquad
-\widetilde{\mathbf E}(\mathbf r)=\mathbf E_0e^{i\mathbf k\cdot\mathbf r}.
+\mathbf E(\mathbf r,t)=\operatorname{Re}\{\widetilde{\mathbf E}(\mathbf r)e^{+i\omega t}\},\qquad
+\widetilde{\mathbf E}(\mathbf r)=\mathbf E_0e^{-i\mathbf k\cdot\mathbf r}.
 $$
 
-حالا جهت حرکت را از فاز بخوانیم. برای $k_z$ حقیقی و مثبت، ثابت ماندن $k_z z-\omega t$ یعنی با گذشت زمان باید به سمت مثبت $z$ برویم. پس $e^{ik_z z-i\omega t}$ به آن سمت حرکت می‌کند. اما اگر $k_z=i\kappa$ و $\kappa>0$ باشد، عامل فضایی به $e^{-\kappa z}$ تبدیل می‌شود: میدان هرچه جلو می‌رویم کم می‌شود. ریشهٔ مخالف، میدان را دور از مرز غیرفعال رشد می‌دهد و برای این مسئله مناسب نیست.
+حالا جهت حرکت را از فاز بخوانیم. برای $k_z$ حقیقی و مثبت، ثابت ماندن $k_z z-\omega t$ یعنی با گذشت زمان باید به سمت مثبت $z$ برویم. پس $e^{-ik_z z+i\omega t}$ به آن سمت حرکت می‌کند. اما اگر $k_z=(-i)\kappa$ و $\kappa>0$ باشد، عامل فضایی به $e^{-\kappa z}$ تبدیل می‌شود: میدان هرچه جلو می‌رویم کم می‌شود. ریشهٔ مخالف، میدان را دور از مرز غیرفعال رشد می‌دهد و برای این مسئله مناسب نیست.
 
 معادلات ماکسول در ناحیهٔ همگن و بدون منبع چنین‌اند:
 
 $$
-\nabla\times\widetilde{\mathbf E}=i\omega\mu\widetilde{\mathbf H},\qquad
-\nabla\times\widetilde{\mathbf H}=-i\omega\varepsilon\widetilde{\mathbf E},\qquad
+\nabla\times\widetilde{\mathbf E}=(-i)\omega\mu\widetilde{\mathbf H},\qquad
+\nabla\times\widetilde{\mathbf H}=+i\omega\varepsilon\widetilde{\mathbf E},\qquad
 \nabla\cdot\widetilde{\mathbf D}=0,\qquad\nabla\cdot\widetilde{\mathbf B}=0.
 $$
 

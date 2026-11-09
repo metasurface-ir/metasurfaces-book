@@ -1,6 +1,6 @@
 """Chapter 8: declared scalar aperture channel, not a full-wave RIS solver.
 
-Time convention exp(-i omega t). Outgoing paths have exp(+i k r).
+Time convention exp(+i omega t). Outgoing paths have exp(-i k r).
 Grid tiles are integration/control samples, not separately normalized antennas.
 """
 from dataclasses import dataclass
@@ -74,7 +74,7 @@ def phase_command(p=Link(), target=None, mode='focus', bits=None):
             raise ValueError('Use 1 to 8 phase bits.')
         step = 2*np.pi/2**bits
         phase = step*np.floor(phase/step+.5)
-    return np.exp(1j*phase)
+    return np.exp((-1j)*phase)
 
 
 def channel(command, p=Link(), rx=None, frequency_GHz=None):
@@ -83,7 +83,7 @@ def channel(command, p=Link(), rx=None, frequency_GHz=None):
     if command.shape != weights.shape or not np.all(np.isfinite(command)) or np.max(abs(command)) > 1+1e-12:
         raise ValueError('One passive complex coefficient per integration sample is required.')
     f = p.frequency_GHz if frequency_GHz is None else frequency_GHz
-    return np.sum(weights*command*np.exp(2j*np.pi*f*1e9/C0*distance))
+    return np.sum(weights*command*np.exp((-2j)*np.pi*f*1e9/C0*distance))
 
 
 def noise_power(p=Link()):

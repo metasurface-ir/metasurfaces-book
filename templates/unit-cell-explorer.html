@@ -25,11 +25,11 @@
 <h2>2. Inspect the available phase arc</h2>
 <svg id="complex" class="plot" viewBox="0 0 440 310" role="img" aria-label="Computed complex transmission amplitudes and selected geometry"></svg>
 <p id="complex-value" class="small"></p>
-<p class="notice small">The dashed circle marks |t|=1. Here T=1.5|t|² because the exterior indices differ. The dotted circle marks the requested minimum power: eligible points lie on or outside it. Muted points fail that power threshold; the purple ray marks the target phase and the purple ring marks the nearest eligible row. Orange marks the width being inspected.</p>
+<p class="notice small">The dashed circle marks |t|=1. Here T=1.5|t|² because the exterior indices differ. The dotted circle marks the requested minimum power: eligible points lie on or outside it. Muted points fail that power threshold; the purple ray marks the phasor phase −Φ★ for the requested phase lag and the purple ring marks the nearest eligible row. Orange marks the width being inspected.</p>
 </section>
 <section class="card wide">
 <h2>3. Request a phase and test feasibility</h2>
-<div class="controls"><div><label for="target">Target phase (degrees)</label><input id="target" type="number" min="-180" max="180" step="any" value="0"></div><div><label for="minT">Minimum transmission power</label><input id="minT" type="number" min="0" max="1" step="any" value="0.8"></div></div>
+<div class="controls"><div><label for="target">Target phase lag (degrees)</label><input id="target" type="number" min="-180" max="180" step="any" value="0"></div><div><label for="minT">Minimum transmission power</label><input id="minT" type="number" min="0" max="1" step="any" value="0.8"></div></div>
 <p id="error" class="invalid small" role="alert"></p>
 <div id="decision" class="status" aria-live="polite"></div>
 <div class="presets"><button id="apply">Inspect nearest eligible row</button></div>
@@ -37,7 +37,7 @@
 </section>
 <section class="card wide"><h2>Model and evidence</h2>
 <p class="small">Period 0.65 µm · Height 0.60 µm · Free-space wavelength 1.55 µm · Normal incidence · Ridge index 2.4 · Gap/incident index 1 · Substrate index 1.5. All indices are ideal, constant, real values. Only order m=0 propagates on either side.</p>
-<p class="small">Time dependence exp(−iωt). The incident Ey is one at z=0. Reflection is referenced to z=0 and transmission to z=height. The ridge is invariant along y; this is a TE, one-dimensional grating, with no absorption, material dispersion, finite-array simulation, or fabrication data.</p>
+<p class="small">Time dependence exp(+iωt). The incident Ey is one at z=0. Reflection is referenced to z=0 and transmission to z=height. The ridge is invariant along y; this is a TE, one-dimensional grating, with no absorption, material dispersion, finite-array simulation, or fabrication data.</p>
 <p id="span" class="small"></p><p class="small sub">The library passed analytic film tests, harmonic refinements, and a separate grcwa implementation comparison. Both implementations use RCWA; no FDTD/FEM or experimental comparison is claimed.</p>
 </section>
 </div></main>
@@ -51,7 +51,7 @@ let nearest=null;
 function selectCandidate(target,minT){
  const eligible=rows.filter(r=>r.accepted&&r.T>=minT);
  if(!eligible.length)return null;
- return eligible.map(row=>({row,error:Math.abs(wrap(row.phase_deg-target))})).sort((a,b)=>a.error-b.error)[0];
+ return eligible.map(row=>({row,error:Math.abs(wrap(row.phase_deg+target))})).sort((a,b)=>a.error-b.error)[0];
 }
 function update(){
  const index=Number($('width').value),row=rows[index],number=(value,digits=3)=>value.toFixed(digits);
@@ -68,8 +68,8 @@ function update(){
  const path=rows.map((r,i)=>(i?'L':'M')+px(r)+','+py(r)).join(' ');
  const parameters=library.metadata.parameters,fluxFactor=parameters.n_substrate/parameters.n_incident;
  const threshold=valid?`<circle cx="220" cy="150" r="${112*Math.sqrt(minT/fluxFactor)}" fill="none" stroke="#687d56" stroke-width="1.5" stroke-dasharray="2 4"/>`:'';
- const radians=target*Math.PI/180;
- const targetRay=valid?`<path d="M220 150L${220+128*Math.cos(radians)} ${150-128*Math.sin(radians)}" stroke="#7a4c98" stroke-width="1.7" stroke-dasharray="7 3"/><text x="${220+140*Math.cos(radians)}" y="${150-140*Math.sin(radians)}" text-anchor="middle" style="fill:#7a4c98">φ★</text>`:'';
+ const radians=-target*Math.PI/180;
+ const targetRay=valid?`<path d="M220 150L${220+128*Math.cos(radians)} ${150-128*Math.sin(radians)}" stroke="#7a4c98" stroke-width="1.7" stroke-dasharray="7 3"/><text x="${220+140*Math.cos(radians)}" y="${150-140*Math.sin(radians)}" text-anchor="middle" style="fill:#7a4c98">Φ★</text>`:'';
  const nearestRing=nearest?`<circle cx="${px(nearest.row)}" cy="${py(nearest.row)}" r="9" fill="none" stroke="#7a4c98" stroke-width="2"/>`:'';
  $('complex').innerHTML=`<circle cx="220" cy="150" r="112" fill="none" stroke="#9cafbc" stroke-dasharray="5 4"/><path d="M90 150H350M220 20V280" stroke="#d3dde5"/><path d="${path}" fill="none" stroke="#9bbbc0" stroke-width="2"/>${threshold}${targetRay}${rows.map(r=>`<circle cx="${px(r)}" cy="${py(r)}" r="${valid&&r.T<minT?2:3}" fill="${!r.accepted||(valid&&r.T<minT)?'#b3bdc5':'#16858c'}"/>`).join('')}${nearestRing}<path d="M220 150L${px(row)} ${py(row)}" stroke="#dc8a44" stroke-width="2"/><circle cx="${px(row)}" cy="${py(row)}" r="6" fill="#dc8a44"/><text x="355" y="154">Re(t)</text><text x="227" y="20">Im(t)</text><text x="334" y="140">1</text><text x="228" y="43">1</text><text x="98" y="140">−1</text><text x="228" y="274">−1</text>`;
  $('complex-value').textContent=`Selected t = ${number(row.t_real,5)} ${row.t_imag<0?'−':'+'} ${number(Math.abs(row.t_imag),5)} i; phase reference at the bottom ridge face.`;

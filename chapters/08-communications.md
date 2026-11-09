@@ -32,10 +32,10 @@ Original geometry: transmitter, reflective aperture, receiver and optional direc
 
 ## 8.3 A channel with explicit normalization
 
-Use the book’s time convention $e^{-i\omega t}$, so an outgoing path contributes $e^{+ikr}$. For sample j, let $r_{tj}$ and $r_{rj}$ be the node-to-sample distances and let $c_{tj}=z_t/r_{tj}$ and $c_{rj}=z_r/r_{rj}$ be positive direction cosines. The declared scalar model is
+Use the book’s time convention $e^{+i\omega t}$, so an outgoing path contributes $e^{-ikr}$. For sample j, let $r_{tj}$ and $r_{rj}$ be the node-to-sample distances and let $c_{tj}=z_t/r_{tj}$ and $c_{rj}=z_r/r_{rj}$ be positive direction cosines. The declared scalar model is
 
 $$
-h_s(f)=\sum_{j=1}^{N}a_j\Gamma_j(f)e^{ik(r_{tj}+r_{rj})},\qquad a_j=\frac{\Delta A\sqrt{\eta G_tG_r c_{tj}c_{rj}}}{4\pi r_{tj}r_{rj}},\qquad |\Gamma_j|\leq1.
+h_s(f)=\sum_{j=1}^{N}a_j\Gamma_j(f)e^{-ik(r_{tj}+r_{rj})},\qquad a_j=\frac{\Delta A\sqrt{\eta G_tG_r c_{tj}c_{rj}}}{4\pi r_{tj}r_{rj}},\qquad |\Gamma_j|\leq1.
 $$
 
 The ratio of area to two distances makes each amplitude dimensionless. The factor $\eta$ is an assigned power loss, included once through its square root; $\Gamma_j$ is the additional normalized complex command. The separable cosine pattern is a **declared reciprocal aperture approximation**, not an exact vector-scattering formula for arbitrary reflection angles. Antenna gains are assumed constant over the aperture. Coupling, polarization conversion, edge currents, material dispersion and environmental multipath are omitted.
@@ -59,7 +59,7 @@ $$
 Equality is possible with unit-magnitude commands when all terms share a phase. Hence
 
 $$
-\Gamma_j^\star(f_0)=e^{-ik_0d_j+i\phi_0},\qquad h_s(f_0)=e^{i\phi_0}\sum_j a_j.
+\Gamma_j^\star(f_0)=e^{+ik_0d_j-i\phi_0},\qquad h_s(f_0)=e^{-i\phi_0}\sum_j a_j.
 $$
 
 The global phase $\phi_0$ does not alter the isolated surface-path power, but it matters when another path is present. With realizable state magnitudes below one, optimize complex states; replacing them with phase-only unit coefficients overstates performance. The reference uses ideal continuous phase, a plane-wave approximation, and two-bit phase rounding. These are prescribed states, not measured hardware.
@@ -99,7 +99,7 @@ $$
 For a constant direct amplitude b and focused surface amplitude a, reference phase to the direct path and expand the modulus:
 
 $$
-|b+ae^{i\phi}|^2=a^2+b^2+2ab\cos\phi,\qquad (a-b)^2\leq |h_d+h_s|^2\leq(a+b)^2.
+|b+ae^{-i\phi}|^2=a^2+b^2+2ab\cos\phi,\qquad (a-b)^2\leq |h_d+h_s|^2\leq(a+b)^2.
 $$
 
 Adding powers would discard the cross term. It is justified only under an explicit incoherence/averaging assumption. The notebook uses a direct Friis amplitude with an assigned 10-dB excess power loss and sweeps a common phase offset. That loss is a teaching parameter, not a measured blockage model. The main focusing, bandwidth and training investigations omit the direct path so their comparisons remain interpretable.
@@ -124,7 +124,7 @@ Here the noise is −86.975 dBm, isolated surface-path gain −87.158 dB, receiv
 
 ## 8.8 Finite states and uncertain phase
 
-For M equally spaced ideal phases, nearest rounding gives error within $[-\pi/M,\pi/M]$. If errors are uniformly distributed, integrating $e^{i\epsilon}$ gives mean phasor $\operatorname{sinc}(1/M)$, using normalized sinc. Its square is a useful large-array benchmark, not an exact finite-layout law. Our two-bit finite aperture gives a target-power ratio of 0.810, close to $8/\pi^2$.
+For M equally spaced ideal phases, nearest rounding gives error within $[-\pi/M,\pi/M]$. If errors are uniformly distributed, integrating $e^{-i\epsilon}$ gives mean phasor $\operatorname{sinc}(1/M)$, using normalized sinc. Its square is a useful large-array benchmark, not an exact finite-layout law. Our two-bit finite aperture gives a target-power ratio of 0.810, close to $8/\pi^2$.
 
 For independent Gaussian phase errors with standard deviation $\sigma$ in radians, expand the squared sum into diagonal and off-diagonal terms. Each cross term contains two independent errors; their characteristic functions multiply to $e^{-\sigma^2}$. Thus
 
@@ -139,13 +139,13 @@ At zero error, the coherent limit returns. At very large independent error, only
 Freeze the phase designed at $f_0$. At the target, a residual path phase proportional to frequency offset remains:
 
 $$
-h_s(f)=\sum_j a_j e^{i2\pi(f-f_0)d_j/c},\qquad \Delta\psi_{j\ell}=\frac{2\pi(f-f_0)(d_j-d_\ell)}{c}.
+h_s(f)=\sum_j a_j e^{-i2\pi(f-f_0)d_j/c},\qquad \Delta\psi_{j\ell}=\frac{2\pi(f-f_0)(d_j-d_\ell)}{c}.
 $$
 
-A phase setting cancels path differences at one frequency. An ideal relative-delay law can cancel them throughout a band under our nondispersive-amplitude assumption. With this time convention, a delay contributes $e^{+i\omega\tau}$. Choose
+A phase setting cancels path differences at one frequency. An ideal relative-delay law can cancel them throughout a band under our nondispersive-amplitude assumption. With this time convention, a delay contributes $e^{-i\omega\tau}$. Choose
 
 $$
-\tau_j=\frac{d_{\max}-d_j}{c}\geq0,\qquad e^{i2\pi f\tau_j}e^{i2\pi f d_j/c}=e^{i2\pi f d_{\max}/c}.
+\tau_j=\frac{d_{\max}-d_j}{c}\geq0,\qquad e^{-i2\pi f\tau_j}e^{-i2\pi f d_j/c}=e^{-i2\pi f d_{\max}/c}.
 $$
 
 The common phase is irrelevant to isolated received power. The ideal-delay curve is a benchmark; real delay hardware adds loss, dispersion and limits. [Yang et al.](https://arxiv.org/abs/2304.00440) study frequency-dependent near-field patterns and channel estimation in a substantially richer wideband system. Our notebook isolates the geometric mechanism; it does not reproduce their estimator.

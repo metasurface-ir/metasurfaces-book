@@ -80,6 +80,24 @@ project:
   - file: chapters/03-unit-cell-design.md
     title: Chapter 3 - Unit-cell design and simulation
     children:
+    - file: chapters/unit-cell-section-01.md
+    - file: chapters/unit-cell-section-02.md
+    - file: chapters/unit-cell-section-03.md
+    - file: chapters/unit-cell-section-04.md
+    - file: chapters/unit-cell-section-05.md
+    - file: chapters/unit-cell-section-06.md
+    - file: chapters/unit-cell-computational-01.md
+    - file: chapters/unit-cell-computational-02.md
+    - file: chapters/unit-cell-computational-03.md
+    - file: chapters/unit-cell-computational-04.md
+    - file: chapters/unit-cell-computational-05.md
+    - file: chapters/unit-cell-computational-06.md
+    - file: chapters/unit-cell-computational-07.md
+    - file: chapters/unit-cell-computational-08.md
+    - file: chapters/unit-cell-computational-09.md
+    - file: chapters/unit-cell-computational-10.md
+    - file: chapters/unit-cell-computational-11.md
+    - file: chapters/unit-cell-computational-12.md
     - file: chapters/03-unit-cell-guide.md
     - file: labs/03-unit-cell-lab.md
     - file: notebooks/03-unit-cell-library.ipynb

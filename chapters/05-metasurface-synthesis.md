@@ -47,18 +47,20 @@ The working sequence is **target field → representation → realizable respons
 
 ## 5.2 Specify a target field before choosing a phase
 
+Here $\Phi$ denotes phase lag: $E=Ae^{-i\Phi}$. A stored library phase is instead the signed argument $\phi_j=\arg t_j$; its target is $-\Phi(x_j)$. The circular selection formula below uses that signed argument.
+
 At a reference plane, a scalar target can be written
 
 $$
-E_{\rm out}(x)=A(x)e^{i\phi(x)}.
+E_{\rm out}(x)=A(x)e^{-i\Phi(x)}.
 $$
 
 For vector fields, specify two complex polarization components, or an appropriate Jones transformation. Also state wavelength, illumination, exterior media, reference planes, aperture, and the desired observable. A beam direction, target-order power, focal width, and polarization-conversion fraction are different objectives.
 
-For time dependence $e^{-i\omega t}$ and an incident factor $e^{ik_{x,i}x}$, a multiplicative phase contributes a local transverse wavevector
+For time dependence $e^{+i\omega t}$ and an incident factor $e^{-ik_{x,i}x}$, a multiplicative phase contributes a local transverse wavevector
 
 $$
-k_{x,\rm out}=k_{x,i}+\frac{d\phi}{dx}.
+k_{x,\rm out}=k_{x,i}+\frac{d\Phi}{dx}.
 $$
 
 Thus a constant gradient $g$ gives
@@ -98,11 +100,11 @@ Divide one period into $N$ intervals of pitch $p=L/N$. Assign a complex value $t
 $$
 C_m=\operatorname{sinc}\left(\frac{m}{N}\right)
 \frac{1}{N}\sum_{j=0}^{N-1}t_j
-e^{-2\pi i m(j+1/2)/N},
+e^{-2\pi (-i) m(j+1/2)/N},
 \qquad \operatorname{sinc}(u)=\frac{\sin(\pi u)}{\pi u}.
 $$
 
-The sinc factor represents each finite-width interval. A discrete sum without this factor describes a different source model. For ideal samples $t_j=e^{2\pi i(j+1/2)/N}$,
+The sinc factor represents each finite-width interval. A discrete sum without this factor describes a different source model. For ideal samples $t_j=e^{2\pi (-i)(j+1/2)/N}$,
 
 $$
 |C_{+1}|^2=\operatorname{sinc}^2(1/N).
@@ -110,7 +112,7 @@ $$
 
 For six levels this coefficient fraction is about 0.9119. It is a property of the scalar staircase field, not a full-wave device efficiency. Physical order powers additionally require flux normalization and a consistent scattering solution.
 
-A sufficient local sampling condition for a phase-only target is $p\,\max|d\phi/dx|<\pi$, which avoids exceeding the phase-gradient Nyquist limit. This alone does not exclude additional physical diffraction channels or prove that a local-response approximation is accurate. Use the actual primitive/supercell period and exterior light cones as well.
+A sufficient local sampling condition for a phase-only target is $p\,\max|d\Phi/dx|<\pi$, which avoids exceeding the phase-gradient Nyquist limit. This alone does not exclude additional physical diffraction channels or prove that a local-response approximation is accurate. Use the actual primitive/supercell period and exterior light cones as well.
 
 ## 5.5 Build a realizable phase library
 
@@ -146,7 +148,7 @@ For the full-wave model, the Chapter 3 TE Fourier equations are extended to all 
 $$
 \epsilon_\ell=n_g^2\delta_{\ell0}+
 (n_r^2-n_g^2)\sum_j\frac{w_j}{L}
-\operatorname{sinc}\left(\frac{\ell w_j}{L}\right)e^{-2\pi i\ell x_j/L}.
+\operatorname{sinc}\left(\frac{\ell w_j}{L}\right)e^{-2\pi (-i)\ell x_j/L}.
 $$
 
 The complete Maxwell boundary problem is solved at the common top and bottom faces. All retained Fourier harmonics interact through this material matrix. Face-referenced decaying propagation factors avoid growing evanescent transfer factors.
@@ -182,10 +184,10 @@ Three supercells are also compared at matching $M=48$ with the separately develo
 For normal incidence and a focus at $(0,f)$ in a homogeneous output medium, equal accumulated phase gives
 
 $$
-\phi(x)=-k_t\left(\sqrt{x^2+f^2}-f\right)+\phi_0.
+\Phi(x)=-k_t\left(\sqrt{x^2+f^2}-f\right)+\phi_0.
 $$
 
-For a point focus in two transverse dimensions, replace $x^2$ with $x^2+y^2$. At oblique incidence subtract the incident tangential phase $k_{x,i}x+k_{y,i}y$ as well. The paraxial limit is $\phi(x)\approx-k_tx^2/(2f)$; the exact profile avoids that approximation in the target path length, while a scalar aperture model still has its own limits.
+For a point focus in two transverse dimensions, replace $x^2$ with $x^2+y^2$. At oblique incidence subtract the incident tangential phase $k_{x,i}x+k_{y,i}y$ as well. The paraxial limit is $\Phi(x)\approx-k_tx^2/(2f)$; the exact profile avoids that approximation in the target path length, while a scalar aperture model still has its own limits.
 
 The executed example uses a **cylindrical line focus**: 48 pitch-wide cells, aperture $D=31.2\,\mu\mathrm m$, design distance $f=30\,\mu\mathrm m$, wavelength $1.55\,\mu\mathrm m$, and output index 1.5. It compares a continuous ideal aperture, a sampled phase aperture, and an aperture assigned the expanded library's complex local coefficients.
 
@@ -218,15 +220,15 @@ J(\theta)=R(\theta)
 \quad R(\theta)=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}.
 $$
 
-Define the fixed-basis circular states $\mathbf e_\sigma=(1,i\sigma)^T/\sqrt2$. Then
+Define the fixed-basis circular states $\mathbf e_\sigma=(1,(-i)\sigma)^T/\sqrt2$. Then
 
 $$
 J(\theta)\mathbf e_\sigma=
 \frac{t_x+t_y}{2}\mathbf e_\sigma+
-\frac{t_x-t_y}{2}e^{2i\sigma\theta}\mathbf e_{-\sigma}.
+\frac{t_x-t_y}{2}e^{-2i\sigma\theta}\mathbf e_{-\sigma}.
 $$
 
-The converted component acquires geometric phase $2\sigma\theta$. Its amplitude is controlled by $(t_x-t_y)/2$. For an ideal lossless retarder, $t_x=e^{i\delta/2}$ and $t_y=e^{-i\delta/2}$, so the conversion fraction is $\sin^2(\delta/2)$. A half-wave response maximizes conversion; a rotation angle by itself does not establish high efficiency.
+The converted component acquires phase lag $2\sigma\theta$, corresponding to signed complex phase $-2\sigma\theta$. Its amplitude is controlled by $(t_x-t_y)/2$. For an ideal lossless retarder, $t_x=e^{-i\delta/2}$ and $t_y=e^{+i\delta/2}$, so the conversion fraction is $\sin^2(\delta/2)$. A half-wave response maximizes conversion; a rotation angle by itself does not establish high efficiency.
 
 ```{figure} ../assets/chapter-05/polarization.png
 :alt: Opposite geometric-phase slopes for the two defined circular basis states and conversion versus retardance.

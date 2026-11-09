@@ -219,7 +219,7 @@ Unequal component amplitudes alone do not guarantee elliptical polarization: in-
 (ch02-section-04)=
 ### Computational connection: Make polarization visible
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 At a fixed point, the tip of the transverse electric field can trace a line, ellipse, or circle over one period. Write a unit-norm Jones vector for propagation along positive $z$ as
@@ -233,10 +233,10 @@ Here $\alpha$ controls the component magnitudes and $\delta$ is the relative pha
 
 $$
 E_x(t)=\cos\alpha\cos\omega t,\qquad
-E_y(t)=\sin\alpha\cos(\delta-\omega t).
+E_y(t)=\sin\alpha\cos(\delta+\omega t).
 $$
 
-For $\delta=0$, the vector remains on a line. For $\alpha=45^\circ$ and $\delta=90^\circ$, the normalized state is $(1,i)^T/\sqrt2$: starting at positive $E_x$, the tip moves toward positive $E_y$ as time increases. This description specifies the axes and time convention without relying on a potentially ambiguous handedness label.
+For $\delta=0$, the vector remains on a line. For $\alpha=45^\circ$ and $\delta=90^\circ$, the normalized state is $(1,i)^T/\sqrt2$: starting at positive $E_x$, the tip moves toward negative $E_y$ as time increases. This description specifies the axes and time convention without relying on a potentially ambiguous handedness label.
 
 ```{figure} ../assets/chapter-02/polarization.png
 :alt: Original time-domain polarization ellipses and analyzer responses calculated from coherent Jones vectors.

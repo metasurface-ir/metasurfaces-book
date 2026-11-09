@@ -3,7 +3,7 @@
   "assets": [
     {
       "asset": "assets/chapter-01/delay.png",
-      "sha256": "7f1c168cbd6ef81d4bf8dadbd00132369bda464ac9e8a675ea86ba005f8dd344",
+      "sha256": "a99b70be52199be7f9f108d44d8b61d28df7fb744a4c1ef75f774725c06befc7",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -31,7 +31,7 @@
     },
     {
       "asset": "assets/chapter-01/phasors.png",
-      "sha256": "8d22e9bd63f5405e48c2197864b98aaeb0b8b9baa48aae01bcfadba3147ddb15",
+      "sha256": "b0fc56c65f3e6bc152bbf01d3474c678eeded6dbaaa35b199cccecdd4b6f97df",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -45,7 +45,7 @@
     },
     {
       "asset": "assets/chapter-01/response.png",
-      "sha256": "94fd99cac54e294bc475d40743d260b201ee3ea56135bc3ec15e030605a6e5ca",
+      "sha256": "1d5390778b3f23eacecb434046e70e458de3a195e01c556f0e57997beb286263",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -59,7 +59,7 @@
     },
     {
       "asset": "assets/chapter-02/film-interference.png",
-      "sha256": "5e18a6618da4c4278d12a08528744d07430b3e4e3763f13d0c038ae187e614b2",
+      "sha256": "1ec82564910c7233ed758e7239f48d3d41b1f92472d105b0d80c4572f17de9f8",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -87,7 +87,7 @@
     },
     {
       "asset": "assets/chapter-02/polarization.png",
-      "sha256": "ddf1ffc7d050f308d378e4c6b4a05ce4959c1d09de243f70606c211ce997f798",
+      "sha256": "be5e8d582159f7a6053b4c320067d6681f42f42787e8f49af72cb4d2005792db",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -262,7 +262,7 @@
     },
     {
       "asset": "assets/chapter-03/library.png",
-      "sha256": "85b8aedc9d403c613a2f5cbece62636e23e5b9eddd25973ad02835ed98c3b62a",
+      "sha256": "0adb14d31796359d2b4bfbb4c22e022da48eff1bc5390859e2996429177fc51e",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -275,8 +275,36 @@
       ]
     },
     {
+      "asset": "assets/chapter-03/source-array-cell.svg",
+      "sha256": "407eb50c3efa905a3a6d622c817441ef69d1a25823184fe57b453621135d168f",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-03/source-array-cell.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-03/source-geometries.svg",
+      "sha256": "552410f24f23099a2023b49da6b1cb3d72fe029c242a4ce7afcbffd35446a0c5",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-03/source-geometries.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-03/source-pb.svg",
+      "sha256": "6896958159609b070df4e6477eb7972345f4405dd6925817afaff1356d651a2b",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-03/source-pb.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-03/source-profiles.svg",
+      "sha256": "1958567c699879db5afc7d4ef2ec316f5b228a973aa0bb4862dc5c977ec3e9d1",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-03/source-profiles.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
       "asset": "assets/chapter-03/spectra.png",
-      "sha256": "12c928853699fa2e11c8faf71fb1b78d8ea922dc1bc8ae9e956e9551be14a499",
+      "sha256": "3739b4b52c2097e84b0ec0df677dd4f9e72dbbb56067ff492ce481e886e6f757",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -341,7 +369,7 @@
     },
     {
       "asset": "assets/chapter-04/period-and-phase.png",
-      "sha256": "d047b3a8d00fcea0599ec1abb74e05a086d044c326327f40a21a4f13cc4313d1",
+      "sha256": "291a9cb4aadfa685002c052c0af2faba89d833060128b4104fd2c20375f7b313",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -383,7 +411,7 @@
     },
     {
       "asset": "assets/chapter-05/coverage.png",
-      "sha256": "9248642a7e748997c7bb6a370827631186839ff0b9071a24b19d7fb63cf563f7",
+      "sha256": "6d01c129506f0011264e136931cd6035e1ecc7f8a95160f7996b58929361035d",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -439,7 +467,7 @@
     },
     {
       "asset": "assets/chapter-05/focus.png",
-      "sha256": "bbf7d955599f06653ad0577fdcf2c9d3fe4509175e4ee6c749eb2d323b767127",
+      "sha256": "418f7a7839c11a2f994025d0ea21a850d9172135a968c322521c83634f87f85c",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -467,7 +495,7 @@
     },
     {
       "asset": "assets/chapter-05/polarization.png",
-      "sha256": "420157c8dbb4d0ec0ba2daccf229104a32f3776abde0b6bd4edc7d902a4e103d",
+      "sha256": "8b764ad004e929ff74addc70196f5f7e205096046d00c3d0d0b94650ea3af799",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -490,7 +518,7 @@
     },
     {
       "asset": "assets/chapter-06/boundaries.png",
-      "sha256": "24b96dc3efd3503ff7d87a93bf23d5a36ef6ae6d267116116811aff733ba54dd",
+      "sha256": "3bf3e70e362c4e81c40b951c5955bde07a62aa8ebb0b886bee3b39a9bd8a6abd",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -569,7 +597,7 @@
     },
     {
       "asset": "assets/chapter-07/dynamics.png",
-      "sha256": "1df54314f27ba259d499760eed7968c2723ca3ebc923d1d7e23baee5c7ff5123",
+      "sha256": "f5770997cc125a29264b762bdc18f83f880ccbc3cf01e68409aaa153cd6bc2e1",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -583,7 +611,7 @@
     },
     {
       "asset": "assets/chapter-07/feedback.png",
-      "sha256": "bb528a4db4b22f3936d520f0ac589683e186e8ce6d28ed70828063a3637abb41",
+      "sha256": "9853115d43af83006b6e9ea60bf628598dd7331f300b02e28e556aa74c27b16d",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -604,7 +632,7 @@
     },
     {
       "asset": "assets/chapter-07/tuning.png",
-      "sha256": "fdf479ba14387c2bab04e8f852d1fa16cfeaecd2c89fe37e1a1aecc3596a1b8a",
+      "sha256": "b0b0b11247a48c435697f328885f4339f3641b3d5479a7ba860e3cd2586a11c3",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -632,7 +660,7 @@
     },
     {
       "asset": "assets/chapter-08/focus.png",
-      "sha256": "b987d1b45c849537abf30525a6795b09bea52bb341f36b517c326d64bd17a1ca",
+      "sha256": "5e70d294e85be14b49aa02a663d806fee7b7ca00ae5dab4419466195a895604f",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -681,7 +709,7 @@
     },
     {
       "asset": "assets/chapter-09/calibration.png",
-      "sha256": "2f8401163cbefccdd61d137926e9bd47c5a295770c195b8f04f3f09e90e2efd9",
+      "sha256": "d451bf06a43e0312116711e21a10eabf447d082ac5ebaa87b9f939d8fe576eef",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -695,7 +723,7 @@
     },
     {
       "asset": "assets/chapter-09/materials.png",
-      "sha256": "1846584cea980f806f0fd299005424d9d6eaf4db1ff47a38b56d6a5b8ca6a1ce",
+      "sha256": "ba4cd80396282211625d29f176719c6480b56dc0c1e7166365e521a4f18482ec",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -730,7 +758,7 @@
     },
     {
       "asset": "assets/chapter-09/uncertainty.png",
-      "sha256": "5c77bbf5ba6a2c2298a36831de341aaff1b17c4dae8295c318abc354ee908014",
+      "sha256": "c8c67298d69e08d7925c3a69149ffe84d73ba48351636e66593c349505c7b4e0",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -767,7 +795,7 @@
     },
     {
       "asset": "assets/chapter-10/inverse-comparison.png",
-      "sha256": "5b674fbcdbaeb06ebd5738d4d6e377ba448f3ae2eecbb0139f72d43f4214ec9c",
+      "sha256": "c0ada775d0e6bbfed9accb48db74ee99d83c1f8a1bb7fddb56d6b870290765fd",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -795,7 +823,7 @@
     },
     {
       "asset": "assets/chapter-10/model-comparison.png",
-      "sha256": "c27681b78d6a36fd03e282e05e8552f1e69a3c23ebc142935f6449c714b47f76",
+      "sha256": "a5b396f43a01d1ee14d2c00e2726df65bdf1b624ca0c5d6ecea7570aa2887273",
       "origin": "original numerical notebook output",
       "generators": [
         {
@@ -809,7 +837,7 @@
     },
     {
       "asset": "assets/chapter-10/passivity-locus.png",
-      "sha256": "232d6d5031f862248f600f0b3939777bafe17f61a4f62da99be1cd37837ed418",
+      "sha256": "feb8da104f02fc224a249647a582a40ba68fd6af95c3eeacb5c00b9978036eed",
       "origin": "original numerical notebook output",
       "generators": [
         {

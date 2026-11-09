@@ -1,6 +1,6 @@
 """A small, independently benchmarkable 1D frequency-domain Maxwell reduction.
 
-Lengths are micrometers. The convention is exp(-i omega t). A real-index,
+Lengths are micrometers. The convention is exp(+i omega t). A real-index,
 nonmagnetic film occupies 0 <= z <= d and has identical exterior media.
 The unknown is tangential Ey at normal incidence. This is FDFD, not FDTD,
 and it has a discrete radiation boundary rather than a PML.
@@ -12,7 +12,7 @@ from scipy.linalg import solve_banded
 
 from waves_interfaces import film
 
-MODEL_VERSION = "slab-fdfd-1.0"
+MODEL_VERSION = "slab-fdfd-1.0-positive-time"
 
 
 @dataclass(frozen=True)
@@ -72,10 +72,10 @@ def exact_slab_fields(slab, z_um):
     r, t = reference['r'], reference['t']
     forward = ((1+r) + slab.n_exterior/slab.n_film*(1-r))/2
     backward = ((1+r) - slab.n_exterior/slab.n_film*(1-r))/2
-    return np.where(z < 0, np.exp(1j*ke*z)+r*np.exp(-1j*ke*z),
+    return np.where(z < 0, np.exp((-1j)*ke*z)+r*np.exp(-(-1j)*ke*z),
                     np.where(z > slab.thickness_um,
-                             t*np.exp(1j*ke*(z-slab.thickness_um)),
-                             forward*np.exp(1j*kf*z)+backward*np.exp(-1j*kf*z)))
+                             t*np.exp((-1j)*ke*(z-slab.thickness_um)),
+                             forward*np.exp((-1j)*kf*z)+backward*np.exp(-(-1j)*kf*z)))
 
 
 def solve_slab(slab=Slab(), cells=64, left_padding_cells=0,
@@ -90,7 +90,7 @@ def solve_slab(slab=Slab(), cells=64, left_padding_cells=0,
     below their grid cutoff k0*n*h=2.
 
     ``discrete`` is an exactly matched discrete exterior. ``continuum`` on
-    the right deliberately substitutes exp(i*k0*ne*h) for exp(i*theta), and
+    the right deliberately substitutes exp(-i*k0*ne*h) for exp(-i*theta), and
     creates a reflected incoming wave. T_net includes that incoming flux;
     |E at the right boundary|^2 is not its forward transmitted power.
 
@@ -120,8 +120,8 @@ def solve_slab(slab=Slab(), cells=64, left_padding_cells=0,
     eps[pleft:pleft+cells+1] = slab.n_film**2
     eps[pleft] = eps[pleft+cells] = (slab.n_exterior**2+slab.n_film**2)/2
     main = (-2+(k0*h)**2*eps).astype(complex)
-    left_multiplier = np.exp(1j*theta)
-    right_multiplier = np.exp(1j*(theta if right_boundary == 'discrete' else kappa))
+    left_multiplier = np.exp((-1j)*theta)
+    right_multiplier = np.exp((-1j)*(theta if right_boundary == 'discrete' else kappa))
     main[0] += left_multiplier
     main[-1] += right_multiplier
     banded = np.zeros((3, count), complex)
@@ -129,7 +129,7 @@ def solve_slab(slab=Slab(), cells=64, left_padding_cells=0,
     banded[1] = main
     banded[2, :-1] = 1
     rhs = np.zeros(count, complex)
-    rhs[0] = 2j*np.sin(theta)
+    rhs[0] = (-2j)*np.sin(theta)
     raw = solve_banded((1, 1), banded, rhs)
     applied = main*raw
     applied[:-1] += raw[1:]
@@ -137,20 +137,20 @@ def solve_slab(slab=Slab(), cells=64, left_padding_cells=0,
     algebraic_residual = np.linalg.norm(applied-rhs)/np.linalg.norm(rhs)
 
     # Decompose exterior fields using the discrete dispersion relation.
-    rho = ((right_multiplier-np.exp(1j*theta))
-           / (np.exp(-1j*theta)-right_multiplier))
+    rho = ((right_multiplier-np.exp((-1j)*theta))
+           / (np.exp(-(-1j)*theta)-right_multiplier))
     forward_boundary = raw[-1]/(1+rho)
     backward_boundary = rho*forward_boundary
     plane_phase = theta if deembed == 'discrete' else kappa
-    r = (raw[0]-1)*np.exp(-2j*plane_phase*pleft)
-    t = forward_boundary*np.exp(-1j*plane_phase*(pleft+pright))
-    backward_exit = backward_boundary*np.exp(-1j*theta*pleft+1j*theta*pright)
+    r = (raw[0]-1)*np.exp(-(-2j)*plane_phase*pleft)
+    t = forward_boundary*np.exp(-(-1j)*plane_phase*(pleft+pright))
+    backward_exit = backward_boundary*np.exp(-(-1j)*theta*pleft+(-1j)*theta*pright)
     T_forward = float(abs(forward_boundary)**2)
     T_backward = float(abs(backward_boundary)**2)
     T_net = T_forward-T_backward
     R = float(abs(r)**2)
-    E = raw*np.exp(-1j*theta*pleft)
-    current = np.imag(np.conj(E[:-1])*E[1:])/np.sin(theta)
+    E = raw*np.exp(-(-1j)*theta*pleft)
+    current = -np.imag(np.conj(E[:-1])*E[1:])/np.sin(theta)
     return dict(slab=asdict(slab), cells=cells, step_um=h,
                 left_padding_cells=pleft, right_padding_cells=pright,
                 boundary=right_boundary, deembed=deembed,
@@ -196,8 +196,8 @@ def slab_sheet_approximation(slab=Slab()):
     """
     slab.validate()
     k0 = 2*np.pi/slab.wavelength_um
-    g = -1j*k0*(slab.n_film**2-slab.n_exterior**2)*slab.thickness_um
-    background = np.exp(1j*k0*slab.n_exterior*slab.thickness_um)
+    g = -(-1j)*k0*(slab.n_film**2-slab.n_exterior**2)*slab.thickness_um
+    background = np.exp((-1j)*k0*slab.n_exterior*slab.thickness_um)
     r = -g/(2*slab.n_exterior+g)*background
     t = 2*slab.n_exterior/(2*slab.n_exterior+g)*background
     return dict(r=complex(r), t=complex(t), R=float(abs(r)**2),

@@ -34,7 +34,7 @@ Air-side reflection has orders $-2$ through $+2$, while glass-side transmission 
 
 ## Example 2: six phase levels and their sinc factor
 
-The staircase with $t_j=e^{2\pi i(j+1/2)/6}$ has $C_{+1}=\operatorname{sinc}(1/6)$, so $|C_{+1}|^2\approx0.9119$. This is a scalar coefficient fraction. The finite interval integration supplies the sinc; a point-source sum would omit that interval shape.
+The staircase with $t_j=e^{2\pi (-i)(j+1/2)/6}$ has $C_{+1}=\operatorname{sinc}(1/6)$, so $|C_{+1}|^2\approx0.9119$. This is a scalar coefficient fraction. The finite interval integration supplies the sinc; a point-source sum would omit that interval shape.
 
 Compare this number with the actual supercell's desired-order power. They refer to different models, and equality is not an acceptance condition. The audit checks the analytical coefficient identity for 2, 3, 4, 6, 8, and 16 levels.
 
@@ -74,7 +74,7 @@ The local-library peak squared field is about 0.550 of the continuous reference 
 
 ## Example 7: a half-wave element at 30 degrees
 
-With $t_x=1$, $t_y=-1$, and element rotation $\theta=30^\circ$, a state $\mathbf e_+=(1,i)^T/\sqrt2$ converts to $\mathbf e_-$ with phase $+60^\circ$. The opposite input basis state gives phase $-60^\circ$.
+With $t_x=1$, $t_y=-1$, and element rotation $\theta=30^\circ$, a state $\mathbf e_+=(1,(-i))^T/\sqrt2$ converts to $\mathbf e_-$ with phase $+60^\circ$. The opposite input basis state gives phase $-60^\circ$.
 
 If retardance is only $90^\circ$, the ideal lossless retarder converts a fraction $\sin^2(45^\circ)=1/2$. Geometric-phase control and conversion amplitude require separate checks. These ideal Jones coefficients are not the vector response of our TE ridges.
 

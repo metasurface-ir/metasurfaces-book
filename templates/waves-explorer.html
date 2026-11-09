@@ -53,7 +53,7 @@
 <label for="s-susceptance">Susceptance B <output id="s-susceptance-value"></output></label><input id="s-susceptance" type="range" min="-6" max="6" step="0.01" value="0">
 <p class="small">g = η₀Yₛ = G + iB is dimensionless. Equal exterior indices n₁ = n₂ = 1; normal incidence; electric current sheet only. G ≥ 0 makes the sheet passive.</p>
 <label class="check-label" for="coherent-enabled"><input id="coherent-enabled" type="checkbox">Try two coherent incoming beams</label>
-<div id="coherent-controls" class="coherent" hidden><label for="s-coherent-phase">Relative input phase φ <output id="s-coherent-phase-value"></output></label><input id="s-coherent-phase" type="range" min="-180" max="180" step="1" value="0"><p class="small">Inputs (1, exp(iφ))/√2 keep total incident power at 1.</p><p>Two-beam absorption: <strong id="coherent-absorption"></strong></p><div class="bar" aria-hidden="true"><span id="coherent-meter"></span></div><p class="small">The main R, T, A metrics below still describe one-sided illumination. Changing illumination changes the relevant absorption limit.</p></div>
+<div id="coherent-controls" class="coherent" hidden><label for="s-coherent-phase">Input phase lag φ <output id="s-coherent-phase-value"></output></label><input id="s-coherent-phase" type="range" min="-180" max="180" step="1" value="0"><p class="small">Inputs (1, exp(−iφ))/√2 keep total incident power at 1.</p><p>Two-beam absorption: <strong id="coherent-absorption"></strong></p><div class="bar" aria-hidden="true"><span id="coherent-meter"></span></div><p class="small">The main R, T, A metrics below still describe one-sided illumination. Changing illumination changes the relevant absorption limit.</p></div>
 </div>
 </section>
 <section class="card" aria-label="Calculated wave response"><div><span class="tag" id="regime"></span></div><h2 id="scene-title" style="margin-top:9px"></h2>
@@ -66,7 +66,7 @@
 </section>
 <section class="card wide bottom"><div><h2>What changed, and why?</h2><p id="interpretation" class="interpretation"></p><p id="balance" class="small"></p></div><div><h2 id="table-title">Complex field coefficients</h2><div class="scroll"><table><thead><tr><th>Quantity</th><th>Real part</th><th>Imaginary part</th></tr></thead><tbody id="coefficients"></tbody></table></div><p id="reference-note" class="small"></p></div></section>
 </div>
-<p class="footer"><strong>Analytical teaching models.</strong> These controls solve the stated boundary/plane-wave equations directly in your browser. They do not run a geometry-based full-wave solver, retrieve a physical meta-atom, include material dispersion, or validate a fabricated device. Time convention exp(−iωt), spatial convention exp(+ik·r). Power fractions use incident power as their denominator. Phase at zero transmitted amplitude is undefined.</p>
+<p class="footer"><strong>Analytical teaching models.</strong> These controls solve the stated boundary/plane-wave equations directly in your browser. They do not run a geometry-based full-wave solver, retrieve a physical meta-atom, include material dispersion, or validate a fabricated device. Time convention exp(+iωt), spatial convention exp(−ik·r). Power fractions use incident power as their denominator. Phase at zero transmitted amplitude is undefined.</p>
 </main>
 <script>
 'use strict';
@@ -81,13 +81,13 @@ function interfaceResponse(p){
  const angle=rad(p.angle_deg),kx=p.n1*Math.sin(angle),q1=p.n1*Math.cos(angle),q2sq=(p.n2-p.n1)*(p.n2+p.n1)+q1*q1,tol=1e-12*Math.max(1,p.n1*p.n1,p.n2*p.n2),Yi=p.polarization==='TE'?q1:p.n1*p.n1/q1;
  let q2,Yt,r,t,regime;
  if(p.n1>p.n2&&Math.abs(q2sq)<=tol){q2=c();regime='cutoff';Yt=p.polarization==='TE'?c():null;r=c(p.polarization==='TE'?1:-1);t=c(p.polarization==='TE'?2:0);}
- else{q2=q2sq>0?c(Math.sqrt(q2sq)):c(0,Math.sqrt(-q2sq));regime=q2sq>0?'propagating':'evanescent';Yt=p.polarization==='TE'?q2:div(c(p.n2*p.n2),q2);r=div(sub(c(Yi),Yt),add(c(Yi),Yt));t=add(c(1),r);}
+ else{q2=q2sq>0?c(Math.sqrt(q2sq)):c(0,-Math.sqrt(-q2sq));regime=q2sq>0?'propagating':'evanescent';Yt=p.polarization==='TE'?q2:div(c(p.n2*p.n2),q2);r=div(sub(c(Yi),Yt),add(c(Yi),Yt));t=add(c(1),r);}
  const R=abs2(r),T=regime==='propagating'?Yt.re/Yi*abs2(t):0;
  return {r,t,R,T,A:0,phase_deg:phase(t),q2,regime,Yi,Yt,angle_t_deg:regime==='propagating'?deg(Math.asin(Math.min(1,kx/p.n2))):regime==='cutoff'?90:null,critical_deg:p.n1>p.n2?deg(Math.asin(p.n2/p.n1)):null,brewster_deg:deg(Math.atan(p.n2/p.n1)),balance_error:Math.abs(1-R-T)};
 }
 function filmResponse(p){
  positive(p,['n1','nf','n2','wavelength_um']);finite(p,['thickness_um']);if(p.thickness_um<0)throw Error('Film thickness must be nonnegative.');
- const delta=2*PI*p.nf*p.thickness_um/p.wavelength_um,r01=(p.n1-p.nf)/(p.n1+p.nf),r12=(p.nf-p.n2)/(p.nf+p.n2),e=c(Math.cos(delta),Math.sin(delta)),e2=mul(e,e),den=add(c(1),scale(e2,r01*r12)),r=div(add(c(r01),scale(e2,r12)),den),t=div(scale(e,4*p.n1*p.nf/((p.n1+p.nf)*(p.nf+p.n2))),den),R=abs2(r),T=p.n2/p.n1*abs2(t);
+ const delta=2*PI*p.nf*p.thickness_um/p.wavelength_um,r01=(p.n1-p.nf)/(p.n1+p.nf),r12=(p.nf-p.n2)/(p.nf+p.n2),e=c(Math.cos(delta),-Math.sin(delta)),e2=mul(e,e),den=add(c(1),scale(e2,r01*r12)),r=div(add(c(r01),scale(e2,r12)),den),t=div(scale(e,4*p.n1*p.nf/((p.n1+p.nf)*(p.nf+p.n2))),den),R=abs2(r),T=p.n2/p.n1*abs2(t);
  return {r,t,R,T,A:0,phase_deg:phase(t),delta_rad:delta,balance_error:Math.abs(1-R-T)};
 }
 function sheetResponse(p){
@@ -101,7 +101,7 @@ function polarizationResponse(p){
  return {Ex,Ey,I:abs2(Ex)+abs2(Ey),Q:abs2(Ex)-abs2(Ey),U:2*product.re,V:2*product.im,analyzer_power:abs2(analyzer)};
 }
 function coherentSheet(p){
- finite(p,['phase_deg']);const v=sheetResponse(p),e=c(Math.cos(rad(p.phase_deg)),Math.sin(rad(p.phase_deg))),left=scale(add(v.r,mul(v.t,e)),1/Math.sqrt(2)),right=scale(add(v.t,mul(v.r,e)),1/Math.sqrt(2)),output_power=abs2(left)+abs2(right),A2=1-output_power;
+ finite(p,['phase_deg']);const v=sheetResponse(p),e=c(Math.cos(rad(p.phase_deg)),-Math.sin(rad(p.phase_deg))),left=scale(add(v.r,mul(v.t,e)),1/Math.sqrt(2)),right=scale(add(v.t,mul(v.r,e)),1/Math.sqrt(2)),output_power=abs2(left)+abs2(right),A2=1-output_power;
  return {input_power:1,output_power,A2:Math.abs(A2)<1e-14?0:A2,b_left:left,b_right:right};
 }
 window.wavesCompute={interface:interfaceResponse,film:filmResponse,polarization:polarizationResponse,sheet:sheetResponse,coherentSheet};
@@ -123,7 +123,7 @@ function interfaceScene(p,v){
   const b=rad(v.angle_t_deg);s+=line(cx,cy,cx+L*Math.cos(b),cy-L*Math.sin(b),'teal',2+4*Math.sqrt(v.T));
   s+=text(295,315,'Teal: transmitted power','tiny')+text(292,63,'Refraction angle '+v.angle_t_deg.toFixed(2)+'°');
  }else if(v.regime==='evanescent'){
-  const kap=v.q2.im;for(let x=0;x<220;x+=7){const envelope=Math.exp(-x/Math.max(24,75/kap));s+=`<path d="M${cx+x} ${cy-52*envelope}V${cy+52*envelope}" stroke="#147d88" stroke-width="4" opacity="${.15+.65*envelope}"/>`;}
+  const kap=-v.q2.im;for(let x=0;x<220;x+=7){const envelope=Math.exp(-x/Math.max(24,75/kap));s+=`<path d="M${cx+x} ${cy-52*envelope}V${cy+52*envelope}" stroke="#147d88" stroke-width="4" opacity="${.15+.65*envelope}"/>`;}
   const upper=[],lower=[];for(let x=0;x<=220;x+=2){const envelope=46*Math.exp(-x/Math.max(24,75/kap));upper.push(`${cx+x},${cy-envelope}`);lower.push(`${cx+x},${cy+envelope}`);}s+=`<polyline points="${upper.join(' ')}" fill="none" stroke="#147d88" stroke-width="2"/><polyline points="${lower.join(' ')}" fill="none" stroke="#147d88" stroke-width="2"/>`+text(283,69,'Nonzero field; T = 0','bold')+text(289,315,'Schematic decay envelope','tiny');
  }else{s+=line(cx+8,cy,cx+8,57,'teal',3)+text(285,70,'Grazing cutoff','bold')+text(282,315,'Normal transmitted power is zero','tiny');}
  return s+`<circle cx="${cx}" cy="${cy}" r="5" fill="#244f64"/>`;
@@ -137,8 +137,8 @@ function filmScene(p,v){
  const x=40+(p.wavelength_um-.3)/1.2*460;s+=`<circle cx="${x}" cy="${333-43*v.R}" r="5" fill="#173f53"/>`;return s;
 }
 function polarizationScene(p,v){
- const cx=270,cy=173,k=125,pts=[];for(let j=0;j<=180;j++){const tau=2*PI*j/180;pts.push(`${cx+k*v.Ex.re*Math.cos(tau)},${cy-k*(v.Ey.re*Math.cos(tau)+v.Ey.im*Math.sin(tau))}`);}
- const tau=rad(+$('time-phase').value),x=v.Ex.re*Math.cos(tau),y=v.Ey.re*Math.cos(tau)+v.Ey.im*Math.sin(tau),b=rad(p.analyzer_deg);
+ const cx=270,cy=173,k=125,pts=[];for(let j=0;j<=180;j++){const tau=2*PI*j/180;pts.push(`${cx+k*v.Ex.re*Math.cos(tau)},${cy-k*(v.Ey.re*Math.cos(tau)-v.Ey.im*Math.sin(tau))}`);}
+ const tau=rad(+$('time-phase').value),x=v.Ex.re*Math.cos(tau),y=v.Ey.re*Math.cos(tau)-v.Ey.im*Math.sin(tau),b=rad(p.analyzer_deg);
  return defs+`<circle cx="${cx}" cy="${cy}" r="${k}" fill="none" stroke="#cedde7" stroke-dasharray="5 5"/><path d="M100 ${cy}H440M${cx} 18V328" stroke="#ccdce5"/><path d="M${cx-145*Math.cos(b)} ${cy+145*Math.sin(b)}L${cx+145*Math.cos(b)} ${cy-145*Math.sin(b)}" stroke="#cf7939" stroke-width="2" stroke-dasharray="7 4"/><polyline points="${pts.join(' ')}" fill="none" stroke="#147d88" stroke-width="3"/>`+line(cx,cy,cx+k*x,cy-k*y,'blue',3)+`<circle cx="${cx+k*x}" cy="${cy-k*y}" r="6" fill="#426bd0"/>`+text(447,179,'Eₓ')+text(280,25,'Eᵧ')+text(30,332,'Teal: field path · Blue: field now · Dashed: analyzer','tiny');
 }
 function sheetScene(p,v){
@@ -167,11 +167,11 @@ function render(){
   $('reference-note').textContent='Both amplitudes are referenced to the interface. At normal incidence air → glass gives r = −0.2, t = 0.8, R = 4%, T = 96%. Indices and angle are frequency-independent here.';
  }else if(active==='film'){
   $('question').textContent='Can two reflecting interfaces together produce zero reflection? Tune the layer, then move away from its design wavelength.';$('regime').textContent='Coherent normal-incidence film';$('scene-title').textContent=p.thickness_um===0?'The layer collapses to one boundary.':v.R<1e-10?'Two boundary reflections cancel.':'A round trip changes the interference.';$('scene').innerHTML=filmScene(p,v);$('scene-caption').textContent=p.thickness_um===0?'The zero-thickness limit restores the direct interface. The nominal film index has no effect on the response.':'The zigzag separates successive contributions for clarity. Their actual wavevectors are normal to the film. The small spectrum shows R from 0.3 to 1.5 μm; its dot marks the current wavelength.';
-  $('formula').textContent='δ = 2πnᶠd/λ₀;  r = (r₁ᶠ + rᶠ₂ exp(2iδ))/(1 + r₁ᶠrᶠ₂ exp(2iδ)).';
+  $('formula').textContent='δ = 2πnᶠd/λ₀;  r = (r₁ᶠ + rᶠ₂ exp(−2iδ))/(1 + r₁ᶠrᶠ₂ exp(−2iδ)).';
   $('interpretation').textContent=v.R<1e-10?'At the matched quarter-wave design, nᶠ = √(n₁n₂) and nᶠd = λ₀/4. The coherent sum of reflected waves vanishes. Matching one wavelength does not establish broadband antireflection with real dispersive materials.':p.thickness_um===0?'At zero thickness the two interfaces collapse to the direct n₁ → n₂ interface. The nominal film index no longer changes the answer.':'The reflected contributions add as complex amplitudes. Thickness and wavelength change their round-trip phase. Adding separate reflected intensities would discard this interference.';
   $('reference-note').textContent='Reflection is referenced to the entrance, transmission to the exit. The unwrapped propagation phase is part of t. The model has no angle spread, absorption, roughness, or material dispersion.';
  }else if(active==='polarization'){
-  $('question').textContent='For a circular field, will a rotating ideal linear analyzer ever extinguish the light? Compare with a linear field.';$('regime').textContent='Normalized Jones vector';$('scene-title').textContent=Math.abs(v.V)>1-1e-8?'Two components trace a circle.':Math.abs(v.V)<1e-8?'The field stays on one line.':'Amplitude and phase trace an ellipse.';$('scene').innerHTML=polarizationScene(p,v);$('scene-caption').textContent='At a fixed point, E(t) = Re{[Eₓ,Eᵧ] exp(−iωt)}. The time slider or Play button changes the blue field vector, while the ellipse and analyzer power remain fixed.';
+  $('question').textContent='For a circular field, will a rotating ideal linear analyzer ever extinguish the light? Compare with a linear field.';$('regime').textContent='Normalized Jones vector';$('scene-title').textContent=Math.abs(v.V)>1-1e-8?'Two components trace a circle.':Math.abs(v.V)<1e-8?'The field stays on one line.':'Amplitude and phase trace an ellipse.';$('scene').innerHTML=polarizationScene(p,v);$('scene-caption').textContent='At a fixed point, E(t) = Re{[Eₓ,Eᵧ] exp(+iωt)}. The time slider or Play button changes the blue field vector, while the ellipse and analyzer power remain fixed.';
   $('formula').textContent='I = |Eₓ|² + |Eᵧ|²;  Pβ/I = |cosβ Eₓ + sinβ Eᵧ|²;  V = 2 Im(Eₓ*Eᵧ).';
   $('interpretation').textContent=Math.abs(v.V)>1-1e-8?'Equal component magnitudes and a ±90° relative phase produce circular polarization. Every ideal linear analyzer passes one half of the normalized incident power.':Math.abs(v.V)<1e-8?'The components have a linear polarization relation (or one component vanishes). A suitable linear analyzer can extinguish the field; rotating it changes the projection.':'Changing relative phase changes the field path even when total input power stays at 1. A linear analyzer probes the projection, not each Cartesian intensity separately.';
   table([['Eₓ',v.Ex],['Eᵧ',v.Ey],['Stokes Q + iU',c(v.Q,v.U)]]);$('table-title').textContent='Jones components and Stokes values';$('balance').textContent='Polarization check: Q² + U² + V² = '+(v.Q*v.Q+v.U*v.U+v.V*v.V).toFixed(10)+' = I² for this pure normalized state.';$('reference-note').textContent='No Jones device or polarization conversion is being fabricated or simulated. This panel constructs an incident state and projects it through an ideal analyzer.';

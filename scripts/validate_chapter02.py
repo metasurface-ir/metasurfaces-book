@@ -36,7 +36,7 @@ def boundary_solve(n1, nf, n2, thickness, wavelength):
     the EXIT face. Incident tangential E=1 is referenced to the entrance face.
     """
     phase = 2 * np.pi * nf * thickness / wavelength
-    forward, backward = np.exp(1j * phase), np.exp(-1j * phase)
+    forward, backward = np.exp((-1j) * phase), np.exp(-(-1j) * phase)
     matrix = np.array([
         [1, -1, -1, 0],
         [-n1, -nf, nf, 0],
@@ -66,7 +66,7 @@ def main():
             interface_errors.append(check(value['t'] - 1 - value['r'], 2e-12, 'Interface tangential E'))
             # Independent angle-form expressions use Snell's law directly.
             ci = np.cos(np.deg2rad(angles))
-            ct = np.sqrt((1 - (n1 / n2 * np.sin(np.deg2rad(angles)))**2).astype(complex))
+            ct = np.conj(np.sqrt((1 - (n1 / n2 * np.sin(np.deg2rad(angles)))**2).astype(complex)))
             if pol == 'TE':
                 expected_r = (n1 * ci - n2 * ct) / (n1 * ci + n2 * ct)
                 expected_t = 2 * n1 * ci / (n1 * ci + n2 * ct)
@@ -103,7 +103,7 @@ def main():
         assert str(below['regime']) == 'propagating' and below['T'] > 0
         assert str(above['regime']) == 'evanescent' and abs(above['t']) > 0
         check(above['T'], 1e-13, 'TIR normal transmitted flux')
-        assert above['q2'].imag > 0, 'Evanescent wave must decay toward positive z.'
+        assert above['q2'].imag < 0, 'Evanescent wave must decay toward positive z.'
 
     field_errors = []
     x = np.linspace(-.4, .6, 13)[None, :]
@@ -120,7 +120,7 @@ def main():
     decay_z = np.array([0., .1, .3, .7])
     tir = waves.interface(1.5, 1., 50., 'TE')
     field = waves.te_interface_fields(0., decay_z, 1.5, 1., 50., .6)
-    expected_decay = np.exp(-2 * np.pi / .6 * tir['q2'].imag * decay_z)
+    expected_decay = np.exp(2 * np.pi / .6 * tir['q2'].imag * decay_z)
     decay_error = check(np.abs(field['E'] / field['E'][0]) - expected_decay, 1e-13, 'TIR amplitude decay')
 
     film_errors, film_matrix_residuals, film_unitarity, film_reciprocity = [], [], [], []
@@ -141,10 +141,10 @@ def main():
     ar = waves.film(1., nf, 1.5, .6 / (4 * nf), .6)
     check(ar['r'], 1e-13, 'Quarter-wave antireflection')
     check(ar['T'] - 1, 1e-13, 'Quarter-wave transmitted power')
-    check(ar['t'] - 1j * np.sqrt(1 / 1.5), 1e-13, 'Quarter-wave exit-plane phase')
+    check(ar['t'] - (-1j) * np.sqrt(1 / 1.5), 1e-13, 'Quarter-wave exit-plane phase')
     homogeneous = waves.film(1.7, 1.7, 1.7, .23, .6)
     check(homogeneous['r'], 1e-14, 'Homogeneous-film reflection')
-    check(homogeneous['t'] - np.exp(2j * np.pi * 1.7 * .23 / .6), 1e-13, 'Homogeneous-film propagation phase')
+    check(homogeneous['t'] - np.exp((-2j) * np.pi * 1.7 * .23 / .6), 1e-13, 'Homogeneous-film propagation phase')
     zeros = waves.film(1., 2.3, 1.5, 0., .6)
     bare = waves.interface(1., 1.5)
     check([zeros['r'] - bare['r'], zeros['t'] - bare['t']], 1e-13, 'Zero-thickness film limit')
@@ -212,7 +212,7 @@ def main():
     invalid_calls = [
         lambda: waves.interface(n1=0), lambda: waves.interface(n2=np.inf),
         lambda: waves.interface(angle_deg=-1), lambda: waves.interface(angle_deg=90),
-        lambda: waves.interface(n1=1 + .1j), lambda: waves.interface(polarization='mixed'),
+        lambda: waves.interface(n1=1 + (-.1j)), lambda: waves.interface(polarization='mixed'),
         lambda: waves.film(thickness_um=-1), lambda: waves.film(wavelength_um=0),
         lambda: waves.film(nf=-1), lambda: waves.sheet(conductance=-.1),
         lambda: waves.sheet(susceptance=np.nan), lambda: waves.sheet(n1=0),

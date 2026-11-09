@@ -63,7 +63,7 @@ $$
 k_{x,i}=\frac{2\pi}{0.030}\sin20^\circ\approx71.63\,\mathrm{rad/m}.
 $$
 
-The field phase advance over one positive period is $k_{x,i}\Lambda\approx1.791\,\mathrm{rad}\approx102.61^\circ$. The complex multiplier is $e^{+i1.791}$ under our convention. Mapping in the reverse direction uses its inverse.
+The field phase lag over one positive period is $k_{x,i}\Lambda\approx1.791\,\mathrm{rad}\approx102.61^\circ$. The complex multiplier is $e^{-i1.791}$ under our convention. Mapping in the reverse direction uses its inverse.
 
 **Diagnostic:** reporting $m=+1$ as the open first order while keeping our stated equation would be a sign error. A solver using the opposite labeling convention can still describe the same physical beam if its wavevectors and labels are mapped explicitly.
 

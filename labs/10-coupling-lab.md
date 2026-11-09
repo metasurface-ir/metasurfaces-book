@@ -39,7 +39,7 @@ At α=0 the ridges are identical; at α=1 the baseline design is recovered. α m
 
 $$
 \widetilde t_m=\operatorname{sinc}\!\left(\frac{m}{N}\right)\frac1N\sum_{j=0}^{N-1}t_j
-\exp\!\left[-2\pi i m\frac{j+1/2}{N}\right],\quad N=6.
+\exp\!\left[-2\pi (-i) m\frac{j+1/2}{N}\right],\quad N=6.
 $$
 
 Here sinc(u)=sin(πu)/(πu). Apply the same expression to rⱼ. Convert amplitude to power using each **supercell order's** longitudinal wavevector. The stitched field need not conserve power; retain its raw R+T rather than renormalizing it.

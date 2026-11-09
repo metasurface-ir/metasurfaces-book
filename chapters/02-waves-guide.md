@@ -7,15 +7,15 @@ short_title: Waves worked examples
 
 **Question:** which simple calculation would expose a wrong sign, a wrong normalization, or an unsupported physical interpretation?
 
-These examples accompany the [chapter](02-waves-and-interfaces.md), [browser/notebook lab](../labs/02-waves-lab.md), and [self-check](02-waves-review.md). They use $e^{-i\omega t}$, spatial $e^{i\mathbf k\cdot\mathbf r}$, peak electric amplitudes, and positive real nonmagnetic bulk indices. Predict the sign or limiting behavior before reading each calculation.
+These examples accompany the [chapter](02-waves-and-interfaces.md), [browser/notebook lab](../labs/02-waves-lab.md), and [self-check](02-waves-review.md). They use $e^{+i\omega t}$, spatial $e^{-i\mathbf k\cdot\mathbf r}$, peak electric amplitudes, and positive real nonmagnetic bulk indices. Predict the sign or limiting behavior before reading each calculation.
 
 ## 1. Find the magnetic-field sign
 
-A plane wave propagates along positive $z$ in air, with electric phasor $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{ik_0z}$. Maxwell's relation gives
+A plane wave propagates along positive $z$ in air, with electric phasor $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{-ik_0z}$. Maxwell's relation gives
 
 $$
 \widetilde{\mathbf H}=\frac{1}{\eta_0}\widehat{\mathbf z}\times\widetilde{\mathbf E}
-=-\frac{E_0}{\eta_0}\widehat{\mathbf x}e^{ik_0z}.
+=-\frac{E_0}{\eta_0}\widehat{\mathbf x}e^{-ik_0z}.
 $$
 
 Thus $\mathbf E\times\mathbf H^*$ points along positive $z$, as required. Reverse the wavevector while keeping electric polarization along the same $y$ direction: the magnetic field reverses, and the power flux points along negative $z$.
@@ -69,13 +69,13 @@ This calculation uses the common tangential-electric basis. A conventional refle
 Take glass to air at $\theta_i=45^\circ$ and $\lambda_0=0.6\,\mu\mathrm m$. The critical angle is $\arcsin(1/1.5)\approx41.8103^\circ$, so transmission is evanescent. Here
 
 $$
-q_i=\frac3{\sqrt8},\qquad q_t=\frac{i}{\sqrt8}.
+q_i=\frac3{\sqrt8},\qquad q_t=\frac{-i}{\sqrt8}.
 $$
 
 For TE,
 
 $$
-r=\frac{3-i}{3+i}=0.8-0.6i,\qquad t=1+r=1.8-0.6i.
+r=\frac{3+i}{3-i}=0.8+0.6i,\qquad t=1+r=1.8+0.6i.
 $$
 
 The transmitted amplitude is nonzero, yet $T=0$ because $\operatorname{Re}Y_t=0$. Meanwhile $R=|r|^2=1$. Its amplitude decay length is
@@ -88,10 +88,10 @@ At $z=\ell_E$, the electric amplitude is reduced by $e^{-1}$; intensity is reduc
 
 ## 5. Turn a line into a circle
 
-Start with $\mathbf j_{\mathrm{in}}=(1,1)^T/\sqrt2$. Apply the ideal retarder $J=\operatorname{diag}(1,i)$:
+Start with $\mathbf j_{\mathrm{in}}=(1,1)^T/\sqrt2$. Apply the ideal retarder $J=\operatorname{diag}(1,(-i))$:
 
 $$
-\mathbf j_{\mathrm{out}}=\frac1{\sqrt2}\begin{bmatrix}1\\i\end{bmatrix}.
+\mathbf j_{\mathrm{out}}=\frac1{\sqrt2}\begin{bmatrix}1\\(-i)\end{bmatrix}.
 $$
 
 At a fixed $z=0$, its physical field has $E_x=\cos\omega t/\sqrt2$ and $E_y=\sin\omega t/\sqrt2$. Its tip moves from positive $E_x$ toward positive $E_y$. The norm stays one because $J^\dagger J=I$.
@@ -99,7 +99,7 @@ At a fixed $z=0$, its physical field has $E_x=\cos\omega t/\sqrt2$ and $E_y=\sin
 For a linear analyzer at any angle $\beta$,
 
 $$
-I_\beta=\frac12|\cos\beta+i\sin\beta|^2=\frac12.
+I_\beta=\frac12|\cos\beta-i\sin\beta|^2=\frac12.
 $$
 
 An analyzer therefore gives the same transmitted intensity for every angle, even though the incident field vector rotates in time. A global phase applied to both Jones components changes neither the polarization ellipse nor this intensity; a relative phase can change the ellipse.
@@ -116,22 +116,22 @@ $$
 Then $\delta=\pi/2$, $r_{0f}=r_{f2}$, and the numerator of the film reflection coefficient is $r_{0f}-r_{f2}=0$. Thus $R=0$ and $T=1$. The transmitted electric coefficient at the film exit is
 
 $$
-t=i\sqrt{\frac{n_0}{n_2}}\approx0.816497i.
+t=(-i)\sqrt{\frac{n_0}{n_2}}\approx0.-816497i.
 $$
 
 Zero reflection does not imply unit electric amplitude or zero transmission phase. The phase above includes propagation from the entrance reference to the exit reference. The cancellation is exact for the stated ideal design condition; real dispersion and fabrication errors need their own study.
 
 ## 7. The reference plane
 
-At one common plane in air, an absent sheet has $r=0,t=1$, so the electric-shunt retrieval gives $g=2(1-t)/t=0$. Now leave the incident reference fixed and move the output plane downstream by $\lambda_0/4$. The measured transmission becomes $t_{\mathrm{new}}=i$ through propagation alone.
+At one common plane in air, an absent sheet has $r=0,t=1$, so the electric-shunt retrieval gives $g=2(1-t)/t=0$. Now leave the incident reference fixed and move the output plane downstream by $\lambda_0/4$. The measured transmission becomes $t_{\mathrm{new}}=(-i)$ through propagation alone.
 
 Blindly inserting it into the same-plane shunt formula produces
 
 $$
-g_{\mathrm{wrong}}=\frac{2(1-i)}{i}=-2-2i.
+g_{\mathrm{wrong}}=\frac{2(1+i)}{-i}=-2+2i.
 $$
 
-The apparent negative conductance would falsely suggest an active sheet in empty space. The continuity check already rejects this data interpretation: $i\ne1+0$. Removing the known propagation factor restores $t=1$. Deembedding is necessary here; it is not, by itself, evidence that an arbitrary finite structure is a local sheet.
+The apparent negative conductance would falsely suggest an active sheet in empty space. The continuity check already rejects this data interpretation: $(-i)\ne1+0$. Removing the known propagation factor restores $t=1$. Deembedding is necessary here; it is not, by itself, evidence that an arbitrary finite structure is a local sheet.
 
 ## 8. Read a shunt and its uncertainty
 
@@ -141,7 +141,7 @@ $$
 r=-\frac12,\quad t=\frac12,\quad R=T=\frac14,\quad A=\frac12.
 $$
 
-Inverting $t=1/2$ recovers $g=2$. In contrast, a purely reactive $g=2i$ gives $t=(1-i)/2$, $r=(-1-i)/2$, and $R=T=1/2$ with $A=0$. Reactive current changes scattering and stores/releases energy without net cycle-averaged dissipation in this ideal model.
+Inverting $t=1/2$ recovers $g=2$. In contrast, a purely reactive $g=-2i$ gives $t=(1+i)/2$, $r=(-1+i)/2$, and $R=T=1/2$ with $A=0$. Reactive current changes scattering and stores/releases energy without net cycle-averaged dissipation in this ideal model.
 
 For the inverse relation $g=2/t-2$, the sensitivity is
 
@@ -162,11 +162,11 @@ Original deterministic sensitivity calculation from the analytical sheet inverse
 
 ## 9. Absorb two beams with their phase
 
-Keep $g=2$ and illuminate coherently from both sides with $\mathbf a=(1,e^{i\phi})^T/\sqrt2$. The input power is one. Multiplying by the equal-air scattering matrix gives
+Keep $g=2$ and illuminate coherently from both sides with $\mathbf a=(1,e^{-i\phi})^T/\sqrt2$. The input power is one. Multiplying by the equal-air scattering matrix gives
 
 $$
-b_1=\frac{-1+e^{i\phi}}{2\sqrt2},\qquad
-b_2=\frac{1-e^{i\phi}}{2\sqrt2}.
+b_1=\frac{-1+e^{-i\phi}}{2\sqrt2},\qquad
+b_2=\frac{1-e^{-i\phi}}{2\sqrt2}.
 $$
 
 Then

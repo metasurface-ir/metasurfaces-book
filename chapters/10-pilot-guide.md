@@ -35,7 +35,7 @@ Return to your answers after inspecting the actual numerical tables. The value o
 
 ## Worked example 1: conservation and resonance
 
-Starting from $r=-\gamma/(\gamma-i\Delta)$ and $t=-i\Delta/(\gamma-i\Delta)$,
+Starting from $r=-\gamma/(\gamma+i\Delta)$ and $t=+i\Delta/(\gamma+i\Delta)$,
 
 $$
 |r|^2+|t|^2=\frac{\gamma^2+\Delta^2}{\gamma^2+\Delta^2}=1.
@@ -43,7 +43,7 @@ $$
 
 At $\Delta=0$, $r=-1$ and $t=0$: total reflection with a phase reversal. At $|\Delta|=\gamma$, both power fractions are $1/2$. As $|\Delta|/\gamma$ grows, $r\to0$ and $t\to1$.
 
-For the complete symmetric two-port matrix, also check $r^*t+t^*r=0$. The product $r^*t=i\gamma\Delta/(\gamma^2+\Delta^2)$ has zero real part, so the off-diagonal terms vanish. This verifies unitarity for the analytical model. It does not prove that an arbitrary learned output obeys it.
+For the complete symmetric two-port matrix, also check $r^*t+t^*r=0$. The product $r^*t=(-i)\gamma\Delta/(\gamma^2+\Delta^2)$ has zero real part, so the off-diagonal terms vanish. This verifies unitarity for the analytical model. It does not prove that an arbitrary learned output obeys it.
 
 **Interpretation:** transmission phase is undefined at its exact zero. A numerical phase reported there is not a usable physical target. Phase metrics must state an amplitude threshold and the excluded fraction.
 

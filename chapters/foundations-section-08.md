@@ -71,7 +71,7 @@ The even/odd eigenvalues of $S$ are $C_e$ and $-C_m$. The transparent limit $C_e
 For each channel, choose the dimensionless ratio $u=f/f_0$ and strength $a\geq0$:
 
 $$
-d=1-u^2,\qquad C(f)=\frac{d+i a u}{d-i a u}.
+d=1-u^2,\qquad C(f)=\frac{d-i a u}{d+i a u}.
 $$
 
 For $a>0$, the rational expression remains finite at resonance. When $a=0$, define $C=1$ explicitly, including at $f=f_0$. With real frequency and these parameters, $|C|=1$, so the complete scattering matrix is unitary. The notebook verifies this algebra numerically and checks an independent electric-only shunt expression.

@@ -270,11 +270,11 @@ Use measured costs appropriate to the actual solver and hardware. A fast predict
 
 ## 10.8 Worked model: a synthetic resonant sheet
 
-To practice the workflow without a commercial solver, consider a lossless symmetric two-port model with equal media, power-normalized amplitudes, and time dependence $e^{-i\omega t}$. Define normalized frequency $\Omega=\omega/\omega_{\mathrm{ref}}$, normalized linewidth $\gamma>0$, and detuning $\Delta=\Omega-\Omega_0$:
+To practice the workflow without a commercial solver, consider a lossless symmetric two-port model with equal media, power-normalized amplitudes, and time dependence $e^{+i\omega t}$. Define normalized frequency $\Omega=\omega/\omega_{\mathrm{ref}}$, normalized linewidth $\gamma>0$, and detuning $\Delta=\Omega-\Omega_0$:
 
 $$
-r=-\frac{\gamma}{\gamma-i\Delta},\qquad
-t=1+r=\frac{-i\Delta}{\gamma-i\Delta}.
+r=-\frac{\gamma}{\gamma+i\Delta},\qquad
+t=1+r=\frac{+i\Delta}{\gamma+i\Delta}.
 $$
 
 It follows directly that
@@ -292,7 +292,7 @@ $$
 
 This mapping is deliberately synthetic: $g$ is not a documented pillar radius or fabricated geometry. The notebook samples entire spectra at different $g$, fits a surrogate on one subset, chooses its settings on a validation subset, and evaluates held-out designs. It then searches for a target spectrum and checks the selected candidate against the exact formula.
 
-For a symmetric two-port matrix $S=\begin{pmatrix}r&t\\t&r\end{pmatrix}$, power balance for one incident port is only the diagonal part of $S^\dagger S=I$. The off-diagonal condition is $r^*t+t^*r=0$. Here $r^*t=i\gamma\Delta/(\gamma^2+\Delta^2)$ is purely imaginary, so that condition also holds. The comparison notebook checks both identities. They apply to this model and its specified port basis.
+For a symmetric two-port matrix $S=\begin{pmatrix}r&t\\t&r\end{pmatrix}$, power balance for one incident port is only the diagonal part of $S^\dagger S=I$. The off-diagonal condition is $r^*t+t^*r=0$. Here $r^*t=(-i)\gamma\Delta/(\gamma^2+\Delta^2)$ is purely imaginary, so that condition also holds. The comparison notebook checks both identities. They apply to this model and its specified port basis.
 
 Retrieving an exact training spectrum automatically preserves this model's power balance, even when its resonance is in the wrong place for the requested design. Conversely, a regression can have very small complex error and a nonzero power residual. Accuracy and physical consistency answer different questions; report both.
 

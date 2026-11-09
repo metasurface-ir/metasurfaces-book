@@ -57,7 +57,7 @@ Before moving a control, write down the change you expect. Try the six-element, 
 | Wavelength sweep | $0.6$ to $3.6\,\mu\mathrm m$ | Analytical channel-count map |
 | Finite array sizes | 8, 24, 64 | Prescribed scalar-source array factors |
 
-Conventions are $e^{-i\omega t}$, $e^{i\mathbf k\cdot\mathbf r}$, incidence from $z<0$, and $k_{x,m}=k_{x,i}+2\pi m/\Lambda$. The introductory model has $k_y=0$; a separate rectangular-lattice example introduces both tangential components.
+Conventions are $e^{+i\omega t}$, $e^{-i\mathbf k\cdot\mathbf r}$, incidence from $z<0$, and $k_{x,m}=k_{x,i}+2\pi m/\Lambda$. The introductory model has $k_y=0$; a separate rectangular-lattice example introduces both tangential components.
 
 ### Procedure
 

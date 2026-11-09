@@ -27,7 +27,7 @@ not every possible edited slab or ridge geometry.
 
 ## Physical model and phase planes
 
-Lengths are micrometers. The convention is `exp(-i omega t)`. A film of real
+Lengths are micrometers. The convention is `exp(+i omega t)`. A film of real
 constant index `n_film` fills `0 <= z <= thickness_um`, with the same real
 constant `n_exterior` on either side. Materials are isotropic, nonmagnetic,
 lossless, and nondispersive. Illumination is normal-incidence tangential Ey.

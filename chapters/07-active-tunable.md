@@ -42,7 +42,7 @@ Examples to read critically include [Cui et al. (2014)](https://doi.org/10.1038/
 The drawing connects a possible control mechanism to an effective one-port boundary. The effective R, L and C are assigned directly, without a geometry extraction. The ground-backed model has no transmitted port. The array exercise later assigns one circuit response to each prescribed scalar source.
 ```
 
-We use $e^{-i\omega t}$, normal incidence, a real positive wave impedance $Z_0$, and a reference plane on the effective surface. Set $f=10$ GHz, $L=20$ nH, $R=25\,\Omega$, $C_0=0.12$ pF, $V_j=1$ V, $M=1$, and $0\le V\le20$ V. These are effective educational parameters, not component specifications. Changing the reference plane adds propagation phase; calibration must use the same plane as the target.
+We use $e^{+i\omega t}$, normal incidence, a real positive wave impedance $Z_0$, and a reference plane on the effective surface. Set $f=10$ GHz, $L=20$ nH, $R=25\,\Omega$, $C_0=0.12$ pF, $V_j=1$ V, $M=1$, and $0\le V\le20$ V. These are effective educational parameters, not component specifications. Changing the reference plane adds propagation phase; calibration must use the same plane as the target.
 
 ## 7.4 Derive reflection and check passivity
 
@@ -50,7 +50,7 @@ $$
 Z_s=R+iX,\qquad X=\frac{1}{\omega C(V)}-\omega L,\qquad \Gamma=\frac{Z_s-Z_0}{Z_s+Z_0}.
 $$
 
-The signs follow directly from the time convention: an inductor has impedance $-i\omega L$ and a capacitor has $i/(\omega C)$. At the surface, normalize the incident electric field to one. The reflected magnetic field has the opposite sign, so the boundary condition gives
+The signs follow directly from the time convention: an inductor has impedance $+i\omega L$ and a capacitor has $(-i)/(\omega C)$. At the surface, normalize the incident electric field to one. The reflected magnetic field has the opposite sign, so the boundary condition gives
 
 $$
 E_t=1+\Gamma,\qquad H_t=\frac{1-\Gamma}{Z_0},\qquad E_t=Z_sH_t\ \Longrightarrow\ \Gamma=\frac{Z_s-Z_0}{Z_s+Z_0}.
@@ -99,7 +99,7 @@ This minimizes a local complex-field mismatch and naturally retains amplitude pe
 ## 7.7 What the programmed aperture predicts
 
 $$
-d_j=e^{ik_0x_j\sin\theta_t},\qquad F(\theta)=\frac1N\sum_{j=0}^{N-1}\Gamma_j e^{-ik_0x_j\sin\theta},\qquad I(\theta)=|F(\theta)|^2.
+d_j=e^{-ik_0x_j\sin\theta_t},\qquad F(\theta)=\frac1N\sum_{j=0}^{N-1}\Gamma_j e^{+ik_0x_j\sin\theta},\qquad I(\theta)=|F(\theta)|^2.
 $$
 
 These signs follow Chapter 4: a positive phase gradient produces a positive tangential output wavevector. For $\Gamma_j=d_j$, every term at $\theta_t$ is one. The reference has 32 prescribed sources, spacing $\lambda_0/2$ at 10 GHz, normal incidence, and a target of 25°. $I$ uses the coherent unit-source reference. It is neither integrated diffraction efficiency nor antenna directivity; element patterns, vector flux, coupling and finite-ground scattering are absent.
@@ -113,7 +113,7 @@ One-bit coding can leave a mirror beam. The 16-voltage circuit differs from 16 i
 A useful comparison is an ideal phase quantizer whose errors are uniformly distributed over $[-\pi/Q,\pi/Q]$. Averaging the complex phase error gives
 
 $$
-\left\langle e^{i\epsilon}\right\rangle=\frac{Q}{2\pi}\int_{-\pi/Q}^{\pi/Q}e^{i\epsilon}\,d\epsilon=\operatorname{sinc}(1/Q),\qquad \eta_q=\operatorname{sinc}^2(1/Q),\quad \operatorname{sinc}(u)=\frac{\sin(\pi u)}{\pi u}.
+\left\langle e^{-i\epsilon}\right\rangle=\frac{Q}{2\pi}\int_{-\pi/Q}^{\pi/Q}e^{-i\epsilon}\,d\epsilon=\operatorname{sinc}(1/Q),\qquad \eta_q=\operatorname{sinc}^2(1/Q),\quad \operatorname{sinc}(u)=\frac{\sin(\pi u)}{\pi u}.
 $$
 
 This is a coherent phase-error benchmark, not an exact efficiency law for a particular finite metasurface. In our finite reference, the ideal 1/2/3/4-bit target metrics are approximately 0.389/0.809/0.948/0.987; the 16-voltage circuit gives 0.844. A higher command count does not remove amplitude loss, inaccessible phases or model error.
@@ -145,13 +145,13 @@ For an illustrative effective driver time constant of 4 μs, a voltage step sett
 ## 7.10 Time modulation creates extra frequency channels
 
 $$
-\Gamma(t)=\sum_{\ell\in\mathbb Z}c_\ell e^{-i\ell\Omega t},\qquad c_\ell=\frac1T\int_0^T\Gamma(t)e^{i\ell\Omega t}\,dt,\qquad \omega_\ell=\omega_0+\ell\Omega.
+\Gamma(t)=\sum_{\ell\in\mathbb Z}c_\ell e^{+i\ell\Omega t},\qquad c_\ell=\frac1T\int_0^T\Gamma(t)e^{-i\ell\Omega t}\,dt,\qquad \omega_\ell=\omega_0+\ell\Omega.
 $$
 
-The last relation follows by multiplying the reflection envelope by $e^{-i\omega_0t}$. For a binary waveform with $\Gamma_a$ during $0\le t<DT$ and $\Gamma_b$ during the rest, integrate the two constant intervals:
+The last relation follows by multiplying the reflection envelope by $e^{+i\omega_0t}$. For a binary waveform with $\Gamma_a$ during $0\le t<DT$ and $\Gamma_b$ during the rest, integrate the two constant intervals:
 
 $$
-c_\ell=(\Gamma_a-\Gamma_b)D\operatorname{sinc}(\ell D)e^{i\pi\ell D}+\Gamma_b\delta_{\ell0}.
+c_\ell=(\Gamma_a-\Gamma_b)D\operatorname{sinc}(\ell D)e^{-i\pi\ell D}+\Gamma_b\delta_{\ell0}.
 $$
 
 For $D=1/2$ and ideal states $+1,-1$, the carrier vanishes and the first sideband weights are $4/\pi^2$ each; higher odd harmonics remain. This is a Fourier redistribution, not disappearance of energy. The notebook instead uses its actual circuit states at 3 and 14 V and compares instantaneous switching with the steady periodic RC response.

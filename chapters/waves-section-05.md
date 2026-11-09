@@ -438,23 +438,23 @@ Both fields have the same phase, and average power travels along positive $z$.
 (ch02-section-02)=
 ### Computational connection: Give a wave a direction
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 We use real physical fields obtained from complex phasors:
 
 $$
-\mathbf E(\mathbf r,t)=\operatorname{Re}\{\widetilde{\mathbf E}(\mathbf r)e^{-i\omega t}\},\qquad
-\widetilde{\mathbf E}(\mathbf r)=\mathbf E_0e^{i\mathbf k\cdot\mathbf r}.
+\mathbf E(\mathbf r,t)=\operatorname{Re}\{\widetilde{\mathbf E}(\mathbf r)e^{+i\omega t}\},\qquad
+\widetilde{\mathbf E}(\mathbf r)=\mathbf E_0e^{-i\mathbf k\cdot\mathbf r}.
 $$
 
-Thus a positive real $k_z$ with $e^{ik_z z-i\omega t}$ travels toward positive $z$. At a fixed phase, $k_z z-\omega t$ is constant. A complex $k_z=i\kappa$ with $\kappa>0$ instead contributes $e^{-\kappa z}$: it decays into the positive-$z$ half-space. Choosing the opposite square-root branch would make it grow away from a passive interface.
+Thus a positive real $k_z$ with $e^{-ik_z z+i\omega t}$ travels toward positive $z$. At a fixed phase, $k_z z-\omega t$ is constant. A complex $k_z=(-i)\kappa$ with $\kappa>0$ instead contributes $e^{-\kappa z}$: it decays into the positive-$z$ half-space. Choosing the opposite square-root branch would make it grow away from a passive interface.
 
 Maxwell's equations in a homogeneous source-free region become
 
 $$
-\nabla\times\widetilde{\mathbf E}=i\omega\mu\widetilde{\mathbf H},\qquad
-\nabla\times\widetilde{\mathbf H}=-i\omega\varepsilon\widetilde{\mathbf E},\qquad
+\nabla\times\widetilde{\mathbf E}=(-i)\omega\mu\widetilde{\mathbf H},\qquad
+\nabla\times\widetilde{\mathbf H}=+i\omega\varepsilon\widetilde{\mathbf E},\qquad
 \nabla\cdot\widetilde{\mathbf D}=0,\qquad\nabla\cdot\widetilde{\mathbf B}=0.
 $$
 

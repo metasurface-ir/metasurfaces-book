@@ -98,7 +98,7 @@ $$
 T=\frac{n_t}{n_i}|t|^2.
 $$
 
-This follows from a normally incident propagating wave's average flux $|E|^2/(2\eta)$ and $\eta=\eta_0/n$. The 0.08 μm ridge has $|t|^2\approx0.63996$ but $T\approx0.95994$. Its reflected power is about 0.04006. Adding $R+|t|^2$ would incorrectly report missing power. These values can be checked directly from the saved complex coefficient in that Chapter 3 dataset: $t\approx-0.797799-0.058944i$.
+This follows from a normally incident propagating wave's average flux $|E|^2/(2\eta)$ and $\eta=\eta_0/n$. The 0.08 μm ridge has $|t|^2\approx0.63996$ but $T\approx0.95994$. Its reflected power is about 0.04006. Adding $R+|t|^2$ would incorrectly report missing power. These values can be checked directly from the saved complex coefficient in that Chapter 3 dataset: $t\approx-0.797799+0.058944i$.
 
 The ridge has height 0.60 μm, pitch 0.65 μm, wavelength 1.55 μm, and ridge/gap indices 2.4/1. Its transmission reference is at the layer exit, whereas the introductory sheet uses its single sheet plane. This worked arithmetic uses a previously executed full-wave result; it does not rerun Maxwell's equations or retrieve a geometry-to-sheet mapping. Oblique incidence and more general media need the appropriate admittance factors developed in Chapter 2.
 

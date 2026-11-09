@@ -1,14 +1,14 @@
 """Chapter 1 analytical sheet model; not a geometry or Maxwell solver.
 
 Normal incidence, equal real wave impedance on both sides, one polarization,
-only specular ports, exp(-i omega t). All frequencies use THz. Responses are
+only specular ports, exp(+i omega t). All frequencies use THz. Responses are
 field ratios with reference planes at the ideal sheet. The unitary two-port
 matrix is reciprocal and mirror symmetric by construction.
 """
 from dataclasses import dataclass, asdict
 import numpy as np
 
-MODEL_VERSION='intro-sheet-1.0'
+MODEL_VERSION='intro-sheet-1.0-positive-time'
 
 
 @dataclass(frozen=True)
@@ -37,7 +37,7 @@ PRESETS={
 
 
 def allpass_channel(frequency_THz,resonance_THz,strength):
-    """C=(d+i a u)/(d-i a u), u=f/f0, d=1-u^2; C=1 for a=0.
+    """C=(d-i a u)/(d+i a u), u=f/f0, d=1-u^2; C=1 for a=0.
 
     This rational form remains finite at resonance for a>0, unlike first
     evaluating the divergent reactance x=a*u/(1-u^2).
@@ -49,7 +49,7 @@ def allpass_channel(frequency_THz,resonance_THz,strength):
         raise ValueError('Use a positive resonance and a nonnegative strength.')
     if strength==0:return np.ones_like(f,dtype=complex)
     u=f/resonance_THz;d=1-u*u;v=strength*u
-    return (d+1j*v)/(d-1j*v)
+    return (d+(-1j)*v)/(d-(-1j)*v)
 
 
 def response(frequency_THz,sheet=Sheet(),phase_floor=1e-12):
@@ -67,7 +67,7 @@ def response(frequency_THz,sheet=Sheet(),phase_floor=1e-12):
 
 
 def channel_group_delay_fs(frequency_THz,resonance_THz,strength):
-    """Exact d(arg C)/d(angular frequency), expressed in femtoseconds."""
+    """Exact -d(arg C)/d(angular frequency), expressed in femtoseconds."""
     allpass_channel(frequency_THz,resonance_THz,strength)  # shared domain checks
     f=np.asarray(frequency_THz)
     if strength==0:return np.zeros_like(f,dtype=float)

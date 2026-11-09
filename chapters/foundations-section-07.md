@@ -42,7 +42,7 @@ The periodic channels and their amplitudes require [Chapter 4](04-periodic-floqu
 We use the phasor convention
 
 $$
-E(t)=\operatorname{Re}\{\widetilde E e^{-i\omega t}\},\qquad
+E(t)=\operatorname{Re}\{\widetilde E e^{+i\omega t}\},\qquad
 \widetilde E=Ae^{i\phi}.
 $$
 

@@ -214,7 +214,7 @@ Zero reflection establishes matching under the stated illumination. Perfect abso
 (ch02-section-08)=
 ### Computational connection: Add a film and keep the phase
 
-Time convention in this computational connection: $e^{-i\omega t}$.
+Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 Can adding a material layer reduce reflection? At normal incidence, let a lossless film of index $n_f$ and thickness $d$ lie between media $n_0$ and $n_2$. Use the single-interface coefficients $r_{ab}=(n_a-n_b)/(n_a+n_b)$ and $t_{ab}=2n_a/(n_a+n_b)$, and define
@@ -223,11 +223,11 @@ $$
 \delta=k_0n_fd=\frac{2\pi n_fd}{\lambda_0}.
 $$
 
-Successive round trips have a coherent phase factor $e^{2i\delta}$. Summing their geometric series, or solving the four boundary equations, gives
+Successive round trips have a coherent phase factor $e^{-2i\delta}$. Summing their geometric series, or solving the four boundary equations, gives
 
 $$
-r_{\mathrm{film}}=\frac{r_{0f}+r_{f2}e^{2i\delta}}{1+r_{0f}r_{f2}e^{2i\delta}},\qquad
-t_{\mathrm{film}}=\frac{t_{0f}t_{f2}e^{i\delta}}{1+r_{0f}r_{f2}e^{2i\delta}}.
+r_{\mathrm{film}}=\frac{r_{0f}+r_{f2}e^{-2i\delta}}{1+r_{0f}r_{f2}e^{-2i\delta}},\qquad
+t_{\mathrm{film}}=\frac{t_{0f}t_{f2}e^{-i\delta}}{1+r_{0f}r_{f2}e^{-2i\delta}}.
 $$
 
 The incident reference is at the entrance $z=0$; the transmitted amplitude is defined at the exit $z=d$. The fractions are $R=|r_{\mathrm{film}}|^2$ and $T=(n_2/n_0)|t_{\mathrm{film}}|^2$.
@@ -240,5 +240,5 @@ For the design wavelength $\lambda_d$, choose $n_f=\sqrt{n_0n_2}$ and $d=\lambda
 An exact normal-incidence, constant-index analytical film. Perfect antireflection at the design condition does not establish a real material's broadband performance.
 ```
 
-Moving a reference plane changes phase even in a uniform medium. If only the output plane moves a distance $\ell$ downstream, $t_{\mathrm{new}}=t\,e^{ik_z\ell}$. This fact matters when comparing a zero-thickness sheet, a finite-height ridge, measured S parameters, and a stored training dataset.
+Moving a reference plane changes phase even in a uniform medium. If only the output plane moves a distance $\ell$ downstream, $t_{\mathrm{new}}=t\,e^{-ik_z\ell}$. This fact matters when comparing a zero-thickness sheet, a finite-height ridge, measured S parameters, and a stored training dataset.
 

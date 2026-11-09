@@ -60,7 +60,7 @@ class SectionOneTests(unittest.TestCase):
     def test_ch01_nonresonant_frequency_and_saved_audit(self):
         with notebook_run('01-first-metasurface-model',replacements=[(1,'FREQUENCY_THz=200.','FREQUENCY_THz=180.')]) as (ns,root):
             record=json.loads((root/'data/chapter-01/sheet-response.json').read_text())
-            self.assertAlmostEqual(record['presets']['electric']['phase_deg'],49.8207660781,places=8)
+            self.assertAlmostEqual(record['presets']['electric']['phase_deg'],-49.8207660781,places=8)
             check_saved_reference(record)
             record['presets']['electric']['phase_deg']=None
             with self.assertRaises(AssertionError):check_saved_reference(record)
@@ -110,9 +110,9 @@ class SectionOneTests(unittest.TestCase):
         with notebook_run('07-tunable-metasurfaces',replacements=edits) as (ns,root):
             p=ns['P'];x=ns['x'];actual=ns['actual']
             states=response(11.,np.linspace(0,p.voltage_max_V,16),p)['gamma']
-            desired=np.exp(2j*np.pi*x*np.sin(np.deg2rad(25.)))
+            desired=np.exp((-2j)*np.pi*x*np.sin(np.deg2rad(25.)))
             indices=np.argmin(abs(states[None,:]-desired[:,None])**2,axis=1)
-            expected=abs(np.mean(states[indices]*np.exp(-2j*np.pi*x*np.sin(np.deg2rad(25.)))))**2
+            expected=abs(np.mean(states[indices]*np.exp(-(-2j)*np.pi*x*np.sin(np.deg2rad(25.)))))**2
             self.assertAlmostEqual(actual['target_metric'],expected,places=12)
             self.assertAlmostEqual(float(x[1]-x[0]),.55,places=12)
             self.assertAlmostEqual(ns['chosen'],8.5247047198,places=6)

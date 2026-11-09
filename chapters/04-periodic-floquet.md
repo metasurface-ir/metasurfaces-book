@@ -29,7 +29,7 @@ After this chapter, you should be able to:
 
 Prerequisites are plane waves, phasors, tangential boundary conditions, Fourier series, and basic complex algebra. The [worked examples and teaching guide](04-floquet-guide.md) include a short learning path.
 
-We use time dependence $e^{-i\omega t}$ and spatial dependence $e^{i\mathbf k\cdot\mathbf r}$. The surface is near $z=0$, periodic along $x$ with period $\Lambda$, and invariant along $y$ in the introductory model. A plane wave arrives from $z<0$ and travels toward positive $z$. Angles are signed from the relevant outward surface normal, with a positive angle having positive $k_x$.
+We use time dependence $e^{+i\omega t}$ and spatial dependence $e^{-i\mathbf k\cdot\mathbf r}$. The surface is near $z=0$, periodic along $x$ with period $\Lambda$, and invariant along $y$ in the introductory model. A plane wave arrives from $z<0$ and travels toward positive $z$. Angles are signed from the relevant outward surface normal, with a positive angle having positive $k_x$.
 
 The incident and transmitted half-spaces are homogeneous, isotropic, lossless media with positive real permittivity and permeability, and positive real indices $n_i$ and $n_t$. We set $k_y=0$ initially. Materials inside a future scattering structure may be more complicated; the real-index channel tests below apply to its homogeneous exterior regions.
 
@@ -58,7 +58,7 @@ Draw six different symbols on a strip and repeat the strip. Slide a transparent 
 :alt: Repeated unequal and identical ridge motifs with element pitch and full repeat marked, together with incident-field phasors at corresponding positions.
 :label: fig-ch04-period-phase
 
-Original schematic and incident-phase calculation: $p=0.5\,\mu\mathrm m$, $\Lambda=3\,\mu\mathrm m$, $\lambda_0=1.55\,\mu\mathrm m$, $n_i=1$, and $\theta_i=12^\circ$. Unequal widths illustrate a six-element motif; they are not a solved device. Translation restores the material pattern while rotating the field phasor by $k_{x,i}\Lambda$. Identical elements also admit the shorter translation $p$.
+Original schematic and incident-phase calculation: $p=0.5\,\mu\mathrm m$, $\Lambda=3\,\mu\mathrm m$, $\lambda_0=1.55\,\mu\mathrm m$, $n_i=1$, and $\theta_i=12^\circ$. Unequal widths illustrate a six-element motif; they are not a solved device. Translation restores the material pattern while increasing phase lag by $k_{x,i}\Lambda$ (phasor rotation $-k_{x,i}\Lambda$). Identical elements also admit the shorter translation $p$.
 ```
 
 **Predict from the drawing:** if the six elements become identical, which distance changes in the smallest material repeat, and does the incident wave's phase advance across the original $3\,\mu\mathrm m$ distance change?
@@ -69,35 +69,35 @@ Original schematic and incident-phase calculation: $p=0.5\,\mu\mathrm m$, $\Lamb
 For one incident plane wave, the driven scattering solution lies in the same Bloch sector as the excitation. A field component can be written
 
 $$
-E(x,z)=e^{ik_{x,i}x}u(x,z),\qquad u(x+\Lambda,z)=u(x,z).
+E(x,z)=e^{-ik_{x,i}x}u(x,z),\qquad u(x+\Lambda,z)=u(x,z).
 $$
 
 It follows that
 
 $$
-E(x+\Lambda,z)=e^{ik_{x,i}\Lambda}E(x,z).
+E(x+\Lambda,z)=e^{-ik_{x,i}\Lambda}E(x,z).
 $$
 
 This is a phase relation between paired lateral boundaries. At normal incidence the multiplier is one. At oblique incidence, an ordinary zero-phase periodic condition generally represents a different excitation.
 
-The boundary mapping direction matters. If a solver defines destination $x+\Lambda$ from source $x$, the multiplier under our convention is $e^{+ik_{x,i}\Lambda}$. Reversing the mapping requires its inverse. Some solvers use a different phasor or built-in phase convention. Verify the actual translated plane wave instead of copying a sign from a screenshot.
+The boundary mapping direction matters. If a solver defines destination $x+\Lambda$ from source $x$, the multiplier under our convention is $e^{-ik_{x,i}\Lambda}$. Reversing the mapping requires its inverse. Some solvers use a different phasor or built-in phase convention. Verify the actual translated plane wave instead of copying a sign from a screenshot.
 
 :::{dropdown} Derivation: why the driven field inherits the incident phase
 Assume a linear, periodic Maxwell problem with one plane-wave excitation and a unique outgoing scattering solution. Translate both fields by $\Lambda$ and remove the known incident phase:
 
 $$
-\widetilde{\mathbf E}(x,z)=e^{-ik_{x,i}\Lambda}\mathbf E(x+\Lambda,z),\qquad
-\widetilde{\mathbf H}(x,z)=e^{-ik_{x,i}\Lambda}\mathbf H(x+\Lambda,z).
+\widetilde{\mathbf E}(x,z)=e^{+ik_{x,i}\Lambda}\mathbf E(x+\Lambda,z),\qquad
+\widetilde{\mathbf H}(x,z)=e^{+ik_{x,i}\Lambda}\mathbf H(x+\Lambda,z).
 $$
 
-The translated material coefficients are unchanged. The translated incident wave acquires $e^{ik_{x,i}\Lambda}$, which the prefactor cancels; the outgoing condition is unchanged too. Thus the tilded and original fields solve the same problem. Uniqueness makes them equal, yielding the Bloch relation. Multiplying the field by $e^{-ik_{x,i}x}$ then gives the periodic function $u$ used above.
+The translated material coefficients are unchanged. The translated incident wave acquires $e^{-ik_{x,i}\Lambda}$, which the prefactor cancels; the outgoing condition is unchanged too. Thus the tilded and original fields solve the same problem. Uniqueness makes them equal, yielding the Bloch relation. Multiplying the field by $e^{+ik_{x,i}x}$ then gives the periodic function $u$ used above.
 
 This argument concerns a driven response, not an arbitrary sum of eigenmodes. At a lossless singularity with a nonunique homogeneous solution, specify the causal response by a limiting-absorption prescription; do not silently assume uniqueness. A finite array, a defect, or an excitation containing several tangential wavevectors also requires a different treatment or a superposition of Bloch sectors.
 :::
 
 ### Bloch wavevectors differing by a reciprocal vector
 
-Replacing $k_{x,i}$ by $k_{x,i}+\ell G$ leaves the translation multiplier unchanged because $e^{i\ell G\Lambda}=1$. This is the origin of reciprocal-lattice equivalence. It relabels harmonics; it does not change their physical tangential wavevectors when the labels are shifted consistently. The incident wavevector remains fixed by the physical incidence condition.
+Replacing $k_{x,i}$ by $k_{x,i}+\ell G$ leaves the translation multiplier unchanged because $e^{-i\ell G\Lambda}=1$. This is the origin of reciprocal-lattice equivalence. It relabels harmonics; it does not change their physical tangential wavevectors when the labels are shifted consistently. The incident wavevector remains fixed by the physical incidence condition.
 
 (ch04-section-04)=
 ## 4.4 Derive the Floquet orders
@@ -105,13 +105,13 @@ Replacing $k_{x,i}$ by $k_{x,i}+\ell G$ leaves the translation multiplier unchan
 Expand the periodic factor in a Fourier series:
 
 $$
-u(x,z)=\sum_{m=-\infty}^{\infty}u_m(z)e^{imGx}.
+u(x,z)=\sum_{m=-\infty}^{\infty}u_m(z)e^{-imGx}.
 $$
 
 Substituting gives
 
 $$
-E(x,z)=\sum_m u_m(z)e^{ik_{x,m}x},\qquad
+E(x,z)=\sum_m u_m(z)e^{-ik_{x,m}x},\qquad
 \boxed{k_{x,m}=k_{x,i}+\frac{2\pi m}{\Lambda}}.
 $$
 
@@ -136,22 +136,22 @@ flowchart TD
 ```
 
 :::{dropdown} Proof: why an artificial supercell cannot create new scattering orders
-Suppose the actual primitive period is $p$ and the computational period is $\Lambda=Np$. The periodic field factor $u=e^{-ik_{x,i}x}E$ then has period $p$. Split its supercell Fourier integral into $N$ identical intervals:
+Suppose the actual primitive period is $p$ and the computational period is $\Lambda=Np$. The periodic field factor $u=e^{+ik_{x,i}x}E$ then has period $p$. Split its supercell Fourier integral into $N$ identical intervals:
 
 $$
-u_m=\frac{1}{Np}\int_0^{Np}u(x)e^{-i2\pi mx/(Np)}\,dx
-=\frac{1}{Np}\int_0^p u(\xi)e^{-i2\pi m\xi/(Np)}\,d\xi
-\sum_{j=0}^{N-1}e^{-i2\pi mj/N}.
+u_m=\frac{1}{Np}\int_0^{Np}u(x)e^{+i2\pi mx/(Np)}\,dx
+=\frac{1}{Np}\int_0^p u(\xi)e^{+i2\pi m\xi/(Np)}\,d\xi
+\sum_{j=0}^{N-1}e^{+i2\pi mj/N}.
 $$
 
 For integer $m$, the finite sum is a roots-of-unity sum:
 
 $$
-\sum_{j=0}^{N-1}e^{-i2\pi mj/N}
+\sum_{j=0}^{N-1}e^{+i2\pi mj/N}
 =\begin{cases}N,&m=N\ell,\quad\ell\in\mathbb Z,\\0,&m\notin N\mathbb Z.\end{cases}
 $$
 
-When the ratio is not one, the geometric-series numerator is $1-e^{-i2\pi m}=0$; when it is one, add $N$ ones directly. Therefore six identical cells allow nonzero supercell coefficients only at $m=6\ell$. The statement concerns the solved field's symmetry; it does not assume isolated, uncoupled elements.
+When the ratio is not one, the geometric-series numerator is $1-e^{+i2\pi m}=0$; when it is one, add $N$ ones directly. Therefore six identical cells allow nonzero supercell coefficients only at $m=6\ell$. The statement concerns the solved field's symmetry; it does not assume isolated, uncoupled elements.
 
 The [cell-versus-supercell lab](../labs/10-coupling-lab.md) tests this extinction with an executed TE solver using a different geometry ($p=0.65\,\mu\mathrm m$, $N=6$). Its uniform-array control compares the same physical harmonic cutoff in primitive-cell and supercell calculations. The six unequal elements in the opening puzzle do not have this smaller translation symmetry.
 :::
@@ -169,10 +169,10 @@ For an outward distance $s\geq0$ measured away from the surface, define
 
 $$
 \kappa_m=k_0\sqrt{n_o^2-q_m^2},\qquad
-E_m\propto e^{ik_{x,m}x}e^{i\kappa_m s},
+E_m\propto e^{-ik_{x,m}x}e^{-i\kappa_m s},
 $$
 
-with the outgoing branch: nonnegative real $\kappa_m$ for propagation and positive imaginary $\kappa_m$ for decay. In laboratory coordinates, transmitted waves have $k_z=+\kappa_m$ and reflected waves have $k_z=-\kappa_m$ because their outward directions differ.
+with the outgoing branch: nonnegative real $\kappa_m$ for propagation and negative imaginary $\kappa_m$ for decay. In laboratory coordinates, transmitted waves have $k_z=+\kappa_m$ and reflected waves have $k_z=-\kappa_m$ because their outward directions differ.
 
 | Condition | Classification | Interpretation |
 | --- | --- | --- |
@@ -190,7 +190,7 @@ Do not clip an arbitrary value outside $[-1,1]$ and report a grazing beam. First
 
 ### What does an evanescent order do?
 
-If $\kappa_m=i\alpha_m$ with $\alpha_m>0$, its amplitude varies as $e^{-\alpha_m s}$. Its amplitude decay length is $1/\alpha_m$; its intensity decay length is $1/(2\alpha_m)$. In the specified lossless homogeneous exterior, one such isolated outgoing harmonic carries no net normal time-averaged power. It can still store reactive energy, affect interface matching, and mediate coupling near the structure.
+If $\kappa_m=(-i)\alpha_m$ with $\alpha_m>0$, its amplitude varies as $e^{-\alpha_m s}$. Its amplitude decay length is $1/\alpha_m$; its intensity decay length is $1/(2\alpha_m)$. In the specified lossless homogeneous exterior, one such isolated outgoing harmonic carries no net normal time-averaged power. It can still store reactive energy, affect interface matching, and mediate coupling near the structure.
 
 Consequently, “closed in the far field” does not mean “safe to remove from an RCWA expansion.” Near cutoff, $\alpha_m$ can be small and the decay length large. Numerical harmonic convergence and port/reference-plane placement deserve particular attention there.
 
@@ -203,7 +203,7 @@ $$
 \kappa_m^2=n_o^2k_0^2-k_{x,m}^2.
 $$
 
-For real positive $\epsilon,\mu$, the positive real root carries energy outward when the right-hand side is positive. If it is negative, the two roots are $\pm i\alpha_m$. The outgoing field in an unbounded half-space must not grow as $s\to\infty$, selecting $+i\alpha_m$:
+For real positive $\epsilon,\mu$, the positive real root carries energy outward when the right-hand side is positive. If it is negative, the two roots are $\pm (-i)\alpha_m$. The outgoing field in an unbounded half-space must not grow as $s\to\infty$, selecting $-i\alpha_m$:
 
 $$
 \alpha_m=k_0\sqrt{q_m^2-n_o^2},\qquad
@@ -287,7 +287,7 @@ $$
 At exact grazing, a bounded field amplitude has zero normal flux. Power normalization becomes delicate as the normal component approaches zero. A closed-channel field coefficient should not be counted as an extra far-field power fraction.
 
 :::{dropdown} Derivation: TE/TM power factors and why powers add by order
-For $e^{-i\omega t}$, Faraday's law for a TE harmonic gives $\mathbf H=(\mathbf k\times\mathbf E)/(\omega\mu)$. With $\mathbf E=\hat{\mathbf y}E_y$, take the cross product and then the time-averaged Poynting vector:
+For $e^{+i\omega t}$, Faraday's law for a TE harmonic gives $\mathbf H=(\mathbf k\times\mathbf E)/(\omega\mu)$. With $\mathbf E=\hat{\mathbf y}E_y$, take the cross product and then the time-averaged Poynting vector:
 
 $$
 H_x=-\frac{k_z}{\omega\mu}E_y,\qquad
@@ -296,7 +296,7 @@ H_z=\frac{k_x}{\omega\mu}E_y,\qquad
 =\frac12\operatorname{Re}\!\left(\frac{k_z}{\omega\mu}\right)|E_y|^2.
 $$
 
-Divide the transmitted flux by the incident flux to obtain $T_m$. On the reflected side the outward flux is $-\langle S_z\rangle$, so a positive reflected power uses $\kappa_m$ rather than the negative laboratory $k_z$. For $k_z=\pm i\alpha$ and real $\mu$, the real part is zero: one outgoing evanescent harmonic carries no average normal power.
+Divide the transmitted flux by the incident flux to obtain $T_m$. On the reflected side the outward flux is $-\langle S_z\rangle$, so a positive reflected power uses $\kappa_m$ rather than the negative laboratory $k_z$. For $k_z=\pm (-i)\alpha$ and real $\mu$, the real part is zero: one outgoing evanescent harmonic carries no average normal power.
 
 For TM, Ampère's law gives $\mathbf E=-(\mathbf k\times\mathbf H)/(\omega\epsilon)$. Using $\mathbf H=\hat{\mathbf y}H_y$ gives, away from $k_z=0$ for the last expression,
 
@@ -308,11 +308,11 @@ $$
 
 Thus TE $E_y$, TM $H_y$, and TM tangential $E_x$ coefficients require different stated normalizations. Evaluate cutoff using bounded physical fields or a limit; the $E_x$ admittance formula is singular at $k_z=0$.
 
-Finally, average the outgoing field's normal flux across a full period. Products of distinct orders contain $e^{i(k_{x,m}-k_{x,n})x}$, and
+Finally, average the outgoing field's normal flux across a full period. Products of distinct orders contain $e^{-i(k_{x,m}-k_{x,n})x}$, and
 
 $$
-\frac1\Lambda\int_0^\Lambda e^{i(k_{x,m}-k_{x,n})x}\,dx
-=\frac1\Lambda\int_0^\Lambda e^{i(m-n)Gx}\,dx=\delta_{mn}.
+\frac1\Lambda\int_0^\Lambda e^{-i(k_{x,m}-k_{x,n})x}\,dx
+=\frac1\Lambda\int_0^\Lambda e^{-i(m-n)Gx}\,dx=\delta_{mn}.
 $$
 
 This orthogonality removes cross terms between distinct orders. It justifies summing modal powers in homogeneous exterior planes even when the local Poynting pattern has interference fringes. It does not say that distinct orders never interfere locally or that evanescent fields can be removed from interface matching.
@@ -337,11 +337,11 @@ $$
 Its maxima occur at the same tangential matching conditions when they lie inside the output light cone. Increasing $N$ narrows the peaks. The notebook computes the sum directly, avoiding a removable $0/0$ singularity in a sine-ratio formula.
 
 :::{dropdown} Derivation: geometric series, first nulls, and aperture width
-Define $\psi=\Lambda(k_{x,i}-n_ok_0\sin\theta)$. Sum the geometric series when $e^{i\psi}\ne1$:
+Define $\psi=\Lambda(k_{x,i}-n_ok_0\sin\theta)$. Sum the geometric series when $e^{-i\psi}\ne1$:
 
 $$
-\mathcal A_N=\frac{1-e^{iN\psi}}{N(1-e^{i\psi})}
-=e^{i(N-1)\psi/2}\frac{\sin(N\psi/2)}{N\sin(\psi/2)}.
+\mathcal A_N=\frac{1-e^{iN\psi}}{N(1-e^{-i\psi})}
+=e^{-i(N-1)\psi/2}\frac{\sin(N\psi/2)}{N\sin(\psi/2)}.
 $$
 
 At $\psi=2\pi\ell$, the original sum gives $\mathcal A_N=1$; this is a removable singularity of the quotient. The matching condition is $k_{x,o}=k_{x,i}-\ell G$, hence the Floquet label is $m=-\ell$ in our convention.
@@ -398,23 +398,23 @@ $$
 
 This connects to the generalized reflection/refraction formulation of [Yu et al.](https://doi.org/10.1126/science.1210713). It specifies a desired phase-matching relation; useful efficiency also requires an electromagnetic design that supplies the required amplitudes and boundary response.
 
-If the complex transmission function is periodic over $\Lambda$ and makes an ideal integer phase winding $\Phi(x+\Lambda)-\Phi(x)=2\pi q$, then the average gradient is $qG$. With our Fourier convention, an ideal prescribed factor $e^{iqGx}$ shifts the transmitted tangential wavevector to order $m=q$. A sampled or imperfect phase profile generally has additional Fourier harmonics.
+If the complex transmission function is periodic over $\Lambda$ and makes an ideal integer phase winding $\Phi(x+\Lambda)-\Phi(x)=2\pi q$, then the average gradient is $qG$. With our Fourier convention, an ideal prescribed factor $e^{-iqGx}$ shifts the transmitted tangential wavevector to order $m=q$. A sampled or imperfect phase profile generally has additional Fourier harmonics.
 
 :::{dropdown} Derivation: an ideal ramp, its sampled version, and spectral aliases
-For a local prescribed scalar transmission $t(x)=e^{i\Phi(x)}$, the transmitted boundary phase is $k_{x,i}x+\Phi(x)$. A constant derivative gives a single tangential wavevector $k_{x,t}=k_{x,i}+\Phi'(x)$, yielding the phase-gradient relation. A varying derivative describes local phase slope; it does not make the entire output a single plane wave.
+For a local prescribed scalar transmission $t(x)=e^{-i\Phi(x)}$, the transmitted boundary phase is $k_{x,i}x+\Phi(x)$. A constant derivative gives a single tangential wavevector $k_{x,t}=k_{x,i}+\Phi'(x)$, yielding the phase-gradient relation. A varying derivative describes local phase slope; it does not make the entire output a single plane wave.
 
 For a periodic $t$, its exact Fourier projection is
 
 $$
-c_m=\frac1\Lambda\int_0^\Lambda t(x)e^{-imGx}\,dx,\qquad
-t(x)=e^{iqGx}\ \Longrightarrow\ c_m=\delta_{mq}.
+c_m=\frac1\Lambda\int_0^\Lambda t(x)e^{+imGx}\,dx,\qquad
+t(x)=e^{-iqGx}\ \Longrightarrow\ c_m=\delta_{mq}.
 $$
 
-Now divide the period into $N$ equal bins and hold the ideal ramp's midpoint value constant in each bin: $t_j=e^{i2\pi q(j+1/2)/N}$ for integer $q$. Integrating within each bin, with $\operatorname{sinc}(v)=\sin(\pi v)/(\pi v)$ and $\operatorname{sinc}(0)=1$, gives
+Now divide the period into $N$ equal bins and hold the ideal ramp's midpoint value constant in each bin: $t_j=e^{-i2\pi q(j+1/2)/N}$ for integer $q$. Integrating within each bin, with $\operatorname{sinc}(v)=\sin(\pi v)/(\pi v)$ and $\operatorname{sinc}(0)=1$, gives
 
 $$
 c_m=\operatorname{sinc}\!\left(\frac mN\right)\frac1N
-\sum_{j=0}^{N-1}e^{i2\pi(q-m)(j+1/2)/N}
+\sum_{j=0}^{N-1}e^{-i2\pi(q-m)(j+1/2)/N}
 =\begin{cases}
 (-1)^\ell\operatorname{sinc}(m/N),&m=q+\ell N,\\
 0,&\text{otherwise}.

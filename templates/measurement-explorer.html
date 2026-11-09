@@ -27,7 +27,7 @@
 <div class="metric" aria-live="polite"><div><span data-en="Re(ε) at the pole" data-fa="بخش حقیقی گذردهی در قطب"></span><strong id="pole-real"></strong></div><div><span data-en="Im(ε) at the pole" data-fa="بخش موهومی گذردهی در قطب"></span><strong id="pole-imag"></strong></div></div>
 <svg id="material-plot" class="plot" role="img"></svg><div id="material-legend" class="legend"></div>
 <svg id="index-plot" class="plot" role="img"></svg><div id="index-legend" class="legend"></div>
-<p class="note" data-en="With exp(−iωt), positive Im(ε) represents loss. The passive square root gives n + iκ. These are teaching curves, not measured material data." data-fa="با قرارداد exp(−iωt)، بخش موهومی مثبت گذردهی نشان‌دهندهٔ اتلاف است. ریشهٔ غیرفعال n + iκ می‌دهد. این‌ها منحنی آموزشی‌اند، نه دادهٔ مادهٔ اندازه‌گیری‌شده."></p>
+<p class="note" data-en="With exp(+iωt), negative Im(ε) represents loss. The passive square root gives n − iκ. These are teaching curves, not measured material data." data-fa="با قرارداد exp(+iωt)، بخش موهومی منفی گذردهی نشان‌دهندهٔ اتلاف است. ریشهٔ غیرفعال n − iκ می‌دهد. این‌ها منحنی آموزشی‌اند، نه دادهٔ مادهٔ اندازه‌گیری‌شده."></p>
 </div></section>
 <section id="tolerance" role="tabpanel" aria-labelledby="tab-tolerance" hidden><div class="card">
 <h2 data-en="Correlation changes the population" data-fa="هم‌بستگی جمعیت را تغییر می‌دهد"></h2>
@@ -85,13 +85,13 @@ function plot(id,x,ys,labels,ymin,ymax,xlabel,ylabel,mark=null){
 }
 function legend(id,labels){el(id).innerHTML=labels.map((s,i)=>'<span style="--color:'+C[i%C.length]+'">'+esc(s)+'</span>').join('');}
 el('patch').innerHTML='<title>'+tr('Possible grounded patch','وصلهٔ زمین‌دار ممکن')+'</title><path d="M65 73L290 45L367 125L142 154Z" fill="#dbe9e6"/><path d="M142 154V169L367 140V125M65 73V88L142 169V154" fill="#8ca4b1"/><path d="M121 84L267 66L314 113L168 132Z" fill="#d49443"/>'+text(220,25,tr('Possible grounded patch','وصلهٔ زمین‌دار ممکن'),19)+text(220,193,'w₀ = 5 mm · εeff,₀ = 3',17);
-el('planes').innerHTML='<title>'+tr('One-port reference planes','صفحه‌های مرجع تک‌درگاهی')+'</title><rect x="20" y="70" width="100" height="60" rx="8" fill="#eee9f7"/><path d="M120 100H400" stroke="#087f8c" stroke-width="3"/><path d="M200 55V145M395 55V145" stroke="#e18431" stroke-width="3" stroke-dasharray="7 5"/>'+text(70,105,'D, T, S',18)+text(200,32,tr('Port','درگاه'),18)+text(390,32,tr('Surface','سطح'),18)+text(300,85,'d = 5 mm',17)+text(280,180,'Γport = Γsurface exp(2ikd)',17);
+el('planes').innerHTML='<title>'+tr('One-port reference planes','صفحه‌های مرجع تک‌درگاهی')+'</title><rect x="20" y="70" width="100" height="60" rx="8" fill="#eee9f7"/><path d="M120 100H400" stroke="#087f8c" stroke-width="3"/><path d="M200 55V145M395 55V145" stroke="#e18431" stroke-width="3" stroke-dasharray="7 5"/>'+text(70,105,'D, T, S',18)+text(200,32,tr('Port','درگاه'),18)+text(390,32,tr('Surface','سطح'),18)+text(300,85,'d = 5 mm',17)+text(280,180,'Γport = Γsurface exp(−2ikd)',17);
 function materials(){
  const row=D.materials.rows[el('damping').value],j=D.materials.GHz.indexOf(14),labels=[tr('Real','حقیقی'),tr('Imaginary','موهومی')];
  el('pole-real').textContent=row.epsilon[j][0].toFixed(4);el('pole-imag').textContent=row.epsilon[j][1].toFixed(4);
- plot('material-plot',D.materials.GHz,[row.epsilon.map(x=>x[0]),row.epsilon.map(x=>x[1])],labels,-12,28,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Relative permittivity','گذردهی نسبی'),14);legend('material-legend',labels);
+ plot('material-plot',D.materials.GHz,[row.epsilon.map(x=>x[0]),row.epsilon.map(x=>x[1])],labels,Math.min(...row.epsilon.flat())*1.1,Math.max(...row.epsilon.flat())*1.1,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('Relative permittivity','گذردهی نسبی'),14);legend('material-legend',labels);
  const indexLabels=[tr('Refractive index n','ضریب شکست n'),tr('Extinction coefficient κ','ضریب خاموشی κ')];
- plot('index-plot',D.materials.GHz,[row.index.map(x=>x[0]),row.index.map(x=>x[1])],indexLabels,0,4.5,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('n, κ','n, κ'),14);legend('index-legend',indexLabels);
+ plot('index-plot',D.materials.GHz,[row.index.map(x=>x[0]),row.index.map(x=>-x[1])],indexLabels,0,4.5,tr('Frequency (GHz)','فرکانس (گیگاهرتز)'),tr('n, κ','n, κ'),14);legend('index-legend',indexLabels);
 }
 function tolerance(){
  const row=D.tolerance.rows[el('rho').value],i=+el('bias').value,r=row.rows[i],keys=['-0.6','0.0','0.6'],labels=keys.map(x=>'ρ = '+x);

@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "model": "slab-fdfd-1.0",
+  "model": "slab-fdfd-1.0-positive-time",
   "source_sha256": {
-    "numerical_methods.py": "24f0cc7c187c6c92ba906aea101024b3249be87a2bae86c9ad148c79e7c0dd51",
-    "waves_interfaces.py": "005772da3bb31d9459a9307aa72fcba8cd88b24ac0a2e7a775665b6917c8ab2c",
-    "unit_cell_te.py": "f09df7965759eab81150ca8031bf0044a9c88c94dbb213f55590d1a43badcff6"
+    "numerical_methods.py": "5d2e021257c6824f94ed15b8c981c936b7ffc053c82c240abd7fa818afa79f22",
+    "waves_interfaces.py": "f69aade38f65fc96b71ce5b28010a54b505de34ea478759bbd316c893bbb70cd",
+    "unit_cell_te.py": "bcbbb34199c7ef81b1d5626793fffc76cb1db199ab9f8c0d3aad9e9d2f51e75a"
   },
   "environment": {
     "python": "3.12.1",
@@ -38,19 +38,19 @@
           "algebraic_residual": 8.441676551610383e-13,
           "current_spread": 1.6564527527407336e-13,
           "r_real": -0.21958868795104478,
-          "r_imag": -0.32619328165619976,
+          "r_imag": 0.32619328165619976,
           "t_real": 0.7627216732885296,
-          "t_imag": -0.5134534060869037,
+          "t_imag": 0.5134534060869037,
           "backward_exit_real": 0.0,
           "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 1.0122110492356735e-05,
           "complex_r_error": 8.197808511540046e-06,
           "power_T_error": 5.568873174599531e-06,
           "power_R_error": 5.568873175265665e-06,
-          "phase_deg": -33.94788034756309,
-          "phase_error_deg": 0.0006018743064171133,
+          "phase_deg": 33.94788034756309,
+          "phase_error_deg": -0.0006018743064171133,
           "boundary_reflection_amplitude": 0.0
         }
       },
@@ -79,19 +79,19 @@
           "algebraic_residual": 9.860164825194796e-13,
           "current_spread": 1.66644475996236e-13,
           "r_real": -0.0014027133950050325,
-          "r_imag": -0.019119491247867357,
+          "r_imag": 0.019119491247867357,
           "t_real": -0.9971362728903705,
-          "t_imag": 0.07315552430170522,
+          "t_imag": -0.07315552430170522,
           "backward_exit_real": 0.0,
           "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 1.2007259314497274e-06,
           "complex_r_error": 3.463857230377032e-07,
           "power_T_error": 1.325178977662489e-08,
           "power_R_error": 1.3251787164456595e-08,
-          "phase_deg": 175.8039770260221,
-          "phase_error_deg": 6.880812602910398e-05,
+          "phase_deg": -175.8039770260221,
+          "phase_error_deg": -6.880812602910398e-05,
           "boundary_reflection_amplitude": 0.0
         }
       },
@@ -120,19 +120,19 @@
           "algebraic_residual": 7.298684980799742e-13,
           "current_spread": 1.758593271006248e-13,
           "r_real": -0.03266596153964023,
-          "r_imag": -0.14848492549873737,
+          "r_imag": 0.14848492549873737,
           "t_real": 0.96529197029373,
-          "t_imag": -0.21235953932629864,
+          "t_imag": 0.21235953932629864,
           "backward_exit_real": 0.0,
           "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 1.3127539241613774e-05,
           "complex_r_error": 9.729039040739137e-06,
           "power_T_error": 2.8947951511426595e-06,
           "power_R_error": 2.8947950477600792e-06,
-          "phase_deg": -12.407152765174866,
-          "phase_error_deg": 0.0007562499343667601,
+          "phase_deg": 12.407152765174866,
+          "phase_error_deg": -0.0007562499343667601,
           "boundary_reflection_amplitude": 0.0
         }
       },
@@ -161,19 +161,19 @@
           "algebraic_residual": 2.048255518117951e-12,
           "current_spread": 2.8987923172962837e-13,
           "r_real": 0.1703172513766773,
-          "r_imag": -0.041291228848189525,
+          "r_imag": 0.041291228848189525,
           "t_real": 0.231965490792706,
-          "t_imag": 0.9568067095213116,
-          "backward_exit_real": -0.0,
+          "t_imag": -0.9568067095213116,
+          "backward_exit_real": 0.0,
           "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 8.804975738072964e-08,
           "complex_r_error": 8.482410481709307e-08,
           "power_T_error": 2.923378894514883e-08,
           "power_R_error": 2.9233788043092623e-08,
-          "phase_deg": 76.37230669756512,
-          "phase_error_deg": 5.050812862578115e-06,
+          "phase_deg": -76.37230669756512,
+          "phase_error_deg": -5.050812862578115e-06,
           "boundary_reflection_amplitude": 0.0
         }
       },
@@ -202,19 +202,19 @@
           "algebraic_residual": 5.572691083037141e-13,
           "current_spread": 3.2363001167823313e-13,
           "r_real": -0.2678948225944305,
-          "r_imag": -0.385302872932054,
+          "r_imag": 0.385302872932054,
           "t_real": -0.725024033680347,
-          "t_imag": 0.5040974218572658,
+          "t_imag": -0.5040974218572658,
           "backward_exit_real": 0.0,
-          "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "backward_exit_imag": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 4.1983391496230644e-05,
           "complex_r_error": 3.727272878561858e-05,
           "power_T_error": 2.92126976340068e-05,
           "power_R_error": 2.921269777492186e-05,
-          "phase_deg": 145.18973881638584,
-          "phase_error_deg": 0.0025037433214202785,
+          "phase_deg": -145.18973881638584,
+          "phase_error_deg": -0.0025037433214202785,
           "boundary_reflection_amplitude": 0.0
         }
       },
@@ -243,19 +243,19 @@
           "algebraic_residual": 2.5375510878729026e-12,
           "current_spread": 1.6542323066914832e-13,
           "r_real": -0.7027394550434171,
-          "r_imag": 0.03139351231835562,
+          "r_imag": -0.03139351231835562,
           "t_real": 0.031719925173503624,
-          "t_imag": 0.7100461619194819,
-          "backward_exit_real": -0.0,
+          "t_imag": -0.7100461619194819,
+          "backward_exit_real": 0.0,
           "backward_exit_imag": 0.0,
-          "boundary_reflection_real": -0.0,
+          "boundary_reflection_real": 0.0,
           "boundary_reflection_imag": 0.0,
           "complex_t_error": 1.2624438042421922e-07,
           "complex_r_error": 1.268930669363142e-07,
           "power_T_error": 1.547847405802827e-07,
           "power_R_error": 1.5478473952557081e-07,
-          "phase_deg": 87.4421236442723,
-          "phase_error_deg": 5.14982980094918e-06,
+          "phase_deg": -87.4421236442723,
+          "phase_error_deg": -5.14982980094918e-06,
           "boundary_reflection_amplitude": 0.0
         }
       }
@@ -280,14 +280,14 @@
       512
     ],
     "final_complex_t_error": 4.0489125923104726e-05,
-    "final_phase_error_deg": 0.0024075331179604915,
+    "final_phase_error_deg": -0.0024075331179604915,
     "final_observed_order": 2.000099622574943
   },
   "expected_failures": {
     "coarse_mesh": {
       "cells": 4,
       "complex_t_error": 0.8233652293232888,
-      "phase_error_deg": 50.94294980208968,
+      "phase_error_deg": -50.94294980208968,
       "energy_defect": 3.3306690738754696e-16,
       "algebraic_residual": 2.881284837137441e-16
     },
@@ -303,7 +303,7 @@
     "wrong_deembedding": {
       "cells": 8,
       "padding_cells_each_side": 64,
-      "phase_drift_deg": 8.677703700130866
+      "phase_drift_deg": -8.677703700130866
     }
   },
   "discrete_boundary_domain_invariance": {
@@ -342,7 +342,7 @@
   "chapter05_saved_evidence": {
     "status": "read saved audit; not rerun by this script",
     "path": "data/chapter-05/validation.json",
-    "sha256": "30f8d3ad2d2e1c336ed5b0a38301fcc6ab91388a301cfa89d00eee92c0f16d66",
+    "sha256": "83d33224c6e1852882953f79bcf3bb419333b8e3d2eff9fbe23e0e895e1aa360",
     "full_wave_refinement": {
       "half_orders": [
         144,
@@ -359,5 +359,5 @@
     "It does not independently validate the patterned ridge grating",
     "No FDTD, FEM, PML, 3D, finite array, physical dispersion, loss, or experiment was run"
   ],
-  "runtime_seconds": 0.20361039997078478
+  "runtime_seconds": 0.702231100294739
 }

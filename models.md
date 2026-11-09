@@ -89,3 +89,27 @@ The [Chapter 8 geometry](chapters/08-communications.md) shows a transmitter, ref
 ## Chapter 9: from device to measurement
 
 The [measurement schematic](chapters/09-materials-measurement.md) distinguishes a possible grounded patch from the one-port model actually executed. Width and effective permittivity change an assigned resonance by a local scaling law. The port and surface planes are separated by a known 5 mm air path. An independent free-space/horn sketch is an unexecuted extension, not the calibration fixture solved by the notebook. Shared calculations live in simulations/materials_measurement.py.
+
+(phasor-convention)=
+## The course phasor convention
+
+Every chapter, notebook and browser model uses positive harmonic time dependence. The booklet's $j$ and our $i$ denote the same imaginary unit. This table concerns local scalar passive media at positive frequency and the stated outgoing wave; a general tensor or port model needs its corresponding passivity and normalization conditions.
+
+$$
+\mathbf E(\mathbf r,t)=\operatorname{Re}\{\widetilde{\mathbf E}(\mathbf r)e^{+i\omega t}\},\qquad
+\widetilde{\mathbf E}_{+}=\mathbf E_0e^{-i\mathbf k\cdot\mathbf r}.
+$$
+
+| Quantity | Convention |
+| --- | --- |
+| Outgoing root | $k_z=k_r-i\kappa$, $k_r,\kappa\ge0$ |
+| Passive scalar material | $\epsilon=\epsilon\prime-i\epsilon\prime\prime$, $\epsilon\prime\prime\ge0$ |
+| Inductor / capacitor impedance | $Z_L=i\omega L$, $Z_C=-i/(\omega C)$ |
+| Capacitor / inductor admittance | $Y_C=i\omega C$, $Y_L=-i/(\omega L)$ |
+| Signed phase / phase lag | $\phi=\arg t$, $\Phi=-\phi$, $t=|t|e^{-i\Phi}$ |
+| Group delay | $\tau_g=-d\arg(t)/d\omega$ |
+| Positive-period translation | $E(x+\Lambda)=e^{-ik_x\Lambda}E(x)$ |
+
+A positive $\kappa$ gives decay because $e^{-ik_z z}=e^{-ik_rz}e^{-\kappa z}$. Phase-lag profiles and signed library phases have opposite signs: when a design uses $\Phi(x)$, a routine expecting $\arg t$ receives $-\Phi(x)$. The coherent-sheet example defines its second input by the lag $\varphi$, $a_2/a_1=e^{-i\varphi}$; the Jones-vector control $\delta$ instead denotes the explicitly stated signed relative phasor phase. These are definitions of the input variables, all with the same positive time convention.
+
+The outgoing-root row assumes the positive-index exterior media used by these models; it is not a universal sign rule for negative-index media. Group delay uses a differentiable, unwrapped phase at nonzero transmission, with fixed reference planes.

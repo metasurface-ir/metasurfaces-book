@@ -22,7 +22,7 @@
     "noise_figure_dB": 7.0,
     "temperature_K": 290.0
   },
-  "source_sha256": "0ccb26907ba7ac77713dd315a769f60c37bce5558ab01a0fd519211843289129",
+  "source_sha256": "99e2af694289b78f4ae13615906c8bd393583125201ef61800036f87490654aa",
   "checks": {
     "coherent_relative": 5.939798433439992e-19,
     "adaptive_quadrature_relative": 1.4600749926688193e-08,

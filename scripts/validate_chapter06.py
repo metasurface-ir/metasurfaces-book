@@ -80,7 +80,7 @@ def write_csv(path, rows):
 def boundary_equation_reference(slab):
     """Independent four-amplitude E/E' matching, with t at the exit face."""
     ne, nf = slab.n_exterior, slab.n_film
-    p = np.exp(2j*np.pi*nf*slab.thickness_um/slab.wavelength_um)
+    p = np.exp((-2j)*np.pi*nf*slab.thickness_um/slab.wavelength_um)
     matrix = np.array([[1, -1, -1, 0], [-ne, -nf, nf, 0],
                        [0, p, 1/p, -1], [0, nf*p, -nf/p, -ne]], complex)
     r, _, _, t = np.linalg.solve(matrix, np.array([-1, -ne, 0, 0], complex))
@@ -98,7 +98,7 @@ def main():
               ['numerical_methods.py', 'waves_interfaces.py', 'unit_cell_te.py']}
     metadata = dict(schema='metasurface-numerical-methods-v1', model=MODEL_VERSION,
         parameters=asdict(slab), units='micrometers; degrees for reported phase',
-        time_convention='exp(-i omega t)', field='normal-incidence tangential Ey',
+        time_convention='exp(+i omega t)', field='normal-incidence tangential Ey',
         phase_references=dict(incident='one at z=0', r='z=0', t='z=thickness'),
         grid='node-centered; h=d/N; film faces on nodes; arithmetic half-cell epsilon at each face',
         flux='equal exteriors; J=Im(conj(E_j)*E_(j+1))/sin(theta); T_net=T_forward-T_backward',
@@ -155,7 +155,7 @@ def main():
             row['phase_drift_deg'] = float(phase_error_deg(result['t'], matched['t']))
             drift = ((result['phase_step_rad']-result['continuum_phase_step_rad'])*2*p
                      if deembed == 'continuum' else 0.)
-            row['predicted_deembed_drift_deg'] = float(np.rad2deg(np.angle(np.exp(1j*drift))))
+            row['predicted_deembed_drift_deg'] = float(np.rad2deg(np.angle(np.exp((-1j)*drift))))
             padding.append(row)
             assert result['energy_defect'] < 1e-10 and result['current_spread'] < 1e-10
             if boundary == 'discrete' and deembed == 'discrete':
@@ -192,7 +192,7 @@ def main():
         case = replace(slab, n_film=ne, n_exterior=ne)
         for N in [8, 32, 128]:
             result = solve_slab(case, N, 3, 11)
-            error = max(abs(result['r']), abs(result['t']-np.exp(1j*result['phase_step_rad']*N)))
+            error = max(abs(result['r']), abs(result['t']-np.exp((-1j)*result['phase_step_rad']*N)))
             assert error < 1e-10
             homogeneous_errors.append(float(error))
 
@@ -208,7 +208,7 @@ def main():
     bad_cases = [dict(slab=replace(slab, n_film=-1)),
                  dict(slab=replace(slab, thickness_um=0)),
                  dict(slab=replace(slab, wavelength_um=np.nan)),
-                 dict(slab=replace(slab, n_exterior=1+1j)),
+                 dict(slab=replace(slab, n_exterior=1+(-1j))),
                  dict(slab=replace(slab, n_exterior=True)),
                  dict(cells=True), dict(cells=4.5), dict(cells=-1),
                  dict(left_padding_cells=-1), dict(right_padding_cells=2.5),

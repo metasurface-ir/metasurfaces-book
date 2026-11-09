@@ -39,7 +39,7 @@ $$
 
 $$
 \widetilde t_m=\operatorname{sinc}\!\left(\frac{m}{N}\right)\frac1N\sum_{j=0}^{N-1}t_j
-\exp\!\left[-2\pi i m\frac{j+1/2}{N}\right],\quad N=6.
+\exp\!\left[-2\pi (-i) m\frac{j+1/2}{N}\right],\quad N=6.
 $$
 
 در اینجا sinc(u)=sin(πu)/(πu) است. همین رابطه را برای rⱼ به کار ببرید. با بردار موج طولی **هر مرتبهٔ ابرسلول** دامنه را به توان تبدیل کنید. میدان چسبانده‌شده الزاماً توان را حفظ نمی‌کند؛ R+T خام را نگه دارید و دوباره نرمال نکنید.

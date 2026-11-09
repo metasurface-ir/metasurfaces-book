@@ -4,7 +4,7 @@ Authoritative generators are notebooks/09-dispersion.ipynb,
 notebooks/10-coupling.ipynb and notebooks/11-inverse-design.ipynb. Each JSON
 contains the fixed physical inputs, units, normalized-text source hashes,
 environment, numerical controls and computed values. All widths/lengths are in
-micrometers. TE Ey, exp(-i omega t), r at z=0, t at z=height. Constant positive
+micrometers. TE Ey, exp(+i omega t), r at z=0, t at z=height. Constant positive
 real indices and an infinite periodic six-ridge sequence; not a finite device.
 
 - dispersion.json: 161 wavelengths at M=96/144, connected efficiency/useful
