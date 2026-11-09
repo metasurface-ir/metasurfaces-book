@@ -7,7 +7,7 @@ short_title: Waves worked examples
 
 **Question:** which simple calculation would expose a wrong sign, a wrong normalization, or an unsupported physical interpretation?
 
-These examples accompany the [chapter](02-waves-and-interfaces.md), [browser/notebook lab](../labs/02-waves-lab.md), and [self-check](02-waves-review.md). They use $e^{+i\omega t}$, spatial $e^{-i\mathbf k\cdot\mathbf r}$, peak electric amplitudes, and positive real nonmagnetic bulk indices. Predict the sign or limiting behavior before reading each calculation.
+These examples accompany the [chapter](02-waves-and-interfaces.md), [browser/notebook lab](../labs/02-waves-lab.md), and [self-check](02-waves-review.md). They use peak electric amplitudes, and positive real nonmagnetic bulk indices. Predict the sign or limiting behavior before reading each calculation.
 
 ## 1. Find the magnetic-field sign
 

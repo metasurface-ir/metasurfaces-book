@@ -1,9 +1,9 @@
 ---
-title: "Goals and conventions"
+title: "What will we learn to calculate?"
 ---
 
 (ch04-section-01)=
-# Goals and conventions
+# What will we learn to calculate?
 
 After this chapter, you should be able to:
 
@@ -15,7 +15,7 @@ After this chapter, you should be able to:
 
 Prerequisites are plane waves, phasors, tangential boundary conditions, Fourier series, and basic complex algebra. The [worked examples and teaching guide](04-floquet-guide.md) include a short learning path.
 
-We use time dependence $e^{+i\omega t}$ and spatial dependence $e^{-i\mathbf k\cdot\mathbf r}$. The surface is near $z=0$, periodic along $x$ with period $\Lambda$, and invariant along $y$ in the introductory model. A plane wave arrives from $z<0$ and travels toward positive $z$. Angles are signed from the relevant outward surface normal, with a positive angle having positive $k_x$.
+The surface is near $z=0$, periodic along $x$ with period $\Lambda$, and invariant along $y$ in the introductory model. A plane wave arrives from $z<0$ and travels toward positive $z$. Angles are signed from the relevant outward surface normal, with a positive angle having positive $k_x$.
 
 The incident and transmitted half-spaces are homogeneous, isotropic, lossless media with positive real permittivity and permeability, and positive real indices $n_i$ and $n_t$. We set $k_y=0$ initially. Materials inside a future scattering structure may be more complicated; the real-index channel tests below apply to its homogeneous exterior regions.
 

@@ -226,8 +226,6 @@ Power balance holds, and the passive structure is consistent with energy conserv
 (ch02-section-03)=
 ### Computational connection: A field is not a power meter
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 For phasors defined as peak amplitudes, the time-averaged power-flux density is
 

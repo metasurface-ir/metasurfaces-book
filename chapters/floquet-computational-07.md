@@ -31,7 +31,7 @@ $$
 At exact grazing, a bounded field amplitude has zero normal flux. Power normalization becomes delicate as the normal component approaches zero. A closed-channel field coefficient should not be counted as an extra far-field power fraction.
 
 :::{dropdown} Derivation: TE/TM power factors and why powers add by order
-For $e^{+i\omega t}$, Faraday's law for a TE harmonic gives $\mathbf H=(\mathbf k\times\mathbf E)/(\omega\mu)$. With $\mathbf E=\hat{\mathbf y}E_y$, take the cross product and then the time-averaged Poynting vector:
+Faraday's law for a TE harmonic gives $\mathbf H=(\mathbf k\times\mathbf E)/(\omega\mu)$. With $\mathbf E=\hat{\mathbf y}E_y$, take the cross product and then the time-averaged Poynting vector:
 
 $$
 H_x=-\frac{k_z}{\omega\mu}E_y,\qquad

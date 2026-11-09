@@ -56,7 +56,7 @@ Keep geometry, material uncertainty, discretization, artificial boundaries, alge
 
 ## Build a frequency-domain slab calculation
 
-Use $e^{+i\omega t}$, $k_0=2\pi/\lambda_0$, and $E_y(z)$ at normal incidence. The slab occupies $0<z<d$, with real indices $n_f$ inside and $n_e$ on both sides:
+Use $k_0=2\pi/\lambda_0$, and $E_y(z)$ at normal incidence. The slab occupies $0<z<d$, with real indices $n_f$ inside and $n_e$ on both sides:
 
 $$
 \frac{d^2 E}{dz^2}+k_0^2 n^2(z)E=0,\qquad

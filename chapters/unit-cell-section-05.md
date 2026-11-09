@@ -20,8 +20,8 @@ Here $\lambda_0$ is the free-space wavelength, $x$ is the horizontal meta-atom p
 
 Divide the surface into squares the size of one cell. Insert each square's center coordinate into the formula, then find the corresponding geometry in the LUT. For example, if the requested phase at $x=15\,\mathrm{mm}$ is $120^\circ$ and the LUT maps it to $r=2.5\,\mathrm{mm}$, place that meta-atom there. Continue, step by step, until the entire surface is filled!
 
-:::{important} One time convention, two meanings of phase
-Throughout the course the real field uses $e^{+i\omega t}$ and forward propagation uses $e^{-i\mathbf k\cdot\mathbf r}$. For steering toward positive $x$, the positive source profile above is a **phase lag**: $t(x)=A(x)e^{-i\phi(x)}$. Its signed argument is $-\phi(x)$. In the focusing formula below, the positive source profile is instead the **signed argument** of transmission. The source uses the same symbol for both; keeping the equations and distinguishing their meanings avoids reversing the beam or defocusing the lens. These expressions assume normal incidence and propagation into free space.
+:::{important} Signed phase and phase lag
+For steering toward positive $x$, the positive source profile above is a **phase lag**: $t(x)=A(x)e^{-i\phi(x)}$. Its signed argument is $-\phi(x)$. In the focusing formula below, the positive source profile is instead the **signed argument** of transmission. The source uses the same symbol for both; keeping the equations and distinguishing their meanings avoids reversing the beam or defocusing the lens. These expressions assume normal incidence and propagation into free space.
 :::
 
 :::{admonition} Worked exercise: a steering array

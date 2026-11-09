@@ -37,6 +37,7 @@ $$
 
 The periodic channels and their amplitudes require [Chapter 4](04-periodic-floquet.md) and the full-structure checks of [Chapter 5](05-metasurface-synthesis.md). The [dielectric-post study of Arbabi et al.](https://arxiv.org/abs/1411.1494) demonstrates a specific phase/polarization platform. A passive surface can be lossy, and external tuning alone implies neither electromagnetic gain nor nonreciprocity.
 
+(course-phasor-convention)=
 ### Computational connection: complex coefficients
 
 We use the phasor convention
@@ -44,6 +45,12 @@ We use the phasor convention
 $$
 E(t)=\operatorname{Re}\{\widetilde E e^{+i\omega t}\},\qquad
 \widetilde E=Ae^{i\phi}.
+$$
+
+This convention applies throughout the book, its notebooks and browser laboratories. The symbols $j$ and $i$ denote the same imaginary unit. A forward plane wave has the spatial factor below; later chapters use these definitions without repeating them.
+
+$$
+\widetilde{\mathbf E}(\mathbf r)=\mathbf E_0e^{-i\mathbf k\cdot\mathbf r}.
 $$
 
 The magnitude $A$ and phase $\phi$ describe the field relative to a reference. A reflection or transmission coefficient is a complex ratio of an outgoing field amplitude to the chosen incident amplitude. Its phase also depends on where the reference planes are placed.

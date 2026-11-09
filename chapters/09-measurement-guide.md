@@ -13,7 +13,7 @@ $$
 =2-i\,12.8333.
 $$
 
-The imaginary part is negative, consistent with dissipation under $e^{+i\omega t}$. Increasing damping to 2.4 GHz halves this pole value but also alters the real dispersion away from the pole. It does not justify changing only a loss-tangent parameter across the entire band.
+The negative imaginary part represents dissipation. Increasing damping to 2.4 GHz halves this pole value but also alters the real dispersion away from the pole. It does not justify changing only a loss-tangent parameter across the entire band.
 
 **Check:** Evaluate the original complex fraction and the independent real/imaginary rational expressions. The notebook's illustrated spectrum is not TiO₂ or a measured substrate.
 

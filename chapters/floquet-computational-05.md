@@ -57,7 +57,7 @@ $$
 \frac{|E_m(s)|^2}{|E_m(0)|^2}=e^{-2\alpha_m s}.
 $$
 
-Setting each ratio to $e^{-1}$ gives the two decay lengths. “Intensity” here means squared field magnitude, not a nonzero normal power flow. Section 4.7 derives why its normal time-averaged Poynting flux is zero.
+Setting each ratio to $e^{-1}$ gives the two decay lengths. “Intensity” here means squared field magnitude, not a nonzero normal power flow. The [power derivation](floquet-computational-07.md) explains why its normal time-averaged Poynting flux is zero.
 :::
 
 ```{figure} ../assets/chapter-04/outgoing-fields.png

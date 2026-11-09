@@ -1,9 +1,13 @@
 ---
-title: "4.9 Periodic boundaries and Floquet ports"
+title: "4.9 Periodic boundaries and Floquet ports in simulation"
 ---
 
-# 4.9 Periodic boundaries and Floquet ports
+# 4.9 Periodic boundaries and Floquet ports in simulation
 
-Now the simulation setup in Chapter 3 makes sense. Periodic boundaries implement the neighboring-cell phase relation on opposite cell faces. A Floquet port decomposes input and output into the relevant spatial orders and polarizations. Software such as CST or HFSS can then report modal amplitudes and phases. Check each solver's phasor convention, port normalization, reference plane, and phase-shift direction before comparing its output with the course. Evanescent modes may be necessary for numerical convergence even though they do not form outgoing far-field beams.
+Now we understand why Chapter 3 used periodic boundaries and Floquet ports.
 
+Periodic boundaries—the room-of-mirrors metaphor—in CST or HFSS numerically impose the phase relation $E(x+p)=E(x)e^{-ik_xp}$ on the unit-cell walls. A Floquet port is a window that can inject or receive energy separately in the Floquet modes $(m,n)$ and provide the amplitude and phase plots extracted in the previous chapter.
 
+:::{note} Supplementary clarification
+A solver may use different port, angle and phase-map definitions. Check a translated plane wave and the power normalization before comparing complex coefficients. Evanescent modes may be necessary for boundary matching and convergence even when only open orders carry far-field normal power.
+:::

@@ -34,7 +34,7 @@ Other exciting ideas appeared along the way:
 - **Chiral structures:** materials without mirror symmetry that can rotate the wave's plane of polarization.
 
 :::{note} Reading the source with consistent conventions
-The source loss expression above is consistent with the $e^{+j\omega t}$ convention. Our shared numerical work uses $e^{+i\omega t}$. For passive local scalar media at positive frequency, our convention gives
+For passive local scalar media at positive frequency, the loss expression becomes
 
 $$
 \epsilon=\epsilon'-i\epsilon'',\qquad \mu=\mu'-i\mu'',\qquad \epsilon'',\mu''\geq0.

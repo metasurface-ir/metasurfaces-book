@@ -20,7 +20,7 @@ The paired `chapter03-en.md` and `chapter03-fa.md` readings adapt printed pages 
 
 ## Chapter 4
 
-The ten paired reading pages adapt printed pages 79–88. The previous twelve computational sections, proofs, figures, laboratory and notebook remain available. The source's repeated substitutions are consolidated, and physical qualifications and numerical rounding are identified in the text. This is not a sentence-exact transcription. The source rights reservation above applies.
+The complete primary reading from printed pages 79–88 (body 80–88) is manually transcribed in Persian and translated into English. All ten sections, four short worked examples and the six-part problem retain their explanatory prose and intermediate calculations, including the source's rounding. Only typography, obvious extraction defects, list layout and the equivalent imaginary-unit notation are normalized. Source worked answers use five colored expandable panels. Scientific qualifications are separate, never substitutes for the source text. The twelve computational connections, proofs, figures, browser lab and notebook remain available, with Persian prose revised toward the source's explanatory voice. The source rights reservation above applies.
 
 ## Chapter 5
 

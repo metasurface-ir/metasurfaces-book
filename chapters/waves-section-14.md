@@ -47,8 +47,6 @@ Here the normal points from medium 1 toward medium 2, opposite to Section 2.4. T
 (ch02-section-10)=
 ### Computational connection: Give a sheet a current
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Consider an ideal, local, purely electric surface at normal incidence. Let its sheet admittance be $Y_s$ in siemens, and define the dimensionless quantity $g=\eta_0Y_s$. Because there is no magnetic surface current, tangential electric continuity still gives $t=1+r$. The electric jump condition adds a shunt current:
 
@@ -66,7 +64,7 @@ $$
 
 Here $Y_i=n_i$ and $Y_t=n_t$ at normal incidence. For $\operatorname{Re}g\geq0$, the sheet is passive and $R+T+A=1$. The absorbed power follows directly from $\tfrac12\operatorname{Re}Y_s|E_{\mathrm{sheet}}|^2$, rather than from unexplained missing channels.
 
-This is also an equivalent-circuit language: the wave regions are transmission-line ports and $Y_s$ is a shunt at their junction. Under $e^{+i\omega t}$, a capacitance per square has $Y_s=+i\omega C_s$ and an inductance has $Y_s=-i/(\omega L_s)$. Positive conductance dissipates power. 
+This is also an equivalent-circuit language: the wave regions are transmission-line ports and $Y_s$ is a shunt at their junction. A capacitance per square has $Y_s=+i\omega C_s$ and an inductance has $Y_s=-i/(\omega L_s)$. Positive conductance dissipates power. 
 
 For equal air ports and real $g=G\geq0$,
 
@@ -78,8 +76,6 @@ with equality at $G=2$. A larger conductance eventually reflects more strongly i
 
 (ch02-section-11)=
 ### Computational connection: Retrieve only what is identifiable
-
-Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 For the equal-air electric shunt at the common sheet plane,

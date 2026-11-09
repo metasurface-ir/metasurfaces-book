@@ -275,8 +275,6 @@ At Brewster incidence a surviving reflected wave is TE only if the input contain
 (ch02-section-06)=
 ### Computational connection: Derive the interface response
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Take the plane of incidence to be $xz$. **TE** has electric field along $y$. **TM** has magnetic field along $y$ and electric field in the $xz$ plane. We compare the same tangential electric component on each side: $E_y$ for TE and $E_x$ for TM. Define
 
@@ -323,8 +321,6 @@ The geometry, polarization basis, and reference plane are part of the definition
 
 (ch02-section-07)=
 ### Computational connection: Brewster, evanescence, and cutoff
-
-Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 For nonmagnetic dielectric media, TM reflection vanishes when the two TM admittances match. Substituting Snell's law gives

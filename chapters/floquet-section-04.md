@@ -4,18 +4,42 @@ title: "4.4 Tangential wavevector and incidence angle"
 
 # 4.4 Tangential wavevector and incidence angle
 
-Picture a plane wave incident at angle $\theta$ from the normal onto the $xy$ plane, with propagation in the $xz$ plane. Its tangential component and adjacent-cell phase lag are given below. Oblique illumination excites neighboring cells with different phases. At $10\,\mathrm{GHz}$, using the source approximation $c=3\times10^8\,\mathrm{m/s}$, the wavelength is $30\,\mathrm{mm}$. For $p=10\,\mathrm{mm}$ and $\theta=30^\circ$, the lag is $60^\circ$. At normal incidence it vanishes. The signed phase change of the field under translation is the negative of this lag. In an incident medium of index $n_i$, replace $k_0$ by $n_i k_0$.
+To understand $k_x$ and $k_y$, picture a plane wave arriving at our metasurface at angle $\theta$ from the normal. If the surface lies in the $xy$ plane and the wave propagates in the $xz$ plane, its tangential wavevector along $x$ is:
 
-
 $$
-k_0=\frac{2\pi}{\lambda_0},\qquad k_x=k_0\sin\theta,
-\qquad\Delta\phi=k_xp=k_0p\sin\theta.
-$$
-$$
-\Delta\phi=\frac{2\pi}{30}(10)\sin30^\circ
-=\frac{2\pi}{30}(10)(0.5)=\frac{\pi}{3}=60^\circ.
-$$
-$$
-\theta=0\quad\Longrightarrow\quad\Delta\phi=0.
+k_x=k_0\sin\theta.
 $$
 
+Here $k_0=2\pi/\lambda_0$ is the free-space wavenumber and $\lambda_0$ is the wavelength. The phase difference between neighboring cells along $x$ therefore becomes:
+
+$$
+\Delta\phi=k_xp=k_0p\sin\theta.
+$$
+
+This relation is extremely important! Why? It shows that oblique illumination excites different cells with different phases. The first cell receives one phase, and its neighbor feels the wave slightly later and receives another.
+
+:::{admonition} Example 1: phase difference between neighboring cells
+:class: tip
+
+A metasurface operates at $10\,\mathrm{GHz}$ with period $p=10\,\mathrm{mm}$. The wavelength at this frequency is $\lambda_0=30\,\mathrm{mm}$. Find the neighboring-cell phase difference when the wave arrives at $\theta=30^\circ$.
+
+```{dropdown} Show the complete worked answer
+
+$$
+\Delta\phi=k_0p\sin\theta=\left(\frac{2\pi}{30}\right)\times10\times\sin30^\circ.
+$$
+
+$$
+\Delta\phi=\left(\frac{2\pi}{30}\right)\times10\times0.5=\frac{\pi}{3}.
+$$
+
+The neighboring-cell phase difference is therefore $60^\circ$.
+
+```
+:::
+
+**Golden tip:** at normal incidence, $\theta=0$, so $\sin0=0$ and $\Delta\phi=0$. All metasurface cells are then excited in phase and at the same time.
+
+:::{note} Supplementary clarification
+The example assumes free space and the rounded speed of light used by the textbook. In a medium of index $n_i$, use $k_x=n_i k_0\sin\theta_i$. The phrase “later” is an intuition for phase lag, not a calculation of signal arrival or group delay.
+:::

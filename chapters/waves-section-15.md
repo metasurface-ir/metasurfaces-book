@@ -161,8 +161,6 @@ For properly power-normalized propagating port waves, reflected and transmitted 
 (ch02-section-09)=
 ### Computational connection: Normalize a scattering matrix
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 For propagating ports with real positive admittance, scale each incoming/outgoing tangential field by $\sqrt{Y_j/(2\eta_0)}$. The resulting amplitudes have squared magnitude equal to normal power flux. Write
 

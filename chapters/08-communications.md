@@ -32,7 +32,7 @@ Original geometry: transmitter, reflective aperture, receiver and optional direc
 
 ## 8.3 A channel with explicit normalization
 
-Use the book’s time convention $e^{+i\omega t}$, so an outgoing path contributes $e^{-ikr}$. For sample j, let $r_{tj}$ and $r_{rj}$ be the node-to-sample distances and let $c_{tj}=z_t/r_{tj}$ and $c_{rj}=z_r/r_{rj}$ be positive direction cosines. The declared scalar model is
+An outgoing path contributes $e^{-ikr}$. For sample j, let $r_{tj}$ and $r_{rj}$ be the node-to-sample distances and let $c_{tj}=z_t/r_{tj}$ and $c_{rj}=z_r/r_{rj}$ be positive direction cosines. The declared scalar model is
 
 $$
 h_s(f)=\sum_{j=1}^{N}a_j\Gamma_j(f)e^{-ik(r_{tj}+r_{rj})},\qquad a_j=\frac{\Delta A\sqrt{\eta G_tG_r c_{tj}c_{rj}}}{4\pi r_{tj}r_{rj}},\qquad |\Gamma_j|\leq1.

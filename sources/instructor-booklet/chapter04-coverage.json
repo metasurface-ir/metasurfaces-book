@@ -1,8 +1,107 @@
 {
-  "printed_pages": "79–88",
-  "reading_sections": 10,
-  "retained_computational_sections": 12,
   "source_pdf_sha256": "e498dc9293e06b3566f898d7d2c6dbf7ef2f8701fbf215d07976db95f7332e92",
-  "method": "Bilingual adaptation; repeated substitutions consolidated, not sentence-exact transcription. Original full oblique-incidence problem and its numerical results are retained with more precise rounding. Qualifications distinguish open channels from nonzero amplitudes, grazing cutoff, and positive-time phase lag.",
-  "figures": "Retained original course figures; no third-party raster illustrations copied."
+  "printed_pages": "79–88; body 80–88",
+  "method": "Manual complete Persian transcription and paired English translation, checked against rendered PDF pages. Source prose and intermediate worked steps retained; no consolidation. Typography, list presentation, extraction defects and j=i notation normalized. Scientific qualifications are separate.",
+  "sections": [
+    {
+      "section": 1,
+      "printed_pages": 80,
+      "blocks": 2,
+      "display_equations": 0,
+      "answer_panels": 0
+    },
+    {
+      "section": 2,
+      "printed_pages": 80,
+      "blocks": 3,
+      "display_equations": 0,
+      "answer_panels": 0
+    },
+    {
+      "section": 3,
+      "printed_pages": "80–81",
+      "blocks": 14,
+      "display_equations": 4,
+      "answer_panels": 0
+    },
+    {
+      "section": 4,
+      "printed_pages": 81,
+      "blocks": 13,
+      "display_equations": 4,
+      "answer_panels": 1
+    },
+    {
+      "section": 5,
+      "printed_pages": 82,
+      "blocks": 8,
+      "display_equations": 3,
+      "answer_panels": 0
+    },
+    {
+      "section": 6,
+      "printed_pages": 82,
+      "blocks": 5,
+      "display_equations": 2,
+      "answer_panels": 0
+    },
+    {
+      "section": 7,
+      "printed_pages": 83,
+      "blocks": 17,
+      "display_equations": 2,
+      "answer_panels": 2
+    },
+    {
+      "section": 8,
+      "printed_pages": 83,
+      "blocks": 10,
+      "display_equations": 2,
+      "answer_panels": 1
+    },
+    {
+      "section": 9,
+      "printed_pages": 84,
+      "blocks": 2,
+      "display_equations": 0,
+      "answer_panels": 0
+    },
+    {
+      "section": 10,
+      "printed_pages": "84–88",
+      "blocks": 136,
+      "display_equations": 64,
+      "answer_panels": 1
+    }
+  ],
+  "source_examples": [
+    {
+      "page": 81,
+      "case": "10 GHz, p=10 mm, theta=30 degrees; 60-degree neighboring-cell phase lag"
+    },
+    {
+      "page": 83,
+      "case": "10 GHz, p=20 mm; closed first orders"
+    },
+    {
+      "page": 83,
+      "case": "10 GHz, p=40 mm; open first orders"
+    },
+    {
+      "page": 83,
+      "case": "10 GHz, p=45 mm; 41.8-degree first order and closed second order"
+    },
+    {
+      "pages": "84–88",
+      "case": "p=25 mm, theta=20 degrees; all six questions, full solution and final recap"
+    }
+  ],
+  "retained_computational_sections": 12,
+  "scientific_corrections": [
+    "Persian outgoing-evanescent-root sentence corrected to negative imaginary part",
+    "Finite-array definition and geometric-series numerator aligned with the executed notebook negative-exponential sum; independent complex comparison performed",
+    "Dispersion-lab derivative instruction corrected to minus phase slope and typeset in LaTeX"
+  ],
+  "array_closed_form_max_error": 2.6376925378252274e-16,
+  "limits": "Insertion assertions check the transcribed text, not the correctness of PDF extraction. Source correspondence is a manual editorial review."
 }
