@@ -42,7 +42,7 @@ Examples to read critically include [Cui et al. (2014)](https://doi.org/10.1038/
 The drawing connects a possible control mechanism to an effective one-port boundary. The effective R, L and C are assigned directly, without a geometry extraction. The ground-backed model has no transmitted port. The array exercise later assigns one circuit response to each prescribed scalar source.
 ```
 
-We use $e^{+i\omega t}$, normal incidence, a real positive wave impedance $Z_0$, and a reference plane on the effective surface. Set $f=10$ GHz, $L=20$ nH, $R=25\,\Omega$, $C_0=0.12$ pF, $V_j=1$ V, $M=1$, and $0\le V\le20$ V. These are effective educational parameters, not component specifications. Changing the reference plane adds propagation phase; calibration must use the same plane as the target.
+We use normal incidence, a real positive wave impedance $Z_0$, and a reference plane on the effective surface. Set $f=10$ GHz, $L=20$ nH, $R=25\,\Omega$, $C_0=0.12$ pF, $V_j=1$ V, $M=1$, and $0\le V\le20$ V. These are effective educational parameters, not component specifications. Changing the reference plane adds propagation phase; calibration must use the same plane as the target.
 
 ## 7.4 Derive reflection and check passivity
 

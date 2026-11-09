@@ -23,4 +23,4 @@ The reference cell has a ridge centered at $x=0$, width $w$, height $h$, period 
 
 All indices are positive, real, constant, and nonmagnetic. They define an ideal dielectric model without assigning measured material properties. A research library should use a stated dispersion model and measured or otherwise justified optical constants.
 
-We use $e^{+i\omega t}$ and $e^{-i\mathbf k\cdot\mathbf r}$. The incident $E_y$ equals one at $z=0$; reflected coefficients are referenced to $z=0$ and transmitted coefficients to $z=h$. Keeping these two reference faces fixed makes the width comparison meaningful.
+The incident $E_y$ equals one at $z=0$; reflected coefficients are referenced to $z=0$ and transmitted coefficients to $z=h$. Keeping these two reference faces fixed makes the width comparison meaningful.

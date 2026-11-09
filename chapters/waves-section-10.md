@@ -219,8 +219,6 @@ Unequal component amplitudes alone do not guarantee elliptical polarization: in-
 (ch02-section-04)=
 ### Computational connection: Make polarization visible
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 At a fixed point, the tip of the transverse electric field can trace a line, ellipse, or circle over one period. Write a unit-norm Jones vector for propagation along positive $z$ as
 

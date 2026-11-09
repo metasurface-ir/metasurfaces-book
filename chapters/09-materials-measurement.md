@@ -24,7 +24,7 @@ Choose a platform together with the operating band, polarization, thermal enviro
 
 A primary example of joint material/process selection is the amorphous-TiO₂ platform and atomic-layer-deposition route reported by [Devlin et al. (2016)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5035844/). Read the paper's material and fabrication evidence; its performance does not transfer automatically to a different wavelength or geometry. None of its figures or measured data are reproduced here.
 
-With time dependence $e^{+i\omega t}$, the illustrative relative permittivity is
+The illustrative relative permittivity is
 
 $$
 \epsilon_r(\omega)=\epsilon_\infty+
@@ -178,7 +178,7 @@ A small inverse denominator amplifies noise. Reject singular cases instead of si
 
 ## 9.8 Move the reference plane
 
-Place the calibrated port plane at z = 0 and the sample at z = d in a uniform lossless medium, with incidence along +z. The incident wave accumulates $e^{-ikd}$; the reflected wave travels the same distance back. Under $e^{+i\omega t}$,
+Place the calibrated port plane at z = 0 and the sample at z = d in a uniform lossless medium, with incidence along +z. The incident wave accumulates $e^{-ikd}$; the reflected wave travels the same distance back. Therefore,
 
 $$
 \Gamma_{\rm port}=\Gamma_{\rm surface}e^{-2ikd},\qquad

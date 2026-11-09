@@ -169,8 +169,6 @@ The source RLC example explicitly assumes that the whole one-port input impedanc
 (ch02-section-12)=
 ### Computational connection: Where did the missing light go?
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Return to the air-surrounded sheet with $g=2$. One incident beam gives $r=-1/2$, $t=1/2$, and $A=1/2$. Now illuminate it coherently from both sides, with total incoming power normalized to one:
 
@@ -198,8 +196,6 @@ This is an entry point to coherent perfect absorption, a research topic develope
 (ch02-section-13)=
 ### Computational connection: Carry this into the next chapters
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Before accepting any metasurface response, ask:
 
@@ -216,8 +212,6 @@ For an independent foundational route, the [Cornell ECE 3030 handouts](https://o
 
 (ch02-section-14)=
 ### Computational connection: Linked computational investigations
-
-Time convention in this computational connection: $e^{+i\omega t}$.
 
 
 Continue with [ms-09: spectral bandwidth](../labs/09-dispersion-lab.md), [ms-10: independent cells versus supercells](../labs/10-coupling-lab.md), and [ms-11: bounded optimization with independent checks](../labs/11-inverse-design-lab.md). These executed studies use the same explicit ridge geometry and connect spectral response, model approximation and design validation. The inverse-design study is a direct full-wave baseline for later AI comparisons.

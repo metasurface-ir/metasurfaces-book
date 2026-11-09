@@ -15,7 +15,7 @@ $$
 
 For vector fields, specify two complex polarization components, or an appropriate Jones transformation. Also state wavelength, illumination, exterior media, reference planes, aperture, and the desired observable. A beam direction, target-order power, focal width, and polarization-conversion fraction are different objectives.
 
-For time dependence $e^{+i\omega t}$ and an incident factor $e^{-ik_{x,i}x}$, a multiplicative phase contributes a local transverse wavevector
+For an incident factor $e^{-ik_{x,i}x}$, a multiplicative phase contributes a local transverse wavevector
 
 $$
 k_{x,\rm out}=k_{x,i}+\frac{d\Phi}{dx}.

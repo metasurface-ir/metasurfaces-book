@@ -9,7 +9,7 @@ Attempt these questions after the [chapter](02-waves-and-interfaces.md), then op
 
 ## Q1: Which way is the power?
 
-A wave in air has $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{-ik_0z}$ with time dependence $e^{+i\omega t}$. Which direction must its magnetic field point? What happens when you reverse the propagation direction while keeping electric polarization along $y$?
+A wave in air has $\widetilde{\mathbf E}=E_0\widehat{\mathbf y}e^{-ik_0z}$. Which direction must its magnetic field point? What happens when you reverse the propagation direction while keeping electric polarization along $y$?
 
 :::{dropdown} Answer
 For positive-$z$ propagation, $\mathbf H=(\widehat{\mathbf z}\times\mathbf E)/\eta_0$ points along negative $x$. Then $\operatorname{Re}(\mathbf E\times\mathbf H^*)$ points along positive $z$. Reversing propagation reverses the magnetic relation. Keeping its sign unchanged would give a wrong flux direction and a wrong reflection boundary equation.

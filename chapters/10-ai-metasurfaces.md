@@ -270,7 +270,7 @@ Use measured costs appropriate to the actual solver and hardware. A fast predict
 
 ## 10.8 Worked model: a synthetic resonant sheet
 
-To practice the workflow without a commercial solver, consider a lossless symmetric two-port model with equal media, power-normalized amplitudes, and time dependence $e^{+i\omega t}$. Define normalized frequency $\Omega=\omega/\omega_{\mathrm{ref}}$, normalized linewidth $\gamma>0$, and detuning $\Delta=\Omega-\Omega_0$:
+To practice the workflow without a commercial solver, consider a lossless symmetric two-port model with equal media and power-normalized amplitudes. Define normalized frequency $\Omega=\omega/\omega_{\mathrm{ref}}$, normalized linewidth $\gamma>0$, and detuning $\Delta=\Omega-\Omega_0$:
 
 $$
 r=-\frac{\gamma}{\gamma+i\Delta},\qquad

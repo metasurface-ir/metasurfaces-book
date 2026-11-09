@@ -438,8 +438,6 @@ Both fields have the same phase, and average power travels along positive $z$.
 (ch02-section-02)=
 ### Computational connection: Give a wave a direction
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 We use real physical fields obtained from complex phasors:
 

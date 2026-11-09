@@ -214,8 +214,6 @@ Zero reflection establishes matching under the stated illumination. Perfect abso
 (ch02-section-08)=
 ### Computational connection: Add a film and keep the phase
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Can adding a material layer reduce reflection? At normal incidence, let a lossless film of index $n_f$ and thickness $d$ lie between media $n_0$ and $n_2$. Use the single-interface coefficients $r_{ab}=(n_a-n_b)/(n_a+n_b)$ and $t_{ab}=2n_a/(n_a+n_b)$, and define
 

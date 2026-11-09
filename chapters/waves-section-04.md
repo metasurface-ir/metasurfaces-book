@@ -323,8 +323,6 @@ The normal in this source section points from medium 2 toward medium 1. The corr
 (ch02-section-05)=
 ### Computational connection: Ask what is continuous
 
-Time convention in this computational connection: $e^{+i\omega t}$.
-
 
 Place the interface at $z=0$, with unit normal $\widehat{\mathbf n}=\widehat{\mathbf z}$ pointing from region 1 to region 2. Integrating the curl equations across an infinitesimal loop gives the tangential jump conditions
 

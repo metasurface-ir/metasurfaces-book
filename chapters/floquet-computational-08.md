@@ -15,11 +15,11 @@ $$
 Its maxima occur at the same tangential matching conditions when they lie inside the output light cone. Increasing $N$ narrows the peaks. The notebook computes the sum directly, avoiding a removable $0/0$ singularity in a sine-ratio formula.
 
 :::{dropdown} Derivation: geometric series, first nulls, and aperture width
-Define $\psi=\Lambda(k_{x,i}-n_ok_0\sin\theta)$. Sum the geometric series when $e^{-i\psi}\ne1$:
+Define $\psi=\Lambda(k_{x,i}-n_ok_0\sin\theta)$. Sum the geometric series when $e^{i\psi}\ne1$:
 
 $$
-\mathcal A_N=\frac{1-e^{iN\psi}}{N(1-e^{-i\psi})}
-=e^{-i(N-1)\psi/2}\frac{\sin(N\psi/2)}{N\sin(\psi/2)}.
+\mathcal A_N=\frac{1-e^{iN\psi}}{N(1-e^{i\psi})}
+=e^{i(N-1)\psi/2}\frac{\sin(N\psi/2)}{N\sin(\psi/2)}.
 $$
 
 At $\psi=2\pi\ell$, the original sum gives $\mathcal A_N=1$; this is a removable singularity of the quotient. The matching condition is $k_{x,o}=k_{x,i}-\ell G$, hence the Floquet label is $m=-\ell$ in our convention.
