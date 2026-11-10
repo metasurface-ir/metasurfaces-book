@@ -1,9 +1,75 @@
 {
-  "printed_pages": "89–118",
   "source_pdf_sha256": "e498dc9293e06b3566f898d7d2c6dbf7ef2f8701fbf215d07976db95f7332e92",
+  "printed_pages": "89–118; body 90–118",
+  "method": "Complete educational reading restored in textbook order: Persian prose normalized to readable booklet voice, paired English translation, full worked substitutions, explanations and tables retained. Not a facsimile: typography, extraction defects and j=i notation normalized; incomplete page-111 sentence bridged explicitly. Scientific qualifications are separately identified.",
+  "sections": [
+    {
+      "section": 1,
+      "printed_pages": "90",
+      "blocks": 8,
+      "answer_panels": 0,
+      "source_display_equations": 1,
+      "display_equations": 1
+    },
+    {
+      "section": 2,
+      "printed_pages": "91–92",
+      "blocks": 31,
+      "answer_panels": 0,
+      "source_display_equations": 11,
+      "display_equations": 12
+    },
+    {
+      "section": 3,
+      "printed_pages": "92–98",
+      "blocks": 107,
+      "answer_panels": 1,
+      "source_display_equations": 45,
+      "display_equations": 45
+    },
+    {
+      "section": 4,
+      "printed_pages": "98–104",
+      "blocks": 135,
+      "answer_panels": 1,
+      "source_display_equations": 49,
+      "display_equations": 49
+    },
+    {
+      "section": 5,
+      "printed_pages": "105–110",
+      "blocks": 106,
+      "answer_panels": 1,
+      "source_display_equations": 42,
+      "display_equations": 42
+    },
+    {
+      "section": 6,
+      "printed_pages": "110–113",
+      "blocks": 64,
+      "answer_panels": 5,
+      "source_display_equations": 19,
+      "display_equations": 19
+    },
+    {
+      "section": 7,
+      "printed_pages": "113–118",
+      "blocks": 91,
+      "answer_panels": 11,
+      "source_display_equations": 15,
+      "display_equations": 15
+    }
+  ],
   "reading_sections": 7,
   "worked_question_panels": 19,
+  "source_display_equations": 182,
   "retained_computational_sections": 12,
-  "method": "Bilingual adaptation and consolidation, not sentence-exact transcription. Field-ratio sign corrected for positive-time phase-lag definition; assumptions stated for scalar impedance, GSTC reductions, power normalization, rotation basis, adjoint derivative and surrogate claims.",
-  "figures": "Original course schematics and calculated figures retained; no external illustration copied."
+  "figures": "Original course schematics and calculated figures retained; no third-party raster illustration redistributed.",
+  "editorial_notes": [
+    "Page 91 sign inconsistency retained as printed and corrected immediately in a separate note.",
+    "Page 94 says three conditions but lists two; no third condition invented.",
+    "Page 111 incomplete sentence and missing 5.6.2 heading bridged explicitly.",
+    "Page 101–102 malformed repeated Phi label normalized; circular comparison made explicit.",
+    "Source circular basis/clockwise rotation distinguished from computational basis/counterclockwise rotation."
+  ]
 }

@@ -24,7 +24,7 @@ This saved expanded design has h = 1.80 µm and L = 6Λ = 3.90 µm. All six ridg
 
 
 
-The reading adapts textbook pages 89–118 into seven sections and nineteen worked-question panels. Repeated derivations and substitutions are consolidated, rather than transcribed sentence by sentence. Sign inconsistencies and ideal-model limitations are corrected explicitly. The original computational content, geometry, interactive lab and notebooks remain available below.
+The primary reading now follows all seven textbook sections on printed pages 89–118, including the explanations, comparison and calibration tables, nineteen worked-question panels, and intermediate calculations. Read the sections in order, then use the computational connections below to test the ideas. Scientific clarifications are separately marked; all existing geometry views, figures, interactive investigations and notebooks remain available.
 
 - [5.1 From analysis to synthesis](synthesis-section-01.md)
 - [5.2 Specify the wave transformation](synthesis-section-02.md)
@@ -44,4 +44,4 @@ The reading adapts textbook pages 89–118 into seven sections and nineteen work
 - [Amplitude control and polarization](synthesis-computational-09.md)
 - [Objectives, constraints, and research extensions](synthesis-computational-10.md)
 - [Exercises](synthesis-computational-11.md)
-- [## Linked computational investigations](synthesis-computational-12.md)
+- [Linked computational investigations](synthesis-computational-12.md)

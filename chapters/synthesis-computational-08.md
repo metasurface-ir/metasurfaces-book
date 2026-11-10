@@ -19,10 +19,10 @@ Scalar angular-spectrum propagation is
 
 $$
 U(x,z)=\mathcal F^{-1}\left\{\widetilde U(k_x,0)
-e^{iz\sqrt{k_t^2-k_x^2}}\right\},
+e^{-izk_z(k_x)}\right\},\qquad k_z=\sqrt{k_t^2-k_x^2},\quad\operatorname{Im}k_z\le0,
 $$
 
-with positive imaginary square roots for forward evanescent decay. The FFT assumes a periodic computational window, so pad the aperture and refine window size and spatial spacing independently. An exact sampled plane wave checks propagation phase. These are checks of the scalar model, not a full-wave finite-lens validation.
+with the square-root branch chosen to have nonnegative real part and nonpositive imaginary part for forward propagation/decay. The FFT assumes a periodic computational window, so pad the aperture and refine window size and spatial spacing independently. An exact sampled plane wave checks propagation phase. These are checks of the scalar model, not a full-wave finite-lens validation.
 
 ```{figure} ../assets/chapter-05/focus.png
 :alt: Prescribed aperture phases and scalar line-focus profiles for continuous, sampled, and local-library fields.
