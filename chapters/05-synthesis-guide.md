@@ -74,7 +74,7 @@ The local-library peak squared field is about 0.550 of the continuous reference 
 
 ## Example 7: a half-wave element at 30 degrees
 
-With $t_x=1$, $t_y=-1$, and element rotation $\theta=30^\circ$, a state $\mathbf e_+=(1,(-i))^T/\sqrt2$ converts to $\mathbf e_-$ with phase $+60^\circ$. The opposite input basis state gives phase $-60^\circ$.
+With $t_x=1$, $t_y=-1$, and element rotation $\theta=30^\circ$, a state $\mathbf e_+=(1,(-i))^T/\sqrt2$ converts to $\mathbf e_-$ with signed complex phase $-60^\circ$. The opposite input basis state gives $+60^\circ$. The corresponding phase lags have the opposite signs.
 
 If retardance is only $90^\circ$, the ideal lossless retarder converts a fraction $\sin^2(45^\circ)=1/2$. Geometric-phase control and conversion amplitude require separate checks. These ideal Jones coefficients are not the vector response of our TE ridges.
 
