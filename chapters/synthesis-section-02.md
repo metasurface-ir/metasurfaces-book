@@ -103,6 +103,3 @@ Everything looks beautiful on paper, but practice brings two important physical 
 
 1. **Power-density mismatch:** sharply deflecting a broad beam changes its cross-section and local power density. Changing only phase can send power into unwanted sidelobes or parasitic reflections and reduce efficiency.
 2. **Locality assumption:** the formulas treat each cell as living in its own world, independent of neighbors. In practice, steep phase gradients bring near-field mutual coupling, so the cell response differs from the response calculated individually.
-
-
-

@@ -271,6 +271,3 @@ Gradient methods need differentiability and may converge to local stationary poi
 
 Tandem training reduces conflicting inverse labels by scoring response, but does not eliminate the physical many-to-one map or surrogate error. Validate every chosen geometry independently. GAN/VAE samples are not guaranteed optimal, feasible or outside the training distribution. Surrogate speed claims concern inference after data generation and training. Normalize the objective terms, separate training/selection/validation data and enforce nonnegotiable fabrication limits as hard constraints when a finite penalty is insufficient.
 :::
-
-
-

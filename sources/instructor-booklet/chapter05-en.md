@@ -1653,4 +1653,3 @@ List the three main stages of simulation- and optimization-based inverse design.
 
 ```
 :::
-

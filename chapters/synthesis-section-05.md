@@ -337,6 +337,3 @@ The two-channel power equation assumes power-normalized port amplitudes, or equi
 
 The $\cos2\theta$/$\sin2\theta$ amplitude split assumes an appropriate half-wave anisotropic element and polarization analyzer. Resistive loading need not provide independent phase/amplitude control. Two geometric variables are a useful minimum for a generic two-real-number target, but not a guarantee: local response-map rank, passivity and accessible geometry still restrict the achievable complex response. Scale amplitude and phase errors consistently before choosing weights.
 :::
-
-
-

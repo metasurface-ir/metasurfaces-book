@@ -339,6 +339,3 @@ Pointwise $\operatorname{Re}Z_s\ge0$ applies to the stated local scalar load. A 
 
 In the phase-only worked answer, the source reuses $\Phi$ for $\arg\Gamma$ in $\Gamma=|\Gamma|e^{i\Phi}$. This signed argument is the negative of the field phase lag used in Section 5.2; distinguish the two when mapping to a library.
 :::
-
-
-

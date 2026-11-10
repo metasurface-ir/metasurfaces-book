@@ -34,6 +34,3 @@ $$
 :class: note
 A forward problem is unique only after geometry, material response, excitation, radiation conditions and a well-posed solution class have been specified. Resonant or exceptional cases need care. An inverse target can have many feasible solutions or none; the word “optimal” requires a stated objective and constraints.
 :::
-
-
-
