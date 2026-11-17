@@ -257,11 +257,8 @@ $$
 
 A grounded one-port does not supply the through-propagation data needed to identify unique bulk n,z. Assigning an arbitrary effective thickness changes bulk ε,μ; a surface/input-impedance model is often more natural. A grounded substrate can itself have a bulk model, but reflection from the whole stack alone does not uniquely identify all its bulk parameters.
 
-```
-:::
+### Independent corrected calculation
 
-:::{admonition} Scientific clarification — separate from the source
-:class: note
 **Independently recomputed structure A.** The source’s arithmetic errors start at the complex division, before the logarithm-sign error. Recompute without rounding intermediate values:
 
 $$
@@ -281,4 +278,6 @@ $$
 $$
 
 Substituting these z,n into the two forward slab equations recovers the supplied S11,S21 to floating-point accuracy. This is an algebraic round-trip check for the assumed symmetric slab; a single frequency still cannot establish homogenization, unique branch selection or a broadband causal material model.
+
+```
 :::

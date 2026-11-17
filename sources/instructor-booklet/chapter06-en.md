@@ -622,11 +622,8 @@ $$
 
 A poorly conditioned problem can require many iterations. Do not replace a per-product scaling statement by an unconditional total-time guarantee.
 
-```
-:::
+### Independent corrected calculation
 
-:::{admonition} Independent numerical check
-:class: note
 Solving the supplied matrix directly gives
 
 $$
@@ -638,6 +635,8 @@ $$
 $$
 
 The relative residual of the printed current vector is about 0.168, whereas the recomputed vector gives about $3.4\times10^{-16}$. This discrepancy is too large to be rounding. The independent [worked-arithmetic report](../data/chapter-06/textbook-checks.json) and reproducible checker preserve both cases.
+
+```
 :::
 
 ## 6.2.4 FIT: topology first, materials second
@@ -1233,11 +1232,8 @@ $$
 
 A grounded one-port does not supply the through-propagation data needed to identify unique bulk n,z. Assigning an arbitrary effective thickness changes bulk ε,μ; a surface/input-impedance model is often more natural. A grounded substrate can itself have a bulk model, but reflection from the whole stack alone does not uniquely identify all its bulk parameters.
 
-```
-:::
+### Independent corrected calculation
 
-:::{admonition} Scientific clarification — separate from the source
-:class: note
 **Independently recomputed structure A.** The source’s arithmetic errors start at the complex division, before the logarithm-sign error. Recompute without rounding intermediate values:
 
 $$
@@ -1257,6 +1253,8 @@ $$
 $$
 
 Substituting these z,n into the two forward slab equations recovers the supplied S11,S21 to floating-point accuracy. This is an algebraic round-trip check for the assumed symmetric slab; a single frequency still cannot establish homogenization, unique branch selection or a broadband causal material model.
+
+```
 :::
 
 ## 6.5 Practical meshing and convergence

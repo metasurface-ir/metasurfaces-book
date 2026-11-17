@@ -129,11 +129,8 @@ $$
 
 A poorly conditioned problem can require many iterations. Do not replace a per-product scaling statement by an unconditional total-time guarantee.
 
-```
-:::
+### Independent corrected calculation
 
-:::{admonition} Independent numerical check
-:class: note
 Solving the supplied matrix directly gives
 
 $$
@@ -145,4 +142,6 @@ $$
 $$
 
 The relative residual of the printed current vector is about 0.168, whereas the recomputed vector gives about $3.4\times10^{-16}$. This discrepancy is too large to be rounding. The independent [worked-arithmetic report](../data/chapter-06/textbook-checks.json) and reproducible checker preserve both cases.
+
+```
 :::
