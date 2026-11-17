@@ -1,0 +1,91 @@
+{
+  "source_pdf_sha256": "275472e7b22e9c0a256889ea0c3e9aa5562613dcd3252142bbd03b47007779d0",
+  "printed_pages": "121–176; main reading 122–176",
+  "source_pdf_pages": 182,
+  "method": "Paired educational reading in source order with normalized Persian prose, LaTeX mathematics, worked derivations and all seven source problems. Obvious extraction defects normalized. Printed algebra and erroneous numerical results are labeled and followed by independent scientific corrections; not a facsimile PDF transcription.",
+  "sections": [
+    {
+      "key": "01",
+      "printed_pages": "121–123",
+      "display_equations": 0,
+      "answer_panels": 0,
+      "paired_blocks": 12
+    },
+    {
+      "key": "02",
+      "printed_pages": "123",
+      "display_equations": 0,
+      "answer_panels": 0,
+      "paired_blocks": 2
+    },
+    {
+      "key": "02-fem",
+      "printed_pages": "123–127",
+      "display_equations": 24,
+      "answer_panels": 1,
+      "paired_blocks": 52
+    },
+    {
+      "key": "02-fdtd",
+      "printed_pages": "127–139",
+      "display_equations": 42,
+      "answer_panels": 1,
+      "paired_blocks": 85
+    },
+    {
+      "key": "02-mom",
+      "printed_pages": "139–144",
+      "display_equations": 17,
+      "answer_panels": 1,
+      "paired_blocks": 41
+    },
+    {
+      "key": "02-fit",
+      "printed_pages": "144–150",
+      "display_equations": 14,
+      "answer_panels": 1,
+      "paired_blocks": 35
+    },
+    {
+      "key": "02-rcwa",
+      "printed_pages": "150–155",
+      "display_equations": 7,
+      "answer_panels": 1,
+      "paired_blocks": 27
+    },
+    {
+      "key": "03",
+      "printed_pages": "155–162",
+      "display_equations": 14,
+      "answer_panels": 1,
+      "paired_blocks": 36
+    },
+    {
+      "key": "04",
+      "printed_pages": "162–175",
+      "display_equations": 42,
+      "answer_panels": 1,
+      "paired_blocks": 71
+    },
+    {
+      "key": "05",
+      "printed_pages": "175–176",
+      "display_equations": 1,
+      "answer_panels": 0,
+      "paired_blocks": 13
+    }
+  ],
+  "worked_answer_panels": 7,
+  "retained_computational_sections": 10,
+  "source_figures": "No external raster illustrations copied; source tables rebuilt in Markdown and two original vector schematics added.",
+  "independent_checks": "scripts/validate_chapter06_textbook.py; data/chapter-06/textbook-checks.json",
+  "corrections": [
+    "FEM integration-by-parts boundary sign and oriented admittance",
+    "FDTD component typo; spatial-step definition of Cb",
+    "MoM supplied currents fail matrix residual; corrected by direct linear solve",
+    "NRW complex arithmetic and logarithm expansion signs",
+    "Grounded cotangent reactance sign/factor",
+    "Purely electric shunt admittance factor",
+    "Non-universal solver-speed, PML, convergence, mode-count and LPA claims"
+  ]
+}

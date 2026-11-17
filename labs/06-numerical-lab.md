@@ -54,3 +54,16 @@ These stages are **not executed** in this release.
 ## Deliverable
 
 Submit an editable notebook, parameters/environment, data and original plots, one rejected coarse case, one accepted result, a table of independent refinement controls and tolerances, and a paragraph on unsupported claims. Include figure provenance and references following [the source and reuse guide](../attribution.md). The [worked guide](../chapters/06-numerical-guide.md) supplies self-check answers and a suggested rubric.
+
+
+## Audit the textbook arithmetic
+
+**Executed arithmetic checks:** [download the checker](../scripts/validate_chapter06_textbook.py) or use the complete source bundle, then run `python scripts/validate_chapter06_textbook.py`. Compare the saved [results](../data/chapter-06/textbook-checks.json) with the worked answers.
+
+1. Substitute the printed and corrected MoM currents into the same ZI=V system. Report both relative residuals.
+2. Check the two separately supplied H states in the FDTD problem and distinguish the curl coefficient from its one-dimensional spatial-step version.
+3. Track volts, webers and amperes through the FIT face update.
+4. Reconstruct S11 and S21 from the corrected slab z,n and explain why a successful roundtrip does not prove homogenization.
+5. Derive the grounded half-angle identity and the electric-shunt relation; identify the extra assumptions before applying them to a general metasurface.
+
+**Submit:** calculations, units, reference planes, corrected values, residuals and remaining model limitations. These tasks do not execute commercial solvers or replace the existing slab-convergence study.

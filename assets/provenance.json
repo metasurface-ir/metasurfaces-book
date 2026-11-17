@@ -573,6 +573,15 @@
       ]
     },
     {
+      "asset": "assets/chapter-06/integral-unknowns.svg",
+      "sha256": "539eee60c2cf7d1798272a40f01329f7e32d7b697566b45fe7c24425c9bc9a78",
+      "origin": "original editable SVG schematic",
+      "source": "scripts/chapter06_source_figures.py",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "python scripts/chapter06_source_figures.py",
+      "generator_sha256": "6662951fda8f7277d41d9986a101ca7a9249942d005760244b166330c80ab0b2"
+    },
+    {
       "asset": "assets/chapter-06/slab-geometry.svg",
       "sha256": "7f49d3037490690d7b9e056bd81ce4b465a05c72f667cd89a523e3d15474d9c4",
       "origin": "original editable SVG schematic",
@@ -580,6 +589,15 @@
       "sha256_basis": "UTF-8 text with LF line endings",
       "export_command": "node scripts/export_model_geometry.cjs",
       "generator_sha256": "7b12550ddf1d183eb1d9f20cfe62b0e52efc2a92f64782adcba171d75433d40a"
+    },
+    {
+      "asset": "assets/chapter-06/yee-staggering.svg",
+      "sha256": "0e9166baf73d5d924ebf370a8c6e06bce74820a4e2d32a1fa32fa4efbbb6e17c",
+      "origin": "original editable SVG schematic",
+      "source": "scripts/chapter06_source_figures.py",
+      "sha256_basis": "UTF-8 text with LF line endings",
+      "export_command": "python scripts/chapter06_source_figures.py",
+      "generator_sha256": "6662951fda8f7277d41d9986a101ca7a9249942d005760244b166330c80ab0b2"
     },
     {
       "asset": "assets/chapter-07/array.png",

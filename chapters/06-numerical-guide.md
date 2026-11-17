@@ -22,7 +22,7 @@ short_title: Numerical worked examples
 
 The reference slab has wavelength $1.55\,\mu\mathrm m$, thickness $0.60\,\mu\mathrm m$, film index 2.4, exterior index 1, normal incidence, and unit incident electric amplitude at $z=0$. Transmission is measured at $z=d$. Even a uniform medium has $t=e^{-ik_ed}$ with these two distinct reference planes; its transmission phase is not generally zero.
 
-Check this limit with `Slab(n_film=1.0)`. The finite-grid counterpart is $t=e^{iN\theta}$ with zero reflection. It exactly solves the discrete system while its phase differs from the continuum result. This isolates numerical dispersion without a material interface.
+Check this limit with `Slab(n_film=1.0)`. The finite-grid counterpart is $t=e^{-iN\theta}$ with zero reflection. It exactly solves the discrete system while its phase differs from the continuum result. This isolates numerical dispersion without a material interface.
 
 ## Example 2: solve accurately, predict inaccurately
 
@@ -73,3 +73,8 @@ Ask for both incident-normalized target power and complex transmitted amplitude.
 5. **Can phase error be reported at zero transmission?** Its interpretation is unstable there. Use a stated amplitude floor and complex error.
 
 Suggested report grading: problem/conventions 20%, independent controlled experiments 30%, numerical evidence and plots 30%, interpretation/model limits/provenance 20%. Submit a failed coarse case alongside the accepted result, explaining exactly which evidence changed your decision.
+
+
+## Connect the textbook problems to the benchmark
+
+The [primary reading](06-numerical-methods.md) supplies the method derivations and worked FEM, FDTD, MoM, FIT, RCWA, periodic-port and retrieval problems. Run `python scripts/validate_chapter06_textbook.py` to reproduce the numerical checks. It verifies the MoM matrix residual, FDTD/FIT arithmetic, diffraction/channel values, phase deembedding, the retrieval forward roundtrip and the grounded/shunt impedance identities. The [saved report](../data/chapter-06/textbook-checks.json) separates corrected answers from the printed values. These are supplied-equation checks, separate from the executed slab FDFD benchmark and from a full-wave FEM/FDTD device simulation.

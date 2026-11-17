@@ -30,7 +30,7 @@ assert audit['status'] == 'passed'
 for name, digest in reference['metadata']['source_sha256'].items():
     assert hashlib.sha256((ROOT/'simulations'/name).read_bytes()).hexdigest() == digest
 render(ROOT/'interactives/numerical-explorer.html', language='en')
-files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.py', 'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py', 'scripts/validate_chapter06.py', 'requirements-labs.txt', 'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json', 'assets/chapter-06/slab-geometry.svg']
+files = ['notebooks/06-numerical-methods.ipynb', 'simulations/numerical_methods.py', 'simulations/waves_interfaces.py', 'simulations/unit_cell_te.py', 'scripts/validate_chapter06.py', 'scripts/validate_chapter06_textbook.py', 'requirements-labs.txt', 'data/chapter-05/beam-steering.json', 'data/chapter-05/validation.json', 'assets/chapter-06/slab-geometry.svg', 'assets/chapter-06/yee-staggering.svg', 'assets/chapter-06/integral-unknowns.svg']
 files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'data/chapter-06').glob('*')) if p.is_file()]
 with zipfile.ZipFile(ROOT/'downloads/chapter-06-numerical.zip', 'w', compression=zipfile.ZIP_DEFLATED) as archive:
     write_notices(archive)

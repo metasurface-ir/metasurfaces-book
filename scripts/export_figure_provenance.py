@@ -45,6 +45,10 @@ def inventory():
                 generator = ROOT/'templates/model-geometry.js'
                 row.update(source='templates/model-geometry.js', export_command='node scripts/export_model_geometry.cjs',
                            generator_sha256=hashlib.sha256(generator.read_text(encoding='utf-8').encode('utf-8')).hexdigest())
+            elif path.parent.name == 'chapter-06' and path.name in ('yee-staggering.svg', 'integral-unknowns.svg'):
+                generator = ROOT/'scripts/chapter06_source_figures.py'
+                row.update(source='scripts/chapter06_source_figures.py', export_command='python scripts/chapter06_source_figures.py',
+                           generator_sha256=hashlib.sha256(generator.read_text(encoding='utf-8').encode('utf-8')).hexdigest())
         rows.append(row)
     return dict(scope='generation paths of book-owned chapter images; not a general reuse license', assets=rows)
 
