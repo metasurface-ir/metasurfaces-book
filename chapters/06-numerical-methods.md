@@ -3,6 +3,7 @@ title: "Chapter 6: Numerical Modeling and Simulation Methods"
 short_title: Numerical methods
 ---
 
+(chapter-06-overview)=
 # Chapter 6: Numerical Modeling and Simulation Methods
 
 Start with the instructor-supplied primary reading, printed pages 121–176 of the updated booklet. Follow the five major sections and the five method pages in Section 6.2. All seven worked problems are included with intermediate calculations and expandable answers. Separately labeled corrections address source algebra, boundary signs and model assumptions.
@@ -30,6 +31,7 @@ The existing executed slab benchmark, figures, interactive explorer, guide and n
 - [A reproducible simulation record](numerical-computational-09.md)
 - [Linked computational investigations](numerical-computational-10.md)
 
+(chapter-06-computational-benchmark)=
 ## The computational benchmark
 
 **Can a calculation conserve power to fifteen digits and still predict the wrong transmitted wave?** Yes. This chapter lets you produce that result, diagnose it, and improve it.
