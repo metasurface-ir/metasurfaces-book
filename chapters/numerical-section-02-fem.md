@@ -83,6 +83,17 @@ a(\mathbf E,\mathbf W)-i\omega\mu_0\int_{\partial V}\mathbf W^*\cdot(\hat{\mathb
 $$
 
 Here $a$ is the volume curl–curl minus mass form and complex Galerkin testing uses $\mathbf W^*$. For an outgoing exterior wave, $\hat{\mathbf n}\times\mathbf H=-Y\mathbf E_t$; the resulting matrix boundary contribution is therefore positive $i\omega\mu_0 B_Y$. The source’s later symbolic admittance definition uses the opposite sign. Normal orientation, boundary admittance and weak form must be converted together. [MFEM’s weak-curl derivation](https://mfem.org/fem_weak_form/) provides the integration identity.
+
+For implementation with the outward normal, make the corrected boundary definition and right-hand side explicit:
+
+$$
+\hat{\mathbf n}\times\mathbf H=-Y\mathbf E_t+\mathbf g_{\rm inc},\qquad[K-k_0^2M+i\omega\mu_0B_Y]\mathbf e=\mathbf f.
+$$
+
+$$
+f_i=-i\omega\mu_0\int_V\mathbf N_i^*\cdot\mathbf J_{\rm imp}\,dV+i\omega\mu_0\int_{S_{\rm rad}}\mathbf N_{i,t}^*\cdot\mathbf g_{\rm inc}\,dS.
+$$
+Here $B_Y$ contains positive load/outgoing admittances on their respective surfaces. This corrects the signs together, rather than changing one boundary term in isolation.
 :::
 
 The attraction is clear: only first curls remain, tangential continuity fits naturally, and boundary physics enters through surface integrals.
