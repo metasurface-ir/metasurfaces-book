@@ -153,6 +153,27 @@ project:
   - file: chapters/06-numerical-methods.md
     title: فصل ۶ — مدل‌سازی عددی و روش‌های شبیه‌سازی
     children:
+    - file: chapters/numerical-section-01.md
+    - file: chapters/numerical-section-02.md
+      children:
+      - file: chapters/numerical-section-02-fem.md
+      - file: chapters/numerical-section-02-fdtd.md
+      - file: chapters/numerical-section-02-mom.md
+      - file: chapters/numerical-section-02-fit.md
+      - file: chapters/numerical-section-02-rcwa.md
+    - file: chapters/numerical-section-03.md
+    - file: chapters/numerical-section-04.md
+    - file: chapters/numerical-section-05.md
+    - file: chapters/numerical-computational-01.md
+    - file: chapters/numerical-computational-02.md
+    - file: chapters/numerical-computational-03.md
+    - file: chapters/numerical-computational-04.md
+    - file: chapters/numerical-computational-05.md
+    - file: chapters/numerical-computational-06.md
+    - file: chapters/numerical-computational-07.md
+    - file: chapters/numerical-computational-08.md
+    - file: chapters/numerical-computational-09.md
+    - file: chapters/numerical-computational-10.md
     - file: chapters/06-numerical-guide.md
     - file: labs/06-numerical-lab.md
     - file: notebooks/06-numerical-methods.ipynb

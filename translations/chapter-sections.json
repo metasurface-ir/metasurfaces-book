@@ -507,5 +507,91 @@
         ]
       }
     ]
+  },
+  {
+    "chapter": 6,
+    "parent_route": "numerical-methods",
+    "sections": [
+      {
+        "source": "chapters/numerical-computational-01.md",
+        "route": "numerical-computational-01",
+        "anchors": [
+          "what-you-should-learn",
+          "چه-چیزهایی-باید-بیاموزید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-02.md",
+        "route": "numerical-computational-02",
+        "anchors": [
+          "choose-the-problem-before-the-solver",
+          "پیش-از-حلگر-مسئله-را-انتخاب-کنید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-03.md",
+        "route": "numerical-computational-03",
+        "anchors": [
+          "four-different-questions-about-error",
+          "چهار-پرسش-متفاوت-درباره-خطا"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-04.md",
+        "route": "numerical-computational-04",
+        "anchors": [
+          "build-a-frequency-domain-slab-calculation",
+          "یک-محاسبه-لایه-تخت-در-حوزه-فرکانس-بسازید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-05.md",
+        "route": "numerical-computational-05",
+        "anchors": [
+          "see-conservation-fail-as-an-accuracy-certificate",
+          "ببینید-چرا-بقای-توان-گواه-دقت-نیست"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-06.md",
+        "route": "numerical-computational-06",
+        "anchors": [
+          "move-a-monitor-without-moving-the-device",
+          "مانیتور-را-جابهجا-کنید-دستگاه-را-ثابت-نگه-دارید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-07.md",
+        "route": "numerical-computational-07",
+        "anchors": [
+          "estimate-convergence-and-choose-an-acceptance-target",
+          "همگرایی-را-برآورد-و-معیار-پذیرش-را-انتخاب-کنید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-08.md",
+        "route": "numerical-computational-08",
+        "anchors": [
+          "transfer-the-habit-to-patterned-metasurfaces",
+          "این-عادت-را-به-فراسطوح-نقشدار-منتقل-کنید"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-09.md",
+        "route": "numerical-computational-09",
+        "anchors": [
+          "a-reproducible-simulation-record",
+          "سابقه-بازتولیدپذیر-شبیهسازی"
+        ]
+      },
+      {
+        "source": "chapters/numerical-computational-10.md",
+        "route": "numerical-computational-10",
+        "anchors": [
+          "linked-computational-investigations",
+          "بررسیهای-محاسباتی-مرتبط"
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,100 @@
+{
+  "scope": "Arithmetic/linear algebra of textbook problems; not a FEM/FDTD/FIT/MoM device simulation",
+  "fdtd": {
+    "Ca": 0.9981381703292054,
+    "Cb_with_spatial_step": 93.09148353973316,
+    "H_new_A_per_m": 0.0024243660633902365,
+    "E_new_V_per_m": 2.420872238991227
+  },
+  "mom": {
+    "currents_A": [
+      [
+        0.01704858437856712,
+        -0.0052766466370049074
+      ],
+      [
+        0.006728932322573213,
+        -0.009122277508572432
+      ],
+      [
+        0.006801921558564292,
+        0.0068248475720729335
+      ]
+    ],
+    "magnitudes_mA": [
+      17.84649066469198,
+      11.33554044345381,
+      9.635594494938625
+    ],
+    "phases_deg": [
+      -17.197632959903903,
+      -53.586129740466035,
+      45.09639574598672
+    ],
+    "relative_residual": 3.446627756675863e-16,
+    "printed_relative_residual": 0.16838025200518977,
+    "dense_matrix_bytes_50000": 40000000000
+  },
+  "fit": {
+    "circulation_V": 0.35000000000000003,
+    "flux_Wb": 1.9965e-10,
+    "magnetic_line_integral_A": 0.15887642194148452
+  },
+  "rcwa": {
+    "orders": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "normalized_kx": [
+      -1.0,
+      -0.25,
+      0.5,
+      1.25,
+      2.0
+    ]
+  },
+  "periodic": {
+    "surface_phase_deg": 97.84609690826531
+  },
+  "retrieval": {
+    "z": [
+      0.5986181095489983,
+      -0.561224253416716
+    ],
+    "interface_r": [
+      -0.11380516249117306,
+      -0.3910217625065839
+    ],
+    "internal_T": [
+      0.5419694324983612,
+      -0.1624409412549597
+    ],
+    "n_branch_zero": [
+      0.23173202264735412,
+      -0.4532198953499758
+    ],
+    "epsilon": [
+      0.5837924621142193,
+      -0.2097855120758547
+    ],
+    "mu": [
+      -0.11563901208226751,
+      -0.4013592683674042
+    ],
+    "reflection_roundtrip_error": 1.6940014503376356e-17,
+    "transmission_roundtrip_error": 2.7755575615628914e-17,
+    "grounded_Z_ohm": [
+      2.842170943040401e-14,
+      -217.66105148448895
+    ],
+    "electric_shunt_check": "passed"
+  },
+  "limitations": [
+    "One-frequency slab roundtrip is not proof of homogenization or unique branch selection",
+    "FDTD values use two separately prescribed neighboring H states",
+    "MoM matrix is a supplied three-unknown teaching system"
+  ]
+}

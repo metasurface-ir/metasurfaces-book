@@ -750,6 +750,106 @@
       "source": "chapters/synthesis-computational-12.md",
       "translation": "translations/fa/chapters/synthesis-computational-12.md",
       "route": "synthesis-computational-12"
+    },
+    {
+      "source": "chapters/numerical-section-01.md",
+      "translation": "translations/fa/chapters/numerical-section-01.md",
+      "route": "numerical-section-01"
+    },
+    {
+      "source": "chapters/numerical-section-02.md",
+      "translation": "translations/fa/chapters/numerical-section-02.md",
+      "route": "numerical-section-02"
+    },
+    {
+      "source": "chapters/numerical-section-02-fem.md",
+      "translation": "translations/fa/chapters/numerical-section-02-fem.md",
+      "route": "numerical-section-02-fem"
+    },
+    {
+      "source": "chapters/numerical-section-02-fdtd.md",
+      "translation": "translations/fa/chapters/numerical-section-02-fdtd.md",
+      "route": "numerical-section-02-fdtd"
+    },
+    {
+      "source": "chapters/numerical-section-02-mom.md",
+      "translation": "translations/fa/chapters/numerical-section-02-mom.md",
+      "route": "numerical-section-02-mom"
+    },
+    {
+      "source": "chapters/numerical-section-02-fit.md",
+      "translation": "translations/fa/chapters/numerical-section-02-fit.md",
+      "route": "numerical-section-02-fit"
+    },
+    {
+      "source": "chapters/numerical-section-02-rcwa.md",
+      "translation": "translations/fa/chapters/numerical-section-02-rcwa.md",
+      "route": "numerical-section-02-rcwa"
+    },
+    {
+      "source": "chapters/numerical-section-03.md",
+      "translation": "translations/fa/chapters/numerical-section-03.md",
+      "route": "numerical-section-03"
+    },
+    {
+      "source": "chapters/numerical-section-04.md",
+      "translation": "translations/fa/chapters/numerical-section-04.md",
+      "route": "numerical-section-04"
+    },
+    {
+      "source": "chapters/numerical-section-05.md",
+      "translation": "translations/fa/chapters/numerical-section-05.md",
+      "route": "numerical-section-05"
+    },
+    {
+      "source": "chapters/numerical-computational-01.md",
+      "translation": "translations/fa/chapters/numerical-computational-01.md",
+      "route": "numerical-computational-01"
+    },
+    {
+      "source": "chapters/numerical-computational-02.md",
+      "translation": "translations/fa/chapters/numerical-computational-02.md",
+      "route": "numerical-computational-02"
+    },
+    {
+      "source": "chapters/numerical-computational-03.md",
+      "translation": "translations/fa/chapters/numerical-computational-03.md",
+      "route": "numerical-computational-03"
+    },
+    {
+      "source": "chapters/numerical-computational-04.md",
+      "translation": "translations/fa/chapters/numerical-computational-04.md",
+      "route": "numerical-computational-04"
+    },
+    {
+      "source": "chapters/numerical-computational-05.md",
+      "translation": "translations/fa/chapters/numerical-computational-05.md",
+      "route": "numerical-computational-05"
+    },
+    {
+      "source": "chapters/numerical-computational-06.md",
+      "translation": "translations/fa/chapters/numerical-computational-06.md",
+      "route": "numerical-computational-06"
+    },
+    {
+      "source": "chapters/numerical-computational-07.md",
+      "translation": "translations/fa/chapters/numerical-computational-07.md",
+      "route": "numerical-computational-07"
+    },
+    {
+      "source": "chapters/numerical-computational-08.md",
+      "translation": "translations/fa/chapters/numerical-computational-08.md",
+      "route": "numerical-computational-08"
+    },
+    {
+      "source": "chapters/numerical-computational-09.md",
+      "translation": "translations/fa/chapters/numerical-computational-09.md",
+      "route": "numerical-computational-09"
+    },
+    {
+      "source": "chapters/numerical-computational-10.md",
+      "translation": "translations/fa/chapters/numerical-computational-10.md",
+      "route": "numerical-computational-10"
     }
   ]
 }

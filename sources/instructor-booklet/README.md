@@ -25,3 +25,10 @@ The complete primary reading from printed pages 79–88 (body 80–88) is manual
 ## Chapter 5
 
 The complete educational reading of printed pages 89–118 (body 90–118) now follows all seven source sections in both languages. Explanations, comparison/calibration/result tables, nineteen worked-question panels and intermediate algebra are retained. Persian typography, obvious extraction defects and equivalent imaginary-unit notation are normalized. The incomplete page-111 bridge is identified explicitly. Printed sign inconsistencies and scientific limits are discussed in separately labeled notes. All twelve previous computational sections, original figures, interactive investigations, the guide, lab and both notebooks remain. Persian supporting prose follows the booklet's conversational teaching voice. Source rights reservations above apply.
+
+
+## Chapter 6
+
+The paired Chapter 6 reading integrates printed pages 121–176 of the instructor's updated 182-page PDF (SHA-256 recorded in chapter06-coverage.json). Ten reading pages preserve the five major sections and give each of the five methods in Section 6.2 a separate child page. All seven worked problems retain their governing equations, intermediate calculations and source numerical results, with clearly labeled corrections and independently recomputed answers. Persian prose follows the booklet's conversational instructional voice; typography, equation notation and obvious extraction defects are normalized. This is an educational editing/translation, not a facsimile transcription. Source algebra is never presented as validated merely because it was printed.
+
+The ten earlier computational connections, guide, lab, notebook, figures and explorer are retained. Two original vector schematics illustrate the Yee grid and integral current/flux unknowns. The PDF and external raster illustrations are not republished. The source rights reservation above applies equally to the Chapter 6 reading and translation.
