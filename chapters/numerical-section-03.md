@@ -90,10 +90,10 @@ $$
 
 | Order | $k_x/k_0$ | $k_y/k_0$ | Squared sum | Result |
 |---|---|---|---|---|
-| $(0,0)$ | 0.5 | 0 | 0.25 | Propagating |
-| $(-1,0)$ | $-2.5$ | 0 | 6.25 | Evanescent |
-| $(+1,0)$ | 3.5 | 0 | 12.25 | Evanescent |
-| $(0,+1)$ | 0.5 | 3 | 9.25 | Evanescent |
+| $\mathord{(0,0)}$ | 0.5 | 0 | 0.25 | Propagating |
+| $\mathord{(-1,0)}$ | $\mathord{-2.5}$ | 0 | 6.25 | Evanescent |
+| $\mathord{(+1,0)}$ | 3.5 | 0 | 12.25 | Evanescent |
+| $\mathord{(0,+1)}$ | 0.5 | 3 | 9.25 | Evanescent |
 
 $$
 k_{z,00}=k_0\sqrt{1-0.25}=k_0\cos30^\circ=\frac{\sqrt3}{2}k_0.

@@ -838,21 +838,21 @@ $$
 
 | m | Substitution | $k_{x,m}/k_0$ |
 |---|---|---|
-| $-2$ | $0.5-1.5$ | $-1$ |
-| $-1$ | $0.5-0.75$ | $-0.25$ |
+| $\mathord{-2}$ | $0.5-1.5$ | $\mathord{-1}$ |
+| $\mathord{-1}$ | $0.5-0.75$ | $\mathord{-0.25}$ |
 | 0 | $0.5$ | 0.50 |
-| $+1$ | $0.5+0.75$ | 1.25 |
-| $+2$ | $0.5+1.5$ | 2.00 |
+| $\mathord{+1}$ | $0.5+0.75$ | 1.25 |
+| $\mathord{+2}$ | $0.5+1.5$ | 2.00 |
 
 For an ordinary propagating order, $\theta_m=\arcsin(k_{x,m}/k_0)$. In particular, $\arcsin(-0.25)\approx-14.48^\circ$.
 
 | m | Type | Angle |
 |---|---|---|
-| $-2$ | Grazing threshold | $-90^\circ$ limit |
-| $-1$ | Propagating | $-14.48^\circ$ |
+| $\mathord{-2}$ | Grazing threshold | $-90^\circ$ limit |
+| $\mathord{-1}$ | Propagating | $-14.48^\circ$ |
 | 0 | Propagating | $30^\circ$ |
-| $+1$ | Evanescent | No real angle |
-| $+2$ | Evanescent | No real angle |
+| $\mathord{+1}$ | Evanescent | No real angle |
+| $\mathord{+2}$ | Evanescent | No real angle |
 
 $$
 k_{z,m}^2=k_0^2-k_{x,m}^2,\qquad |k_{x,m}|<k_0:\ \text{propagating};\quad |k_{x,m}|>k_0:\ \text{evanescent};\quad |k_{x,m}|=k_0:\ k_{z,m}=0.
@@ -951,10 +951,10 @@ $$
 
 | Order | $k_x/k_0$ | $k_y/k_0$ | Squared sum | Result |
 |---|---|---|---|---|
-| $(0,0)$ | 0.5 | 0 | 0.25 | Propagating |
-| $(-1,0)$ | $-2.5$ | 0 | 6.25 | Evanescent |
-| $(+1,0)$ | 3.5 | 0 | 12.25 | Evanescent |
-| $(0,+1)$ | 0.5 | 3 | 9.25 | Evanescent |
+| $\mathord{(0,0)}$ | 0.5 | 0 | 0.25 | Propagating |
+| $\mathord{(-1,0)}$ | $\mathord{-2.5}$ | 0 | 6.25 | Evanescent |
+| $\mathord{(+1,0)}$ | 3.5 | 0 | 12.25 | Evanescent |
+| $\mathord{(0,+1)}$ | 0.5 | 3 | 9.25 | Evanescent |
 
 $$
 k_{z,00}=k_0\sqrt{1-0.25}=k_0\cos30^\circ=\frac{\sqrt3}{2}k_0.
