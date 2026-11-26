@@ -1,4 +1,4 @@
-# 9. Materials, fabrication and measurements
+# Chapter 9: Materials, Fabrication Technologies, and Measurement Methods
 
 Read the numbered sections in booklet order, then use the computational reading and lab to test the ideas with reproducible models.
 

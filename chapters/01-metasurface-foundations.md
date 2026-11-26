@@ -1,6 +1,5 @@
 ---
-title: 'Chapter 1: Introduction to Metasurfaces and Basic Concepts'
-short_title: Metasurface foundations
+title: "Chapter 1: Introduction to Metasurfaces and Basic Concepts"
 description: Build physical intuition for structured electromagnetic interfaces, complex responses, interference, design constraints, and levels of computational evidence.
 ---
 

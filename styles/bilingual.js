@@ -118,6 +118,82 @@
       }
     }
   }
+
+  const panelPreferenceKey = 'metasurface-book-sidebars';
+  let collapsed = {};
+  try {
+    collapsed = JSON.parse(localStorage.getItem(panelPreferenceKey) || '{}') || {};
+  } catch {
+    // Panels can still be toggled when browser storage is unavailable.
+  }
+  const panelLabels = {
+    navigation: fa ? ['پنهان‌کردن فهرست کتاب', 'نمایش فهرست کتاب'] : ['Hide book navigation', 'Show book navigation'],
+    outline: fa ? ['پنهان‌کردن فهرست صفحه', 'نمایش فهرست صفحه'] : ['Hide page contents', 'Show page contents']
+  };
+  const panelIcons = {
+    navigation: 'M9 4v16M5 8h1m-1 4h1m-1 4h1',
+    outline: 'M15 4v16m3-12h1m-1 4h1m-1 4h1'
+  };
+
+  function updateSidebarControls() {
+    const main = document.querySelector('main.article-grid');
+    if (!main) return;
+    const root = document.documentElement;
+    const navigation = document.querySelector('.myst-primary-sidebar');
+    // MyST puts the page outline in an in-flow container on smaller screens and
+    // uses that same container as a sticky grid item on desktop.
+    const outline = main.querySelector('.myst-outline-section')?.parentElement;
+    outline?.classList.add('book-page-outline');
+    const targets = {navigation, outline};
+    root.dataset.bookNavigation = navigation && !collapsed.navigation ? 'open' : 'closed';
+    root.dataset.bookOutline = outline && !collapsed.outline ? 'open' : 'closed';
+
+    let controls = main.querySelector(':scope > .book-sidebar-controls');
+    if (!controls) {
+      controls = document.createElement('div');
+      controls.className = 'book-sidebar-controls';
+      controls.setAttribute('role', 'group');
+      controls.setAttribute('aria-label', fa ? 'کنترل پنل‌های مطالعه' : 'Reading sidebars');
+      for (const panel of Object.keys(panelLabels)) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'book-sidebar-toggle';
+        button.dataset.bookPanel = panel;
+        button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="' + panelIcons[panel] + '"/></svg><span></span>';
+        button.addEventListener('click', () => {
+          collapsed[panel] = !collapsed[panel];
+          try { localStorage.setItem(panelPreferenceKey, JSON.stringify(collapsed)); } catch {}
+          updateSidebarControls();
+        });
+        controls.append(button);
+      }
+      main.prepend(controls);
+    }
+    controls.hidden = !navigation && !outline;
+    // On phones and tablets the existing MyST menu button still controls the
+    // navigation drawer independently of the page outline.
+    for (const button of controls.querySelectorAll('button')) {
+      const panel = button.dataset.bookPanel;
+      const target = targets[panel];
+      if (button.hidden !== !target) button.hidden = !target;
+      if (!target) continue;
+      if (!target.id) target.id = 'book-sidebar-' + panel;
+      button.setAttribute('aria-controls', target.id);
+      button.setAttribute('aria-expanded', String(!collapsed[panel]));
+      const label = panelLabels[panel][collapsed[panel] ? 1 : 0];
+      const span = button.querySelector('span');
+      if (span.textContent !== label) span.textContent = label;
+    }
+
+    const masthead = document.querySelector('.myst-top-nav');
+    if (masthead) {
+      const height = masthead.getBoundingClientRect().height + 'px';
+      if (root.style.getPropertyValue('--book-masthead-height') !== height) {
+        root.style.setProperty('--book-masthead-height', height);
+      }
+    }
+  }
+
   function update() {
     scheduled = false;
     const root = document.documentElement;
@@ -165,6 +241,7 @@
     const route = decodeURIComponent(location.pathname.slice(prefix.length)).replace(/^\/+|\/+$/g, '');
     const paired = config.routes.includes(route);
     languageLinks(nav, route, paired);
+    updateSidebarControls();
     if (!fa) return;
     // MyST's client links can drop the first segment of a nested BASE_URL.
     // Repair only this edition's /fa paths; external links retain their meaning.
@@ -218,6 +295,7 @@
       const original = history[name];
       history[name] = function(...args) { const result = original.apply(this,args);requestAnimationFrame(update);return result; };
     }
+    addEventListener('resize', updateSidebarControls, {passive: true});
     addEventListener('popstate', update);
     addEventListener('hashchange', update);
     let scrollScheduled = false;

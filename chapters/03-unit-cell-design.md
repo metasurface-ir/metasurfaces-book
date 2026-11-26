@@ -1,8 +1,8 @@
 ---
-title: "Chapter 3: Unit-cell design and simulation"
+title: "Chapter 3: Unit Cell Design and Simulation"
 ---
 
-# Chapter 3: Unit-cell design and simulation
+# Chapter 3: Unit Cell Design and Simulation
 
 Roll up your sleeves! Follow the textbook from the meta-atom to the complete array, then use the retained computational investigation to test what a response library can actually support.
 

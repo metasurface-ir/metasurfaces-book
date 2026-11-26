@@ -25,9 +25,9 @@ slug: learning-path
 
 | Destination | Preparation | Useful next investigation |
 | --- | --- | --- |
-| [7 — Tuning and control](chapters/07-active-tunable.md) | 2's sheet/circuit response; 5's prescribed arrays; 6's validation habits | Reachable complex states, bias control and temporal-envelope limits |
-| [8 — Communication links](chapters/08-communications.md) | 2's power/coherence; 5's finite aperture; 6's error checks; 7 for programmable hardware context | Geometry, coherent path sums, bandwidth and training overhead |
-| [9 — Materials and measurement](chapters/09-materials-measurement.md) | 2's complex scattering and reference planes; 3's geometry; 6's error categories | Calibration, correlated fabrication error and synthetic uncertainty |
+| [7 — Active, Tunable, and Intelligent Metasurfaces](chapters/07-active-tunable.md) | 2's sheet/circuit response; 5's prescribed arrays; 6's validation habits | Reachable complex states, bias control and temporal-envelope limits |
+| [8 — Emerging Applications of Metasurfaces in Communications Engineering](chapters/08-communications.md) | 2's power/coherence; 5's finite aperture; 6's error checks; 7 for programmable hardware context | Geometry, coherent path sums, bandwidth and training overhead |
+| [9 — Materials, Fabrication Technologies, and Measurement Methods](chapters/09-materials-measurement.md) | 2's complex scattering and reference planes; 3's geometry; 6's error categories | Calibration, correlated fabrication error and synthetic uncertainty |
 | [10 — AI and metasurfaces](chapters/10-ai-metasurfaces.md) | 1–2 for the analytical starter; 3/5/6 before a geometry-based full-wave extension | Split data by design, compare simple baselines and independently test proposed candidates |
 
 Basic Python arrays/plots, complex arithmetic, linear algebra, derivatives and probability are useful prerequisites. Revisit them when a lab first uses them; no commercial solver is required for the executed core.

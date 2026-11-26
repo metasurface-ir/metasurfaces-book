@@ -17,14 +17,14 @@ The companion course website will provide conceptual lessons and course guidance
 - Identify the object behind each result in [What am I simulating?](models.md), with 3D cuts and labeled sections.
 - Read the [ten-chapter syllabus](syllabus.md).
 - Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), its [six worked examples](chapters/01-foundations-guide.md), and the [first computational investigation](labs/01-first-investigation.md).
-- Explore [Chapter 2: Waves, Interfaces, and Sheets](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).
-- Build a response library with [Chapter 3: Unit-cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
-- Begin [Chapter 4: Periodic Structures and Floquet Analysis](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
+- Explore [Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).
+- Build a response library with [Chapter 3: Unit Cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
+- Begin [Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
 - Design and verify with [Chapter 5: Metasurface Synthesis](chapters/05-metasurface-synthesis.md), its [worked examples](chapters/05-synthesis-guide.md), and [computational lab](labs/05-synthesis-lab.md).
 - Test numerical accuracy with [Chapter 6](chapters/06-numerical-methods.md), its [worked guide](chapters/06-numerical-guide.md), and [interactive lab](labs/06-numerical-lab.md).
 - Tune and calibrate with [Chapter 7](chapters/07-active-tunable.md), its [six worked examples](chapters/07-tunable-guide.md), and [four-part browser lab](labs/07-tunable-lab.md).
-- Investigate [Chapter 8: Communications Engineering](chapters/08-communications.md), its [six worked examples](chapters/08-communications-guide.md), and [four-part browser lab](labs/08-communications-lab.md).
-- Follow [Chapter 9: Materials, Fabrication, and Measurement](chapters/09-materials-measurement.md), its [six worked examples](chapters/09-measurement-guide.md), and [four-part browser lab](labs/09-measurement-lab.md).
+- Investigate [Chapter 8: Emerging Applications of Metasurfaces in Communications Engineering](chapters/08-communications.md), its [six worked examples](chapters/08-communications-guide.md), and [four-part browser lab](labs/08-communications-lab.md).
+- Follow [Chapter 9: Materials, Fabrication Technologies, and Measurement Methods](chapters/09-materials-measurement.md), its [six worked examples](chapters/09-measurement-guide.md), and [four-part browser lab](labs/09-measurement-lab.md).
 - Begin [Chapter 10: AI and Metasurfaces](chapters/10-ai-metasurfaces.md).
 - Follow the [pilot learning path and worked exercises](chapters/10-pilot-guide.md).
 - Work through the [AI computational lab](labs/13-ai-metasurfaces.md), [starter notebook](notebooks/10-resonant-surrogate.ipynb), and [neural comparison](notebooks/10-neural-comparison.ipynb).

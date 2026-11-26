@@ -1,10 +1,9 @@
 ---
-title: 'Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces'
-short_title: Waves, boundaries, and sheets
+title: "Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces"
 description: Derive the wave, polarization, boundary, and power language needed to design and verify a metasurface, through predictions, exact analytical experiments, and a coherent-absorption finale.
 ---
 
-# Chapter 2: Electromagnetic Waves and Their Interaction with Metasurfaces
+# Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces
 
 We follow the instructor-supplied booklet in its original section order, retaining the existing computational investigations alongside it. Equations remain LaTeX; source worked examples have colored panels with expandable answers.
 
