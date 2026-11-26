@@ -1,49 +1,143 @@
 {
   "pdf_sha256": "2d5a2a630c166f99c9eae09eca8bc6c60ae9512219e50d6c9cc9471ab14cb4c8",
   "pdf_pages": 270,
-  "scope": "Bilingual adapted reading with selected worked calculations. Section mapping does not establish full transcription.",
+  "cover_page": 203,
+  "body_pages": [
+    204,
+    242
+  ],
+  "scope": "Page-reviewed Persian reading and paired English translation. All seven sections, 26 numbered subsections, and six worked problems with 30 solution parts are represented. Persian typography is normalized and the prose is edited where scientific clarification or consolidation is needed. The computational reading, guide, browser lab, and notebook remain available.",
   "sections": [
     {
       "number": "8.1",
       "pages": "204",
       "route": "communications-section-01",
-      "worked_exercise": false
+      "source_subsections": 0,
+      "worked_problem_parts": 0,
+      "display_equations": 0
     },
     {
       "number": "8.2",
       "pages": "204–211",
       "route": "communications-section-02",
-      "worked_exercise": true
+      "source_subsections": 5,
+      "worked_problem_parts": 6,
+      "display_equations": 18
     },
     {
       "number": "8.3",
       "pages": "211–218",
       "route": "communications-section-03",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 14
     },
     {
       "number": "8.4",
       "pages": "218–223",
       "route": "communications-section-04",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 4,
+      "display_equations": 12
     },
     {
       "number": "8.5",
       "pages": "223–229",
       "route": "communications-section-05",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 9
     },
     {
       "number": "8.6",
       "pages": "230–236",
       "route": "communications-section-06",
-      "worked_exercise": true
+      "source_subsections": 5,
+      "worked_problem_parts": 5,
+      "display_equations": 14
     },
     {
       "number": "8.7",
       "pages": "236–242",
       "route": "communications-section-07",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 13
+    }
+  ],
+  "figures": [
+    {
+      "source_page": 226,
+      "source_figure": "8–5",
+      "asset": "assets/chapter-08/space-time-sidebands.svg",
+      "scope": "Original schematic of the panel, mounted unit cell, time modulation, radiating channels, and frequency-domain view. Three orders illustrate the single-cosine model."
+    }
+  ],
+  "corrections": [
+    {
+      "pages": [
+        205,
+        206,
+        207,
+        209,
+        210,
+        211
+      ],
+      "reason": "Use dimensionless path gains and a consistent signed phase for RIS. Qualify coherent element-count scaling, loss, noise, duplex behavior, near-field and pilot assumptions."
+    },
+    {
+      "pages": [
+        212,
+        213,
+        214,
+        216,
+        217,
+        218
+      ],
+      "reason": "Keep radiation leakage distinct from dissipation, use the reflection phase from inside the cavity, and distinguish RF port count, independent streams, and beam count."
+    },
+    {
+      "pages": [
+        219,
+        220,
+        221,
+        222,
+        223
+      ],
+      "reason": "Correct the metalens phase signs to match the worked problem and book convention. Qualify index matching, ideal OAM orthogonality, and aperture collection."
+    },
+    {
+      "pages": [
+        224,
+        225,
+        226,
+        227,
+        228,
+        229
+      ],
+      "reason": "Use matched frequency–direction ports and fixed pump bias for reciprocity. Keep the carrier and spur budget, and teach Doppler offset with the communications-receiver example."
+    },
+    {
+      "pages": [
+        230,
+        231,
+        232,
+        234,
+        235,
+        236
+      ],
+      "reason": "Specify angle from the surface normal, path-dependent delay, echo gain versus Fisher information, and calibration of sensing patterns."
+    },
+    {
+      "pages": [
+        237,
+        238,
+        239,
+        240,
+        241,
+        242
+      ],
+      "reason": "Correct the fitted amplitude minimum, separate fixed-phase beam squint from true time delay, retain the direct channel in the pilot count, and qualify illustrative cost, power, and network integration."
     }
   ]
 }
