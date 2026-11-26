@@ -217,6 +217,20 @@ html[data-book-outline="closed"] .book-page-outline {
   display: none;
 }
 
+/* Reserve the toolbar's row until the post-hydration controls are mounted. */
+main.article-grid:not(:has(> .book-sidebar-controls)):has(article :is(h2, h3, h4)[id])::before {
+  content: "";
+  grid-column: body;
+  block-size: calc(34px + .7rem + 1px);
+}
+@media (min-width: 1280px) {
+  body:has(> .myst-primary-sidebar) main.article-grid:not(:has(> .book-sidebar-controls))::before {
+    content: "";
+    grid-column: body;
+    block-size: calc(34px + .7rem + 1px);
+  }
+}
+
 .book-sidebar-controls {
   position: sticky;
   top: var(--book-masthead-height, 60px);
