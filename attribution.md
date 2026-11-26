@@ -30,6 +30,8 @@ Use the [third-party record template](https://github.com/metasurface-ir/metasurf
 
 Write original explanations, cite primary scientific sources and verify bibliographic details. Retain required notices alongside any imported material. An openly readable paper or downloadable image is not automatically reusable under this book's license. Resolve uncertain permissions with the instructor before including that specific material. Do not upload private permission correspondence or credentials.
 
+Chapters 7–9 follow the numbered sections of the 270-page instructor booklet in both languages. They include selected worked calculations and a new schematic of the space–time modulation figure. The source rights reservation above applies.
+
 (reuse-citation)=
 ## Cite a reproducible version
 

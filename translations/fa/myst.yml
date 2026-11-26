@@ -180,18 +180,40 @@ project:
   - file: chapters/07-active-tunable.md
     title: فصل ۷ — فراسطوح فعال، تنظیم‌پذیر و هوشمند
     children:
+    - file: chapters/active-section-01.md
+    - file: chapters/active-section-02.md
+    - file: chapters/active-section-03.md
+    - file: chapters/active-section-04.md
+    - file: chapters/active-section-05.md
+    - file: chapters/active-section-06.md
+    - file: chapters/active-section-07.md
+    - file: chapters/active-computational.md
     - file: chapters/07-tunable-guide.md
     - file: labs/07-tunable-lab.md
     - file: notebooks/07-tunable-metasurfaces.ipynb
   - file: chapters/08-communications.md
     title: فصل ۸ — مهندسی مخابرات
     children:
+    - file: chapters/communications-section-01.md
+    - file: chapters/communications-section-02.md
+    - file: chapters/communications-section-03.md
+    - file: chapters/communications-section-04.md
+    - file: chapters/communications-section-05.md
+    - file: chapters/communications-section-06.md
+    - file: chapters/communications-section-07.md
+    - file: chapters/communications-computational.md
     - file: chapters/08-communications-guide.md
     - file: labs/08-communications-lab.md
     - file: notebooks/08-communication-links.ipynb
   - file: chapters/09-materials-measurement.md
     title: فصل ۹ — مواد، ساخت و اندازه‌گیری
     children:
+    - file: chapters/measurement-section-01.md
+    - file: chapters/measurement-section-02.md
+    - file: chapters/measurement-section-03.md
+    - file: chapters/measurement-section-04.md
+    - file: chapters/measurement-section-05.md
+    - file: chapters/measurement-computational.md
     - file: chapters/09-measurement-guide.md
     - file: labs/09-measurement-lab.md
     - file: notebooks/09-fabrication-measurement.ipynb

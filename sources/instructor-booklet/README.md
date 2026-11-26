@@ -32,3 +32,7 @@ The complete educational reading of printed pages 89–118 (body 90–118) now f
 The paired Chapter 6 reading integrates printed pages 121–176 of the instructor's updated 182-page PDF (SHA-256 recorded in chapter06-coverage.json). Ten reading pages preserve the five major sections and give each of the five methods in Section 6.2 a separate child page. All seven worked problems retain their governing equations, intermediate calculations and source numerical results, with clearly labeled corrections and independently recomputed answers. Persian prose follows the booklet's conversational instructional voice; typography, equation notation and obvious extraction defects are normalized. This is an educational editing/translation, not a facsimile transcription. Source algebra is never presented as validated merely because it was printed.
 
 The ten earlier computational connections, guide, lab, notebook, figures and explorer are retained. Two original vector schematics illustrate the Yee grid and integral current/flux unknowns. The PDF and external raster illustrations are not republished. The source rights reservation above applies equally to the Chapter 6 reading and translation.
+
+## Chapters 7–9
+
+Bilingual adapted readings follow pages 174–202, 204–242 and 244–270. Coverage records map the 19 numbered sections and indicate selected worked calculations. The Chapter 8 space–time modulation figure has an original schematic counterpart. The previous computational readings, guides, labs and notebooks remain available. The above rights reservation applies.

@@ -850,6 +850,116 @@
       "source": "chapters/numerical-computational-10.md",
       "translation": "translations/fa/chapters/numerical-computational-10.md",
       "route": "numerical-computational-10"
+    },
+    {
+      "source": "chapters/active-section-01.md",
+      "translation": "translations/fa/chapters/active-section-01.md",
+      "route": "active-section-01"
+    },
+    {
+      "source": "chapters/active-section-02.md",
+      "translation": "translations/fa/chapters/active-section-02.md",
+      "route": "active-section-02"
+    },
+    {
+      "source": "chapters/active-section-03.md",
+      "translation": "translations/fa/chapters/active-section-03.md",
+      "route": "active-section-03"
+    },
+    {
+      "source": "chapters/active-section-04.md",
+      "translation": "translations/fa/chapters/active-section-04.md",
+      "route": "active-section-04"
+    },
+    {
+      "source": "chapters/active-section-05.md",
+      "translation": "translations/fa/chapters/active-section-05.md",
+      "route": "active-section-05"
+    },
+    {
+      "source": "chapters/active-section-06.md",
+      "translation": "translations/fa/chapters/active-section-06.md",
+      "route": "active-section-06"
+    },
+    {
+      "source": "chapters/active-section-07.md",
+      "translation": "translations/fa/chapters/active-section-07.md",
+      "route": "active-section-07"
+    },
+    {
+      "source": "chapters/active-computational.md",
+      "translation": "translations/fa/chapters/active-computational.md",
+      "route": "active-computational"
+    },
+    {
+      "source": "chapters/communications-section-01.md",
+      "translation": "translations/fa/chapters/communications-section-01.md",
+      "route": "communications-section-01"
+    },
+    {
+      "source": "chapters/communications-section-02.md",
+      "translation": "translations/fa/chapters/communications-section-02.md",
+      "route": "communications-section-02"
+    },
+    {
+      "source": "chapters/communications-section-03.md",
+      "translation": "translations/fa/chapters/communications-section-03.md",
+      "route": "communications-section-03"
+    },
+    {
+      "source": "chapters/communications-section-04.md",
+      "translation": "translations/fa/chapters/communications-section-04.md",
+      "route": "communications-section-04"
+    },
+    {
+      "source": "chapters/communications-section-05.md",
+      "translation": "translations/fa/chapters/communications-section-05.md",
+      "route": "communications-section-05"
+    },
+    {
+      "source": "chapters/communications-section-06.md",
+      "translation": "translations/fa/chapters/communications-section-06.md",
+      "route": "communications-section-06"
+    },
+    {
+      "source": "chapters/communications-section-07.md",
+      "translation": "translations/fa/chapters/communications-section-07.md",
+      "route": "communications-section-07"
+    },
+    {
+      "source": "chapters/communications-computational.md",
+      "translation": "translations/fa/chapters/communications-computational.md",
+      "route": "communications-computational"
+    },
+    {
+      "source": "chapters/measurement-section-01.md",
+      "translation": "translations/fa/chapters/measurement-section-01.md",
+      "route": "measurement-section-01"
+    },
+    {
+      "source": "chapters/measurement-section-02.md",
+      "translation": "translations/fa/chapters/measurement-section-02.md",
+      "route": "measurement-section-02"
+    },
+    {
+      "source": "chapters/measurement-section-03.md",
+      "translation": "translations/fa/chapters/measurement-section-03.md",
+      "route": "measurement-section-03"
+    },
+    {
+      "source": "chapters/measurement-section-04.md",
+      "translation": "translations/fa/chapters/measurement-section-04.md",
+      "route": "measurement-section-04"
+    },
+    {
+      "source": "chapters/measurement-section-05.md",
+      "translation": "translations/fa/chapters/measurement-section-05.md",
+      "route": "measurement-section-05"
+    },
+    {
+      "source": "chapters/measurement-computational.md",
+      "translation": "translations/fa/chapters/measurement-computational.md",
+      "route": "measurement-computational"
     }
   ]
 }
