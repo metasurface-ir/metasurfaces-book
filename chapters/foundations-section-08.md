@@ -106,7 +106,7 @@ Original complex-plane illustration of the model's channel contributions. These 
 Matching the channels over an entire frequency interval is an imposed idealization. Unit transmission in this model does not establish a practical, lossless, broadband Huygens surface or a geometry providing every desired phase.
 
 
-<a href="../interactives/foundations-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · {download}`../downloads/chapter-01-foundations.zip` (executed notebook, model code, data, and report worksheet).
+<a href="https://metasurface-ir.github.io/metasurfaces-book/interactives/foundations-explorer.html" target="_blank" rel="noopener">Open the browser lab in a new tab</a> · {download}`../downloads/chapter-01-foundations.zip` (executed notebook, model code, data, and report worksheet).
 
 The abstract channel strengths have no assigned fabrication dimensions.
 

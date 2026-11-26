@@ -103,7 +103,7 @@ $$
 این نکتهٔ مهم را همراه نتیجه نگه داریم: یکسان بودن کانال‌ها در تمام بازهٔ فرکانسی، فرض ایده‌آل مدل است. پس عبور واحد در این نمودار، هنوز ساخت یک سطح هویگنس عملی، بی‌اتلاف و پهن‌باند یا یک هندسه با همهٔ فازهای دلخواه را ثابت نمی‌کند.
 
 
-<a href="../interactives/foundations-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه مرورگری در زبانهٔ جدید</a> · {download}`../downloads/chapter-01-foundations.zip` (دفترچهٔ اجراشده، کد مدل، داده‌ها و برگهٔ گزارش).
+<a href="https://metasurface-ir.github.io/metasurfaces-book/fa/interactives/foundations-explorer.html" target="_blank" rel="noopener">بازکردن آزمایشگاه مرورگری در زبانهٔ جدید</a> · {download}`../downloads/chapter-01-foundations.zip` (دفترچهٔ اجراشده، کد مدل، داده‌ها و برگهٔ گزارش).
 
 شدت کانال در این مدل، ابعاد یک قطعهٔ ساخته‌شدنی نیست.
 
