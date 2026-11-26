@@ -1,0 +1,49 @@
+{
+  "pdf_sha256": "2d5a2a630c166f99c9eae09eca8bc6c60ae9512219e50d6c9cc9471ab14cb4c8",
+  "pdf_pages": 270,
+  "scope": "Bilingual adapted reading with selected worked calculations. Section mapping does not establish full transcription.",
+  "sections": [
+    {
+      "number": "8.1",
+      "pages": "204",
+      "route": "communications-section-01",
+      "worked_exercise": false
+    },
+    {
+      "number": "8.2",
+      "pages": "204–211",
+      "route": "communications-section-02",
+      "worked_exercise": true
+    },
+    {
+      "number": "8.3",
+      "pages": "211–218",
+      "route": "communications-section-03",
+      "worked_exercise": true
+    },
+    {
+      "number": "8.4",
+      "pages": "218–223",
+      "route": "communications-section-04",
+      "worked_exercise": true
+    },
+    {
+      "number": "8.5",
+      "pages": "223–229",
+      "route": "communications-section-05",
+      "worked_exercise": true
+    },
+    {
+      "number": "8.6",
+      "pages": "230–236",
+      "route": "communications-section-06",
+      "worked_exercise": true
+    },
+    {
+      "number": "8.7",
+      "pages": "236–242",
+      "route": "communications-section-07",
+      "worked_exercise": true
+    }
+  ]
+}

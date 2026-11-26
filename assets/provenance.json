@@ -712,6 +712,13 @@
       ]
     },
     {
+      "asset": "assets/chapter-08/space-time-sidebands.svg",
+      "sha256": "b7f356b6715d61df913396857110f881c7f215eae34d326771d63b2c5277c10c",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-08/space-time-sidebands.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
       "asset": "assets/chapter-08/training.png",
       "sha256": "c07a2d3b6e65bdda48a94496b807a7e1867cb2695aa835ba738418e92219bec0",
       "origin": "original numerical notebook output",

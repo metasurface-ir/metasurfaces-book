@@ -1,0 +1,49 @@
+{
+  "pdf_sha256": "2d5a2a630c166f99c9eae09eca8bc6c60ae9512219e50d6c9cc9471ab14cb4c8",
+  "pdf_pages": 270,
+  "scope": "Bilingual adapted reading with selected worked calculations. Section mapping does not establish full transcription.",
+  "sections": [
+    {
+      "number": "7.1",
+      "pages": "174–175",
+      "route": "active-section-01",
+      "worked_exercise": false
+    },
+    {
+      "number": "7.2",
+      "pages": "175–181",
+      "route": "active-section-02",
+      "worked_exercise": true
+    },
+    {
+      "number": "7.3",
+      "pages": "181–185",
+      "route": "active-section-03",
+      "worked_exercise": true
+    },
+    {
+      "number": "7.4",
+      "pages": "185–190",
+      "route": "active-section-04",
+      "worked_exercise": true
+    },
+    {
+      "number": "7.5",
+      "pages": "190–195",
+      "route": "active-section-05",
+      "worked_exercise": true
+    },
+    {
+      "number": "7.6",
+      "pages": "195–199",
+      "route": "active-section-06",
+      "worked_exercise": true
+    },
+    {
+      "number": "7.7",
+      "pages": "199–202",
+      "route": "active-section-07",
+      "worked_exercise": false
+    }
+  ]
+}
