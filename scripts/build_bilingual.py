@@ -119,10 +119,6 @@ def decorate(output, language):
         text = path.read_text(encoding='utf-8')
         if '<html' not in text:
             continue
-        # Use the same brand mark as the book header in both editions.
-        text, count = re.subn(r'<link\b[^>]*\brel=["\'](?:shortcut )?icon["\'][^>]*>', favicon, text)
-        if not count:
-            text = text.replace('</head>', favicon + '</head>', 1)
         # The theme hydrates its document root as English. Apply Persian direction
         # after hydration, avoiding a React document mismatch and lost styles.
         tags = (f'<script id="book-language-config" type="application/json">{json.dumps(config, ensure_ascii=False)}</script>'
