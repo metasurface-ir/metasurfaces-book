@@ -713,7 +713,7 @@
     },
     {
       "asset": "assets/chapter-08/space-time-sidebands.svg",
-      "sha256": "b7f356b6715d61df913396857110f881c7f215eae34d326771d63b2c5277c10c",
+      "sha256": "b68ffd4d0a4b281bc776fe4e6965bebc4bbd2c5879d82e3d2c108b955ac2a066",
       "origin": "original editable SVG schematic",
       "source": "assets/chapter-08/space-time-sidebands.svg",
       "sha256_basis": "UTF-8 text with LF line endings"

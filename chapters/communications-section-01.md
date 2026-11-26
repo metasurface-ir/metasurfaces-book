@@ -1,11 +1,13 @@
-# 8.1 From a component to a communication system
+# 8.1 Introduction: from photonic physics to telecommunications towers
 
-Based on the instructor booklet, pages 204.
+Instructor booklet, page 204.
 
-In a link, a surface matters only through the field at a receiver, the interference it creates or suppresses, and the overhead needed to set it. Start with a baseline link. Draw the transmitter, aperture and receiver, then decide whether you need coverage, focusing, frequency conversion or sensing. The same sheet can perform different tasks under different illumination and control.
+Friends, by now we have learned how metasurfaces can manipulate the phase, amplitude, and polarization of electromagnetic waves at subwavelength scales, almost like magic. But a communications engineer will ask, “Where does this beautiful physics help me in a 5G or 6G network?”
 
-$$
-\mathrm{SNR}=P_t|h_{\rm eff}|^2/P_{\rm noise}.
-$$
+The booklet's answer is: everywhere! Metasurfaces are changing communications architecture. We used to treat the propagation environment as random and uncontrollable, full of fading, shadowing, and interference, and put considerable effort into compensating with sophisticated receiver and transmitter processing. Metasurfaces let us program part of the **propagation environment itself**. In this chapter we will see how these components can replace large antennas in some applications and introduce ideas such as the **smart radio environment**.
+
+:::{tip} From component to link
+A strong beam by itself does not mean a good link. For each example also account for power at the receiver, interference, channel-training time, and control losses.
+:::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

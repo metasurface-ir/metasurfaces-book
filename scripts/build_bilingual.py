@@ -112,12 +112,17 @@ def decorate(output, language):
     config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']], 'anchors': anchors,
               'legacySections': legacy_sections}
     sidebar_startup = (ROOT / 'styles/sidebar-startup.js').read_text(encoding='utf-8')
+    favicon = f'<link rel="icon" type="image/svg+xml" href="{target_base}/assets/brand/metasurface-mark.svg" />'
     for path in output.rglob('*.html'):
         if 'interactives' in path.parts or 'build' in path.relative_to(output).parts:
             continue
         text = path.read_text(encoding='utf-8')
         if '<html' not in text:
             continue
+        # Use the same brand mark as the book header in both editions.
+        text, count = re.subn(r'<link\b[^>]*\brel=["\'](?:shortcut )?icon["\'][^>]*>', favicon, text)
+        if not count:
+            text = text.replace('</head>', favicon + '</head>', 1)
         # The theme hydrates its document root as English. Apply Persian direction
         # after hydration, avoiding a React document mismatch and lost styles.
         tags = (f'<script id="book-language-config" type="application/json">{json.dumps(config, ensure_ascii=False)}</script>'
@@ -140,7 +145,7 @@ def decorate(output, language):
     copy_tree(ROOT / 'assets/brand', output / 'assets/brand')
     for interactive in (output / 'interactives').glob('*.html'):
         value = interactive.read_text(encoding='utf-8')
-        value = value.replace('</head>', '<link rel="stylesheet" href="../book-fonts.css"></head>', 1)
+        value = value.replace('</head>', f'<link rel="stylesheet" href="../book-fonts.css">{favicon}</head>', 1)
         interactive.write_text(value, encoding='utf-8', newline='\n')
     # Persian layout must be correct before JavaScript or React starts. Keep the
     # document attributes untouched for hydration, but apply direction in CSS.
