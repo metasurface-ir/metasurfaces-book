@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 With coherent probes separated by $\lambda/2$, the downstream phase is $-60^\circ$ relative to the upstream probe. Estimate angle and state what further latency matters if probes are sampled periodically.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 $\sin\theta=1/3$, so the principal angle is about 19.5°. Up to one sampling interval may elapse before the loop sees a change. The total reaction time must fit the channel dynamics.
-```
+:::
+::::
 
 [Computational reading](active-computational.md) · [Lab](../labs/07-tunable-lab.md)

@@ -12,13 +12,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 A thermal film has conductivity rising from 10 to $10^5$ S/m with a logistic transition centered at $T_c$ and width scale $\Delta T$. Find the midpoint conductivity and the 10–90% temperature interval.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 At the midpoint $\sigma=50005$ S/m. Solving $p=(1+e^{-(T-T_c)/\Delta T})^{-1}$ gives $T_{10,90}=T_c\mp\Delta T\ln9$. Hysteresis and thermal settling would require additional measurements.
-```
+:::
+::::
 
 ## 9.2 Fabrication and deposition
 
@@ -32,13 +35,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For $g_0=3.0\,\mu\mathrm m$, use the source's geometric model to find the allowable gap for a resonance shift within ±3%. Does a ±0.5 µm process meet it?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 Squaring the frequency limits gives $3(0.97)^2\le g\le3(1.03)^2$, or approximately 2.823–3.183 µm. A symmetric tolerance must be about ±0.177 µm or tighter. The ±0.5 µm process fails this screening model.
-```
+:::
+::::
 
 ## 9.3 Packaging, bias isolation and integration
 
@@ -52,13 +58,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At 28 GHz, a packaged diode has $R_s=2\,\Omega$ and $L_s=0.30\,\mathrm{nH}$. Calculate its on-state impedance and explain what happens as a shorted bias branch moves off its quarter-wave frequency.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 $\omega L_s=2\pi(28\times10^9)(0.30\times10^{-9})=52.8\,\Omega$, so $Z_{\rm on}\simeq2+i52.8\,\Omega$. Near the quarter-wave condition, the magnitude of the shorted branch impedance declines away from the design frequency. Actual loss further limits the peak.
-```
+:::
+::::
 
 ## 9.4 Free-space, waveguide and near-field measurements
 
@@ -72,13 +81,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 The calibrated magnitudes of two states are 0.83 and 0.76 in the measured reflection mode. Their phase separation is 170°. Find the modal power fractions and phase error relative to 180°.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The power fractions are $0.83^2\simeq0.689$ and $0.76^2\simeq0.578$. Separation is 10° short. Missing measured-mode power can include absorption, diffraction, polarization conversion or spillover.
-```
+:::
+::::
 
 ## 9.5 Retrieving effective parameters
 
@@ -92,10 +104,13 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 An internal slab factor has magnitude 0.90 and phase $+120^\circ$ at $d=\lambda_0/3$. Calculate the principal index and neighboring branch spacing.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 $k_0d=2\pi/3$, so $n_0=-1+i\ln(0.90)/(2\pi/3)\simeq-1-i0.0503$. The real spacing is 3. Attenuation fixes the imaginary part for the assumed propagation model, while one frequency alone cannot distinguish the real branches.
-```
+:::
+::::

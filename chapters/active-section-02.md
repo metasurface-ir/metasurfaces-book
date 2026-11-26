@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At 10 GHz, a 32-by-32 panel uses 7.5 mm pitch. Estimate phase steps for steering to +30° and −45°, and DC power if every PIN draws 5 mA from 3.3 V. For a 1 pF varactor with $V_j=1$ V, $m=1/2$, and $R_s=1\,\Omega$, calculate capacitance and Q at 3 V.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 For normal incidence, $\Delta\phi=-k_0d\sin\theta$, giving approximately $-45^\circ$ and $+63.6^\circ$. The all-on DC estimate is $1024(3.3)(0.005)=16.9$ W before driver overhead. The varactor gives 0.50 pF and $Q\simeq31.8$. Neither value determines the full cell phase range or full panel settling time.
-```
+:::
+::::
 
 [Computational reading](active-computational.md) · [Lab](../labs/07-tunable-lab.md)

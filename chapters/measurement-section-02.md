@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For $g_0=3.0\,\mu\mathrm m$, use the source's geometric model to find the allowable gap for a resonance shift within ±3%. Does a ±0.5 µm process meet it?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 Squaring the frequency limits gives $3(0.97)^2\le g\le3(1.03)^2$, or approximately 2.823–3.183 µm. A symmetric tolerance must be about ±0.177 µm or tighter. The ±0.5 µm process fails this screening model.
-```
+:::
+::::
 
 [Computational reading](measurement-computational.md) · [Lab](../labs/09-measurement-lab.md)

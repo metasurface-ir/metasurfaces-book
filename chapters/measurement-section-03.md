@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At 28 GHz, a packaged diode has $R_s=2\,\Omega$ and $L_s=0.30\,\mathrm{nH}$. Calculate its on-state impedance and explain what happens as a shorted bias branch moves off its quarter-wave frequency.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 $\omega L_s=2\pi(28\times10^9)(0.30\times10^{-9})=52.8\,\Omega$, so $Z_{\rm on}\simeq2+i52.8\,\Omega$. Near the quarter-wave condition, the magnitude of the shorted branch impedance declines away from the design frequency. Actual loss further limits the peak.
-```
+:::
+::::
 
 [Computational reading](measurement-computational.md) · [Lab](../labs/09-measurement-lab.md)

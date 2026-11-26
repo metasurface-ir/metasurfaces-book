@@ -603,5 +603,109 @@
         ]
       }
     ]
+  },
+  {
+    "chapter": 7,
+    "parent_route": "active-tunable",
+    "sections": [
+      {
+        "source": "chapters/active-computational.md",
+        "route": "active-computational",
+        "anchors": [
+          "id-7-1-four-words-that-describe-different-capabilities",
+          "id-7-2-choose-a-tuning-mechanism-by-its-constraints",
+          "id-7-3-point-to-the-object-behind-the-model",
+          "id-7-4-derive-reflection-and-check-passivity",
+          "id-7-5-voltage-resonance-and-sensitivity",
+          "id-7-6-from-controllable-states-to-a-codebook",
+          "id-7-7-what-the-programmed-aperture-predicts",
+          "id-7-8-feedback-makes-adaptation-testable",
+          "id-7-9-include-the-control-dynamics",
+          "id-7-10-time-modulation-creates-extra-frequency-channels",
+          "id-7-11-a-verification-ladder-for-a-physical-device",
+          "id-7-12-exercises-and-further-reading",
+          "id",
+          "id-1",
+          "id-2",
+          "id-3",
+          "id-4",
+          "id-5",
+          "id-6",
+          "id-7",
+          "id-8",
+          "id-9",
+          "id-10",
+          "id-11"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 8,
+    "parent_route": "communications",
+    "sections": [
+      {
+        "source": "chapters/communications-computational.md",
+        "route": "communications-computational",
+        "anchors": [
+          "id-8-1-from-a-device-to-a-system",
+          "id-8-2-draw-the-actual-experiment",
+          "id-8-3-a-channel-with-explicit-normalization",
+          "id-8-4-derive-the-focusing-phase",
+          "id-8-5-curvature-area-and-sample-count",
+          "id-8-6-add-the-direct-path-as-a-field",
+          "id-8-7-power-noise-and-rate",
+          "id-8-8-finite-states-and-uncertain-phase",
+          "id-8-9-bandwidth-and-delay",
+          "id-8-10-training-consumes-useful-time",
+          "id-8-11-verification-and-next-investigations",
+          "id",
+          "id-1",
+          "id-2",
+          "id-3",
+          "id-4",
+          "id-5",
+          "id-6",
+          "id-7",
+          "id-8",
+          "id-9",
+          "id-10"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 9,
+    "parent_route": "materials-measurement",
+    "sections": [
+      {
+        "source": "chapters/measurement-computational.md",
+        "route": "measurement-computational",
+        "anchors": [
+          "id-9-1-what-must-agree",
+          "id-9-2-choose-a-material-spectrum",
+          "id-9-3-from-mask-to-measured-geometry",
+          "id-9-4-a-tractable-resonator",
+          "id-9-5-propagate-fabrication-tolerances",
+          "id-9-6-define-the-measurand",
+          "id-9-7-solve-a-three-term-calibration",
+          "id-9-8-move-the-reference-plane",
+          "id-9-9-report-complex-uncertainty",
+          "id-9-10-what-averaging-leaves-behind",
+          "id-9-11-close-the-evidence-chain",
+          "id",
+          "id-1",
+          "id-2",
+          "id-3",
+          "id-4",
+          "id-5",
+          "id-6",
+          "id-7",
+          "id-8",
+          "id-9",
+          "id-10"
+        ]
+      }
+    ]
   }
 ]

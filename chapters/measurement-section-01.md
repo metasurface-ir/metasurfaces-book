@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 A thermal film has conductivity rising from 10 to $10^5$ S/m with a logistic transition centered at $T_c$ and width scale $\Delta T$. Find the midpoint conductivity and the 10–90% temperature interval.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 At the midpoint $\sigma=50005$ S/m. Solving $p=(1+e^{-(T-T_c)/\Delta T})^{-1}$ gives $T_{10,90}=T_c\mp\Delta T\ln9$. Hysteresis and thermal settling would require additional measurements.
-```
+:::
+::::
 
 [Computational reading](measurement-computational.md) · [Lab](../labs/09-measurement-lab.md)

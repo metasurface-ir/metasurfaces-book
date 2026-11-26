@@ -22,13 +22,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At 10 GHz, a 32-by-32 panel uses 7.5 mm pitch. Estimate phase steps for steering to +30° and −45°, and DC power if every PIN draws 5 mA from 3.3 V. For a 1 pF varactor with $V_j=1$ V, $m=1/2$, and $R_s=1\,\Omega$, calculate capacitance and Q at 3 V.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 For normal incidence, $\Delta\phi=-k_0d\sin\theta$, giving approximately $-45^\circ$ and $+63.6^\circ$. The all-on DC estimate is $1024(3.3)(0.005)=16.9$ W before driver overhead. The varactor gives 0.50 pF and $Q\simeq31.8$. Neither value determines the full cell phase range or full panel settling time.
-```
+:::
+::::
 
 ## 7.3 Digital states, coding and hardware
 
@@ -42,13 +45,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 An 8-by-8 array with $d=\lambda/2$ uses a $+90^\circ$ phase increment per column. Where is the main beam? What happens to the normal sum with 32 coefficients at +1 and 32 at −1?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The phase per column is $\pi/2+\pi u$. The visible peak is at $u=-1/2$, or $-30^\circ$ in the steering cut. At normal observation all propagation factors equal one, so the balanced sum is zero. The off-axis pattern depends on where the signs are placed.
-```
+:::
+::::
 
 ## 7.4 Reflecting surfaces and cascaded channels
 
@@ -62,13 +68,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 Four cascaded coefficients are $1,i,-1,-i$. Compare all-on, continuous alignment, and a binary code with coefficients ±1.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 All-on gives zero. Complex conjugate phases give a sum of 4 and power 16. The code $(1,1,-1,-1)$ gives $2+2i$ and power 8, about 3 dB down in this example. Four independent pilot patterns can recover four unknown products in the noiseless model.
-```
+:::
+::::
 
 ## 7.5 Time variation and frequency channels
 
@@ -82,13 +91,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 A 10 GHz input has $k_x=0.6k_0$. Use $f_m=100$ MHz and $K=0.6k_0$. Find the lower sideband direction and the transverse momentum of the opposite-frequency order under the same pump at normal incidence.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 For $m=-1$, the output is 9.9 GHz with $k_x=0$. Starting at 9.9 GHz and $k_x=0$, the $m=+1$ order at 10 GHz has $k_x=+0.6k_0$. The spatially reversed version of the original input would have $-0.6k_0$. A physical comparison also specifies polarization, normalization and leakage paths.
-```
+:::
+::::
 
 ## 7.6 Sensing, decisions and adaptation
 
@@ -102,13 +114,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 With coherent probes separated by $\lambda/2$, the downstream phase is $-60^\circ$ relative to the upstream probe. Estimate angle and state what further latency matters if probes are sampled periodically.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 $\sin\theta=1/3$, so the principal angle is about 19.5°. Up to one sampling interval may elapse before the loop sees a change. The total reaction time must fit the channel dynamics.
-```
+:::
+::::
 
 ## 7.7 Research directions and deployment limits
 

@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 The calibrated magnitudes of two states are 0.83 and 0.76 in the measured reflection mode. Their phase separation is 170°. Find the modal power fractions and phase error relative to 180°.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The power fractions are $0.83^2\simeq0.689$ and $0.76^2\simeq0.578$. Separation is 10° short. Missing measured-mode power can include absorption, diffraction, polarization conversion or spillover.
-```
+:::
+::::
 
 [Computational reading](measurement-computational.md) · [Lab](../labs/09-measurement-lab.md)

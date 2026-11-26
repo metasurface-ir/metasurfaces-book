@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At normal incidence the cavity example has $\psi_{\rm PRS}=-108^\circ$. Take the PEC phase as $+180^\circ$. Find the smallest positive height in the phase-only model.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The reflection phase sum is 72 degrees, so $h=\lambda/10$ for $q=0$. The phase condition alone cannot predict radiation efficiency or usable bandwidth.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

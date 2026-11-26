@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 If training and control consume 1.13 ms in a 2 ms coherence interval, how much remains? What is DC output from −10 dBm of harvested RF at 40% conversion?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 There are 0.87 ms left, or 43.5%. The incident RF power is 0.10 mW, so the harvested DC is 0.04 mW before downstream losses. Compare it with the complete duty-cycle-dependent budget.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

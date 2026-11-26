@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For $\ell=1$, list the additional phase at azimuths 0°, 90°, 180° and 270°. What happens if the receiver collects only a central disk?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The phases are 0°, 90°, 180° and 270° modulo one turn. For a regular vortex field of nonzero charge the on-axis field vanishes. The collected power then depends on the radial mode profile and receiving radius.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

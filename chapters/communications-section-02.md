@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 In the source's training comparison, 16 grouped patterns take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The fraction is $128/2000=6.4\%$. Grouped observations identify group responses when the pattern matrix has sufficient rank. Individual coefficients inside a group remain unresolved.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

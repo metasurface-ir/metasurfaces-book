@@ -22,13 +22,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 In the source's training comparison, 16 grouped patterns take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The fraction is $128/2000=6.4\%$. Grouped observations identify group responses when the pattern matrix has sufficient rank. Individual coefficients inside a group remain unresolved.
-```
+:::
+::::
 
 ## 8.3 Leaky-wave, cavity and holographic antennas
 
@@ -42,13 +45,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 At normal incidence the cavity example has $\psi_{\rm PRS}=-108^\circ$. Take the PEC phase as $+180^\circ$. Find the smallest positive height in the phase-only model.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The reflection phase sum is 72 degrees, so $h=\lambda/10$ for $q=0$. The phase condition alone cannot predict radiation efficiency or usable bandwidth.
-```
+:::
+::::
 
 ## 8.4 Metalenses and orbital angular momentum
 
@@ -62,13 +68,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For $\ell=1$, list the additional phase at azimuths 0°, 90°, 180° and 270°. What happens if the receiver collects only a central disk?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The phases are 0°, 90°, 180° and 270° modulo one turn. For a regular vortex field of nonzero charge the on-axis field vanishes. The collected power then depends on the radial mode profile and receiving radius.
-```
+:::
+::::
 
 ## 8.5 Space-time modulation in a communication link
 
@@ -88,13 +97,16 @@ Original teaching schematic for Figure 8–5. Arrow directions and lengths are s
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For a normal 10 GHz input, use a 200 MHz pump and $K=0.70k_0$. Find the upper sideband angle and show the QPSK symbols available from four pump phases.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The upper sideband is at 10.2 GHz, hence $\sin\theta=0.70/1.02$ and $\theta\simeq43.3^\circ$. Pump phases $0,\pi/2,\pi,3\pi/2$ yield $0.25\{1,i,-1,-i\}$. Their equal modeled magnitudes do not account for frequency-dependent hardware loss.
-```
+:::
+::::
 
 ## 8.6 Integrated sensing, localization and imaging
 
@@ -108,13 +120,16 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 In the booklet's local angular model the four response factors are $1+8\delta\theta,1-8\delta\theta,1+4\delta\phi,1-4\delta\phi$, all multiplied by the same unknown complex echo $\alpha$. How can a noiseless estimator eliminate $\alpha$?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 Divide each pair difference by its sum. The two ratios are $8\delta\theta$ and $4\delta\phi$. The ratio is undefined at zero echo and becomes unstable at low SNR. The angular approximation is local.
-```
+:::
+::::
 
 ## 8.7 Hardware, training cost and network integration
 
@@ -128,10 +143,13 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 If training and control consume 1.13 ms in a 2 ms coherence interval, how much remains? What is DC output from −10 dBm of harvested RF at 40% conversion?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 There are 0.87 ms left, or 43.5%. The incident RF power is 0.10 mW, so the harvested DC is 0.04 mW before downstream losses. Compare it with the complete duty-cycle-dependent budget.
-```
+:::
+::::

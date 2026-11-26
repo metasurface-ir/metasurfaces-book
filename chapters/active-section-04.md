@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 Four cascaded coefficients are $1,i,-1,-i$. Compare all-on, continuous alignment, and a binary code with coefficients ±1.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 All-on gives zero. Complex conjugate phases give a sum of 4 and power 16. The code $(1,1,-1,-1)$ gives $2+2i$ and power 8, about 3 dB down in this example. Four independent pilot patterns can recover four unknown products in the noiseless model.
-```
+:::
+::::
 
 [Computational reading](active-computational.md) · [Lab](../labs/07-tunable-lab.md)

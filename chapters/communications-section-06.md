@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 In the booklet's local angular model the four response factors are $1+8\delta\theta,1-8\delta\theta,1+4\delta\phi,1-4\delta\phi$, all multiplied by the same unknown complex echo $\alpha$. How can a noiseless estimator eliminate $\alpha$?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 Divide each pair difference by its sum. The two ratios are $8\delta\theta$ and $4\delta\phi$. The ratio is undefined at zero echo and becomes unstable at low SNR. The angular approximation is local.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

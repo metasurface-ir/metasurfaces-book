@@ -16,12 +16,15 @@ Original teaching schematic for Figure 8–5. Arrow directions and lengths are s
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 For a normal 10 GHz input, use a 200 MHz pump and $K=0.70k_0$. Find the upper sideband angle and show the QPSK symbols available from four pump phases.
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The upper sideband is at 10.2 GHz, hence $\sin\theta=0.70/1.02$ and $\theta\simeq43.3^\circ$. Pump phases $0,\pi/2,\pi,3\pi/2$ yield $0.25\{1,i,-1,-i\}$. Their equal modeled magnitudes do not account for frequency-dependent hardware loss.
-```
+:::
+::::
 
 [Computational reading](communications-computational.md) · [Lab](../labs/08-communications-lab.md)

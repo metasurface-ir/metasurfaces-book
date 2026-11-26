@@ -10,12 +10,15 @@ $$
 
 ## Worked exercise from the reading
 
+::::{admonition} Try it first
+:class: book-exercise
+
 An 8-by-8 array with $d=\lambda/2$ uses a $+90^\circ$ phase increment per column. Where is the main beam? What happens to the normal sum with 32 coefficients at +1 and 32 at −1?
 
-```{dropdown} Show the worked answer
-:class: solution
+:::{dropdown} Show the worked answer
 
 The phase per column is $\pi/2+\pi u$. The visible peak is at $u=-1/2$, or $-30^\circ$ in the steering cut. At normal observation all propagation factors equal one, so the balanced sum is zero. The off-axis pattern depends on where the signs are placed.
-```
+:::
+::::
 
 [Computational reading](active-computational.md) · [Lab](../labs/07-tunable-lab.md)
