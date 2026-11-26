@@ -16,7 +16,7 @@ The companion course website will provide conceptual lessons and course guidance
 
 - Identify the object behind each result in [What am I simulating?](models.md), with 3D cuts and labeled sections.
 - Read the [ten-chapter syllabus](syllabus.md).
-- Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), its [six worked examples](chapters/01-foundations-guide.md), and the [first computational investigation](labs/01-first-investigation.md).
+- Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), then explore the [analytical sheet model and browser lab](chapters/foundations-section-08.md).
 - Explore [Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).
 - Build a response library with [Chapter 3: Unit Cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
 - Begin [Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).

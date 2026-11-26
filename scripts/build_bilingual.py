@@ -52,7 +52,8 @@ def prepare_persian():
         copy_tree(theme, STAGE / '_build/templates')
     # Numerical cells and saved numerical outputs always come from the English source.
     # Students edit only the Persian Markdown-cell sources in the translation notebook.
-    for row in json.loads((ROOT / 'translations/languages.json').read_text(encoding='utf-8'))['pages']:
+    manifest = json.loads((ROOT / 'translations/languages.json').read_text(encoding='utf-8'))
+    for row in manifest['pages'] + manifest.get('download_notebooks', []):
         if not row['source'].endswith('.ipynb'):
             continue
         original = json.loads((ROOT / row['source']).read_text(encoding='utf-8'))

@@ -17,14 +17,14 @@ In general, we encounter three levels of analysis when studying and designing a 
 
 To take you from an interested student to a capable metasurface designer, we have arranged the source book into nine engineered steps—chapters:
 
-- **Chapter 2, Electromagnetic Modeling and Fundamental Relations:** the mathematics and physics governing boundaries.
-- **Chapter 3, Initial Metasurface Design and Implementation:** how to build your first unit cell in software.
-- **Chapter 4, Periodic Structures, Floquet Theory, and Diffraction Orders:** understanding periodic-array physics, an essential prerequisite for precise design.
-- **Chapter 5, Metasurface Synthesis:** calculating the required phase and amplitude maps from the desired output wave.
-- **Chapter 6, Numerical Modeling and Simulation Methods:** advanced techniques in CST and HFSS.
-- **Chapter 7, Active, Tunable, and Intelligent Metasurfaces:** entering the world of coding metasurfaces and time-dependent control.
-- **Chapter 8, Modern Metasurface Applications in Communication Engineering:** studying systems such as RIS for 6G.
-- **Chapter 9, Materials, Fabrication Technologies, and Measurement Methods:** taking a software design into the laboratory and testing it successfully.
+- **[Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces](02-waves-and-interfaces.md):** the mathematics and physics governing boundaries.
+- **[Chapter 3: Unit Cell Design and Simulation](03-unit-cell-design.md):** how to build your first unit cell in software.
+- **[Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders](04-periodic-floquet.md):** understanding periodic-array physics, an essential prerequisite for precise design.
+- **[Chapter 5: Metasurface Synthesis](05-metasurface-synthesis.md):** calculating the required phase and amplitude maps from the desired output wave.
+- **[Chapter 6: Numerical Modeling and Simulation Methods](06-numerical-methods.md):** advanced techniques in CST and HFSS.
+- **[Chapter 7: Active, Tunable, and Intelligent Metasurfaces](07-active-tunable.md):** entering the world of coding metasurfaces and time-dependent control.
+- **[Chapter 8: Emerging Applications of Metasurfaces in Communications Engineering](08-communications.md):** studying systems such as RIS for 6G.
+- **[Chapter 9: Materials, Fabrication Technologies, and Measurement Methods](09-materials-measurement.md):** taking a software design into the laboratory and testing it successfully.
 
 Our journey into the fascinating world of metasurfaces has only just begun. In the next chapter, we put on our mathematics-and-physics work clothes to uncover the equations behind this magic!
 
@@ -32,6 +32,6 @@ Our journey into the fascinating world of metasurfaces has only just begun. In t
 
 The nine-chapter roadmap above belongs to the source booklet. This course also includes [Chapter 10: AI and Metasurfaces](10-ai-metasurfaces.md). Our existing computational notebooks complement the source's CST/HFSS discussion without implying those commercial-software demonstrations have already been performed here.
 
-Continue with the [worked examples](01-foundations-guide.md), [interactive lab](../labs/01-first-investigation.md), and [twelve exercises with expandable answers](01-foundations-review.md). The source bundles retain editable scientific files; browser labs open in a new tab.
+Continue with the [analytical sheet model and browser lab](foundations-section-08.md). Use the {download}`../downloads/chapter-01-report-template.md` to record your predictions and compare them with the computed response.
 
 Primary source: instructor-supplied **کتابچه فراسطوح الکترومغناطیسی**, Chapter 1, printed pages 5–14; supervision credited to Dr. Ali Abdolali and compilation/final editing to Mohammad Salman Shahroudi. Persian text is a typographically normalized transcription; English is its translation. External PDF illustrations are not republished. Original book schematics illustrate the relevant concepts.

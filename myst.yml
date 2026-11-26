@@ -50,14 +50,6 @@ project:
     - file: chapters/foundations-section-09.md
     - file: chapters/foundations-section-10.md
     - file: chapters/foundations-section-11.md
-    - file: chapters/01-foundations-guide.md
-      hidden: true
-    - file: chapters/01-foundations-review.md
-      hidden: true
-    - file: labs/01-first-investigation.md
-      hidden: true
-    - file: notebooks/01-first-metasurface-model.ipynb
-      hidden: true
   - file: chapters/02-waves-and-interfaces.md
     title: "Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces"
     children:

@@ -5,7 +5,7 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 | Topic ID | Investigation | Related chapter(s) |
 | --- | --- | --- |
 | ms-01-waves-interfaces | [Waves, interfaces, TIR fields, antireflection, and polarization](02-waves-lab.md) | 2 |
-| ms-02-scattering | [First analytical sheet investigation: channel balance, phase, power, and model limits](01-first-investigation.md) | 1, 2 |
+| ms-02-scattering | [First analytical sheet investigation: channel balance, phase, power, and model limits](../chapters/foundations-section-08.md) | 1, 2 |
 | ms-03-sheet-response | [Electric-sheet response, coherent absorption, and guarded algebraic retrieval](02-waves-lab.md) | 2, 5 |
 | ms-04-floquet-orders | [Floquet channels: browser explorer, analytical notebook, and full-wave validation outline](04-floquet-lab.md) | 4 |
 | ms-05-beam-steering | [Ideal/sampled/local/full-wave beam steering with four verified supercells](05-synthesis-lab.md) | 5 |
@@ -25,7 +25,7 @@ The identifiers below preserve the existing course handoff, with a new AI invest
 Chapter 7 adds an executed effective circuit, scalar array, synthetic calibration and driver/envelope model with independent checks.
 ## Start with an analytical investigation
 
-The [Chapter 1 lab](01-first-investigation.md) starts with predictions and an browser explorer, then supplies an executed notebook and complete source bundle. It illustrates complex responses, effective electric-like/magnetic-like channels, reflected cancellation, transmission zeros, and spectral phase. Its analytical consistency checks are distinct from full-wave geometry validation.
+The [Chapter 1 analytical sheet investigation](../chapters/foundations-section-08.md) gives predictions, a browser explorer, and a source bundle with the executed notebook. It illustrates complex responses, effective electric-like and magnetic-like channels, reflected cancellation, transmission zeros, and spectral phase. Its analytical checks are distinct from full-wave geometry validation.
 
 ## Available synthesis investigation
 

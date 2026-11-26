@@ -57,26 +57,6 @@
       "route": "metasurface-foundations"
     },
     {
-      "source": "chapters/01-foundations-guide.md",
-      "translation": "translations/fa/chapters/01-foundations-guide.md",
-      "route": "foundations-guide"
-    },
-    {
-      "source": "chapters/01-foundations-review.md",
-      "translation": "translations/fa/chapters/01-foundations-review.md",
-      "route": "foundations-review"
-    },
-    {
-      "source": "labs/01-first-investigation.md",
-      "translation": "translations/fa/labs/01-first-investigation.md",
-      "route": "first-investigation"
-    },
-    {
-      "source": "notebooks/01-first-metasurface-model.ipynb",
-      "translation": "translations/fa/notebooks/01-first-metasurface-model.ipynb",
-      "route": "first-metasurface-model"
-    },
-    {
       "source": "chapters/02-waves-and-interfaces.md",
       "translation": "translations/fa/chapters/02-waves-and-interfaces.md",
       "route": "waves-and-interfaces"
@@ -960,6 +940,12 @@
       "source": "chapters/measurement-computational.md",
       "translation": "translations/fa/chapters/measurement-computational.md",
       "route": "measurement-computational"
+    }
+  ],
+  "download_notebooks": [
+    {
+      "source": "notebooks/01-first-metasurface-model.ipynb",
+      "translation": "translations/fa/notebooks/01-first-metasurface-model.ipynb"
     }
   ]
 }
