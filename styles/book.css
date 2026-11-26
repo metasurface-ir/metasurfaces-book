@@ -140,3 +140,148 @@ img[src*="iust-logo"] {
 html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
   position: relative;
 }
+
+/* Share MyST's named columns between the page and its fixed book navigation.
+   The article's body/outset/margin placements continue to use those names. */
+@media (min-width: 1024px) {
+  html[data-book-navigation] {
+    --book-nav-width: 0px;
+    --book-nav-gap: 0px;
+    --book-outline-width: 0px;
+    --book-outline-gap: 0px;
+    --book-reading-track: 12rem;
+    --book-page-columns:
+      [screen-start] minmax(0, 1fr) [screen-inset-start] .875rem
+      [page-start page-inset-start] var(--book-nav-width)
+      [body-outset-start] var(--book-nav-gap)
+      [body-start body-inset-start middle-start gutter-left-start]
+      minmax(0, var(--book-reading-track)) minmax(0, var(--book-reading-track))
+      [gutter-left-end] minmax(0, var(--book-reading-track)) minmax(0, var(--book-reading-track))
+      [gutter-right-start] minmax(0, var(--book-reading-track)) minmax(0, var(--book-reading-track))
+      [body-end body-inset-end middle-end gutter-right-end]
+      var(--book-outline-gap) [body-outset-end] var(--book-outline-width)
+      [page-inset-end page-end] .875rem [screen-inset-end] minmax(0, 1fr) [screen-end];
+  }
+
+  html[data-book-outline="open"] {
+    --book-outline-width: clamp(13rem, 17vw, 17rem);
+    --book-outline-gap: 1.25rem;
+    --book-reading-track: 11rem;
+  }
+
+  html[data-book-navigation] :is(main.article-grid, main > article.article-grid) {
+    column-gap: 0;
+    grid-template-columns: var(--book-page-columns);
+  }
+
+  html[data-book-navigation] .book-page-outline {
+    grid-column: body-outset-end / page-end;
+    margin-inline: 0;
+  }
+
+  html[data-book-navigation] .book-page-outline .myst-outline {
+    margin-inline: 0;
+    padding-inline: .5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  html[data-book-navigation="open"] {
+    --book-nav-width: clamp(14rem, 18vw, 18rem);
+    --book-nav-gap: 1.25rem;
+    --book-reading-track: 11rem;
+  }
+
+  html[data-book-navigation="open"][data-book-outline="open"] {
+    --book-reading-track: 10rem;
+  }
+
+  html[data-book-navigation] .myst-primary-sidebar {
+    column-gap: 0;
+    grid-template-columns: var(--book-page-columns);
+  }
+
+  html[data-book-navigation="closed"] .myst-primary-sidebar {
+    display: none;
+  }
+
+  html[data-book-navigation] .myst-primary-sidebar-pointer {
+    grid-column: page-start / body-outset-start;
+    min-inline-size: 0;
+  }
+
+  html[data-book-navigation] .myst-primary-sidebar-toc {
+    margin-inline: 0;
+  }
+}
+
+html[data-book-outline="closed"] .book-page-outline {
+  display: none;
+}
+
+.book-sidebar-controls {
+  position: sticky;
+  top: var(--book-masthead-height, 60px);
+  z-index: 8;
+  grid-column: body;
+  justify-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .35rem;
+  padding-block: .35rem;
+  background: var(--myst-color-bg, Canvas);
+  border-block-end: 1px solid var(--myst-color-border, #e5e7eb);
+}
+
+.book-sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-block-size: 34px;
+  padding-inline: .55rem;
+  border: 1px solid var(--myst-color-border-strong, #d1d5db);
+  border-radius: .4rem;
+  color: var(--myst-color-text-secondary, CanvasText);
+  background: var(--myst-color-bg, Canvas);
+  font-size: .82rem;
+  cursor: pointer;
+}
+
+.book-sidebar-toggle svg {
+  inline-size: 1rem;
+  block-size: 1rem;
+  flex: none;
+}
+
+[dir="rtl"] .book-sidebar-toggle svg {
+  transform: scaleX(-1);
+}
+
+.book-sidebar-toggle:hover,
+.book-sidebar-toggle[aria-expanded="false"] {
+  background: var(--myst-color-surface, Canvas);
+}
+.book-sidebar-toggle:focus-visible {
+  outline: 2px solid var(--myst-color-focus-ring, Highlight);
+  outline-offset: 2px;
+}
+
+.book-sidebar-toggle[data-book-panel="outline"] {
+  margin-inline-start: auto;
+}
+
+@media (max-width: 1279px) {
+  .book-sidebar-toggle[data-book-panel="navigation"],
+  .book-sidebar-controls:not(:has([data-book-panel="outline"]:not([hidden]))) {
+    display: none;
+  }
+}
+
+.book-sidebar-controls[hidden], .book-sidebar-toggle[hidden] {
+  display: none;
+}
+
+main:has(> .book-sidebar-controls:not([hidden])) article :is(h1,h2,h3,h4,[id]) {
+  scroll-margin-block-start: 3rem;
+}

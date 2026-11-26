@@ -12,19 +12,19 @@ short_title: خانهٔ کتاب فارسی
 ## از کجا شروع کنم؟
 
 - جسم پشت هر نتیجه را در [چه چیزی را شبیه‌سازی می‌کنم؟](models.md) با برش سه‌بعدی و مقطع برچسب‌دار ببینید.
-- ابتدا [سرفصل فارسی](syllabus.md) و [فصل ۱: آشنایی با فراسطوح](chapters/01-metasurface-foundations.md)، [مثال‌ها](chapters/01-foundations-guide.md)، [خودآزمایی](chapters/01-foundations-review.md) و [آزمایشگاه نخست](labs/01-first-investigation.md) را ببینید.
+- ابتدا [سرفصل فارسی](syllabus.md) و [فصل ۱: آشنایی با فراسطوح و مفاهیم پایه](chapters/01-metasurface-foundations.md)، [مثال‌ها](chapters/01-foundations-guide.md)، [خودآزمایی](chapters/01-foundations-review.md) و [آزمایشگاه نخست](labs/01-first-investigation.md) را ببینید.
 
-- [فصل ۲: موج‌های الکترومغناطیسی، مرزها و ورقه‌ها](chapters/02-waves-and-interfaces.md) را بخوانید و سه معمای آغاز فصل را پیش‌بینی کنید.
+- [فصل ۲: مبانی نظری امواج الکترومغناطیسی و برهم‌کنش آن‌ها با فراسطوح](chapters/02-waves-and-interfaces.md) را بخوانید و سه معمای آغاز فصل را پیش‌بینی کنید.
 - محاسبات را در [نه مثال حل‌شده](chapters/02-waves-guide.md) دنبال کنید.
 - بدون نصب نرم‌افزار وارد [آزمایشگاه فارسی موج](labs/02-waves-lab.md) شوید؛ زاویه، قطبش، ضخامت و فاز را تغییر دهید.
 - در [دفترچهٔ ژوپیتر](notebooks/02-waves-and-interfaces.ipynb) کد و خروجی‌های مرجع را ببینید؛ بستهٔ کامل اجرا از آزمایشگاه قابل‌دریافت است.
 - یادگیری را با [خودآزمایی و پروژهٔ کارآگاه موج](chapters/02-waves-review.md) بسنجید.
 - برای اجرای محلی، [راهنمای شروع](getting-started.md) و برای اصطلاحات، [واژه‌نامهٔ دو‌زبانه](glossary.md) را ببینید.
-- سپس [فصل ۳: سلول واحد](chapters/03-unit-cell-design.md)، [فصل ۴: فلوکه و پراش](chapters/04-periodic-floquet.md) و [فصل ۵: سنتز](chapters/05-metasurface-synthesis.md) را همراه راهنما، آزمایشگاه و دفترچهٔ هر فصل دنبال کنید.
-- دقت عددی را با [فصل ۶: روش‌های عددی](chapters/06-numerical-methods.md)، [مثال‌های حل‌شده](chapters/06-numerical-guide.md) و [آزمایشگاه تعاملی](labs/06-numerical-lab.md) بیازمایید.
+- سپس [فصل ۳: طراحی و شبیه‌سازی سلول واحد](chapters/03-unit-cell-design.md)، [فصل ۴: ساختارهای دوره‌ای، تحلیل فلوکه و مراتب پراش](chapters/04-periodic-floquet.md) و [فصل ۵: سنتز فراسطح](chapters/05-metasurface-synthesis.md) را همراه راهنما، آزمایشگاه و دفترچهٔ هر فصل دنبال کنید.
+- دقت عددی را با [فصل ۶: مدل‌سازی عددی و روش‌های شبیه‌سازی](chapters/06-numerical-methods.md)، [مثال‌های حل‌شده](chapters/06-numerical-guide.md) و [آزمایشگاه تعاملی](labs/06-numerical-lab.md) بیازمایید.
 - تنظیم و کالیبراسیون را با [فصل ۷](chapters/07-active-tunable.md)، [شش مثال حل‌شده](chapters/07-tunable-guide.md) و [آزمایشگاه با چهار زبانه](labs/07-tunable-lab.md) بررسی کنید.
-- [فصل ۸: مهندسی مخابرات](chapters/08-communications.md)، [شش مثال حل‌شده](chapters/08-communications-guide.md) و [آزمایشگاه با چهار زبانه](labs/08-communications-lab.md) را بررسی کنید.
-- [فصل ۹: مواد، ساخت و اندازه‌گیری](chapters/09-materials-measurement.md)، [شش مثال حل‌شده](chapters/09-measurement-guide.md) و [آزمایشگاه با چهار زبانه](labs/09-measurement-lab.md) را دنبال کنید.
+- [فصل ۸: کاربردهای نوین فراسطوح در مهندسی مخابرات](chapters/08-communications.md)، [شش مثال حل‌شده](chapters/08-communications-guide.md) و [آزمایشگاه با چهار زبانه](labs/08-communications-lab.md) را بررسی کنید.
+- [فصل ۹: مواد، تکنولوژی‌های ساخت و روش‌های اندازه‌گیری](chapters/09-materials-measurement.md)، [شش مثال حل‌شده](chapters/09-measurement-guide.md) و [آزمایشگاه با چهار زبانه](labs/09-measurement-lab.md) را دنبال کنید.
 - به [فصل ۱۰: هوش مصنوعی](chapters/10-ai-metasurfaces.md) ادامه دهید. [فهرست آزمایشگاه‌ها](labs/index.md) مسیرهای اجرایی را یکجا نشان می‌دهد.
 
 ## یک کتاب، دو زبان، محاسبات مشترک

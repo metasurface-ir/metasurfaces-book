@@ -1,6 +1,5 @@
 ---
 title: "Chapter 6: Numerical Modeling and Simulation Methods"
-short_title: Numerical methods
 ---
 
 (chapter-06-overview)=

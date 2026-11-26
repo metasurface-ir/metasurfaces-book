@@ -1,6 +1,5 @@
 ---
-title: 'Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders'
-short_title: Periodicity and diffraction
+title: "Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders"
 description: Derive Bloch phases and diffraction channels, distinguish cutoff from propagation, and connect channel maps to validated periodic simulations.
 ---
 

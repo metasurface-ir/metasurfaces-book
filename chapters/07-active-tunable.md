@@ -1,4 +1,4 @@
-# 7. Active, tunable and intelligent metasurfaces
+# Chapter 7: Active, Tunable, and Intelligent Metasurfaces
 
 Read the numbered sections in booklet order, then use the computational reading and lab to test the ideas with reproducible models.
 

@@ -1,4 +1,4 @@
-# 8. Metasurfaces in communications engineering
+# Chapter 8: Emerging Applications of Metasurfaces in Communications Engineering
 
 Read the numbered sections in booklet order, then use the computational reading and lab to test the ideas with reproducible models.
 

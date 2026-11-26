@@ -1,6 +1,5 @@
 ---
-title: 'Chapter 5: Metasurface Synthesis'
-short_title: Metasurface synthesis
+title: "Chapter 5: Metasurface Synthesis"
 description: Connect target wavefronts to sampled phase profiles, realizable geometries, full-wave diffraction, scalar focusing, and polarization control.
 ---
 
