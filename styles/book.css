@@ -134,3 +134,9 @@ img[src*="iust-logo"] {
   #book-language-switcher{order:3}
   .myst-home-link span{max-width:52px}
 }
+
+/* Keep KaTeX's absolutely positioned MathML inside the Chapter 7 expression.
+   The table and equation containers still scroll when their contents are wide. */
+html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
+  position: relative;
+}
