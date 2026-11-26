@@ -144,12 +144,14 @@ html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
 /* Share MyST's named columns between the page and its fixed book navigation.
    The article's body/outset/margin placements continue to use those names. */
 @media (min-width: 1024px) {
-  html[data-book-navigation] {
+  html {
     --book-nav-width: 0px;
     --book-nav-gap: 0px;
     --book-outline-width: 0px;
     --book-outline-gap: 0px;
-    --book-reading-track: 12rem;
+    --book-nav-space: 0rem;
+    --book-outline-space: 0rem;
+    --book-reading-track: calc(12rem - var(--book-nav-space) - var(--book-outline-space));
     --book-page-columns:
       [screen-start] minmax(0, 1fr) [screen-inset-start] .875rem
       [page-start page-inset-start] var(--book-nav-width)
@@ -163,13 +165,13 @@ html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
       [page-inset-end page-end] .875rem [screen-inset-end] minmax(0, 1fr) [screen-end];
   }
 
-  html[data-book-outline="open"] {
+  html:is([data-book-outline="open"], :not([data-book-outline]):has(main article :is(h2, h3, h4)[id])) {
     --book-outline-width: clamp(13rem, 17vw, 17rem);
     --book-outline-gap: 1.25rem;
-    --book-reading-track: 11rem;
+    --book-outline-space: 1rem;
   }
 
-  html[data-book-navigation] :is(main.article-grid, main > article.article-grid) {
+  :is(main.article-grid, main > article.article-grid) {
     column-gap: 0;
     grid-template-columns: var(--book-page-columns);
   }
@@ -186,17 +188,13 @@ html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
 }
 
 @media (min-width: 1280px) {
-  html[data-book-navigation="open"] {
+  html:not([data-book-navigation="closed"]):has(.myst-primary-sidebar) {
     --book-nav-width: clamp(14rem, 18vw, 18rem);
     --book-nav-gap: 1.25rem;
-    --book-reading-track: 11rem;
+    --book-nav-space: 1rem;
   }
 
-  html[data-book-navigation="open"][data-book-outline="open"] {
-    --book-reading-track: 10rem;
-  }
-
-  html[data-book-navigation] .myst-primary-sidebar {
+  body > .myst-primary-sidebar {
     column-gap: 0;
     grid-template-columns: var(--book-page-columns);
   }
@@ -205,12 +203,12 @@ html:has(link[rel="alternate"][href*="/active-section-"]) article .katex {
     display: none;
   }
 
-  html[data-book-navigation] .myst-primary-sidebar-pointer {
+  .myst-primary-sidebar .myst-primary-sidebar-pointer {
     grid-column: page-start / body-outset-start;
     min-inline-size: 0;
   }
 
-  html[data-book-navigation] .myst-primary-sidebar-toc {
+  .myst-primary-sidebar .myst-primary-sidebar-toc {
     margin-inline: 0;
   }
 }

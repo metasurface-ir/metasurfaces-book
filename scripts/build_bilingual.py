@@ -111,6 +111,7 @@ def decorate(output, language):
                        for chapter in section_map}
     config = {'base': BASE, 'language': language, 'routes': [p['route'] for p in manifest['pages']], 'anchors': anchors,
               'legacySections': legacy_sections}
+    sidebar_startup = (ROOT / 'styles/sidebar-startup.js').read_text(encoding='utf-8')
     for path in output.rglob('*.html'):
         if 'interactives' in path.parts or 'build' in path.relative_to(output).parts:
             continue
@@ -127,7 +128,7 @@ def decorate(output, language):
         route = '' if relative == 'index.html' else relative.removesuffix('/index.html').removesuffix('.html')
         if route in config['routes']:
             links = ''.join(f'<link rel="alternate" hreflang="{lang}" href="{BASE}{"/fa" if lang == "fa" else ""}/{route + "/" if route else ""}"/>' for lang in ('en', 'fa'))
-            text = text.replace('</head>', links + '</head>', 1)
+            text = text.replace('</head>', links + f'<script>{sidebar_startup}</script></head>', 1)
         path.write_text(text, encoding='utf-8', newline='\n')
     for name in ('bilingual.js', 'bilingual.css'):
         shutil.copy2(ROOT / 'styles' / name, output / name)
