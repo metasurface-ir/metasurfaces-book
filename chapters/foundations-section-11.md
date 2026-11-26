@@ -32,6 +32,6 @@ Our journey into the fascinating world of metasurfaces has only just begun. In t
 
 The nine-chapter roadmap above belongs to the source booklet. This course also includes [Chapter 10: AI and Metasurfaces](10-ai-metasurfaces.md). Our existing computational notebooks complement the source's CST/HFSS discussion without implying those commercial-software demonstrations have already been performed here.
 
-Continue with the [worked examples](01-foundations-guide.md), [interactive lab](../labs/01-first-investigation.md), and [twelve exercises with expandable answers](01-foundations-review.md). The source bundles retain editable scientific files; browser labs open in a new tab.
+Continue with the [analytical sheet model and browser lab](foundations-section-08.md). Use the {download}`../downloads/chapter-01-report-template.md` to record your predictions and compare them with the computed response.
 
 Primary source: instructor-supplied **کتابچه فراسطوح الکترومغناطیسی**, Chapter 1, printed pages 5–14; supervision credited to Dr. Ali Abdolali and compilation/final editing to Mohammad Salman Shahroudi. Persian text is a typographically normalized transcription; English is its translation. External PDF illustrations are not republished. Original book schematics illustrate the relevant concepts.

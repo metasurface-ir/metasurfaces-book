@@ -21,11 +21,15 @@ def validate():
     for path, reviewed in lock.items():
         assert digest(ROOT / path) == reviewed, f'English source changed; review the translation and update source-lock.json: {path}'
     routes = set()
-    for row in manifest['pages']:
+    download_notebooks = manifest.get('download_notebooks', [])
+    for row in download_notebooks:
+        assert 'route' not in row and row['source'].endswith('.ipynb'), 'Download notebooks must not claim a web route'
+    for row in manifest['pages'] + download_notebooks:
         source, translated = ROOT / row['source'], ROOT / row['translation']
         assert source.is_file() and translated.is_file(), f'Missing translation pair: {row}'
-        assert row['route'] not in routes, 'Duplicate translation URL'
-        routes.add(row['route'])
+        if 'route' in row:
+            assert row['route'] not in routes, 'Duplicate translation URL'
+            routes.add(row['route'])
         assert digest(source) == lock[row['source']], f'English source changed; review Persian translation and update source-lock.json: {row["source"]}'
         text = translated.read_text(encoding='utf-8')
         assert re.search('[\u0600-\u06ff]', text), f'No Persian text in {translated}'

@@ -29,11 +29,11 @@ Chapter 6 may be introduced earlier as a methods strand, so students establish v
 
 ## Chapter 1: Introduction to Metasurfaces and Basic Concepts
 
-The [chapter](chapters/01-metasurface-foundations.md), [six worked examples](chapters/01-foundations-guide.md), [lab](labs/01-first-investigation.md), and [executed notebook](notebooks/01-first-metasurface-model.ipynb) introduce structured interfaces, scales, complex coefficients, interference, electric/magnetic response, model hierarchy, and evidence. The browser explorer calculates a reciprocal lossless sheet response directly and works offline.
+The [chapter](chapters/01-metasurface-foundations.md) and its [analytical sheet investigation](chapters/foundations-section-08.md) introduce structured interfaces, scales, complex coefficients, interference, electric/magnetic response, model hierarchy, and evidence. The browser explorer calculates a reciprocal lossless sheet response directly and works offline.
 
 The ideal two-port model assumes equal exterior impedances, normal incidence, one polarization, and specular ports only. Analytical limits, full matrix unitarity, two-sided power, an independent electric-only expression, derivative refinements, and input guards are checked. It has no geometry or full-wave/experimental validation. Comparisons link to existing full-wave Chapters 3 and 5. Chapter 2 develops electromagnetic waves and boundary descriptions; Chapter 6 now supplies an executed numerical-validation investigation.
 
-The [review and mini-project](chapters/01-foundations-review.md) adds eight self-check answers, a suggested grading rubric, a working glossary, and an editable report worksheet. The chapter includes an original geometry/port schematic; the worked guide illustrates delay and calculates flux normalization for one existing full-wave library row.
+The chapter includes an original geometry and port schematic. The analytical sheet investigation links to the browser explorer and the source bundle with the executed notebook and report worksheet.
 
 ## Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces
 
