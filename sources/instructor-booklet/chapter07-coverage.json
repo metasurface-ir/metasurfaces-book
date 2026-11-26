@@ -1,49 +1,121 @@
 {
   "pdf_sha256": "2d5a2a630c166f99c9eae09eca8bc6c60ae9512219e50d6c9cc9471ab14cb4c8",
   "pdf_pages": 270,
-  "scope": "Bilingual adapted reading with selected worked calculations. Section mapping does not establish full transcription.",
+  "cover_page": 173,
+  "body_pages": [
+    174,
+    202
+  ],
+  "scope": "Page-reviewed Persian transcription with normalized typography, paired English translation, and documented scientific edits. All seven sections, 28 numbered subsections, and all five worked problems are included. Book-owned computational material remains separately linked.",
+  "visual_inventory": "Tables and worked-problem boxes on source pages 174–202. Each teaching table is reproduced as semantic Markdown. No source figure or PDF is redistributed.",
   "sections": [
     {
       "number": "7.1",
       "pages": "174–175",
       "route": "active-section-01",
-      "worked_exercise": false
+      "source_subsections": 4,
+      "worked_problem_parts": 0,
+      "display_equations": 0
     },
     {
       "number": "7.2",
       "pages": "175–181",
       "route": "active-section-02",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 11
     },
     {
       "number": "7.3",
       "pages": "181–185",
       "route": "active-section-03",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 4,
+      "display_equations": 15
     },
     {
       "number": "7.4",
       "pages": "185–190",
       "route": "active-section-04",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 15
     },
     {
       "number": "7.5",
       "pages": "190–195",
       "route": "active-section-05",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 4,
+      "display_equations": 16
     },
     {
       "number": "7.6",
       "pages": "195–199",
       "route": "active-section-06",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 6,
+      "display_equations": 9
     },
     {
       "number": "7.7",
       "pages": "199–202",
       "route": "active-section-07",
-      "worked_exercise": false
+      "source_subsections": 4,
+      "worked_problem_parts": 0,
+      "display_equations": 1
+    }
+  ],
+  "corrections": [
+    {
+      "pages": [
+        174,
+        175
+      ],
+      "reason": "Distinguish static response, passivity, reciprocity and device versus panel timing."
+    },
+    {
+      "pages": [
+        177
+      ],
+      "reason": "Restore the imaginary prefactor and positive-time denominator of the graphene intraband formula; state the gate-capacitor assumptions."
+    },
+    {
+      "pages": [
+        182,
+        184
+      ],
+      "reason": "Use column index for x and row index for y. Correct the steering sign and distinguish the periodic first-order direction from finite 8-column peak."
+    },
+    {
+      "pages": [
+        186,
+        187,
+        189,
+        190
+      ],
+      "reason": "Repair channel dimensions, diagonal entries, and matrix notation; use the power-normalized MRT vector and explicitly preserve the jointly optimized single-user model."
+    },
+    {
+      "pages": [
+        190,
+        191,
+        192,
+        193,
+        194,
+        195
+      ],
+      "reason": "Allow slow time modulation to produce sidebands and distinguish matched exchanged frequency channels, conversion, power gain, and full-device isolation."
+    },
+    {
+      "pages": [
+        196,
+        197,
+        200,
+        201,
+        202
+      ],
+      "reason": "Qualify device response time, coupling-only power accounting, constant-cost inference, and theoretical or illustrative industrial claims."
     }
   ]
 }

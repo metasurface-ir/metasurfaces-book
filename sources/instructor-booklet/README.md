@@ -35,4 +35,4 @@ The ten earlier computational connections, guide, lab, notebook, figures and exp
 
 ## Chapters 7–9
 
-Bilingual adapted readings follow pages 174–202, 204–242 and 244–270. Coverage records map the 19 numbered sections and indicate selected worked calculations. The Chapter 8 space–time modulation figure has an original schematic counterpart. The previous computational readings, guides, labs and notebooks remain available. The above rights reservation applies.
+The Chapter 7 manuscripts restore the primary reading of printed pages 174–202 (cover 173) in Persian and English. The source headings, comparisons, all five worked problems with 24 solution parts, and technical development are retained. Typography and mathematics are normalized, with a separate coverage record for corrections. The Chapter 8 and 9 adaptations follow pages 204–242 and 244–270 and include selected worked calculations. The Chapter 8 space–time modulation figure has an original schematic counterpart. The previous computational readings, guides, labs and notebooks remain available. The above rights reservation applies.
