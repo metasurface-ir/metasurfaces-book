@@ -25,7 +25,7 @@ $$
 ::::{admonition} Try it first
 :class: book-exercise
 
-In the source's training comparison, 16 grouped patterns take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
+In the source's training comparison, 64 grouped patterns at 2 µs each take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
 
 :::{dropdown} Show the worked answer
 
@@ -89,7 +89,7 @@ $$
 f_m^{\rm out}=f_0+m f_{\rm pump},\quad k_{x,m}=k_{x,0}+mK,\quad a_1=0.25e^{i\varphi_b}.
 $$
 
-```{figure} ../assets/chapter-08/space-time-sidebands.svg
+```{figure} ../../assets/chapter-08/space-time-sidebands.svg
 :alt: Incident wave, mounted unit cell and outgoing sidebands
 
 Original teaching schematic for Figure 8–5. Arrow directions and lengths are schematic.

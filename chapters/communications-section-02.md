@@ -13,7 +13,7 @@ $$
 ::::{admonition} Try it first
 :class: book-exercise
 
-In the source's training comparison, 16 grouped patterns take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
+In the source's training comparison, 64 grouped patterns at 2 µs each take a total of 128 µs. What fraction of a 2 ms coherence interval is lost? What do grouped pilots identify?
 
 :::{dropdown} Show the worked answer
 
