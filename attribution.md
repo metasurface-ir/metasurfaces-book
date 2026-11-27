@@ -30,7 +30,7 @@ Use the [third-party record template](https://github.com/metasurface-ir/metasurf
 
 Write original explanations, cite primary scientific sources and verify bibliographic details. Retain required notices alongside any imported material. An openly readable paper or downloadable image is not automatically reusable under this book's license. Resolve uncertain permissions with the instructor before including that specific material. Do not upload private permission correspondence or credentials.
 
-Chapter 7 restores the instructor booklet’s complete reading and five worked problems from pages 174–202 in both languages, with separately documented scientific edits. Chapter 8 restores the booklet reading and six worked problems from pages 204–242 in both languages, with scientific edits documented in the source coverage record. Chapter 9 follows the same booklet with selected worked calculations. The original schematic of the Chapter 8 space–time modulation figure is credited near the figure. The source rights reservation above applies.
+Chapter 7 restores the instructor booklet’s complete reading and five worked problems from pages 174–202 in both languages, with separately documented scientific edits. Chapter 8 restores the booklet reading and six worked problems from pages 204–242 in both languages, with scientific edits documented in the source coverage record. Chapter 9 restores the reading and five worked problems from booklet pages 244–270 in both languages, with scientific edits recorded in the coverage record. The original schematic of the Chapter 8 space–time modulation figure is credited near the figure. The source rights reservation above applies.
 
 (reuse-citation)=
 ## Cite a reproducible version

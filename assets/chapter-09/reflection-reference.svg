@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 255" role="img" aria-labelledby="title desc">
+  <title id="title">Monostatic and bistatic reflection geometries</title>
+  <desc id="desc">One horn sends and receives at normal incidence on the left. On the right, a receiving horn moves around the panel to measure the reflected beam.</desc>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#215f91"/></marker>
+  </defs>
+  <rect x="1" y="1" width="718" height="253" rx="12" fill="#f7fafc" stroke="#c8d8e2"/>
+  <path d="M360 20V235" stroke="#c8d8e2"/>
+  <g fill="#d49342" stroke="#80572e" stroke-width="2">
+    <path d="M94 193H260L274 208H108Z"/><path d="M441 193H622L636 208H455Z"/>
+  </g>
+  <g fill="#a9becb" stroke="#3c6179" stroke-width="2">
+    <path d="M161 53H194L205 85H150Z"/><path d="M516 53H549L560 85H505Z"/>
+    <path d="M638 69L659 91L644 120L608 87Z"/>
+  </g>
+  <g fill="none" stroke="#215f91" stroke-width="2" marker-end="url(#a)">
+    <path d="M172 93V184"/><path d="M185 184V93"/><path d="M531 93V183"/><path d="M538 188L624 114"/>
+  </g>
+  <path d="M535 189V101M548 99Q606 92 634 121" fill="none" stroke="#677e90" stroke-dasharray="5 5"/>
+  <g fill="#243f53" font-family="system-ui,sans-serif" font-size="17">
+    <text x="148" y="42">Tx / Rx</text><text x="193" y="141">R</text><text x="157" y="234">(a)</text>
+    <text x="518" y="42">Tx</text><text x="656" y="71">Rx</text><text x="543" y="155">θᵣ</text><text x="522" y="234">(b)</text>
+  </g>
+</svg>

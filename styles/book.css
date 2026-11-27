@@ -142,7 +142,7 @@ img[src*="iust-logo"] {
 
 /* Keep KaTeX's absolutely positioned MathML inside the expression.
    The table and equation containers still scroll when their contents are wide. */
-html:has(link[rel="alternate"]:is([href*="/active-section-"], [href*="/communications-section-"])) article .katex {
+html:has(link[rel="alternate"]:is([href*="/active-section-"], [href*="/communications-section-"], [href*="/measurement-section-"])) article .katex {
   position: relative;
 }
 

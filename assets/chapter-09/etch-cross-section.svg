@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 255" role="img" aria-labelledby="title desc">
+  <title id="title">Wet-etched copper cross-section</title>
+  <desc id="desc">Trapezoidal copper on a substrate. The top is narrower than the bottom by twice the lateral undercut.</desc>
+  <rect x="1" y="1" width="618" height="253" rx="12" fill="#f7fafc" stroke="#c8d8e2"/>
+  <rect x="75" y="159" width="470" height="33" rx="2" fill="#9dbed1" stroke="#557688"/>
+  <path d="M139 159L173 92H447L481 159Z" fill="#d49342" stroke="#775022" stroke-width="2"/>
+  <g fill="none" stroke="#253f52" stroke-width="1.7">
+    <path d="M173 57H447M173 50V64M447 50V64M139 213H481M139 206V220M481 206V220"/>
+    <path d="M516 92V159M509 92H523M509 159H523M139 77H173M139 70V84M173 70V84"/>
+    <path d="M173 64V92M447 64V92M139 84V159M139 192V206M481 192V206" stroke-dasharray="4 4" opacity=".55"/>
+  </g>
+  <g fill="#253f52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">
+    <text x="310" y="45">wₜ</text><text x="310" y="239">wᵦ</text>
+    <text x="534" y="132">t</text><text x="156" y="64">u</text><text x="310" y="131">Cu</text>
+  </g>
+</svg>
