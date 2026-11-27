@@ -18,6 +18,7 @@ from render_design_studies import render as render_design
 from render_tunable_explorer import render as render_tunable
 from render_communications_explorer import render as render_communications
 from render_measurement_explorer import render as render_measurement
+from localize_chapter03_workshop import WORKSHOP_ASSET, WORKSHOP_ROUTE, localize_workshop
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = os.environ.get('BASE_URL', '').rstrip('/')
@@ -123,10 +124,12 @@ def decorate(output, language):
         # after hydration, avoiding a React document mismatch and lost styles.
         tags = (f'<script id="book-language-config" type="application/json">{json.dumps(config, ensure_ascii=False)}</script>'
                 f'<script defer src="{target_base}/bilingual.js"></script>')
-        text = text.replace('</body>', tags + '</body>', 1)
         # Useful metadata is present in the static HTML, before JavaScript/hydration.
         relative = path.relative_to(output).as_posix()
         route = '' if relative == 'index.html' else relative.removesuffix('/index.html').removesuffix('.html')
+        if route == WORKSHOP_ROUTE:
+            tags += f'<script defer src="{target_base}/interactives/book-workshop-navigation.js" data-language="{language}"></script>'
+        text = text.replace('</body>', tags + '</body>', 1)
         if route in config['routes']:
             links = ''.join(f'<link rel="alternate" hreflang="{lang}" href="{BASE}{"/fa" if lang == "fa" else ""}/{route + "/" if route else ""}"/>' for lang in ('en', 'fa'))
             text = text.replace('</head>', links + f'<script>{sidebar_startup}</script></head>', 1)
@@ -141,7 +144,10 @@ def decorate(output, language):
     copy_tree(ROOT / 'assets/brand', output / 'assets/brand')
     for interactive in (output / 'interactives').glob('*.html'):
         value = interactive.read_text(encoding='utf-8')
-        value = value.replace('</head>', f'<link rel="stylesheet" href="../book-fonts.css">{favicon}</head>', 1)
+        if interactive.name == WORKSHOP_ASSET:
+            value = localize_workshop(value, language).replace('</head>', favicon + '</head>', 1)
+        else:
+            value = value.replace('</head>', f'<link rel="stylesheet" href="../book-fonts.css">{favicon}</head>', 1)
         interactive.write_text(value, encoding='utf-8', newline='\n')
     # Persian layout must be correct before JavaScript or React starts. Keep the
     # document attributes untouched for hydration, but apply direction in CSS.

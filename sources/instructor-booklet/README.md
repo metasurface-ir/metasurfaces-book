@@ -16,7 +16,7 @@ To maintain this chapter, update the source reading and corresponding language f
 
 ## Chapter 3
 
-The paired `chapter03-en.md` and `chapter03-fa.md` readings adapt printed pages 70–78. Six consecutive section pages normalize gaps in the original numbering. Both worked examples retain their numerical data and calculations, with answers in dropdowns. Repeated substitutions and obvious corrupted text in the source answer are consolidated; this is not a sentence-exact transcription. Separately marked notes clarify power normalization, geometric-phase assumptions, and the source's inconsistent use of phase lag versus signed argument. Four original SVGs implement drawing guides; existing ridge-library and scalar-focus figures are reused with explicit model labels. The twelve previous computational sections, lab and notebook remain available. Source rights reservations above still apply.
+The paired `chapter03-en.md` and `chapter03-fa.md` readings adapt printed pages 70–78. Six consecutive section pages normalize gaps in the original numbering. Both worked examples retain their numerical data and calculations, with answers in dropdowns. Repeated substitutions and obvious corrupted text in the source answer are consolidated; this is not a sentence-exact transcription. Separately marked notes clarify power normalization, geometric-phase assumptions, and the source's inconsistent use of phase lag versus signed argument. Four original SVGs implement drawing guides; existing ridge-library and scalar-focus figures are reused with explicit model labels. The bilingual Chapter 3 workshop uses supplied CST results. The separate dielectric response lab and notebook remain available. Source rights reservations above still apply.
 
 ## Chapter 4
 
