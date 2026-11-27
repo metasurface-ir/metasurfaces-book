@@ -297,3 +297,92 @@ main.article-grid:not(:has(> .book-sidebar-controls)):has(article :is(h2, h3, h4
 main:has(> .book-sidebar-controls:not([hidden])) article :is(h1,h2,h3,h4,[id]) {
   scroll-margin-block-start: 3rem;
 }
+
+/* The workshop height follows its content in reading mode. */
+.chapter03-workshop-frame div:has(> iframe) {
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  height: 30rem;
+}
+.chapter03-workshop-frame iframe {
+  border: 0;
+  border-radius: 0;
+}
+
+/* The workshop has its own controls for printing and saving its data. */
+article:has(.chapter03-workshop-frame) .myst-fm-block-header {
+  display: none;
+}
+
+/* The workshop row treatment is shared by links and expandable headings. */
+.myst-primary-sidebar-toc {
+  --book-toc-surface: #f6f5f9;
+  --book-toc-hover: #eeebf6;
+  --book-toc-current: #e9e6f3;
+  --book-toc-text: #223856;
+  --book-toc-accent: #185795;
+}
+html.dark .myst-primary-sidebar-toc {
+  --book-toc-surface: #282636;
+  --book-toc-hover: #333047;
+  --book-toc-current: #3c3654;
+  --book-toc-text: #e3e7f4;
+  --book-toc-accent: #9cc9fb;
+}
+.myst-primary-sidebar-toc .myst-toc-item {
+  background: var(--book-toc-surface);
+  color: var(--book-toc-text);
+  font-size: .89rem;
+  line-height: 1.55;
+  margin-block: .35rem;
+  padding: .53rem .66rem;
+  border-inline-start: 2px solid var(--book-toc-accent);
+  border-radius: 6px;
+}
+.myst-primary-sidebar-toc .myst-toc-item button[aria-expanded] {
+  border-radius: 6px;
+  min-inline-size: 26px;
+  justify-content: center;
+}
+.myst-primary-sidebar-toc .myst-toc-item:hover {
+  background: var(--book-toc-hover);
+}
+.myst-primary-sidebar-toc :is(.myst-toc-item-exact, a[aria-current="location"]) {
+  background: var(--book-toc-current);
+  color: var(--book-toc-accent);
+  font-weight: 700;
+}
+
+/* Place the workshop outline in the same page margin as other lessons. */
+@media (min-width: 1024px) {
+  html:has(.chapter03-workshop-frame):not([data-book-outline="closed"]) {
+    --book-outline-width: clamp(13rem, 17vw, 17rem);
+    --book-outline-gap: 1.25rem;
+    --book-outline-space: 1rem;
+  }
+}
+.workshop-page-outline .myst-outline {
+  max-height: calc(100dvh - 100px);
+  padding: .5rem;
+  margin-block-start: 1rem;
+}
+.workshop-page-outline .myst-outline-header {
+  align-items: center;
+  margin-block-end: .55rem;
+}
+.workshop-page-outline .myst-outline-item {
+  border-inline-end: 2px solid var(--myst-color-border-strong, #dedce7);
+}
+.workshop-page-outline .myst-outline-item:has(a:is(:hover,[aria-current="location"])) {
+  border-inline-end-color: #185795;
+}
+.workshop-page-outline a[aria-current="location"] {
+  color: #185795;
+  font-weight: 700;
+}
+html.dark .workshop-page-outline a[aria-current="location"] {
+  color: #9cc9fb;
+}
+.workshop-page-outline .myst-outline-collapsible[aria-expanded="true"] svg {
+  transform: rotate(90deg);
+}

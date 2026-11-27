@@ -7,7 +7,7 @@ short_title: Unit-cell computational lab
 
 **Topic ID:** `ms-07-unit-cell`
 
-**Companions:** [Chapter 3](../chapters/03-unit-cell-design.md), [six worked examples](../chapters/03-unit-cell-guide.md), and [executed notebook](../notebooks/03-unit-cell-library.ipynb).
+**Companions:** [Chapter 3](../chapters/03-unit-cell-design.md), and [executed notebook](../notebooks/03-unit-cell-library.ipynb).
 
 **Question:** can a width sweep meet a desired transmission phase and power, and what evidence makes the resulting library reusable?
 

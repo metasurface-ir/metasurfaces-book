@@ -5,7 +5,7 @@ short_title: آزمایشگاه سلول واحد
 
 # آزمایشگاه ۳: ساخت و راستی‌آزمایی کتابخانهٔ سلول واحد
 
-**شناسه:** `ms-07-unit-cell`. همراهان: [فصل ۳](../chapters/03-unit-cell-design.md)، [شش مثال](../chapters/03-unit-cell-guide.md) و [دفترچهٔ اجراشده](../notebooks/03-unit-cell-library.ipynb).
+**شناسه:** `ms-07-unit-cell`. همراهان: [فصل ۳](../chapters/03-unit-cell-design.md) و [دفترچهٔ اجراشده](../notebooks/03-unit-cell-library.ipynb).
 
 **پرسش:** آیا جاروب عرض، فاز و توان مطلوب را محقق می‌کند و چه شاهدی کتابخانه را قابل‌استفاده می‌کند؟
 

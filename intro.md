@@ -18,7 +18,7 @@ The companion course website will provide conceptual lessons and course guidance
 - Read the [ten-chapter syllabus](syllabus.md).
 - Start with [Chapter 1: Introduction to Metasurfaces and Basic Concepts](chapters/01-metasurface-foundations.md), then explore the [analytical sheet model and browser lab](chapters/foundations-section-08.md).
 - Explore [Chapter 2: Theoretical Foundations of Electromagnetic Waves and Their Interaction with Metasurfaces](chapters/02-waves-and-interfaces.md), its [worked examples](chapters/02-waves-guide.md), [self-check](chapters/02-waves-review.md), and [interactive/executable lab](labs/02-waves-lab.md).
-- Build a response library with [Chapter 3: Unit Cell Design and Simulation](chapters/03-unit-cell-design.md), its [worked examples](chapters/03-unit-cell-guide.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
+- Build a response library with [Chapter 3: Unit Cell Design and Simulation](chapters/03-unit-cell-design.md), and the [full-wave lab and browser explorer](labs/03-unit-cell-lab.md).
 - Begin [Chapter 4: Periodic Structures, Floquet Analysis, and Diffraction Orders](chapters/04-periodic-floquet.md), follow its [worked examples](chapters/04-floquet-guide.md), and use the [interactive lab](labs/04-floquet-lab.md).
 - Design and verify with [Chapter 5: Metasurface Synthesis](chapters/05-metasurface-synthesis.md), its [worked examples](chapters/05-synthesis-guide.md), and [computational lab](labs/05-synthesis-lab.md).
 - Test numerical accuracy with [Chapter 6](chapters/06-numerical-methods.md), its [worked guide](chapters/06-numerical-guide.md), and [interactive lab](labs/06-numerical-lab.md).
