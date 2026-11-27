@@ -127,6 +127,16 @@ def decorate(output, language):
         # Useful metadata is present in the static HTML, before JavaScript/hydration.
         relative = path.relative_to(output).as_posix()
         route = '' if relative == 'index.html' else relative.removesuffix('/index.html').removesuffix('.html')
+        if language == 'en' and relative == 'index.html':
+            home = json.dumps(BASE + '/fa/')
+            default_language = (
+                "<script>(()=>{"
+                "if(new URLSearchParams(location.search).get('lang')==='en')return;"
+                "try{if(sessionStorage.getItem('book-language')==='en')return;}catch{}"
+                f"location.replace({home}+location.search+location.hash);"
+                "})();</script>"
+            )
+            text = text.replace('<head>', '<head>' + default_language, 1)
         if route == WORKSHOP_ROUTE:
             tags += f'<script defer src="{target_base}/interactives/book-workshop-navigation.js" data-language="{language}"></script>'
         text = text.replace('</body>', tags + '</body>', 1)

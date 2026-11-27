@@ -3,6 +3,7 @@
   'use strict';
   const config = JSON.parse(document.getElementById('book-language-config').textContent);
   const fa = config.language === 'fa', language = fa ? 'fa' : 'en';
+  try { sessionStorage.setItem('book-language', language); } catch {}
   // Keep previously shared chapter/section bookmarks working after pagination.
   const editionBase = config.base + (fa ? '/fa' : '');
   const currentRoute = location.pathname.slice(editionBase.length).replace(/^\/+|\/+$/g, '');
@@ -68,7 +69,8 @@
     for (const a of nav.querySelectorAll('[data-lang]')) {
       const target = a.dataset.lang;
       const suffix = paired ? (route ? route + '/' : '') + sectionHash(route) : 'translations/?from=' + encodeURIComponent(route);
-      const href = config.base + (target === 'fa' ? '/fa/' : '/') + suffix;
+      const explicitEnglishHome = paired && !route && target === 'en' ? '?lang=en' : '';
+      const href = config.base + (target === 'fa' ? '/fa/' : '/') + explicitEnglishHome + suffix;
       if (a.getAttribute('href') !== href) a.setAttribute('href', href);
       if (target === language) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
       a.title = target === 'fa' && !paired ? 'ترجمهٔ این صفحه هنوز آماده نیست؛ وضعیت ترجمه‌ها' : target === 'fa' ? 'همین صفحه به فارسی' : 'This page in English';
