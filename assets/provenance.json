@@ -747,6 +747,13 @@
       ]
     },
     {
+      "asset": "assets/chapter-09/etch-cross-section.svg",
+      "sha256": "08425a2ddf1f7528df7e534e24d2b3d8d9f769bcc71382a6d05bcb71e68fe959",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-09/etch-cross-section.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
       "asset": "assets/chapter-09/materials.png",
       "sha256": "ba4cd80396282211625d29f176719c6480b56dc0c1e7166365e521a4f18482ec",
       "origin": "original numerical notebook output",
@@ -765,6 +772,13 @@
       "sha256": "3fb7d555a50d47510cd0bc8310cde9b915f98b6d9ec474e2ea59a16b5a6f0ba2",
       "origin": "original editable SVG schematic",
       "source": "assets/chapter-09/measurement-geometry.svg",
+      "sha256_basis": "UTF-8 text with LF line endings"
+    },
+    {
+      "asset": "assets/chapter-09/reflection-reference.svg",
+      "sha256": "18643e3f3965de579a74a8e5e16afb2e186242a715a71e4fa8a12380c495641d",
+      "origin": "original editable SVG schematic",
+      "source": "assets/chapter-09/reflection-reference.svg",
       "sha256_basis": "UTF-8 text with LF line endings"
     },
     {

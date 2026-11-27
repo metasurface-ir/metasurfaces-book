@@ -1,37 +1,113 @@
 {
   "pdf_sha256": "2d5a2a630c166f99c9eae09eca8bc6c60ae9512219e50d6c9cc9471ab14cb4c8",
   "pdf_pages": 270,
-  "scope": "Bilingual adapted reading with selected worked calculations. Section mapping does not establish full transcription.",
+  "cover_page": 243,
+  "body_pages": [
+    244,
+    270
+  ],
+  "scope": "Edited bilingual reading of all five sections, 18 numbered subsections, tables, and five problems with 21 worked-answer parts. The previous computational reading, guide, lab and notebook remain linked.",
   "sections": [
     {
       "number": "9.1",
       "pages": "244–248",
       "route": "measurement-section-01",
-      "worked_exercise": true
+      "source_subsections": 3,
+      "worked_problem_parts": 4,
+      "display_equations": 11
     },
     {
       "number": "9.2",
       "pages": "248–254",
       "route": "measurement-section-02",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 4,
+      "display_equations": 6
     },
     {
       "number": "9.3",
       "pages": "254–260",
       "route": "measurement-section-03",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 4,
+      "display_equations": 7
     },
     {
       "number": "9.4",
       "pages": "260–265",
       "route": "measurement-section-04",
-      "worked_exercise": true
+      "source_subsections": 4,
+      "worked_problem_parts": 5,
+      "display_equations": 8
     },
     {
       "number": "9.5",
       "pages": "265–270",
       "route": "measurement-section-05",
-      "worked_exercise": true
+      "source_subsections": 3,
+      "worked_problem_parts": 4,
+      "display_equations": 11
+    }
+  ],
+  "figures": [
+    {
+      "asset": "assets/chapter-09/etch-cross-section.svg",
+      "basis": "Original teaching schematic for etch factor on page 249 and the exercise on page 252."
+    },
+    {
+      "asset": "assets/chapter-09/reflection-reference.svg",
+      "basis": "Original teaching schematic for the monostatic and bistatic geometries on pages 260 and 262."
+    }
+  ],
+  "corrections": [
+    {
+      "pages": [
+        244,
+        245,
+        247,
+        248
+      ],
+      "reason": "Clarify the limits of good-conductor and optical models, glass-epoxy FR-4, and material changes versus power in measured channels."
+    },
+    {
+      "pages": [
+        248,
+        250,
+        251,
+        252,
+        253
+      ],
+      "reason": "Convert frequency to free-space wavelength consistently and distinguish nominal lithography resolution from finished gap or wall tolerance."
+    },
+    {
+      "pages": [
+        255,
+        256,
+        257,
+        258,
+        259
+      ],
+      "reason": "Original table omits impedance screening thresholds. The two marked illustrative inequalities reproduce the source comparison. Component cutoff is a figure of merit, not a cell validation."
+    },
+    {
+      "pages": [
+        260,
+        261,
+        262,
+        263,
+        264
+      ],
+      "reason": "Separate metal-reference normalization and full TRL. Qualify waveguide boundaries, time-gate limits, and field-scan angular resolution."
+    },
+    {
+      "pages": [
+        265,
+        266,
+        267,
+        269,
+        270
+      ],
+      "reason": "Correct NRW log sign and electric-sheet factor of two using the worked problem. Separate absolute branch from continuity and limit the reactance-only reflection-phase relation to a lossless surface."
     }
   ]
 }
