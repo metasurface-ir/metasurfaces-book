@@ -9,6 +9,12 @@
   let frame, contents, sections = [], active = '';
   let resizeObserver, queuedScroll = 0;
 
+  function syncTheme() {
+    if (!contents?.documentElement) return;
+    contents.documentElement.dataset.theme = document.documentElement.classList.contains('dark')
+      ? 'dark' : 'light';
+  }
+
   function highlight() {
     for (const link of document.querySelectorAll(sectionSelector)) {
       if (link.hash === active) {
@@ -116,6 +122,7 @@
     frame = workshop;
     function ready() {
       contents = frame.contentDocument;
+      syncTheme();
       const rail = contents?.getElementById('rail');
       if (!rail || rail.dataset.mergedIntoBook) return;
       rail.dataset.mergedIntoBook = 'true';
@@ -163,5 +170,9 @@
     highlight();
   }
   new MutationObserver(refresh).observe(document.body, {subtree: true, childList: true});
+  new MutationObserver(syncTheme).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
   refresh();
 })();
