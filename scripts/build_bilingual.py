@@ -127,7 +127,7 @@ def decorate(output, language):
         # Useful metadata is present in the static HTML, before JavaScript/hydration.
         relative = path.relative_to(output).as_posix()
         route = '' if relative == 'index.html' else relative.removesuffix('/index.html').removesuffix('.html')
-        if language == 'en' and relative == 'index.html':
+        if language == 'en' and manifest['default'] == 'fa' and relative == 'index.html':
             home = json.dumps(BASE + '/fa/')
             default_language = (
                 "<script>(()=>{"
