@@ -2,6 +2,11 @@
 @import url("./bilingual.css");
 @import url("./book-fonts.css");
 
+/* Keep the theme button's gap on the search side in either direction. */
+.myst-top-nav-bar .myst-theme-button {
+  margin-inline: .75rem 0;
+}
+
 /* Long display equations scroll within the lesson on narrow screens. */
 .katex-display {
   max-width: 100%;
